@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immersive ECHO - Clickable Wireframe</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = {}</script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'DM Sans', Arial, sans-serif; background-color: #f9fafb; color: #374151; }
+        * { box-sizing: border-box; }
+
+        /* Wireframe primitives */
+        .wf-box { border: 2px solid #9ca3af; background-color: #e5e7eb; display: flex; align-items: center; justify-content: center; text-align: center; color: #6b7280; font-weight: bold; border-radius: 8px; }
+        .wf-box-dashed { border: 2px dashed #9ca3af; background-color: transparent; border-radius: 8px; }
+        .wf-text-block { background-color: #e5e7eb; height: 1rem; margin-bottom: 0.5rem; border-radius: 2px; }
+        .wf-button { border: 2px solid #374151; background-color: #f3f4f6; padding: 0.5rem 1rem; cursor: pointer; font-weight: bold; text-transform: uppercase; font-size: 0.875rem; transition: background 0.2s; display: inline-block; border-radius: 6px; font-family: inherit; }
+        .wf-button:hover { background-color: #e5e7eb; }
+
+        /* Navigation */
+        .nav-link { cursor: pointer; text-decoration: none; color: #374151; }
+        .nav-link:hover, .nav-link.active { font-weight: bold; text-decoration: underline; }
+
+        /* Pages */
+        .page-view { display: none; }
+        .page-view.active-page { display: block; }
+
+        /* FAQ */
+        .faq-answer { display: none; padding: 1rem 1.25rem; background: #ffffff; border-top: 1px solid #e5e7eb; font-size: 0.875rem; line-height: 1.7; color: #374151; }
+        .faq-answer.open { display: block; }
+        .faq-btn { width: 100%; text-align: left; padding: 1rem 1.25rem; font-weight: 600; background: #e5e7eb; display: flex; justify-content: space-between; align-items: center; cursor: pointer; border: none; font-family: inherit; font-size: 0.875rem; color: #1f2937; }
+        .faq-btn:hover { background: #d1d5db; }
+        .faq-icon { font-size: 1.1rem; font-weight: 300; flex-shrink: 0; color: #6b7280; margin-left: 1rem; }
+    </style>
+    <script>
+        function navigate(pageId) {
+            document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active-page'));
+            document.getElementById(pageId).classList.add('active-page');
+            const footer = document.querySelector('footer');
+            const header = document.querySelector('header');
+            if (pageId === 'newsletter') {
+                footer.style.display = 'none';
+                header.style.display = 'none';
+            } else {
+                footer.style.display = '';
+                header.style.display = '';
+            }
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+            const active = document.querySelector('.nav-link[data-target="' + pageId + '"]');
+            if (active) active.classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        function toggleFaq(btn) {
+            const answer = btn.nextElementSibling;
+            const icon = btn.querySelector('.faq-icon');
+            answer.classList.toggle('open');
+            icon.textContent = answer.classList.contains('open') ? '\u2212' : '+';
+        }
+    </script>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- STICKY HEADER -->
+    <header class="sticky top-0 bg-white border-b-4 border-gray-400 z-50 p-4 shadow-sm">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <!-- Logo Placeholder -->
+            <div class="wf-box w-48 h-12 text-sm cursor-pointer" onclick="navigate('home')">
+                [LOGO: Immersive ECHO]
+            </div>
+
+            <!-- Navigation -->
+            <nav class="flex flex-wrap gap-4 text-sm">
+                <a class="nav-link active" data-target="home" onclick="navigate('home')">Home</a>
+                <a class="nav-link" data-target="about" onclick="navigate('about')">About</a>
+                <a class="nav-link" data-target="partners" onclick="navigate('partners')">Partners</a>
+                <a class="nav-link" data-target="pilots" onclick="navigate('pilots')">Pilots</a>
+                <a class="nav-link" data-target="news" onclick="navigate('news')">News & Events</a>
+                <a class="nav-link" data-target="faq" onclick="navigate('faq')">FAQ</a>
+                <a class="nav-link" data-target="contact" onclick="navigate('contact')">Contact</a>
+            </nav>
+
+            <!-- CTA -->
+            <button class="wf-button flex items-center gap-2" onclick="alert('Opens Interactive Dashboard in new tab')">
+                Enter ECHO System ↗
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="flex-grow max-w-6xl mx-auto w-full p-4 md:p-8">
+
+        <!-- 1. HOME PAGE -->
+        <div id="home" class="page-view active-page">
+            <!-- Hero Section -->
+            <div class="wf-box h-80 mb-8 flex-col relative">
+                <span class="absolute top-4 left-4 bg-white border-2 border-gray-400 px-2 py-1 text-xs">STATUS: ONGOING</span>
+                <h1 class="text-3xl font-extrabold text-gray-800 mb-2" style="font-family: 'DM Sans', sans-serif; letter-spacing: 0.04em;">IMMERSIVE ECHO</h1>
+                <p class="text-lg font-normal mb-4">Creating Collective Immersive Experiences for European Cultural Heritage</p>
+                <div class="wf-box-dashed w-3/4 h-24 p-4 mt-4">
+                    [HERO IMAGE / VIDEO PLACEHOLDER: Room-scale projection environment]
+                </div>
+            </div>
+
+            <!-- Mission -->
+            <div class="max-w-3xl mx-auto mb-12 space-y-5 text-base leading-relaxed text-gray-700" style="font-family: Georgia, serif;">
+                <p>Cultural heritage exists because people need it. Not as a record of the past, but as a living connection — to place, to community, to the stories that explain who we are and how we got here. Yet for millions of people across Europe, that connection is breaking down. Not because the stories have lost their power, but because the spaces and formats meant to carry them haven't kept pace with the people they're meant to serve.</p>
+                <p>Smaller cultural heritage institutions feel this most acutely. Without the resources of major flagships, they watch audiences shrink, younger generations drift, and communities that were never quite reflected in their collections stop showing up at all. The tools to change this — immersive, multi-sensory experiences that surround you with a story rather than presenting it from behind glass — exist, but remain out of reach for most.</p>
+                <p>Immersive ECHO starts from a different premise: that heritage is most powerful when it's felt collectively, in shared spaces, by people who might not have sought it out on their own. The project's mission is not to digitize culture or dazzle with technology — it's to give cultural institutions across Europe the practical means to bring people back into the story. Their story.</p>
+            </div>
+
+            <!-- Newsletter -->
+            <div style="border: 2px solid #c8cdd6; border-radius: 12px; background:#e5e7eb; padding: 3rem 2rem; text-align:center; max-width: 48rem; margin: 0 auto 2rem auto;">
+                <p style="font-weight:700; font-size:1rem; color:#1f2937; margin-bottom:1.5rem;">Want to stay updated on Immersive ECHO?</p>
+                <button onclick="navigate('newsletter')" style="padding: 0.75rem 2.5rem; background:#4b5563; color:white; border:none; border-radius:8px; font-weight:700; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; cursor:pointer;">Subscribe to our Newsletter</button>
+            </div>
+        </div>
+
+        <!-- 2. ABOUT PAGE -->
+        <div id="about" class="page-view">
+            <h1 class="text-3xl font-bold mb-8 border-b-2 border-gray-400 pb-2">About Immersive ECHO</h1>
+
+            <!-- BLOCK 1: Mission — full width text + pull quote -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="col-span-2">
+                    <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">The Mission</p>
+                    <div class="wf-text-block w-full"></div>
+                    <div class="wf-text-block w-full"></div>
+                    <div class="wf-text-block w-5/6"></div>
+                    <div class="wf-text-block w-full mt-2"></div>
+                    <div class="wf-text-block w-4/5"></div>
+                </div>
+                <!-- Pull quote -->
+                <div class="border-l-4 border-gray-800 pl-6 flex flex-col justify-center">
+                    <div class="text-3xl font-bold text-gray-300 mb-2">"</div>
+                    <div class="wf-text-block w-full"></div>
+                    <div class="wf-text-block w-3/4"></div>
+                    <div class="wf-text-block w-full mt-1"></div>
+                    <p class="text-xs text-gray-400 mt-3 uppercase tracking-wider">— Pull quote placeholder</p>
+                </div>
+            </div>
+
+            <!-- DIVIDER -->
+            <div class="border-t-2 border-dashed border-gray-300 my-10 relative">
+                <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gray-50 px-4 text-xs text-gray-400 uppercase tracking-widest">The Approach</span>
+            </div>
+
+            <!-- BLOCK 2: Two icon cards side by side -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                <div class="border-2 border-gray-400 p-6">
+                    <div class="wf-box w-12 h-12 rounded-full mb-4 text-xs">[Icon]</div>
+                    <h3 class="font-bold mb-3">Off-site Immersive Design Team</h3>
+                    <div class="wf-text-block w-full"></div>
+                    <div class="wf-text-block w-full"></div>
+                    <div class="wf-text-block w-3/4"></div>
+                </div>
+                <div class="border-2 border-gray-400 p-6">
+                    <div class="wf-box w-12 h-12 rounded-full mb-4 text-xs">[Icon]</div>
+                    <h3 class="font-bold mb-3">On-site Immersive Design Team</h3>
+                    <div class="wf-text-block w-full"></div>
+                    <div class="wf-text-block w-full"></div>
+                    <div class="wf-text-block w-3/4"></div>
+                </div>
+            </div>
+
+            <!-- BLOCK 3: Infographic full width -->
+            <div class="mb-12">
+                <div class="wf-box h-56">[Infographic Placeholder: Dual-Track Design Methodology → Public Testbed]</div>
+            </div>
+
+            <!-- DIVIDER -->
+            <div class="border-t-2 border-dashed border-gray-300 my-10 relative">
+                <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gray-50 px-4 text-xs text-gray-400 uppercase tracking-widest">Project Facts</span>
+            </div>
+
+            <!-- BLOCK 4: Stats row + sidebar details -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                <div class="border-2 border-gray-400 p-5 text-center">
+                    <div class="text-3xl font-extrabold mb-1">15</div>
+                    <div class="text-xs uppercase tracking-wider text-gray-500">Partners</div>
+                </div>
+                <div class="border-2 border-gray-400 p-5 text-center">
+                    <div class="text-3xl font-extrabold mb-1">10</div>
+                    <div class="text-xs uppercase tracking-wider text-gray-500">Countries</div>
+                </div>
+                <div class="border-2 border-gray-400 p-5 text-center">
+                    <div class="text-3xl font-extrabold mb-1">30</div>
+                    <div class="text-xs uppercase tracking-wider text-gray-500">Months</div>
+                </div>
+                <div class="border-2 border-gray-400 p-5 text-center">
+                    <div class="text-3xl font-extrabold mb-1">2</div>
+                    <div class="text-xs uppercase tracking-wider text-gray-500">Public Testbeds</div>
+                </div>
+            </div>
+
+            <!-- BLOCK 5: Project details list -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="col-span-2 border-2 border-gray-300 p-6">
+                    <div class="wf-text-block w-full"></div>
+                    <div class="wf-text-block w-full"></div>
+                    <div class="wf-text-block w-2/3"></div>
+                </div>
+                <div class="border-l-2 border-dashed border-gray-400 pl-8">
+                    <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Project Details</p>
+                    <ul class="space-y-4 text-sm">
+                        <li class="border-b border-gray-300 pb-2"><strong>Duration:</strong><br> Feb 2026 – July 2028</li>
+                        <li class="border-b border-gray-300 pb-2"><strong>GA Number:</strong><br> 101255680</li>
+                        <li class="border-b border-gray-300 pb-2"><strong>Funding:</strong><br> Creative Europe Large Scale</li>
+                        <li class="border-b border-gray-300 pb-2"><strong>Coordinator:</strong><br> Lindholmen Science Park</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. PARTNERS PAGE -->
+        <div id="partners" class="page-view">
+            <h1 class="text-3xl font-bold mb-8 border-b-2 border-gray-400 pb-2">The Consortium</h1>
+
+            <section class="mb-12 text-center">
+                <h2 class="text-xl font-bold mb-4">Project Coordinator</h2>
+                <div class="wf-box w-64 h-32 mx-auto cursor-pointer" onclick="alert('Link to LSP')">
+                    [LSP LOGO]
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-xl font-bold mb-4 text-center">Core Partners</h2>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                    <!-- Generating 14 partner boxes -->
+                    <script>
+                        for(let i=1; i<=14; i++) {
+                            document.write(`<div class="wf-box h-24 cursor-pointer hover:bg-gray-300" onclick="alert('Link to Partner ${i}')">[Partner ${i} Logo]</div>`);
+                        }
+                    </script>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-bold mb-4 text-center">Associated Partners</h2>
+                <div class="grid grid-cols-3 md:grid-cols-6 gap-4">
+                    <script>
+                        for(let i=1; i<=6; i++) {
+                            document.write(`<div class="wf-box-dashed h-20">[Assoc. ${i}]</div>`);
+                        }
+                    </script>
+                </div>
+            </section>
+        </div>
+
+        <!-- 4. PILOTS PAGE -->
+        <div id="pilots" class="page-view">
+            <h1 class="text-3xl font-bold mb-4 border-b-2 border-gray-400 pb-2">Public Testbeds & Pilots</h1>
+            <p class="mb-8 max-w-3xl">Introducing the concept of public testbeds using the Needs-Driven Design methodology across Europe.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Pilot A -->
+                <div class="border-2 border-gray-400 p-6">
+                    <div class="wf-box h-48 mb-4">[Photo Placeholder: Viborg Snapsting]</div>
+                    <span class="bg-gray-300 px-2 py-1 text-xs font-bold mb-2 inline-block">PRIMARY TESTBED</span>
+                    <h2 class="text-2xl font-bold mb-2">Snapsting Festival</h2>
+                    <h3 class="text-lg text-gray-500 mb-4">📍 Viborg, Denmark</h3>
+                    <div class="wf-text-block w-full"></div>
+                    <div class="wf-text-block w-full"></div>
+                    <div class="wf-text-block w-3/4 mb-4"></div>
+                    <button class="wf-button">View Activities</button>
+                </div>
+
+                <!-- Pilot B -->
+                <div class="border-2 border-gray-400 p-6">
+                    <div class="wf-box h-48 mb-4">[Photo Placeholder: Le Pavillon Namur]</div>
+                    <span class="bg-gray-300 px-2 py-1 text-xs font-bold mb-2 inline-block">SCALING & ADAPTATION</span>
+                    <h2 class="text-2xl font-bold mb-2">Le Pavillon</h2>
+                    <h3 class="text-lg text-gray-500 mb-4">📍 Namur, Belgium</h3>
+                    <div class="wf-text-block w-full"></div>
+                    <div class="wf-text-block w-full"></div>
+                    <div class="wf-text-block w-3/4 mb-4"></div>
+                    <button class="wf-button">View Activities</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. NEWS & EVENTS PAGE -->
+        <div id="news" class="page-view">
+            <div class="flex justify-between items-end mb-8 border-b-2 border-gray-400 pb-2">
+                <h1 class="text-3xl font-bold">News, Events & Activities</h1>
+                <button class="wf-button text-xs" onclick="alert('Downloading ZIP')">⬇ Download Media Kit</button>
+            </div>
+
+            <!-- Filters -->
+            <div class="flex gap-4 mb-8">
+                <button class="wf-button bg-gray-400 text-white">All</button>
+                <button class="wf-button">News</button>
+                <button class="wf-button">Events</button>
+                <button class="wf-button">Press</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Feed Column -->
+                <div class="col-span-2 space-y-6">
+                    <h2 class="text-xl font-bold mb-4">Latest Updates</h2>
+                    <!-- Article 1 -->
+                    <div class="flex gap-4 border-2 border-gray-300 p-4">
+                        <div class="wf-box w-32 h-32 shrink-0">[Thumb]</div>
+                        <div>
+                            <span class="text-xs font-bold text-gray-500">NEWS | March 2026</span>
+                            <h3 class="text-lg font-bold mb-2">Immersive ECHO Project Officially Launches</h3>
+                            <div class="wf-text-block w-full"></div>
+                            <div class="wf-text-block w-4/5 mb-4"></div>
+                            <a href="#" class="underline text-sm font-bold">Read More →</a>
+                        </div>
+                    </div>
+                    <!-- Article 2 -->
+                    <div class="flex gap-4 border-2 border-gray-300 p-4">
+                        <div class="wf-box w-32 h-32 shrink-0">[Thumb]</div>
+                        <div>
+                            <span class="text-xs font-bold text-gray-500">EVENT | M3</span>
+                            <h3 class="text-lg font-bold mb-2">Design Brief Workshop Scheduled</h3>
+                            <div class="wf-text-block w-full"></div>
+                            <div class="wf-text-block w-3/4 mb-4"></div>
+                            <a href="#" class="underline text-sm font-bold">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Galleries Column -->
+                <div class="col-span-1 bg-gray-200 p-6 border-2 border-gray-400">
+                    <h2 class="text-xl font-bold mb-4">Event Galleries</h2>
+                    <div class="space-y-4">
+                        <div class="wf-box h-20 justify-start px-4 cursor-pointer" onclick="alert('Open Gallery')">📁 Kick-off Meeting (Gothenburg)</div>
+                        <div class="wf-box h-20 justify-start px-4 cursor-pointer" onclick="alert('Open Gallery')">📁 Design Brief Workshop</div>
+                        <div class="wf-box h-20 justify-start px-4 cursor-pointer" onclick="alert('Open Gallery')">📁 Futuremakers Toolkit Session</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. FAQ PAGE -->
+        <div id="faq" class="page-view max-w-3xl mx-auto">
+            <h1 class="text-3xl font-bold mb-8 border-b-2 border-gray-400 pb-2">Frequently Asked Questions</h1>
+            
+            <div class="space-y-3">
+
+                <div class="border-2 border-gray-300 rounded-lg overflow-hidden">
+                    <button class="faq-btn" onclick="toggleFaq(this)">What is Immersive ECHO?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">Immersive ECHO is a pan-European project bringing people closer to their shared heritage through immersive storytelling. Over 30 months (February 2026 – July 2028), 15 partners across 10 countries develop a practical model enabling cultural institutions to transform everyday public spaces into emotional, collective experiences — using projection, spatial audio, and sensor technology rather than VR headsets. The focus is on making immersive storytelling accessible to small and medium institutions that currently lack the budget and expertise to create it.</div>
+                </div>
+
+                <div class="border-2 border-gray-300 rounded-lg overflow-hidden">
+                    <button class="faq-btn" onclick="toggleFaq(this)">Why is this project needed?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">Most cultural heritage institutions lack the budget, expertise, and technical capacity to create immersive experiences. Large-scale productions are typically reserved for well-funded museums and commercial venues. At the same time, audiences increasingly expect engaging, multi-sensory encounters with culture. Immersive ECHO addresses this gap with a practical, transferable model — tested in real settings, documented honestly, and designed so a local museum with limited resources can tell its stories in ways that are emotionally engaging and economically sustainable.</div>
+                </div>
+
+                <div class="border-2 border-gray-300 rounded-lg overflow-hidden">
+                    <button class="faq-btn" onclick="toggleFaq(this)">What makes Immersive ECHO different from other immersive projects?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">Five things set us apart. We focus on small and medium institutions — not large-scale flagships. Our approach is headset-free: projection, spatial audio, and sensors transform existing public spaces. Inclusion is built into the design process, with dedicated sprints for youth, neurodivergent audiences, older adults, and marginalised groups. We document the entire process — including what doesn't work — and produce open toolkits so others can replicate the approach independently. And the consortium itself is unique: world-leading designers, researchers, heritage institutions of varying sizes, and technologists all working side by side.</div>
+                </div>
+
+                <div class="border-2 border-gray-300 rounded-lg overflow-hidden">
+                    <button class="faq-btn" onclick="toggleFaq(this)">Why "immersive" without VR headsets?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">VR headsets create barriers: cost, accessibility, discomfort, and individual isolation. They're also difficult to scale — one headset serves one person at a time. Our approach uses spatial audio, projections, and environmental sensors to transform shared public spaces into immersive storytelling environments. A single location-based installation reaches large audiences simultaneously, requires less specialised equipment, and is easier for institutions to operate and sustain. The result is collective, embodied, and low-threshold — and it makes business sense for the venues that host it.</div>
+                </div>
+
+                <div class="border-2 border-gray-300 rounded-lg overflow-hidden">
+                    <button class="faq-btn" onclick="toggleFaq(this)">What will a visitor actually experience?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">Location-based, multi-sensory storytelling using projection, spatial audio, and environmental interaction to bring cultural heritage to life in shared public spaces. As you move through a venue, projected imagery and sound respond to your presence and create a narrative that unfolds around you. The goal is not passive information transfer, but active encounters with history — open-ended, participatory, and designed so each visitor creates their own journey through the story. You feel it before you think about it.</div>
+                </div>
+
+                <div class="border-2 border-gray-300 rounded-lg overflow-hidden">
+                    <button class="faq-btn" onclick="toggleFaq(this)">What is Snapsting?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">Snapsting is the signature on-site production developed by Viborg Museum in Denmark. It explores Viborg's thousand-year identity as a site of royal, religious, and judicial power — bringing that history to life through music, poetic animation, and atmospheric environments. The experience is non-linear: visitors follow their own curiosity through the story. Beyond the experience itself, the entire production process is being documented as a transferable methodology — a playbook for other cultural heritage institutions planning their own immersive work. Snapsting premieres publicly in November 2026.</div>
+                </div>
+
+                <div class="border-2 border-gray-300 rounded-lg overflow-hidden">
+                    <button class="faq-btn" onclick="toggleFaq(this)">What is Le Pavillon and the KIKK Festival?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">Le Pavillon is a venue in Namur, Belgium, operated by KIKK — and it serves as the project's public testbed. This is where immersive experiences meet real, diverse audiences for the first time at scale. We test the full visitor journey: emotional response, interaction patterns, accessibility, onboarding, and whether the experience creates opportunities for reflection after people leave. The public premiere is planned for the KIKK Festival in October 2027 — one of Europe's leading festivals for digital and creative culture, attracting thousands of visitors annually.</div>
+                </div>
+
+                <div class="border-2 border-gray-300 rounded-lg overflow-hidden">
+                    <button class="faq-btn" onclick="toggleFaq(this)">What does "inclusion by design" mean in practice?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">It means accessibility and diverse audience needs are embedded in the design process from the start — not added at the end. The project includes four dedicated inclusive design sprints, each focused on a specific audience: youth, neurodivergent individuals, older adults, and marginalised communities. Real users shape the work from the earliest stages. Inclusion is also about emotional recognition — creating experiences where people see themselves reflected in the stories, where history feels like something that belongs to them.</div>
+                </div>
+
+                <div class="border-2 border-gray-300 rounded-lg overflow-hidden">
+                    <button class="faq-btn" onclick="toggleFaq(this)">Who is behind Immersive ECHO?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">A consortium of 15 organisations from 10 European countries, coordinated by Lindholmen Science Park in Gothenburg, Sweden. Partners include immersive design studios, cultural heritage institutions, research labs, technology companies, and communication specialists from Sweden, Germany, France, Finland, Romania, Denmark, Belgium, Ukraine, Spain, and Slovenia. Associated partners include the City of Gothenburg and The Animation Workshop in Denmark. The project received an EU evaluation score of 92/100.</div>
+                </div>
+
+                <div class="border-2 border-gray-300 rounded-lg overflow-hidden">
+                    <button class="faq-btn" onclick="toggleFaq(this)">Is Ukraine part of the project?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">Yes. Sofiyivka Park in Uman, Ukraine, is a full consortium partner. Due to the ongoing Russian invasion, physical prototyping cannot take place in Ukraine. Instead, Sofiyivka Park contributes cultural heritage data, historical materials, and an invaluable perspective on heritage in conflict zones. Their participation is a reminder of why cultural preservation matters — and why it is urgent. The consortium is actively working through the operational challenges their situation creates.</div>
+                </div>
+
+                <div class="border-2 border-gray-300 rounded-lg overflow-hidden">
+                    <button class="faq-btn" onclick="toggleFaq(this)">How is the project funded?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">Immersive ECHO is co-funded by the European Union under the Creative Europe programme, Large Scale Cooperation strand. The total budget is approximately €3.3 million, of which the EU funds 60% (€1,999,019). The remaining 40% is co-financing from consortium partners. Under the lump sum model, the EU pays for results — not overhead. The payment schedule is 40% at project start, 40% at the interim report (Month 15), and 20% at the final report.</div>
+                </div>
+
+                <div class="border-2 border-gray-300 rounded-lg overflow-hidden">
+                    <button class="faq-btn" onclick="toggleFaq(this)">What will the project produce?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">Results at three levels. Concrete experiences: tested immersive installations at Viborg Museum and Le Pavillon, designed for touring and adaptation. Open knowledge: an Open Learning Toolkit with step-by-step guides, a Futuremakers Toolkit for participatory future thinking, production process documentation, and an Outreach Platform for the wider cultural heritage community. Structural capacity: a Business Blueprint validating what works operationally and economically, and a Final Future Design Report with policy recommendations and institutional roadmaps for the sector beyond 2028.</div>
+                </div>
+
+                <div class="border-2 border-gray-300 rounded-lg overflow-hidden">
+                    <button class="faq-btn" onclick="toggleFaq(this)">What happens after the project ends in 2028?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">Sustainability is integrated into the design process from the start — not treated as an afterthought. The technical architecture is built around modularity: content can tour between venues, digital twins allow new sites to be planned remotely, and parametric design reduces the effort needed to adapt installations. Viborg Museum intends to continue operating Snapsting as a permanent installation. All foreground IP is made openly available for adaptation, reuse, and commercial development. The ambition is to leave behind methods, tools, and proven models that continue generating value across the sector.</div>
+                </div>
+
+                <div class="border-2 border-gray-300 rounded-lg overflow-hidden">
+                    <button class="faq-btn" onclick="toggleFaq(this)">How can other cultural heritage institutions get involved?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">Several concrete ways. The ECHOSYSTEM Platform will include a public portal where cultural professionals can access draft toolkits, join peer exchange forums, and sign up for events. Monthly Futuremaking Workshops across partner cities are open to external professionals. Three online masterclasses cover technical pipelines, creative direction, and cross-disciplinary collaboration. The public testbeds at Le Pavillon and Viborg Museum serve as live learning environments. All toolkits and training materials will be freely available in all ten partner languages. Follow the project at #ImmersiveECHO or subscribe to the newsletter.</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 7. CONTACT PAGE -->
+        <div id="contact" class="page-view">
+            <h1 class="text-3xl font-bold mb-8 border-b-2 border-gray-400 pb-2">Contact Us</h1>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Info -->
+                <div>
+                    <h2 class="text-2xl font-bold mb-4">Get in Touch</h2>
+                    <p class="mb-6">Reach out to the coordinator team at Lindholmen Science Park for general inquiries, press information, or partnership questions.</p>
+                    <div class="wf-box-dashed p-6 items-start text-left flex-col mb-6">
+                        <h3 class="font-bold mb-2 text-black">Coordinator Data</h3>
+                        <p>Lindholmen Science Park</p>
+                        <p>Gothenburg, Sweden</p>
+                        <p class="mt-4 underline">coordinator@lindholmen.se</p>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold text-sm uppercase tracking-widest mb-4">Stay in Touch</h3>
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 32 32" style="cursor:pointer;"><circle cx="16" cy="16" r="16" fill="#222"/><path d="M20 8h-2.5C15.6 8 15 9 15 10v2h-2v3h2v7h3v-7h2.5l.5-3h-3v-1.5c0-.8.2-1.5 1-1.5H20V8z" fill="white"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 32 32" style="cursor:pointer;"><circle cx="16" cy="16" r="16" fill="#222"/><path d="M8 9l6.5 8.5L8 24h2l5-6 4 6h5l-6.8-9L23 9h-2l-4.5 5.5L12 9H8z" fill="white"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 32 32" style="cursor:pointer;"><circle cx="16" cy="16" r="16" fill="#222"/><rect x="9" y="9" width="14" height="14" rx="4" ry="4" fill="none" stroke="white" stroke-width="1.5"/><circle cx="16" cy="16" r="3.5" fill="none" stroke="white" stroke-width="1.5"/><circle cx="21" cy="11" r="1" fill="white"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 32 32" style="cursor:pointer;"><circle cx="16" cy="16" r="16" fill="#222"/><rect x="7" y="11" width="18" height="11" rx="3" fill="white"/><polygon points="13,13 21,16.5 13,20" fill="#222"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="border-2 border-gray-400 p-6 bg-gray-100">
+                    <form onsubmit="event.preventDefault(); alert('Form Submitted in Wireframe');">
+                        <div class="mb-4">
+                            <label class="block font-bold mb-2">Name</label>
+                            <input type="text" class="w-full border-2 border-gray-400 p-2" placeholder="[Input Field]">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block font-bold mb-2">Organization</label>
+                            <input type="text" class="w-full border-2 border-gray-400 p-2" placeholder="[Input Field]">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block font-bold mb-2">Subject</label>
+                            <input type="text" class="w-full border-2 border-gray-400 p-2" placeholder="[Input Field]">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block font-bold mb-2">Message</label>
+                            <textarea class="w-full border-2 border-gray-400 p-2 h-32" placeholder="[Text Area]"></textarea>
+                        </div>
+                        <button type="submit" class="wf-button w-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- CTA Banner -->
+            <div class="wf-box mt-10 p-10 flex-col gap-4 border-4 border-gray-500 bg-gray-200">
+                <p class="text-lg font-bold text-gray-700">Want to stay updated on Immersive ECHO?</p>
+                <button class="wf-button mt-3 px-8 py-3 border-2 border-gray-600 bg-gray-500 text-white uppercase tracking-widest text-sm font-bold" onclick="navigate('newsletter')">Subscribe to our Newsletter</button>
+            </div>
+        </div>
+
+
+        <!-- 8. NEWSLETTER PAGE -->
+        <div id="newsletter" class="page-view">
+            <div class="grid grid-cols-1 md:grid-cols-2 min-h-screen -mx-4 md:-mx-8 -mt-8">
+
+                <!-- Left: Form -->
+                <div class="bg-gray-800 text-white p-12 flex flex-col justify-between min-h-96">
+                    <div>
+                        <!-- Logo placeholder -->
+                        <div class="wf-box w-40 h-16 mb-8 text-xs bg-gray-600 border-gray-500">[LOGO]</div>
+                        <p class="text-gray-300 text-sm mb-10">Stay updated on the project — new outputs, events, and findings from across the consortium.</p>
+
+                        <h2 class="text-2xl font-bold mb-8 tracking-wide">Subscribe</h2>
+
+                        <div class="space-y-5">
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Email *</label>
+                                <input type="email" placeholder="Enter your email" class="w-full border-2 border-gray-500 bg-gray-700 text-white p-3 text-sm rounded-lg placeholder-gray-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">First Name</label>
+                                <input type="text" placeholder="Enter your first name" class="w-full border-2 border-gray-500 bg-gray-700 text-white p-3 text-sm rounded-lg placeholder-gray-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Last Name</label>
+                                <input type="text" placeholder="Enter your last name" class="w-full border-2 border-gray-500 bg-gray-700 text-white p-3 text-sm rounded-lg placeholder-gray-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Organisation</label>
+                                <input type="text" placeholder="Enter your organisation" class="w-full border-2 border-gray-500 bg-gray-700 text-white p-3 text-sm rounded-lg placeholder-gray-500">
+                            </div>
+                            <div class="flex items-center gap-3 pt-2">
+                                <input type="checkbox" class="w-4 h-4 border-2 border-gray-500 bg-gray-700">
+                                <label class="text-xs text-gray-400">I agree to the <span class="underline cursor-pointer text-gray-300">Privacy Policy</span></label>
+                            </div>
+                        </div>
+
+                        <button class="wf-button mt-8 w-full py-3 bg-gray-500 text-white border-gray-400 uppercase tracking-widest text-sm font-bold" onclick="alert('Subscribed!')">Subscribe</button>
+                    </div>
+
+                    <!-- Social icons -->
+                    <div class="flex gap-3 mt-10">
+                        <div class="w-9 h-9 border-2 border-gray-500 rounded-full flex items-center justify-center text-xs cursor-pointer hover:bg-gray-700">[in]</div>
+                        <div class="w-9 h-9 border-2 border-gray-500 rounded-full flex items-center justify-center text-xs cursor-pointer hover:bg-gray-700">[yt]</div>
+                        <div class="w-9 h-9 border-2 border-gray-500 rounded-full flex items-center justify-center text-xs cursor-pointer hover:bg-gray-700">[X]</div>
+                        <div class="w-9 h-9 border-2 border-gray-500 rounded-full flex items-center justify-center text-xs cursor-pointer hover:bg-gray-700">[ig]</div>
+                    </div>
+                </div>
+
+                <!-- Right: Image placeholder -->
+                <div class="wf-box min-h-96 text-sm flex-col gap-2 bg-gray-200 border-0 rounded-none">
+                    <div class="text-gray-400">[IMAGE PLACEHOLDER]</div>
+                    <div class="text-xs text-gray-400">Immersive installation / testbed photo</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="max-w-6xl mx-auto p-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <!-- Column 1: Brand + social + contact + newsletter -->
+            <div>
+                <h3 class="font-bold text-xl mb-4">Immersive ECHO</h3>
+                <div class="flex gap-3 mb-6">
+                    <!-- Facebook -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" style="cursor:pointer;">
+                        <circle cx="16" cy="16" r="16" fill="#222"/>
+                        <path d="M20 8h-2.5C15.6 8 15 9 15 10v2h-2v3h2v7h3v-7h2.5l.5-3h-3v-1.5c0-.8.2-1.5 1-1.5H20V8z" fill="white"/>
+                    </svg>
+                    <!-- X -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" style="cursor:pointer;">
+                        <circle cx="16" cy="16" r="16" fill="#222"/>
+                        <path d="M8 9l6.5 8.5L8 24h2l5-6 4 6h5l-6.8-9L23 9h-2l-4.5 5.5L12 9H8z" fill="white"/>
+                    </svg>
+                    <!-- Instagram -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" style="cursor:pointer;">
+                        <circle cx="16" cy="16" r="16" fill="#222"/>
+                        <rect x="9" y="9" width="14" height="14" rx="4" ry="4" fill="none" stroke="white" stroke-width="1.5"/>
+                        <circle cx="16" cy="16" r="3.5" fill="none" stroke="white" stroke-width="1.5"/>
+                        <circle cx="21" cy="11" r="1" fill="white"/>
+                    </svg>
+                    <!-- YouTube -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" style="cursor:pointer;">
+                        <circle cx="16" cy="16" r="16" fill="#222"/>
+                        <rect x="7" y="11" width="18" height="11" rx="3" fill="white"/>
+                        <polygon points="13,13 21,16.5 13,20" fill="#222"/>
+                    </svg>
+                </div>
+                <a href="#" class="text-sm underline text-gray-400 block mb-1" onclick="navigate('contact')">Contact Us</a>
+                <span class="text-xs text-gray-500 block mb-8">coordinator@lindholmen.se</span>
+                <div class="mt-4">
+                    <button onclick="navigate('newsletter')" style="width:100%; padding: 0.75rem 1rem; background:#4b5563; color:white; border:none; border-radius:8px; font-weight:700; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; cursor:pointer;">Subscribe to our Newsletter</button>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="border-l-2 border-gray-600 px-8">
+                <h3 class="font-bold text-sm mb-4 uppercase tracking-wider">Quick Links</h3>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="#" class="hover:text-white" onclick="navigate('home')">Home</a></li>
+                    <li><a href="#" class="hover:text-white" onclick="navigate('about')">About</a></li>
+                    <li><a href="#" class="hover:text-white" onclick="navigate('partners')">Partners</a></li>
+                    <li><a href="#" class="hover:text-white" onclick="navigate('pilots')">Pilots</a></li>
+                    <li><a href="#" class="hover:text-white" onclick="navigate('news')">News & Events</a></li>
+                    <li><a href="#" class="hover:text-white" onclick="navigate('faq')">FAQ</a></li>
+                    <li><a href="#" class="hover:text-white" onclick="navigate('contact')">Contact</a></li>
+                    <li class="pt-2"><a href="#" class="hover:text-white text-gray-500">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: EU Emblem + disclaimer -->
+            <div class="border-l-2 border-gray-600 px-8 flex flex-col items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="130" style="margin-bottom:8px;">
+                  <rect width="900" height="600" fill="#003399"/>
+                  <g fill="#FFCC00" transform="translate(450,300)">
+                    <g id="s"><polygon points="0,-30 7,-21 -12,-9 12,-9 -7,-21"/></g>
+                    <!-- 12 stars at clock positions -->
+                    <use href="#s" transform="translate(0,-120)"/>
+                    <use href="#s" transform="translate(60,-104)"/>
+                    <use href="#s" transform="translate(104,-60)"/>
+                    <use href="#s" transform="translate(120,0)"/>
+                    <use href="#s" transform="translate(104,60)"/>
+                    <use href="#s" transform="translate(60,104)"/>
+                    <use href="#s" transform="translate(0,120)"/>
+                    <use href="#s" transform="translate(-60,104)"/>
+                    <use href="#s" transform="translate(-104,60)"/>
+                    <use href="#s" transform="translate(-120,0)"/>
+                    <use href="#s" transform="translate(-104,-60)"/>
+                    <use href="#s" transform="translate(-60,-104)"/>
+                  </g>
+                </svg>
+                <p class="text-xs text-white mb-4" style="font-weight:600;">Co-funded by the European Union</p>
+                <p class="text-xs text-gray-500 leading-tight">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.

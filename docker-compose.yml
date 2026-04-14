@@ -1,0 +1,9 @@
+services:
+  echoimmersive-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: echoimmersive-web
+    restart: unless-stopped
+    ports:
+      - "8105:80"

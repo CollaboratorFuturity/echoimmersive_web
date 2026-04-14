@@ -1,0 +1,50 @@
+# TODO - Tasks & Known Issues
+
+> Small tasks, bugs, and improvements that shouldn't derail the main work.
+
+Memory is fragile. AI context gets compressed at unpredictable intervals. If you spot something that needs fixing but it's not the current priority, drop it here immediately. Otherwise it will be forgotten during the next context compression.
+
+---
+
+## Pending
+
+- [ ] **[Decision] Newsletter service** -- Need to choose and configure a newsletter platform (Mailchimp, Brevo, or other). Required before the Newsletter page form can be wired up.
+
+- [ ] **[Decision] Contact form submission** -- Wireframe uses `alert()` mock. Need to decide on form handling: serverless function, Formspree, Netlify Forms, or other. Required before Phase 2 contact page is considered done.
+
+- [ ] **[Decision] "Enter ECHO System ↗" destination** -- CTA button in the header should open the ECHOSYSTEM interactive dashboard. URL / platform not yet confirmed. File: `src/components/Header/Header.tsx` — replace `href="#"` with real URL.
+
+- [ ] **[Assets] Partner logos** -- Need logo files for all 15 core partners + 6 associated partners before the Partners page can be built. Formats: SVG preferred, WebP/PNG fallback.
+
+- [ ] **[Assets] Coordinator logo** -- Need Lindholmen Science Park logo (SVG or WebP).
+
+- [ ] **[Assets] Site logo** -- Need final "Immersive ECHO" wordmark / logo before building the header and newsletter page.
+
+- [ ] **[Assets] Pilot photography** -- Need real photos for Snapsting Festival (Viborg) and Le Pavillon (Namur) before building the Pilots page.
+
+- [ ] **[Assets] Hero image/video** -- Home page hero requires either a photo or a video loop of the immersive installation environment.
+
+- [ ] **[Content] About page copy** -- Several wireframe text blocks are placeholders. Need final mission copy, pull quote, and approach descriptions before Phase 2 about page is done.
+
+- [ ] **[Content] Pilots descriptions** -- Both pilot cards have placeholder text. Need real descriptions for Snapsting and Le Pavillon.
+
+- [ ] **[Content] FAQ verified** -- FAQ copy is rich in the wireframe — confirm all 12 answers are final/approved before going live.
+
+- [ ] **[Content] EU funding credit line** -- Footer must include the required EU co-funded acknowledgement text and logo. Confirm exact wording with coordinator.
+
+- [ ] **[A11y] Social icon aria-labels** -- Footer and contact page use inline SVG social icons with no text labels. Add `aria-label` attributes before launch (e.g. `aria-label="Follow us on Facebook"`).
+
+- [ ] **[A11y] FAQ keyboard navigation** -- FAQ accordion uses `onClick`. The `aria-expanded` attribute is set but Enter/Space keyboard toggle needs testing across screen readers. File: `src/pages/FAQ.tsx`.
+
+- [ ] **[Nav] Hamburger menu** -- Header stacks to a row on mobile but has no hamburger toggle. Needs implementation. File: `src/components/Header/Header.tsx`.
+
+- [x] **[Routing] BrowserRouter 404 on refresh** -- Resolved by `nginx.conf` `try_files $uri $uri/ /index.html` rule in the Docker image.
+
+- [ ] **[Perf] Dither lazy loading** -- `src/components/Dither/Dither.tsx` is ready but not yet used on any page. When adding it, wrap with `React.lazy` + `Suspense` per the pattern in `docs/dither_deployment.md` to keep Three.js out of the main bundle.
+
+---
+
+## Done
+
+- [x] **[Routing] BrowserRouter 404 on refresh** DONE (2026-04-14) -- `nginx.conf` `try_files` rule serves `index.html` for all routes inside the Docker container.
+- [x] **[Build] Tailwind CDN → PostCSS build** DONE (2026-04-14) -- Switched to Tailwind 3 via PostCSS in Vite scaffold.
