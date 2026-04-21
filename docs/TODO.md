@@ -38,9 +38,11 @@ Memory is fragile. AI context gets compressed at unpredictable intervals. If you
 
 - [ ] **[Nav] Hamburger menu** -- Header stacks to a row on mobile but has no hamburger toggle. Needs implementation. File: `src/components/Header/Header.tsx`.
 
+- [ ] **[Design] Roll out sandbox to production pages** -- `/lynch-home`, `/lynch-about`, and `/ismaila-home` are testing-only pages with the dark brand palette, Dither background, and interaction patterns (fade-up reveals, count-up stats, shine-sweep CTA). Once the look is approved, apply the patterns to `/`, `/about`, and the shared `Header` / `Footer` components, then delete the sandbox files and routes. Files: `src/pages/LynchHome.tsx`, `src/pages/LynchAbout.tsx`, `src/pages/IsmailaHome.tsx`, `src/App.tsx` (routes), `README.md` (project structure + routes).
+
 - [x] **[Routing] BrowserRouter 404 on refresh** -- Resolved by `nginx.conf` `try_files $uri $uri/ /index.html` rule in the Docker image.
 
-- [ ] **[Perf] Dither lazy loading** -- `src/components/Dither/Dither.tsx` is ready but not yet used on any page. When adding it, wrap with `React.lazy` + `Suspense` per the pattern in `docs/dither_deployment.md` to keep Three.js out of the main bundle.
+- [ ] **[Perf] Dither code-splitting** -- `Dither.tsx` is in use on `LynchHome`. Do NOT use `React.lazy` for it — lazy loading causes a 1s mount delay that combines with React StrictMode's double-mount to destroy the WebGL context at first paint (canvas visible → gone). Instead, use a dynamic `import()` at the route level (route-based splitting) if Three.js bundle size becomes a concern. Direct static import is the safe default for now.
 
 ---
 

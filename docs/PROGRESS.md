@@ -23,6 +23,13 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 
 ## Phase 2: Production Build **IN PROGRESS**
 
+### Style Sandbox (testing only — not production routes)
+- [x] `/lynch-home` (`src/pages/LynchHome.tsx`) — dark brand palette applied, full-viewport Dither background, animated hero, count-up stats, shine-sweep CTA, `prefers-reduced-motion` respected
+- [x] `/lynch-about` (`src/pages/LynchAbout.tsx`) — dark brand palette applied to the About layout
+- [x] `/ismaila-home` (`src/pages/IsmailaHome.tsx`) — cloned from `LynchHome` as a starting point for Ismaila's design explorations
+- [x] Brand colors wired as Tailwind tokens: `bg-blue`, `primary-blue`, `light-blue`, `highlight-purple`, `highlight-green`
+- [ ] Roll out dark palette + approved patterns from sandbox → production pages and shared Header/Footer
+
 ### Setup
 - [x] Vite 6 + React 19 + TypeScript project scaffold
 - [x] `tsconfig.json`, `tsconfig.app.json`, `tsconfig.node.json`

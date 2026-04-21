@@ -9,6 +9,9 @@ import News from '@/pages/News'
 import FAQ from '@/pages/FAQ'
 import Contact from '@/pages/Contact'
 import Newsletter from '@/pages/Newsletter'
+import LynchHome from '@/pages/LynchHome'
+import LynchAbout from '@/pages/LynchAbout'
+import IsmailaHome from '@/pages/IsmailaHome'
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -37,6 +40,11 @@ export default function App() {
         <Route path="/news"      element={<Layout><News /></Layout>} />
         <Route path="/faq"       element={<Layout><FAQ /></Layout>} />
         <Route path="/contact"   element={<Layout><Contact /></Layout>} />
+
+        {/* Style test pages — dark brand palette */}
+        <Route path="/lynch-home"    element={<Layout><LynchHome /></Layout>} />
+        <Route path="/lynch-about"   element={<Layout><LynchAbout /></Layout>} />
+        <Route path="/ismaila-home"  element={<Layout><IsmailaHome /></Layout>} />
       </Routes>
     </BrowserRouter>
   )

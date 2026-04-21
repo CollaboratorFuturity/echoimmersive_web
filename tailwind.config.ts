@@ -6,7 +6,15 @@ export default {
     './src/**/*.{ts,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'bg-blue':           '#010440',
+        'primary-blue':      '#2128A6',
+        'light-blue':        '#3038D9',
+        'highlight-purple':  '#8E72F2',
+        'highlight-green':   '#7EF28F',
+      },
+    },
   },
   plugins: [],
 } satisfies Config

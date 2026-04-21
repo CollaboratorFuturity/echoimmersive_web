@@ -48,7 +48,10 @@ echoimmersive_web/
 │   │   ├── News.tsx
 │   │   ├── FAQ.tsx
 │   │   ├── Contact.tsx
-│   │   └── Newsletter.tsx       # Full-screen, no header/footer
+│   │   ├── Newsletter.tsx       # Full-screen, no header/footer
+│   │   ├── LynchHome.tsx        # Testing only — dark brand palette + Dither bg
+│   │   ├── LynchAbout.tsx       # Testing only — dark brand palette sandbox
+│   │   └── IsmailaHome.tsx      # Testing only — Ismaila's sandbox (cloned from LynchHome)
 │   ├── components/
 │   │   ├── Header/Header.tsx
 │   │   ├── Footer/Footer.tsx
@@ -80,6 +83,26 @@ See [docs/PROGRESS.md](docs/PROGRESS.md) for the full implementation checklist.
 **Current status**:
 - Phase 1 complete — Clickable wireframe with all 8 pages fully structured
 - Phase 2 in progress — Vite + React + TypeScript scaffold complete, all 8 page stubs built
+- Active sandbox: `/lynch-home` and `/lynch-about` — testing dark brand palette + Dither background before rolling out to the rest of the site
+
+## Routes
+
+**Production pages** (standard layout with header + footer):
+- `/` — Home
+- `/about` — About
+- `/partners` — Partners
+- `/pilots` — Pilots
+- `/news` — News & Events
+- `/faq` — FAQ
+- `/contact` — Contact
+
+**Full-screen** (no header/footer):
+- `/newsletter` — Subscription form
+
+**Testing only** (sandbox pages, do not link from production nav):
+- `/lynch-home` — Lynch's style sandbox, dark brand palette + Dither WebGL background
+- `/lynch-about` — Lynch's style sandbox for the About layout
+- `/ismaila-home` — Ismaila's style sandbox, cloned from `/lynch-home` as a starting point
 
 <!--
   Keep this section as a quick snapshot. The full details live in PROGRESS.md.

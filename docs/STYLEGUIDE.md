@@ -6,31 +6,60 @@ Use this to replicate the project's visual language across all pages and compone
 
 ## Color Palette
 
-> Colors below are extracted from the wireframe as a starting reference. Final brand palette TBD — update this section before Phase 2 build begins.
+All colors are Tailwind custom tokens — use them as `bg-bg-blue`, `text-highlight-green`, `border-primary-blue`, etc.
 
-### Primary / CTA
-| Name          | Hex       | Tailwind equiv | Use                              |
-|---------------|-----------|----------------|----------------------------------|
-| cta-dark      | `#4b5563` | `gray-600`     | Primary CTA buttons (newsletter subscribe) |
-| footer-bg     | `#1f2937` | `gray-800`     | Footer background, newsletter page dark side |
+### Brand Colors
+| Token             | Hex       | Tailwind class          | Use                                           |
+|-------------------|-----------|-------------------------|-----------------------------------------------|
+| `bg-blue`         | `#010440` | `bg-bg-blue`            | Page background — used everywhere             |
+| `primary-blue`    | `#2128A6` | `bg-primary-blue`       | Section backgrounds, card fills, dividers     |
+| `light-blue`      | `#3038D9` | `border-light-blue`     | Section borders, structural dividers, outlines |
+| `highlight-purple`| `#8E72F2` | `border-highlight-purple` | Decorative borders, animated shine effects, badges |
+| `highlight-green` | `#7EF28F` | `text-highlight-green`  | CTAs, key action buttons, active nav states   |
 
-### Neutrals
-| Name        | Hex       | Tailwind equiv | Use                              |
-|-------------|-----------|----------------|----------------------------------|
-| bg          | `#f9fafb` | `gray-50`      | Page background                  |
-| surface      | `#e5e7eb` | `gray-200`     | Cards, panels, wireframe boxes   |
-| border       | `#9ca3af` | `gray-400`     | Borders, dividers                |
-| text         | `#374151` | `gray-700`     | Body text                        |
-| text-muted   | `#6b7280` | `gray-500`     | Secondary text, captions, labels |
-| heading      | `#1f2937` | `gray-800`     | Headings, strong emphasis        |
-| heading-light | `#d1d5db` | `gray-300`    | Pull quote decorative marks (`"`) |
+### Text
+| Use                        | Value     | Notes                              |
+|----------------------------|-----------|------------------------------------|
+| All body text              | `#ffffff` | `text-white` — no exceptions       |
+| Headings                   | `#ffffff` | `text-white`                       |
+| Muted / secondary text     | `#ffffff` at 60% opacity | `text-white/60`     |
+| Captions / micro labels    | `#ffffff` at 40% opacity | `text-white/40`     |
 
-<!--
-  Once brand colors are defined, add:
-  | primary     | #??????     | Main buttons, key actions, links |
-  | primary-light | #?????? | Hover states, light backgrounds |
-  | accent      | #??????     | Highlights, badges, secondary CTA |
--->
+### Usage Rules
+
+**Backgrounds**
+- Page background: always `bg-bg-blue` (`#010440`)
+- Card / section backgrounds: `bg-primary-blue` (`#2128A6`) or `bg-primary-blue/30` for subtle panels
+
+**Borders & Structure**
+- Section dividers, card outlines: `border-light-blue` (`#3038D9`)
+- Decorative / animated borders: `border-highlight-purple` (`#8E72F2`)
+- Never use white borders
+
+**Interactive elements (buttons, links)**
+- Primary CTA: `text-bg-blue` on `bg-highlight-green` — dark text on green
+- Secondary / ghost buttons: `border-highlight-purple` with animated shine on hover
+- Nav links default: `text-white`
+- Nav links active / hover: `text-highlight-green`
+
+**Accents & highlights**
+- Badges, tags, pull quote marks: `text-highlight-purple` or `border-highlight-purple`
+- "Shine" / glow effects on hover: `highlight-purple` or `highlight-green` as box-shadow / border color
+- Success, confirmation states: `highlight-green`
+
+### Animated Border Pattern (futuristic shine)
+The signature interactive style — use on buttons and card borders:
+```css
+/* Shimmer border on hover — implement via Tailwind + custom CSS */
+border: 1px solid #8E72F2;
+box-shadow: 0 0 0px #8E72F2;
+transition: box-shadow 0.3s ease;
+
+&:hover {
+  box-shadow: 0 0 12px #8E72F2, 0 0 24px #3038D9;
+}
+```
+Or as a rotating gradient border for the full "shine" effect — document the component pattern here when built.
 
 ---
 
