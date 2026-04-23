@@ -4,7 +4,7 @@ const navLinks = [
   { to: '/',         label: 'Home',          end: true },
   { to: '/about',    label: 'About',         end: false },
   { to: '/partners', label: 'Partners',      end: false },
-  { to: '/pilots',   label: 'Pilots',        end: false },
+  { to: '/pilots',   label: 'Experiences',   end: false },
   { to: '/news',     label: 'News & Events', end: false },
   { to: '/faq',      label: 'FAQ',           end: false },
   { to: '/contact',  label: 'Contact',       end: false },

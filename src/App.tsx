@@ -5,6 +5,8 @@ import Home from '@/pages/Home'
 import About from '@/pages/About'
 import Partners from '@/pages/Partners'
 import Pilots from '@/pages/Pilots'
+import SnapstingActivities from '@/pages/SnapstingActivities'
+import PavillonActivities from '@/pages/PavillonActivities'
 import News from '@/pages/News'
 import FAQ from '@/pages/FAQ'
 import Contact from '@/pages/Contact'
@@ -37,6 +39,8 @@ export default function App() {
         <Route path="/about"     element={<Layout><About /></Layout>} />
         <Route path="/partners"  element={<Layout><Partners /></Layout>} />
         <Route path="/pilots"    element={<Layout><Pilots /></Layout>} />
+        <Route path="/pilots/snapsting" element={<Layout><SnapstingActivities /></Layout>} />
+        <Route path="/pilots/pavillon"  element={<Layout><PavillonActivities /></Layout>} />
         <Route path="/news"      element={<Layout><News /></Layout>} />
         <Route path="/faq"       element={<Layout><FAQ /></Layout>} />
         <Route path="/contact"   element={<Layout><Contact /></Layout>} />

@@ -28,25 +28,25 @@ export default function Home() {
       {/* Mission */}
       <div className="max-w-3xl mx-auto mb-12 space-y-5 text-base leading-relaxed text-gray-700" style={{ fontFamily: 'Georgia, serif' }}>
         <p>
-          Cultural heritage exists because people need it. Not as a record of the past, but as a
-          living connection — to place, to community, to the stories that explain who we are and how
-          we got here. Yet for millions of people across Europe, that connection is breaking down.
-          Not because the stories have lost their power, but because the spaces and formats meant to
-          carry them haven't kept pace with the people they're meant to serve.
+          Cultural heritage exists because people need it. It functions as a living connection to
+          place, to community, to the stories that explain who we are and how we got here. Yet for
+          millions of people across Europe, that connection is breaking down. The spaces and formats
+          meant to carry these stories simply haven't kept pace with the people they're meant to
+          serve.
         </p>
         <p>
           Smaller cultural heritage institutions feel this most acutely. Without the resources of
           major flagships, they watch audiences shrink, younger generations drift, and communities
           that were never quite reflected in their collections stop showing up at all. The tools to
-          change this — immersive, multi-sensory experiences that surround you with a story rather
-          than presenting it from behind glass — exist, but remain out of reach for most.
+          change this exist. Immersive, multi-sensory experiences that surround you with a story
+          rather than presenting it from behind glass are proven and powerful. But they remain out
+          of reach for most.
         </p>
         <p>
           Immersive ECHO starts from a different premise: that heritage is most powerful when it's
           felt collectively, in shared spaces, by people who might not have sought it out on their
-          own. The project's mission is not to digitize culture or dazzle with technology — it's to
-          give cultural institutions across Europe the practical means to bring people back into the
-          story. Their story.
+          own. The project's mission is to give cultural institutions across Europe the practical
+          means to bring people back into the story. Their story.
         </p>
       </div>
 

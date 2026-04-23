@@ -74,6 +74,20 @@ export default function About() {
         <div className="border-2 border-gray-400 bg-gray-200 h-56 flex items-center justify-center text-gray-500 rounded-lg">
           [Infographic: Dual-Track Design Methodology → Public Testbed]
         </div>
+        <p className="mt-4 text-gray-700">
+          <span className="font-bold">About:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+        </p>
+      </div>
+
+      {/* Block 3b: Curriculum model infographic */}
+      <div className="mb-12">
+        {/* TODO: Replace with real infographic SVG or image */}
+        <div className="border-2 border-gray-400 bg-gray-200 h-56 flex items-center justify-center text-gray-500 rounded-lg">
+          [Infographic: Immersive ECHO Curriculum Model]
+        </div>
+        <p className="mt-4 text-gray-700">
+          <span className="font-bold">About:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+        </p>
       </div>
 
       {/* Divider */}
