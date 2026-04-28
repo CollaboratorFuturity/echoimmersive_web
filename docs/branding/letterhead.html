@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Letterhead · Immersive Echo</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="brand.css">
+<link rel="stylesheet" href="kit-shared.css">
+<style>
+  body { background: #2a2b2f; }
+  .stage { padding: 56px 32px 96px; display: flex; flex-direction: column; align-items: center; gap: 56px; }
+  .label { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(247,243,224,0.55); margin-bottom: 16px; }
+  .label b { color: var(--cream); font-weight: 600; }
+
+  /* A4 page: 210 × 297 mm rendered at ~3.4 px/mm = 720 × 1018 px */
+  .page-a4 {
+    width: 720px;
+    height: 1018px;
+    background: #ffffff;
+    color: var(--charcoal);
+    position: relative;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+    overflow: hidden;
+    font-family: var(--font-body);
+  }
+  .page-a4 .pad {
+    position: absolute;
+    inset: 56px 56px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ---- Variant A: editorial / minimal ---- */
+  .v-a .header { display: flex; justify-content: space-between; align-items: flex-start; }
+  .v-a .header img { height: 56px; }
+  .v-a .header .meta { font-family: var(--font-display); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--plum); text-align: right; line-height: 1.7; }
+  .v-a .header .meta b { color: var(--charcoal); font-weight: 700; display: block; margin-bottom: 4px; }
+  .v-a .body { margin-top: 56px; flex: 1; font-size: 12px; line-height: 1.65; max-width: 60ch; }
+  .v-a .body .recipient { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; font-weight: 700; line-height: 1.4; }
+  .v-a .body .date { font-family: var(--font-display); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--plum); margin: 24px 0 32px; }
+  .v-a .body .subject { font-family: var(--font-display); font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: -0.005em; line-height: 1.15; margin-bottom: 24px; max-width: 32ch; }
+  .v-a .body p { margin: 0 0 14px; }
+  .v-a .footer { display: flex; justify-content: space-between; align-items: flex-end; padding-top: 24px; border-top: 1px solid rgba(90,66,99,0.3); font-family: var(--font-display); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--plum); }
+  .v-a .footer b { color: var(--charcoal); font-weight: 700; }
+  .v-a .accent-stripe { margin-top: 32px; height: 6px; background-color: var(--charcoal); background-image: url('assets/gradient-bg.png'); background-size: cover; background-position: center; }
+
+  /* ---- Variant B: bold / charcoal masthead ---- */
+  .v-b .pad { padding: 0; inset: 0; }
+  .v-b .masthead { background-color: var(--charcoal); background-image: url('assets/gradient-bg.png'); background-size: cover; background-position: center; color: var(--cream); padding: 40px 56px 36px; display: flex; justify-content: space-between; align-items: center; }
+  .v-b .masthead img { height: 48px; }
+  .v-b .masthead .right { font-family: var(--font-display); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(247,243,224,0.65); text-align: right; line-height: 1.7; }
+  .v-b .masthead .right b { color: var(--lilac); display: block; }
+  .v-b .body { padding: 48px 56px 24px; flex: 1; font-size: 12px; line-height: 1.65; }
+  .v-b .body .recipient { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; font-weight: 700; line-height: 1.4; }
+  .v-b .body .date { font-family: var(--font-display); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--plum); margin: 24px 0 32px; }
+  .v-b .body .subject { font-family: var(--font-display); font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: -0.01em; line-height: 1.05; margin-bottom: 28px; max-width: 22ch; }
+  .v-b .body .subject em { font-style: normal; color: var(--purple); }
+  .v-b .body p { margin: 0 0 14px; max-width: 60ch; }
+  .v-b .footer { padding: 24px 56px; background: var(--plum); color: var(--cream); display: grid; grid-template-columns: 1fr 1fr auto; gap: 24px; align-items: center; font-family: var(--font-display); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; line-height: 1.6; }
+  .v-b .footer .eu { display: flex; align-items: center; gap: 12px; justify-self: end; }
+  .v-b .footer .eu img { height: 38px; width: auto; display: block; }
+  .v-b .footer .eu .eu-text { color: var(--cream); font-family: var(--font-display); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; line-height: 1.6; }
+  .v-b .footer b { display: block; color: var(--lilac); font-weight: 600; margin-bottom: 4px; }
+
+  /* ---- Variant C: mark-led ---- */
+  .v-c .pad { padding: 0; inset: 0; display: block; }
+  .v-c .top-bar { height: 14px; background-color: var(--charcoal); background-image: url('assets/gradient-bg.png'); background-size: cover; background-position: center; }
+  .v-c .header { padding: 48px 56px 0; display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+  .v-c .header img.mark { height: 88px; }
+  .v-c .header .ident { text-align: right; }
+  .v-c .header .ident .name { font-family: var(--font-display); font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; line-height: 1; }
+  .v-c .header .ident .reach { font-family: var(--font-display); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--plum); margin-top: 6px; line-height: 1.7; }
+  .v-c .body { padding: 56px 56px 24px; font-size: 12px; line-height: 1.65; flex: 1; }
+  .v-c .body .recipient { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; font-weight: 700; line-height: 1.4; }
+  .v-c .body .date { font-family: var(--font-display); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--plum); margin: 24px 0 28px; }
+  .v-c .body .subject { font-family: var(--font-display); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 24px; }
+  .v-c .body p { margin: 0 0 14px; max-width: 60ch; }
+  .v-c .signoff { margin-top: 24px; }
+  .v-c .signoff .name { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; font-size: 11px; }
+  .v-c .signoff .role { font-size: 11px; color: var(--plum); }
+  .v-c .footer { padding: 20px 56px; border-top: 1px solid rgba(90,66,99,0.25); display: flex; justify-content: space-between; align-items: center; font-family: var(--font-display); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--plum); }
+  .v-c .footer img { height: 14px; }
+
+  /* row */
+  .row { display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; }
+  .frame { display: flex; flex-direction: column; align-items: center; }
+</style>
+</head>
+<body>
+  <nav class="kit-nav no-print">
+    <div class="left">
+      <a class="back" href="index.html">← Brand Kit</a>
+      <span class="crumb">Stationery · <strong>Letterhead — A4</strong></span>
+    </div>
+    <img class="mark" src="assets/mark-light.png?v=3" alt="">
+  </nav>
+
+  <div class="stage">
+
+    <div class="frame">
+      <div class="label">Variant&nbsp;A · <b>Editorial</b> — quiet, executive, day-to-day correspondence</div>
+      <div class="page-a4 v-a">
+        <div class="pad">
+          <div class="header">
+            <img src="assets/logo-horizontal-dark.png?v=3" alt="">
+            <div class="meta">
+              <b>Immersive Echo</b>
+              Lindholmspiren 7<br>
+              417 56 Göteborg, SE<br>
+              www.echoimmersive.eu
+            </div>
+          </div>
+          <div class="body">
+            <div class="recipient">Dr. Élise Moreau<br>Director of Public Programmes<br>Musée des Arts Décoratifs · Lyon</div>
+            <div class="date">14 April 2026 · Göteborg</div>
+            <div class="subject">Re: Hosting an Immersive&nbsp;Echo prototype, autumn cycle.</div>
+            <p>Dear Dr.&nbsp;Moreau,</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            <p style="margin-top: 24px;">With warm regards,</p>
+            <p style="margin-top: 32px; font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.04em; font-weight: 700; font-size: 11px;">Anna Lindgren<br><span style="color: var(--plum); font-weight: 400;">Director of Programmes</span><br><span style="color: var(--plum); font-weight: 400; text-transform: lowercase; letter-spacing: 0.02em;">hello@echoimmersive.eu</span></p>
+          </div>
+          <div class="footer">
+            <span><b>Immersive&nbsp;Echo</b></span>
+            <span>01 / 01</span>
+          </div>
+          <div class="accent-stripe"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="frame">
+      <div class="label">Variant&nbsp;B · <b>Bold Masthead</b> — formal announcements, partner letters, press</div>
+      <div class="page-a4 v-b">
+        <div class="pad">
+          <div class="masthead">
+            <img src="assets/logo-horizontal-white.png?v=3" alt="">
+            <div class="right">
+              <b>OFFICIAL CORRESPONDENCE</b>
+              www.echoimmersive.eu
+            </div>
+          </div>
+          <div class="body">
+            <div class="recipient">Members of the Steering Committee<br>Immersive Echo Consortium</div>
+            <div class="date">14 April 2026 · Göteborg</div>
+            <div class="subject">A scalable model, <em>now ready for public test.</em></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+            <p style="margin-top: 24px; font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.04em; font-weight: 700; font-size: 11px;">On behalf of the Consortium,<br><span style="font-weight: 400; color: var(--plum); margin-top: 4px; display: inline-block;">Anna Lindgren · Director of Programmes</span></p>
+          </div>
+          <div class="footer">
+            <div><b>Office</b>Lindholmspiren 7<br>417 56 Göteborg, SE</div>
+            <div><b>Reach</b>hello@echoimmersive.eu<br>+46 31 000 00 00</div>
+            <div class="eu">
+              <img src="assets/eu-flag.png" alt="European Union">
+              <div class="eu-text">Co-funded by the<br>Creative Europe Programme<br>of the European Union</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

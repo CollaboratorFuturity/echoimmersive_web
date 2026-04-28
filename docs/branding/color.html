@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Color · Immersive Echo</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="brand.css">
+<link rel="stylesheet" href="kit-shared.css">
+<style>
+  /* Color cards */
+  .palette { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr; gap: 4px; height: 420px; margin-top: 24px; }
+  .swatch { padding: 28px; display: flex; flex-direction: column; justify-content: space-between; font-family: var(--font-display); }
+  .swatch .top { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.7; }
+  .swatch .name { font-size: 32px; font-weight: 700; text-transform: uppercase; line-height: 1; margin-top: 8px; }
+  .swatch .codes { font-size: 11px; line-height: 1.8; letter-spacing: 0.04em; }
+  .swatch .codes div { display: flex; justify-content: space-between; gap: 16px; }
+  .swatch .codes b { font-weight: 700; }
+
+
+  /* Color pairings */
+  .pair-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; margin-top: 24px; }
+  .pair { aspect-ratio: 1 / 1; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; }
+  .pair-tag { font-family: var(--font-display); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.6; }
+  .pair-display { font-family: var(--font-display); font-weight: 800; font-size: 140px; line-height: 0.85; letter-spacing: -0.04em; align-self: center; margin: -12px 0; }
+  .pair-meta { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.04em; line-height: 1.5; }
+  .pair-meta b { display: block; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 4px; }
+  .pair-meta span { display: block; opacity: 0.65; font-family: var(--font-body); font-size: 11px; letter-spacing: 0; text-transform: none; }
+  .pair-gradient { background: url('assets/gradient-bg.png') center/cover no-repeat; color: var(--cream); }
+</style>
+</head>
+<body>
+  <nav class="kit-nav no-print">
+    <div class="left">
+      <a class="back" href="index.html">← Brand Kit</a>
+      <span class="crumb">Foundations · <strong>Color</strong></span>
+    </div>
+    <img class="mark" src="assets/mark-light.png?v=3" alt="">
+  </nav>
+
+  <div class="page">
+    <h1 class="kit-title">Color</h1>
+    <p class="kit-lede">A five-color palette tuned for the calm, cinematic register of Immersive&nbsp;Echo. Cream and charcoal carry the weight; plum, purple, and lilac add the resonance.</p>
+
+    <div class="section-bar" id="palette"><span><span class="num">01</span> &nbsp;Palette</span><span>Five-color system</span></div>
+
+    <div class="palette">
+      <div class="swatch" style="background: var(--cream); color: var(--charcoal);">
+        <div><div class="top">Foundation</div><div class="name">Cream</div></div>
+        <div class="codes"><div><span>HEX</span><b>#F7F3E0</b></div><div><span>RGB</span><b>247·243·224</b></div><div><span>CMYK</span><b>0·2·4·3</b></div><div><span>PMS</span><b>7527 C</b></div></div>
+      </div>
+      <div class="swatch" style="background: var(--charcoal); color: var(--cream);">
+        <div><div class="top">Foundation</div><div class="name">Charcoal</div></div>
+        <div class="codes"><div><span>HEX</span><b>#202124</b></div><div><span>RGB</span><b>32·33·36</b></div><div><span>CMYK</span><b>11·8·0·86</b></div><div><span>PMS</span><b>6 C</b></div></div>
+      </div>
+      <div class="swatch" style="background: var(--lilac); color: var(--charcoal);">
+        <div><div class="top">Accent</div><div class="name">Lilac</div></div>
+        <div class="codes"><div><span>HEX</span><b>#DA80FF</b></div><div><span>RGB</span><b>218·128·255</b></div><div><span>CMYK</span><b>15·50·0·0</b></div><div><span>PMS</span><b>2572 C</b></div></div>
+      </div>
+      <div class="swatch" style="background: var(--purple); color: var(--cream);">
+        <div><div class="top">Accent</div><div class="name">Purple</div></div>
+        <div class="codes"><div><span>HEX</span><b>#8843A3</b></div><div><span>RGB</span><b>136·67·163</b></div><div><span>CMYK</span><b>17·59·0·36</b></div><div><span>PMS</span><b>2577 C</b></div></div>
+      </div>
+      <div class="swatch" style="background: var(--plum); color: var(--cream);">
+        <div><div class="top">Foundation</div><div class="name">Plum</div></div>
+        <div class="codes"><div><span>HEX</span><b>#5A4263</b></div><div><span>RGB</span><b>90·66·99</b></div><div><span>CMYK</span><b>9·33·0·61</b></div><div><span>PMS</span><b>5265 C</b></div></div>
+      </div>
+    </div>
+
+    <div class="section-bar"><span><span class="num">02</span> &nbsp;Color Pairings</span><span>Approved combinations for type and surface</span></div>
+
+    <div class="pair-grid">
+      <div class="pair" style="background: var(--cream); color: var(--charcoal);">
+        <div class="pair-tag">Default</div>
+        <div class="pair-display">Aa</div>
+        <div class="pair-meta"><b>Charcoal on Cream</b><span>Body documents · letterhead · long-form</span></div>
+      </div>
+      <div class="pair" style="background: var(--charcoal); color: var(--cream);">
+        <div class="pair-tag">Inverse</div>
+        <div class="pair-display">Aa</div>
+        <div class="pair-meta"><b>Cream on Charcoal</b><span>Presentation default · video</span></div>
+      </div>
+      <div class="pair" style="background: var(--plum); color: var(--cream);">
+        <div class="pair-tag">Editorial</div>
+        <div class="pair-display">Aa</div>
+        <div class="pair-meta"><b>Cream on Plum</b><span>Quotes · feature openers · social</span></div>
+      </div>
+      <div class="pair" style="background: var(--purple); color: var(--cream);">
+        <div class="pair-tag">Statement</div>
+        <div class="pair-display">Aa</div>
+        <div class="pair-meta"><b>Cream on Purple</b><span>Section dividers · campaign moments</span></div>
+      </div>
+      <div class="pair" style="background: var(--lilac); color: var(--charcoal);">
+        <div class="pair-tag">Spotlight</div>
+        <div class="pair-display">Aa</div>
+        <div class="pair-meta"><b>Charcoal on Lilac</b><span>Highlights · single moments · CTAs</span></div>
+      </div>
+      <div class="pair" style="background: var(--cream); color: var(--purple);">
+        <div class="pair-tag">Soft</div>
+        <div class="pair-display">Aa</div>
+        <div class="pair-meta"><b>Purple on Cream</b><span>Sub-headings · pull-quotes</span></div>
+      </div>
+      <div class="pair" style="background: var(--cream); color: var(--plum);">
+        <div class="pair-tag">Quiet</div>
+        <div class="pair-display">Aa</div>
+        <div class="pair-meta"><b>Plum on Cream</b><span>Captions · meta · footnotes</span></div>
+      </div>
+      <div class="pair pair-gradient">
+        <div class="pair-tag">Brand</div>
+        <div class="pair-display">Aa</div>
+        <div class="pair-meta"><b>Cream on Gradient</b><span>Hero moments · cover art · campaign</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

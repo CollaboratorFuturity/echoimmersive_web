@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Social &amp; Digital · Immersive Echo</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="brand.css">
+<link rel="stylesheet" href="kit-shared.css?v=7">
+<style>
+  body { background: #2a2b2f; color: var(--cream); }
+  .stage { max-width: 1280px; margin: 0 auto; padding: 56px 32px 120px; }
+  .group-title { font-family: var(--font-display); font-size: 36px; font-weight: 700; text-transform: uppercase; letter-spacing: -0.005em; margin: 80px 0 12px; padding-top: 32px; border-top: 1px solid rgba(247,243,224,0.15); display: flex; justify-content: space-between; align-items: baseline; }
+  .group-title .num { font-size: 14px; letter-spacing: 0.18em; color: var(--lilac); font-weight: 600; }
+  .group-sub { font-size: 16px; color: rgba(247,243,224,0.6); margin-bottom: 32px; max-width: 60ch; }
+
+  .row { display: flex; gap: 24px; flex-wrap: wrap; align-items: flex-start; }
+  .frame { display: flex; flex-direction: column; gap: 10px; }
+  .frame .meta { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(247,243,224,0.55); }
+  .frame .meta b { color: var(--cream); font-weight: 700; }
+
+  /* Canvas — actual posting dimensions, scaled */
+  .canvas { background: var(--cream); position: relative; overflow: hidden; box-shadow: 0 16px 36px rgba(0,0,0,0.5); }
+
+  /* Sizes (proportional, scaled-down for preview but representative) */
+  /* Square 1080×1080 → preview 360 */
+  .sq { width: 360px; height: 360px; }
+  /* Story 1080×1920 → preview 240×426 */
+  .story { width: 240px; height: 426px; }
+  /* FB cover 820×312 → 600×228 */
+  .fb-cover { width: 600px; height: 228px; }
+  /* FB event 1920×1080 → 480×270 */
+  .fb-event { width: 480px; height: 270px; }
+  /* LI banner 1584×396 → 660×165 */
+  .li-banner { width: 660px; height: 165px; }
+  /* X banner 1500×500 → 600×200 */
+  .x-banner { width: 600px; height: 200px; }
+  /* YT banner 2560×1440 safe area 1546×423 → 600×337 */
+  .yt-banner { width: 600px; height: 337px; position: relative; }
+  .yt-banner .safe { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 366px; height: 100px; border: 1px dashed rgba(218,128,255,0.7); display: flex; align-items: center; justify-content: center; gap: 12px; pointer-events: none; }
+  .yt-banner .safe span { font-family: var(--font-display); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--lilac); padding: 2px 6px; background: rgba(0,0,0,0.5); position: absolute; top: -8px; left: 8px; }
+  /* YT thumb 1280×720 → 480×270 */
+  .yt-thumb { width: 480px; height: 270px; }
+  /* TikTok 1080×1920 → 200×356 */
+  .tt { width: 200px; height: 356px; }
+  /* Zoom 1920×1080 → 480×270 */
+  .zoom { width: 480px; height: 270px; }
+  /* Avatar */
+  .av { width: 160px; height: 160px; border-radius: 50%; }
+
+  /* === Shared interior layouts === */
+  .display { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; letter-spacing: -0.01em; line-height: 0.98; }
+  .body { font-family: var(--font-body); }
+
+  /* Square Variant 1 — type-led, charcoal */
+  .post-typeled {
+    background: var(--charcoal); color: var(--cream); padding: 32px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .post-typeled .eyebrow { font-family: var(--font-display); font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--lilac); }
+  .post-typeled .head { font-family: var(--font-display); font-weight: 700; font-size: 44px; line-height: 0.98; text-transform: uppercase; letter-spacing: -0.015em; }
+  .post-typeled .head em { font-style: normal; color: var(--lilac); }
+  .post-typeled .footer { display: flex; justify-content: space-between; align-items: flex-end; }
+  .post-typeled .footer img { height: 28px; }
+  .post-typeled .footer span { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.6; }
+
+  /* Square Variant 2 — mark-led, plum */
+  .post-markled { background-color: var(--charcoal); background-image: url('assets/gradient-bg.png'); background-size: cover; background-position: center; color: var(--cream); padding: 32px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; text-align: center; }
+  .post-markled img.mark { width: 92px; }
+  .post-markled .head { font-family: var(--font-display); font-weight: 700; font-size: 36px; line-height: 1.05; text-transform: uppercase; letter-spacing: -0.005em; max-width: 14ch; }
+  .post-markled .small { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--lilac); }
+
+  /* Square Variant 3 — number-led, cream */
+  .post-numled { background: var(--cream); color: var(--charcoal); padding: 32px; display: flex; flex-direction: column; justify-content: space-between; }
+  .post-numled .eyebrow { font-family: var(--font-display); font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--purple); }
+  .post-numled .num { font-family: var(--font-display); font-weight: 800; font-size: 160px; line-height: 0.85; letter-spacing: -0.04em; color: var(--charcoal); }
+  .post-numled .num em { font-style: normal; color: var(--purple); }
+  .post-numled .label { font-family: var(--font-display); font-size: 16px; line-height: 1.25; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; max-width: 24ch; }
+  .post-numled .footer img { height: 24px; }
+  .post-numled .footer { display: flex; justify-content: space-between; align-items: flex-end; }
+
+  /* Story interior */
+  .story-content { padding: 24px; display: flex; flex-direction: column; height: 100%; }
+  .story-charcoal { background: var(--charcoal); color: var(--cream); }
+  .story-plum { background: var(--plum); color: var(--cream); }
+  .story-cream { background: var(--cream); color: var(--charcoal); }
+  .story-content .top { font-family: var(--font-display); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.6; }
+  .story-content .head { font-family: var(--font-display); font-weight: 700; font-size: 30px; line-height: 0.98; text-transform: uppercase; letter-spacing: -0.01em; margin-top: auto; }
+  .story-content .head em { font-style: normal; color: var(--lilac); }
+  .story-content .cta { margin-top: 20px; padding: 10px 14px; border: 1px solid currentColor; font-family: var(--font-display); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; align-self: flex-start; }
+  .story-content .bottom { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 16px; }
+  .story-content .bottom img { height: 24px; }
+  .story-content .bottom span { font-family: var(--font-display); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.55; max-width: 50%; text-align: right; overflow: hidden; }
+
+  /* FB cover */
+  .fbcov { background: var(--charcoal); color: var(--cream); display: flex; align-items: center; justify-content: space-between; padding: 28px 40px; position: relative; overflow: hidden; }
+  .fbcov .titles { font-family: var(--font-display); font-weight: 700; font-size: 26px; line-height: 1.02; text-transform: uppercase; letter-spacing: -0.005em; }
+  .fbcov .titles em { font-style: normal; color: var(--lilac); }
+  .fbcov img.mark { height: 110px; }
+  .fbcov.cream { background: var(--cream); color: var(--charcoal); }
+  .fbcov.plum { background: var(--plum); color: var(--cream); }
+
+  /* FB Event cover */
+  .fbev { background: var(--plum); color: var(--cream); padding: 28px 36px; display: flex; flex-direction: column; justify-content: space-between; }
+  .fbev .eyebrow { font-family: var(--font-display); font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--lilac); }
+  .fbev .head { font-family: var(--font-display); font-weight: 700; font-size: 38px; line-height: 0.98; text-transform: uppercase; letter-spacing: -0.01em; max-width: 16ch; }
+  .fbev .head em { font-style: normal; color: var(--lilac); }
+  .fbev .footer { display: flex; justify-content: space-between; align-items: flex-end; font-family: var(--font-display); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; }
+  .fbev .footer b { color: var(--lilac); display: block; font-weight: 600; }
+
+  /* LinkedIn banner */
+  .libn { background: var(--charcoal); color: var(--cream); padding: 24px 40px; display: flex; align-items: center; justify-content: space-between; }
+  .libn .head { font-family: var(--font-display); font-weight: 700; font-size: 22px; line-height: 1; text-transform: uppercase; letter-spacing: -0.005em; max-width: 20ch; }
+  .libn .head em { font-style: normal; color: var(--lilac); }
+  .libn img { height: 64px; }
+  .libn.lilac { background: var(--lilac); color: var(--charcoal); }
+  .libn.cream { background: var(--cream); color: var(--charcoal); }
+
+  /* X banner */
+  .xbn { background: var(--lilac); color: var(--charcoal); padding: 24px 36px; display: flex; align-items: flex-end; justify-content: space-between; }
+  .xbn .head { font-family: var(--font-display); font-weight: 700; font-size: 28px; line-height: 1.25; text-transform: uppercase; letter-spacing: -0.01em; max-width: 16ch; }
+  .xbn img { height: 84px; }
+  .xbn.charcoal { background: var(--charcoal); color: var(--cream); }
+  .xbn.plum { background: var(--plum); color: var(--cream); }
+
+  /* YT banner */
+  .ytbn-out { background-color: var(--charcoal); background-image: url('assets/gradient-bg.png'); background-size: cover; background-position: 50% 50%; color: var(--cream); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .yt-banner .safe { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 320px; height: 90px; border: 1px dashed rgba(218,128,255,0.7); display: flex; align-items: center; justify-content: center; gap: 10px; pointer-events: none; }
+  .yt-banner .safe img.mark-inline { height: 35px; width: auto; }
+  .ytbn-safe { display: flex; align-items: center; justify-content: center; gap: 24px; padding: 16px; }
+  .ytbn-safe img { height: 64px; }
+  .ytbn-safe .head { font-family: var(--font-display); font-weight: 700; font-size: 28px; line-height: 0.98; text-transform: uppercase; letter-spacing: -0.005em; max-width: 18ch; }
+  .ytbn-safe .head em { font-style: normal; color: var(--lilac); }
+
+  /* YT thumb */
+  .ytth { background: var(--charcoal); color: var(--cream); padding: 20px 28px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; }
+  .ytth .ep { font-family: var(--font-display); font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--lilac); }
+  .ytth .head { font-family: var(--font-display); font-weight: 800; font-size: 44px; line-height: 0.95; text-transform: uppercase; letter-spacing: -0.015em; max-width: 14ch; }
+  .ytth .footer { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; flex-wrap: nowrap; }
+  .ytth .footer span { flex: 1; min-width: 0; }
+  .ytth .footer img { height: 24px; flex-shrink: 0; }
+  .ytth.cream { background: var(--cream); color: var(--charcoal); }
+  .ytth.cream .ep { color: var(--purple); }
+  .ytth.plum { background: var(--plum); color: var(--cream); }
+
+  /* TikTok cover */
+  .tt-cover { background: var(--charcoal); color: var(--cream); padding: 18px 16px; display: flex; flex-direction: column; justify-content: space-between; }
+  .tt-cover .top img { width: 36px; }
+  .tt-cover .head { font-family: var(--font-display); font-weight: 800; font-size: 24px; line-height: 0.98; text-transform: uppercase; letter-spacing: -0.01em; }
+  .tt-cover .head em { font-style: normal; color: var(--lilac); }
+  .tt-cover .badge { font-family: var(--font-display); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--lilac); padding: 4px 8px; background: rgba(218,128,255,0.15); align-self: flex-start; margin-top: 8px; }
+
+  /* Zoom backgrounds */
+  .zm { display: flex; align-items: center; justify-content: center; padding: 32px 56px; gap: 36px; }
+  .zm.zm-logo { gap: 12px; justify-content: center; align-items: center; }
+  .zm.zm-logo .titles { font-family: var(--font-display); font-weight: 800; font-size: 36px; line-height: 0.9; text-transform: uppercase; letter-spacing: -0.005em; text-align: right; align-self: center; }
+  .zm.zm-logo .titles .row1, .zm.zm-logo .titles .row2 { display: block; }
+  .zm.zm-logo img.mark { height: 64px; align-self: center; display: block; }
+  .zm.zm-cream-bigmark img.mark { height: 92px; align-self: end; }
+  .zm.zm-gradient { background-color: var(--charcoal); background-image: url('assets/gradient-bg.png'); background-size: cover; background-position: 70% 80%; }
+  .zm .titles { font-family: var(--font-display); font-weight: 700; font-size: 32px; line-height: 1; text-transform: uppercase; letter-spacing: -0.01em; }
+  .zm .titles em { font-style: normal; color: var(--lilac); }
+  .zm .titles .sub { font-size: 12px; letter-spacing: 0.2em; opacity: 0.7; margin-top: 12px; font-weight: 400; }
+  .zm img.mark { height: 70px; }
+
+  /* Avatars */
+  .av-frame { display: flex; align-items: center; justify-content: center; }
+  .av-frame img { width: 60%; }
+  .av-row .frame { width: 160px; }
+  .av-row .frame .meta { white-space: normal; }
+  .av-gradient { background-color: var(--charcoal); background-image: url('assets/gradient-bg.png'); background-size: cover; background-position: 70% 80%; }
+  /* Tint mark-light to lilac via CSS mask (exact brand hex) */
+  .mark-mask-lilac { background: var(--lilac); -webkit-mask: url('assets/mark-light.png?v=3') center / contain no-repeat; mask: url('assets/mark-light.png?v=3') center / contain no-repeat; }
+
+  /* Profile mock (to demo the avatar) */
+  .profile-mock { width: 240px; padding: 16px; background: var(--cream); color: var(--charcoal); display: flex; gap: 12px; align-items: center; box-shadow: 0 12px 32px rgba(0,0,0,0.3); }
+  .profile-mock .av { width: 48px; height: 48px; }
+  .profile-mock .info .name { font-family: var(--font-display); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+  .profile-mock .info .handle { font-size: 11px; color: var(--plum); }
+</style>
+</head>
+<body>
+  <nav class="kit-nav no-print">
+    <div class="left">
+      <a class="back" href="index.html">← Brand Kit</a>
+      <span class="crumb">Social &amp; Digital · <strong>Templates</strong></span>
+    </div>
+    <img class="mark" src="assets/mark-light.png?v=3" alt="">
+  </nav>
+
+  <div class="stage">
+    <h1 class="kit-title" style="color: var(--cream);">Social &amp; Digital</h1>
+    <p class="kit-lede" style="color: rgba(247,243,224,0.7);">Every template sized to its real posting dimensions. Each platform has three variations — type-led, mark-led, and number-led — so a single campaign can speak across the whole feed.</p>
+
+    <!-- INSTAGRAM -->
+    <div id="instagram" class="group-title"><span>Instagram</span><span class="num">D.01</span></div>
+    <div class="group-sub">Post 1080×1080 · Story 1080×1920 · Profile 320×320 · 3 variations each</div>
+    <div class="row">
+      <div class="frame">
+        <div class="canvas sq">
+          <div class="post-typeled" style="height: 100%;">
+            <div class="eyebrow">Method · 02</div>
+            <div class="head">Heritage is not what we hold.<br><em>It is what we share.</em></div>
+            <div class="footer"><img src="assets/logo-horizontal-light.png?v=3" alt=""><span>@echoimmersive</span></div>
+          </div>
+        </div>
+        <div class="meta"><b>IG Post · Type-led</b> · 1080×1080</div>
+      </div>
+      <div class="frame">
+        <div class="canvas sq">
+          <div class="post-markled" style="height: 100%;">
+            <img class="mark" src="assets/mark-light.png?v=3" alt="">
+            <div class="head">Cultural heritage, collectively felt.</div>
+            <div class="small">Immersive Echo · 2026</div>
+          </div>
+        </div>
+        <div class="meta"><b>IG Post · Mark-led</b> · 1080×1080</div>
+      </div>
+      <div class="frame">
+        <div class="canvas sq">
+          <div class="post-numled" style="height: 100%;">
+            <div>
+              <div class="eyebrow">Bologna prototype</div>
+              <div class="num"><em>87</em>%</div>
+            </div>
+            <div class="footer">
+              <div class="label">visitors stayed eight minutes or longer</div>
+              <img src="assets/logo-horizontal-mono-dark.png?v=3" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="meta"><b>IG Post · Number-led</b> · 1080×1080</div>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 32px;">
+      <div class="frame">
+        <div class="canvas story">
+          <div class="story-content story-charcoal">
+            <div class="top">Public Test · Autumn 2026</div>
+            <div class="head">Living<br>stages,<br><em>shared.</em></div>
+            <div class="cta">Read the brief →</div>
+            <div class="bottom"><img src="assets/logo-horizontal-light.png?v=3" alt=""></div>
+          </div>
+        </div>
+        <div class="meta"><b>IG Story · Type</b> · 1080×1920</div>
+      </div>
+      <div class="frame">
+        <div class="canvas story">
+          <div class="story-content story-plum">
+            <div class="top">Save the date</div>
+            <div style="margin: auto 0;"><img src="assets/mark-light.png?v=3" style="width: 80px;" alt=""></div>
+            <div class="head">Bologna<br>convening<br><em>18–20 June.</em></div>
+            <div class="bottom"><img src="assets/logo-horizontal-light.png?v=3" alt=""></div>
+          </div>
+        </div>
+        <div class="meta"><b>IG Story · Mark</b> · 1080×1920</div>
+      </div>
+      <div class="frame">
+        <div class="canvas story">
+          <div class="story-content story-cream">
+            <div class="top" style="color: var(--purple);">By the numbers</div>
+            <div style="font-family: var(--font-display); font-weight: 800; font-size: 96px; line-height: 0.85; letter-spacing: -0.04em; color: var(--charcoal); margin: auto 0;"><em style="font-style: normal; color: var(--purple);">15</em><br>×<br>10</div>
+            <div class="head" style="color: var(--charcoal); font-size: 18px; max-width: none;">Fifteen partners<br>across ten countries.</div>
+            <div class="bottom"><img src="assets/logo-horizontal-mono-dark.png?v=3" alt=""></div>
+          </div>
+        </div>
+        <div class="meta"><b>IG Story · Number</b> · 1080×1920</div>
+      </div>
+      <div class="frame">
+        <div class="canvas av av-frame av-gradient"><img src="assets/mark-light.png?v=3" alt=""></div>
+        <div class="meta"><b>IG Profile</b> · 320×320</div>
+      </div>
+    </div>
+
+    <!-- FACEBOOK -->
+    <div id="facebook" class="group-title"><span>Facebook</span><span class="num">D.02</span></div>
+    <div class="group-sub">Cover 820×312 · Event 1920×1080 · Post 1200×1200 · Story 1080×1920 · Profile 170×170</div>
+    <div class="row">
+      <div class="frame">
+        <div class="canvas fb-cover"><div class="fbcov cream" style="height: 100%;"><div class="titles" style="color: var(--charcoal);">Stories <em style="color: var(--purple);">that resonate</em><br>across Europe.</div><img class="mark" src="assets/mark-gradient.png?v=3" alt=""></div></div>
+        <div class="meta"><b>FB Cover · Cream</b> · 820×312</div>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 32px;">
+      <div class="frame">
+        <div class="canvas fb-event">
+          <div class="fbev" style="height: 100%;">
+            <div class="eyebrow">Partner Convening · 2026</div>
+            <div class="head">Three days in Bologna.<br><em>Fifteen partners.</em></div>
+            <div class="footer"><span><b>Dates</b>18 — 20 June</span><span><b>Venue</b>MAMbo</span><img src="assets/logo-horizontal-light.png?v=3" style="height: 28px;" alt=""></div>
+          </div>
+        </div>
+        <div class="meta"><b>FB Event · Plum</b> · 1920×1080</div>
+      </div>
+      <div class="frame">
+        <div class="canvas fb-event">
+          <div class="fbev" style="background: var(--charcoal); height: 100%;">
+            <div class="eyebrow">Public Test · Autumn 2026</div>
+            <div class="head">Living stages,<br>opening <em>October.</em></div>
+            <div class="footer"><span><b>Venues</b>4 pilots</span><span><b>Open</b>Oct — Nov</span><img src="assets/logo-horizontal-light.png?v=3" style="height: 28px;" alt=""></div>
+          </div>
+        </div>
+        <div class="meta"><b>FB Event · Charcoal</b> · 1920×1080</div>
+      </div>
+      <div class="frame">
+        <div class="canvas av av-frame av-gradient"><img src="assets/mark-light.png?v=3" alt=""></div>
+        <div class="meta"><b>FB Profile</b> · 170×170</div>
+      </div>
+    </div>
+
+    <!-- LINKEDIN -->
+    <div id="linkedin" class="group-title"><span>LinkedIn</span><span class="num">D.03</span></div>
+    <div class="group-sub">Banner 1584×396 · Post 1200×1200 · Profile 400×400</div>
+    <div class="row">
+      <div class="frame">
+        <div class="canvas li-banner"><div class="libn" style="height: 100%; justify-content: flex-end;"><div class="head" style="text-align: right; max-width: none;">We empower<br>cultural institutions<br>to <em>create immersive experiences</em><br>in their own public spaces.</div></div></div>
+        <div class="meta"><b>LinkedIn Banner · Charcoal</b> · 1584×396</div>
+      </div>
+      <div class="frame">
+        <div class="canvas av av-frame av-gradient"><img src="assets/mark-light.png?v=3" alt=""></div>
+        <div class="meta"><b>LinkedIn Profile</b> · 400×400</div>
+      </div>
+    </div>
+
+    <!-- X / TWITTER -->
+    <div id="twitter" class="group-title"><span>X &nbsp;·&nbsp; Twitter</span><span class="num">D.04</span></div>
+    <div class="group-sub">Banner 1500×500 · Post 1600×900 · Profile 400×400</div>
+    <div class="row">
+      <div class="frame">
+        <div class="canvas x-banner"><div class="xbn" style="height: 100%;"><div class="head">Stories that <span style="background: var(--charcoal); color: var(--lilac); padding: 0 8px;">resonate</span></div><img src="assets/mark-dark.png?v=3" alt=""></div></div>
+        <div class="meta"><b>X Banner · Lilac</b> · 1500×500</div>
+      </div>
+      <div class="frame">
+        <div class="canvas x-banner"><div class="xbn charcoal" style="height: 100%;"><div class="head">Cultural heritage,<br>collectively felt.</div><img src="assets/mark-light.png?v=3" alt=""></div></div>
+        <div class="meta"><b>X Banner · Charcoal</b> · 1500×500</div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 24px;">
+      <div class="frame">
+        <div class="canvas x-banner"><div class="xbn plum" style="height: 100%;"><div class="head">Living stages, <em style="color: var(--lilac);">across Europe.</em></div><img src="assets/mark-light.png?v=3" alt=""></div></div>
+        <div class="meta"><b>X Banner · Plum</b> · 1500×500</div>
+      </div>
+      <div class="frame">
+        <div class="canvas av av-frame av-gradient"><img src="assets/mark-light.png?v=3" alt=""></div>
+        <div class="meta"><b>X Profile</b> · 400×400</div>
+      </div>
+    </div>
+
+    <!-- YOUTUBE -->
+    <div id="youtube" class="group-title"><span>YouTube</span><span class="num">D.05</span></div>
+    <div class="group-sub">Banner 2560×1440 (safe area 1546×423) · Thumbnail 1280×720 · Channel icon 800×800</div>
+    <div class="row">
+      <div class="frame">
+        <div class="canvas yt-banner ytbn-out">
+          <div class="safe" style="flex-direction: row-reverse;">
+            <span>SAFE AREA · 1546×423</span>
+            <img class="mark-inline" src="assets/mark-light.png?v=3" alt="">
+            <div class="head" style="font-family: var(--font-display); font-weight: 700; font-size: 20px; line-height: 0.98; text-transform: uppercase; letter-spacing: -0.005em; color: var(--cream); white-space: nowrap; text-align: right;">Immersive Echo<br><em style="font-style: normal; color: var(--lilac);">Channel</em></div>
+          </div>
+        </div>
+        <div class="meta"><b>YouTube Banner · Charcoal</b> · 2560×1440</div>
+      </div>
+      <div class="frame">
+        <div class="canvas av av-frame av-gradient"><img src="assets/mark-light.png?v=3" alt=""></div>
+        <div class="meta"><b>Channel Icon</b> · 800×800</div>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 24px;">
+      <div class="frame">
+        <div class="canvas yt-thumb"><div class="ytth" style="height: 100%;"><div class="ep">Episode 04</div><div class="head">Inside the Bologna prototype.</div><div class="footer"><span style="font-family: var(--font-display); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lilac);">Watch ↗</span><img src="assets/logo-horizontal-light.png?v=3" alt=""></div></div></div>
+        <div class="meta"><b>Thumbnail · Charcoal</b> · 1280×720</div>
+      </div>
+      <div class="frame">
+        <div class="canvas yt-thumb"><div class="ytth cream" style="height: 100%;"><div class="ep">Method · 03</div><div class="head" style="color: var(--charcoal); font-size: 38px;">Five movements,<br>from listening<br>to model.</div><div class="footer"><span style="font-family: var(--font-display); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--purple);">A short film</span><img src="assets/logo-horizontal-mono-dark.png?v=3" alt=""></div></div></div>
+        <div class="meta"><b>Thumbnail · Cream</b> · 1280×720</div>
+      </div>
+      <div class="frame">
+        <div class="canvas yt-thumb"><div class="ytth plum" style="height: 100%;"><div class="ep">Voices</div><div class="head" style="font-size: 32px; max-width: 16ch;">"Heritage is not what<br>we hold. It is what<br>we <em style="font-style: normal; color: var(--lilac);">share.</em>"</div><div class="footer"><span style="font-family: var(--font-display); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lilac);">Dr. Élise Moreau · Lyon</span><img src="assets/logo-horizontal-light.png?v=3" alt=""></div></div></div>
+        <div class="meta"><b>Thumbnail · Plum</b> · 1280×720</div>
+      </div>
+    </div>
+
+    <!-- TIKTOK -->
+    <div id="tiktok" class="group-title"><span>TikTok</span><span class="num">D.06</span></div>
+    <div class="group-sub">Cover / video 1080×1920 · Profile 200×200</div>
+    <div class="row">
+      <div class="frame">
+        <div class="canvas tt"><div class="tt-cover" style="height: 100%;"><div class="top"><img src="assets/mark-light.png?v=3" alt=""></div><div><div class="head">Living<br>stages,<br><em>shared.</em></div><div class="badge">Field 01</div></div></div></div>
+        <div class="meta"><b>TikTok · Type</b> · 1080×1920</div>
+      </div>
+      <div class="frame">
+        <div class="canvas tt"><div class="tt-cover" style="background: var(--purple); height: 100%;"><div class="top"><img src="assets/mark-light.png?v=3" alt=""></div><div></div><div><div class="head" style="font-size: 22px;">Heritage<br><em style="color: var(--charcoal);">resonates.</em></div><div class="badge" style="color: var(--charcoal); background: var(--lilac);">@echoimmersive</div></div></div></div>
+        <div class="meta"><b>TikTok · Mark</b> · 1080×1920</div>
+      </div>
+      <div class="frame">
+        <div class="canvas tt"><div class="tt-cover" style="background: var(--cream); color: var(--charcoal); height: 100%;"><div class="top" style="color: var(--purple); font-family: var(--font-display); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;">Behind the scenes · 03</div><div style="font-family: var(--font-display); font-weight: 800; font-size: 90px; line-height: 0.85; letter-spacing: -0.04em; color: var(--charcoal); margin: auto 0;"><em style="font-style: normal; color: var(--purple);">87</em>%</div><div><div class="head" style="color: var(--charcoal); font-size: 16px;">stayed eight<br>minutes or longer.</div><div class="badge" style="color: var(--purple); background: rgba(136,67,163,0.15);">Bologna prototype</div></div></div></div>
+        <div class="meta"><b>TikTok · Number</b> · 1080×1920</div>
+      </div>
+      <div class="frame">
+        <div class="canvas av av-frame av-gradient" style="width: 110px; height: 110px;"><img src="assets/mark-light.png?v=3" alt=""></div>
+        <div class="meta"><b>TikTok Profile</b> · 200×200</div>
+      </div>
+    </div>
+
+    <!-- ZOOM -->
+    <div id="zoom" class="group-title"><span>Zoom Background</span><span class="num">D.07</span></div>
+    <div class="group-sub">1920×1080 · 2 variations · wordmark + mark composed like the horizontal logo, centered.</div>
+    <div class="row">
+      <div class="frame">
+        <div class="canvas zoom"><div class="zm zm-logo zm-gradient" style="color: var(--cream); height: 100%;"><div class="titles"><span class="row1">Immersive</span><span class="row2">Echo</span></div><img class="mark" src="assets/mark-light.png?v=3" alt=""></div></div>
+        <div class="meta"><b>Zoom · Gradient</b> · 1920×1080</div>
+      </div>
+      <div class="frame">
+        <div class="canvas zoom"><div class="zm zm-logo zm-cream-bigmark" style="background: var(--cream); color: var(--charcoal); height: 100%;"><div class="titles"><span class="row1">Immersive</span><span class="row2">Echo</span></div><img class="mark" src="assets/mark-gradient.png?v=3" alt=""></div></div>
+        <div class="meta"><b>Zoom · Cream</b> · 1920×1080</div>
+      </div>
+    </div>
+
+    <!-- AVATARS -->
+    <div id="avatars" class="group-title"><span>Profile Pictures</span><span class="num">D.08</span></div>
+    <div class="group-sub">5 variations. Use the mark, never the wordmark, in circular crops.</div>
+    <div class="row av-row">
+      <div class="frame">
+        <div class="canvas av av-frame av-gradient"><img src="assets/mark-light.png?v=3" alt=""></div>
+        <div class="meta"><b>Primary</b> · cream on gradient</div>
+      </div>
+      <div class="frame">
+        <div class="canvas av av-frame" style="background: var(--charcoal);"><img src="assets/mark-light.png?v=3" alt=""></div>
+        <div class="meta"><b>Dark</b> · cream on charcoal</div>
+      </div>
+      <div class="frame">
+        <div class="canvas av av-frame" style="background: var(--cream);"><img src="assets/mark-dark.png?v=3" alt=""></div>
+        <div class="meta"><b>Light</b> · dark on cream</div>
+      </div>
+      <div class="frame">
+        <div class="canvas av av-frame" style="background: var(--lilac);"><img src="assets/mark-dark.png?v=3" alt=""></div>
+        <div class="meta"><b>Accent</b> · dark on lilac</div>
+      </div>
+      <div class="frame">
+        <div class="canvas av av-frame" style="background: var(--charcoal);"><span class="mark-mask-lilac" style="display:inline-block; width: 60%; aspect-ratio: 697 / 303;"></span></div>
+        <div class="meta"><b>Inverse</b> · lilac on charcoal</div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

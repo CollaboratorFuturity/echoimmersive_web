@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Immersive Echo — Brand Kit</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<template id="__bundler_thumbnail" data-bg-color="#202124">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="g" cx="80%" cy="80%" r="60%">
+        <stop offset="0%" stop-color="#da80ff"/>
+        <stop offset="100%" stop-color="#202124"/>
+      </radialGradient>
+    </defs>
+    <rect width="1200" height="800" fill="url(#g)"/>
+    <g fill="#f7f3e0" transform="translate(400 320)">
+      <rect x="0" y="0" width="160" height="160"/>
+      <circle cx="240" cy="80" r="80"/>
+      <circle cx="380" cy="80" r="20"/>
+    </g>
+  </svg>
+</template>
+<link rel="stylesheet" href="brand.css">
+<style>
+  body { background-color: var(--charcoal); background-image: url('assets/gradient-bg.png'); background-size: 100% 800px; background-repeat: no-repeat; background-position: top right; color: var(--cream); }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 80px 64px 120px; }
+  header { display: flex; align-items: flex-end; justify-content: space-between; gap: 48px; margin-bottom: 88px; padding-bottom: 32px; border-bottom: 1px solid rgba(247,243,224,0.15); }
+  header img { height: 88px; width: auto; }
+  .meta { font-family: var(--font-display); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(247,243,224,0.55); text-align: right; line-height: 1.6; }
+  h1 { font-size: 88px; line-height: 0.98; font-weight: 700; text-transform: uppercase; letter-spacing: -0.02em; max-width: 14ch; margin: 0 0 24px; }
+  .lede { font-size: 22px; line-height: 1.5; max-width: 56ch; color: rgba(247,243,224,0.78); margin-bottom: 88px; }
+  .lede em { font-style: normal; color: var(--lilac); }
+
+  .section-label { font-family: var(--font-display); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(247,243,224,0.5); margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid rgba(247,243,224,0.12); }
+
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 80px; }
+  .grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+  a.card { display: flex; flex-direction: column; gap: 0; text-decoration: none; color: inherit; background: var(--charcoal-90); border: 1px solid rgba(247,243,224,0.08); border-radius: 4px; overflow: hidden; transition: transform 0.18s ease, border-color 0.18s ease; }
+  a.card:hover { transform: translateY(-3px); border-color: rgba(218,128,255,0.5); }
+  .card-preview { aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center; padding: 24px; position: relative; overflow: hidden; }
+  .card-preview .num { position: absolute; top: 16px; left: 20px; font-family: var(--font-display); font-size: 11px; letter-spacing: 0.16em; color: rgba(247,243,224,0.55); }
+  .card-body { padding: 20px 24px 24px; border-top: 1px solid rgba(247,243,224,0.08); }
+  .card-body h3 { font-size: 18px; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 6px; }
+  .card-body p { margin: 0; font-size: 14px; line-height: 1.5; color: rgba(247,243,224,0.6); }
+
+  /* Preview backgrounds */
+  .pv-cream    { background: var(--cream); }
+  .pv-charcoal { background: var(--charcoal); }
+  .pv-plum     { background: var(--plum); }
+  .pv-purple   { background: var(--purple); }
+  .pv-lilac    { background: var(--lilac); }
+
+  .pv-cream img, .pv-lilac img { filter: none; }
+
+  .swatch-row { display: flex; width: 100%; height: 100%; }
+  .swatch-row > div { flex: 1; }
+
+  .preview-logo { max-width: 65%; max-height: 60%; object-fit: contain; }
+  .preview-mark { max-width: 40%; max-height: 60%; object-fit: contain; }
+
+  .doc-mini { width: 65%; aspect-ratio: 1/1.414; background: var(--cream); color: var(--charcoal); padding: 14px 12px; display: flex; flex-direction: column; gap: 6px; box-shadow: 0 12px 32px rgba(0,0,0,0.4); }
+  .doc-mini .h { height: 12px; background: var(--charcoal); width: 35%; }
+  .doc-mini .lines { display: flex; flex-direction: column; gap: 4px; margin-top: 18px; flex: 1; }
+  .doc-mini .lines span { display: block; height: 3px; background: rgba(32,33,36,0.18); border-radius: 1px; }
+  .doc-mini .lines span:nth-child(1) { width: 90%; }
+  .doc-mini .lines span:nth-child(2) { width: 86%; }
+  .doc-mini .lines span:nth-child(3) { width: 92%; }
+  .doc-mini .lines span:nth-child(4) { width: 70%; }
+  .doc-mini .footer { display: flex; justify-content: space-between; align-items: center; font-family: var(--font-display); font-size: 6px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--plum); }
+
+  /* Document mini cover — mirrors document.html Variant B (charcoal cover) */
+  .doc-mini-cover { width: 55%; aspect-ratio: 1/1.414; background-color: var(--charcoal); background-image: url('assets/gradient-bg.png'); background-size: cover; background-position: center; color: var(--cream); padding: 11px 11px 12px; display: flex; flex-direction: column; box-shadow: 0 12px 32px rgba(0,0,0,0.45); flex: 0 0 auto; }
+  .doc-mini-cover .cover-top { display: flex; justify-content: space-between; align-items: center; }
+  .doc-mini-cover .cover-top img { height: 8px; width: auto; }
+  .doc-mini-cover .cover-top span { font-family: var(--font-display); font-size: 4.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lilac); }
+  .doc-mini-cover .cover-num { font-family: var(--font-display); font-size: 52px; line-height: 0.85; font-weight: 700; color: var(--purple); margin-top: 14px; letter-spacing: -0.02em; }
+  .doc-mini-cover .cover-titles { margin-top: auto; }
+  .doc-mini-cover .cover-titles .eyebrow { font-family: var(--font-display); font-size: 4.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--lilac); margin-bottom: 4px; }
+  .doc-mini-cover .cover-titles .headline { font-family: var(--font-display); font-size: 9px; line-height: 1.05; font-weight: 700; text-transform: uppercase; letter-spacing: -0.005em; color: var(--cream); }
+  .doc-mini-cover .cover-meta { margin-top: 10px; padding-top: 6px; border-top: 1px solid rgba(247,243,224,0.18); display: flex; justify-content: space-between; gap: 4px; font-family: var(--font-display); font-size: 4.5px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(247,243,224,0.7); }
+  .doc-mini-cover .cover-meta b { display: block; color: var(--lilac); font-weight: 600; margin-bottom: 2px; }
+
+  /* Letterhead mini — mirrors Variant A (editorial / minimal) */
+  .letter-mini { width: 55%; aspect-ratio: 1/1.414; background: #ffffff; color: var(--charcoal); padding: 12px 11px; display: flex; flex-direction: column; box-shadow: 0 12px 32px rgba(0,0,0,0.4); }
+  .letter-mini .head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; }
+  .letter-mini .head img { height: 11px; width: auto; flex-shrink: 0; }
+  .letter-mini .head .meta { font-family: var(--font-display); font-size: 4.5px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--plum); text-align: right; line-height: 1.5; }
+  .letter-mini .head .meta b { display: block; color: var(--charcoal); font-weight: 700; }
+  .letter-mini .subject { font-family: var(--font-display); font-size: 8px; line-height: 1.05; font-weight: 700; color: var(--charcoal); text-transform: uppercase; letter-spacing: -0.005em; margin-bottom: 8px; }
+  .letter-mini .lines { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+  .letter-mini .lines span { display: block; height: 2px; background: rgba(32,33,36,0.16); border-radius: 1px; }
+  .letter-mini .lines span:nth-child(1) { width: 92%; }
+  .letter-mini .lines span:nth-child(2) { width: 86%; }
+  .letter-mini .lines span:nth-child(3) { width: 90%; }
+  .letter-mini .lines span:nth-child(4) { width: 70%; }
+  .letter-mini .lines span:nth-child(5) { width: 88%; }
+  .letter-mini .lines span:nth-child(6) { width: 92%; }
+  .letter-mini .lines span:nth-child(7) { width: 80%; }
+  .letter-mini .lines span:nth-child(8) { width: 64%; margin-bottom: 6px; }
+  .letter-mini .lines span:nth-child(9) { width: 90%; }
+  .letter-mini .lines span:nth-child(10) { width: 86%; }
+  .letter-mini .lines span:nth-child(11) { width: 70%; }
+  .letter-mini .stripe { margin-top: 10px; height: 3px; background-color: var(--charcoal); background-image: url('assets/gradient-bg.png'); background-size: cover; background-position: center; }
+
+  .deck-mini { width: 75%; aspect-ratio: 16/9; background: var(--charcoal); border: 1px solid rgba(247,243,224,0.15); display: flex; align-items: flex-end; padding: 14px; box-shadow: 0 16px 40px rgba(0,0,0,0.5); }
+  .deck-mini .title { font-family: var(--font-display); font-size: 13px; font-weight: 700; text-transform: uppercase; color: var(--cream); line-height: 1.05; }
+
+  .social-mini { width: 70%; aspect-ratio: 1/1; background: var(--plum); display: flex; align-items: flex-end; padding: 12px; box-shadow: 0 16px 40px rgba(0,0,0,0.5); }
+  .social-mini .title { font-family: var(--font-display); font-size: 14px; font-weight: 700; text-transform: uppercase; color: var(--cream); line-height: 1; }
+
+  .email-mini { width: 82%; background: #ffffff; padding: 14px 16px; display: flex; gap: 12px; align-items: stretch; box-shadow: 0 12px 32px rgba(0,0,0,0.4); }
+  .email-mini .accent { width: 3px; background: var(--lilac); flex-shrink: 0; }
+  .email-mini .col { display: flex; flex-direction: column; gap: 3px; flex: 1; min-width: 0; }
+  .email-mini .col .name { font-family: var(--font-display); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--charcoal); }
+  .email-mini .col .role { font-size: 7px; color: var(--plum); }
+  .email-mini .col .reach { font-size: 7px; color: rgba(32,33,36,0.55); margin-top: 2px; }
+  .email-mini .col .reach b { color: var(--plum); font-weight: 400; }
+  .email-mini .col .wm { margin-top: 6px; height: 13px; width: auto; align-self: flex-start; }
+
+  .type-mini { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; }
+  .type-mini .big { font-family: var(--font-display); font-size: 36px; font-weight: 700; text-transform: uppercase; color: var(--charcoal); letter-spacing: -0.01em; }
+  .type-mini .small { font-family: var(--font-body); font-size: 11px; color: var(--plum); }
+
+  footer { margin-top: 80px; padding-top: 40px; border-top: 1px solid rgba(247,243,224,0.12); display: flex; justify-content: space-between; font-family: var(--font-display); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(247,243,224,0.45); }
+
+  .stamp { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border: 1px solid rgba(247,243,224,0.2); border-radius: 999px; font-family: var(--font-display); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(247,243,224,0.7); }
+  .stamp .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--lilac); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="assets/logo-stacked-light.png?v=3" alt="Immersive Echo">
+      <div class="meta">
+        CDEP Annex 0.1<br>
+        Brand Kit v1.0<br>
+        <span style="color: var(--lilac);">Issued April 2026</span>
+      </div>
+    </header>
+
+    <span class="stamp"><span class="dot"></span>Brand Operating System</span>
+    <h1 style="margin-top: 24px;">Immersive&nbsp;Echo.</h1>
+    <p class="lede">Everything a partner institution needs to put Immersive&nbsp;Echo into the world &mdash; <em>logo, voice, paper, pixel</em>. Click any tile to open a print- or export-ready template.</p>
+
+    <div class="section-label">01 &nbsp;·&nbsp; Foundations</div>
+    <div class="grid">
+      <a class="card" href="logo-kit.html">
+        <div class="card-preview pv-cream">
+          <span class="num" style="color: rgba(32,33,36,0.5);">A.01</span>
+          <img class="preview-logo" src="assets/logo-stacked-dark.png?v=3" alt="">
+        </div>
+        <div class="card-body"><h3>Logo Kit</h3><p>Lockups, mark, clear-space, sizing rules, do/don't.</p></div>
+      </a>
+      <a class="card" href="typography.html">
+        <div class="card-preview pv-cream">
+          <span class="num" style="color: rgba(32,33,36,0.5);">A.02</span>
+          <div class="type-mini">
+            <span class="big">Aa Bb</span>
+            <span class="small">Montserrat · Roboto</span>
+          </div>
+        </div>
+        <div class="card-body"><h3>Typography</h3><p>Display + body specimens, scale, in action.</p></div>
+      </a>
+      <a class="card" href="color.html">
+        <div class="card-preview" style="padding: 0;">
+          <span class="num" style="color: rgba(247,243,224,0.6); z-index: 2;">A.03</span>
+          <div class="swatch-row">
+            <div style="background: var(--cream)"></div>
+            <div style="background: var(--charcoal)"></div>
+            <div style="background: var(--plum)"></div>
+            <div style="background: var(--purple)"></div>
+            <div style="background: var(--lilac)"></div>
+          </div>
+        </div>
+        <div class="card-body"><h3>Color</h3><p>Palette, ratios, and approved pairings.</p></div>
+      </a>
+    </div>
+
+    <div class="section-label">02 &nbsp;·&nbsp; Stationery &amp; Documents</div>
+    <div class="grid">
+      <a class="card" href="letterhead.html">
+        <div class="card-preview pv-plum">
+          <span class="num">B.01</span>
+          <div class="letter-mini">
+            <div class="head">
+              <img src="assets/logo-horizontal-dark.png?v=3" alt="">
+              <div class="meta"><b>Immersive Echo</b>Lindholmspiren 7<br>417 56 Göteborg</div>
+            </div>
+            <div class="subject">RE: Hosting an<br>Immersive Echo<br>prototype</div>
+            <div class="lines"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="stripe"></div>
+          </div>
+        </div>
+        <div class="card-body"><h3>Letterhead</h3><p>A4 · 2 variations · print-ready.</p></div>
+      </a>
+      <a class="card" href="email-signature.html">
+        <div class="card-preview pv-plum">
+          <span class="num">B.02</span>
+          <div class="email-mini">
+            <div class="accent"></div>
+            <div class="col">
+              <div class="name">Anna Lindgren</div>
+              <div class="role">Director of Programmes · Immersive Echo</div>
+              <div class="reach"><b>E</b> anna@echoimmersive.eu &nbsp;·&nbsp; <b>W</b> www.echoimmersive.eu</div>
+              <img class="wm" src="assets/logo-horizontal-dark.png?v=3" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="card-body"><h3>Email Signature</h3><p>HTML · 2 variations · copy-paste ready.</p></div>
+      </a>
+      <a class="card" href="document.html">
+        <div class="card-preview pv-plum">
+          <span class="num">B.03</span>
+          <div class="doc-mini-cover">
+            <div class="cover-top">
+              <img src="assets/logo-horizontal-light.png?v=3" alt="">
+              <span>Issue 04 · Q2 2026</span>
+            </div>
+            <div class="cover-num">04</div>
+            <div class="cover-titles">
+              <div class="eyebrow">Quarterly Briefing</div>
+              <div class="headline">The scalable<br>model is ready<br>for public test.</div>
+            </div>
+            <div class="cover-meta">
+              <span><b>Period</b>Q2 2026</span>
+              <span><b>Venues</b>4 pilots</span>
+              <span><b>Partners</b>15 / 10</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-body"><h3>Document &amp; Report</h3><p>Cover + inner page · A4 · 2 variations.</p></div>
+      </a>
+    </div>
+
+    <div class="section-label">03 &nbsp;·&nbsp; Presentation</div>
+    <div class="grid" style="grid-template-columns: 1fr 1fr;">
+      <a class="card" href="presentation.html">
+        <div class="card-preview pv-lilac">
+          <span class="num" style="color: rgba(32,33,36,0.5);">C.01</span>
+          <img src="assets/tile-presentation-dark-v3.png?v=2" style="width: 86%; aspect-ratio: 924/540; object-fit: contain; box-shadow: 0 16px 40px rgba(0,0,0,0.45);" alt="">
+        </div>
+        <div class="card-body"><h3>Presentation · Dark</h3><p>Gradient + charcoal stage. 6 slides, 1920×1080.</p></div>
+      </a>
+      <a class="card" href="presentation-light.html">
+        <div class="card-preview pv-purple">
+          <span class="num">C.02</span>
+          <img src="assets/tile-presentation-light-v3.png" style="width: 86%; aspect-ratio: 924/540; object-fit: contain; box-shadow: 0 16px 40px rgba(0,0,0,0.35);" alt="">
+        </div>
+        <div class="card-body"><h3>Presentation · Light</h3><p>Cream stage, charcoal type. 6 slides, 1920×1080.</p></div>
+      </a>
+    </div>
+
+    <div class="section-label">04 &nbsp;·&nbsp; Social &amp; Digital</div>
+    <div class="grid cols-4">
+      <a class="card" href="social.html#instagram">
+        <div class="card-preview pv-plum">
+          <span class="num">D.01</span>
+          <img src="assets/tile-instagram.png" style="width: 70%; aspect-ratio: 1; object-fit: cover; box-shadow: 0 12px 32px rgba(0,0,0,0.3);" alt="">
+        </div>
+        <div class="card-body"><h3>Instagram</h3><p>Post · Story · Profile</p></div>
+      </a>
+      <a class="card" href="social.html#facebook">
+        <div class="card-preview pv-charcoal">
+          <span class="num">D.02</span>
+          <img src="assets/tile-facebook.png" style="width: 85%; aspect-ratio: 600/228; object-fit: cover; box-shadow: 0 12px 32px rgba(0,0,0,0.3);" alt="">
+        </div>
+        <div class="card-body"><h3>Facebook</h3><p>Cover · Event · Post · Story</p></div>
+      </a>
+      <a class="card" href="social.html#linkedin">
+        <div class="card-preview pv-purple">
+          <span class="num">D.03</span>
+          <img src="assets/tile-linkedin.png" style="width: 90%; aspect-ratio: 660/165; object-fit: cover; box-shadow: 0 12px 32px rgba(0,0,0,0.3);" alt="">
+        </div>
+        <div class="card-body"><h3>LinkedIn</h3><p>Banner · Post · Profile</p></div>
+      </a>
+      <a class="card" href="social.html#youtube">
+        <div class="card-preview pv-cream">
+          <span class="num" style="color: rgba(32,33,36,0.5);">D.04</span>
+          <img src="assets/tile-youtube.png" style="width: 85%; aspect-ratio: 600/337; object-fit: cover; box-shadow: 0 12px 32px rgba(0,0,0,0.3);" alt="">
+        </div>
+        <div class="card-body"><h3>YouTube</h3><p>Banner · Thumbnail · Avatar</p></div>
+      </a>
+      <a class="card" href="social.html#twitter">
+        <div class="card-preview pv-charcoal">
+          <span class="num">D.05</span>
+          <img src="assets/tile-twitter.png" style="width: 88%; aspect-ratio: 600/200; object-fit: cover; box-shadow: 0 12px 32px rgba(0,0,0,0.3);" alt="">
+        </div>
+        <div class="card-body"><h3>X (Twitter)</h3><p>Banner · Post · Avatar</p></div>
+      </a>
+      <a class="card" href="social.html#tiktok">
+        <div class="card-preview pv-charcoal">
+          <span class="num">D.06</span>
+          <img src="assets/tile-tiktok.png" style="width: 35%; aspect-ratio: 200/356; object-fit: cover; box-shadow: 0 12px 32px rgba(0,0,0,0.3);" alt="">
+        </div>
+        <div class="card-body"><h3>TikTok</h3><p>Cover · Profile</p></div>
+      </a>
+      <a class="card" href="social.html#zoom">
+        <div class="card-preview pv-cream">
+          <span class="num" style="color: rgba(32,33,36,0.5);">D.07</span>
+          <img src="assets/tile-zoom.png" style="width: 85%; aspect-ratio: 16/9; object-fit: cover; box-shadow: 0 12px 32px rgba(0,0,0,0.3);" alt="">
+        </div>
+        <div class="card-body"><h3>Zoom Background</h3><p>1920×1080 · 2 variations</p></div>
+      </a>
+      <a class="card" href="social.html#avatars">
+        <div class="card-preview pv-charcoal">
+          <span class="num">D.08</span>
+          <div style="display: flex; gap: 12px;">
+            <img src="assets/tile-avatars.png" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover;" alt="">
+            <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--cream); display: flex; align-items: center; justify-content: center;"><img src="assets/mark-dark.png?v=3" style="width: 32px;" alt=""></div>
+            <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--lilac); display: flex; align-items: center; justify-content: center;"><img src="assets/mark-dark.png?v=3" style="width: 32px;" alt=""></div>
+          </div>
+        </div>
+        <div class="card-body"><h3>Avatars</h3><p>Profile pictures for all platforms.</p></div>
+      </a>
+    </div>
+
+    <footer>
+      <span>Immersive Echo · Brand Kit</span>
+      <span>Designed April 2026</span>
+    </footer>
+  </div>
+</body>
+</html>

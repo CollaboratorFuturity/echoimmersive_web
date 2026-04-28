@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Logo Kit · Immersive Echo</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="brand.css">
+<link rel="stylesheet" href="kit-shared.css">
+<style>
+  .logo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .logo-grid.two { grid-template-columns: repeat(2, 1fr); }
+  .logo-tile { aspect-ratio: 4/3; border: 1px solid rgba(90,66,99,0.2); display: flex; align-items: center; justify-content: center; padding: 32px; position: relative; }
+  .logo-tile .label { position: absolute; top: 12px; left: 14px; font-family: var(--font-display); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; }
+  .logo-tile .name { position: absolute; bottom: 12px; left: 14px; font-family: var(--font-display); font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; font-weight: 600; }
+  .logo-tile img { max-width: 70%; max-height: 70%; object-fit: contain; }
+
+  .tile-cream    { background: var(--cream);    color: var(--charcoal); }
+  .tile-charcoal { background: var(--charcoal); color: var(--cream); border-color: rgba(247,243,224,0.15); }
+  .tile-plum     { background: var(--plum);     color: var(--cream); border-color: rgba(247,243,224,0.15); }
+  .tile-lilac    { background: var(--lilac);    color: var(--charcoal); }
+  .tile-image    { background: linear-gradient(135deg, #2a1f3a 0%, #5A4263 50%, #8843A3 100%); color: var(--cream); border-color: rgba(247,243,224,0.15); }
+
+  /* Clear-space diagram */
+  .clearspace-frame { aspect-ratio: 16/9; background: var(--cream); border: 1px solid rgba(90,66,99,0.2); display: flex; align-items: center; justify-content: center; position: relative; }
+  .clearspace-inner { position: relative; padding: 80px; }
+  .clearspace-inner img { display: block; height: 180px; }
+  .clearspace-inner::before, .clearspace-inner::after { content: ''; position: absolute; border: 1px dashed var(--purple); pointer-events: none; }
+  .clearspace-inner::before { inset: 0; }
+  .clearspace-inner::after { inset: 80px; border: 1px solid rgba(136,67,163,0.4); }
+  .cs-marker { position: absolute; font-family: var(--font-display); font-size: 11px; font-weight: 600; color: var(--purple); letter-spacing: 0.04em; text-transform: uppercase; background: var(--cream); padding: 2px 6px; }
+  .cs-marker.tl { top: -8px; left: 8px; }
+  .cs-marker.x { top: 50%; left: 12px; transform: translateY(-50%); padding: 4px 8px; background: var(--purple); color: var(--cream); }
+
+  /* Sizing scale */
+  .size-rail { display: flex; align-items: flex-end; gap: 32px; padding: 40px; background: var(--cream); border: 1px solid rgba(90,66,99,0.2); }
+  .size-rail .size { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .size-rail .size img { object-fit: contain; }
+  .size-rail .size .meta { font-family: var(--font-display); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--plum); text-align: center; line-height: 1.4; }
+  .size-rail .size .meta strong { color: var(--charcoal); font-weight: 700; display: block; }
+
+  /* Do / Don't */
+  .dodont { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .dodont .tile { aspect-ratio: 1/1; border: 1px solid rgba(90,66,99,0.2); padding: 32px; display: flex; align-items: center; justify-content: center; position: relative; }
+  .dodont .badge { position: absolute; top: 12px; left: 14px; font-family: var(--font-display); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; padding: 3px 8px; border-radius: 999px; }
+  .dodont .badge.no { background: var(--charcoal); color: var(--cream); }
+  .dodont .badge.no::before { content: '✕ '; color: var(--lilac); }
+  .dodont .badge.yes { background: var(--lilac); color: var(--charcoal); }
+  .dodont .badge.yes::before { content: '✓ '; }
+  .dodont .caption { position: absolute; bottom: 12px; left: 14px; right: 14px; font-family: var(--font-body); font-size: 12px; line-height: 1.4; color: var(--plum); }
+  .dodont img { max-width: 80%; max-height: 60%; object-fit: contain; }
+  .dodont .tile-bad { background: var(--cream); }
+
+  /* Palette */
+  .palette { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr; gap: 4px; height: 380px; }
+  .swatch { padding: 24px; display: flex; flex-direction: column; justify-content: space-between; font-family: var(--font-display); }
+  .swatch .top { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.7; }
+  .swatch .name { font-size: 28px; font-weight: 700; text-transform: uppercase; line-height: 1; margin-top: 8px; }
+  .swatch .codes { font-size: 11px; line-height: 1.7; letter-spacing: 0.04em; }
+  .swatch .codes div { display: flex; justify-content: space-between; gap: 16px; }
+  .swatch .codes b { font-weight: 700; }
+
+  .pair-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 4px; }
+  .pair { aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; padding: 16px; text-align: center; line-height: 1.05; }
+
+  .specimen { background: var(--cream); border: 1px solid rgba(90,66,99,0.2); padding: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: end; }
+  .specimen .big { font-family: var(--font-display); font-weight: 800; font-size: 220px; line-height: 0.85; letter-spacing: -0.04em; color: var(--charcoal); text-transform: uppercase; }
+  .specimen .meta { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--plum); }
+  .specimen .meta b { display: block; color: var(--charcoal); font-size: 18px; letter-spacing: 0.04em; margin-bottom: 8px; }
+
+  .body-spec { background: var(--cream); border: 1px solid rgba(90,66,99,0.2); padding: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .body-spec h3 { font-family: var(--font-display); font-size: 14px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--plum); margin-bottom: 16px; }
+  .body-spec .lede { font-size: 22px; line-height: 1.45; font-weight: 400; }
+  .body-spec p { font-size: 16px; line-height: 1.65; }
+
+  .scale-table { width: 100%; border-collapse: collapse; }
+  .scale-table th, .scale-table td { padding: 16px 20px; text-align: left; font-size: 14px; border-bottom: 1px solid rgba(90,66,99,0.15); }
+  .scale-table th { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--plum); }
+  .scale-table .sample { font-family: var(--font-display); font-weight: 700; }
+</style>
+</head>
+<body>
+  <nav class="kit-nav no-print">
+    <div class="left">
+      <a class="back" href="index.html">← Brand Kit</a>
+      <span class="crumb">Foundations · <strong>Logo Kit</strong></span>
+    </div>
+    <img class="mark" src="assets/mark-light.png?v=3" alt="">
+  </nav>
+
+  <div class="page">
+    <h1 class="kit-title">Logo Kit</h1>
+    <p class="kit-lede">Three lockups, one mark, four color treatments. The logo is our voice in still form &mdash; never modify, recolor, or crowd it.</p>
+
+    <div class="section-bar"><span><span class="num">01</span> &nbsp;Lockups</span><span>Stacked · Horizontal · Mark</span></div>
+
+    <div class="logo-grid two">
+      <div class="logo-tile tile-cream">
+        <span class="label">Primary · Stacked</span>
+        <img src="assets/logo-stacked-dark.png?v=3" alt="">
+        <span class="name">Logo / Stacked / Dark</span>
+      </div>
+      <div class="logo-tile tile-charcoal">
+        <span class="label" style="color: rgba(247,243,224,0.5);">Primary · Stacked</span>
+        <img src="assets/logo-stacked-light.png?v=3" alt="">
+        <span class="name" style="color: var(--cream);">Logo / Stacked / Light</span>
+      </div>
+    </div>
+
+    <div class="logo-grid two" style="margin-top: 16px;">
+      <div class="logo-tile tile-cream" style="aspect-ratio: 16/6;">
+        <span class="label">Secondary · Horizontal</span>
+        <img src="assets/logo-horizontal-dark.png?v=3" alt="">
+        <span class="name">Logo / Horizontal / Dark</span>
+      </div>
+      <div class="logo-tile tile-charcoal" style="aspect-ratio: 16/6;">
+        <span class="label" style="color: rgba(247,243,224,0.5);">Secondary · Horizontal</span>
+        <img src="assets/logo-horizontal-light.png?v=3" alt="">
+        <span class="name" style="color: var(--cream);">Logo / Horizontal / Light</span>
+      </div>
+    </div>
+
+    <div class="section-bar"><span><span class="num">02</span> &nbsp;The Mark</span><span>For avatars, favicons, small spaces</span></div>
+
+    <div class="logo-grid">
+      <div class="logo-tile tile-cream">
+        <span class="label">Mark · Gradient</span>
+        <img src="assets/mark-gradient.png?v=3" alt="">
+        <span class="name">Mark / Gradient</span>
+      </div>
+      <div class="logo-tile tile-charcoal">
+        <span class="label" style="color: rgba(247,243,224,0.5);">Mark · Light</span>
+        <img src="assets/mark-light.png?v=3" alt="">
+        <span class="name" style="color: var(--cream);">Mark / Light</span>
+      </div>
+      <div class="logo-tile tile-cream">
+        <span class="label">Mark · Dark</span>
+        <img src="assets/mark-dark.png?v=3" alt="">
+        <span class="name">Mark / Dark</span>
+      </div>
+    </div>
+
+    <div class="section-bar"><span><span class="num">03</span> &nbsp;Monochrome &amp; Color Treatments</span><span>Single-color reproduction</span></div>
+
+    <div class="logo-grid">
+      <div class="logo-tile tile-cream">
+        <span class="label">Mono · Black on Cream</span>
+        <img src="assets/logo-stacked-mono-dark.png?v=3" alt="">
+        <span class="name">Mono / Dark</span>
+      </div>
+      <div class="logo-tile tile-charcoal">
+        <span class="label" style="color: rgba(247,243,224,0.5);">Mono · Cream on Charcoal</span>
+        <img src="assets/logo-stacked-mono-light.png?v=3" alt="">
+        <span class="name" style="color: var(--cream);">Mono / Light</span>
+      </div>
+      <div class="logo-tile tile-lilac">
+        <span class="label">On Lilac</span>
+        <img src="assets/logo-stacked-mono-dark.png?v=3" alt="">
+        <span class="name">On Accent</span>
+      </div>
+      <div class="logo-tile tile-plum">
+        <span class="label" style="color: rgba(247,243,224,0.5);">On Plum</span>
+        <img src="assets/logo-stacked-mono-light.png?v=3" alt="">
+        <span class="name" style="color: var(--cream);">On Plum</span>
+      </div>
+      <div class="logo-tile tile-image">
+        <span class="label">On Imagery</span>
+        <img src="assets/logo-stacked-light.png?v=3" alt="">
+        <span class="name">Over photo</span>
+      </div>
+    </div>
+
+    <div class="section-bar"><span><span class="num">04</span> &nbsp;Clear Space</span><span>Minimum margin: x = height of E</span></div>
+
+    <div class="clearspace-frame">
+      <div class="clearspace-inner">
+        <span class="cs-marker tl">Clear-space envelope</span>
+        <span class="cs-marker x">x</span>
+        <img src="assets/logo-stacked-mono-dark.png?v=3" alt="">
+      </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 14px; color: var(--plum); max-width: 60ch;">Reserve a margin of <b style="color: var(--charcoal);">x</b> on every side, where <b style="color: var(--charcoal);">x</b> equals the cap-height of the letter <b style="color: var(--charcoal);">E</b>. Never let other elements cross this boundary.</p>
+
+    <div class="section-bar"><span><span class="num">05</span> &nbsp;Sizing</span><span>Minimum sizes for legibility</span></div>
+
+    <div class="size-rail">
+      <div class="size">
+        <img src="assets/logo-stacked-mono-dark.png?v=3" style="height: 200px;" alt="">
+        <div class="meta"><strong>Hero</strong>≥ 200&nbsp;px · 80&nbsp;mm</div>
+      </div>
+      <div class="size">
+        <img src="assets/logo-stacked-mono-dark.png?v=3" style="height: 120px;" alt="">
+        <div class="meta"><strong>Default</strong>120&nbsp;px · 40&nbsp;mm</div>
+      </div>
+      <div class="size">
+        <img src="assets/logo-stacked-mono-dark.png?v=3" style="height: 64px;" alt="">
+        <div class="meta"><strong>Compact</strong>64&nbsp;px · 22&nbsp;mm</div>
+      </div>
+      <div class="size">
+        <img src="assets/mark-dark.png?v=3" style="height: 32px;" alt="">
+        <div class="meta"><strong>Mark Min</strong>32&nbsp;px · 8&nbsp;mm</div>
+      </div>
+    </div>
+
+    <div class="section-bar"><span><span class="num">06</span> &nbsp;Do · Don't</span><span>Protect the mark</span></div>
+
+    <div class="dodont">
+      <div class="tile tile-bad">
+        <span class="badge no">Don't</span>
+        <img src="assets/logo-stacked-mono-dark.png?v=3" style="transform: scaleX(0.6);">
+        <span class="caption">Don't stretch or distort.</span>
+      </div>
+      <div class="tile tile-bad">
+        <span class="badge no">Don't</span>
+        <img src="assets/logo-stacked-mono-dark.png?v=3" style="transform: rotate(-12deg);">
+        <span class="caption">Don't rotate the logo.</span>
+      </div>
+      <div class="tile" style="background: linear-gradient(135deg, #ff8a00, #00b3ff); color: white;">
+        <span class="badge no">Don't</span>
+        <img src="assets/logo-stacked-mono-light.png?v=3">
+        <span class="caption" style="color: white;">Don't place on off-brand colors.</span>
+      </div>
+      <div class="tile tile-bad">
+        <span class="badge no">Don't</span>
+        <img src="assets/logo-stacked-dark.png?v=3" style="filter: hue-rotate(180deg) saturate(1.5);">
+        <span class="caption">Don't recolor the mark.</span>
+      </div>
+      <div class="tile tile-bad">
+        <span class="badge no">Don't</span>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <img src="assets/mark-dark.png?v=3" style="height: 56px;">
+          <div style="font-family: serif; font-size: 18px; margin-top: 8px; color: var(--charcoal);">Immersive Echo</div>
+        </div>
+        <span class="caption">Don't substitute the wordmark font.</span>
+      </div>
+      <div class="tile" style="background: var(--lilac);">
+        <span class="badge yes">Do</span>
+        <img src="assets/logo-stacked-mono-dark.png?v=3">
+        <span class="caption">Mono on accent &mdash; clean and confident.</span>
+      </div>
+      <div class="tile tile-bad">
+        <span class="badge yes">Do</span>
+        <img src="assets/logo-stacked-dark.png?v=3">
+        <span class="caption">Full color on cream &mdash; primary use.</span>
+      </div>
+      <div class="tile" style="background: var(--charcoal);">
+        <span class="badge yes">Do</span>
+        <img src="assets/logo-stacked-light.png?v=3">
+        <span class="caption" style="color: rgba(247,243,224,0.7);">Cream silhouette on charcoal.</span>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -51,7 +51,8 @@ echoimmersive_web/
 │   │   ├── Newsletter.tsx       # Full-screen, no header/footer
 │   │   ├── LynchHome.tsx        # Testing only — dark brand palette + Dither bg
 │   │   ├── LynchAbout.tsx       # Testing only — dark brand palette sandbox
-│   │   └── IsmailaHome.tsx      # Testing only — Ismaila's sandbox (cloned from LynchHome)
+│   │   ├── IsmailaHome.tsx      # Testing only — Ismaila's sandbox (cloned from LynchHome)
+│   │   └── BrandHome.tsx        # Testing only — official brand palette (Charcoal/Lilac/Plum + Montserrat/Roboto)
 │   ├── components/
 │   │   ├── Header/Header.tsx
 │   │   ├── Footer/Footer.tsx
@@ -103,6 +104,7 @@ See [docs/PROGRESS.md](docs/PROGRESS.md) for the full implementation checklist.
 - `/lynch-home` — Lynch's style sandbox, dark brand palette + Dither WebGL background
 - `/lynch-about` — Lynch's style sandbox for the About layout
 - `/ismaila-home` — Ismaila's style sandbox, cloned from `/lynch-home` as a starting point
+- `/brand-home` — Official brand palette sandbox: Charcoal/Cream/Lilac/Purple/Plum + Montserrat/Roboto (from `docs/branding/`)
 
 <!--
   Keep this section as a quick snapshot. The full details live in PROGRESS.md.

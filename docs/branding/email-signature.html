@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Email Signature · Immersive Echo</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="brand.css">
+<link rel="stylesheet" href="kit-shared.css">
+<style>
+  body { background: #f0ece0; }
+  .frame { background: var(--cream); padding: 56px; max-width: 760px; margin: 32px auto; box-shadow: 0 16px 36px rgba(0,0,0,0.08); }
+  .label { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--plum); margin-bottom: 8px; }
+  .label b { color: var(--charcoal); font-weight: 700; }
+  .demo-mail { background: white; padding: 24px 28px; border: 1px solid rgba(90,66,99,0.15); margin-top: 16px; }
+  .demo-mail .salut { font-family: 'Helvetica Neue', Arial, sans-serif; color: #3c4043; font-size: 14px; line-height: 1.55; margin-bottom: 18px; }
+
+  /* Signature Variant A — minimal horizontal */
+  table.sig-a { border-collapse: collapse; font-family: 'Helvetica Neue', Arial, sans-serif; }
+  table.sig-a td { vertical-align: middle; padding: 0; }
+  table.sig-a .logo-cell { padding-right: 18px; border-right: 2px solid #5A4263; }
+  table.sig-a .info-cell { padding-left: 18px; }
+  table.sig-a .name { font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; font-size: 14px; color: #202124; line-height: 1.1; }
+  table.sig-a .role { font-size: 12px; color: #5A4263; line-height: 1.4; margin-top: 3px; }
+  table.sig-a .reach { font-size: 11px; color: #5A4263; line-height: 1.7; margin-top: 6px; }
+  table.sig-a .reach a { color: #8843A3; text-decoration: none; }
+
+  /* Variant B — stacked card */
+  table.sig-b { border-collapse: collapse; font-family: 'Helvetica Neue', Arial, sans-serif; background: #202124; color: #F7F3E0; padding: 0; }
+  table.sig-b td { padding: 18px 22px; vertical-align: top; }
+  table.sig-b .name { font-family: 'Montserrat', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; font-size: 16px; color: #F7F3E0; }
+  table.sig-b .role { font-family: 'Montserrat', sans-serif; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #DA80FF; margin-top: 4px; }
+  table.sig-b .divider { height: 1px; background: rgba(247,243,224,0.18); margin: 12px 0; }
+  table.sig-b .reach { font-size: 12px; line-height: 1.7; color: rgba(247,243,224,0.78); }
+  table.sig-b .reach a { color: #F7F3E0; text-decoration: none; }
+  table.sig-b .tagline { font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(247,243,224,0.55); margin-top: 12px; }
+
+  /* Variant C — accent rule */
+  table.sig-c { border-collapse: collapse; font-family: 'Helvetica Neue', Arial, sans-serif; }
+  table.sig-c td { padding: 0; vertical-align: top; }
+  table.sig-c .accent { width: 4px; background: #DA80FF; }
+  table.sig-c .body { padding: 4px 0 4px 18px; }
+  table.sig-c .name { font-family: 'Montserrat', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; font-size: 14px; color: #202124; }
+  table.sig-c .role { font-size: 12px; color: #5A4263; margin-top: 2px; }
+  table.sig-c .reach { font-size: 11px; color: #202124; margin-top: 8px; line-height: 1.7; }
+  table.sig-c .reach span { color: #5A4263; }
+  table.sig-c .reach a { color: #8843A3; text-decoration: none; }
+  table.sig-c .logo { padding-top: 12px; }
+
+  pre.copy { background: #202124; color: #F7F3E0; padding: 16px; font-size: 11px; line-height: 1.5; border-radius: 4px; overflow-x: auto; margin-top: 16px; font-family: ui-monospace, 'SF Mono', monospace; }
+</style>
+</head>
+<body>
+  <nav class="kit-nav no-print">
+    <div class="left">
+      <a class="back" href="index.html">← Brand Kit</a>
+      <span class="crumb">Stationery · <strong>Email Signature</strong></span>
+    </div>
+    <img class="mark" src="assets/mark-light.png?v=3" alt="">
+  </nav>
+
+  <div style="max-width: 760px; margin: 56px auto 32px; padding: 0 32px;">
+    <h1 class="kit-title">Email Signature</h1>
+    <p class="kit-lede">Three table-based signatures that paste into Gmail, Outlook, and Apple Mail without breaking. Pick one and standardise the team.</p>
+  </div>
+
+  <div class="frame">
+    <div class="label">Variant&nbsp;A · <b>Minimal Horizontal</b> — daily use</div>
+    <div class="demo-mail">
+      <div class="salut">…thanks again for the kind welcome in Lyon. I'll send the technical brief on Friday.<br><br>Best,</div>
+      <table class="sig-a">
+        <tr>
+          <td class="logo-cell"><img src="assets/logo-stacked-dark.png?v=3" alt="Immersive Echo" height="56" style="display:block;"></td>
+          <td class="info-cell">
+            <div class="name">Anna Lindgren</div>
+            <div class="role">Director of Programmes · Immersive Echo</div>
+            <div class="reach">
+              <a href="mailto:anna@echoimmersive.eu">anna@echoimmersive.eu</a> &nbsp;·&nbsp; +46 31 000 00 00<br>
+              <a href="https://www.echoimmersive.eu">www.echoimmersive.eu</a>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="frame">
+    <div class="label">Variant&nbsp;B · <b>Accent Rule</b> — partner-facing</div>
+    <div class="demo-mail">
+      <div class="salut">Looking forward to seeing the prototype in October.<br><br>Best,</div>
+      <table class="sig-c">
+        <tr>
+          <td class="accent"></td>
+          <td class="body">
+            <div class="name">Anna Lindgren</div>
+            <div class="role">Director of Programmes · Immersive Echo</div>
+            <div class="reach">
+              <span>E&nbsp;</span><a href="mailto:anna@echoimmersive.eu">anna@echoimmersive.eu</a> &nbsp; <span>T&nbsp;</span>+46 31 000 00 00<br>
+              <span>W&nbsp;</span><a href="https://www.echoimmersive.eu">www.echoimmersive.eu</a> &nbsp; <span>·&nbsp;Göteborg</span>
+            </div>
+            <div class="logo"><img src="assets/logo-horizontal-dark.png?v=3" alt="Immersive Echo" height="22" style="display: block;"></div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>

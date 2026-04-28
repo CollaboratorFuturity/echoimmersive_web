@@ -1,0 +1,58 @@
+/* Echo Immersive — brand tokens */
+:root {
+  /* Colors */
+  --cream:    #F7F3E0;
+  --charcoal: #202124;
+  --lilac:    #DA80FF;
+  --purple:   #8843A3;
+  --plum:     #5A4263;
+
+  /* Tints (programmatic) */
+  --plum-80:  #6E5379;
+  --charcoal-90: #2c2d31;
+
+  /* Type */
+  --font-display: 'Montserrat', system-ui, sans-serif;
+  --font-body: 'Roboto', system-ui, sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap');
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0; padding: 0;
+  font-family: var(--font-body);
+  color: var(--charcoal);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+.mono { font-feature-settings: "tnum"; }
+
+/* Utility surfaces */
+.surface-cream    { background: var(--cream);    color: var(--charcoal); }
+.surface-charcoal { background: var(--charcoal); color: var(--cream); }
+.surface-plum     { background: var(--plum);     color: var(--cream); }
+.surface-purple   { background: var(--purple);   color: var(--cream); }
+.surface-lilac    { background: var(--lilac);    color: var(--charcoal); }
+.surface-gradient {
+  background-color: var(--charcoal);
+  background-image: url('assets/gradient-bg.png');
+  background-size: cover;
+  background-position: center;
+  color: var(--cream);
+}

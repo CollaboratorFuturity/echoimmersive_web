@@ -27,6 +27,7 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 - [x] `/lynch-home` (`src/pages/LynchHome.tsx`) — dark brand palette applied, full-viewport Dither background, animated hero, count-up stats, shine-sweep CTA, `prefers-reduced-motion` respected
 - [x] `/lynch-about` (`src/pages/LynchAbout.tsx`) — dark brand palette applied to the About layout
 - [x] `/ismaila-home` (`src/pages/IsmailaHome.tsx`) — cloned from `LynchHome` as a starting point for Ismaila's design explorations
+- [x] `/brand-home` (`src/pages/BrandHome.tsx`) — official brand palette applied: Charcoal bg, Cream text, Lilac accents, Plum surfaces, Montserrat display font, Roboto body; Dither shifted to warm lilac-purple; all interaction patterns from LynchHome carried over
 - [x] Brand colors wired as Tailwind tokens: `bg-blue`, `primary-blue`, `light-blue`, `highlight-purple`, `highlight-green`
 - [ ] Roll out dark palette + approved patterns from sandbox → production pages and shared Header/Footer
 

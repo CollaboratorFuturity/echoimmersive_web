@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Presentation Template · Immersive Echo</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="brand.css">
+<link rel="stylesheet" href="kit-shared.css">
+<style>
+  body { background: #0d0e10; margin: 0; }
+
+  /* Variant label between decks */
+  .variant-label { max-width: 1280px; margin: 56px auto 16px; padding: 0 24px; font-family: var(--font-display); font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cream); opacity: 0.7; }
+  .variant-label b { color: var(--lilac); font-weight: 600; }
+  .deck-divider { max-width: 1280px; margin: 0 auto 24px; padding: 0 24px; }
+  .deck-divider hr { border: 0; border-top: 1px solid rgba(247,243,224,0.14); margin: 0; }
+
+  /* Slide base */
+  section.slide {
+    width: 1920px; height: 1080px;
+    font-family: var(--font-body);
+    position: relative;
+    overflow: hidden;
+  }
+  section.slide.cream { background: var(--cream); color: var(--charcoal); }
+  section.slide.charcoal { background: var(--charcoal); color: var(--cream); }
+  section.slide.gradient {
+    background-color: var(--charcoal);
+    background-image: url('assets/gradient-bg.png');
+    background-size: cover;
+    background-position: center;
+    color: var(--cream);
+  }
+
+  .frame { position: absolute; inset: 100px 100px 80px 100px; display: flex; flex-direction: column; }
+  .corner-logo { position: absolute; bottom: 48px; left: 100px; height: 56px; }
+  .corner-num { position: absolute; bottom: 56px; right: 100px; font-family: var(--font-display); font-size: 24px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.55; }
+
+  h1.display { font-family: var(--font-display); font-weight: 800; font-size: 180px; line-height: 0.9; letter-spacing: -0.025em; text-transform: uppercase; }
+  h2.section-title { font-family: var(--font-display); font-weight: 700; font-size: 90px; line-height: 0.98; letter-spacing: -0.015em; text-transform: uppercase; }
+  .eyebrow { font-family: var(--font-display); font-size: 24px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; }
+  .body { font-size: 30px; line-height: 1.5; max-width: 38ch; }
+
+  /* === Cover slide === */
+  .s-cover .frame { justify-content: space-between; }
+  .s-cover .top { display: flex; justify-content: space-between; align-items: flex-start; }
+  .s-cover .top img { height: 80px; }
+  .s-cover .top .meta { font-family: var(--font-display); font-size: 24px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.7; text-align: right; line-height: 1.7; }
+  .s-cover .heading h1 { max-width: 16ch; }
+  .s-cover .heading .eyebrow-c { color: var(--lilac); margin-bottom: 32px; font-family: var(--font-display); font-size: 24px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; }
+  .s-cover.cream .heading .eyebrow-c { color: var(--purple); }
+  .s-cover .bottom { display: flex; justify-content: space-between; align-items: flex-end; }
+  .s-cover .bottom .author { font-family: var(--font-display); font-size: 26px; letter-spacing: 0.04em; text-transform: uppercase; line-height: 1.4; font-weight: 600; }
+  .s-cover .bottom .author span { display: block; font-weight: 400; opacity: 0.6; font-size: 24px; letter-spacing: 0.16em; margin-top: 6px; }
+  .s-cover .bottom .date { font-family: var(--font-display); font-size: 24px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.6; text-align: right; }
+
+  /* === Section divider === */
+  .s-section .frame { justify-content: center; align-items: flex-start; gap: 24px; }
+  .s-section .num { font-family: var(--font-display); font-size: 28px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--lilac); font-weight: 600; }
+  .s-section.cream .num { color: var(--purple); }
+  .s-section h2 { max-width: 14ch; }
+  .s-section .desc { font-size: 32px; line-height: 1.5; max-width: 40ch; opacity: 0.78; margin-top: 32px; }
+
+  /* === Content slide (text + sidebar) === */
+  .s-content .frame { padding-top: 60px; }
+  .s-content .eyebrow-c { font-family: var(--font-display); font-size: 24px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; margin-bottom: 32px; color: var(--purple); }
+  .s-content.charcoal .eyebrow-c, .s-content.gradient .eyebrow-c { color: var(--lilac); }
+  .s-content h2 { font-family: var(--font-display); font-weight: 700; font-size: 76px; line-height: 1; letter-spacing: -0.015em; text-transform: uppercase; max-width: 18ch; margin: 0 0 48px; }
+  .s-content .grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 72px; align-items: flex-start; }
+  .s-content .grid p { margin: 0 0 24px; }
+  .s-content .sidebar { padding: 32px 36px; background: var(--charcoal); color: var(--cream); }
+  .s-content.charcoal .sidebar, .s-content.gradient .sidebar { background: rgba(247,243,224,0.08); border: 1px solid rgba(247,243,224,0.18); }
+  .s-content .sidebar .label { font-family: var(--font-display); font-size: 24px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--lilac); margin-bottom: 16px; font-weight: 600; }
+  .s-content .sidebar h3 { font-family: var(--font-display); font-size: 32px; line-height: 1.05; font-weight: 700; text-transform: uppercase; letter-spacing: -0.005em; margin: 0; }
+  .s-content .sidebar ul { padding-left: 0; margin: 20px 0 0; list-style: none; }
+  .s-content .sidebar li { padding: 10px 0; border-top: 1px solid rgba(247,243,224,0.18); font-size: 24px; line-height: 1.4; display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: baseline; }
+  .s-content .sidebar li b { font-family: var(--font-display); font-size: 24px; letter-spacing: 0.16em; color: var(--lilac); font-weight: 600; }
+
+  /* === Stat slide === */
+  .s-stats .frame { justify-content: center; }
+  .s-stats .eyebrow-c { font-family: var(--font-display); font-size: 24px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; margin-bottom: 80px; color: var(--lilac); }
+  .s-stats.cream .eyebrow-c { color: var(--purple); }
+  .s-stats .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 80px; }
+  .s-stats .stat .num { font-family: var(--font-display); font-size: 220px; font-weight: 800; line-height: 1; letter-spacing: -0.04em; }
+  .s-stats .stat .num em { font-style: normal; color: var(--lilac); }
+  .s-stats.cream .stat .num em { color: var(--purple); }
+  .s-stats .stat .label { font-family: var(--font-display); font-size: 24px; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.7; margin-top: 32px; max-width: 22ch; line-height: 1.45; }
+
+  /* === Quote slide === */
+  .s-quote .frame { justify-content: center; }
+  .s-quote .quote { font-family: var(--font-display); font-weight: 700; font-size: 100px; line-height: 1.05; letter-spacing: -0.015em; text-transform: uppercase; max-width: 22ch; }
+  .s-quote .quote em { font-style: normal; color: var(--lilac); }
+  .s-quote.cream .quote em { color: var(--purple); }
+  .s-quote .attribution { font-family: var(--font-display); font-size: 24px; letter-spacing: 0.18em; text-transform: uppercase; margin-top: 56px; line-height: 1.6; }
+  .s-quote .attribution span { opacity: 0.6; display: block; font-weight: 400; }
+
+  /* === Closing === */
+  .s-close .frame { justify-content: space-between; }
+  .s-close .top img { height: 80px; }
+  .s-close .center { padding-top: 40px; }
+  .s-close .center .eyebrow-c { font-family: var(--font-display); font-size: 24px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: var(--lilac); margin-bottom: 32px; }
+  .s-close.cream .center .eyebrow-c { color: var(--purple); }
+  .s-close .center h1 { font-family: var(--font-display); font-weight: 700; font-size: 130px; line-height: 1; letter-spacing: -0.02em; text-transform: uppercase; max-width: 14ch; margin: 0; }
+  .s-close .reach { display: grid; grid-template-columns: repeat(3, auto); gap: 80px; padding-top: 40px; border-top: 1px solid currentColor; }
+  .s-close.cream .reach { border-top-color: rgba(32,33,36,0.2); }
+  .s-close.charcoal .reach, .s-close.gradient .reach { border-top-color: rgba(247,243,224,0.2); }
+  .s-close .reach .col { font-family: var(--font-display); font-size: 24px; letter-spacing: 0.04em; line-height: 1.55; }
+  .s-close .reach .col b { font-size: 24px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--lilac); display: block; margin-bottom: 12px; font-weight: 600; }
+  .s-close.cream .reach .col b { color: var(--purple); }
+</style>
+</head>
+<body>
+
+<header class="kit-nav">
+  <a class="back" href="index.html">← Brand Hub</a>
+  <span class="title">Presentation Template</span>
+  <span class="meta">1920 × 1080 · Dark</span>
+</header>
+
+<deck-stage width="1920" height="1080">
+
+  <section class="slide gradient s-cover" data-label="01 Cover">
+    <div class="frame">
+      <div class="top">
+        <img src="assets/logo-horizontal-light.png?v=3" alt="">
+        <div class="meta">Lorem Ipsum · Bologna<br>18 — 20 June 2026</div>
+      </div>
+      <div class="heading">
+        <h1 class="display">Lorem<br>ipsum dolor<br>sit amet,<br>consectetur.</h1>
+      </div>
+      <div class="bottom">
+        <div class="author"><span style="color: var(--lilac); opacity: 1;">Director of Programmes · Immersive Echo</span></div>
+        <div class="date">June 2026 · v1.4</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide gradient s-section" data-label="02 Section">
+    <div class="frame">
+      <div class="num">Part Two</div>
+      <h2 class="section-title">Lorem ipsum<br>dolor sit amet,<br>consectetur.</h2>
+      <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <img class="corner-logo" src="assets/logo-horizontal-light.png?v=3" alt="">
+    <span class="corner-num">02 / 07</span>
+  </section>
+
+  <section class="slide charcoal s-content" data-label="03 Content">
+    <div class="frame">
+      <div class="eyebrow-c">Method · 02</div>
+      <h2>Lorem ipsum dolor,<br>sit amet adipiscing.</h2>
+      <div class="grid">
+        <div class="body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure.</p>
+        </div>
+        <aside class="sidebar">
+          <div class="label">Five Movements</div>
+          <h3>Lorem ipsum dolor sit.</h3>
+          <ul>
+            <li><b>01</b><span>Lorem · 2 weeks on site</span></li>
+            <li><b>02</b><span>Ipsum · cardboard &amp; gels</span></li>
+            <li><b>03</b><span>Dolor · Göteborg lab</span></li>
+            <li><b>04</b><span>Sit amet · 4-week public test</span></li>
+            <li><b>05</b><span>Consectetur · the written method</span></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+    <img class="corner-logo" src="assets/logo-horizontal-light.png?v=3" alt="">
+    <span class="corner-num">03 / 07</span>
+  </section>
+
+  <section class="slide charcoal s-stats" data-label="04 Stats">
+    <div class="frame">
+      <div class="eyebrow-c">Bologna prototype · MAMbo</div>
+      <div class="row">
+        <div class="stat">
+          <div class="num"><em>87</em>%</div>
+          <div class="label">Lorem ipsum dolor sit amet consectetur</div>
+        </div>
+        <div class="stat">
+          <div class="num"><em>4.6</em><span style="font-size: 100px; opacity: 0.5;">/5</span></div>
+          <div class="label">Adipiscing elit sed do eiusmod tempor</div>
+        </div>
+        <div class="stat">
+          <div class="num">€<em>18</em>k</div>
+          <div class="label">Incididunt ut labore et dolore magna</div>
+        </div>
+      </div>
+    </div>
+    <img class="corner-logo" src="assets/logo-horizontal-light.png?v=3" alt="">
+    <span class="corner-num">04 / 07</span>
+  </section>
+
+  <section class="slide gradient s-quote" data-label="05 Quote">
+    <div class="frame">
+      <div class="quote">"Lorem ipsum dolor sit amet. <em>Consectetur adipiscing elit.</em>"</div>
+      <div class="attribution">Dr. Élise Moreau<span>Musée des Arts Décoratifs · Lyon · April 2026</span></div>
+    </div>
+    <img class="corner-logo" src="assets/logo-horizontal-light.png?v=3" alt="">
+    <span class="corner-num">05 / 07</span>
+  </section>
+
+  <section class="slide gradient s-close" data-label="06 Close">
+    <div class="frame">
+      <div class="top">
+        <img src="assets/logo-horizontal-light.png?v=3" alt="">
+      </div>
+      <div class="center">
+        <div class="eyebrow-c">Thank you.</div>
+        <h1>Lorem ipsum,<br>dolor sit amet.</h1>
+      </div>
+      <div class="reach">
+        <div class="col"><b>Speak</b>Anna Lindgren<br>anna@echoimmersive.eu</div>
+        <div class="col"><b>Visit</b>www.echoimmersive.eu<br>/partners</div>
+        <div class="col"><b>Convene</b>Bologna · 18–20 June<br>+46 31 000 00 00</div>
+      </div>
+    </div>
+  </section>
+
+</deck-stage>
+
+<script src="deck-stage.js"></script>
+</body>
+</html>

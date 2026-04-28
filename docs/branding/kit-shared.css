@@ -1,0 +1,66 @@
+/* Shared chrome for inner brand-kit pages */
+.kit-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--charcoal);
+  background-image: url('assets/gradient-bg.png');
+  background-size: 110% auto;
+  background-position: 75% 25%;
+  background-repeat: no-repeat;
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  border-bottom: 1px solid rgba(247,243,224,0.1);
+}
+.kit-nav .left { display: flex; align-items: center; gap: 16px; }
+.kit-nav a.back { color: var(--cream); text-decoration: none; font-family: var(--font-display); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.7; transition: opacity 0.18s; }
+.kit-nav a.back:hover { opacity: 1; color: var(--lilac); }
+.kit-nav .crumb { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(247,243,224,0.4); }
+.kit-nav .crumb strong { color: var(--cream); font-weight: 600; }
+.kit-nav img.mark { height: 28px; }
+
+@media print {
+  .kit-nav { display: none !important; }
+  .no-print { display: none !important; }
+  body { background: white !important; }
+}
+
+.page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 64px;
+}
+
+.page h1.kit-title {
+  font-family: var(--font-display);
+  font-size: 64px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.page .kit-lede {
+  font-size: 18px;
+  line-height: 1.55;
+  max-width: 60ch;
+  color: var(--plum);
+  margin-bottom: 48px;
+}
+.page .section-bar {
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--plum);
+  margin: 64px 0 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(90,66,99,0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.page .section-bar .num { color: var(--lilac); }

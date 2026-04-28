@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Typography · Immersive Echo</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="brand.css">
+<link rel="stylesheet" href="kit-shared.css">
+<style>
+  /* Type specimen */
+  .specimen-block {
+    background: var(--charcoal);
+    color: var(--cream);
+    padding: 80px 64px;
+    margin: 0 -64px;
+  }
+  .specimen-block.cream { background: var(--cream); color: var(--charcoal); }
+
+  .glyph-display {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 360px;
+    line-height: 0.82;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+  }
+  .glyph-meta { font-family: var(--font-display); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.55; margin-bottom: 24px; }
+  .glyph-name { font-family: var(--font-display); font-size: 72px; font-weight: 700; text-transform: uppercase; letter-spacing: -0.01em; line-height: 1; margin-bottom: 12px; }
+  .glyph-sub { font-size: 18px; line-height: 1.5; max-width: 50ch; opacity: 0.75; }
+
+  .weights { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
+  .weight { padding: 24px 0 24px; border-top: 1px solid currentColor; }
+  .weight .label { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.6; margin-bottom: 12px; }
+  .weight .sample { font-family: var(--font-display); font-size: 56px; line-height: 0.95; text-transform: uppercase; letter-spacing: -0.01em; }
+  .weight .sample.r { font-family: var(--font-body); text-transform: none; font-size: 32px; }
+
+  .charset { font-family: var(--font-display); font-size: 28px; line-height: 1.4; letter-spacing: 0.02em; }
+  .charset.body { font-family: var(--font-body); font-size: 22px; line-height: 1.5; letter-spacing: 0; }
+
+  .scale-table { width: 100%; border-collapse: collapse; }
+  .scale-table th, .scale-table td { padding: 18px 0; text-align: left; border-bottom: 1px solid rgba(32,33,36,0.12); vertical-align: baseline; }
+  .scale-table th { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.6; font-weight: 500; }
+  .scale-table .name { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; font-size: 14px; }
+  .scale-table .sample { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; letter-spacing: -0.01em; line-height: 1; }
+  .scale-table .sample.body { font-family: var(--font-body); text-transform: none; font-weight: 400; letter-spacing: 0; }
+  .scale-table .meta { font-family: var(--font-body); font-size: 13px; opacity: 0.7; }
+
+  /* In action card */
+  .demo-card {
+    background: var(--charcoal); color: var(--cream); padding: 64px; aspect-ratio: 16/9;
+    display: flex; flex-direction: column; justify-content: space-between;
+    margin-top: 24px;
+  }
+  .demo-card .eyebrow { font-family: var(--font-display); font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--lilac); margin-bottom: 24px; }
+  .demo-card h2 { font-family: var(--font-display); font-size: 88px; font-weight: 700; line-height: 0.95; text-transform: uppercase; letter-spacing: -0.015em; max-width: 18ch; }
+  .demo-card .body { font-size: 20px; line-height: 1.55; max-width: 55ch; opacity: 0.8; margin-top: 32px; }
+  .demo-card .footer { display: flex; justify-content: space-between; align-items: flex-end; font-family: var(--font-display); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.5; }
+</style>
+</head>
+<body>
+  <nav class="kit-nav no-print">
+    <div class="left">
+      <a class="back" href="index.html">← Brand Kit</a>
+      <span class="crumb">Foundations · <strong>Typography</strong></span>
+    </div>
+    <img class="mark" src="assets/mark-light.png?v=3" alt="">
+  </nav>
+
+  <div class="page">
+    <h1 class="kit-title">Typography</h1>
+    <p class="kit-lede">Two typefaces, one rhythm. Montserrat speaks in titles; Roboto carries the rest. Together they hold the calm, cinematic register of the brand.</p>
+
+    <div class="specimen-block" style="margin-top: 32px;">
+      <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: end;">
+        <div>
+          <div class="glyph-meta" style="color: var(--lilac);">Display Typeface · 01</div>
+          <div class="glyph-name">Montserrat</div>
+          <p class="glyph-sub">Geometric sans for titles, headings, and any moment of declarative voice. Always uppercase. Tight tracking, generous weight contrast.</p>
+        </div>
+        <div class="glyph-display" style="text-align: right;">Aa</div>
+      </div>
+      <div class="weights">
+        <div class="weight">
+          <div class="label">300 · Light</div>
+          <div class="sample" style="font-weight: 300;">Resonate</div>
+        </div>
+        <div class="weight">
+          <div class="label">500 · Medium</div>
+          <div class="sample" style="font-weight: 500;">Resonate</div>
+        </div>
+        <div class="weight">
+          <div class="label">700 · Bold</div>
+          <div class="sample" style="font-weight: 700;">Resonate</div>
+        </div>
+        <div class="weight">
+          <div class="label">800 · ExtraBold</div>
+          <div class="sample" style="font-weight: 800;">Resonate</div>
+        </div>
+      </div>
+      <div style="margin-top: 64px;">
+        <div class="glyph-meta">Character Set</div>
+        <div class="charset">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>0123456789 &amp; · — / @ €</div>
+      </div>
+    </div>
+
+    <div class="specimen-block cream">
+      <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: end;">
+        <div class="glyph-display" style="font-family: var(--font-body); font-weight: 700; font-size: 320px; letter-spacing: -0.03em; text-transform: none;">Aa</div>
+        <div>
+          <div class="glyph-meta" style="color: var(--purple);">Body Typeface · 02</div>
+          <div class="glyph-name" style="font-family: var(--font-body); text-transform: none; font-weight: 500; letter-spacing: -0.02em;">Roboto</div>
+          <p class="glyph-sub" style="opacity: 1; color: var(--plum);">Humanist sans for running text, captions, UI, and anywhere that needs to read calmly at length. Mixed case, regular tracking, comfortable line-height.</p>
+        </div>
+      </div>
+      <div class="weights">
+        <div class="weight">
+          <div class="label" style="color: var(--plum);">300 · Light</div>
+          <div class="sample r" style="font-weight: 300;">Heritage</div>
+        </div>
+        <div class="weight">
+          <div class="label" style="color: var(--plum);">400 · Regular</div>
+          <div class="sample r" style="font-weight: 400;">Heritage</div>
+        </div>
+        <div class="weight">
+          <div class="label" style="color: var(--plum);">500 · Medium</div>
+          <div class="sample r" style="font-weight: 500;">Heritage</div>
+        </div>
+        <div class="weight">
+          <div class="label" style="color: var(--plum);">700 · Bold</div>
+          <div class="sample r" style="font-weight: 700;">Heritage</div>
+        </div>
+      </div>
+      <div style="margin-top: 64px;">
+        <div class="glyph-meta" style="color: var(--purple);">Character Set</div>
+        <div class="charset body" style="color: var(--charcoal);">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 &amp; · — / @ €</div>
+      </div>
+    </div>
+
+    <div class="section-bar"><span><span class="num">03</span> &nbsp;Type Scale</span><span>For 1080p and A4</span></div>
+
+    <table class="scale-table" style="color: var(--charcoal);">
+      <thead>
+        <tr>
+          <th style="width: 18%;">Role</th>
+          <th style="width: 12%;">Font</th>
+          <th style="width: 12%;">Weight</th>
+          <th style="width: 12%;">Size</th>
+          <th>Sample</th>
+        </tr>
+      </thead>
+      <tbody style="color: var(--charcoal);">
+        <tr>
+          <td class="name">Display</td>
+          <td class="meta">Montserrat</td>
+          <td class="meta">800</td>
+          <td class="meta">96 / 88px</td>
+          <td><span class="sample" style="font-size: 64px;">Living Stages</span></td>
+        </tr>
+        <tr>
+          <td class="name">Title</td>
+          <td class="meta">Montserrat</td>
+          <td class="meta">700</td>
+          <td class="meta">64 / 56px</td>
+          <td><span class="sample" style="font-size: 48px;">Cultural Heritage</span></td>
+        </tr>
+        <tr>
+          <td class="name">Heading</td>
+          <td class="meta">Montserrat</td>
+          <td class="meta">600</td>
+          <td class="meta">36 / 32px</td>
+          <td><span class="sample" style="font-size: 32px;">A Scalable Model</span></td>
+        </tr>
+        <tr>
+          <td class="name">Eyebrow</td>
+          <td class="meta">Montserrat</td>
+          <td class="meta">500</td>
+          <td class="meta">14 / 0.16em</td>
+          <td><span class="sample" style="font-size: 14px; letter-spacing: 0.18em;">Field Report · 04</span></td>
+        </tr>
+        <tr>
+          <td class="name">Lede</td>
+          <td class="meta">Roboto</td>
+          <td class="meta">400</td>
+          <td class="meta">22 / 32px</td>
+          <td><span class="sample body" style="font-size: 22px; line-height: 1.45;">We empower cultural institutions to transform everyday public spaces into living stages.</span></td>
+        </tr>
+        <tr>
+          <td class="name">Body</td>
+          <td class="meta">Roboto</td>
+          <td class="meta">400</td>
+          <td class="meta">16 / 26px</td>
+          <td><span class="sample body" style="font-size: 16px; line-height: 1.55;">Through user research, inclusive co-creation, and real-world testing, the project develops a scalable model for institutions of any size.</span></td>
+        </tr>
+        <tr>
+          <td class="name">Caption</td>
+          <td class="meta">Roboto</td>
+          <td class="meta">500</td>
+          <td class="meta">12 / 0.04em</td>
+          <td><span class="sample body" style="font-size: 12px;">Pictured: rehearsal at Galleria Civica, Modena, March 2026.</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="section-bar"><span><span class="num">04</span> &nbsp;In Action</span><span>Display + body together</span></div>
+
+    <div class="demo-card">
+      <div>
+        <div class="eyebrow">Brief · 01</div>
+        <h2>Cultural heritage, collectively felt.</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr auto; gap: 64px; align-items: flex-end;">
+        <p class="body">Immersive&nbsp;Echo equips small and medium-sized cultural institutions across Europe with the tools, methods, and knowledge to create immersive experiences in their own local public spaces &mdash; through projection, spatial audio, and sensor technology.</p>
+        <div class="footer"><img src="assets/logo-stacked-light.png?v=3" alt="Immersive Echo" style="height: 88px; width: auto; opacity: 0.9;"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

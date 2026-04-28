@@ -12,18 +12,22 @@ const navLinks = [
 
 export default function Header() {
   return (
-    <header className="sticky top-0 bg-white border-b-4 border-gray-400 z-50 p-4 shadow-sm">
+    <header
+      className="sticky top-0 z-50 p-4 backdrop-blur-md border-b border-brand-purple/30"
+      style={{ backgroundColor: 'rgba(32, 33, 36, 0.92)' }}
+    >
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
 
-        {/* Logo — TODO: replace with real SVG/image */}
         <NavLink to="/">
-          <div className="border-2 border-gray-400 bg-gray-200 w-48 h-12 flex items-center justify-center text-sm font-bold text-gray-600 rounded-lg cursor-pointer">
-            [LOGO: Immersive ECHO]
-          </div>
+          <img
+            src="/logos/logo-horizontal-light.png"
+            alt="Immersive ECHO"
+            className="h-10 w-auto"
+          />
         </NavLink>
 
         {/* Navigation */}
-        <nav className="flex flex-wrap gap-4 text-sm">
+        <nav className="flex flex-wrap gap-5 text-sm" style={{ fontFamily: 'Montserrat, sans-serif' }}>
           {navLinks.map(({ to, label, end }) => (
             <NavLink
               key={to}
@@ -31,9 +35,12 @@ export default function Header() {
               end={end}
               className={({ isActive }) =>
                 isActive
-                  ? 'font-bold underline text-gray-900'
-                  : 'text-gray-700 hover:font-bold hover:underline transition-all'
+                  ? 'font-bold text-brand-lilac'
+                  : 'font-medium transition-colors duration-200 hover:text-brand-lilac'
               }
+              style={({ isActive }) => ({
+                color: isActive ? '#DA80FF' : 'rgba(247,243,224,0.65)',
+              })}
             >
               {label}
             </NavLink>
@@ -45,7 +52,8 @@ export default function Header() {
           href="#"
           target="_blank"
           rel="noopener noreferrer"
-          className="border-2 border-gray-800 bg-gray-100 px-4 py-2 font-bold uppercase text-sm rounded-md hover:bg-gray-200 transition-colors flex items-center gap-2 whitespace-nowrap"
+          className="border border-brand-lilac px-4 py-2 font-bold uppercase text-xs rounded-md transition-all duration-300 hover:bg-brand-lilac/10 hover:shadow-[0_0_14px_rgba(218,128,255,0.35)] whitespace-nowrap"
+          style={{ fontFamily: 'Montserrat, sans-serif', color: '#DA80FF' }}
         >
           Enter ECHO System ↗
         </a>

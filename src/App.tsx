@@ -14,6 +14,7 @@ import Newsletter from '@/pages/Newsletter'
 import LynchHome from '@/pages/LynchHome'
 import LynchAbout from '@/pages/LynchAbout'
 import IsmailaHome from '@/pages/IsmailaHome'
+import BrandHome from '@/pages/BrandHome'
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -49,6 +50,7 @@ export default function App() {
         <Route path="/lynch-home"    element={<Layout><LynchHome /></Layout>} />
         <Route path="/lynch-about"   element={<Layout><LynchAbout /></Layout>} />
         <Route path="/ismaila-home"  element={<Layout><IsmailaHome /></Layout>} />
+        <Route path="/brand-home"    element={<Layout><BrandHome /></Layout>} />
       </Routes>
     </BrowserRouter>
   )
