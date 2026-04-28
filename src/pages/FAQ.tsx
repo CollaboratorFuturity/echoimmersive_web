@@ -47,7 +47,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 export default function FAQ() {
   return (
     <div className="max-w-3xl mx-auto">
-      <h1 className="text-3xl font-bold mb-8 border-b border-brand-purple/30 pb-2 text-brand-cream">
+      <h1 className="text-2xl md:text-3xl font-bold mb-8 border-b border-brand-purple/30 pb-2 text-brand-cream">
         Frequently Asked Questions
       </h1>
       <div className="space-y-3">

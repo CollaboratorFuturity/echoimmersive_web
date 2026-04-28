@@ -108,6 +108,7 @@ export default function Home() {
 
       <style>{`
         :root { --page-pad: 1rem; }
+        @media (min-width: 640px) { :root { --page-pad: 1.5rem; } }
         @media (min-width: 768px) { :root { --page-pad: 2rem; } }
 
         @keyframes fadeUp {
@@ -170,7 +171,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-brand-charcoal/30 via-transparent to-brand-charcoal/85 pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-charcoal/40 via-transparent to-brand-charcoal/40 pointer-events-none" />
 
-        <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-24" style={{ minHeight: 'calc(100svh - 80px)' }}>
+        <div className="relative z-10 flex flex-col items-center justify-center text-center px-8 sm:px-16 md:px-12 py-24" style={{ minHeight: 'calc(100svh - 80px)' }}>
           <span
             className="fade-up border border-brand-lilac text-brand-lilac px-3 py-1 text-xs font-bold rounded tracking-widest uppercase mb-8"
             style={{ fontFamily: 'Montserrat, sans-serif', animationDelay: '0ms' }}
@@ -179,15 +180,15 @@ export default function Home() {
           </span>
 
           <h1
-            className="fade-up text-brand-cream font-extrabold mb-5 uppercase"
-            style={{ fontFamily: 'Montserrat, sans-serif', fontSize: 'clamp(3.5rem, 18vw, 12rem)', letterSpacing: '-0.01em', lineHeight: 0.92, animationDelay: '150ms' }}
+            className="fade-up text-brand-cream font-extrabold mb-5 uppercase w-full"
+            style={{ fontFamily: 'Montserrat, sans-serif', fontSize: 'clamp(1.8rem, 11vw, 11rem)', letterSpacing: '-0.01em', lineHeight: 0.92, animationDelay: '150ms' }}
           >
             Immersive<br />Echo
           </h1>
 
           <p
             className="fade-up max-w-md"
-            style={{ fontFamily: 'Roboto, sans-serif', fontSize: '1.2rem', lineHeight: 1.7, color: 'rgba(247,243,224,0.65)', animationDelay: '500ms' }}
+            style={{ fontFamily: 'Roboto, sans-serif', fontSize: 'clamp(0.95rem, 2.5vw, 1.2rem)', lineHeight: 1.7, color: 'rgba(247,243,224,0.65)', animationDelay: '500ms' }}
           >
             Creating Collective Immersive Experiences<br />for European Cultural Heritage
           </p>
@@ -215,34 +216,10 @@ export default function Home() {
       </div>
 
       {/* Mission */}
-<<<<<<< HEAD
-      <div className="max-w-3xl mx-auto mb-12 space-y-5 text-base leading-relaxed text-gray-700" style={{ fontFamily: 'Georgia, serif' }}>
-        <p>
-          Cultural heritage exists because people need it. It functions as a living connection to
-          place, to community, to the stories that explain who we are and how we got here. Yet for
-          millions of people across Europe, that connection is breaking down. The spaces and formats
-          meant to carry these stories simply haven't kept pace with the people they're meant to
-          serve.
-        </p>
-        <p>
-          Smaller cultural heritage institutions feel this most acutely. Without the resources of
-          major flagships, they watch audiences shrink, younger generations drift, and communities
-          that were never quite reflected in their collections stop showing up at all. The tools to
-          change this exist. Immersive, multi-sensory experiences that surround you with a story
-          rather than presenting it from behind glass are proven and powerful. But they remain out
-          of reach for most.
-        </p>
-        <p>
-          Immersive ECHO starts from a different premise: that heritage is most powerful when it's
-          felt collectively, in shared spaces, by people who might not have sought it out on their
-          own. The project's mission is to give cultural institutions across Europe the practical
-          means to bring people back into the story. Their story.
-=======
       <div className="mb-14">
         <p data-reveal className="text-xs font-bold uppercase tracking-widest text-brand-lilac mb-8"
            style={{ fontFamily: 'Montserrat, sans-serif', opacity: 0, transform: 'translateY(20px)', transition: 'opacity 800ms cubic-bezier(0.2,0.8,0.2,1), transform 800ms cubic-bezier(0.2,0.8,0.2,1)' }}>
           The Mission
->>>>>>> 12f8290 (Added new branding. Re created all pages.)
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -251,9 +228,9 @@ export default function Home() {
             className="md:col-span-2 space-y-5 text-base leading-relaxed"
             style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(247,243,224,0.8)', opacity: 0, transform: 'translateY(20px)', transition: 'opacity 800ms cubic-bezier(0.2,0.8,0.2,1), transform 800ms cubic-bezier(0.2,0.8,0.2,1)' }}
           >
-            <p>Cultural heritage exists because people need it. Not as a record of the past, but as a living connection — to place, to community, to the stories that explain who we are and how we got here. Yet for millions of people across Europe, that connection is breaking down. Not because the stories have lost their power, but because the spaces and formats meant to carry them haven't kept pace with the people they're meant to serve.</p>
-            <p>Smaller cultural heritage institutions feel this most acutely. Without the resources of major flagships, they watch audiences shrink, younger generations drift, and communities that were never quite reflected in their collections stop showing up at all. The tools to change this — immersive, multi-sensory experiences that surround you with a story rather than presenting it from behind glass — exist, but remain out of reach for most.</p>
-            <p>Immersive ECHO starts from a different premise: that heritage is most powerful when it's felt collectively, in shared spaces, by people who might not have sought it out on their own. The project's mission is not to digitize culture or dazzle with technology — it's to give cultural institutions across Europe the practical means to bring people back into the story. Their story.</p>
+            <p>Cultural heritage exists because people need it. It functions as a living connection to place, to community, to the stories that explain who we are and how we got here. Yet for millions of people across Europe, that connection is breaking down. The spaces and formats meant to carry these stories simply haven't kept pace with the people they're meant to serve.</p>
+            <p>Smaller cultural heritage institutions feel this most acutely. Without the resources of major flagships, they watch audiences shrink, younger generations drift, and communities that were never quite reflected in their collections stop showing up at all. The tools to change this exist. Immersive, multi-sensory experiences that surround you with a story rather than presenting it from behind glass are proven and powerful. But they remain out of reach for most.</p>
+            <p>Immersive ECHO starts from a different premise: that heritage is most powerful when it's felt collectively, in shared spaces, by people who might not have sought it out on their own. The project's mission is to give cultural institutions across Europe the practical means to bring people back into the story. Their story.</p>
           </div>
 
           <div

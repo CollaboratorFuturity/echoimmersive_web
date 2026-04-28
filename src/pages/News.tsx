@@ -21,7 +21,7 @@ export default function News() {
   return (
     <>
       <div className="flex justify-between items-end mb-8 border-b border-brand-purple/30 pb-2">
-        <h1 className="text-3xl font-bold text-brand-cream">News, Events & Activities</h1>
+        <h1 className="text-2xl md:text-3xl font-bold text-brand-cream">News, Events & Activities</h1>
         {/* TODO: Link to real media kit ZIP */}
         <button
           className="border border-brand-lilac/50 text-brand-lilac px-4 py-2 text-xs font-bold uppercase rounded-md transition-all duration-300 hover:bg-brand-lilac/10 hover:shadow-[0_0_10px_rgba(218,128,255,0.25)]"
@@ -54,9 +54,9 @@ export default function News() {
         <div className="col-span-2 space-y-6">
           <h2 className="text-xl font-bold mb-4 text-brand-cream">Latest Updates</h2>
           {filtered.map(({ id, type, date, title }) => (
-            <div key={id} className="flex gap-4 border border-brand-purple/30 bg-brand-plum/15 p-4 rounded-lg transition-all duration-300 hover:border-brand-lilac/50">
+            <div key={id} className="flex flex-col sm:flex-row gap-4 border border-brand-purple/30 bg-brand-plum/15 p-4 rounded-lg transition-all duration-300 hover:border-brand-lilac/50">
               {/* TODO: Replace with real thumbnail */}
-              <div className="border border-brand-purple/25 bg-brand-plum/30 w-32 h-32 shrink-0 flex items-center justify-center text-xs rounded" style={{ color: 'rgba(247,243,224,0.35)' }}>
+              <div className="border border-brand-purple/25 bg-brand-plum/30 w-full sm:w-32 h-32 shrink-0 flex items-center justify-center text-xs rounded" style={{ color: 'rgba(247,243,224,0.35)' }}>
                 [Thumb]
               </div>
               <div>

@@ -17,7 +17,7 @@ export default function Newsletter() {
     <div className="grid grid-cols-1 md:grid-cols-2 min-h-screen">
 
       {/* Left: Form */}
-      <div className="bg-brand-charcoal border-r border-brand-purple/20 p-12 flex flex-col justify-between min-h-96">
+      <div className="bg-brand-charcoal border-r border-brand-purple/20 p-6 md:p-12 flex flex-col justify-between min-h-96">
         <div>
           <button onClick={() => navigate('/')} className="mb-8 cursor-pointer">
             <img src="/logos/logo-horizontal-light.png" alt="Immersive ECHO" className="h-10 w-auto" />

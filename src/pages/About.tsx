@@ -11,7 +11,7 @@ const Skeleton = ({ w = 'w-full' }: { w?: string }) => (
 export default function About() {
   return (
     <>
-      <h1 className="text-3xl font-bold mb-8 border-b border-brand-purple/30 pb-2 text-brand-cream">
+      <h1 className="text-2xl md:text-3xl font-bold mb-8 border-b border-brand-purple/30 pb-2 text-brand-cream">
         About Immersive ECHO
       </h1>
 

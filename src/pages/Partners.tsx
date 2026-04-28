@@ -1,7 +1,7 @@
 export default function Partners() {
   return (
     <>
-      <h1 className="text-3xl font-bold mb-8 border-b border-brand-purple/30 pb-2 text-brand-cream">
+      <h1 className="text-2xl md:text-3xl font-bold mb-8 border-b border-brand-purple/30 pb-2 text-brand-cream">
         The Consortium
       </h1>
 
@@ -17,7 +17,7 @@ export default function Partners() {
 
       {/* Core Partners */}
       <section className="mb-12">
-        <h2 className="text-xl font-bold mb-4 text-center text-brand-cream">Core Partners</h2>
+        <h2 className="text-lg md:text-xl font-bold mb-4 text-center text-brand-cream">Core Partners</h2>
         {/* TODO: Replace placeholders with real partner logos + links */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           {Array.from({ length: 14 }, (_, i) => (
@@ -34,7 +34,7 @@ export default function Partners() {
 
       {/* Associated Partners */}
       <section>
-        <h2 className="text-xl font-bold mb-4 text-center text-brand-cream">Associated Partners</h2>
+        <h2 className="text-lg md:text-xl font-bold mb-4 text-center text-brand-cream">Associated Partners</h2>
         {/* TODO: Replace with real associated partner logos */}
         <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
           {Array.from({ length: 6 }, (_, i) => (

@@ -15,7 +15,7 @@ export default function Contact() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold mb-8 border-b border-brand-purple/30 pb-2 text-brand-cream">
+      <h1 className="text-2xl md:text-3xl font-bold mb-8 border-b border-brand-purple/30 pb-2 text-brand-cream">
         Contact Us
       </h1>
 
@@ -23,7 +23,7 @@ export default function Contact() {
 
         {/* Info */}
         <div>
-          <h2 className="text-2xl font-bold mb-4 text-brand-cream">Get in Touch</h2>
+          <h2 className="text-xl md:text-2xl font-bold mb-4 text-brand-cream">Get in Touch</h2>
           <p className="mb-6" style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(247,243,224,0.7)' }}>
             Reach out to the coordinator team at Lindholmen Science Park for general inquiries,
             press information, or partnership questions.
