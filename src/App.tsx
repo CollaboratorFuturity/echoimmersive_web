@@ -15,6 +15,7 @@ import LynchHome from '@/pages/LynchHome'
 import LynchAbout from '@/pages/LynchAbout'
 import IsmailaHome from '@/pages/IsmailaHome'
 import BrandHome from '@/pages/BrandHome'
+import UnderConstruction from '@/pages/UnderConstruction'
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -32,8 +33,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Newsletter is full-screen — no header/footer */}
-        <Route path="/newsletter" element={<Newsletter />} />
+        {/* Full-screen pages — no header/footer */}
+        <Route path="/newsletter"        element={<Newsletter />} />
+        <Route path="/underconstruction" element={<UnderConstruction />} />
 
         {/* All other pages use the standard layout */}
         <Route path="/"          element={<Layout><Home /></Layout>} />
