@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from '@/components/Header/Header'
 import Footer from '@/components/Footer/Footer'
+import ScrollToTop from '@/components/ScrollToTop'
 import Home from '@/pages/Home'
 import About from '@/pages/About'
 import Partners from '@/pages/Partners'
@@ -32,6 +33,7 @@ function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         {/* Full-screen pages — no header/footer */}
         <Route path="/newsletter"        element={<Newsletter />} />
