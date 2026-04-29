@@ -8,11 +8,15 @@ Memory is fragile. AI context gets compressed at unpredictable intervals. If you
 
 ## Pending
 
-- [ ] **[Decision] Newsletter service** -- Need to choose and configure a newsletter platform (Mailchimp, Brevo, or other). Required before the Newsletter page form can be wired up.
+- [x] **[Decision] Newsletter service** -- DONE: FastAPI backend with PostgreSQL stores subscribers. Endpoint: `POST /api/v1/public/newsletter`.
 
-- [ ] **[Decision] Contact form submission** -- Wireframe uses `alert()` mock. Need to decide on form handling: serverless function, Formspree, Netlify Forms, or other. Required before Phase 2 contact page is considered done.
+- [x] **[Decision] Contact form submission** -- DONE: FastAPI backend handles submissions. Endpoint: `POST /api/v1/public/contact`. Emails sent via SMTP (aiosmtplib).
 
-- [ ] **[Decision] "Enter ECHO System ↗" destination** -- CTA button in the header should open the ECHOSYSTEM interactive dashboard. URL / platform not yet confirmed. File: `src/components/Header/Header.tsx` — replace `href="#"` with real URL.
+- [x] **[Decision] "Enter ECHO System ↗" destination** -- DONE: Links to `https://echosystem.futurity.science`.
+
+- [ ] **[Setup] Configure .env for production** -- Copy `.env.example` to `.env` and fill in real SMTP credentials, `CONTACT_RECIPIENT_EMAIL`, and `POSTGRES_PASSWORD` before deploying. Do NOT commit `.env`.
+
+- [ ] **[Setup] Run Alembic migration on first deploy** -- After `docker compose up --build`, run: `docker compose exec api alembic upgrade head` to create `contact_messages` and `newsletter_subscribers` tables.
 
 - [ ] **[Assets] Partner logos** -- Need logo files for all 15 core partners + 6 associated partners before the Partners page can be built. Formats: SVG preferred, WebP/PNG fallback.
 

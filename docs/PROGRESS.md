@@ -81,13 +81,22 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 
 ### Contact Page
 - [x] Page stub (`src/pages/Contact.tsx`) — form with controlled inputs, coordinator info, social icons, newsletter CTA
-- [ ] Form submission handling (Formspree / Netlify Forms / etc.)
+- [x] Form submission — FastAPI backend (`POST /api/v1/public/contact`), email field added, success/error states wired
 - [ ] Real social icon SVGs + links
 
 ### Newsletter Page
 - [x] Page stub (`src/pages/Newsletter.tsx`) — full-screen split layout, controlled form, no header/footer
-- [ ] Newsletter service integration (Mailchimp / Brevo / etc.)
+- [x] Newsletter service integration — FastAPI backend (`POST /api/v1/public/newsletter`), success + already-subscribed states wired
 - [ ] Real image right panel
+
+### Backend (FastAPI)
+- [x] `api/` directory — FastAPI + SQLAlchemy async + asyncpg + aiosmtplib + Pydantic v2
+- [x] `POST /api/v1/public/contact` — saves to `contact_messages`, sends email to recipient + sender confirmation
+- [x] `POST /api/v1/public/newsletter` — upserts `newsletter_subscribers`, sends confirmation email
+- [x] `docker-compose.yml` updated — 3 services: `echoimmersive-web` (Nginx), `api` (FastAPI), `db` (Postgres 16)
+- [x] `nginx.conf` updated — `/api/` proxied to FastAPI container
+- [x] `.env.example` added — template for SMTP, DB, and CORS config
+- [ ] Run `alembic upgrade head` on first deploy to create DB tables
 
 ### Footer
 - [x] Footer component (`src/components/Footer/Footer.tsx`) — 3-column, quick links, EU credit placeholder

@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+sqlalchemy[asyncio]>=2.0
+asyncpg
+aiosmtplib
+pydantic[email]
+pydantic-settings
+alembic

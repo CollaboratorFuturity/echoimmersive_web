@@ -5,12 +5,44 @@ const inputClass = "w-full border border-brand-purple/35 bg-brand-plum/20 text-b
 
 export default function Contact() {
   const navigate = useNavigate()
-  const [form, setForm] = useState({ name: '', organisation: '', subject: '', message: '' })
+  const [form, setForm] = useState({ name: '', email: '', organisation: '', subject: '', message: '' })
+  const [submitting, setSubmitting] = useState(false)
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [errorMsg, setErrorMsg] = useState('')
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    // TODO: Wire up to real form submission service (Formspree, Netlify Forms, etc.)
-    alert('Form submitted — backend not yet connected.')
+    setSubmitting(true)
+    setStatus('idle')
+
+    try {
+      const res = await fetch('/api/v1/public/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          full_name: form.name,
+          email: form.email,
+          organisation: form.organisation,
+          subject: form.subject,
+          message: form.message,
+          consent_acknowledged: true,
+        }),
+      })
+
+      if (res.ok) {
+        setStatus('success')
+        setForm({ name: '', email: '', organisation: '', subject: '', message: '' })
+      } else {
+        const data = await res.json().catch(() => ({}))
+        setErrorMsg(data?.detail || 'Something went wrong. Please try again.')
+        setStatus('error')
+      }
+    } catch {
+      setErrorMsg('Could not reach the server. Please check your connection.')
+      setStatus('error')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -65,36 +97,82 @@ export default function Contact() {
 
         {/* Form */}
         <div className="border border-brand-purple/30 bg-brand-plum/15 p-6 rounded-lg">
-          <form onSubmit={handleSubmit} className="space-y-4">
-            {(['name','organisation','subject'] as const).map(field => (
-              <div key={field}>
-                <label className="block font-bold mb-2 text-sm text-brand-cream capitalize" style={{ fontFamily: 'Montserrat, sans-serif' }}>{field}</label>
+          {status === 'success' ? (
+            <div className="flex flex-col items-center justify-center h-full gap-4 py-12 text-center">
+              <div className="w-12 h-12 rounded-full border-2 border-brand-lilac flex items-center justify-center text-brand-lilac text-xl">✓</div>
+              <p className="font-bold text-brand-cream text-lg" style={{ fontFamily: 'Montserrat, sans-serif' }}>Message sent!</p>
+              <p style={{ color: 'rgba(247,243,224,0.6)', fontFamily: 'Roboto, sans-serif', fontSize: '0.9rem' }}>
+                We'll get back to you within 5 business days. Check your inbox for a confirmation.
+              </p>
+              <button
+                onClick={() => setStatus('idle')}
+                className="mt-4 text-sm text-brand-lilac underline hover:text-brand-lilac/80 transition-colors"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+              >
+                Send another message
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label className="block font-bold mb-2 text-sm text-brand-cream" style={{ fontFamily: 'Montserrat, sans-serif' }}>Name</label>
                 <input
                   type="text"
-                  value={form[field]}
-                  onChange={e => setForm(f => ({ ...f, [field]: e.target.value }))}
+                  required
+                  value={form.name}
+                  onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
                   className={inputClass}
                   style={{ fontFamily: 'Roboto, sans-serif' }}
                 />
               </div>
-            ))}
-            <div>
-              <label className="block font-bold mb-2 text-sm text-brand-cream" style={{ fontFamily: 'Montserrat, sans-serif' }}>Message</label>
-              <textarea
-                value={form.message}
-                onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
-                className={`${inputClass} h-32 resize-none`}
-                style={{ fontFamily: 'Roboto, sans-serif' }}
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full border border-brand-lilac text-brand-lilac py-3 font-bold uppercase text-sm rounded-lg transition-all duration-300 hover:bg-brand-lilac/10 hover:shadow-[0_0_14px_rgba(218,128,255,0.3)]"
-              style={{ fontFamily: 'Montserrat, sans-serif' }}
-            >
-              Send Message
-            </button>
-          </form>
+              <div>
+                <label className="block font-bold mb-2 text-sm text-brand-cream" style={{ fontFamily: 'Montserrat, sans-serif' }}>Email</label>
+                <input
+                  type="email"
+                  required
+                  value={form.email}
+                  onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
+                  className={inputClass}
+                  style={{ fontFamily: 'Roboto, sans-serif' }}
+                />
+              </div>
+              {(['organisation', 'subject'] as const).map(field => (
+                <div key={field}>
+                  <label className="block font-bold mb-2 text-sm text-brand-cream capitalize" style={{ fontFamily: 'Montserrat, sans-serif' }}>{field}</label>
+                  <input
+                    type="text"
+                    value={form[field]}
+                    onChange={e => setForm(f => ({ ...f, [field]: e.target.value }))}
+                    className={inputClass}
+                    style={{ fontFamily: 'Roboto, sans-serif' }}
+                  />
+                </div>
+              ))}
+              <div>
+                <label className="block font-bold mb-2 text-sm text-brand-cream" style={{ fontFamily: 'Montserrat, sans-serif' }}>Message</label>
+                <textarea
+                  required
+                  value={form.message}
+                  onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
+                  className={`${inputClass} h-32 resize-none`}
+                  style={{ fontFamily: 'Roboto, sans-serif' }}
+                />
+              </div>
+
+              {status === 'error' && (
+                <p className="text-sm" style={{ color: '#ff8080', fontFamily: 'Roboto, sans-serif' }}>{errorMsg}</p>
+              )}
+
+              <button
+                type="submit"
+                disabled={submitting}
+                className="w-full border border-brand-lilac text-brand-lilac py-3 font-bold uppercase text-sm rounded-lg transition-all duration-300 hover:bg-brand-lilac/10 hover:shadow-[0_0_14px_rgba(218,128,255,0.3)] disabled:opacity-50 disabled:cursor-not-allowed"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+              >
+                {submitting ? 'Sending…' : 'Send Message'}
+              </button>
+            </form>
+          )}
         </div>
       </div>
 
