@@ -48,7 +48,7 @@ export default function Header() {
         <div className="flex items-center gap-3">
           {/* CTA — hidden on small mobile, shown sm+ */}
           <a
-            href="#"
+            href="https://echosystem.futurity.science"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-flex border border-brand-lilac px-4 py-2 font-bold uppercase text-xs rounded-md transition-all duration-300 hover:bg-brand-lilac/10 hover:shadow-[0_0_14px_rgba(218,128,255,0.35)] whitespace-nowrap"
@@ -94,7 +94,7 @@ export default function Header() {
             ))}
             {/* CTA inside mobile menu */}
             <a
-              href="#"
+              href="https://echosystem.futurity.science"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMenuOpen(false)}
