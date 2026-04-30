@@ -1,21 +1,40 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import Lightbox from '@/components/Lightbox/Lightbox'
+import { launchGallery } from '@/data/galleries'
 
 type FilterType = 'All' | 'News' | 'Events' | 'Press'
 const FILTERS: FilterType[] = ['All', 'News', 'Events', 'Press']
 
-const articles = [
-  { id: 1, type: 'News' as FilterType,   date: 'March 2026', title: 'Immersive ECHO Project Officially Launches' },
-  { id: 2, type: 'Events' as FilterType, date: 'M3',         title: 'Design Brief Workshop Scheduled' },
+type Article = {
+  id: number
+  type: FilterType
+  date: string
+  title: string
+  subtitle: string
+  thumb: string
+  href: string
+}
+
+const articles: Article[] = [
+  {
+    id: 1,
+    type: 'News',
+    date: 'March 2026',
+    title: 'Immersive ECHO Project Officially Launches',
+    subtitle: 'Over 40 world class European creatives gathered in Namur to kickstart the ECHO Immersive project',
+    thumb: '/img/news_launch/thumb.jpg',
+    href: '/news/launch',
+  },
 ]
 
 const galleries = [
-  'Kick-off Meeting (Gothenburg)',
-  'Design Brief Workshop',
-  'Futuremakers Toolkit Session',
+  { name: 'Launch (Namur)', images: launchGallery },
 ]
 
 export default function News() {
   const [filter, setFilter] = useState<FilterType>('All')
+  const [lightbox, setLightbox] = useState<{ images: string[]; index: number } | null>(null)
   const filtered = filter === 'All' ? articles : articles.filter(a => a.type === filter)
 
   return (
@@ -53,22 +72,20 @@ export default function News() {
         {/* Feed */}
         <div className="col-span-2 space-y-6">
           <h2 className="text-xl font-bold mb-4 text-brand-cream">Latest Updates</h2>
-          {filtered.map(({ id, type, date, title }) => (
+          {filtered.map(({ id, type, date, title, subtitle, thumb, href }) => (
             <div key={id} className="flex flex-col sm:flex-row gap-4 border border-brand-purple/30 bg-brand-plum/15 p-4 rounded-lg transition-all duration-300 hover:border-brand-lilac/50">
-              {/* TODO: Replace with real thumbnail */}
-              <div className="border border-brand-purple/25 bg-brand-plum/30 w-full sm:w-32 h-32 shrink-0 flex items-center justify-center text-xs rounded" style={{ color: 'rgba(247,243,224,0.35)' }}>
-                [Thumb]
-              </div>
+              <Link to={href} className="w-full sm:w-32 h-32 shrink-0 rounded overflow-hidden border border-brand-purple/25">
+                <img src={thumb} alt={title} className="w-full h-full object-cover" />
+              </Link>
               <div>
                 <span className="text-xs font-bold uppercase" style={{ fontFamily: 'Montserrat, sans-serif', color: 'rgba(218,128,255,0.7)' }}>
                   {type} | {date}
                 </span>
                 <h3 className="text-lg font-bold mb-2 mt-1 text-brand-cream">{title}</h3>
-                <div className="space-y-2 mb-4">
-                  <div className="h-3 rounded w-full bg-brand-plum/40" />
-                  <div className="h-3 rounded w-4/5 bg-brand-plum/40" />
-                </div>
-                <a href="#" className="text-brand-lilac underline text-sm font-bold hover:text-brand-lilac/80">Read More →</a>
+                <p className="text-sm mb-4" style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(247,243,224,0.7)' }}>
+                  {subtitle}
+                </p>
+                <Link to={href} className="text-brand-lilac underline text-sm font-bold hover:text-brand-lilac/80">Read More →</Link>
               </div>
             </div>
           ))}
@@ -81,19 +98,29 @@ export default function News() {
         <div className="border border-brand-purple/30 bg-brand-plum/15 p-6 rounded-lg">
           <h2 className="text-xl font-bold mb-4 text-brand-cream">Event Galleries</h2>
           <div className="space-y-3">
-            {galleries.map(name => (
+            {galleries.map(g => (
               <button
-                key={name}
-                onClick={() => alert(`Open gallery: ${name}`)}
+                key={g.name}
+                onClick={() => setLightbox({ images: g.images, index: 0 })}
                 className="w-full border border-brand-purple/30 bg-brand-plum/20 h-16 flex items-center px-4 gap-3 text-sm rounded-lg transition-all duration-300 hover:border-brand-lilac hover:bg-brand-plum/35 text-left"
                 style={{ color: 'rgba(247,243,224,0.7)', fontFamily: 'Roboto, sans-serif' }}
               >
-                📁 {name}
+                📁 {g.name}
+                <span className="ml-auto text-xs" style={{ color: 'rgba(247,243,224,0.45)' }}>
+                  {g.images.length} photos
+                </span>
               </button>
             ))}
           </div>
         </div>
       </div>
+
+      <Lightbox
+        images={lightbox?.images ?? []}
+        index={lightbox?.index ?? null}
+        onClose={() => setLightbox(null)}
+        onChange={(i) => setLightbox(lb => (lb ? { ...lb, index: i } : lb))}
+      />
     </>
   )
 }

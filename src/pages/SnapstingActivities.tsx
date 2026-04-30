@@ -4,15 +4,14 @@ export default function SnapstingActivities() {
   return (
     <>
       <Link to="/pilots" className="text-sm text-brand-lilac hover:text-brand-lilac/80 transition-colors mb-4 inline-block" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-        ← Back to Pilots
+        ← Back to Experiences
       </Link>
 
       <h1 className="text-2xl md:text-3xl font-bold mb-4 border-b border-brand-purple/30 pb-2 text-brand-cream">
-        Snapsting — Museum Viborg · Activities
+        Viborg Animation Festival · Activities
       </h1>
       <p className="mb-8 max-w-3xl" style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(247,243,224,0.7)' }}>
-        {/* TODO: Add real intro about Snapsting activities */}
-        Overview of Snapsting testbed activities in Viborg, Denmark.
+        Overview of Viborg Animation Festival testbed activities in Viborg, Denmark.
       </p>
 
       {/* TODO: Populate with real activity cards */}

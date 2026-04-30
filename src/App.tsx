@@ -10,6 +10,7 @@ import Pilots from '@/pages/Pilots'
 import SnapstingActivities from '@/pages/SnapstingActivities'
 import PavillonActivities from '@/pages/PavillonActivities'
 import News from '@/pages/News'
+import NewsLaunch from '@/pages/news/Launch'
 import FAQ from '@/pages/FAQ'
 import Contact from '@/pages/Contact'
 import Newsletter from '@/pages/Newsletter'
@@ -19,11 +20,15 @@ import IsmailaHome from '@/pages/IsmailaHome'
 import BrandHome from '@/pages/BrandHome'
 import UnderConstruction from '@/pages/UnderConstruction'
 
+// Pages that render their own background (no shared Dither)
+const NO_DITHER_ROUTES = ['/lynch-home']
+
 function Layout({ children }: { children: React.ReactNode }) {
   const { pathname } = useLocation()
+  const showDither = !NO_DITHER_ROUTES.includes(pathname)
   return (
     <div className="min-h-screen flex flex-col">
-      <DitherBackground />
+      {showDither && <DitherBackground />}
       <Header />
       <main className="flex-grow max-w-6xl mx-auto w-full p-4 md:p-8">
         {/* key={pathname} forces remount on navigation — restarts the page-fade animation */}
@@ -52,7 +57,8 @@ export default function App() {
         <Route path="/pilots"    element={<Layout><Pilots /></Layout>} />
         <Route path="/pilots/snapsting" element={<Layout><SnapstingActivities /></Layout>} />
         <Route path="/pilots/pavillon"  element={<Layout><PavillonActivities /></Layout>} />
-        <Route path="/news"      element={<Layout><News /></Layout>} />
+        <Route path="/news"        element={<Layout><News /></Layout>} />
+        <Route path="/news/launch" element={<Layout><NewsLaunch /></Layout>} />
         <Route path="/faq"       element={<Layout><FAQ /></Layout>} />
         <Route path="/contact"   element={<Layout><Contact /></Layout>} />
 

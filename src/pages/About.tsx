@@ -253,7 +253,13 @@ export default function About() {
             src="/charts/echo-dual-track.html"
             title="Immersive ECHO — Dual-Track Design Methodology"
             className="w-full block border-0"
-            style={{ height: 'clamp(560px, 60vw, 700px)', backgroundColor: 'transparent' }}
+            style={{
+              height: 'clamp(560px, 60vw, 700px)',
+              backgroundColor: 'transparent',
+              // Let mouse events pass through so the Dither background can still react.
+              // The chart is purely visual — no clicks or hovers to preserve.
+              pointerEvents: 'none',
+            }}
             loading="lazy"
           />
         </div>

@@ -4,9 +4,12 @@ const pilots = [
   {
     id: 'snapsting',
     badge: 'PRIMARY TESTBED',
-    title: 'Snapsting — Museum Viborg',
+    title: 'Viborg Animation Festival',
     location: 'Viborg, Denmark',
-    imageLabel: '[Photo: Viborg Snapsting]',
+    image: '/img/VIB_museum.jpg',
+    imageAlt: 'Viborg Animation Festival',
+    description:
+      'Viborg Animation Festival draws 20,000 visitors yearly, organized by The Animation Workshop / VIA University College in Denmark. Within ECHO, it hosts masterclasses and talks bridging immersive storytelling with cultural heritage.',
     activitiesHref: '/pilots/snapsting',
   },
   {
@@ -14,7 +17,10 @@ const pilots = [
     badge: 'SCALING & ADAPTATION',
     title: 'Le Pavillon',
     location: 'Namur, Belgium',
-    imageLabel: '[Photo: Le Pavillon Namur]',
+    image: '/img/KIKK_lepavillion.avif',
+    imageAlt: 'Le Pavillon, Namur',
+    description:
+      "Le Pavillon is KIKK's hub for digital arts and technology in Namur, Belgium. It deploys ECHO's immersive installations to broad public audiences while collecting engagement and accessibility data. Over 200 school partnerships annually.",
     activitiesHref: '/pilots/pavillon',
   },
 ]
@@ -30,13 +36,13 @@ export default function Pilots() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {pilots.map(({ id, badge, title, location, imageLabel, activitiesHref }) => (
+        {pilots.map(({ id, badge, title, location, image, imageAlt, description, activitiesHref }) => (
           <div
             key={id}
             className="border border-brand-purple/35 bg-brand-plum/20 p-6 rounded-lg transition-all duration-300 hover:border-brand-lilac hover:shadow-[0_0_20px_rgba(218,128,255,0.12)]"
           >
-            <div className="border border-brand-purple/25 bg-brand-plum/30 h-48 mb-4 flex items-center justify-center text-sm rounded-lg" style={{ color: 'rgba(247,243,224,0.35)' }}>
-              {imageLabel}
+            <div className="h-48 mb-4 rounded-lg overflow-hidden border border-brand-purple/25">
+              <img src={image} alt={imageAlt} className="w-full h-full object-cover" />
             </div>
             <span
               className="border border-brand-lilac/50 text-brand-lilac px-2 py-1 text-xs font-bold mb-3 inline-block rounded"
@@ -46,11 +52,9 @@ export default function Pilots() {
             </span>
             <h2 className="text-2xl font-bold mb-1 text-brand-cream">{title}</h2>
             <h3 className="text-base mb-4" style={{ color: 'rgba(247,243,224,0.5)' }}>📍 {location}</h3>
-            <div className="space-y-2 mb-5">
-              <div className="h-4 rounded w-full bg-brand-plum/40" />
-              <div className="h-4 rounded w-full bg-brand-plum/40" />
-              <div className="h-4 rounded w-3/4 bg-brand-plum/40" />
-            </div>
+            <p className="mb-5" style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(247,243,224,0.7)' }}>
+              {description}
+            </p>
             <Link
               to={activitiesHref}
               className="inline-block border border-brand-lilac text-brand-lilac px-4 py-2 text-sm font-bold uppercase rounded-md transition-all duration-300 hover:bg-brand-lilac/10 hover:shadow-[0_0_12px_rgba(218,128,255,0.3)]"
