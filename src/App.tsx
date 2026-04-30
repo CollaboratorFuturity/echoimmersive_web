@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Header from '@/components/Header/Header'
 import Footer from '@/components/Footer/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
+import DitherBackground from '@/components/DitherBackground/DitherBackground'
 import Home from '@/pages/Home'
 import About from '@/pages/About'
 import Partners from '@/pages/Partners'
@@ -22,6 +23,7 @@ function Layout({ children }: { children: React.ReactNode }) {
   const { pathname } = useLocation()
   return (
     <div className="min-h-screen flex flex-col">
+      <DitherBackground />
       <Header />
       <main className="flex-grow max-w-6xl mx-auto w-full p-4 md:p-8">
         {/* key={pathname} forces remount on navigation — restarts the page-fade animation */}
