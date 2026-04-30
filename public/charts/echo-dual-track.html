@@ -72,16 +72,13 @@
   const container = document.getElementById('diagram-container');
   const svg = d3.select('#diagram');
 
-  // Responsive sizing
-  const isMobile = window.innerWidth < 700;
-  const W = Math.min(container.clientWidth - (isMobile ? 16 : 48), 1060);
   svg.attr('width', '100%')
      .attr('height', 'auto')
      .style('overflow', 'visible');
 
+  // ── DEFS appended once (don't depend on size) ──
   const defs = svg.append('defs');
 
-  // Arrowhead markers
   const markerColors = {
     flow:    '#8843A3',
     offsite: '#DA80FF',
@@ -104,309 +101,372 @@
       .attr('fill', color);
   });
 
-  // Glow filter
   const glow = defs.append('filter').attr('id', 'glow');
   glow.append('feGaussianBlur').attr('stdDeviation', 4).attr('result', 'blur');
   glow.append('feMerge').selectAll('feMergeNode')
     .data(['blur', 'SourceGraphic']).enter()
     .append('feMergeNode').attr('in', d => d);
 
-  // Layout constants
-  const colLeft   = isMobile ? W * 0.28 : W * 0.22;
-  const colRight  = isMobile ? W * 0.72 : W * 0.78;
-  const colCenter = W * 0.5;
+  // Container for everything that DOES depend on size — easy to clear & redraw
+  const layer = svg.append('g').attr('id', 'layer');
 
-  // Phase rows
-  const yTop      = 60;
-  const yTrackTop = isMobile ? 130 : 120;
-  const yTestbed  = isMobile ? 395 : 365;
-
-  // ── WP1 coordination bar (top) ──
-  svg.append('rect')
-    .attr('x', W * 0.08).attr('y', yTop - 18)
-    .attr('width', W * 0.84).attr('height', 36)
-    .attr('rx', 18).attr('ry', 18)
-    .attr('fill', 'rgba(247,243,224,0.04)')
-    .attr('stroke', 'rgba(247,243,224,0.15)')
-    .attr('stroke-width', 1);
-
-  svg.append('text')
-    .attr('x', colCenter).attr('y', yTop + 5)
-    .attr('text-anchor', 'middle')
-    .attr('fill', 'rgba(247,243,224,0.55)')
-    .attr('font-size', isMobile ? 10 : 12)
-    .attr('font-family', 'JetBrains Mono, monospace')
-    .attr('letter-spacing', '0.15em')
-    .text('WP1 — PROJECT COORDINATION — LINDHOLMEN SCIENCE PARK');
-
-  // ── TRACK BOXES ──
-  function drawTrackBox(x, y, w, h, color, label, lead, items) {
-    const g = svg.append('g');
-
-    // Main box
-    g.append('rect')
-      .attr('x', x).attr('y', y)
-      .attr('width', w).attr('height', h)
-      .attr('rx', 12).attr('ry', 12)
-      .attr('fill', 'rgba(32,33,36,0.55)')
-      .attr('stroke', color)
-      .attr('stroke-width', 2);
-
-    // Header bar
-    g.append('rect')
-      .attr('x', x).attr('y', y)
-      .attr('width', w).attr('height', 38)
-      .attr('rx', 12).attr('ry', 12)
-      .attr('fill', color)
-      .attr('opacity', 0.18);
-
-    // Fix bottom corners of header
-    g.append('rect')
-      .attr('x', x).attr('y', y + 20)
-      .attr('width', w).attr('height', 18)
-      .attr('fill', color)
-      .attr('opacity', 0.18);
-
-    // Label (centered)
-    g.append('text')
-      .attr('x', x + w / 2).attr('y', y + 18)
-      .attr('text-anchor', 'middle')
-      .attr('fill', color)
-      .attr('font-size', isMobile ? 11 : 13)
-      .attr('font-weight', 700)
-      .attr('font-family', 'Montserrat, sans-serif')
-      .text(label);
-
-    // Lead org (centered, below title)
-    g.append('text')
-      .attr('x', x + w / 2).attr('y', y + 32)
-      .attr('text-anchor', 'middle')
-      .attr('fill', 'rgba(247,243,224,0.5)')
-      .attr('font-size', isMobile ? 8 : 9)
-      .attr('font-family', 'JetBrains Mono, monospace')
-      .text(lead);
-
-    // Items (centered)
-    items.forEach((item, i) => {
-      const itemY = y + 58 + i * (isMobile ? 22 : 24);
-      g.append('text')
-        .attr('x', x + w / 2).attr('y', itemY)
-        .attr('text-anchor', 'middle')
-        .attr('fill', 'rgba(247,243,224,0.85)')
-        .attr('font-size', isMobile ? 10 : 12)
-        .attr('font-family', 'Roboto, sans-serif')
-        .text(item);
-    });
-
-    return g;
+  // ── Tier-based responsive constants ──
+  function getTier(w) {
+    if (w < 480)  return 'xs';
+    if (w < 768)  return 'sm';
+    if (w < 1024) return 'md';
+    return 'lg';
   }
 
-  const trackW = isMobile ? W * 0.374 : W * 0.323;
-  const trackH = isMobile ? 212 : 187;
-  const leftX  = colLeft  - trackW / 2;
-  const rightX = colRight - trackW / 2;
-
-  // Off-site lab (WP2)
-  drawTrackBox(
-    leftX, yTrackTop, trackW, trackH,
-    '#DA80FF',
-    'WP2 — Off-site Lab',
-    'LEAD: FFV + NPIAT',
-    [
-      'Prototype immersive formats',
-      'User-centric validation',
-      'Inclusive design testing',
-      'Modular deployment guides'
-    ]
-  );
-
-  // On-site museum (WP3)
-  drawTrackBox(
-    rightX, yTrackTop, trackW, trackH,
-    '#DA80FF',
-    'WP3 — On-site Museum',
-    'LEAD: VIBORG MUSEUM',
-    [
-      'Heritage narrative dev',
-      'Spatial design & tech',
-      'Audience impact testing',
-      'Process documentation'
-    ]
-  );
-
-  // ── BIDIRECTIONAL ARROWS between tracks ──
-  const arrowY1 = yTrackTop + trackH * 0.35;
-  const arrowY2 = yTrackTop + trackH * 0.6;
-  const gapL   = leftX + trackW + 6;
-  const gapR   = rightX - 6;
-  const midGap = (gapL + gapR) / 2;
-
-  // Arrow left → right
-  svg.append('path')
-    .attr('d', `M${gapL},${arrowY1} C${midGap},${arrowY1 - 20} ${midGap},${arrowY1 - 20} ${gapR},${arrowY1}`)
-    .attr('fill', 'none')
-    .attr('stroke', '#8843A3')
-    .attr('stroke-width', 1.5)
-    .attr('stroke-dasharray', '6,4')
-    .attr('marker-end', 'url(#arrow-flow)');
-
-  // Arrow right → left
-  svg.append('path')
-    .attr('d', `M${gapR},${arrowY2} C${midGap},${arrowY2 + 20} ${midGap},${arrowY2 + 20} ${gapL},${arrowY2}`)
-    .attr('fill', 'none')
-    .attr('stroke', '#8843A3')
-    .attr('stroke-width', 1.5)
-    .attr('stroke-dasharray', '6,4')
-    .attr('marker-end', 'url(#arrow-flow)');
-
-  // Exchange label
-  svg.append('text')
-    .attr('x', midGap).attr('y', (arrowY1 + arrowY2) / 2 + 3)
-    .attr('text-anchor', 'middle')
-    .attr('fill', '#DA80FF')
-    .attr('font-size', isMobile ? 8 : 10)
-    .attr('font-family', 'JetBrains Mono, monospace')
-    .attr('font-weight', 500)
-    .text('CONTINUOUS');
-
-  svg.append('text')
-    .attr('x', midGap).attr('y', (arrowY1 + arrowY2) / 2 + 16)
-    .attr('text-anchor', 'middle')
-    .attr('fill', '#DA80FF')
-    .attr('font-size', isMobile ? 8 : 10)
-    .attr('font-family', 'JetBrains Mono, monospace')
-    .attr('font-weight', 500)
-    .text('EXCHANGE');
-
-  // ── TESTBED BOX (WP4) ──
-  const testX = leftX;
-  const testW = (rightX + trackW) - leftX;
-  const testH = isMobile ? 170 : 155;
-
-  // Glow behind testbed (boosts visual prominence)
-  svg.append('rect')
-    .attr('x', testX - 4).attr('y', yTestbed - 4)
-    .attr('width', testW + 8).attr('height', testH + 8)
-    .attr('rx', 16).attr('ry', 16)
-    .attr('fill', '#DA80FF')
-    .attr('opacity', 0.12)
-    .attr('filter', 'url(#glow)');
-
-  drawTrackBox(
-    testX, yTestbed, testW, testH,
-    '#B47ED9',
-    'WP4 — Public Immersive Testbed',
-    'LEAD: KIKK / LE PAVILLON',
-    [
-      'Live deployment',
-      'Audience analytics',
-      'Business model testing',
-      'Onboarding / offboarding'
-    ]
-  );
-
-  // ── WP5 bar at bottom ──
-  const wp1ToTrackGap = yTrackTop - (yTop + 18);
-  const wp5Y = yTestbed + testH + wp1ToTrackGap + 18;
-
-  svg.append('rect')
-    .attr('x', W * 0.08).attr('y', wp5Y - 18)
-    .attr('width', W * 0.84).attr('height', 36)
-    .attr('rx', 18).attr('ry', 18)
-    .attr('fill', 'rgba(247,243,224,0.04)')
-    .attr('stroke', 'rgba(247,243,224,0.15)')
-    .attr('stroke-width', 1);
-
-  svg.append('text')
-    .attr('x', colCenter).attr('y', wp5Y + 5)
-    .attr('text-anchor', 'middle')
-    .attr('fill', 'rgba(247,243,224,0.55)')
-    .attr('font-size', isMobile ? 10 : 12)
-    .attr('font-family', 'JetBrains Mono, monospace')
-    .attr('letter-spacing', '0.15em')
-    .text('WP5 — COMMUNICATION & IMPACT — FUTURITY SYSTEMS');
-
-  // ── PARTNER TAGS on track boxes ──
-  function addPartnerTags(x, y, w, h, partners, color) {
-    const tagW = isMobile ? 28 : 36;
-    const tagGap = 4;
-    const tagH = 16;
-    const totalTagsW = partners.length * tagW + (partners.length - 1) * tagGap;
-    const startX = x + (w - totalTagsW) / 2;
-    const tagY = y + h - 30;
-
-    partners.forEach((p, i) => {
-      const tx = startX + i * (tagW + tagGap);
-
-      svg.append('rect')
-        .attr('x', tx).attr('y', tagY)
-        .attr('width', tagW).attr('height', tagH)
-        .attr('rx', 3).attr('ry', 3)
-        .attr('fill', color)
-        .attr('opacity', 0.15);
-
-      svg.append('text')
-        .attr('x', tx + tagW / 2).attr('y', tagY + 11)
-        .attr('text-anchor', 'middle')
-        .attr('fill', color)
-        .attr('font-size', isMobile ? 6 : 7)
-        .attr('font-family', 'JetBrains Mono, monospace')
-        .attr('font-weight', 700)
-        .text(p);
-    });
+  function specs(tier) {
+    const isMobile = tier === 'xs' || tier === 'sm';
+    return {
+      isMobile,
+      colLeftRatio:  isMobile ? 0.28 : (tier === 'md' ? 0.24 : 0.22),
+      colRightRatio: isMobile ? 0.72 : (tier === 'md' ? 0.76 : 0.78),
+      yTop:          60,
+      yTrackTop:     isMobile ? 130 : 120,
+      yTestbed:      isMobile ? 395 : 365,
+      trackWRatio:   isMobile ? 0.374 : (tier === 'md' ? 0.34 : 0.323),
+      // On mobile we wrap partner tags to 2 rows, so the box needs to be taller
+      trackH:        isMobile ? 236 : 187,
+      testH:         isMobile ? 170 : 155,
+      barFont:       tier === 'xs' ? 9  : (isMobile ? 10 : 12),
+      titleFont:     tier === 'xs' ? 10 : (isMobile ? 11 : 13),
+      leadFont:      tier === 'xs' ? 7  : (isMobile ? 8  : 9),
+      itemFont:      tier === 'xs' ? 9  : (isMobile ? 10 : 12),
+      itemGap:       isMobile ? 22 : 24,
+      tagW:          tier === 'xs' ? 24 : (isMobile ? 28 : 36),
+      tagFont:       tier === 'xs' ? 5.5 : (isMobile ? 6 : 7),
+      // Wrap tags to 2 rows on mobile (single row overflows narrow tracks)
+      tagWrap:       isMobile,
+      // Cross-track exchange arrows + label only fit when there's a real gap
+      showExchange:  !isMobile,
+      showTimeline:  tier === 'lg' || tier === 'md',
+      sidePad:       isMobile ? 16 : 48,
+    };
   }
 
-  addPartnerTags(leftX, yTrackTop, trackW, trackH,
-    ['FFV', 'NPIAT', 'LSP', 'GPI', 'TPL', 'YOU', 'AIRA'],
-    '#DA80FF');
+  let isFirstRender = true;
 
-  addPartnerTags(rightX, yTrackTop, trackW, trackH,
-    ['VIB', 'FFV', 'GPI', 'TPL', 'ID20', 'FUT'],
-    '#DA80FF');
+  function renderChart() {
+    layer.selectAll('*').remove();
 
-  // ── TIMELINE indicator ──
-  if (!isMobile) {
-    const tlX = W - 40;
+    const tier = getTier(window.innerWidth);
+    const s = specs(tier);
+    const W = Math.min(container.clientWidth - s.sidePad, 1060);
 
-    svg.append('line')
-      .attr('x1', tlX).attr('y1', yTrackTop)
-      .attr('x2', tlX).attr('y2', yTestbed + testH)
-      .attr('stroke', 'rgba(218,128,255,0.15)')
+    const colLeft   = W * s.colLeftRatio;
+    const colRight  = W * s.colRightRatio;
+    const colCenter = W * 0.5;
+
+    const yTop      = s.yTop;
+    const yTrackTop = s.yTrackTop;
+    const yTestbed  = s.yTestbed;
+
+    // ── WP1 coordination bar ──
+    layer.append('rect')
+      .attr('x', W * 0.08).attr('y', yTop - 18)
+      .attr('width', W * 0.84).attr('height', 36)
+      .attr('rx', 18).attr('ry', 18)
+      .attr('fill', 'rgba(247,243,224,0.04)')
+      .attr('stroke', 'rgba(247,243,224,0.15)')
       .attr('stroke-width', 1);
 
-    const months = [
-      { label: 'M1',  y: yTrackTop },
-      { label: 'M12', y: yTestbed },
-      { label: 'M30', y: yTestbed + testH }
-    ];
+    layer.append('text')
+      .attr('x', colCenter).attr('y', yTop + 5)
+      .attr('text-anchor', 'middle')
+      .attr('fill', 'rgba(247,243,224,0.55)')
+      .attr('font-size', s.barFont)
+      .attr('font-family', 'JetBrains Mono, monospace')
+      .attr('letter-spacing', '0.15em')
+      .text(tier === 'xs' ? 'WP1 — COORDINATION — LSP' : 'WP1 — PROJECT COORDINATION — LINDHOLMEN SCIENCE PARK');
 
-    months.forEach(m => {
-      svg.append('circle')
-        .attr('cx', tlX).attr('cy', m.y)
-        .attr('r', 3)
-        .attr('fill', 'rgba(218,128,255,0.45)');
+    // ── TRACK BOX helper ──
+    function drawTrackBox(x, y, w, h, color, label, lead, items) {
+      const g = layer.append('g');
 
-      svg.append('text')
-        .attr('x', tlX + 14).attr('y', m.y + 4)
-        .attr('fill', 'rgba(247,243,224,0.4)')
-        .attr('font-size', 9)
+      g.append('rect')
+        .attr('x', x).attr('y', y)
+        .attr('width', w).attr('height', h)
+        .attr('rx', 12).attr('ry', 12)
+        .attr('fill', 'rgba(32,33,36,0.55)')
+        .attr('stroke', color)
+        .attr('stroke-width', 2);
+
+      g.append('rect')
+        .attr('x', x).attr('y', y)
+        .attr('width', w).attr('height', 38)
+        .attr('rx', 12).attr('ry', 12)
+        .attr('fill', color)
+        .attr('opacity', 0.18);
+
+      g.append('rect')
+        .attr('x', x).attr('y', y + 20)
+        .attr('width', w).attr('height', 18)
+        .attr('fill', color)
+        .attr('opacity', 0.18);
+
+      g.append('text')
+        .attr('x', x + w / 2).attr('y', y + 18)
+        .attr('text-anchor', 'middle')
+        .attr('fill', color)
+        .attr('font-size', s.titleFont)
+        .attr('font-weight', 700)
+        .attr('font-family', 'Montserrat, sans-serif')
+        .text(label);
+
+      g.append('text')
+        .attr('x', x + w / 2).attr('y', y + 32)
+        .attr('text-anchor', 'middle')
+        .attr('fill', 'rgba(247,243,224,0.5)')
+        .attr('font-size', s.leadFont)
         .attr('font-family', 'JetBrains Mono, monospace')
-        .text(m.label);
-    });
+        .text(lead);
+
+      items.forEach((item, i) => {
+        const itemY = y + 58 + i * s.itemGap;
+        g.append('text')
+          .attr('x', x + w / 2).attr('y', itemY)
+          .attr('text-anchor', 'middle')
+          .attr('fill', 'rgba(247,243,224,0.85)')
+          .attr('font-size', s.itemFont)
+          .attr('font-family', 'Roboto, sans-serif')
+          .text(item);
+      });
+
+      return g;
+    }
+
+    const trackW = W * s.trackWRatio;
+    const trackH = s.trackH;
+    const leftX  = colLeft  - trackW / 2;
+    const rightX = colRight - trackW / 2;
+
+    // WP2
+    drawTrackBox(
+      leftX, yTrackTop, trackW, trackH,
+      '#DA80FF',
+      'WP2 — Off-site Lab',
+      'LEAD: FFV + NPIAT',
+      ['Prototype immersive formats', 'User-centric validation', 'Inclusive design testing', 'Modular deployment guides']
+    );
+
+    // WP3
+    drawTrackBox(
+      rightX, yTrackTop, trackW, trackH,
+      '#DA80FF',
+      'WP3 — On-site Museum',
+      'LEAD: VIBORG MUSEUM',
+      ['Heritage narrative dev', 'Spatial design & tech', 'Audience impact testing', 'Process documentation']
+    );
+
+    // ── BIDIRECTIONAL ARROWS — only when there's room (tablet / desktop) ──
+    if (s.showExchange) {
+      const arrowY1 = yTrackTop + trackH * 0.35;
+      const arrowY2 = yTrackTop + trackH * 0.6;
+      const gapL   = leftX + trackW + 6;
+      const gapR   = rightX - 6;
+      const midGap = (gapL + gapR) / 2;
+
+      layer.append('path')
+        .attr('d', `M${gapL},${arrowY1} C${midGap},${arrowY1 - 20} ${midGap},${arrowY1 - 20} ${gapR},${arrowY1}`)
+        .attr('fill', 'none')
+        .attr('stroke', '#8843A3')
+        .attr('stroke-width', 1.5)
+        .attr('stroke-dasharray', '6,4')
+        .attr('marker-end', 'url(#arrow-flow)');
+
+      layer.append('path')
+        .attr('d', `M${gapR},${arrowY2} C${midGap},${arrowY2 + 20} ${midGap},${arrowY2 + 20} ${gapL},${arrowY2}`)
+        .attr('fill', 'none')
+        .attr('stroke', '#8843A3')
+        .attr('stroke-width', 1.5)
+        .attr('stroke-dasharray', '6,4')
+        .attr('marker-end', 'url(#arrow-flow)');
+
+      layer.append('text')
+        .attr('x', midGap).attr('y', (arrowY1 + arrowY2) / 2 + 3)
+        .attr('text-anchor', 'middle')
+        .attr('fill', '#DA80FF')
+        .attr('font-size', 10)
+        .attr('font-family', 'JetBrains Mono, monospace')
+        .attr('font-weight', 500)
+        .text('CONTINUOUS');
+
+      layer.append('text')
+        .attr('x', midGap).attr('y', (arrowY1 + arrowY2) / 2 + 16)
+        .attr('text-anchor', 'middle')
+        .attr('fill', '#DA80FF')
+        .attr('font-size', 10)
+        .attr('font-family', 'JetBrains Mono, monospace')
+        .attr('font-weight', 500)
+        .text('EXCHANGE');
+    }
+
+    // ── WP4 testbed ──
+    const testX = leftX;
+    const testW = (rightX + trackW) - leftX;
+    const testH = s.testH;
+
+    layer.append('rect')
+      .attr('x', testX - 4).attr('y', yTestbed - 4)
+      .attr('width', testW + 8).attr('height', testH + 8)
+      .attr('rx', 16).attr('ry', 16)
+      .attr('fill', '#DA80FF')
+      .attr('opacity', 0.12)
+      .attr('filter', 'url(#glow)');
+
+    drawTrackBox(
+      testX, yTestbed, testW, testH,
+      '#B47ED9',
+      'WP4 — Public Immersive Testbed',
+      'LEAD: KIKK / LE PAVILLON',
+      ['Live deployment', 'Audience analytics', 'Business model testing', 'Onboarding / offboarding']
+    );
+
+    // ── WP5 bar at bottom ──
+    const wp1ToTrackGap = yTrackTop - (yTop + 18);
+    const wp5Y = yTestbed + testH + wp1ToTrackGap + 18;
+
+    layer.append('rect')
+      .attr('x', W * 0.08).attr('y', wp5Y - 18)
+      .attr('width', W * 0.84).attr('height', 36)
+      .attr('rx', 18).attr('ry', 18)
+      .attr('fill', 'rgba(247,243,224,0.04)')
+      .attr('stroke', 'rgba(247,243,224,0.15)')
+      .attr('stroke-width', 1);
+
+    layer.append('text')
+      .attr('x', colCenter).attr('y', wp5Y + 5)
+      .attr('text-anchor', 'middle')
+      .attr('fill', 'rgba(247,243,224,0.55)')
+      .attr('font-size', s.barFont)
+      .attr('font-family', 'JetBrains Mono, monospace')
+      .attr('letter-spacing', '0.15em')
+      .text(tier === 'xs' ? 'WP5 — COMMS & IMPACT — FUT' : 'WP5 — COMMUNICATION & IMPACT — FUTURITY SYSTEMS');
+
+    // ── PARTNER TAGS ──
+    function addPartnerTags(x, y, w, h, partners, color) {
+      const tagGap  = 4;
+      const tagH    = 16;
+      const rowGap  = 4;
+
+      // Split into rows: 2 rows on mobile, 1 row otherwise
+      const rows = s.tagWrap
+        ? [
+            partners.slice(0, Math.ceil(partners.length / 2)),
+            partners.slice(Math.ceil(partners.length / 2)),
+          ]
+        : [partners];
+
+      // Bottom of the last row sits at y+h-12 (12px bottom padding)
+      const lastRowY = y + h - 12 - tagH;
+      const firstRowY = lastRowY - (rows.length - 1) * (tagH + rowGap);
+
+      rows.forEach((rowPartners, rowIdx) => {
+        const tagY = firstRowY + rowIdx * (tagH + rowGap);
+        const totalRowW = rowPartners.length * s.tagW + (rowPartners.length - 1) * tagGap;
+        const startX = x + (w - totalRowW) / 2;
+
+        rowPartners.forEach((p, i) => {
+          const tx = startX + i * (s.tagW + tagGap);
+
+          layer.append('rect')
+            .attr('x', tx).attr('y', tagY)
+            .attr('width', s.tagW).attr('height', tagH)
+            .attr('rx', 3).attr('ry', 3)
+            .attr('fill', color)
+            .attr('opacity', 0.15);
+
+          layer.append('text')
+            .attr('x', tx + s.tagW / 2).attr('y', tagY + 11)
+            .attr('text-anchor', 'middle')
+            .attr('fill', color)
+            .attr('font-size', s.tagFont)
+            .attr('font-family', 'JetBrains Mono, monospace')
+            .attr('font-weight', 700)
+            .text(p);
+        });
+      });
+    }
+
+    addPartnerTags(leftX, yTrackTop, trackW, trackH,
+      ['FFV', 'NPIAT', 'LSP', 'GPI', 'TPL', 'YOU', 'AIRA'],
+      '#DA80FF');
+
+    addPartnerTags(rightX, yTrackTop, trackW, trackH,
+      ['VIB', 'FFV', 'GPI', 'TPL', 'ID20', 'FUT'],
+      '#DA80FF');
+
+    // ── TIMELINE indicator (md / lg only — needs horizontal room) ──
+    if (s.showTimeline) {
+      const tlX = W - 40;
+
+      layer.append('line')
+        .attr('x1', tlX).attr('y1', yTrackTop)
+        .attr('x2', tlX).attr('y2', yTestbed + testH)
+        .attr('stroke', 'rgba(218,128,255,0.15)')
+        .attr('stroke-width', 1);
+
+      const months = [
+        { label: 'M1',  y: yTrackTop },
+        { label: 'M12', y: yTestbed },
+        { label: 'M30', y: yTestbed + testH }
+      ];
+
+      months.forEach(m => {
+        layer.append('circle')
+          .attr('cx', tlX).attr('cy', m.y)
+          .attr('r', 3)
+          .attr('fill', 'rgba(218,128,255,0.45)');
+
+        layer.append('text')
+          .attr('x', tlX + 14).attr('y', m.y + 4)
+          .attr('fill', 'rgba(247,243,224,0.4)')
+          .attr('font-size', 9)
+          .attr('font-family', 'JetBrains Mono, monospace')
+          .text(m.label);
+      });
+    }
+
+    // ── Final viewBox: mirror top spacing below WP5 ──
+    const H = wp5Y + 18 + (yTop - 18);
+    svg.attr('viewBox', `0 0 ${W} ${H}`);
+
+    // ── Fade-in only on first render (avoid resize flicker) ──
+    if (isFirstRender) {
+      layer.selectAll('rect, path, text, circle, line')
+        .style('opacity', 0)
+        .transition()
+        .duration(800)
+        .delay((d, i) => Math.min(i * 15, 1200))
+        .style('opacity', null);
+      isFirstRender = false;
+    }
+
+    // ── postMessage parent with the rendered height so iframe can size to it ──
+    // Compute pixel height: SVG renders at intrinsic aspect ratio of viewBox.
+    const renderedW = svg.node().getBoundingClientRect().width;
+    const ratio = renderedW > 0 ? renderedW / W : 1;
+    const renderedH = H * ratio;
+    const containerPad = 32; // 1rem top + 1rem bottom on #diagram-container
+    const bodyPad = 16;      // 0.5rem top + 0.5rem bottom on body
+    const totalHeight = Math.ceil(renderedH + containerPad + bodyPad);
+    try {
+      window.parent.postMessage({ type: 'echo-chart-height', height: totalHeight }, '*');
+    } catch (_) { /* sandbox / cross-origin — ignore */ }
   }
 
-  // Set final viewBox now that layout is complete.
-  // Top spacing = yTop - 18 = 42px above WP1 bar; mirror that below WP5.
-  const H = wp5Y + 18 + (yTop - 18);
-  svg.attr('viewBox', `0 0 ${W} ${H}`);
+  // First render
+  renderChart();
 
-  // ── ANIMATION: fade in elements ──
-  svg.selectAll('rect, path, text, circle, line')
-    .style('opacity', 0)
-    .transition()
-    .duration(800)
-    .delay((d, i) => Math.min(i * 15, 1200))
-    .style('opacity', null);
+  // Debounced resize listener
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(renderChart, 120);
+  });
 
 })();
 </script>

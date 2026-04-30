@@ -162,9 +162,11 @@ export default function Home() {
             Creating Collective Immersive Experiences<br />for European Cultural Heritage
           </p>
 
-          <div className="fade-up absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2" style={{ animationDelay: '900ms' }}>
-            <span className="text-xs uppercase tracking-widest" style={{ fontFamily: 'Montserrat, sans-serif', color: 'rgba(247,243,224,0.3)' }}>Scroll</span>
-            <div className="scroll-line w-px h-8 bg-gradient-to-b from-brand-cream/40 to-transparent" />
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+            <div className="fade-up flex flex-col items-center gap-2" style={{ animationDelay: '900ms' }}>
+              <span className="text-xs uppercase tracking-widest" style={{ fontFamily: 'Montserrat, sans-serif', color: 'rgba(247,243,224,0.3)' }}>Scroll</span>
+              <div className="scroll-line w-px h-8 bg-gradient-to-b from-brand-cream/40 to-transparent" />
+            </div>
           </div>
         </div>
       </div>

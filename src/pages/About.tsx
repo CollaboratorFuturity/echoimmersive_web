@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const revealStyle = {
   opacity: 0,
@@ -184,6 +184,20 @@ function Objective({ index, title, body }: { index: number; title: string; body:
 }
 
 export default function About() {
+  // Iframe height is driven by postMessage from /charts/echo-dual-track.html
+  // (sent on first render and on every resize). Fallback height while loading.
+  const [chartHeight, setChartHeight] = useState(620)
+
+  useEffect(() => {
+    const handler = (e: MessageEvent) => {
+      if (e.data?.type === 'echo-chart-height' && typeof e.data.height === 'number') {
+        setChartHeight(e.data.height)
+      }
+    }
+    window.addEventListener('message', handler)
+    return () => window.removeEventListener('message', handler)
+  }, [])
+
   return (
     <>
       <h1 className="text-2xl md:text-3xl font-bold mb-8 border-b border-brand-purple/30 pb-2 text-brand-cream">
@@ -208,12 +222,12 @@ export default function About() {
           </div>
         </div>
         <div className="border-l-2 border-brand-lilac pl-6 flex flex-col justify-center">
-          <div className="text-3xl font-bold text-brand-lilac/25 mb-2" style={{ fontFamily: 'Roboto, sans-serif' }}>"</div>
-          {/* TODO: Add final pull quote */}
-          <div className="space-y-2">
-            <Skeleton /><Skeleton w="w-3/4" /><Skeleton />
-          </div>
-          <p className="text-xs mt-3 uppercase tracking-wider" style={{ color: 'rgba(247,243,224,0.4)' }}>— Pull quote placeholder</p>
+          <div className="text-5xl mb-3 leading-none text-brand-lilac/30" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 300 }}>&ldquo;</div>
+          <p className="leading-relaxed italic" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 300, fontSize: '1.05rem', color: 'rgba(247,243,224,0.9)' }}>
+            Heritage is most powerful when it's felt collectively, in shared spaces, by people who
+            might not have sought it out on their own.
+          </p>
+          <div className="w-8 h-px bg-brand-lilac/35 mt-5" />
         </div>
       </div>
 
@@ -254,7 +268,10 @@ export default function About() {
             title="Immersive ECHO — Dual-Track Design Methodology"
             className="w-full block border-0"
             style={{
-              height: 'clamp(560px, 60vw, 700px)',
+              // Height is reported back from the chart via postMessage on every (re)render,
+              // so the iframe always matches the chart's natural size at any viewport width.
+              height: `${chartHeight}px`,
+              transition: 'height 200ms ease-out',
               backgroundColor: 'transparent',
               // Let mouse events pass through so the Dither background can still react.
               // The chart is purely visual — no clicks or hovers to preserve.
