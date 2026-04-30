@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Immersive ECHO — Dual-Track Design Methodology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Roboto:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+  :root {
+    /* Brand palette */
+    --charcoal:  #202124;
+    --cream:     #F7F3E0;
+    --lilac:     #DA80FF;
+    --purple:    #8843A3;
+    --plum:      #5A4263;
+
+    /* Track colours derived from brand */
+    --track-offsite:  #DA80FF;   /* lilac    — WP2 */
+    --track-onsite:   #F7F3E0;   /* cream    — WP3 */
+    --track-testbed:  #B47ED9;   /* mid-purple — WP4, boosted by glow */
+    --flow:           #8843A3;   /* purple   — knowledge exchange arrows */
+    --coordination:   rgba(247,243,224,0.4); /* cream/40 — WP1 / WP5 */
+
+    --font-headline: 'Montserrat', sans-serif;
+    --font-body:     'Roboto', sans-serif;
+    --font-data:     'JetBrains Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    background: transparent;
+    color: var(--cream);
+    font-family: var(--font-body);
+  }
+
+  body {
+    padding: 0.5rem;
+    overflow-x: hidden;
+  }
+
+  #diagram-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+    position: relative;
+  }
+
+  svg text {
+    font-family: var(--font-body);
+  }
+
+  @media (max-width: 768px) {
+    body { padding: 0.25rem; }
+    #diagram-container { padding: 0.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div id="diagram-container">
+  <svg id="diagram"></svg>
+</div>
+
+<script>
+(function() {
+
+  const container = document.getElementById('diagram-container');
+  const svg = d3.select('#diagram');
+
+  // Responsive sizing
+  const isMobile = window.innerWidth < 700;
+  const W = Math.min(container.clientWidth - (isMobile ? 16 : 48), 1060);
+  svg.attr('width', '100%')
+     .attr('height', 'auto')
+     .style('overflow', 'visible');
+
+  const defs = svg.append('defs');
+
+  // Arrowhead markers
+  const markerColors = {
+    flow:    '#8843A3',
+    offsite: '#DA80FF',
+    onsite:  '#F7F3E0',
+    testbed: '#B47ED9',
+    muted:   'rgba(247,243,224,0.3)'
+  };
+
+  Object.entries(markerColors).forEach(([name, color]) => {
+    defs.append('marker')
+      .attr('id', `arrow-${name}`)
+      .attr('viewBox', '0 0 10 6')
+      .attr('refX', 10)
+      .attr('refY', 3)
+      .attr('markerWidth', 10)
+      .attr('markerHeight', 6)
+      .attr('orient', 'auto')
+      .append('path')
+      .attr('d', 'M0,0 L10,3 L0,6 Z')
+      .attr('fill', color);
+  });
+
+  // Glow filter
+  const glow = defs.append('filter').attr('id', 'glow');
+  glow.append('feGaussianBlur').attr('stdDeviation', 4).attr('result', 'blur');
+  glow.append('feMerge').selectAll('feMergeNode')
+    .data(['blur', 'SourceGraphic']).enter()
+    .append('feMergeNode').attr('in', d => d);
+
+  // Layout constants
+  const colLeft   = isMobile ? W * 0.28 : W * 0.22;
+  const colRight  = isMobile ? W * 0.72 : W * 0.78;
+  const colCenter = W * 0.5;
+
+  // Phase rows
+  const yTop      = 60;
+  const yTrackTop = isMobile ? 130 : 120;
+  const yTestbed  = isMobile ? 395 : 365;
+
+  // ── WP1 coordination bar (top) ──
+  svg.append('rect')
+    .attr('x', W * 0.08).attr('y', yTop - 18)
+    .attr('width', W * 0.84).attr('height', 36)
+    .attr('rx', 18).attr('ry', 18)
+    .attr('fill', 'rgba(247,243,224,0.04)')
+    .attr('stroke', 'rgba(247,243,224,0.15)')
+    .attr('stroke-width', 1);
+
+  svg.append('text')
+    .attr('x', colCenter).attr('y', yTop + 5)
+    .attr('text-anchor', 'middle')
+    .attr('fill', 'rgba(247,243,224,0.55)')
+    .attr('font-size', isMobile ? 10 : 12)
+    .attr('font-family', 'JetBrains Mono, monospace')
+    .attr('letter-spacing', '0.15em')
+    .text('WP1 — PROJECT COORDINATION — LINDHOLMEN SCIENCE PARK');
+
+  // ── TRACK BOXES ──
+  function drawTrackBox(x, y, w, h, color, label, lead, items) {
+    const g = svg.append('g');
+
+    // Main box
+    g.append('rect')
+      .attr('x', x).attr('y', y)
+      .attr('width', w).attr('height', h)
+      .attr('rx', 12).attr('ry', 12)
+      .attr('fill', 'rgba(32,33,36,0.55)')
+      .attr('stroke', color)
+      .attr('stroke-width', 2);
+
+    // Header bar
+    g.append('rect')
+      .attr('x', x).attr('y', y)
+      .attr('width', w).attr('height', 38)
+      .attr('rx', 12).attr('ry', 12)
+      .attr('fill', color)
+      .attr('opacity', 0.18);
+
+    // Fix bottom corners of header
+    g.append('rect')
+      .attr('x', x).attr('y', y + 20)
+      .attr('width', w).attr('height', 18)
+      .attr('fill', color)
+      .attr('opacity', 0.18);
+
+    // Label (centered)
+    g.append('text')
+      .attr('x', x + w / 2).attr('y', y + 18)
+      .attr('text-anchor', 'middle')
+      .attr('fill', color)
+      .attr('font-size', isMobile ? 11 : 13)
+      .attr('font-weight', 700)
+      .attr('font-family', 'Montserrat, sans-serif')
+      .text(label);
+
+    // Lead org (centered, below title)
+    g.append('text')
+      .attr('x', x + w / 2).attr('y', y + 32)
+      .attr('text-anchor', 'middle')
+      .attr('fill', 'rgba(247,243,224,0.5)')
+      .attr('font-size', isMobile ? 8 : 9)
+      .attr('font-family', 'JetBrains Mono, monospace')
+      .text(lead);
+
+    // Items (centered)
+    items.forEach((item, i) => {
+      const itemY = y + 58 + i * (isMobile ? 22 : 24);
+      g.append('text')
+        .attr('x', x + w / 2).attr('y', itemY)
+        .attr('text-anchor', 'middle')
+        .attr('fill', 'rgba(247,243,224,0.85)')
+        .attr('font-size', isMobile ? 10 : 12)
+        .attr('font-family', 'Roboto, sans-serif')
+        .text(item);
+    });
+
+    return g;
+  }
+
+  const trackW = isMobile ? W * 0.374 : W * 0.323;
+  const trackH = isMobile ? 212 : 187;
+  const leftX  = colLeft  - trackW / 2;
+  const rightX = colRight - trackW / 2;
+
+  // Off-site lab (WP2)
+  drawTrackBox(
+    leftX, yTrackTop, trackW, trackH,
+    '#DA80FF',
+    'WP2 — Off-site Lab',
+    'LEAD: FFV + NPIAT',
+    [
+      'Prototype immersive formats',
+      'User-centric validation',
+      'Inclusive design testing',
+      'Modular deployment guides'
+    ]
+  );
+
+  // On-site museum (WP3)
+  drawTrackBox(
+    rightX, yTrackTop, trackW, trackH,
+    '#DA80FF',
+    'WP3 — On-site Museum',
+    'LEAD: VIBORG MUSEUM',
+    [
+      'Heritage narrative dev',
+      'Spatial design & tech',
+      'Audience impact testing',
+      'Process documentation'
+    ]
+  );
+
+  // ── BIDIRECTIONAL ARROWS between tracks ──
+  const arrowY1 = yTrackTop + trackH * 0.35;
+  const arrowY2 = yTrackTop + trackH * 0.6;
+  const gapL   = leftX + trackW + 6;
+  const gapR   = rightX - 6;
+  const midGap = (gapL + gapR) / 2;
+
+  // Arrow left → right
+  svg.append('path')
+    .attr('d', `M${gapL},${arrowY1} C${midGap},${arrowY1 - 20} ${midGap},${arrowY1 - 20} ${gapR},${arrowY1}`)
+    .attr('fill', 'none')
+    .attr('stroke', '#8843A3')
+    .attr('stroke-width', 1.5)
+    .attr('stroke-dasharray', '6,4')
+    .attr('marker-end', 'url(#arrow-flow)');
+
+  // Arrow right → left
+  svg.append('path')
+    .attr('d', `M${gapR},${arrowY2} C${midGap},${arrowY2 + 20} ${midGap},${arrowY2 + 20} ${gapL},${arrowY2}`)
+    .attr('fill', 'none')
+    .attr('stroke', '#8843A3')
+    .attr('stroke-width', 1.5)
+    .attr('stroke-dasharray', '6,4')
+    .attr('marker-end', 'url(#arrow-flow)');
+
+  // Exchange label
+  svg.append('text')
+    .attr('x', midGap).attr('y', (arrowY1 + arrowY2) / 2 + 3)
+    .attr('text-anchor', 'middle')
+    .attr('fill', '#DA80FF')
+    .attr('font-size', isMobile ? 8 : 10)
+    .attr('font-family', 'JetBrains Mono, monospace')
+    .attr('font-weight', 500)
+    .text('CONTINUOUS');
+
+  svg.append('text')
+    .attr('x', midGap).attr('y', (arrowY1 + arrowY2) / 2 + 16)
+    .attr('text-anchor', 'middle')
+    .attr('fill', '#DA80FF')
+    .attr('font-size', isMobile ? 8 : 10)
+    .attr('font-family', 'JetBrains Mono, monospace')
+    .attr('font-weight', 500)
+    .text('EXCHANGE');
+
+  // ── TESTBED BOX (WP4) ──
+  const testX = leftX;
+  const testW = (rightX + trackW) - leftX;
+  const testH = isMobile ? 170 : 155;
+
+  // Glow behind testbed (boosts visual prominence)
+  svg.append('rect')
+    .attr('x', testX - 4).attr('y', yTestbed - 4)
+    .attr('width', testW + 8).attr('height', testH + 8)
+    .attr('rx', 16).attr('ry', 16)
+    .attr('fill', '#DA80FF')
+    .attr('opacity', 0.12)
+    .attr('filter', 'url(#glow)');
+
+  drawTrackBox(
+    testX, yTestbed, testW, testH,
+    '#B47ED9',
+    'WP4 — Public Immersive Testbed',
+    'LEAD: KIKK / LE PAVILLON',
+    [
+      'Live deployment',
+      'Audience analytics',
+      'Business model testing',
+      'Onboarding / offboarding'
+    ]
+  );
+
+  // ── WP5 bar at bottom ──
+  const wp1ToTrackGap = yTrackTop - (yTop + 18);
+  const wp5Y = yTestbed + testH + wp1ToTrackGap + 18;
+
+  svg.append('rect')
+    .attr('x', W * 0.08).attr('y', wp5Y - 18)
+    .attr('width', W * 0.84).attr('height', 36)
+    .attr('rx', 18).attr('ry', 18)
+    .attr('fill', 'rgba(247,243,224,0.04)')
+    .attr('stroke', 'rgba(247,243,224,0.15)')
+    .attr('stroke-width', 1);
+
+  svg.append('text')
+    .attr('x', colCenter).attr('y', wp5Y + 5)
+    .attr('text-anchor', 'middle')
+    .attr('fill', 'rgba(247,243,224,0.55)')
+    .attr('font-size', isMobile ? 10 : 12)
+    .attr('font-family', 'JetBrains Mono, monospace')
+    .attr('letter-spacing', '0.15em')
+    .text('WP5 — COMMUNICATION & IMPACT — FUTURITY SYSTEMS');
+
+  // ── PARTNER TAGS on track boxes ──
+  function addPartnerTags(x, y, w, h, partners, color) {
+    const tagW = isMobile ? 28 : 36;
+    const tagGap = 4;
+    const tagH = 16;
+    const totalTagsW = partners.length * tagW + (partners.length - 1) * tagGap;
+    const startX = x + (w - totalTagsW) / 2;
+    const tagY = y + h - 30;
+
+    partners.forEach((p, i) => {
+      const tx = startX + i * (tagW + tagGap);
+
+      svg.append('rect')
+        .attr('x', tx).attr('y', tagY)
+        .attr('width', tagW).attr('height', tagH)
+        .attr('rx', 3).attr('ry', 3)
+        .attr('fill', color)
+        .attr('opacity', 0.15);
+
+      svg.append('text')
+        .attr('x', tx + tagW / 2).attr('y', tagY + 11)
+        .attr('text-anchor', 'middle')
+        .attr('fill', color)
+        .attr('font-size', isMobile ? 6 : 7)
+        .attr('font-family', 'JetBrains Mono, monospace')
+        .attr('font-weight', 700)
+        .text(p);
+    });
+  }
+
+  addPartnerTags(leftX, yTrackTop, trackW, trackH,
+    ['FFV', 'NPIAT', 'LSP', 'GPI', 'TPL', 'YOU', 'AIRA'],
+    '#DA80FF');
+
+  addPartnerTags(rightX, yTrackTop, trackW, trackH,
+    ['VIB', 'FFV', 'GPI', 'TPL', 'ID20', 'FUT'],
+    '#DA80FF');
+
+  // ── TIMELINE indicator ──
+  if (!isMobile) {
+    const tlX = W - 40;
+
+    svg.append('line')
+      .attr('x1', tlX).attr('y1', yTrackTop)
+      .attr('x2', tlX).attr('y2', yTestbed + testH)
+      .attr('stroke', 'rgba(218,128,255,0.15)')
+      .attr('stroke-width', 1);
+
+    const months = [
+      { label: 'M1',  y: yTrackTop },
+      { label: 'M12', y: yTestbed },
+      { label: 'M30', y: yTestbed + testH }
+    ];
+
+    months.forEach(m => {
+      svg.append('circle')
+        .attr('cx', tlX).attr('cy', m.y)
+        .attr('r', 3)
+        .attr('fill', 'rgba(218,128,255,0.45)');
+
+      svg.append('text')
+        .attr('x', tlX + 14).attr('y', m.y + 4)
+        .attr('fill', 'rgba(247,243,224,0.4)')
+        .attr('font-size', 9)
+        .attr('font-family', 'JetBrains Mono, monospace')
+        .text(m.label);
+    });
+  }
+
+  // Set final viewBox now that layout is complete.
+  // Top spacing = yTop - 18 = 42px above WP1 bar; mirror that below WP5.
+  const H = wp5Y + 18 + (yTop - 18);
+  svg.attr('viewBox', `0 0 ${W} ${H}`);
+
+  // ── ANIMATION: fade in elements ──
+  svg.selectAll('rect, path, text, circle, line')
+    .style('opacity', 0)
+    .transition()
+    .duration(800)
+    .delay((d, i) => Math.min(i * 15, 1200))
+    .style('opacity', null);
+
+})();
+</script>
+</body>
+</html>

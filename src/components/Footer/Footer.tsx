@@ -12,7 +12,7 @@ const quickLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-charcoal mt-12 border-t border-brand-purple/20">
+    <footer className="relative z-10 bg-brand-charcoal mt-12 border-t border-brand-purple/20">
       <div className="max-w-6xl mx-auto p-8 grid grid-cols-1 md:grid-cols-3 gap-8">
 
         {/* Column 1: Brand + social */}

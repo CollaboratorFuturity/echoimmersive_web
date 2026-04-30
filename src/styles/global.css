@@ -17,3 +17,19 @@
     font-family: inherit;
   }
 }
+
+/* Global page transition — fires on every route change.
+   Opacity-only (no transform): a transform on this wrapper would create a
+   containing block for position:fixed children (e.g. the Dither canvas),
+   trapping them inside the wrapper instead of the viewport. */
+@keyframes pageFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.page-fade {
+  animation: pageFade 1900ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-fade { animation: none; }
+}

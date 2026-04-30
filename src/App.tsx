@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Header from '@/components/Header/Header'
 import Footer from '@/components/Footer/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
@@ -19,11 +19,15 @@ import BrandHome from '@/pages/BrandHome'
 import UnderConstruction from '@/pages/UnderConstruction'
 
 function Layout({ children }: { children: React.ReactNode }) {
+  const { pathname } = useLocation()
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow max-w-6xl mx-auto w-full p-4 md:p-8">
-        {children}
+        {/* key={pathname} forces remount on navigation — restarts the page-fade animation */}
+        <div key={pathname} className="page-fade">
+          {children}
+        </div>
       </main>
       <Footer />
     </div>

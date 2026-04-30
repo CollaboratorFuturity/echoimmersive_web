@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Dither } from '@/components/Dither/Dither'
+import LogoMarquee from '@/components/LogoMarquee/LogoMarquee'
 
 const stats = [
   { value: 15, label: 'Partners' },
@@ -148,7 +149,7 @@ export default function Home() {
       {/* Dither background */}
       <div
         ref={ditherRef}
-        style={{ position: 'fixed', inset: 0, top: '-10%', height: '120%', zIndex: -1, willChange: 'transform' }}
+        style={{ position: 'fixed', inset: 0, top: '-50%', height: '200%', zIndex: -1, willChange: 'transform' }}
       >
         <Dither
           waveColor={[0.55, 0.20, 0.65]}
@@ -213,6 +214,15 @@ export default function Home() {
             <div className="text-xs uppercase tracking-widest" style={{ fontFamily: 'Montserrat, sans-serif', color: 'rgba(247,243,224,0.5)' }}>{label}</div>
           </div>
         ))}
+      </div>
+
+      {/* Partner logos marquee */}
+      <div
+        data-reveal
+        style={{ opacity: 0, transform: 'translateY(20px)', transition: 'opacity 800ms cubic-bezier(0.2,0.8,0.2,1), transform 800ms cubic-bezier(0.2,0.8,0.2,1)' }}
+        className="mb-14"
+      >
+        <LogoMarquee />
       </div>
 
       {/* Mission */}
