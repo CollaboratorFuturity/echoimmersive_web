@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 export default function PavillonActivities() {
   return (
     <>
-      <Link to="/pilots" className="text-sm text-brand-lilac hover:text-brand-lilac/80 transition-colors mb-4 inline-block" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-        ← Back to Pilots
+      <Link to="/experiences" className="text-sm text-brand-lilac hover:text-brand-lilac/80 transition-colors mb-4 inline-block" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+        ← Back to Experiences
       </Link>
 
       <h1 className="text-2xl md:text-3xl font-bold mb-4 border-b border-brand-purple/30 pb-2 text-brand-cream">

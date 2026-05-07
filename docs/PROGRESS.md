@@ -11,10 +11,10 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 - [x] Sticky header with logo, nav links, and "Enter ECHO System ↗" CTA
 - [x] Home: hero, mission text, newsletter CTA
 - [x] About: mission block, dual-track approach cards, infographic placeholder, stats row (15 / 10 / 30 / 2), project details sidebar
-- [x] Partners: coordinator (LSP), 14 core partner slots, 6 associated partner slots
-- [x] Pilots: Snapsting Festival (Viborg, Denmark) + Le Pavillon (Namur, Belgium) cards
+- [x] Partners: coordinator (LSP) + 14 core partner slots (15 organisations total per FAQ copy)
+- [x] Experiences: Snapsting Festival (Viborg, Denmark) + Le Pavillon (Namur, Belgium) cards
 - [x] News & Events: article feed with type filters (All / News / Events / Press), event gallery sidebar, media kit download
-- [x] FAQ: 12 accordion items with `toggleFaq()` interaction
+- [x] FAQ: 14 accordion items with `toggleFaq()` interaction
 - [x] Contact: form (Name, Org, Subject, Message), coordinator info, social icons (Facebook, X, Instagram, YouTube), newsletter CTA
 - [x] Newsletter: full-screen split page (dark form + image), hides header/footer
 - [x] Footer: 3-column, dark background
@@ -28,8 +28,9 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 - [x] `/lynch-about` (`src/pages/LynchAbout.tsx`) — dark brand palette applied to the About layout
 - [x] `/ismaila-home` (`src/pages/IsmailaHome.tsx`) — cloned from `LynchHome` as a starting point for Ismaila's design explorations
 - [x] `/brand-home` (`src/pages/BrandHome.tsx`) — official brand palette applied: Charcoal bg, Cream text, Lilac accents, Plum surfaces, Montserrat display font, Roboto body; Dither shifted to warm lilac-purple; all interaction patterns from LynchHome carried over
-- [x] Brand colors wired as Tailwind tokens: `bg-blue`, `primary-blue`, `light-blue`, `highlight-purple`, `highlight-green`
-- [ ] Roll out dark palette + approved patterns from sandbox → production pages and shared Header/Footer
+- [x] Brand palette wired as Tailwind tokens: `brand-cream` `#F7F3E0`, `brand-charcoal` `#202124`, `brand-lilac` `#DA80FF`, `brand-purple` `#8843A3`, `brand-plum` `#5A4263` (legacy blue tokens still defined in `tailwind.config.ts` but no longer used in new work)
+- [x] Roll out brand palette + sandbox patterns to production pages and shared Header/Footer
+- [ ] Remove sandbox routes (`/lynch-home`, `/lynch-about`, `/ismaila-home`, `/brand-home`) once design lock is final
 
 ### Setup
 - [x] Vite 6 + React 19 + TypeScript project scaffold
@@ -42,41 +43,45 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 - [x] `.gitignore` (node_modules, dist, .env, .DS_Store)
 
 ### Header & Navigation
-- [x] Sticky header component (`src/components/Header/Header.tsx`)
-- [x] NavLink active state styling
-- [x] "Enter ECHO System ↗" CTA (placeholder href — needs real URL)
-- [ ] Responsive hamburger menu on mobile
-- [ ] Replace logo placeholder with real SVG/image
+- [x] Sticky header component (`src/components/Header/Header.tsx`) — translucent charcoal + blur, lilac accents
+- [x] NavLink active state styling (`#DA80FF` for active, cream/65 default)
+- [x] "Enter ECHO System ↗" CTA → `https://echosystem.futurity.science`
+- [x] Responsive hamburger menu on mobile (animated 3-line ↔ X, dropdown panel)
+- [x] Real logo wired (`/logos/logo-horizontal-light.png`)
 
 ### Home Page
-- [x] Page stub (`src/pages/Home.tsx`) — hero placeholder, mission text (real copy), newsletter CTA
-- [ ] Hero section with real imagery or video
-- [ ] Newsletter CTA banner (styled, wired to /newsletter route)
+- [x] Real Home page (`src/pages/Home.tsx`) — clamp-scaled hero, fade-up reveals, count-up stats grid, partner-logo marquee, mission + pull quote, label divider
+- [x] Newsletter CTA banner — styled plum panel, lilac shine button, wired to `/newsletter`
+- [ ] Replace Dither/gradient hero with real imagery or video (if desired)
 
 ### About Page
 - [x] Page stub (`src/pages/About.tsx`) — real stats row, project details sidebar, team cards, infographic placeholder
+- [x] "Full Structure, Tasks & Deliverables" CTA linking to `/resources` — placed left of Project Details sidebar
 - [ ] Real mission copy + pull quote
 - [ ] Off-site / On-site Design Team descriptions
 - [ ] Dual-track infographic (commission or build as SVG/animation)
 
 ### Partners Page
-- [x] Page stub (`src/pages/Partners.tsx`) — coordinator slot, 14 core + 6 associated partner placeholders
-- [ ] Real partner logos + links for all 20 partners
+- [x] Partners page (`src/pages/Partners.tsx`) — LSP (coordinator) + FUT (Communication & Dissemination) leadership row + 14 core partners with real logos, names, and outbound URLs
+- [x] Per-logo sizing system (`large?: boolean`) — zero padding for logos that need full card width (FFV, FUT, GPI, KIKK, NPIAT, TPL); applied on Partners page and propagated to About page chips and LogoMarquee
+- [x] LogoMarquee (`src/components/LogoMarquee/LogoMarquee.tsx`) — updated to 4-tier size system (`sm/md/lg/xl`) per logo; synced partner list (added KIKK_, TAW, corrected VIB/VIB_ mapping)
+- [x] About page + Resources page partner logo chips use same `largeLogos` set for consistent sizing across the site
 
-### Pilots Page
-- [x] Page stub (`src/pages/Pilots.tsx`) — both pilot cards with correct names/locations
-- [ ] Real pilot photos
-- [ ] Real pilot descriptions
-- [ ] "View Activities" destination
+### Experiences Page
+- [x] Experiences index (`src/pages/Pilots.tsx`) at `/experiences` — Snapsting + Le Pavillon cards
+- [x] Activity sub-pages: `/experiences/snapsting` (`SnapstingActivities.tsx`) and `/experiences/pavillon` (`PavillonActivities.tsx`)
+- [ ] Real pilot photography
+- [ ] Final pilot descriptions
 
 ### News & Events Page
-- [x] Page stub (`src/pages/News.tsx`) — filter buttons with useState, article cards, gallery sidebar
-- [ ] Real article content
-- [ ] Gallery lightbox or link-outs
+- [x] News page (`src/pages/News.tsx`) — type filters (useState), article cards, gallery sidebar
+- [x] Launch event sub-page (`src/pages/news/Launch.tsx`)
+- [x] Gallery `Lightbox` component (`src/components/Lightbox/`) wired in
+- [ ] More real article content
 - [ ] Media kit download (ZIP)
 
 ### FAQ Page
-- [x] Page stub (`src/pages/FAQ.tsx`) — all 14 FAQ items with real copy, React accordion (useState)
+- [x] FAQ page (`src/pages/FAQ.tsx`) — 14 items with real copy, React accordion (useState)
 - [ ] Keyboard-accessible accordion (Enter/Space to toggle — currently click only)
 
 ### Contact Page
@@ -98,6 +103,16 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 - [x] `.env.example` added — template for SMTP, DB, and CORS config
 - [ ] Run `alembic upgrade head` on first deploy to create DB tables
 
+### Resources Page
+- [x] Resources page (`src/pages/Resources.tsx`) at `/resources` — cream bg (`#F7F3E0`), no Dither, opts out via `NO_DITHER_ROUTES`
+- [x] Full EU grant data: 5 WPs, 22 tasks (5 groups), 20 milestones, 19 deliverables, 21 events — sourced from CREA-CULT-2025-COOP-3 application
+- [x] Tabbed interface — WPs / Tasks / Milestones / Deliverables / Events; underline indicator, horizontal scroll on mobile
+- [x] WP accordions with objectives list + partner logo chips (`filter: invert(1)` for cream bg)
+- [x] Task group accordions with inner task rows (expandable descriptions)
+- [x] Milestones sorted chronologically (MS01–MS20), past dates highlighted green (`#16a34a`) automatically via `isPast()` helper
+- [x] Deliverables sorted by due month, Pending / Download state per row
+- [x] Canonical grant data reference at `public/grant-data.md`
+
 ### Footer
 - [x] Footer component (`src/components/Footer/Footer.tsx`) — 3-column, quick links, EU credit placeholder
 - [ ] EU co-funded logo asset
@@ -109,7 +124,7 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 ## Phase 3: Content & Assets **NOT STARTED**
 
 - [ ] Final logo files from design team
-- [ ] Partner logo assets (all 15 core + 6 associated)
+- [x] Partner logo assets (15 core + LSP coordinator + FUT leadership wired in `public/logos/partner_logos/`; TAW.png added for The Animation Workshop)
 - [ ] Hero and pilot photography
 - [ ] Infographic for dual-track methodology
 - [ ] Real copy for all wireframe placeholder text blocks

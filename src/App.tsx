@@ -14,6 +14,7 @@ import NewsLaunch from '@/pages/news/Launch'
 import FAQ from '@/pages/FAQ'
 import Contact from '@/pages/Contact'
 import Newsletter from '@/pages/Newsletter'
+import Resources from '@/pages/Resources'
 import LynchHome from '@/pages/LynchHome'
 import LynchAbout from '@/pages/LynchAbout'
 import IsmailaHome from '@/pages/IsmailaHome'
@@ -21,7 +22,7 @@ import BrandHome from '@/pages/BrandHome'
 import UnderConstruction from '@/pages/UnderConstruction'
 
 // Pages that render their own background (no shared Dither)
-const NO_DITHER_ROUTES = ['/lynch-home']
+const NO_DITHER_ROUTES = ['/lynch-home', '/resources']
 
 function Layout({ children }: { children: React.ReactNode }) {
   const { pathname } = useLocation()
@@ -54,13 +55,14 @@ export default function App() {
         <Route path="/"          element={<Layout><Home /></Layout>} />
         <Route path="/about"     element={<Layout><About /></Layout>} />
         <Route path="/partners"  element={<Layout><Partners /></Layout>} />
-        <Route path="/pilots"    element={<Layout><Pilots /></Layout>} />
-        <Route path="/pilots/snapsting" element={<Layout><SnapstingActivities /></Layout>} />
-        <Route path="/pilots/pavillon"  element={<Layout><PavillonActivities /></Layout>} />
+        <Route path="/experiences"           element={<Layout><Pilots /></Layout>} />
+        <Route path="/experiences/snapsting" element={<Layout><SnapstingActivities /></Layout>} />
+        <Route path="/experiences/pavillon"  element={<Layout><PavillonActivities /></Layout>} />
         <Route path="/news"        element={<Layout><News /></Layout>} />
         <Route path="/news/launch" element={<Layout><NewsLaunch /></Layout>} />
         <Route path="/faq"       element={<Layout><FAQ /></Layout>} />
         <Route path="/contact"   element={<Layout><Contact /></Layout>} />
+        <Route path="/resources" element={<Layout><Resources /></Layout>} />
 
         {/* Style test pages — dark brand palette */}
         <Route path="/lynch-home"    element={<Layout><LynchHome /></Layout>} />

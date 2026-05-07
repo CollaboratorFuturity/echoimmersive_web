@@ -10,7 +10,7 @@ const pilots = [
     imageAlt: 'Viborg Animation Festival',
     description:
       'Viborg Animation Festival draws 20,000 visitors yearly, organized by The Animation Workshop / VIA University College in Denmark. Within ECHO, it hosts masterclasses and talks bridging immersive storytelling with cultural heritage.',
-    activitiesHref: '/pilots/snapsting',
+    activitiesHref: '/experiences/snapsting',
   },
   {
     id: 'pavillon',
@@ -21,7 +21,7 @@ const pilots = [
     imageAlt: 'Le Pavillon, Namur',
     description:
       "Le Pavillon is KIKK's hub for digital arts and technology in Namur, Belgium. It deploys ECHO's immersive installations to broad public audiences while collecting engagement and accessibility data. Over 200 school partnerships annually.",
-    activitiesHref: '/pilots/pavillon',
+    activitiesHref: '/experiences/pavillon',
   },
 ]
 
@@ -29,7 +29,7 @@ export default function Pilots() {
   return (
     <>
       <h1 className="text-2xl md:text-3xl font-bold mb-4 border-b border-brand-purple/30 pb-2 text-brand-cream">
-        Public Testbeds & Pilots
+        Experiences
       </h1>
       <p className="mb-8 max-w-3xl" style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(247,243,224,0.7)' }}>
         Introducing the concept of public testbeds using the Needs-Driven Design methodology across Europe.

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const revealStyle = {
   opacity: 0,
@@ -24,6 +25,8 @@ const partnerNames: Record<string, string> = {
   VIB:   'Viborg Museum',
   YOU:   'Younite AI',
 }
+
+const largeLogos = new Set(['FFV', 'FUT', 'GPI', 'KIKK', 'NPIAT', 'TPL'])
 
 type ApproachCardData = {
   title: string
@@ -83,12 +86,12 @@ function ApproachCard({ title, partners, description }: ApproachCardData) {
             <div
               key={p}
               title={partnerNames[p] ?? p}
-              className="h-10 px-2.5 border border-brand-purple/25 bg-brand-plum/15 rounded flex items-center transition-all duration-200 hover:border-brand-lilac/50 hover:bg-brand-plum/30"
+              className={`h-10 border border-brand-purple/25 bg-brand-plum/15 rounded flex items-center transition-all duration-200 hover:border-brand-lilac/50 hover:bg-brand-plum/30 ${largeLogos.has(p) ? 'px-0' : 'px-2.5'}`}
             >
               <img
                 src={`/logos/partner_logos/${p}.png`}
                 alt={partnerNames[p] ?? p}
-                className="h-5 max-w-[72px] object-contain"
+                className={`max-w-[72px] object-contain ${largeLogos.has(p) ? 'h-8' : 'h-5'}`}
               />
             </div>
           ))}
@@ -305,8 +308,19 @@ export default function About() {
 
       {/* Block 5: Details */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="col-span-2 border border-brand-purple/35 bg-brand-plum/20 p-6 rounded-lg" style={revealStyle}>
-          <div className="space-y-2"><Skeleton /><Skeleton /><Skeleton w="w-2/3" /></div>
+        <div className="col-span-2 flex items-center justify-center">
+          <Link
+            to="/resources"
+            className="inline-flex items-center gap-4 px-7 py-5 border border-brand-purple/50 bg-brand-plum/20 rounded-lg hover:border-brand-lilac hover:bg-brand-plum/35 hover:shadow-[0_0_16px_rgba(218,128,255,0.15)] transition-all duration-300 group"
+          >
+            <span
+              className="text-sm font-bold uppercase tracking-widest text-brand-cream"
+              style={{ fontFamily: 'Montserrat, sans-serif' }}
+            >
+              Full Structure, Tasks & Deliverables
+            </span>
+            <span className="text-brand-lilac text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
+          </Link>
         </div>
         <div className="border-l border-dashed border-brand-purple/30 pl-8">
           <p className="text-xs font-bold uppercase tracking-widest text-brand-lilac mb-4">Project Details</p>

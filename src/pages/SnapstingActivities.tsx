@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 export default function SnapstingActivities() {
   return (
     <>
-      <Link to="/pilots" className="text-sm text-brand-lilac hover:text-brand-lilac/80 transition-colors mb-4 inline-block" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+      <Link to="/experiences" className="text-sm text-brand-lilac hover:text-brand-lilac/80 transition-colors mb-4 inline-block" style={{ fontFamily: 'Montserrat, sans-serif' }}>
         ← Back to Experiences
       </Link>
 

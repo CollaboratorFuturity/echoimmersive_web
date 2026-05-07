@@ -1,244 +1,331 @@
-# Immersive ECHO -- Style Guide
+# Immersive ECHO — Style Guide
 
-Use this to replicate the project's visual language across all pages and components. Every visual decision goes here so future sessions don't reinvent or contradict what already exists.
+The visual contract for the site. Use this when building or editing any page or component so that future work doesn't drift from what already exists.
+
+Tech stack: **React + Vite + Tailwind CSS + react-router-dom**. Brand source of truth: [`docs/branding/brand.css`](branding/brand.css) and [`tailwind.config.ts`](../tailwind.config.ts).
 
 ---
 
 ## Color Palette
 
-All colors are Tailwind custom tokens — use them as `bg-bg-blue`, `text-highlight-green`, `border-primary-blue`, etc.
+The active brand palette is **cream / charcoal / lilac / purple / plum**. All tokens are exposed as Tailwind classes via [`tailwind.config.ts`](../tailwind.config.ts).
 
 ### Brand Colors
-| Token             | Hex       | Tailwind class          | Use                                           |
-|-------------------|-----------|-------------------------|-----------------------------------------------|
-| `bg-blue`         | `#010440` | `bg-bg-blue`            | Page background — used everywhere             |
-| `primary-blue`    | `#2128A6` | `bg-primary-blue`       | Section backgrounds, card fills, dividers     |
-| `light-blue`      | `#3038D9` | `border-light-blue`     | Section borders, structural dividers, outlines |
-| `highlight-purple`| `#8E72F2` | `border-highlight-purple` | Decorative borders, animated shine effects, badges |
-| `highlight-green` | `#7EF28F` | `text-highlight-green`  | CTAs, key action buttons, active nav states   |
+| Token              | Hex       | Tailwind class           | Use                                                       |
+|--------------------|-----------|--------------------------|-----------------------------------------------------------|
+| `brand-charcoal`   | `#202124` | `bg-brand-charcoal`      | Page background (set on `body` in [global.css](../src/styles/global.css)) |
+| `brand-cream`      | `#F7F3E0` | `text-brand-cream`       | Default body text color, light surfaces                   |
+| `brand-lilac`      | `#DA80FF` | `text-brand-lilac` / `border-brand-lilac` | Accents, badges, active nav, CTAs, glow effects |
+| `brand-purple`     | `#8843A3` | `border-brand-purple`    | Subtle dividers, structural borders (often at low opacity)|
+| `brand-plum`       | `#5A4263` | `bg-brand-plum`          | Tinted card backgrounds, muted surfaces                   |
 
-### Text
-| Use                        | Value     | Notes                              |
-|----------------------------|-----------|------------------------------------|
-| All body text              | `#ffffff` | `text-white` — no exceptions       |
-| Headings                   | `#ffffff` | `text-white`                       |
-| Muted / secondary text     | `#ffffff` at 60% opacity | `text-white/60`     |
-| Captions / micro labels    | `#ffffff` at 40% opacity | `text-white/40`     |
+### Text Opacities (cream on charcoal)
+| Use                       | Value                          | Notes                                |
+|---------------------------|--------------------------------|--------------------------------------|
+| Headings                  | `#F7F3E0`                      | `text-brand-cream`                   |
+| Body                      | `rgba(247,243,224,0.8)`        | Inline style — primary readable text |
+| Muted body                | `rgba(247,243,224,0.65)`       | Default nav links, secondary copy    |
+| Hint / scroll labels      | `rgba(247,243,224,0.5)`        | Stat labels, subtle UI text          |
+| Decorative                | `rgba(247,243,224,0.3)`        | "Scroll" hint, faint borders         |
+
+### Legacy Tokens (do not use for new work)
+The blue palette below is still defined in `tailwind.config.ts` for backward compatibility but is **not** the current brand. Do not introduce new uses.
+`bg-blue` `#010440` · `primary-blue` `#2128A6` · `light-blue` `#3038D9` · `highlight-purple` `#8E72F2` · `highlight-green` `#7EF28F`
 
 ### Usage Rules
 
 **Backgrounds**
-- Page background: always `bg-bg-blue` (`#010440`)
-- Card / section backgrounds: `bg-primary-blue` (`#2128A6`) or `bg-primary-blue/30` for subtle panels
+- Page: `bg-brand-charcoal` (set on `body`). Most pages render directly on it with the Dither canvas behind.
+- Tinted panels: `bg-brand-plum/35` or `bg-brand-charcoal/70 backdrop-blur-sm` for layered cards.
+- Newsletter / CTA blocks: `bg-brand-plum/35` with `border-brand-purple/40` and a soft inset glow.
 
-**Borders & Structure**
-- Section dividers, card outlines: `border-light-blue` (`#3038D9`)
-- Decorative / animated borders: `border-highlight-purple` (`#8E72F2`)
-- Never use white borders
+**Borders & dividers**
+- Structural: `border-brand-purple/20` to `/30`.
+- Card outlines / accents: `border-brand-lilac/25` to `/40`.
+- Pull-quote rule: solid `border-l-2 border-brand-lilac`.
+- Never use white or gray Tailwind defaults (`border-gray-*`).
 
-**Interactive elements (buttons, links)**
-- Primary CTA: `text-bg-blue` on `bg-highlight-green` — dark text on green
-- Secondary / ghost buttons: `border-highlight-purple` with animated shine on hover
-- Nav links default: `text-white`
-- Nav links active / hover: `text-highlight-green`
+**Interactive**
+- Primary CTA: `bg-brand-lilac text-brand-charcoal` (dark text on lilac), with shine-on-hover (see Animation Patterns).
+- Ghost / outline button: `border border-brand-lilac text-brand-lilac` with `hover:bg-brand-lilac/10` and lilac glow shadow.
+- Nav links default: `rgba(247,243,224,0.65)`. Hover/active: `#DA80FF` (`text-brand-lilac`).
 
-**Accents & highlights**
-- Badges, tags, pull quote marks: `text-highlight-purple` or `border-highlight-purple`
-- "Shine" / glow effects on hover: `highlight-purple` or `highlight-green` as box-shadow / border color
-- Success, confirmation states: `highlight-green`
-
-### Animated Border Pattern (futuristic shine)
-The signature interactive style — use on buttons and card borders:
-```css
-/* Shimmer border on hover — implement via Tailwind + custom CSS */
-border: 1px solid #8E72F2;
-box-shadow: 0 0 0px #8E72F2;
-transition: box-shadow 0.3s ease;
-
-&:hover {
-  box-shadow: 0 0 12px #8E72F2, 0 0 24px #3038D9;
-}
-```
-Or as a rotating gradient border for the full "shine" effect — document the component pattern here when built.
+**Accents**
+- Eyebrow / micro labels: `text-brand-lilac` uppercase tracking-widest.
+- Glow / shine: `box-shadow: 0 0 20px #DA80FF, 0 0 40px rgba(218,128,255,0.25)`.
 
 ---
 
 ## Typography
 
-**Font stack:**
-```
-'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif
-```
-**Secondary (body copy / mission text):**
-```
-Georgia, 'Times New Roman', serif
+**Display (headings, UI labels):** `Montserrat`, system-ui fallback
+**Body (paragraphs, long-form):** `Roboto`, system-ui fallback
+
+Both are loaded via Google Fonts in [`docs/branding/brand.css`](branding/brand.css). Defaults are wired in [`src/styles/global.css`](../src/styles/global.css):
+
+```css
+body { font-family: 'Roboto', ...; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', ...; }
 ```
 
-| Element                  | Size     | Weight | Color        | Notes                         |
-|--------------------------|----------|--------|--------------|-------------------------------|
-| Page heading (h1)        | `30px`   | `800`  | heading      | Letter-spacing: `0.04em`      |
-| Section heading (h2)     | `24px`   | `700`  | heading      |                               |
-| Card heading (h3)        | `18px`   | `700`  | heading      |                               |
-| Body text                | `16px`   | `400`  | text         |                               |
-| Mission / editorial body | `16px`   | `400`  | `gray-700`   | Uses Georgia serif            |
-| Small / label text       | `14px`   | `400`  | text-muted   |                               |
-| Micro label (uppercase)  | `12px`   | `700`  | text-muted   | `letter-spacing: 0.1em`       |
-| FAQ button text          | `14px`   | `600`  | heading      |                               |
+Components frequently apply `style={{ fontFamily: 'Montserrat, sans-serif' }}` inline on labels, buttons, and stats — keep this pattern.
+
+| Element                   | Size                           | Weight | Notes                                 |
+|---------------------------|--------------------------------|--------|---------------------------------------|
+| Hero (h1)                 | `clamp(1.8rem, 11vw, 11rem)`   | 800    | Uppercase, `letter-spacing: -0.01em`, `line-height: 0.92` |
+| Section heading (h2)      | ~`text-2xl` to `text-3xl`      | 700    | Montserrat                            |
+| Card heading (h3)         | `text-lg` / `text-xl`          | 700    | Montserrat                            |
+| Body                      | `text-base` (`clamp(0.95rem, 2.5vw, 1.2rem)` for hero lede) | 400 | Roboto, line-height 1.7 for readability |
+| Pull quote                | `1.05rem`, italic              | 300    | Roboto light italic                   |
+| Eyebrow / micro label     | `text-xs`                      | 700    | Uppercase, `tracking-widest`, lilac   |
+| Stat number               | `text-3xl`                     | 800    | Montserrat, `tabular-nums`, lilac     |
+| Button text               | `text-xs`                      | 700    | Uppercase, `tracking-widest`          |
 
 ---
 
 ## Spacing & Layout
 
-| Concept              | Value    | Notes                                        |
-|----------------------|----------|----------------------------------------------|
-| Page max-width       | `1152px` | `max-w-6xl` — centered with auto margins     |
-| Page padding         | `16px / 32px` | `p-4` mobile, `p-8` desktop (md+)       |
-| Section gap          | `48px`   | `mb-12` between major blocks                 |
-| Card padding         | `24px`   | `p-6` internal padding                       |
-| Card gap             | `16px`   | `gap-4` between cards in a grid             |
-| Border radius        | `8px`    | Cards, buttons, inputs (`rounded-lg`)        |
-| Header height        | ~`64px`  | Sticky, `border-b-4`                         |
-| Stats row columns    | `2 mobile / 4 desktop` | Grid for project facts          |
+| Concept              | Value                                | Notes                                            |
+|----------------------|--------------------------------------|--------------------------------------------------|
+| Page max-width       | `max-w-6xl` (1152px)                 | Centered in [`App.tsx` Layout](../src/App.tsx)   |
+| Page padding         | `p-4` mobile, `p-8` md+              | Applied on `<main>` in `Layout`                  |
+| Section gap          | `mb-10` to `mb-14`                   | Between major page blocks                        |
+| Card padding         | `p-6` to `p-8`                       | `py-16 px-8` for hero CTA blocks                 |
+| Card gap             | `gap-4` to `gap-10`                  | Grid gaps scale with content density             |
+| Border radius        | `rounded-lg` (8px) buttons, `rounded-xl` (12px) cards/panels |             |
+| Header height        | `h-16` (64px)                        | Sticky, blurred translucent charcoal             |
+| Stats grid           | `grid-cols-2 md:grid-cols-4`         | 1px gap on lilac/20 background — hairline cells  |
 
 ---
 
-## Pages & Sections
+## Routes & Pages
 
-The site has 8 pages navigated via a single-page JS router. Header and footer are shared across all pages except the Newsletter page (which hides both).
+Routing is defined in [`src/App.tsx`](../src/App.tsx) using `react-router-dom`. Two layout modes:
 
-| Page ID      | Nav Label       | Description                                              |
-|--------------|-----------------|----------------------------------------------------------|
-| `home`       | Home            | Hero, mission text (3 paragraphs), newsletter CTA        |
-| `about`      | About           | Mission, dual-track approach cards, infographic, stats, project details |
-| `partners`   | Partners        | LSP coordinator logo, 14 core partner logos, 6 associated |
-| `pilots`     | Pilots          | 2 testbed cards: Snapsting (Viborg) + Le Pavillon (Namur) |
-| `news`       | News & Events   | Feed with type filters, article cards, event gallery sidebar + media kit download |
-| `faq`        | FAQ             | 12 accordion items, max-width `3xl`                      |
-| `contact`    | Contact         | Contact form (Name, Org, Subject, Message) + coordinator info + social icons + newsletter CTA |
-| `newsletter` | —               | Full-screen split: dark form left, image right; hides header/footer |
+**Standard (Header + Dither + Footer):**
+| Path                  | Component                                                                |
+|-----------------------|--------------------------------------------------------------------------|
+| `/`                   | [`Home`](../src/pages/Home.tsx) — hero, stats, marquee, mission, CTA     |
+| `/about`              | [`About`](../src/pages/About.tsx)                                        |
+| `/partners`           | [`Partners`](../src/pages/Partners.tsx)                                  |
+| `/experiences`           | [`Pilots`](../src/pages/Pilots.tsx)                                      |
+| `/experiences/snapsting` | [`SnapstingActivities`](../src/pages/SnapstingActivities.tsx)            |
+| `/experiences/pavillon`  | [`PavillonActivities`](../src/pages/PavillonActivities.tsx)              |
+| `/news`               | [`News`](../src/pages/News.tsx)                                          |
+| `/news/launch`        | [`news/Launch`](../src/pages/news/)                                      |
+| `/faq`                | [`FAQ`](../src/pages/FAQ.tsx)                                            |
+| `/contact`            | [`Contact`](../src/pages/Contact.tsx)                                    |
+| `/resources`          | [`Resources`](../src/pages/Resources.tsx) — cream bg, no Dither, tabbed grant-data reference |
+
+**Full-screen (no header/footer):**
+| Path                | Component                                                                  |
+|---------------------|----------------------------------------------------------------------------|
+| `/newsletter`       | [`Newsletter`](../src/pages/Newsletter.tsx) — split form + image           |
+| `/underconstruction`| [`UnderConstruction`](../src/pages/UnderConstruction.tsx)                  |
+
+**Style-test / WIP routes** (kept in `App.tsx`, not linked from nav): `/lynch-home`, `/lynch-about`, `/ismaila-home`, `/brand-home`. `/lynch-home` opts out of the Dither background via `NO_DITHER_ROUTES`.
+
+The nav label **Experiences** matches the route `/experiences`. See [`Header.tsx`](../src/components/Header/Header.tsx).
+
+---
+
+## Shared Components
+
+Located under [`src/components/`](../src/components/).
+
+- **[`Header`](../src/components/Header/Header.tsx)** — Sticky, blurred charcoal bar (`rgba(32,33,36,0.92)` + `backdrop-blur-md`), 64px tall, lilac accents, hamburger on mobile.
+- **[`Footer`](../src/components/Footer/Footer.tsx)** — `bg-brand-charcoal`, 3-column grid (`md:grid-cols-3`), purple/20 top border, lilac social-icon ring buttons.
+- **[`DitherBackground`](../src/components/DitherBackground/)** — Full-viewport WebGL/canvas dither effect. Mounted by `Layout` for all routes except those in `NO_DITHER_ROUTES`. Pages rendered on top should use translucent surfaces (`bg-brand-charcoal/70 backdrop-blur-sm`) to let it show through.
+- **[`Dither`](../src/components/Dither/)** — Lower-level dither primitive used by `DitherBackground`.
+- **[`LineWaves`](../src/components/LineWaves/)** — Animated line/wave decoration (currently exercised on test pages).
+- **[`LogoMarquee`](../src/components/LogoMarquee/)** — Horizontally scrolling partner-logo strip used on `Home`.
+- **[`Lightbox`](../src/components/Lightbox/)** — Modal image viewer for galleries (used by News).
+- **[`ScrollToTop`](../src/components/ScrollToTop.tsx)** — Resets scroll position on route change.
 
 ---
 
 ## Component Patterns
 
-### Navigation
-```html
-<header class="sticky top-0 bg-white border-b-4 border-gray-400 z-50 p-4 shadow-sm">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-    <!-- Logo -->
-    <!-- <nav> with .nav-link items -->
-    <!-- CTA button: "Enter ECHO System ↗" -->
-  </div>
-</header>
-```
-- Active nav link: `font-weight: bold; text-decoration: underline`
-- CTA button opens the ECHOSYSTEM interactive dashboard in a new tab
+### Sticky Header
+See [`Header.tsx`](../src/components/Header/Header.tsx). Translucent charcoal with blur, lilac border-bottom at 30% opacity. Active route uses `color: #DA80FF`; default links use `rgba(247,243,224,0.65)`. Mobile hamburger reveals a stacked dropdown.
 
-### Primary Button
-```html
-<button class="border-2 border-gray-800 bg-gray-100 px-4 py-2 font-bold uppercase text-sm rounded-md hover:bg-gray-200">
-  Label
-</button>
-```
-
-### Dark CTA Button (newsletter / contact)
-```html
-<button style="padding: 0.75rem 2.5rem; background:#4b5563; color:white; border:none; border-radius:8px; font-weight:700; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; cursor:pointer;">
+### Primary CTA (Lilac shine button)
+```tsx
+<button
+  className="shine-cta px-10 py-3 bg-brand-lilac text-brand-charcoal rounded-lg
+             font-bold text-xs uppercase tracking-widest
+             hover:shadow-[0_0_20px_#DA80FF,0_0_40px_rgba(218,128,255,0.25)]
+             transition-shadow duration-300"
+  style={{ fontFamily: 'Montserrat, sans-serif' }}
+>
   Subscribe to our Newsletter
 </button>
 ```
+The `shine-cta` class adds a diagonal sheen sweep on hover — defined per-page via inline `<style>` (see [`Home.tsx`](../src/pages/Home.tsx#L114-L126)).
 
-### Stat Card
-```html
-<div class="border-2 border-gray-400 p-5 text-center">
-  <div class="text-3xl font-extrabold mb-1">15</div>
-  <div class="text-xs uppercase tracking-wider text-gray-500">Partners</div>
+### Ghost / Outline Button
+```tsx
+<a
+  className="border border-brand-lilac px-4 py-2 font-bold uppercase text-xs rounded-md
+             transition-all duration-300 hover:bg-brand-lilac/10
+             hover:shadow-[0_0_14px_rgba(218,128,255,0.35)]"
+  style={{ fontFamily: 'Montserrat, sans-serif', color: '#DA80FF' }}
+>
+  Enter ECHO System ↗
+</a>
+```
+
+### Stats Grid (hairline)
+```tsx
+<div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-brand-lilac/20
+                border border-brand-lilac/25 rounded-xl overflow-hidden">
+  <div className="bg-brand-charcoal/70 backdrop-blur-sm px-6 py-5 text-center">
+    <div className="text-3xl font-extrabold text-brand-lilac tabular-nums"
+         style={{ fontFamily: 'Montserrat, sans-serif' }}>15</div>
+    <div className="text-xs uppercase tracking-widest"
+         style={{ fontFamily: 'Montserrat, sans-serif',
+                  color: 'rgba(247,243,224,0.5)' }}>Partners</div>
+  </div>
+  {/* ... */}
+</div>
+```
+The `gap-px` over a lilac/20 background renders as 1px hairlines between cells.
+
+### Newsletter / CTA Panel
+```tsx
+<div
+  className="relative border border-brand-purple/40 rounded-xl backdrop-blur-sm
+             py-16 px-8 text-center max-w-2xl mx-auto"
+  style={{ backgroundColor: 'rgba(90,66,99,0.35)',
+           boxShadow: 'inset 0 0 60px rgba(136,67,163,0.12)' }}
+>
+  <p className="text-xs font-bold uppercase tracking-widest text-brand-lilac mb-3">Newsletter</p>
+  <p className="font-bold text-lg text-brand-cream mb-7">Stay updated on Immersive ECHO</p>
+  {/* shine-cta button */}
 </div>
 ```
 
-### FAQ Accordion
-```html
-<div class="border-2 border-gray-300 rounded-lg overflow-hidden">
-  <button class="faq-btn" onclick="toggleFaq(this)">
-    Question text
-    <span class="faq-icon">+</span>
-  </button>
-  <div class="faq-answer">Answer text</div>
+### Pull Quote
+```tsx
+<div className="border-l-2 border-brand-lilac pl-7 flex flex-col justify-center">
+  <div className="text-5xl text-brand-lilac/30">&ldquo;</div>
+  <p className="italic" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 300,
+       color: 'rgba(247,243,224,0.9)' }}>…</p>
+  <div className="w-8 h-px bg-brand-lilac/35 mt-5" />
 </div>
 ```
-- `faq-answer` is hidden by default; `.open` class reveals it
-- Icon toggles between `+` and `−`
+
+### Tab Bar (Resources page)
+```tsx
+const TABS = [{ id: 'wp', label: 'Work Packages' }, /* … */] as const
+type TabId = typeof TABS[number]['id']
+const [activeTab, setActiveTab] = useState<TabId>('wp')
+
+<div className="flex overflow-x-auto border-b mb-8" style={{ borderColor: 'rgba(32,33,36,0.18)' }}>
+  {TABS.map(tab => (
+    <button
+      key={tab.id}
+      type="button"
+      onClick={() => setActiveTab(tab.id)}
+      className="shrink-0 px-4 py-3 text-xs font-bold uppercase tracking-widest transition-colors whitespace-nowrap"
+      style={{
+        fontFamily: 'Montserrat, sans-serif',
+        color: activeTab === tab.id ? '#8843A3' : 'rgba(32,33,36,0.45)',
+        borderBottom: activeTab === tab.id ? '2px solid #8843A3' : '2px solid transparent',
+        marginBottom: '-1px',
+      }}
+    >
+      {tab.label}
+    </button>
+  ))}
+</div>
+```
+Used on the cream Resources page. Active tab: purple underline + `#8843A3` text. Inactive: charcoal/45. Tab bar scrolls horizontally on mobile (`overflow-x-auto`).
+
+### Logos on Cream Background
+White partner logos use `filter: invert(1)` to render as black on the cream `#F7F3E0` page background. Only applies on cream pages — on dark (charcoal) pages logos display as-is.
+```tsx
+<img src={`/logos/partner_logos/${code}.png`} style={{ filter: 'invert(1)' }} />
+```
+
+### Past-Date Indicator
+Dates that have passed are highlighted in green `#16a34a`. Used in the Milestones tab of Resources. The `isPast(m)` helper checks if the first day of the month *after* the due month has passed — so a May due date only turns green on June 1.
+```ts
+function isPast(m: number): boolean {
+  const firstOfNextMonth = new Date(PROJECT_START.year, PROJECT_START.monthIndex + m, 1)
+  return firstOfNextMonth < new Date()
+}
+// In JSX:
+style={{ color: isPast(m.due) ? '#16a34a' : 'rgba(32,33,36,0.55)' }}
+```
 
 ### Section Divider with Label
-```html
-<div class="border-t-2 border-dashed border-gray-300 my-10 relative">
-  <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gray-50 px-4 text-xs text-gray-400 uppercase tracking-widest">
-    Section Label
+```tsx
+<div className="border-t border-brand-purple/30 my-10 relative">
+  <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 text-xs uppercase
+                   tracking-widest text-brand-lilac"
+        style={{ fontFamily: 'Montserrat, sans-serif', backgroundColor: '#202124' }}>
+    Stay Connected
   </span>
 </div>
 ```
-
-### Pilot / Feature Card
-```html
-<div class="border-2 border-gray-400 p-6">
-  <!-- image placeholder -->
-  <span class="bg-gray-300 px-2 py-1 text-xs font-bold mb-2 inline-block">BADGE</span>
-  <h2 class="text-2xl font-bold mb-2">Title</h2>
-  <h3 class="text-lg text-gray-500 mb-4">📍 Location</h3>
-  <!-- text content -->
-  <button class="wf-button">CTA</button>
-</div>
-```
-
-### News Article Card
-```html
-<div class="flex gap-4 border-2 border-gray-300 p-4">
-  <div class="w-32 h-32 shrink-0"><!-- thumb --></div>
-  <div>
-    <span class="text-xs font-bold text-gray-500">TYPE | Date</span>
-    <h3 class="text-lg font-bold mb-2">Headline</h3>
-    <!-- excerpt -->
-    <a href="#" class="underline text-sm font-bold">Read More →</a>
-  </div>
-</div>
-```
+Note the explicit `backgroundColor` matching the page so the label "cuts" the rule.
 
 ### Footer
-3-column grid on desktop (stacked on mobile). Dark background `#1f2937`. Contains: brand name + social icons, quick links, EU funding acknowledgement + project details.
+See [`Footer.tsx`](../src/components/Footer/Footer.tsx). `bg-brand-charcoal`, 3 columns on `md+`, purple/20 top border, social icons as 36px lilac-ringed circles with hover glow.
 
-### Newsletter Page
-Full-screen split layout (hides header and footer). Left: dark form (`bg-gray-800`). Right: image placeholder. On mobile stacks vertically.
+---
+
+## Animation Patterns
+
+Animations live alongside the components that use them — usually as a per-page `<style>` block plus `data-reveal` attributes. See [`Home.tsx`](../src/pages/Home.tsx) for the canonical examples.
+
+- **`page-fade`** — global 1900ms opacity fade on every route change. Defined in [`global.css`](../src/styles/global.css), keyed by `pathname` in `Layout` so it restarts on navigation. Opacity-only on purpose (a transform would create a containing block and trap the fixed Dither canvas).
+- **`fade-up`** — 700ms `translateY(20px) → 0` + opacity, used for hero entrance with `animationDelay` staggers.
+- **`data-reveal`** — IntersectionObserver-driven scroll reveal. Element starts at `opacity: 0; transform: translateY(20px)` with an 800ms transition; observer sets opacity/transform to final values when 15% visible. Optional `data-reveal-delay="200"` for staggering.
+- **Count-up stats** — `IntersectionObserver` at 0.4 threshold triggers a `requestAnimationFrame` ease-out count from 0 → target with 120ms stagger between cells.
+- **`shine-cta::before`** — diagonal sheen sweep (`-120% → 120%` left, 700ms) on lilac primary buttons.
+- **`scrollPulse`** — 2s vertical scale pulse on the hero scroll-hint line.
+
+All of the above respect `prefers-reduced-motion: reduce` — either disable the animation or jump to the final state.
 
 ---
 
 ## Responsive Breakpoints
 
-| Breakpoint | Width    | What changes                                   |
-|------------|----------|------------------------------------------------|
-| Mobile     | < 768px  | Single column, stacked layout, hamburger nav   |
-| Tablet     | 768px+   | Two columns where appropriate                  |
-| Desktop    | 1024px+  | Full layout, all columns visible               |
+Default Tailwind breakpoints. Common usage in this project:
+
+| Breakpoint | Width    | What changes                                                         |
+|------------|----------|----------------------------------------------------------------------|
+| (base)     | < 640px  | Single column, stacked nav (hamburger), CTAs may hide                |
+| `sm`       | 640px+   | Header CTA appears, hero padding loosens                             |
+| `md`       | 768px+   | Multi-column grids (`md:grid-cols-3`, `md:grid-cols-4`), desktop nav |
+| `lg`       | 1024px+  | Final layout polish where used                                       |
+
+Page horizontal padding is centralized via the `--page-pad` CSS var in `Home.tsx` (1rem / 1.5rem / 2rem at base / sm / md). For other pages, `Layout`'s `p-4 md:p-8` on `<main>` covers it.
 
 ---
 
 ## Accessibility Checklist
 
-- Semantic HTML: proper use of `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`
-- All images have descriptive `alt` text
-- Color contrast: minimum 4.5:1 ratio for text
-- All interactive elements keyboard-accessible
-- `aria-label` on icon-only buttons and links (social icons in footer/contact)
-- Focus styles visible on all interactive elements
-- Skip-to-content link (if applicable)
+- Semantic structure: `<header>`, `<nav>`, `<main>`, `<footer>` are used in `App.tsx` / `Header` / `Footer`.
+- All `<img>` elements have descriptive `alt` text (e.g. logo: `alt="Immersive ECHO"`).
+- Icon-only buttons / links carry `aria-label` (hamburger, footer social icons).
+- Nav menu uses `aria-expanded` and `aria-controls` on the hamburger toggle.
+- Focus states: rely on Tailwind defaults — never strip the focus ring without replacing it.
+- Color contrast: cream on charcoal passes 4.5:1; check any opacity-reduced text against the background.
+- All animations honor `prefers-reduced-motion: reduce`.
+- Target tap size: ≥ 40×40px on mobile (hamburger is `w-10 h-10`).
 
 ---
 
 ## Assets & Images
 
-- File format: WebP preferred, JPG fallback; SVG for logos and icons
-- Naming convention: `kebab-case`, descriptive (e.g. `snapsting-festival-viborg.webp`)
-- Asset locations:
-  - `assets/img/` — photos, hero images
-  - `assets/logos/` — partner and coordinator logos
-  - `assets/icons/` — SVG icon sprites or individual files
-- Social icons in contact/footer: inline SVG circles (black fill `#222`, white icon path)
+- **File format:** WebP preferred, JPG fallback for photos; SVG / PNG for logos and icons.
+- **Naming:** `kebab-case`, descriptive (e.g. `logo-horizontal-light.png`, `snapsting-festival-viborg.webp`).
+- **Locations:**
+  - [`public/img/`](../public/img/) — photos, hero images, page imagery
+  - [`public/logos/`](../public/logos/) — partner / coordinator logos, header logo
+  - [`public/charts/`](../public/charts/) — infographics and data visuals
+- **References from code:** Use absolute URLs (`/logos/...`) since these resolve from `public/`. Imports are not required.
+- **Brand assets reference:** [`docs/branding/`](branding/) holds the canonical brand-kit pages (`logo-kit.html`, `color.html`, `typography.html`) and the source-of-truth `brand.css`.

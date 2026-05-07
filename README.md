@@ -12,7 +12,7 @@ Pan-European cultural heritage project creating collective immersive experiences
 | Bundler     | Vite 6                                                  |
 | CSS         | Tailwind CSS 3 (PostCSS build, not CDN)                 |
 | Routing     | React Router v6                                         |
-| Fonts       | DM Sans (Google Fonts, 300–800); Georgia (system serif) |
+| Fonts       | Montserrat (display, 300–800) + Roboto (body, 300–700) — Google Fonts via `docs/branding/brand.css` |
 | 3D / WebGL  | Three.js + @react-three/fiber (Dither background)       |
 | Deploy      | Docker (multi-stage build → Nginx alpine), port 8105    |
 | Tunnel      | Cloudflare via Cosmos Cloud → echoimmersive.eu          |
@@ -27,49 +27,64 @@ Pan-European cultural heritage project creating collective immersive experiences
 
 ```
 echoimmersive_web/
-├── Wireframe.html               # Clickable prototype — layout reference, do not edit
+├── Wireframe.html               # Phase-1 vanilla-HTML prototype (legacy — layout reference only)
+├── ONBOARDING.md                # New-contributor onboarding notes
 ├── index.html                   # Vite HTML entry point
 ├── vite.config.ts
 ├── tailwind.config.ts
 ├── tsconfig.json / tsconfig.app.json / tsconfig.node.json
 ├── postcss.config.js
 ├── package.json
+├── Dockerfile / docker-compose.yml / nginx.conf
+├── Makefile
 │
 ├── src/
 │   ├── main.tsx                 # React entry, mounts App
-│   ├── App.tsx                  # BrowserRouter + Routes
+│   ├── App.tsx                  # BrowserRouter + Routes + Layout (Dither + Header + Footer)
 │   ├── styles/
-│   │   └── global.css           # Tailwind directives + base styles
+│   │   └── global.css           # Tailwind directives, body defaults, page-fade transition
 │   ├── pages/                   # One file per route
 │   │   ├── Home.tsx
 │   │   ├── About.tsx
 │   │   ├── Partners.tsx
-│   │   ├── Pilots.tsx
+│   │   ├── Pilots.tsx               # /experiences route (file kept as Pilots.tsx)
+│   │   ├── SnapstingActivities.tsx
+│   │   ├── PavillonActivities.tsx
 │   │   ├── News.tsx
+│   │   ├── news/Launch.tsx      # /news/launch sub-page
 │   │   ├── FAQ.tsx
 │   │   ├── Contact.tsx
 │   │   ├── Newsletter.tsx       # Full-screen, no header/footer
-│   │   ├── LynchHome.tsx        # Testing only — dark brand palette + Dither bg
-│   │   ├── LynchAbout.tsx       # Testing only — dark brand palette sandbox
-│   │   ├── IsmailaHome.tsx      # Testing only — Ismaila's sandbox (cloned from LynchHome)
-│   │   └── BrandHome.tsx        # Testing only — official brand palette (Charcoal/Lilac/Plum + Montserrat/Roboto)
+│   │   ├── UnderConstruction.tsx# Full-screen placeholder, no header/footer
+│   │   ├── LynchHome.tsx        # Sandbox — dark palette, opts out of shared Dither
+│   │   ├── LynchAbout.tsx       # Sandbox — dark palette About layout
+│   │   ├── IsmailaHome.tsx      # Sandbox — cloned from LynchHome
+│   │   └── BrandHome.tsx        # Sandbox — official brand palette
 │   ├── components/
-│   │   ├── Header/Header.tsx
-│   │   ├── Footer/Footer.tsx
-│   │   └── Dither/              # WebGL animated background
-│   │       ├── Dither.tsx
-│   │       └── Dither.css
-│   └── assets/                  # (to populate)
-│       ├── img/
-│       ├── logos/
-│       └── icons/
+│   │   ├── Header/Header.tsx        # Sticky blurred charcoal nav, lilac accents, hamburger
+│   │   ├── Footer/Footer.tsx        # 3-column charcoal footer with social ring icons
+│   │   ├── DitherBackground/        # Site-wide WebGL background wrapper
+│   │   ├── Dither/                  # Lower-level WebGL dither primitive
+│   │   │   ├── Dither.tsx
+│   │   │   └── Dither.css
+│   │   ├── LineWaves/               # Animated line/wave decoration
+│   │   ├── LogoMarquee/             # Scrolling partner-logo strip (Home)
+│   │   ├── Lightbox/                # Modal image viewer (galleries)
+│   │   └── ScrollToTop.tsx          # Resets scroll on route change
+│   └── data/
+│       └── galleries.ts             # Gallery image data
 │
-├── public/                      # Static files served as-is (favicon, og image)
+├── api/                         # FastAPI backend (contact + newsletter endpoints)
+├── public/                      # Static files served at site root
+│   ├── img/                     # Photos, hero imagery
+│   ├── logos/                   # Partner + coordinator logos, header logo
+│   └── charts/                  # Infographics
 └── docs/
     ├── TODO.md
     ├── PROGRESS.md
     ├── STYLEGUIDE.md
-    └── dither_deployment.md
+    ├── dither_deployment.md
+    └── branding/                # Brand kit — brand.css, logo-kit.html, color.html, typography.html
 ```
 
 <!--
@@ -82,25 +97,32 @@ echoimmersive_web/
 See [docs/PROGRESS.md](docs/PROGRESS.md) for the full implementation checklist.
 
 **Current status**:
-- Phase 1 complete — Clickable wireframe with all 8 pages fully structured
-- Phase 2 in progress — Vite + React + TypeScript scaffold complete, all 8 page stubs built
-- Active sandbox: `/lynch-home` and `/lynch-about` — testing dark brand palette + Dither background before rolling out to the rest of the site
+- Phase 1 complete — Vanilla-HTML wireframe (`Wireframe.html`) covering all pages
+- Phase 2 in progress — React build live: brand palette rolled out site-wide, shared Dither background, real Home/About/Partners/FAQ/Contact/Newsletter/Resources pages with backend wired
+- Resources page has full EU grant data (5 WPs, 22 tasks, 20 milestones, 19 deliverables, 21 events) in a tabbed interface; past milestone dates highlighted green automatically
+- About page links to Resources via "Full Structure, Tasks & Deliverables" CTA
+- Sandbox routes (`/lynch-home`, `/lynch-about`, `/ismaila-home`, `/brand-home`) remain for design exploration
 
 ## Routes
 
-**Production pages** (standard layout with header + footer):
+**Production pages** (standard layout: Header + Dither background + Footer):
 - `/` — Home
 - `/about` — About
 - `/partners` — Partners
-- `/pilots` — Pilots
+- `/experiences` — Experiences
+- `/experiences/snapsting` — Snapsting activities
+- `/experiences/pavillon` — Le Pavillon activities
 - `/news` — News & Events
+- `/news/launch` — Launch event sub-page
 - `/faq` — FAQ
 - `/contact` — Contact
+- `/resources` — Resources (opts out of Dither background)
 
 **Full-screen** (no header/footer):
 - `/newsletter` — Subscription form
+- `/underconstruction` — Placeholder page
 
-**Testing only** (sandbox pages, do not link from production nav):
+**Sandbox** (do not link from production nav):
 - `/lynch-home` — Lynch's style sandbox, dark brand palette + Dither WebGL background
 - `/lynch-about` — Lynch's style sandbox for the About layout
 - `/ismaila-home` — Ismaila's style sandbox, cloned from `/lynch-home` as a starting point

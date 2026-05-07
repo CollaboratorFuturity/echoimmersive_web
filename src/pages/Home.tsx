@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import LogoMarquee from '@/components/LogoMarquee/LogoMarquee'
+import ProjectTimeline from '@/components/ProjectTimeline/ProjectTimeline'
 
 const stats = [
   { value: 15, label: 'Partners' },
@@ -226,6 +227,15 @@ export default function Home() {
             <div className="w-8 h-px bg-brand-lilac/35 mt-5" />
           </div>
         </div>
+      </div>
+
+      {/* Project Timeline */}
+      <div
+        data-reveal
+        style={{ opacity: 0, transform: 'translateY(20px)', transition: 'opacity 800ms cubic-bezier(0.2,0.8,0.2,1), transform 800ms cubic-bezier(0.2,0.8,0.2,1)' }}
+        className="mb-14"
+      >
+        <ProjectTimeline />
       </div>
 
       {/* Divider */}

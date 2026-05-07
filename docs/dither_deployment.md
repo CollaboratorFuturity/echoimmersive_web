@@ -1,7 +1,7 @@
 # Dither WebGL Background — Deployment Guide
 
 **Source:** [ReactBits Dither Background](https://reactbits.dev/backgrounds/dither)  
-**Used in:** `/blog`, `/about` pages as animated parallax background  
+**Used in:** Site-wide background, mounted by the `Layout` wrapper in `src/App.tsx` via `DitherBackground` for all routes except those listed in `NO_DITHER_ROUTES` (currently `/lynch-home`).  
 **Stack:** React 19 + TypeScript + Vite
 
 ---
@@ -364,7 +364,7 @@ Playground URL format: `https://reactbits.dev/backgrounds/dither?waveColor=0.2,0
 
 ## Using as a full-page parallax background
 
-This is how it's implemented on the `/blog` and `/about` pages in this project.
+> **⚠️ Lazy-loading warning.** The `lazy + Suspense` pattern below is the original ReactBits recommendation, but in this project it caused the WebGL context to be destroyed at first paint when combined with React StrictMode's double-mount (canvas appears → disappears after ~1s). **Do not use `React.lazy` for Dither here.** The shared `DitherBackground` component uses a direct static import. Keep the snippet below for reference if Three.js bundle size ever forces route-based splitting via dynamic `import()`. See [`TODO.md`](TODO.md) `[Perf] Dither code-splitting` for the full context.
 
 The canvas sits behind all content (`zIndex: -1`) and drifts slightly slower than the scroll, creating depth.
 

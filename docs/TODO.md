@@ -8,21 +8,17 @@ Memory is fragile. AI context gets compressed at unpredictable intervals. If you
 
 ## Pending
 
-- [ ] **[Assets] Partner logos** -- Need logo files for all 15 core partners + 6 associated partners before the Partners page can be built. Formats: SVG preferred, WebP/PNG fallback.
+- [ ] **[Assets] Partner logos — SVG upgrade** -- 15 core partner logos + LSP coordinator + FUT leadership card are wired as PNGs in `public/logos/partner_logos/`. Replace with SVGs where available for crisp scaling. Associated partners section removed from Partners page (no logos available; confirm with coordinator if it should return).
 
-- [ ] **[Assets] Coordinator logo** -- Need Lindholmen Science Park logo (SVG or WebP).
-
-- [ ] **[Assets] Site logo** -- Need final "Immersive ECHO" wordmark / logo before building the header and newsletter page.
-
-- [ ] **[Assets] Pilot photography** -- Need real photos for Snapsting Festival (Viborg) and Le Pavillon (Namur) before building the Pilots page.
+- [ ] **[Assets] Experience photography** -- Need real photos for Snapsting Festival (Viborg) and Le Pavillon (Namur). Files: `src/pages/Pilots.tsx` (the Experiences page).
 
 - [ ] **[Assets] Hero image/video** -- Home page hero requires either a photo or a video loop of the immersive installation environment.
 
 - [ ] **[Content] About page copy** -- Several wireframe text blocks are placeholders. Need final mission copy, pull quote, and approach descriptions before Phase 2 about page is done.
 
-- [ ] **[Content] Pilots descriptions** -- Both pilot cards have placeholder text. Need real descriptions for Snapsting and Le Pavillon.
+- [ ] **[Content] Experience descriptions** -- Both cards on `/experiences` have placeholder text. Need final descriptions for Snapsting and Le Pavillon. File: `src/pages/Pilots.tsx`.
 
-- [ ] **[Content] FAQ verified** -- FAQ copy is rich in the wireframe — confirm all 12 answers are final/approved before going live.
+- [ ] **[Content] FAQ verified** -- Confirm all 14 answers in `src/pages/FAQ.tsx` are final/approved before going live.
 
 - [ ] **[Content] EU funding credit line** -- Footer must include the required EU co-funded acknowledgement text and logo. Confirm exact wording with coordinator.
 
@@ -30,13 +26,10 @@ Memory is fragile. AI context gets compressed at unpredictable intervals. If you
 
 - [ ] **[A11y] FAQ keyboard navigation** -- FAQ accordion uses `onClick`. The `aria-expanded` attribute is set but Enter/Space keyboard toggle needs testing across screen readers. File: `src/pages/FAQ.tsx`.
 
-- [ ] **[Nav] Hamburger menu** -- Header stacks to a row on mobile but has no hamburger toggle. Needs implementation. File: `src/components/Header/Header.tsx`.
 
-- [ ] **[Design] Roll out sandbox to production pages** -- `/lynch-home`, `/lynch-about`, and `/ismaila-home` are testing-only pages with the dark brand palette, Dither background, and interaction patterns (fade-up reveals, count-up stats, shine-sweep CTA). Once the look is approved, apply the patterns to `/`, `/about`, and the shared `Header` / `Footer` components, then delete the sandbox files and routes. Files: `src/pages/LynchHome.tsx`, `src/pages/LynchAbout.tsx`, `src/pages/IsmailaHome.tsx`, `src/App.tsx` (routes), `README.md` (project structure + routes).
+- [ ] **[Design] Remove sandbox routes once design is locked** -- `/lynch-home`, `/lynch-about`, `/ismaila-home`, `/brand-home` are no longer needed as the brand palette is rolled out site-wide. Delete the files, remove the routes from `src/App.tsx`, and remove the entries from `README.md` and `PROGRESS.md`.
 
-- [x] **[Routing] BrowserRouter 404 on refresh** -- Resolved by `nginx.conf` `try_files $uri $uri/ /index.html` rule in the Docker image.
-
-- [ ] **[Perf] Dither code-splitting** -- `Dither.tsx` is in use on `LynchHome`. Do NOT use `React.lazy` for it — lazy loading causes a 1s mount delay that combines with React StrictMode's double-mount to destroy the WebGL context at first paint (canvas visible → gone). Instead, use a dynamic `import()` at the route level (route-based splitting) if Three.js bundle size becomes a concern. Direct static import is the safe default for now.
+- [ ] **[Perf] Dither code-splitting** -- Dither now mounts site-wide via `DitherBackground` in the `Layout` component (`src/App.tsx`). Do NOT use `React.lazy` for it — lazy loading causes a 1s mount delay that combines with React StrictMode's double-mount to destroy the WebGL context at first paint (canvas visible → gone). Instead, use a dynamic `import()` at the route level (route-based splitting) if Three.js bundle size becomes a concern. Direct static import is the safe default for now. Note: `docs/dither_deployment.md` still shows the lazy/Suspense pattern — update or remove that section if Dither stays static.
 
 ---
 

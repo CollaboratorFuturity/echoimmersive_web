@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const quickLinks = [
   ['/about',      'About'],
   ['/partners',   'Partners'],
-  ['/pilots',     'Pilots'],
+  ['/experiences', 'Experiences'],
   ['/news',       'News & Events'],
   ['/faq',        'FAQ'],
   ['/contact',    'Contact'],

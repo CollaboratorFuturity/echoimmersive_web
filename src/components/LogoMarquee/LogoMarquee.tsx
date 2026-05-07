@@ -1,10 +1,33 @@
-const logos = [
-  'AIRA', 'COG', 'FFV', 'FUT', 'GPI', 'ID20', 'KIKK',
-  'LSP', 'NPIAT', 'TPL', 'TSC', 'VGR', 'VIB', 'YOU',
+type MarqueeSize = 'xl' | 'lg' | 'md' | 'sm'
+type MarqueeLogo = { file: string; size?: MarqueeSize }
+
+const sizeClass: Record<MarqueeSize, string> = {
+  xl: 'max-h-24',
+  lg: 'max-h-20',
+  md: 'max-h-16',
+  sm: 'max-h-12',
+}
+
+const logos: MarqueeLogo[] = [
+  { file: 'AIRA' },
+  { file: 'COG' },
+  { file: 'FFV', size: 'lg' },
+  { file: 'FUT', size: 'lg' },
+  { file: 'GPI', size: 'xl' },
+  { file: 'ID20' },
+  { file: 'KIKK', size: 'xl' },
+  { file: 'KIKK_', size: 'sm' },
+  { file: 'LSP', size: 'sm' },
+  { file: 'NPIAT', size: 'xl' },
+  { file: 'TAW' },
+  { file: 'TPL', size: 'lg' },
+  { file: 'TSC', size: 'sm' },
+  { file: 'VGR' },
+  { file: 'VIB_' },
+  { file: 'YOU' },
 ]
 
 export default function LogoMarquee() {
-  // Duplicate the list so the translateX(-50%) loop is seamless
   const items = [...logos, ...logos]
 
   return (
@@ -28,17 +51,17 @@ export default function LogoMarquee() {
       `}</style>
 
       <div className="logo-track">
-        {items.map((name, i) => (
+        {items.map((logo, i) => (
           <div
-            key={`${name}-${i}`}
+            key={`${logo.file}-${i}`}
             className="flex items-center justify-center px-8 shrink-0"
             style={{ height: '90px', minWidth: '160px' }}
           >
             <img
-              src={`/logos/partner_logos/${name}.png`}
-              alt={name}
+              src={`/logos/partner_logos/${logo.file}.png`}
+              alt={logo.file}
               loading="lazy"
-              className="max-h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+              className={`w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 ${sizeClass[logo.size ?? 'md']}`}
               style={{ filter: 'brightness(0) invert(1)' }}
             />
           </div>
