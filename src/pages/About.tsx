@@ -1,15 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const revealStyle = {
-  opacity: 0,
-  transform: 'translateY(20px)',
-  transition: 'opacity 800ms cubic-bezier(0.2,0.8,0.2,1), transform 800ms cubic-bezier(0.2,0.8,0.2,1)',
-}
-
-const Skeleton = ({ w = 'w-full' }: { w?: string }) => (
-  <div className={`h-4 rounded ${w} bg-brand-plum/40`} />
-)
 
 const partnerNames: Record<string, string> = {
   AIRA:  'AIRA Dance Company',

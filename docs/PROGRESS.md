@@ -105,7 +105,7 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 
 ### Resources Page
 - [x] Resources page (`src/pages/Resources.tsx`) at `/resources` — cream bg (`#F7F3E0`), no Dither, opts out via `NO_DITHER_ROUTES`
-- [x] Full EU grant data: 5 WPs, 22 tasks (5 groups), 20 milestones, 19 deliverables, 21 events — sourced from CREA-CULT-2025-COOP-3 application
+- [x] Full EU grant data: 5 WPs, 22 tasks (5 groups), 20 milestones, 19 deliverables, 21 events — sourced from CREA-CULT-2025-COOP-3 application; events numbered E1–E21 sequentially by date (E1–E6 dated public events in chronological order, E7–E21 remaining activities)
 - [x] Tabbed interface — WPs / Tasks / Milestones / Deliverables / Events; underline indicator, horizontal scroll on mobile
 - [x] WP accordions with objectives list + partner logo chips (`filter: invert(1)` for cream bg)
 - [x] Task group accordions with inner task rows (expandable descriptions)

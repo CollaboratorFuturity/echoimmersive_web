@@ -99,7 +99,7 @@ See [docs/PROGRESS.md](docs/PROGRESS.md) for the full implementation checklist.
 **Current status**:
 - Phase 1 complete — Vanilla-HTML wireframe (`Wireframe.html`) covering all pages
 - Phase 2 in progress — React build live: brand palette rolled out site-wide, shared Dither background, real Home/About/Partners/FAQ/Contact/Newsletter/Resources pages with backend wired
-- Resources page has full EU grant data (5 WPs, 22 tasks, 20 milestones, 19 deliverables, 21 events) in a tabbed interface; past milestone dates highlighted green automatically
+- Resources page has full EU grant data (5 WPs, 22 tasks, 20 milestones, 19 deliverables, 21 events) in a tabbed interface; past milestone dates highlighted green automatically; events numbered E1–E21 sequentially by date (E1–E6 are the 6 dated public events in chronological order, E7–E21 are remaining activities)
 - About page links to Resources via "Full Structure, Tasks & Deliverables" CTA
 - Sandbox routes (`/lynch-home`, `/lynch-about`, `/ismaila-home`, `/brand-home`) remain for design exploration
 
