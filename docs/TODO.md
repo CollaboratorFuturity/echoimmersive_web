@@ -20,7 +20,7 @@ Memory is fragile. AI context gets compressed at unpredictable intervals. If you
 
 - [ ] **[Content] FAQ verified** -- Confirm all 14 answers in `src/pages/FAQ.tsx` are final/approved before going live.
 
-- [ ] **[Content] EU funding credit line** -- Footer must include the required EU co-funded acknowledgement text and logo. Confirm exact wording with coordinator.
+- [ ] **[Content] EU funding credit line wording** -- Footer now includes the official "Co-funded by the EU" logo (`public/logos/co-funded_EN/vertical/EN_co_fundedvertical_RGB_WHITE.png`). Confirm exact wording of the accompanying credit line with coordinator.
 
 - [ ] **[A11y] Social icon aria-labels** -- Footer and contact page use inline SVG social icons with no text labels. Add `aria-label` attributes before launch (e.g. `aria-label="Follow us on Facebook"`).
 

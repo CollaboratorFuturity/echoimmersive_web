@@ -114,8 +114,8 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 - [x] Canonical grant data reference at `public/grant-data.md`
 
 ### Footer
-- [x] Footer component (`src/components/Footer/Footer.tsx`) — 3-column, quick links, EU credit placeholder
-- [ ] EU co-funded logo asset
+- [x] Footer component (`src/components/Footer/Footer.tsx`) — 3-column, quick links, EU credit + co-funded logo
+- [x] EU co-funded logo asset (`public/logos/co-funded_EN/horizontal/EN_Co-fundedbytheEU_RGB_WHITE.png`) wired into footer
 - [ ] Confirmed EU credit line wording
 - [ ] Privacy policy page + link
 

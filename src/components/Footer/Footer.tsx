@@ -76,6 +76,11 @@ export default function Footer() {
           >
             About the Project
           </h4>
+          <img
+            src="/logos/co-funded_EN/horizontal/EN_Co-fundedbytheEU_RGB_WHITE.png"
+            alt="Co-funded by the European Union"
+            className="h-[3.6rem] w-auto mb-4"
+          />
           {/* TODO: Confirm exact EU credit line wording with coordinator */}
           <p
             className="text-xs leading-relaxed mb-4"
