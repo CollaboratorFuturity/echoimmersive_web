@@ -11,7 +11,6 @@ const sizeClass: Record<MarqueeSize, string> = {
 const logos: MarqueeLogo[] = [
   { file: 'AIRA' },
   { file: 'COG' },
-  { file: 'FFV', size: 'lg' },
   { file: 'FUT', size: 'lg' },
   { file: 'GPI', size: 'xl' },
   { file: 'ID20' },

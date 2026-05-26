@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const partnerNames: Record<string, string> = {
   AIRA:  'AIRA Dance Company',
-  FFV:   'Flora & Fauna Visions',
+  TSC:   'The Storytelling Company',
   FUT:   'Futurity Systems',
   GPI:   'Grand Palais Immersif',
   ID20:  'Zavod ID20',
@@ -17,7 +17,7 @@ const partnerNames: Record<string, string> = {
   YOU:   'Younite AI',
 }
 
-const largeLogos = new Set(['FFV', 'FUT', 'GPI', 'KIKK', 'NPIAT', 'TPL'])
+const largeLogos = new Set(['TSC', 'FUT', 'GPI', 'KIKK', 'NPIAT', 'TPL'])
 
 type ApproachCardData = {
   title: string
@@ -28,17 +28,17 @@ type ApproachCardData = {
 const approachCards: Record<string, ApproachCardData> = {
   offsite: {
     title: 'Off-site Immersive Design Team',
-    partners: ['FFV', 'NPIAT', 'LSP', 'GPI', 'TPL', 'YOU', 'AIRA'],
+    partners: ['TSC', 'NPIAT', 'LSP', 'GPI', 'TPL', 'YOU', 'AIRA'],
     description: 'A transdisciplinary lab where artists, technologists, and heritage experts co-develop immersive prototypes through co-creation sprints. Every concept is tested for accessibility and packaged into modular formats ready for deployment at any venue.',
   },
   onsite: {
     title: 'On-site Immersive Design Team',
-    partners: ['VIB', 'FFV', 'GPI', 'TPL', 'ID20', 'FUT', 'AIRA'],
+    partners: ['VIB', 'TSC', 'GPI', 'TPL', 'ID20', 'FUT', 'AIRA'],
     description: 'Viborg Museum as a living case study, developing "Snapsting" through hand-drawn animation and spatial storytelling. Every workflow and decision is documented so other institutions can follow the same path.',
   },
   testbed: {
     title: 'Public Immersive Testbed',
-    partners: ['KIKK', 'FFV', 'YOU', 'TPL', 'FUT', 'GPI'],
+    partners: ['KIKK', 'TSC', 'YOU', 'TPL', 'FUT', 'GPI'],
     description: 'Le Pavillon opens the finished experiences to real audiences at scale, measuring engagement and accessibility through AI-supported analytics while testing operational models for long-term viability.',
   },
   coordination: {
@@ -48,7 +48,7 @@ const approachCards: Record<string, ApproachCardData> = {
   },
   comms: {
     title: 'Communication & Impact',
-    partners: ['FUT', 'TPL', 'LSP', 'FFV', 'GPI', 'VIB', 'ID20', 'TAW'],
+    partners: ['FUT', 'TPL', 'LSP', 'TSC', 'GPI', 'VIB', 'ID20', 'TAW'],
     description: 'Futurity Systems translates project outcomes into modular toolkits and multilingual content, builds a peer learning network, and applies future design methods to chart long-term roadmaps for immersive culture.',
   },
 }

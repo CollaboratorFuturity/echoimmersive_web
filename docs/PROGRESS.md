@@ -63,7 +63,7 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 
 ### Partners Page
 - [x] Partners page (`src/pages/Partners.tsx`) — LSP (coordinator) + FUT (Communication & Dissemination) leadership row + 14 core partners with real logos, names, and outbound URLs
-- [x] Per-logo sizing system (`large?: boolean`) — zero padding for logos that need full card width (FFV, FUT, GPI, KIKK, NPIAT, TPL); applied on Partners page and propagated to About page chips and LogoMarquee
+- [x] Per-logo sizing system (`large?: boolean`) — zero padding for logos that need full card width (FUT, GPI, KIKK, NPIAT, TPL); applied on Partners page and propagated to About page chips and LogoMarquee
 - [x] LogoMarquee (`src/components/LogoMarquee/LogoMarquee.tsx`) — updated to 4-tier size system (`sm/md/lg/xl`) per logo; synced partner list (added KIKK_, TAW, corrected VIB/VIB_ mapping)
 - [x] About page + Resources page partner logo chips use same `largeLogos` set for consistent sizing across the site
 

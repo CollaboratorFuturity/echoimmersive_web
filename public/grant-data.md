@@ -43,7 +43,7 @@ The PDF uses a few inconsistent abbreviations. Codes below are the **canonical**
 | Code  | Full name                            | PDF aliases | Country |
 |-------|--------------------------------------|-------------|---------|
 | LSP   | Lindholmen Science Park              | —           | Sweden  |
-| FFV   | flora&faunavisions                   | —           | Germany |
+| TSC   | The Storytelling Company             | TSC (flora&faunavisions, absorbed) | —       |
 | NPIAT | New Practice in Art & Technology     | —           | —       |
 | GPI   | Grand Palais Immersif                | —           | France  |
 | YOU   | Younite AI                           | —           | —       |
@@ -80,7 +80,7 @@ The PDF uses a few inconsistent abbreviations. Codes below are the **canonical**
 
 ### WP2 — Immersive Design Team (Off-site)
 
-- **Lead:** FFV
+- **Lead:** TSC
 - **Duration:** M1 – M30 (Feb 2026 – Jul 2028)
 
 **Objectives**
@@ -153,44 +153,44 @@ The PDF uses a few inconsistent abbreviations. Codes below are the **canonical**
 
 #### T1.3 — Manage Communication & Reporting
 - **Lead:** LSP (COO)
-- **Participants:** FFV, NPIAT, GPI, YOU, TPL, KIKK, FUT, AIRA, ID20, VIB, VGR, SOFP (BEN); COG, TAW (AP)
+- **Participants:** TSC, NPIAT, GPI, YOU, TPL, KIKK, FUT, AIRA, ID20, VIB, VGR, SOFP (BEN); COG, TAW (AP)
 - **Description:** Facilitate clear internal communication, prepare EU reports, and ensure compliance with administrative and legal obligations.
 
 ### WP2 Tasks
 
 #### T2.1 — Needs Discovery, Research & Design Foundations
-- **Participants:** FFV, NPIAT, GPI, YOU, TPL, AIRA, ID20, VIB, VGR, SOFP, FUT (BEN); COG (AP)
+- **Participants:** TSC, NPIAT, GPI, YOU, TPL, AIRA, ID20, VIB, VGR, SOFP, FUT (BEN); COG (AP)
 - **Description:** Explore and define the foundation for a diverse target audience by identifying needs, institutional realities, societal trends, and early technical feasibility. Clarify technology readiness and potential operational challenges before moving into prototyping.
 
 #### T2.2 — Collaborative Design & Prototyping in Labs
-- **Participants:** FFV, NPIAT, GPI, YOU, TPL, AIRA, ID20, VGR, SOFP, FUT (BEN)
+- **Participants:** TSC, NPIAT, GPI, YOU, TPL, AIRA, ID20, VGR, SOFP, FUT (BEN)
 - **Description:** Translate research into rapid prototypes tested directly within the Experimental Lab. Design team, museum partners, and users co-create immersive concepts through iterative cycles of design, testing, and improvement.
 
 #### T2.3 — Inclusive Design Sprints
-- **Participants:** FFV, NPIAT, TPL, YOU, AIRA (BEN)
+- **Participants:** TSC, NPIAT, TPL, YOU, AIRA (BEN)
 - **Description:** Conduct four focused sprints to integrate diverse perspectives into the design process: 1) Youth Sprint — focusing on digital fluency and curiosity. 2) Neurodivergent Sprint — testing sensory balance and nonlinear engagement. 3) Older Adults Sprint — addressing navigation, pacing, and accessibility. 4) Marginalized Groups Sprint — amplifying voices often excluded from mainstream design. Each sprint shapes core aspects of storytelling, interaction, and experience flow.
 
 #### T2.4 — Design for Scalability and Transferability
-- **Participants:** GPI, FFV, NPIAT, AIRA, ID20, VGR (BEN)
+- **Participants:** GPI, TSC, NPIAT, AIRA, ID20, VGR (BEN)
 - **Description:** Apply design principles, tools, and workflows that support the scalability and transferability of immersive experiences across diverse cultural venues. Includes modular design approaches, adaptable storytelling structures, and flexible setups for large and small institutions. Ensures outcomes can be reused, tailored, and sustained beyond the initial deployment sites.
 
 #### T2.5 — Virtual Access to Experimental Lab
-- **Participants:** FFV, NPIAT, GPI, YOU, TPL, AIRA, ID20, VIB, VGR, SOFP, FUT (BEN); COG (AP)
+- **Participants:** TSC, NPIAT, GPI, YOU, TPL, AIRA, ID20, VIB, VGR, SOFP, FUT (BEN); COG (AP)
 - **Description:** Leverage modular design and digital twin technology to make the experience accessible for broad, pan-European testing. Virtual environments replicate the physical installations, enabling diverse audiences to engage and provide feedback remotely.
 
 #### T2.6 — Final Experience Design for Public Testbeds
-- **Participants:** FFV, NPIAT, GPI, YOU, TPL, AIRA, ID20, VGR, SOFP, FUT (BEN)
+- **Participants:** TSC, NPIAT, GPI, YOU, TPL, AIRA, ID20, VGR, SOFP, FUT (BEN)
 - **Subcontracts:** S1.1, S1.2
 - **Description:** Adapt and complete the immersive experiences for public venues, ensuring readiness for large-scale user interaction. Final design includes emotional storytelling, robust technical setups, accessibility flows, and sustainable operational models.
 
 #### T2.7 — Synthesis of Experimental Insights
-- **Participants:** FFV, NPIAT, TPL, YOU, FUT (BEN)
+- **Participants:** TSC, NPIAT, TPL, YOU, FUT (BEN)
 - **Description:** Analyse insights from lab activities, public testbeds, user feedback, and technical validation. Use AI-supported tools to synthesise findings from both controlled and real-world environments into actionable refinements for final experience delivery.
 
 ### WP3 Tasks
 
 #### T3.1 — Integration into the ECHO Knowledge Flow
-- **Participants:** VIB, FFV, GPI, TPL, AIRA, ID20, VGR, SOFP, FUT (BEN); COG (AP)
+- **Participants:** VIB, TSC, GPI, TPL, AIRA, ID20, VGR, SOFP, FUT (BEN); COG (AP)
 - **Subcontracts:** S2.1, S2.2, S2.3
 - **Description:** Share findings continuously with the wider consortium. Coordinate with WP2 and project management to ensure design, testing, and implementation insights are transferred in real time.
 
@@ -205,26 +205,26 @@ The PDF uses a few inconsistent abbreviations. Codes below are the **canonical**
 - **Description:** Conduct structured evaluation of the experience after launch. Collect both qualitative and quantitative feedback on usability, engagement, accessibility, and emotional/educational impact.
 
 #### T3.4 — Adaptation for KIKK (Le Pavillon) Deployment
-- **Participants:** VIB, KIKK, GPI, FFV (BEN)
+- **Participants:** VIB, KIKK, GPI, TSC (BEN)
 - **Subcontracts:** S2.1, S2.2, S2.3, S2.4
 - **Description:** Prepare the Snapsting experience for implementation at Le Pavillon as part of WP4's public testbed activities. Ensures cross-WP collaboration, enabling real-world testing beyond the home institution and improvements based on WP4 audience feedback.
 
 ### WP4 Tasks
 
 #### T4.1 — Preparation for Public Deployment
-- **Participants:** KIKK, FFV, GPI, VIB, TPL, YOU (BEN)
+- **Participants:** KIKK, TSC, GPI, VIB, TPL, YOU (BEN)
 - **Description:** Coordinate the technical, methodological, and communicative groundwork needed for successful public deployment of the immersive experiences. Includes testing methodologies, audience reception strategies, data collection protocols, on-site installation planning, visitor onboarding, accessibility considerations, and communication flows.
 
 #### T4.2 — Business Model Development for Sustainable Deployment
-- **Participants:** KIKK, GPI, FFV, VIB, ID20, AIRA (BEN)
+- **Participants:** KIKK, GPI, TSC, VIB, ID20, AIRA (BEN)
 - **Description:** Co-develop a sustainable business model for the immersive experiences, aligned with the socio-economic contexts of the deployment venues and the strategic goals of the ECHO consortium. Outcomes will support long-term viability beyond the project timeline and ensure adaptability across different cultural settings.
 
 #### T4.3 — Public Deployment & Operations
-- **Participants:** KIKK, YOU, TPL, FFV, VIB (BEN)
+- **Participants:** KIKK, YOU, TPL, TSC, VIB (BEN)
 - **Description:** Deploy finalised immersive experiences in Le Pavillon with full technical and narrative integration, including training of local staff, maintenance, retail pop-up, and mediated activities to ensure high-quality visitor experiences.
 
 #### T4.4 — Public Launch at KIKK Festival (Oct 2027)
-- **Participants:** KIKK, FFV, NPIAT, GPI, YOU, TPL, AIRA, ID20, VIB, VGR, SOFP, FUT (BEN)
+- **Participants:** KIKK, TSC, NPIAT, GPI, YOU, TPL, AIRA, ID20, VIB, VGR, SOFP, FUT (BEN)
 - **Description:** Initiate the public rollout of the immersive experience with a high-visibility launch at the KIKK Festival 2027. Includes a dedicated panel featuring members of the ECHO consortium and other relevant speakers, positioning the project within a broader cultural and innovation context.
 
 #### T4.5 — Audience & Journey Analytics
@@ -232,29 +232,29 @@ The PDF uses a few inconsistent abbreviations. Codes below are the **canonical**
 - **Description:** Collect quantitative (flows, dwell-time, conversion, access-needs) and qualitative data (surveys, interviews, observation) with AI-supported dashboards; feed insights back to WP2 & WP5.
 
 #### T4.6 — Evaluate Business Models and Operations
-- **Participants:** KIKK, GPI, FFV (BEN)
+- **Participants:** KIKK, GPI, TSC (BEN)
 - **Description:** Test operational models, staffing needs, cost structures, revenue-share scenarios, and synthesise a "business blueprint" for future adopters to assess the economic and organisational viability of scaling immersive formats.
 
 ### WP5 Tasks
 
 #### T5.1 — Implement Project Internal Communication
-- **Participants:** LSP (COO); FFV, NPIAT, GPI, YOU, TPL, KIKK, FUT, AIRA, ID20, VIB, VGR, SOFP (BEN); COG, TAW (AP)
+- **Participants:** LSP (COO); TSC, NPIAT, GPI, YOU, TPL, KIKK, FUT, AIRA, ID20, VIB, VGR, SOFP (BEN); COG, TAW (AP)
 - **Description:** Establish internal communication tools and templates to support coordination, ensure compliance with EU standards, and enable efficient document sharing. Launch a KPI dashboard tracking progress across participants and institutions. Structured feedback loops across work packages ensure WP5 can continuously translate evolving insights into dissemination, outreach, and learning resources.
 
 #### T5.2 — AI Communication Ethics & Evaluation
-- **Participants:** LSP (COO); FFV, NPIAT, GPI, YOU, TPL, KIKK, FUT, AIRA, ID20, VIB, VGR, SOFP (BEN); COG, TAW (AP)
+- **Participants:** LSP (COO); TSC, NPIAT, GPI, YOU, TPL, KIKK, FUT, AIRA, ID20, VIB, VGR, SOFP (BEN); COG, TAW (AP)
 - **Description:** Host AI ethics workshops for consortium members and cultural institutions. Commission an external evaluation of WP5's use of AI in content generation, accessibility, and public interaction tools. Integrate findings into mid-term and final reports to ensure ethical, inclusive, and transparent dissemination practices.
 
 #### T5.3 — Inter-Project Networking and Community Building
-- **Participants:** LSP (COO); FFV, NPIAT, GPI, YOU, TPL, KIKK, FUT, AIRA, ID20, VIB, VGR, SOFP (BEN); COG, TAW (AP)
+- **Participants:** LSP (COO); TSC, NPIAT, GPI, YOU, TPL, KIKK, FUT, AIRA, ID20, VIB, VGR, SOFP (BEN); COG, TAW (AP)
 - **Description:** Facilitate structured exchange with other EU-funded projects through dedicated networking activities such as joint workshops, panel discussions, and thematic meetings. Builds a "community of practice" around immersive cultural experiences and fosters a network of shared interests across consortia.
 
 #### T5.4 — Knowledge Transfer & Capacity Building
-- **Participants:** LSP (COO); FFV, NPIAT, GPI, YOU, TPL, KIKK, FUT, AIRA, ID20, VIB, VGR, SOFP (BEN); COG, TAW (AP)
+- **Participants:** LSP (COO); TSC, NPIAT, GPI, YOU, TPL, KIKK, FUT, AIRA, ID20, VIB, VGR, SOFP (BEN); COG, TAW (AP)
 - **Description:** Translate the project's results into practical formats: open toolkits, templates, workshops, panel talks and masterclasses at conferences, and onboarding guides. AI tools will support the customisation of content for different institutions based on size, audience type, and digital maturity.
 
 #### T5.5 — Participatory Futures & Futuremaking
-- **Participants:** LSP (COO); FFV, NPIAT, GPI, YOU, TPL, KIKK, FUT, AIRA, ID20, VIB, VGR, SOFP (BEN); COG, TAW (AP)
+- **Participants:** LSP (COO); TSC, NPIAT, GPI, YOU, TPL, KIKK, FUT, AIRA, ID20, VIB, VGR, SOFP (BEN); COG, TAW (AP)
 - **Description:** Lead monthly Futuremaking Workshops, producing scenarios, speculative design artifacts, and a Futuremakers Toolkit (digital + physical). Co-create the 5D TimeMap — a digital platform linking space, time, and cultural layers.
 
 #### T5.6 — Public Interaction & Outreach Tools
@@ -276,14 +276,14 @@ The PDF uses a few inconsistent abbreviations. Codes below are the **canonical**
 | MS1 | 3  | VIB  | M3 · Apr 2026  | Concept & Narrative Development Finalised | Core concept, narrative, full script, and storyboard for Snapsting completed through an iterative process. |
 | MS1 | 5  | ID20 | M3 · Apr 2026  | Inter-Project Exchange Network Established | Network of collaboration with other EU-funded projects formally initiated. |
 | MS2 | 2  | NPIAT| M4 · May 2026  | Lab Operational and First Prototypes Tested | Experimental Lab fully operational; initial immersive prototypes tested and reviewed. |
-| MS3 | 2  | FFV  | M6 · Jul 2026  | Inclusive Design Sprint Series Completed | All four inclusive co-creation sprints completed; findings integrated into design iterations. |
+| MS3 | 2  | TSC  | M6 · Jul 2026  | Inclusive Design Sprint Series Completed | All four inclusive co-creation sprints completed; findings integrated into design iterations. |
 | MS2 | 3  | VIB  | M9 · Oct 2026  | Final Production Completed            | All elements of Snapsting finalised, including content, technology, and spatial design. |
 | MS3 | 3  | VIB  | M10 · Nov 2026 | Experience Installed & Operational    | Snapsting fully installed and running on-site at Museum Viborg. |
 | MS4 | 3  | VIB  | M10 · Nov 2026 | Consortium Meeting & Panel Talk       | All consortium partners gather at Viborg, with a panel talk at The Animation Festival. |
 | MS2 | 1  | LSP  | M12 · Jan 2027 | Mid-Term Coordination Review          | Review of progress, risks, collaboration quality, and resource use at midpoint. |
 | MS2 | 5  | FUT  | M15 · Apr 2027 | Mid-Term Impact Review Completed      | Halfway-point review evaluating communication, knowledge transfer, stakeholder engagement, and dissemination reach. |
 | MS1 | 4  | KIKK | M20 · Sep 2027 | Deployment Framework and Business Model Defined | Strategies for public deployment established, alongside a sustainable business model co-developed with partners. |
-| MS4 | 2  | FFV  | M20 · Sep 2027 | Prototype Designs Iterated and Final Concepts Ready | Prototypes evolved based on testing; final immersive experiences approved for public deployment. |
+| MS4 | 2  | TSC  | M20 · Sep 2027 | Prototype Designs Iterated and Final Concepts Ready | Prototypes evolved based on testing; final immersive experiences approved for public deployment. |
 | MS2 | 4  | KIKK | M22 · Nov 2027 | Public Testbed Installation Open      | Initial venue fully fitted, show control validated; doors opened to the public (KIKK Festival, Oct 2027). |
 | MS3 | 4  | TPL  | M22 · Nov 2027 | Cross-Venue Analytics Dashboard Live  | Central dashboard aggregating real-time visitor flow, engagement, and accessibility data goes live. |
 | MS5 | 3  | VIB  | M22 · Nov 2027 | Snapsting Adapted for Le Pavillon Deployment | Snapsting tailored for Le Pavillon, with adjustments to narrative, technical setup, and spatial design. (PDF originally labelled MS4 — renumbered to MS5 to disambiguate from M10 milestone.) |
@@ -316,12 +316,12 @@ The PDF uses a few inconsistent abbreviations. Codes below are the **canonical**
 - **Description:** [ENG] A clear strategic guide based on user insights, institutional needs, and societal shifts — defining design challenges, user personas, emotional goals, and technical assumptions.
 
 #### D2.2 — Final Immersive Experience Designs
-- **Lead:** FFV · **Type:** DEM (Demonstrator) · **Dissemination:** PU
+- **Lead:** TSC · **Type:** DEM (Demonstrator) · **Dissemination:** PU
 - **Due:** M20 · Sep 2027
 - **Description:** [Language TBD] Full immersive experience packages for public deployment, including narratives, spatial and interaction designs, technical setups, onboarding/offboarding guides, and accessibility solutions.
 
 #### D2.3 — Final Immersive Experience Evaluation
-- **Lead:** FFV · **Type:** R · **Dissemination:** PU
+- **Lead:** TSC · **Type:** R · **Dissemination:** PU
 - **Due:** M28 · May 2028
 - **Description:** [ENG] Comprehensive evaluation of user experience, technical feasibility, and economic viability. Includes emotional impact analysis, accessibility review, system performance testing, and operational sustainability checks.
 
@@ -464,8 +464,8 @@ Events are numbered E1–E6 by confirmed date (from ProjectTimeline), then E7–
 
 | Code | WP | Subcontract                              | Linked task(s)               | Cost (EUR) |
 |------|----|------------------------------------------|------------------------------|------------|
-| S1.1 | 2 (FFV) | Technical Consultation              | T2.6                         | 40,000  |
-| S1.2 | 2 (FFV) | Software Production for Final Experience | T2.6                     | 40,000  |
+| S1.1 | 2 (TSC) | Technical Consultation              | T2.6                         | 40,000  |
+| S1.2 | 2 (TSC) | Software Production for Final Experience | T2.6                     | 40,000  |
 | S2.1 | 3 (VIB) | Creative Director                   | T3.1 / T3.2 / T3.3 / T3.4    | 16,082  |
 | S2.2 | 3 (VIB) | Technical Director                  | T3.1 / T3.2 / T3.4           | 10,721  |
 | S2.3 | 3 (VIB) | Animation Project Manager           | T3.1 / T3.2 / T3.4           | 50,000  |

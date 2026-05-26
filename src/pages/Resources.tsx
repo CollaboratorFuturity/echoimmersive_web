@@ -25,7 +25,7 @@ function isPast(m: number): boolean {
 const partnerNames: Record<string, string> = {
   AIRA:  'AIRA Dance Company',
   COG:   'City of Gothenburg',
-  FFV:   'Flora & Fauna Visions',
+  TSC:   'The Storytelling Company',
   FUT:   'Futurity Systems',
   GPI:   'Grand Palais Immersif',
   ID20:  'Zavod ID20',
@@ -39,7 +39,7 @@ const partnerNames: Record<string, string> = {
   TAW:   'The Animation Workshop',
 }
 
-const largeLogos = new Set(['FFV', 'FUT', 'GPI', 'KIKK', 'NPIAT', 'TPL'])
+const largeLogos = new Set(['TSC', 'FUT', 'GPI', 'KIKK', 'NPIAT', 'TPL'])
 
 // ────────────────────────────────────────────────────────────────────────────
 // Work Packages
@@ -70,7 +70,7 @@ const workPackages: WorkPackage[] = [
   {
     code: 'WP2',
     title: 'Immersive Design Team (Off-site)',
-    lead: 'flora&faunavisions (FFV)',
+    lead: 'The Storytelling Company (TSC)',
     short: 'A transdisciplinary lab where artists, technologists, and heritage experts co-develop immersive prototypes through co-creation sprints.',
     objectives: [
       'Understand evolving user needs and institutional realities — frame opportunity areas based on user research, institutional goals, and societal shifts.',
@@ -80,7 +80,7 @@ const workPackages: WorkPackage[] = [
       'Lead final refinement and readiness for public testbeds — finalise immersive experiences that are emotionally resonant, technically stable, and accessible.',
       'Benchmark and exchange between on-site and off-site immersive design — structured exchange between Snapsting and the off-site lab processes.',
     ],
-    partners: ['FFV', 'NPIAT', 'GPI', 'YOU', 'TPL', 'AIRA', 'ID20', 'VIB', 'VGR', 'FUT', 'COG'],
+    partners: ['TSC', 'NPIAT', 'GPI', 'YOU', 'TPL', 'AIRA', 'ID20', 'VIB', 'VGR', 'FUT', 'COG'],
   },
   {
     code: 'WP3',
@@ -93,7 +93,7 @@ const workPackages: WorkPackage[] = [
       'Identify what works for small-to-mid-sized institutions — document workflows, challenges, and resource needs.',
       'Benchmark and exchange between on-site and off-site immersive design — see WP2.',
     ],
-    partners: ['VIB', 'FFV', 'GPI', 'TPL', 'AIRA', 'ID20', 'VGR', 'FUT', 'COG', 'KIKK'],
+    partners: ['VIB', 'TSC', 'GPI', 'TPL', 'AIRA', 'ID20', 'VGR', 'FUT', 'COG', 'KIKK'],
   },
   {
     code: 'WP4',
@@ -107,7 +107,7 @@ const workPackages: WorkPackage[] = [
       'Validate operational and economic viability — ticketing strategies, operational setups, staffing needs, and technical requirements.',
       'Create learning opportunities for cultural professionals — partner museums and heritage organisations are invited to observe and participate.',
     ],
-    partners: ['KIKK', 'FFV', 'GPI', 'VIB', 'TPL', 'YOU', 'ID20', 'AIRA', 'NPIAT', 'VGR', 'FUT'],
+    partners: ['KIKK', 'TSC', 'GPI', 'VIB', 'TPL', 'YOU', 'ID20', 'AIRA', 'NPIAT', 'VGR', 'FUT'],
   },
   {
     code: 'WP5',
@@ -122,7 +122,7 @@ const workPackages: WorkPackage[] = [
       'Capacity Building — develop toolkits, facilitate peer learning, and offer mentoring programs for cultural institutions.',
       'Future-Oriented Design — apply Future Design methodologies to envision compelling futures for immersive culture.',
     ],
-    partners: ['LSP', 'FFV', 'NPIAT', 'GPI', 'YOU', 'TPL', 'KIKK', 'FUT', 'AIRA', 'ID20', 'VIB', 'VGR', 'COG', 'TAW'],
+    partners: ['LSP', 'TSC', 'NPIAT', 'GPI', 'YOU', 'TPL', 'KIKK', 'FUT', 'AIRA', 'ID20', 'VIB', 'VGR', 'COG', 'TAW'],
   },
 ]
 
@@ -141,25 +141,25 @@ const taskGroups: TaskGroup[] = [
       { code: 'T1.2', title: 'Monitor Progress, Risks & Budget', lead: 'LSP',
         description: 'Track milestones, deliverables, Green checklist alignment and financial flows, and manage risks proactively to ensure transparency and accountability.' },
       { code: 'T1.3', title: 'Manage Communication & Reporting', lead: 'LSP',
-        description: 'Facilitate clear internal communication, prepare EU reports, and ensure compliance with administrative and legal obligations. Participants: FFV, NPIAT, GPI, YOU, TPL, KIKK, FUT, AIRA, ID20, VIB, VGR, SOFP (BEN); COG, TAW (AP).' },
+        description: 'Facilitate clear internal communication, prepare EU reports, and ensure compliance with administrative and legal obligations. Participants: TSC, NPIAT, GPI, YOU, TPL, KIKK, FUT, AIRA, ID20, VIB, VGR, SOFP (BEN); COG, TAW (AP).' },
     ],
   },
   {
     code: 'T2', title: 'Immersive Design Team (Off-site)',
     tasks: [
-      { code: 'T2.1', title: 'Needs Discovery, Research & Design Foundations', lead: 'FFV',
+      { code: 'T2.1', title: 'Needs Discovery, Research & Design Foundations', lead: 'TSC',
         description: 'Explore and define the foundation for a diverse target audience by identifying needs, institutional realities, societal trends, and early technical feasibility. Clarify technology readiness and potential operational challenges before moving into prototyping.' },
-      { code: 'T2.2', title: 'Collaborative Design & Prototyping in Labs', lead: 'FFV',
+      { code: 'T2.2', title: 'Collaborative Design & Prototyping in Labs', lead: 'TSC',
         description: 'Translate research into rapid prototypes tested directly within the Experimental Lab. Design team, museum partners, and users co-create immersive concepts through iterative cycles of design, testing, and improvement.' },
-      { code: 'T2.3', title: 'Inclusive Design Sprints', lead: 'FFV',
+      { code: 'T2.3', title: 'Inclusive Design Sprints', lead: 'TSC',
         description: 'Conduct four focused sprints to integrate diverse perspectives: 1) Youth Sprint — digital fluency and curiosity; 2) Neurodivergent Sprint — sensory balance and nonlinear engagement; 3) Older Adults Sprint — navigation, pacing, and accessibility; 4) Marginalized Groups Sprint — amplifying voices often excluded from mainstream design. Each sprint shapes core aspects of storytelling, interaction, and experience flow.' },
       { code: 'T2.4', title: 'Design for Scalability and Transferability', lead: 'GPI',
         description: 'Apply design principles, tools, and workflows that support the scalability and transferability of immersive experiences across diverse cultural venues. Includes modular design approaches, adaptable storytelling structures, and flexible setups for large and small institutions.' },
-      { code: 'T2.5', title: 'Virtual Access to Experimental Lab', lead: 'FFV',
+      { code: 'T2.5', title: 'Virtual Access to Experimental Lab', lead: 'TSC',
         description: 'Leverage modular design and digital twin technology to make the experience accessible for broad, pan-European testing. Virtual environments replicate the physical installations, enabling diverse audiences to engage and provide feedback remotely.' },
-      { code: 'T2.6', title: 'Final Experience Design for Public Testbeds', lead: 'FFV',
+      { code: 'T2.6', title: 'Final Experience Design for Public Testbeds', lead: 'TSC',
         description: 'Adapt and complete the immersive experiences for public venues, ensuring readiness for large-scale user interaction. Final design includes emotional storytelling, robust technical setups, accessibility flows, and sustainable operational models. Subcontracts: S1.1, S1.2.' },
-      { code: 'T2.7', title: 'Synthesis of Experimental Insights', lead: 'FFV',
+      { code: 'T2.7', title: 'Synthesis of Experimental Insights', lead: 'TSC',
         description: 'Analyse insights from lab activities, public testbeds, user feedback, and technical validation. Use AI-supported tools to synthesise findings from both controlled and real-world environments into actionable refinements for final experience delivery.' },
     ],
   },
@@ -230,7 +230,7 @@ const milestonesRaw: Milestone[] = [
     description: 'Network of collaboration with other EU-funded projects formally initiated.' },
   { id: 'MS2', wp: 'WP2', lead: 'NPIAT', due: 4,  title: 'Lab Operational and First Prototypes Tested',
     description: 'Experimental Lab fully operational; initial immersive prototypes tested and reviewed.' },
-  { id: 'MS3', wp: 'WP2', lead: 'FFV',   due: 6,  title: 'Inclusive Design Sprint Series Completed',
+  { id: 'MS3', wp: 'WP2', lead: 'TSC',   due: 6,  title: 'Inclusive Design Sprint Series Completed',
     description: 'All four inclusive co-creation sprints completed; findings integrated into design iterations.' },
   { id: 'MS2', wp: 'WP3', lead: 'VIB',   due: 9,  title: 'Final Production Completed',
     description: 'All elements of Snapsting finalised, including content, technology, and spatial design.' },
@@ -244,7 +244,7 @@ const milestonesRaw: Milestone[] = [
     description: 'Halfway-point review evaluating communication, knowledge transfer, stakeholder engagement, and dissemination reach.' },
   { id: 'MS1', wp: 'WP4', lead: 'KIKK',  due: 20, title: 'Deployment Framework and Business Model Defined',
     description: 'Strategies for public deployment established, alongside a sustainable business model co-developed with partners.' },
-  { id: 'MS4', wp: 'WP2', lead: 'FFV',   due: 20, title: 'Prototype Designs Iterated and Final Concepts Ready',
+  { id: 'MS4', wp: 'WP2', lead: 'TSC',   due: 20, title: 'Prototype Designs Iterated and Final Concepts Ready',
     description: 'Prototypes evolved based on testing; final immersive experiences approved for public deployment.' },
   { id: 'MS2', wp: 'WP4', lead: 'KIKK',  due: 22, title: 'Public Testbed Installation Open',
     description: 'Initial venue fully fitted, show control validated; doors opened to the public (KIKK Festival, Oct 2027).' },
@@ -295,9 +295,9 @@ const deliverables: Deliverable[] = [
     description: '[ENG] Evaluation of progress, coordination quality, risk status, and partner self-assessments. Includes recommendations for improvements.' },
   { code: 'D2.1', wp: 'WP2', lead: 'TPL',  type: 'R',           level: 'PU', due: 4,  title: 'Needs-Driven Immersive Design Brief',
     description: '[ENG] A clear strategic guide based on user insights, institutional needs, and societal shifts — defining design challenges, user personas, emotional goals, and technical assumptions.' },
-  { code: 'D2.2', wp: 'WP2', lead: 'FFV',  type: 'DEM',         level: 'PU', due: 20, title: 'Final Immersive Experience Designs',
+  { code: 'D2.2', wp: 'WP2', lead: 'TSC',  type: 'DEM',         level: 'PU', due: 20, title: 'Final Immersive Experience Designs',
     description: '[Language TBD] Full immersive experience packages for public deployment, including narratives, spatial and interaction designs, technical setups, onboarding/offboarding guides, and accessibility solutions.' },
-  { code: 'D2.3', wp: 'WP2', lead: 'FFV',  type: 'R',           level: 'PU', due: 28, title: 'Final Immersive Experience Evaluation',
+  { code: 'D2.3', wp: 'WP2', lead: 'TSC',  type: 'R',           level: 'PU', due: 28, title: 'Final Immersive Experience Evaluation',
     description: '[ENG] Comprehensive evaluation of user experience, technical feasibility, and economic viability. Includes emotional impact analysis, accessibility review, system performance testing, and operational sustainability checks.' },
   { code: 'D3.1', wp: 'WP3', lead: 'VIB',  type: 'DEM',         level: 'PU', due: 10, title: 'Snapsting Immersive Experience & Documentation',
     description: '[DANISH & ENG] The completed immersive experience installed and running at Viborg Museum. Includes installation blueprints, interaction design files, and documentation for reuse or adaptation.' },

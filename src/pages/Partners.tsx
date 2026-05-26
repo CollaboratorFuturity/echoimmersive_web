@@ -3,7 +3,6 @@ type Partner = { file: string; name: string; url: string; large?: boolean }
 const corePartners: Partner[] = [
   { file: 'AIRA', name: 'AIRA Dance Company', url: 'https://www.danscentrum.se/airadancecompany' },
   { file: 'COG', name: 'City of Gothenburg', url: 'https://goteborg.se/' },
-  { file: 'FFV', name: 'Flora&Fauna Visions', url: 'https://www.florafaunavisions.de/', large: true },
   { file: 'GPI', name: 'Grand Palais Immersif', url: 'https://grandpalais-immersif.fr/', large: true },
   { file: 'ID20', name: 'Zavod ID20', url: 'https://www.id20.si/en/front-page/' },
   { file: 'KIKK', name: 'KIKK Festival', url: 'https://www.kikk.be/', large: true },
