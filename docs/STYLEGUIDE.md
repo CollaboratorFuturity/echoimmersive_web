@@ -248,6 +248,19 @@ White partner logos use `filter: invert(1)` to render as black on the cream `#F7
 <img src={`/logos/partner_logos/${code}.png`} style={{ filter: 'invert(1)' }} />
 ```
 
+### Deliverable Status States
+Each deliverable row in the Resources Deliverables tab has three possible states, checked in order:
+
+| Priority | Condition | Display |
+|----------|-----------|---------|
+| 1 | `d.status` is set | Custom text in green `#16a34a` (e.g. `"You are here!"`) |
+| 2 | `d.href` is set | `"Access file →"` link in purple `#8843A3`, opens in new tab |
+| 3 | Neither | `"Pending"` in charcoal/35 |
+
+To link a deliverable: add `href: 'https://drive.google.com/...'` to its entry in the `deliverables` array in `src/pages/Resources.tsx`. Files are hosted on Google Drive so partners can publish without a redeploy.
+
+To add a custom status label: add `status: 'Your text'` to the entry. `status` takes priority over `href`.
+
 ### Past-Date Indicator
 Dates that have passed are highlighted in green `#16a34a`. Used in the Milestones tab of Resources. The `isPast(m)` helper checks if the first day of the month *after* the due month has passed — so a May due date only turns green on June 1.
 ```ts
@@ -329,3 +342,10 @@ Page horizontal padding is centralized via the `--page-pad` CSS var in `Home.tsx
   - [`public/charts/`](../public/charts/) — infographics and data visuals
 - **References from code:** Use absolute URLs (`/logos/...`) since these resolve from `public/`. Imports are not required.
 - **Brand assets reference:** [`docs/branding/`](branding/) holds the canonical brand-kit pages (`logo-kit.html`, `color.html`, `typography.html`) and the source-of-truth `brand.css`.
+
+### Favicon
+
+- **Primary:** [`public/logos/favicon.svg`](../public/logos/favicon.svg) — geometry inverted so the figure is the filled shape and the background is transparent. Embeds a `<style>` block that fills `g` with `#202124` (charcoal) on light tabs and `#F7F3E0` (cream) on dark tabs via `prefers-color-scheme`.
+- **Fallback:** [`public/logos/favicon.png`](../public/logos/favicon.png) — 499×500 PNG for browsers without SVG-favicon support.
+- **Wiring:** `index.html` carries both with a cache-busting `?v=N` query — bump `N` when the asset changes so browsers (and especially Safari, which caches favicons aggressively) pick up the new file.
+- **Browser support:** Chrome and Firefox honor the dark-mode swap. Safari renders the SVG but ignores the `prefers-color-scheme` media query, so the `fill="#202124"` attribute on the `<g>` element acts as Safari's static fallback.

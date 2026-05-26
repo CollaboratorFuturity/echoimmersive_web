@@ -286,10 +286,11 @@ type Deliverable = {
   lead: string
   description: string
   href?: string     // populated once the file is published
+  status?: string   // overrides Pending/Access file label with custom text
 }
 
 const deliverables: Deliverable[] = [
-  { code: 'D1.1', wp: 'WP1', lead: 'LSP',  type: 'R',           level: 'PU', due: 2,  title: 'Project Management Handbook',
+  { code: 'D1.1', wp: 'WP1', lead: 'LSP',  type: 'R',           level: 'PU', due: 2,  href: 'https://drive.google.com/file/d/13Qix9_7O6KoRbu8F4qswnmmomyfafo4r/view?usp=sharing', title: 'Project Management Handbook',
     description: '[ENG] A practical guide outlining the vision aligned with internal coordination tools, reporting structure, partner responsibilities, and shared workflows. Includes templates and checklists.' },
   { code: 'D1.2', wp: 'WP1', lead: 'LSP',  type: 'R',           level: 'PU', due: 13, title: 'Mid-Term Coordination & Risk Report',
     description: '[ENG] Evaluation of progress, coordination quality, risk status, and partner self-assessments. Includes recommendations for improvements.' },
@@ -309,9 +310,9 @@ const deliverables: Deliverable[] = [
     description: '[ENG] Step-by-step documentation of the public testbed roll-out, including audience logistics, spatial setup, and tech adaptation notes.' },
   { code: 'D4.2', wp: 'WP4', lead: 'KIKK', type: 'R',           level: 'PU', due: 28, title: 'User Experience & Business Model Summary',
     description: '[ENG] Evaluation of audience engagement, onboarding/offboarding flows, and feasibility of business models tested at venue.' },
-  { code: 'D5.1', wp: 'WP5', lead: 'FUT',  type: 'R / DMP',     level: 'PU', due: 3,  title: 'Communication & Dissemination Plan',
+  { code: 'D5.1', wp: 'WP5', lead: 'FUT',  type: 'R / DMP',     level: 'PU', due: 3,  href: 'https://drive.google.com/file/d/1SQhTx1rnGCmSbexJAegWYMAC89x6Cppq/view?usp=sharing', title: 'Communication & Dissemination Plan',
     description: '[ENG] An integrated communication strategy and plan to share outcomes widely. AI tools turn project data into articles, posts, case studies, and micro-content tailored to different European audiences. Generation in line with EU policy on AI, privacy, and tech ethics.' },
-  { code: 'D5.2', wp: 'WP5', lead: 'FUT',  type: 'DEC / DATA',  level: 'PU', due: 3,  title: 'Project Dashboard',
+  { code: 'D5.2', wp: 'WP5', lead: 'FUT',  type: 'DEC / DATA',  level: 'PU', due: 3,  status: 'You are here!', title: 'Project Dashboard',
     description: 'A website with a live digital dashboard tracking and visualising KPIs across multiple levels: individual participant contributions, intra-institutional workflows, inter-institutional collaboration, civic engagement score, and broader societal impact. Public section + private areas for institutions, policymakers, and stakeholders.' },
   { code: 'D5.3', wp: 'WP5', lead: 'FUT',  type: 'R',           level: 'PU', due: 15, title: 'Mid-Term Impact & Dissemination Report',
     description: 'Comprehensive review of project impact, dissemination activities, and communication outcomes at the halfway point. Evaluates engagement metrics, institutional uptake, knowledge transfer effectiveness, and cross-sector collaboration.' },
@@ -363,6 +364,16 @@ const events: Event[] = [
   { code: 'E19', wp: 'WP5', name: 'Monthly Future-making sessions',                           type: 'Workshops',           location: 'In-person / Online / Hybrid', days: 14,   attendees: 280 },
   { code: 'E20', wp: 'WP5', name: 'AI, Ethics and Culture Futures: Responsible Innovation in Immersive Heritage', type: 'Workshop', location: 'In-person / Online / Hybrid', days: 1, attendees: 20 },
   { code: 'E21', wp: 'WP5', name: 'Inter-Project Exchange',                                   type: 'Workshops',           location: 'In-person / Online',          days: 8,    attendees: 40 },
+]
+
+// ────────────────────────────────────────────────────────────────────────────
+// Media / Brand assets
+// ────────────────────────────────────────────────────────────────────────────
+type MediaItem = { code: string; title: string; href: string; description?: string }
+
+const mediaItems: MediaItem[] = [
+  { code: 'D5.1.1', title: 'Brand assets', href: 'https://drive.google.com/drive/folders/1PtPAB1rlWCtLkisEru0Pc_lZA7BTO2Y_?usp=sharing',
+    description: 'Official logos, colour palette, typography, and visual identity files for the Immersive ECHO project.' },
 ]
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -618,6 +629,7 @@ const TABS = [
   { id: 'milestones',   label: 'Milestones',      subtitle: 'Project control points sorted chronologically by due month.' },
   { id: 'deliverables', label: 'Deliverables',    subtitle: 'Project outputs with their type, dissemination level, and due date.' },
   { id: 'events',       label: 'Events',          subtitle: 'Workshops, masterclasses, exhibitions, conferences, and panel talks organised by the consortium.' },
+  { id: 'media',        label: 'Media / Brand',   subtitle: 'Brand assets, media kit, and visual identity files for the Immersive ECHO project.' },
 ] as const
 type TabId = typeof TABS[number]['id']
 
@@ -674,7 +686,7 @@ export default function Resources() {
 
         {/* ── Tab bar ──────────────────────────────────────────────── */}
         <div
-          className="flex overflow-x-auto border-b mb-8"
+          className="flex flex-wrap border-b mb-8"
           style={{ borderColor: 'rgba(32,33,36,0.18)' }}
         >
           {TABS.map(tab => (
@@ -793,13 +805,22 @@ export default function Resources() {
                 >
                   {dueLabel(d.due)}
                 </span>
-                {d.href ? (
+                {d.status ? (
+                  <span
+                    className="text-xs font-bold uppercase tracking-wider shrink-0"
+                    style={{ fontFamily: 'Montserrat, sans-serif', color: '#16a34a' }}
+                  >
+                    {d.status}
+                  </span>
+                ) : d.href ? (
                   <a
                     href={d.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-xs font-bold uppercase tracking-wider hover:opacity-70 transition-opacity shrink-0"
                     style={{ fontFamily: 'Montserrat, sans-serif', color: '#8843A3' }}
                   >
-                    Download ↓
+                    Access file →
                   </a>
                 ) : (
                   <span
@@ -809,6 +830,45 @@ export default function Resources() {
                     Pending
                   </span>
                 )}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* ── Media / Brand ────────────────────────────────────────── */}
+        {activeTab === 'media' && (
+          <div className="border-t border-b" style={{ borderColor: 'rgba(32,33,36,0.12)' }}>
+            {mediaItems.map(item => (
+              <div
+                key={item.code}
+                className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 py-4 border-b last:border-0"
+                style={{ borderColor: 'rgba(32,33,36,0.08)', fontFamily: 'Roboto, sans-serif' }}
+              >
+                <span
+                  className="text-xs font-bold tracking-wider shrink-0"
+                  style={{ fontFamily: 'JetBrains Mono, monospace', color: '#8843A3', width: '3.5rem' }}
+                >
+                  {item.code}
+                </span>
+                <div className="flex-1">
+                  <p className="text-sm md:text-base font-semibold mb-1" style={{ color: '#202124', fontFamily: 'Montserrat, sans-serif' }}>
+                    {item.title}
+                  </p>
+                  {item.description && (
+                    <p className="text-xs md:text-sm leading-relaxed" style={{ color: 'rgba(32,33,36,0.7)' }}>
+                      {item.description}
+                    </p>
+                  )}
+                </div>
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-bold uppercase tracking-wider hover:opacity-70 transition-opacity shrink-0"
+                  style={{ fontFamily: 'Montserrat, sans-serif', color: '#8843A3' }}
+                >
+                  Access file →
+                </a>
               </div>
             ))}
           </div>

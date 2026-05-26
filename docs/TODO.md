@@ -8,7 +8,9 @@ Memory is fragile. AI context gets compressed at unpredictable intervals. If you
 
 ## Pending
 
-- [ ] **[Assets] Partner logos — SVG upgrade** -- 15 core partner logos + LSP coordinator + FUT leadership card are wired as PNGs in `public/logos/partner_logos/`. Replace with SVGs where available for crisp scaling. Associated partners section removed from Partners page (no logos available; confirm with coordinator if it should return).
+- [ ] **[Content] Resources — wire remaining deliverable Drive links** -- D1.1 and D5.1 are linked; D5.2 has "You are here!" status. Add `href: 'https://drive.google.com/...'` to each remaining deliverable in the `deliverables` array in `src/pages/Resources.tsx` as files are published to Drive.
+
+- [ ] **[Assets] Partner logos — SVG upgrade** -- 14 core partner logo entries + LSP coordinator + FUT leadership card are wired as PNGs in `public/logos/partner_logos/`. Replace with SVGs where available for crisp scaling. Associated partners section removed from Partners page (no logos available; confirm with coordinator if it should return). Note: `FFV.png` is preserved on disk but unreferenced — Flora & Fauna Visions was absorbed by The Storytelling Company (TSC) and all responsibilities reassigned.
 
 - [ ] **[Assets] Experience photography** -- Need real photos for Snapsting Festival (Viborg) and Le Pavillon (Namur). Files: `src/pages/Pilots.tsx` (the Experiences page).
 

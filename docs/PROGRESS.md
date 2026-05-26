@@ -41,6 +41,7 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 - [x] `src/main.tsx` + `src/App.tsx` with BrowserRouter and Layout wrapper
 - [x] `assets/` directory structure (`img/`, `logos/`, `icons/`) — to populate
 - [x] `.gitignore` (node_modules, dist, .env, .DS_Store)
+- [x] Favicon wired in `index.html` — `public/logos/favicon.svg` (primary, with `prefers-color-scheme` CSS that fills `#202124` on light tabs and `#F7F3E0` on dark tabs in Chrome/Firefox), `public/logos/favicon.png` (499×500 fallback for browsers without SVG-favicon support). SVG geometry inverted from the source export so the figure is solid-filled and the background is transparent. Cache-busting query (`?v=2`) on both link tags. Safari ignores the dark-mode CSS and renders the SVG with the default fill attribute (`#202124`)
 
 ### Header & Navigation
 - [x] Sticky header component (`src/components/Header/Header.tsx`) — translucent charcoal + blur, lilac accents
@@ -62,10 +63,11 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 - [ ] Dual-track infographic (commission or build as SVG/animation)
 
 ### Partners Page
-- [x] Partners page (`src/pages/Partners.tsx`) — LSP (coordinator) + FUT (Communication & Dissemination) leadership row + 14 core partners with real logos, names, and outbound URLs
+- [x] Partners page (`src/pages/Partners.tsx`) — LSP (coordinator) + FUT (Communication & Dissemination) leadership row + 14 core partner entries with real logos, names, and outbound URLs
 - [x] Per-logo sizing system (`large?: boolean`) — zero padding for logos that need full card width (FUT, GPI, KIKK, NPIAT, TPL); applied on Partners page and propagated to About page chips and LogoMarquee
 - [x] LogoMarquee (`src/components/LogoMarquee/LogoMarquee.tsx`) — updated to 4-tier size system (`sm/md/lg/xl`) per logo; synced partner list (added KIKK_, TAW, corrected VIB/VIB_ mapping)
 - [x] About page + Resources page partner logo chips use same `largeLogos` set for consistent sizing across the site
+- [x] **FFV → TSC consortium change** — Flora & Fauna Visions was absorbed by The Storytelling Company. All site-wide references migrated: Partners.tsx (FFV card removed; TSC already present), LogoMarquee, About page approach cards, Resources page (WP2 lead, all WP partner arrays, T2 task leads, MS3/MS4 of WP2, D2.2 / D2.3), ProjectTimeline tags, dual-track chart (LEAD label + partner tag arrays), and `public/grant-data.md` (canonical record updated; FFV preserved as PDF alias for grant-document traceability). `public/logos/partner_logos/FFV.png` left on disk as an unreferenced archive in case the rollback is ever needed.
 
 ### Experiences Page
 - [x] Experiences index (`src/pages/Pilots.tsx`) at `/experiences` — Snapsting + Le Pavillon cards
@@ -106,12 +108,16 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 ### Resources Page
 - [x] Resources page (`src/pages/Resources.tsx`) at `/resources` — cream bg (`#F7F3E0`), no Dither, opts out via `NO_DITHER_ROUTES`
 - [x] Full EU grant data: 5 WPs, 22 tasks (5 groups), 20 milestones, 19 deliverables, 21 events — sourced from CREA-CULT-2025-COOP-3 application; events numbered E1–E21 sequentially by date (E1–E6 dated public events in chronological order, E7–E21 remaining activities)
-- [x] Tabbed interface — WPs / Tasks / Milestones / Deliverables / Events; underline indicator, horizontal scroll on mobile
+- [x] Tabbed interface — WPs / Tasks / Milestones / Deliverables / Events / Media & Brand; underline indicator, wraps on mobile (no scroll hijack)
 - [x] WP accordions with objectives list + partner logo chips (`filter: invert(1)` for cream bg)
 - [x] Task group accordions with inner task rows (expandable descriptions)
 - [x] Milestones sorted chronologically (MS01–MS20), past dates highlighted green (`#16a34a`) automatically via `isPast()` helper
-- [x] Deliverables sorted by due month, Pending / Download state per row
+- [x] Deliverables sorted by due month; three states: Pending / "Access file →" (Google Drive link) / custom `status` text (e.g. "You are here!")
+- [x] D1.1 and D5.1 linked to Google Drive; D5.2 status set to "You are here!" (this site is the deliverable)
+- [x] Media / Brand tab — `MediaItem` type, `mediaItems` array; D5.1.1 Brand assets linked to Drive folder
+- [x] Decision: deliverable files hosted on Google Drive (partners can upload without a deploy); `href` field on each deliverable entry is the only thing to update when a new file is ready
 - [x] Canonical grant data reference at `public/grant-data.md`
+- [ ] Wire `href` on remaining deliverables as files are published to Drive
 
 ### Footer
 - [x] Footer component (`src/components/Footer/Footer.tsx`) — 3-column, quick links, EU credit + co-funded logo

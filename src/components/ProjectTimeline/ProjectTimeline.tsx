@@ -147,8 +147,8 @@ const DEFAULT_ITEMS: TimelineItem[] = [
   { id: 'd5-10',  date: '2028-06-01', type: 'deliverable', title: 'D5.10 · Final Future Design Report',       tag: 'WP5 · FUT · M29',   description: 'Digital platform showcasing project results and long-term potential. AI-driven media tools personalise content in 10 EU languages.' },
 
   /* ── Key public events ───────────────────────────────────── */
-  { id: 'e1',    date: '2026-05-01', type: 'event',       title: 'E1 · Youth Sprint: Future Worlds Builder',  tag: 'Sprint · Gothenburg · 80 pax',      description: 'User-centric sprint focused on digital fluency and curiosity. 3 days.' },
-  { id: 'e2',    date: '2026-06-01', type: 'event',       title: 'E2 · Neurodivergent Sprint',                tag: 'Sprint · Berlin · 40 pax',          description: 'Non-linear navigation; sensory balance and nonlinear engagement. 2 days.' },
+  { id: 'e1',    date: '2026-06-01', type: 'event',       title: 'E1 · Neurodivergent Sprint',                tag: 'Sprint · Berlin · 40 pax',          description: 'Non-linear navigation; sensory balance and nonlinear engagement. 2 days.' },
+  { id: 'e2',    date: '2026-09-01', type: 'event',       title: 'E2 · Youth Sprint: Future Worlds Builder',  tag: 'Sprint · Gothenburg · 80 pax',      description: 'User-centric sprint focused on digital fluency and curiosity. 3 days.' },
   { id: 'e3',    date: '2026-11-01', type: 'event',       title: 'E3 · Snapsting Exhibition Opens',           tag: 'Exhibition · Viborg · 150 000 pax', description: 'The Snapsting immersive experience opens to the public at Museum Viborg. Three-year run.' },
   { id: 'e4',    date: '2026-11-01', type: 'event',       title: 'E4 · Echoes of the Future Conference',      tag: 'Conference · Viborg · 300 pax',     description: 'Bridging cultural heritage and immersive innovation. Conference + panel at The Animation Festival.' },
   { id: 'e5',    date: '2027-10-01', type: 'event',       title: 'E5 · Public Launch · KIKK Festival',        tag: 'Panel · Namur · 150 pax',           description: 'High-visibility launch of the immersive experience at KIKK Festival 2027. Consortium panel.' },
