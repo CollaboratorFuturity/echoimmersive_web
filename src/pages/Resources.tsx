@@ -367,16 +367,6 @@ const events: Event[] = [
 ]
 
 // ────────────────────────────────────────────────────────────────────────────
-// Media / Brand assets
-// ────────────────────────────────────────────────────────────────────────────
-type MediaItem = { code: string; title: string; href: string; description?: string }
-
-const mediaItems: MediaItem[] = [
-  { code: 'D5.1.1', title: 'Brand assets', href: 'https://drive.google.com/drive/folders/1PtPAB1rlWCtLkisEru0Pc_lZA7BTO2Y_?usp=sharing',
-    description: 'Official logos, colour palette, typography, and visual identity files for the Immersive ECHO project.' },
-]
-
-// ────────────────────────────────────────────────────────────────────────────
 // Reusable accordion (used for WP rows + outer Task groups)
 // ────────────────────────────────────────────────────────────────────────────
 function Accordion({
@@ -837,40 +827,8 @@ export default function Resources() {
 
         {/* ── Media / Brand ────────────────────────────────────────── */}
         {activeTab === 'media' && (
-          <div className="border-t border-b" style={{ borderColor: 'rgba(32,33,36,0.12)' }}>
-            {mediaItems.map(item => (
-              <div
-                key={item.code}
-                className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 py-4 border-b last:border-0"
-                style={{ borderColor: 'rgba(32,33,36,0.08)', fontFamily: 'Roboto, sans-serif' }}
-              >
-                <span
-                  className="text-xs font-bold tracking-wider shrink-0"
-                  style={{ fontFamily: 'JetBrains Mono, monospace', color: '#8843A3', width: '3.5rem' }}
-                >
-                  {item.code}
-                </span>
-                <div className="flex-1">
-                  <p className="text-sm md:text-base font-semibold mb-1" style={{ color: '#202124', fontFamily: 'Montserrat, sans-serif' }}>
-                    {item.title}
-                  </p>
-                  {item.description && (
-                    <p className="text-xs md:text-sm leading-relaxed" style={{ color: 'rgba(32,33,36,0.7)' }}>
-                      {item.description}
-                    </p>
-                  )}
-                </div>
-                <a
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs font-bold uppercase tracking-wider hover:opacity-70 transition-opacity shrink-0"
-                  style={{ fontFamily: 'Montserrat, sans-serif', color: '#8843A3' }}
-                >
-                  Access file →
-                </a>
-              </div>
-            ))}
+          <div className="py-12 text-center" style={{ color: 'rgba(32,33,36,0.4)', fontFamily: 'Montserrat, sans-serif', fontSize: '0.875rem', letterSpacing: '0.05em' }}>
+            Coming soon
           </div>
         )}
 
