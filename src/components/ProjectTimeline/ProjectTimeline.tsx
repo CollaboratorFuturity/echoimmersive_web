@@ -28,8 +28,8 @@ export type TimelineItemType = 'deliverable' | 'milestone' | 'event'
 
 export type TimelineItem = {
   id: string
-  /** ISO YYYY-MM-DD, YYYY-MM, or "Mon YYYY". */
-  date: string
+  /** ISO YYYY-MM-DD, YYYY-MM, or "Mon YYYY". Omit for unscheduled items — they appear in the Index only, not the grid. */
+  date?: string
   type: TimelineItemType
   title: string
   description?: string
@@ -70,6 +70,7 @@ const fmtFullDate = (d: Date) => `${d.getDate()} ${MONTH_FULL[d.getMonth()]} ${d
 const fmtRange = (a: Date, b: Date) => `${fmtMonth(a)} — ${fmtMonth(b)}`
 
 function classify(item: TimelineItem, today: Date): 'done'|'in-progress'|'upcoming' {
+  if (!item.date) return 'upcoming'
   if (item.status) return item.status
   const d = parseDate(item.date)
   const sameMonth = d.getFullYear()===today.getFullYear() && d.getMonth()===today.getMonth()
@@ -103,26 +104,26 @@ const TYPE_GLYPH: Record<TimelineItemType, string> = {
 
 const DEFAULT_ITEMS: TimelineItem[] = [
   /* ── Milestones ──────────────────────────────────────────── */
-  { id: 'ms1-1',  date: '2026-02-01', type: 'milestone',   title: 'MS1 · Consortium Alignment & Kickoff',     tag: 'WP1 · LSP · M1',    description: 'All partners aligned around goals, methods, roles, and reporting at project start.' },
-  { id: 'ms1-2',  date: '2026-04-01', type: 'milestone',   title: 'MS1 · Needs-based design framework',       tag: 'WP2 · TPL · M3',    description: 'A strategic design brief based on user journeys, needs, behaviours, institutional inputs, and societal trends.' },
-  { id: 'ms1-3',  date: '2026-04-01', type: 'milestone',   title: 'MS1 · Concept & Narrative Finalised',      tag: 'WP3 · VIB · M3',    description: 'Core concept, narrative, full script, and storyboard for Snapsting completed through an iterative process.' },
-  { id: 'ms1-5',  date: '2026-04-01', type: 'milestone',   title: 'MS1 · Inter-Project Exchange Network',     tag: 'WP5 · ID20 · M3',   description: 'Network of collaboration with other EU-funded projects formally initiated.' },
-  { id: 'ms2-2',  date: '2026-05-01', type: 'milestone',   title: 'MS2 · Lab Operational, First Prototypes',  tag: 'WP2 · NPIAT · M4',  description: 'Experimental Lab fully operational; initial immersive prototypes tested and reviewed.' },
-  { id: 'ms3-2',  date: '2026-07-01', type: 'milestone',   title: 'MS3 · Inclusive Design Sprints Done',      tag: 'WP2 · TSC · M6',    description: 'All four inclusive co-creation sprints completed; findings integrated into design iterations.' },
-  { id: 'ms2-3',  date: '2026-10-01', type: 'milestone',   title: 'MS2 · Snapsting Production Complete',      tag: 'WP3 · VIB · M9',    description: 'All elements of Snapsting finalised, including content, technology, and spatial design.' },
-  { id: 'ms3-3',  date: '2026-11-01', type: 'milestone',   title: 'MS3 · Snapsting Installed at Viborg',      tag: 'WP3 · VIB · M10',   description: 'Snapsting fully installed and running on-site at Museum Viborg.' },
-  { id: 'ms4-3',  date: '2026-11-01', type: 'milestone',   title: 'MS4 · Consortium Meeting & Panel',         tag: 'WP3 · VIB · M10',   description: 'All consortium partners gather at Viborg, with a panel talk at The Animation Festival.' },
-  { id: 'ms2-1',  date: '2027-01-01', type: 'milestone',   title: 'MS2 · Mid-Term Coordination Review',       tag: 'WP1 · LSP · M12',   description: 'Review of progress, risks, collaboration quality, and resource use at midpoint.' },
-  { id: 'ms2-5',  date: '2027-04-01', type: 'milestone',   title: 'MS2 · Mid-Term Impact Review',             tag: 'WP5 · FUT · M15',   description: 'Halfway-point review of communication, knowledge transfer, stakeholder engagement, and dissemination reach.' },
-  { id: 'ms1-4',  date: '2027-09-01', type: 'milestone',   title: 'MS1 · Deployment Framework & Business Model', tag: 'WP4 · KIKK · M20', description: 'Strategies for public deployment established alongside a sustainable business model co-developed with partners.' },
-  { id: 'ms4-2',  date: '2027-09-01', type: 'milestone',   title: 'MS4 · Final Concepts Ready',               tag: 'WP2 · TSC · M20',   description: 'Prototypes evolved based on testing; final immersive experiences approved for public deployment.' },
-  { id: 'ms2-4',  date: '2027-11-01', type: 'milestone',   title: 'MS2 · Public Testbed Open at Le Pavillon', tag: 'WP4 · KIKK · M22',  description: 'Initial venue fully fitted, show control validated; doors opened to the public (KIKK Festival, Oct 2027).' },
-  { id: 'ms3-4',  date: '2027-11-01', type: 'milestone',   title: 'MS3 · Cross-Venue Analytics Live',         tag: 'WP4 · TPL · M22',   description: 'Central dashboard aggregating real-time visitor flow, engagement, and accessibility data goes live.' },
-  { id: 'ms5-3',  date: '2027-11-01', type: 'milestone',   title: 'MS5 · Snapsting Adapted for Le Pavillon',  tag: 'WP3 · VIB · M22',   description: 'Snapsting tailored for Le Pavillon, with adjustments to narrative, technical setup, and spatial design.' },
-  { id: 'ms3-5',  date: '2028-03-01', type: 'milestone',   title: 'MS3 · Capacity Building Resources Final',  tag: 'WP5 · FUT · M26',   description: 'Open Learning Toolkit, How-to ECHO Guide, 5D TimeMap, and Futuremakers Toolkits completed and distributed.' },
-  { id: 'ms4-5',  date: '2028-05-01', type: 'milestone',   title: 'MS4 · Final Impact Dissemination',         tag: 'WP5 · FUT · M28',   description: 'Final Future Design Report summarising strategic foresight outcomes and long-term pathways.' },
-  { id: 'ms4-4',  date: '2028-06-01', type: 'milestone',   title: 'MS4 · Operational Feasibility Reported',   tag: 'WP4 · KIKK · M29',  description: 'Cost, staffing, and logistics analysed to support future adoption and scale-up.' },
-  { id: 'ms3-1',  date: '2028-07-01', type: 'milestone',   title: 'MS3 · Final Coordination Summary',         tag: 'WP1 · LSP · M30',   description: 'Strategic wrap-up of project delivery, including key learnings on coordination and decision-making.' },
+  { id: 'ms1-1',  date: '2026-02-01', type: 'milestone',   title: 'MS1.1 · Consortium Alignment & Kickoff',     tag: 'WP1 · LSP · M1',    description: 'All partners aligned around goals, methods, roles, and reporting at project start.' },
+  { id: 'ms1-2',  date: '2026-04-01', type: 'milestone',   title: 'MS2.1 · Needs-based design framework',       tag: 'WP2 · TPL · M3',    description: 'A strategic design brief based on user journeys, needs, behaviours, institutional inputs, and societal trends.' },
+  { id: 'ms1-3',  date: '2026-04-01', type: 'milestone',   title: 'MS3.1 · Concept & Narrative Finalised',      tag: 'WP3 · VIB · M3',    description: 'Core concept, narrative, full script, and storyboard for Snapsting completed through an iterative process.' },
+  { id: 'ms1-5',  date: '2026-04-01', type: 'milestone',   title: 'MS5.1 · Inter-Project Exchange Network',     tag: 'WP5 · ID20 · M3',   description: 'Network of collaboration with other EU-funded projects formally initiated.' },
+  { id: 'ms2-2',  date: '2026-05-01', type: 'milestone',   title: 'MS2.2 · Lab Operational, First Prototypes',  tag: 'WP2 · NPIAT · M4',  description: 'Experimental Lab fully operational; initial immersive prototypes tested and reviewed.' },
+  { id: 'ms3-2',  date: '2026-07-01', type: 'milestone',   title: 'MS2.3 · Inclusive Design Sprints Done',      tag: 'WP2 · TSC · M6',    description: 'All four inclusive co-creation sprints completed; findings integrated into design iterations.' },
+  { id: 'ms2-3',  date: '2026-10-01', type: 'milestone',   title: 'MS3.2 · Snapsting Production Complete',      tag: 'WP3 · VIB · M9',    description: 'All elements of Snapsting finalised, including content, technology, and spatial design.' },
+  { id: 'ms3-3',  date: '2026-11-01', type: 'milestone',   title: 'MS3.3 · Snapsting Installed at Viborg',      tag: 'WP3 · VIB · M10',   description: 'Snapsting fully installed and running on-site at Museum Viborg.' },
+  { id: 'ms4-3',  date: '2026-09-01', type: 'milestone',   title: 'MS3.4 · Consortium Meeting & Panel',         tag: 'WP3 · VIB · M8',    description: 'All consortium partners gather at Viborg, with a panel talk at The Animation Festival.' },
+  { id: 'ms2-1',  date: '2027-01-01', type: 'milestone',   title: 'MS1.2 · Mid-Term Coordination Review',       tag: 'WP1 · LSP · M12',   description: 'Review of progress, risks, collaboration quality, and resource use at midpoint.' },
+  { id: 'ms2-5',  date: '2027-04-01', type: 'milestone',   title: 'MS5.2 · Mid-Term Impact Review',             tag: 'WP5 · FUT · M15',   description: 'Halfway-point review of communication, knowledge transfer, stakeholder engagement, and dissemination reach.' },
+  { id: 'ms1-4',  date: '2027-09-01', type: 'milestone',   title: 'MS4.1 · Deployment Framework & Business Model', tag: 'WP4 · KIKK · M20', description: 'Strategies for public deployment established alongside a sustainable business model co-developed with partners.' },
+  { id: 'ms4-2',  date: '2027-08-01', type: 'milestone',   title: 'MS2.4 · Final Concepts Ready',               tag: 'WP2 · TSC · M19',   description: 'Prototypes evolved based on testing; final immersive experiences approved for public deployment.' },
+  { id: 'ms2-4',  date: '2027-10-01', type: 'milestone',   title: 'MS4.2 · Public Testbed Open at Le Pavillon', tag: 'WP4 · KIKK · M21',  description: 'Initial venue fully fitted, show control validated; doors opened to the public (KIKK Festival, Oct 2027).' },
+  { id: 'ms3-4',  date: '2027-10-01', type: 'milestone',   title: 'MS4.3 · Cross-Venue Analytics Live',         tag: 'WP4 · TPL · M21',   description: 'Central dashboard aggregating real-time visitor flow, engagement, and accessibility data goes live.' },
+  { id: 'ms5-3',  date: '2027-08-01', type: 'milestone',   title: 'MS3.5 · Snapsting Adapted for Le Pavillon',  tag: 'WP3 · VIB · M19',   description: 'Snapsting tailored for Le Pavillon, with adjustments to narrative, technical setup, and spatial design.' },
+  { id: 'ms3-5',  date: '2028-03-01', type: 'milestone',   title: 'MS5.3 · Capacity Building Resources Final',  tag: 'WP5 · FUT · M26',   description: 'Open Learning Toolkit, How-to ECHO Guide, 5D TimeMap, and Futuremakers Toolkits completed and distributed.' },
+  { id: 'ms4-5',  date: '2028-05-01', type: 'milestone',   title: 'MS5.4 · Final Impact Dissemination',         tag: 'WP5 · FUT · M28',   description: 'Final Future Design Report summarising strategic foresight outcomes and long-term pathways.' },
+  { id: 'ms4-4',  date: '2028-06-01', type: 'milestone',   title: 'MS4.4 · Operational Feasibility Reported',   tag: 'WP4 · KIKK · M29',  description: 'Cost, staffing, and logistics analysed to support future adoption and scale-up.' },
+  { id: 'ms3-1',  date: '2028-07-01', type: 'milestone',   title: 'MS1.3 · Final Coordination Summary',         tag: 'WP1 · LSP · M30',   description: 'Strategic wrap-up of project delivery, including key learnings on coordination and decision-making.' },
 
   /* ── Deliverables ────────────────────────────────────────── */
   { id: 'd1-1',   date: '2026-03-01', type: 'deliverable', title: 'D1.1 · Project Management Handbook',       tag: 'WP1 · LSP · M2',    description: 'A practical guide outlining vision, internal coordination tools, reporting structure, partner responsibilities, and shared workflows.' },
@@ -133,26 +134,27 @@ const DEFAULT_ITEMS: TimelineItem[] = [
   { id: 'd1-2',   date: '2027-02-01', type: 'deliverable', title: 'D1.2 · Mid-Term Coordination & Risk Report', tag: 'WP1 · LSP · M13',  description: 'Evaluation of progress, coordination quality, risk status, and partner self-assessments with recommendations.' },
   { id: 'd5-3',   date: '2027-04-01', type: 'deliverable', title: 'D5.3 · Mid-Term Impact & Dissemination',   tag: 'WP5 · FUT · M15',   description: 'Comprehensive halfway review of impact, dissemination, engagement, institutional uptake, and cross-sector collaboration.' },
   { id: 'd5-6',   date: '2027-04-01', type: 'deliverable', title: 'D5.6 · 5D TimeMap of Heritage Sites',      tag: 'WP5 · FUT · M15',   description: 'Interactive digital map linking European heritage sites with five layers — spatial, temporal, artistic, political, linguistic. Available in 10 EU languages.' },
-  { id: 'd2-2',   date: '2027-09-01', type: 'deliverable', title: 'D2.2 · Final Immersive Experience Designs', tag: 'WP2 · TSC · M20',  description: 'Full immersive experience packages for public deployment — narratives, spatial / interaction designs, technical setups, onboarding flows, accessibility.' },
-  { id: 'd3-2',   date: '2027-11-01', type: 'deliverable', title: 'D3.2 · Adapted Snapsting for Le Pavillon', tag: 'WP3 · VIB · M22',   description: 'Snapsting adapted for Le Pavillon with updated narrative, interaction and spatial design, technical setup, and operational guidelines.' },
-  { id: 'd5-4',   date: '2027-11-01', type: 'deliverable', title: 'D5.4 · Futuremakers Toolkit',              tag: 'WP5 · FUT · M22',   description: 'Hybrid (physical + digital) toolkit of participatory techniques and guided activities for cultural professionals. 10 EU languages.' },
-  { id: 'd5-5',   date: '2027-11-01', type: 'deliverable', title: 'D5.5 · Outreach Platform',                 tag: 'WP5 · FUT · M22',   description: 'AI-augmented two-way communication platform with live KPI dashboard. AI agent personas: museum guide, historical figure, fictitious mascot.' },
-  { id: 'd5-7',   date: '2027-11-01', type: 'deliverable', title: 'D5.7 · Timetravel Companion Prototype',    tag: 'WP5 · FUT · M22',   description: 'AI-powered guide enriching museum visits via voice interaction, contextual storytelling, optional holographic content. 100 custom devices.' },
+  { id: 'd2-2',   date: '2027-08-01', type: 'deliverable', title: 'D2.2 · Final Immersive Experience Designs', tag: 'WP2 · TSC · M19',  description: 'Full immersive experience packages for public deployment — narratives, spatial / interaction designs, technical setups, onboarding flows, accessibility.' },
+  { id: 'd3-2',   date: '2027-08-01', type: 'deliverable', title: 'D3.2 · Adapted Snapsting for Le Pavillon', tag: 'WP3 · VIB · M19',   description: 'Snapsting adapted for Le Pavillon with updated narrative, interaction and spatial design, technical setup, and operational guidelines.' },
+  { id: 'd5-4',   date: '2027-10-01', type: 'deliverable', title: 'D5.4 · Futuremakers Toolkit',              tag: 'WP5 · FUT · M21',   description: 'Hybrid (physical + digital) toolkit of participatory techniques and guided activities for cultural professionals. 10 EU languages.' },
+  { id: 'd5-5',   date: '2027-10-01', type: 'deliverable', title: 'D5.5 · Outreach Platform',                 tag: 'WP5 · FUT · M21',   description: 'AI-augmented two-way communication platform with live KPI dashboard. AI agent personas: museum guide, historical figure, fictitious mascot.' },
+  { id: 'd5-7',   date: '2027-10-01', type: 'deliverable', title: 'D5.7 · Timetravel Companion Prototype',    tag: 'WP5 · FUT · M21',   description: 'AI-powered guide enriching museum visits via voice interaction, contextual storytelling, optional holographic content. 100 custom devices.' },
   { id: 'd3-3',   date: '2028-03-01', type: 'deliverable', title: 'D3.3 · Immersive Production Process Report', tag: 'WP3 · VIB · M26', description: 'Walkthrough of the on-site production process — narrative, technical decisions, collaboration model, cultural challenges. A reference for other institutions.' },
   { id: 'd4-1',   date: '2028-03-01', type: 'deliverable', title: 'D4.1 · Operational Deployment Report',     tag: 'WP4 · KIKK · M26',  description: 'Step-by-step documentation of public testbed roll-out: audience logistics, spatial setup, tech adaptation notes.' },
   { id: 'd5-8',   date: '2028-03-01', type: 'deliverable', title: 'D5.8 · Open Learning Toolkit & How-to Guide', tag: 'WP5 · FUT · M26', description: 'Modular, ready-to-use resources built from WP2–WP4 outcomes. AI-supported content generation tailors resources for institutional profiles.' },
   { id: 'd2-3',   date: '2028-05-01', type: 'deliverable', title: 'D2.3 · Final Immersive Experience Evaluation', tag: 'WP2 · TSC · M28', description: 'Comprehensive evaluation: emotional impact, accessibility, system performance, operational sustainability.' },
   { id: 'd4-2',   date: '2028-05-01', type: 'deliverable', title: 'D4.2 · UX & Business Model Summary',       tag: 'WP4 · KIKK · M28',  description: 'Evaluation of audience engagement, onboarding/offboarding flows, and feasibility of business models tested at venue.' },
   { id: 'd5-9',   date: '2028-05-01', type: 'deliverable', title: 'D5.9 · Inter-Project Networking Report',   tag: 'WP5 · ID20 · M28',  description: 'Documents inter-project networking activities — meetings, collaborative events, key outcomes, proposals for ongoing exchange.' },
-  { id: 'd5-10',  date: '2028-06-01', type: 'deliverable', title: 'D5.10 · Final Future Design Report',       tag: 'WP5 · FUT · M29',   description: 'Digital platform showcasing project results and long-term potential. AI-driven media tools personalise content in 10 EU languages.' },
+  { id: 'd5-10',  date: '2028-05-01', type: 'deliverable', title: 'D5.10 · Final Future Design Report',       tag: 'WP5 · FUT · M28',   description: 'Digital platform showcasing project results and long-term potential. AI-driven media tools personalise content in 10 EU languages.' },
 
   /* ── Key public events ───────────────────────────────────── */
-  { id: 'e1',    date: '2026-06-01', type: 'event',       title: 'E1 · Neurodivergent Sprint',                tag: 'Sprint · Berlin · 40 pax',          description: 'Non-linear navigation; sensory balance and nonlinear engagement. 2 days.' },
-  { id: 'e2',    date: '2026-09-01', type: 'event',       title: 'E2 · Youth Sprint: Future Worlds Builder',  tag: 'Sprint · Gothenburg · 80 pax',      description: 'User-centric sprint focused on digital fluency and curiosity. 3 days.' },
-  { id: 'e3',    date: '2026-11-01', type: 'event',       title: 'E3 · Snapsting Exhibition Opens',           tag: 'Exhibition · Viborg · 150 000 pax', description: 'The Snapsting immersive experience opens to the public at Museum Viborg. Three-year run.' },
-  { id: 'e4',    date: '2026-11-01', type: 'event',       title: 'E4 · Echoes of the Future Conference',      tag: 'Conference · Viborg · 300 pax',     description: 'Bridging cultural heritage and immersive innovation. Conference + panel at The Animation Festival.' },
-  { id: 'e5',    date: '2027-10-01', type: 'event',       title: 'E5 · Public Launch · KIKK Festival',        tag: 'Panel · Namur · 150 pax',           description: 'High-visibility launch of the immersive experience at KIKK Festival 2027. Consortium panel.' },
-  { id: 'e6',    date: '2027-11-01', type: 'event',       title: 'E6 · Le Pavillon Exhibition Opens',         tag: 'Exhibition · Namur · 50 000 pax',   description: 'Immersive ECHO exhibition opens to the public at Le Pavillon, Namur.' },
+  { id: 'e1',  date: '2026-09-01', type: 'event', title: 'E1 · Snapsting Exhibition Opens',    tag: 'Exhibition · Viborg · 150 000 pax', description: 'The Snapsting immersive experience opens to the public at Museum Viborg. Three-year run.' },
+  { id: 'e5',  date: '2027-10-01', type: 'event', title: 'E5 · Public Launch · KIKK Festival', tag: 'Panel · Namur · 25 000 pax',         description: 'High-visibility launch of the immersive experience at KIKK Festival 2027. Consortium panel.' },
+  { id: 'e6',  date: '2027-10-01', type: 'event', title: 'E6 · Le Pavillon Exhibition Opens',  tag: 'Exhibition · Namur · 25 000 pax',   description: 'Immersive ECHO exhibition opens to the public at Le Pavillon, Namur.' },
+  /* ── Unscheduled events — index only (no date) ────────── */
+  { id: 'e2',  type: 'event', title: 'E2 · Youth Sprint: Future Worlds Builder',  tag: 'Sprint · Gothenburg · 80 pax',  description: 'User-centric sprint focused on digital fluency and curiosity. 3 days.' },
+  { id: 'e3',  type: 'event', title: 'E3 · Neurodivergent Sprint',                tag: 'Sprint · Berlin · 40 pax',      description: 'Non-linear navigation; sensory balance and nonlinear engagement. 2 days.' },
+  { id: 'e4',  type: 'event', title: 'E4 · Echoes of the Future Conference',      tag: 'Conference · Viborg · 300 pax', description: 'Bridging cultural heritage and immersive innovation. Conference + panel at The Animation Festival.' },
 ]
 
 /* =========================================================
@@ -166,15 +168,17 @@ export default function ProjectTimeline({
   heading = 'Thirty months, in public.',
   lede = 'Immersive ECHO is a 30-month Creative Europe project: design, build, test, scale. Milestones, deliverables, and public events from the consortium of 15 organisations across 10 EU countries. Hover any month to focus; click an entry to read.',
 }: ProjectTimelineProps) {
-  const sorted = useMemo(
-    () => [...items].sort((a, b) => +parseDate(a.date) - +parseDate(b.date)),
-    [items]
-  )
+  const sorted = useMemo(() => {
+    const dated = items.filter(it => !!it.date).sort((a, b) => +parseDate(a.date!) - +parseDate(b.date!))
+    const undated = items.filter(it => !it.date)
+    return [...dated, ...undated]
+  }, [items])
 
   const range = useMemo(() => {
-    if (!sorted.length) return { start: new Date(), end: new Date(), months: [] as Date[] }
-    const start = addMonths(parseDate(sorted[0].date), 0)
-    const lastDate = parseDate(sorted[sorted.length - 1].date)
+    const dated = sorted.filter(it => !!it.date)
+    if (!dated.length) return { start: new Date(), end: new Date(), months: [] as Date[] }
+    const start = addMonths(parseDate(dated[0].date!), 0)
+    const lastDate = parseDate(dated[dated.length - 1].date!)
     const end = addMonths(new Date(lastDate.getFullYear(), lastDate.getMonth(), 1), 0)
     const count = monthsBetween(start, end) + 1
     const months = Array.from({ length: count }, (_, i) => addMonths(start, i))
@@ -183,8 +187,8 @@ export default function ProjectTimeline({
 
   const byMonth = useMemo(() => {
     const m = new Map<string, TimelineItem[]>()
-    sorted.forEach(it => {
-      const k = monthKey(parseDate(it.date))
+    sorted.filter(it => !!it.date).forEach(it => {
+      const k = monthKey(parseDate(it.date!))
       const arr = m.get(k) ?? []
       arr.push(it); m.set(k, arr)
     })
@@ -195,9 +199,9 @@ export default function ProjectTimeline({
   const [activeId, setActiveId] = useState<string | null>(() => {
     if (!sorted.length) return null
     const todayKey = monthKey(today)
-    const inMonth = sorted.find(s => monthKey(parseDate(s.date)) === todayKey)
+    const inMonth = sorted.find(s => s.date && monthKey(parseDate(s.date)) === todayKey)
     if (inMonth) return inMonth.id
-    const after = sorted.find(s => parseDate(s.date) >= today)
+    const after = sorted.find(s => s.date && parseDate(s.date) >= today)
     return (after ?? sorted[0]).id
   })
   const [hoverMonth, setHoverMonth] = useState<string | null>(null)
@@ -513,7 +517,7 @@ function DetailCard({ item, today, onPrev, onNext }: {
   item: TimelineItem; today: Date; onPrev: () => void; onNext: () => void
 }) {
   const status = classify(item, today)
-  const d = parseDate(item.date)
+  const d = item.date ? parseDate(item.date) : null
   return (
     <div className={`pt-detail ${status}`}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20 }}>
@@ -530,7 +534,7 @@ function DetailCard({ item, today, onPrev, onNext }: {
         fontFamily: 'Montserrat, sans-serif', fontSize: 12, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase',
         color: '#DA80FF', marginBottom: 12,
       }}>
-        {fmtFullDate(d)}
+        {d ? fmtFullDate(d) : 'Date to be confirmed'}
       </div>
 
       <h3 className="pt-heading" style={{ fontSize: 28, lineHeight: 1.15, marginBottom: 16 }}>{item.title}</h3>
@@ -557,7 +561,7 @@ function IndexRow({ item, active, today, onSelect }: {
   item: TimelineItem; active: boolean; today: Date; onSelect: () => void
 }) {
   const status = classify(item, today)
-  const d = parseDate(item.date)
+  const d = item.date ? parseDate(item.date) : null
   return (
     <div
       role="listitem"
@@ -569,7 +573,7 @@ function IndexRow({ item, active, today, onSelect }: {
       style={{ outline: 'none' }}
     >
       <span style={{ fontFamily: 'Montserrat, sans-serif', fontSize: 12, fontWeight: 600, letterSpacing: '0.05em', color: 'rgba(247,243,224,0.65)', paddingLeft: 13 }}>
-        {fmtMonth(d).toUpperCase()}
+        {d ? fmtMonth(d).toUpperCase() : 'TBD'}
       </span>
       <span style={{
         display: 'flex', alignItems: 'center', gap: 8,

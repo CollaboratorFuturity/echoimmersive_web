@@ -220,58 +220,52 @@ const taskGroups: TaskGroup[] = [
 type Milestone = { id: string; wp: string; lead: string; due: number; title: string; description: string }
 
 const milestonesRaw: Milestone[] = [
-  { id: 'MS1', wp: 'WP1', lead: 'LSP',   due: 1,  title: 'Consortium Alignment and Kickoff',
+  { id: 'MS1.1', wp: 'WP1', lead: 'LSP',   due: 1,  title: 'Consortium Alignment and Kickoff',
     description: 'All partners aligned around goals, methods, roles and reporting at project start.' },
-  { id: 'MS1', wp: 'WP2', lead: 'TPL',   due: 3,  title: 'Needs-based design framework established',
+  { id: 'MS2.1', wp: 'WP2', lead: 'TPL',   due: 3,  title: 'Needs-based design framework established',
     description: 'A strategic design brief based on user journeys, needs, behaviours, institutional inputs, and societal trends.' },
-  { id: 'MS1', wp: 'WP3', lead: 'VIB',   due: 3,  title: 'Concept & Narrative Development Finalised',
+  { id: 'MS3.1', wp: 'WP3', lead: 'VIB',   due: 3,  title: 'Concept & Narrative Development Finalised',
     description: 'Core concept, narrative, full script, and storyboard for Snapsting completed through an iterative process.' },
-  { id: 'MS1', wp: 'WP5', lead: 'ID20',  due: 3,  title: 'Inter-Project Exchange Network Established',
+  { id: 'MS5.1', wp: 'WP5', lead: 'ID20',  due: 3,  title: 'Inter-Project Exchange Network Established',
     description: 'Network of collaboration with other EU-funded projects formally initiated.' },
-  { id: 'MS2', wp: 'WP2', lead: 'NPIAT', due: 4,  title: 'Lab Operational and First Prototypes Tested',
+  { id: 'MS2.2', wp: 'WP2', lead: 'NPIAT', due: 4,  title: 'Lab Operational and First Prototypes Tested',
     description: 'Experimental Lab fully operational; initial immersive prototypes tested and reviewed.' },
-  { id: 'MS3', wp: 'WP2', lead: 'TSC',   due: 6,  title: 'Inclusive Design Sprint Series Completed',
+  { id: 'MS2.3', wp: 'WP2', lead: 'TSC',   due: 6,  title: 'Inclusive Design Sprint Series Completed',
     description: 'All four inclusive co-creation sprints completed; findings integrated into design iterations.' },
-  { id: 'MS2', wp: 'WP3', lead: 'VIB',   due: 9,  title: 'Final Production Completed',
+  { id: 'MS3.2', wp: 'WP3', lead: 'VIB',   due: 9,  title: 'Final Production Completed',
     description: 'All elements of Snapsting finalised, including content, technology, and spatial design.' },
-  { id: 'MS3', wp: 'WP3', lead: 'VIB',   due: 10, title: 'Experience Installed & Operational',
+  { id: 'MS3.3', wp: 'WP3', lead: 'VIB',   due: 10, title: 'Experience Installed & Operational',
     description: 'Snapsting fully installed and running on-site at Museum Viborg.' },
-  { id: 'MS4', wp: 'WP3', lead: 'VIB',   due: 10, title: 'Consortium Meeting & Panel Talk',
+  { id: 'MS3.4', wp: 'WP3', lead: 'VIB',   due: 8,  title: 'Consortium Meeting & Panel Talk',
     description: 'All consortium partners gather at Viborg, with a panel talk at The Animation Festival.' },
-  { id: 'MS2', wp: 'WP1', lead: 'LSP',   due: 12, title: 'Mid-Term Coordination Review',
+  { id: 'MS1.2', wp: 'WP1', lead: 'LSP',   due: 12, title: 'Mid-Term Coordination Review',
     description: 'Review of progress, risks, collaboration quality, and resource use at midpoint.' },
-  { id: 'MS2', wp: 'WP5', lead: 'FUT',   due: 15, title: 'Mid-Term Impact Review Completed',
+  { id: 'MS5.2', wp: 'WP5', lead: 'FUT',   due: 15, title: 'Mid-Term Impact Review Completed',
     description: 'Halfway-point review evaluating communication, knowledge transfer, stakeholder engagement, and dissemination reach.' },
-  { id: 'MS1', wp: 'WP4', lead: 'KIKK',  due: 20, title: 'Deployment Framework and Business Model Defined',
+  { id: 'MS4.1', wp: 'WP4', lead: 'KIKK',  due: 20, title: 'Deployment Framework and Business Model Defined',
     description: 'Strategies for public deployment established, alongside a sustainable business model co-developed with partners.' },
-  { id: 'MS4', wp: 'WP2', lead: 'TSC',   due: 20, title: 'Prototype Designs Iterated and Final Concepts Ready',
+  { id: 'MS2.4', wp: 'WP2', lead: 'TSC',   due: 19, title: 'Prototype Designs Iterated and Final Concepts Ready',
     description: 'Prototypes evolved based on testing; final immersive experiences approved for public deployment.' },
-  { id: 'MS2', wp: 'WP4', lead: 'KIKK',  due: 22, title: 'Public Testbed Installation Open',
+  { id: 'MS4.2', wp: 'WP4', lead: 'KIKK',  due: 21, title: 'Public Testbed Installation Open',
     description: 'Initial venue fully fitted, show control validated; doors opened to the public (KIKK Festival, Oct 2027).' },
-  { id: 'MS3', wp: 'WP4', lead: 'TPL',   due: 22, title: 'Cross-Venue Analytics Dashboard Live',
+  { id: 'MS4.3', wp: 'WP4', lead: 'TPL',   due: 21, title: 'Cross-Venue Analytics Dashboard Live',
     description: 'Central dashboard aggregating real-time visitor flow, engagement, and accessibility data goes live.' },
-  { id: 'MS5', wp: 'WP3', lead: 'VIB',   due: 22, title: 'Snapsting Adapted for Le Pavillon Deployment',
+  { id: 'MS3.5', wp: 'WP3', lead: 'VIB',   due: 19, title: 'Snapsting Adapted for Le Pavillon Deployment',
     description: 'Snapsting tailored for Le Pavillon, with adjustments to narrative, technical setup, and spatial design.' },
-  { id: 'MS3', wp: 'WP5', lead: 'FUT',   due: 26, title: 'Capacity Building Resources Finalised',
+  { id: 'MS5.3', wp: 'WP5', lead: 'FUT',   due: 26, title: 'Capacity Building Resources Finalised',
     description: 'Open Learning Toolkit, How-to ECHO Guide, 5D TimeMap, and Futuremakers Toolkits completed and distributed.' },
-  { id: 'MS4', wp: 'WP5', lead: 'FUT',   due: 28, title: 'Final Impact Dissemination',
+  { id: 'MS5.4', wp: 'WP5', lead: 'FUT',   due: 28, title: 'Final Impact Dissemination',
     description: 'Final Future Design Report summarising strategic foresight outcomes and long-term pathways.' },
-  { id: 'MS4', wp: 'WP4', lead: 'KIKK',  due: 29, title: 'Operational & Business Feasibility Reported',
+  { id: 'MS4.4', wp: 'WP4', lead: 'KIKK',  due: 29, title: 'Operational & Business Feasibility Reported',
     description: 'Cost, staffing, and logistics analysed to support future adoption and scale-up.' },
-  { id: 'MS3', wp: 'WP1', lead: 'LSP',   due: 30, title: 'Final Coordination Summary',
+  { id: 'MS1.3', wp: 'WP1', lead: 'LSP',   due: 30, title: 'Final Coordination Summary',
     description: 'Strategic wrap-up of project delivery, including key learnings on coordination and decision-making.' },
 ]
 
-// Sort by due month ASC, then by WP number ASC as tiebreaker
-// (so a WP1 milestone comes before a WP5 milestone if they share a due month).
-// Then renumber globally as MS01..MS20 so reviewers can reference a single
-// project-wide milestone index. The original WP-local code (e.g. "MS1 of WP3")
-// stays in `public/grant-data.md` for grant-document traceability.
 const wpNum = (wp: string) => parseInt(wp.replace('WP', ''), 10) || 0
 
 const milestones = [...milestonesRaw]
   .sort((a, b) => (a.due - b.due) || (wpNum(a.wp) - wpNum(b.wp)))
-  .map((m, i) => ({ ...m, displayId: `MS${String(i + 1).padStart(2, '0')}` }))
 
 // ────────────────────────────────────────────────────────────────────────────
 // Deliverables — full PDF data
@@ -296,13 +290,13 @@ const deliverables: Deliverable[] = [
     description: '[ENG] Evaluation of progress, coordination quality, risk status, and partner self-assessments. Includes recommendations for improvements.' },
   { code: 'D2.1', wp: 'WP2', lead: 'TPL',  type: 'R',           level: 'PU', due: 4,  title: 'Needs-Driven Immersive Design Brief',
     description: '[ENG] A clear strategic guide based on user insights, institutional needs, and societal shifts — defining design challenges, user personas, emotional goals, and technical assumptions.' },
-  { code: 'D2.2', wp: 'WP2', lead: 'TSC',  type: 'DEM',         level: 'PU', due: 20, title: 'Final Immersive Experience Designs',
+  { code: 'D2.2', wp: 'WP2', lead: 'TSC',  type: 'DEM',         level: 'PU', due: 19, title: 'Final Immersive Experience Designs',
     description: '[Language TBD] Full immersive experience packages for public deployment, including narratives, spatial and interaction designs, technical setups, onboarding/offboarding guides, and accessibility solutions.' },
   { code: 'D2.3', wp: 'WP2', lead: 'TSC',  type: 'R',           level: 'PU', due: 28, title: 'Final Immersive Experience Evaluation',
     description: '[ENG] Comprehensive evaluation of user experience, technical feasibility, and economic viability. Includes emotional impact analysis, accessibility review, system performance testing, and operational sustainability checks.' },
   { code: 'D3.1', wp: 'WP3', lead: 'VIB',  type: 'DEM',         level: 'PU', due: 10, title: 'Snapsting Immersive Experience & Documentation',
     description: '[DANISH & ENG] The completed immersive experience installed and running at Viborg Museum. Includes installation blueprints, interaction design files, and documentation for reuse or adaptation.' },
-  { code: 'D3.2', wp: 'WP3', lead: 'VIB',  type: 'DEM',         level: 'PU', due: 22, title: 'Adapted Snapsting Experience Package for Le Pavillon',
+  { code: 'D3.2', wp: 'WP3', lead: 'VIB',  type: 'DEM',         level: 'PU', due: 19, title: 'Adapted Snapsting Experience Package for Le Pavillon',
     description: '[ENG] Adapted version of the Snapsting immersive experience tailored for deployment at Le Pavillon. Includes updated narrative, interaction and spatial design, technical setup, and operational guidelines.' },
   { code: 'D3.3', wp: 'WP3', lead: 'VIB',  type: 'R',           level: 'PU', due: 26, title: 'Immersive Production Process Report',
     description: '[ENG] A practical walkthrough of the on-site production process. Includes narrative development, technical decisions, collaboration model, and cultural challenges faced — positioned as a reference for other institutions.' },
@@ -316,19 +310,19 @@ const deliverables: Deliverable[] = [
     description: 'A website with a live digital dashboard tracking and visualising KPIs across multiple levels: individual participant contributions, intra-institutional workflows, inter-institutional collaboration, civic engagement score, and broader societal impact. Public section + private areas for institutions, policymakers, and stakeholders.' },
   { code: 'D5.3', wp: 'WP5', lead: 'FUT',  type: 'R',           level: 'PU', due: 15, title: 'Mid-Term Impact & Dissemination Report',
     description: 'Comprehensive review of project impact, dissemination activities, and communication outcomes at the halfway point. Evaluates engagement metrics, institutional uptake, knowledge transfer effectiveness, and cross-sector collaboration.' },
-  { code: 'D5.4', wp: 'WP5', lead: 'FUT',  type: 'R',           level: 'PU', due: 22, title: 'Futuremakers Toolkit',
+  { code: 'D5.4', wp: 'WP5', lead: 'FUT',  type: 'R',           level: 'PU', due: 21, title: 'Futuremakers Toolkit',
     description: 'A hybrid (physical and digital) toolkit comprising participatory techniques, materials, and guided activities that teach cultural professionals to envision more inclusive, resilient futures. Provided in 10 EU languages. Physical: workbooks, card decks, durable playing pieces from sustainable materials. Digital: media content + a multi-user interactive whiteboard.' },
-  { code: 'D5.5', wp: 'WP5', lead: 'FUT',  type: 'DEC',         level: 'PU', due: 22, title: 'Outreach Platform',
+  { code: 'D5.5', wp: 'WP5', lead: 'FUT',  type: 'DEC',         level: 'PU', due: 21, title: 'Outreach Platform',
     description: 'An AI-augmented platform for frictionless two-way communication between project, institutions, and audiences. Includes operational real-time KPI dashboard. Platform in English; AI agents and content in 10 EU languages. Includes AI agent personas (museum guide, historical figure, fictitious mascot) and a tool for institutions to create their own.' },
   { code: 'D5.6', wp: 'WP5', lead: 'FUT',  type: 'DEC',         level: 'PU', due: 15, title: '5D TimeMap of Cultural Heritage Sites',
     description: 'An interactive digital map linking cultural heritage sites across Europe to their respective institutions, enriched with five dimensions: spatial, temporal, and three thematic layers (artistic, political, linguistic). Available onsite, on computers, and on mobile in 10 EU languages.' },
-  { code: 'D5.7', wp: 'WP5', lead: 'FUT',  type: 'DEM',         level: 'PU', due: 22, title: 'Timetravel Companion Prototype',
+  { code: 'D5.7', wp: 'WP5', lead: 'FUT',  type: 'DEM',         level: 'PU', due: 21, title: 'Timetravel Companion Prototype',
     description: 'A functional prototype of the Timetravel Companion — an AI-powered guide that enriches museum visits and immersive installations through voice-based interaction, contextual storytelling, and optional holographic content. Includes app interface, content modules, user testing documentation, and accessibility evaluation in 10 EU languages. 100 custom open-source devices will be built for installations.' },
   { code: 'D5.8', wp: 'WP5', lead: 'FUT',  type: 'R',           level: 'PU', due: 26, title: 'Open Learning Toolkit & How-to ECHO Guide',
     description: 'A package of information, instructions, and tools for new cultural institutions to implement the ECHO toolkit end-to-end. Modular, ready-to-use resources built from WP2–WP4 outcomes, in 10 EU languages.' },
   { code: 'D5.9', wp: 'WP5', lead: 'ID20', type: 'R',           level: 'PU', due: 28, title: 'Inter-Project Networking Report',
     description: 'Comprehensive report documenting inter-project networking activities, including meetings, collaborative events, key outcomes, and proposals for ongoing exchange.' },
-  { code: 'D5.10',wp: 'WP5', lead: 'FUT',  type: 'DEC',         level: 'PU', due: 29, title: 'Final Future Design Report',
+  { code: 'D5.10',wp: 'WP5', lead: 'FUT',  type: 'DEC',         level: 'PU', due: 28, title: 'Final Future Design Report',
     description: "A digital platform showcasing the project's results and long-term potential. AI-driven media tools personalise content for participants and translate project learnings into shareable formats in 10 EU languages." },
 ]
 
@@ -343,8 +337,8 @@ const events: Event[] = [
   { code: 'E2',  wp: 'WP2', name: 'Neurodivergent Sprint: Non-linear navigation',             type: 'User-centric sprint', location: 'Berlin, DE',                  days: 2,    attendees: 40 },
   { code: 'E3',  wp: 'WP3', name: 'The Snapsting Immersive Experience',                       type: 'Exhibition',          location: 'Viborg, DK',                  days: 1095, attendees: '150,000' },
   { code: 'E4',  wp: 'WP5', name: 'Echoes of the Future: Bridging Cultural Heritage and Immersive Innovation', type: 'Conference', location: 'Viborg, DK',          days: 1,    attendees: 300 },
-  { code: 'E5',  wp: 'WP4', name: 'Immersive ECHO: Cultural Heritage for the Future',         type: 'Panel talk',          location: 'Namur, BE',                   days: 1,    attendees: 150 },
-  { code: 'E6',  wp: 'WP4', name: 'Immersive ECHO',                                           type: 'Exhibition',          location: 'Namur, BE',                   days: '—',  attendees: '50,000' },
+  { code: 'E5',  wp: 'WP4', name: 'Immersive ECHO: Cultural Heritage for the Future',         type: 'Panel talk',          location: 'Namur, BE',                   days: 1,    attendees: '25,000' },
+  { code: 'E6',  wp: 'WP4', name: 'Immersive ECHO',                                           type: 'Exhibition',          location: 'Namur, BE',                   days: '—',  attendees: '25,000' },
   // Remaining WP2 events
   { code: 'E7',  wp: 'WP2', name: 'Speculative prototyping',                                  type: 'Workshop',            location: 'Paris, FR',                   days: 2,    attendees: 15 },
   { code: 'E8',  wp: 'WP2', name: 'Sensory Mapping & Interaction',                            type: 'Workshop',            location: 'Gothenburg, SE',               days: 2,    attendees: 12 },
@@ -724,16 +718,15 @@ export default function Resources() {
           <div className="border-t border-b" style={{ borderColor: 'rgba(32,33,36,0.12)' }}>
             {milestones.map(m => (
               <div
-                key={m.displayId}
+                key={m.id}
                 className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 py-4 border-b last:border-0"
                 style={{ borderColor: 'rgba(32,33,36,0.08)', fontFamily: 'Roboto, sans-serif' }}
               >
                 <span
                   className="text-xs font-bold tracking-wider shrink-0"
                   style={{ fontFamily: 'JetBrains Mono, monospace', color: '#8843A3', width: '3.5rem' }}
-                  title={`Originally ${m.id} of ${m.wp} in the grant document`}
                 >
-                  {m.displayId}
+                  {m.id}
                 </span>
                 <div className="flex-1">
                   <p className="text-sm md:text-base font-semibold mb-1" style={{ color: '#202124', fontFamily: 'Montserrat, sans-serif' }}>

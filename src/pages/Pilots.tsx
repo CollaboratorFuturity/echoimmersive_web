@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom'
 const pilots = [
   {
     id: 'snapsting',
-    badge: 'PRIMARY TESTBED',
-    title: 'Viborg Animation Festival',
+    badge: 'CULTURAL HERITAGE INSTITUTION',
+    title: 'Viborg Museum',
     location: 'Viborg, Denmark',
     image: '/img/VIB_museum.jpg',
-    imageAlt: 'Viborg Animation Festival',
+    imageAlt: 'Viborg Museum',
     description:
-      'Viborg Animation Festival draws 20,000 visitors yearly, organized by The Animation Workshop / VIA University College in Denmark. Within ECHO, it hosts masterclasses and talks bridging immersive storytelling with cultural heritage.',
+      'Viborg Museum is the cultural history museum of the Viborg area in Denmark, presenting the region’s heritage from prehistory to the present day. Within ECHO, the museum will host the immersive installation, bringing ECHO’s approach to immersive storytelling to its audiences.',
     activitiesHref: '/experiences/snapsting',
   },
   {
