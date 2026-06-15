@@ -501,7 +501,7 @@ function Lane({ lane, months, byMonth, activeId, setActiveId, hoverMonth, setHov
                     className={`pt-pin ${it.type} ${status} ${activeId === it.id ? 'active' : ''}`}
                     style={{ top: `calc(50% + ${offsetY}px)` }}
                     aria-label={`${TYPE_LABEL[it.type]}: ${it.title}`}
-                    title={`${it.title} — ${fmtMonth(parseDate(it.date))}`}
+                    title={it.date ? `${it.title} — ${fmtMonth(parseDate(it.date))}` : it.title}
                   />
                 )
               })}

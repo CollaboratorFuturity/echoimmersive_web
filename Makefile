@@ -1,4 +1,4 @@
-.PHONY: build dev up down rebuild logs api-logs db-logs migrate clean
+.PHONY: build dev check up down rebuild logs api-logs db-logs migrate clean
 
 # Local development: backend + db in containers, frontend via npm
 build:
@@ -6,6 +6,11 @@ build:
 
 dev:
 	npm run dev
+
+# Type-check the frontend without emitting (verifies TypeScript passes)
+check:
+	npx tsc --noEmit
+	@echo "Type-check passed!"
 
 # Stop just the dev backend stack
 stop:
