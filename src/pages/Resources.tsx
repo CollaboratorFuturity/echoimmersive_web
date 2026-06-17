@@ -378,6 +378,8 @@ const mediaItems: MediaItem[] = [
     href: 'https://drive.google.com/file/d/1aipRDsd8y5r0ASNOyANEOnWpjrHkZzjd/view?usp=drive_link' },
   { title: 'Presentation Template', format: 'Google Slides',
     href: 'https://docs.google.com/presentation/d/12o_PZNR9hFjdBZ1YurXucx4c_--R9b4QeFkU2nLYiEQ/edit?usp=drive_link' },
+  { title: 'Social Media One Pager', format: 'Google Doc',
+    href: 'https://docs.google.com/document/d/1K6K7NkUQXmRP6p17HJotrPlSt9lV5IfTUyUKenX62HY/edit?tab=t.0' },
 ]
 
 // ────────────────────────────────────────────────────────────────────────────
