@@ -361,6 +361,26 @@ const events: Event[] = [
 ]
 
 // ────────────────────────────────────────────────────────────────────────────
+// Media / Brand assets
+// ────────────────────────────────────────────────────────────────────────────
+type MediaItem = { title: string; format: string; href: string; note?: string }
+
+const mediaItems: MediaItem[] = [
+  { title: 'ECHO Brandbook', format: 'Folder', note: 'Now self-hosted on echosystem',
+    href: 'https://drive.google.com/drive/folders/1k7P9NAMtxIi99tK77_h60syF2uTqbS03?usp=sharing' },
+  { title: 'EU Co-funded Flags', format: 'Folder',
+    href: 'https://drive.google.com/drive/folders/16nrPGSc9kYJK-dLtdCyjxaMSVg76PNPL?usp=drive_link' },
+  { title: 'Brand Assets (gradients, logos)', format: 'Folder',
+    href: 'https://drive.google.com/drive/folders/1fgTCWOpPeuKyv-PSCXsYucHR2-Qewk65?usp=drive_link' },
+  { title: 'Reports Templates', format: '.ai',
+    href: 'https://drive.google.com/file/d/1FnNKfZCSrR-KrKMRSM6Y6gWxItNIi_X8/view?usp=drive_link' },
+  { title: 'Social Media Templates', format: '.ai',
+    href: 'https://drive.google.com/file/d/1aipRDsd8y5r0ASNOyANEOnWpjrHkZzjd/view?usp=drive_link' },
+  { title: 'Presentation Template', format: 'Google Slides',
+    href: 'https://docs.google.com/presentation/d/12o_PZNR9hFjdBZ1YurXucx4c_--R9b4QeFkU2nLYiEQ/edit?usp=drive_link' },
+]
+
+// ────────────────────────────────────────────────────────────────────────────
 // Reusable accordion (used for WP rows + outer Task groups)
 // ────────────────────────────────────────────────────────────────────────────
 function Accordion({
@@ -820,8 +840,40 @@ export default function Resources() {
 
         {/* ── Media / Brand ────────────────────────────────────────── */}
         {activeTab === 'media' && (
-          <div className="py-12 text-center" style={{ color: 'rgba(32,33,36,0.4)', fontFamily: 'Montserrat, sans-serif', fontSize: '0.875rem', letterSpacing: '0.05em' }}>
-            Coming soon
+          <div className="border-t border-b" style={{ borderColor: 'rgba(32,33,36,0.12)' }}>
+            {mediaItems.map(item => (
+              <div
+                key={item.title}
+                className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 py-4 border-b last:border-0"
+                style={{ borderColor: 'rgba(32,33,36,0.08)', fontFamily: 'Roboto, sans-serif' }}
+              >
+                <div className="flex-1">
+                  <p className="text-sm md:text-base font-semibold mb-1" style={{ color: '#202124', fontFamily: 'Montserrat, sans-serif' }}>
+                    {item.title}
+                  </p>
+                  {item.note && (
+                    <p className="text-xs md:text-sm leading-relaxed" style={{ color: 'rgba(32,33,36,0.7)' }}>
+                      {item.note}
+                    </p>
+                  )}
+                </div>
+                <span
+                  className="text-xs uppercase tracking-wider shrink-0"
+                  style={{ fontFamily: 'JetBrains Mono, monospace', color: 'rgba(32,33,36,0.5)', minWidth: '7rem' }}
+                >
+                  {item.format}
+                </span>
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-bold uppercase tracking-wider hover:opacity-70 transition-opacity shrink-0"
+                  style={{ fontFamily: 'Montserrat, sans-serif', color: '#8843A3' }}
+                >
+                  Access file →
+                </a>
+              </div>
+            ))}
           </div>
         )}
 
