@@ -1,5 +1,5 @@
 import { useLayoutEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 // ────────────────────────────────────────────────────────────────────────────
 // Date helper — project month → calendar date.
@@ -646,7 +646,9 @@ export default function Resources() {
     return () => { document.body.style.backgroundColor = prev }
   }, [])
 
-  const [activeTab, setActiveTab] = useState<TabId>('wp')
+  const { hash } = useLocation()
+  const initialTab = (TABS.find(t => t.id === hash.replace('#', ''))?.id) ?? 'wp'
+  const [activeTab, setActiveTab] = useState<TabId>(initialTab)
 
   const sortedDeliverables = [...deliverables].sort((a, b) => a.due - b.due)
 

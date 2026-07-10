@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 const navLinks = [
   { to: '/',         label: 'Home',          end: true },
@@ -47,15 +47,13 @@ export default function Header() {
 
         <div className="flex items-center gap-3">
           {/* CTA — hidden on small mobile, shown sm+ */}
-          <a
-            href="https://echosystem.futurity.science"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/resources#deliverables"
             className="hidden sm:inline-flex border border-brand-lilac px-4 py-2 font-bold uppercase text-xs rounded-md transition-all duration-300 hover:bg-brand-lilac/10 hover:shadow-[0_0_14px_rgba(218,128,255,0.35)] whitespace-nowrap"
             style={{ fontFamily: 'Montserrat, sans-serif', color: '#DA80FF' }}
           >
-            Enter ECHO System ↗
-          </a>
+            Download Resources
+          </Link>
 
           {/* Hamburger — mobile only */}
           <button
@@ -93,16 +91,14 @@ export default function Header() {
               </NavLink>
             ))}
             {/* CTA inside mobile menu */}
-            <a
-              href="https://echosystem.futurity.science"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/resources#deliverables"
               onClick={() => setMenuOpen(false)}
               className="mt-3 mb-1 text-center border border-brand-lilac px-4 py-3 font-bold uppercase text-xs rounded-md transition-all duration-300 hover:bg-brand-lilac/10"
               style={{ color: '#DA80FF' }}
             >
-              Enter ECHO System ↗
-            </a>
+              Download Resources
+            </Link>
           </nav>
         </div>
       )}
