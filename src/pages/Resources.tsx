@@ -288,7 +288,7 @@ const deliverables: Deliverable[] = [
     description: '[ENG] A practical guide outlining the vision aligned with internal coordination tools, reporting structure, partner responsibilities, and shared workflows. Includes templates and checklists.' },
   { code: 'D1.2', wp: 'WP1', lead: 'LSP',  type: 'R',           level: 'PU', due: 13, title: 'Mid-Term Coordination & Risk Report',
     description: '[ENG] Evaluation of progress, coordination quality, risk status, and partner self-assessments. Includes recommendations for improvements.' },
-  { code: 'D2.1', wp: 'WP2', lead: 'TPL',  type: 'R',           level: 'PU', due: 4,  title: 'Needs-Driven Immersive Design Brief',
+  { code: 'D2.1', wp: 'WP2', lead: 'TPL',  type: 'R',           level: 'PU', due: 4,  href: 'https://drive.google.com/file/d/1Z3nhaDkEyZpTSC9YEdBRYH4uT675bEHR/view?usp=drive_link', title: 'Needs-Driven Immersive Design Brief',
     description: '[ENG] A clear strategic guide based on user insights, institutional needs, and societal shifts — defining design challenges, user personas, emotional goals, and technical assumptions.' },
   { code: 'D2.2', wp: 'WP2', lead: 'TSC',  type: 'DEM',         level: 'PU', due: 19, title: 'Final Immersive Experience Designs',
     description: '[Language TBD] Full immersive experience packages for public deployment, including narratives, spatial and interaction designs, technical setups, onboarding/offboarding guides, and accessibility solutions.' },
