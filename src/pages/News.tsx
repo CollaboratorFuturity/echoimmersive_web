@@ -34,7 +34,7 @@ const galleries = [
 
 export default function News() {
   const [filter, setFilter] = useState<FilterType>('All')
-  const [lightbox, setLightbox] = useState<{ images: string[]; index: number } | null>(null)
+  const [lightbox, setLightbox] = useState<{ images: { src: string; alt: string }[]; index: number } | null>(null)
   const filtered = filter === 'All' ? articles : articles.filter(a => a.type === filter)
 
   return (
