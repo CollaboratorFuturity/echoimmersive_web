@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* -------------------------------------------------------------------
+   Muted text tokens (single source of truth for faded brand-cream).
+   All four are brand-cream (#F7F3E0) at decreasing opacity on the
+   charcoal (#202124) background. Contrast vs. that background:
+     strong 0.90  ~11:1   — quotes / emphasis
+     body   0.80  ~9:1    — body copy
+     muted  0.70  ~7:1    — secondary text, captions, hero subtitle
+     subtle 0.55  ~5.3:1  — small print, meta, labels (min AA-safe)
+   Do NOT go below ~0.50 for small text — that drops under 4.5:1.
+   Change a number here and it updates everywhere it's used. */
+:root {
+  --ink-strong: rgba(247, 243, 224, 0.90);
+  --ink-body:   rgba(247, 243, 224, 0.80);
+  --ink-muted:  rgba(247, 243, 224, 0.70);
+  --ink-subtle: rgba(247, 243, 224, 0.55);
+}
+
 @layer base {
   body {
     font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -15,6 +32,15 @@
 
   input, textarea, select, button {
     font-family: inherit;
+  }
+
+  /* Global keyboard focus indicator (WCAG 2.4.7 / 2.4.11): 2px lilac ring,
+     ~6.4:1 against charcoal. :focus-visible only — mouse clicks don't ring.
+     The Contact form fields keep their own box-shadow ring (they opt out
+     via Tailwind's focus:outline-none, which is more specific). */
+  :focus-visible {
+    outline: 2px solid #DA80FF;
+    outline-offset: 2px;
   }
 }
 

@@ -80,7 +80,7 @@ export default function UnderConstruction() {
           fontFamily: 'Roboto, sans-serif',
           fontSize: '1rem',
           lineHeight: 1.7,
-          color: 'rgba(247,243,224,0.5)',
+          color: 'var(--ink-subtle)',
         }}
       >
         Immersive ECHO is a pan-European project creating collective cultural heritage experiences.
@@ -99,7 +99,7 @@ export default function UnderConstruction() {
       {/* EU credit — pinned to bottom, above overlay */}
       <p
         className="fixed bottom-6 text-xs"
-        style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(247,243,224,0.2)', zIndex: 2 }}
+        style={{ fontFamily: 'Roboto, sans-serif', color: 'var(--ink-subtle)', zIndex: 2 }}
       >
         Co-funded by the European Union · Creative Europe · GA No. 101255680
       </p>

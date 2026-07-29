@@ -108,7 +108,7 @@ Routing is defined in [`src/App.tsx`](../src/App.tsx) using `react-router-dom`. 
 | `/`                   | [`Home`](../src/pages/Home.tsx) — hero, stats, marquee, mission, CTA     |
 | `/about`              | [`About`](../src/pages/About.tsx)                                        |
 | `/partners`           | [`Partners`](../src/pages/Partners.tsx)                                  |
-| `/experiences`           | [`Pilots`](../src/pages/Pilots.tsx)                                      |
+| `/experiences`           | [`Experiences`](../src/pages/Experiences.tsx)                            |
 | `/experiences/snapsting` | [`SnapstingActivities`](../src/pages/SnapstingActivities.tsx)            |
 | `/experiences/pavillon`  | [`PavillonActivities`](../src/pages/PavillonActivities.tsx)              |
 | `/news`               | [`News`](../src/pages/News.tsx)                                          |
@@ -144,10 +144,22 @@ Located under [`src/components/`](../src/components/).
 
 ---
 
+## Accessibility Patterns (non-negotiable — keep these when building new UI)
+
+- **Focus ring:** a global `:focus-visible` rule in [`global.css`](../src/styles/global.css) draws a 2px solid `#DA80FF` outline (offset 2px) on every keyboard-focused element. Never add `focus:outline-none` without providing an equal-or-better replacement indicator (the Contact/Newsletter inputs do this with a 2px lilac ring/border).
+- **Contrast floors:** text uses the `--ink-*` tokens (min `--ink-subtle` ≈ 5.3:1). On the light Resources page, charcoal text must be ≥ `rgba(32,33,36,0.65)` for small sizes. Lilac accent text/glyphs at small sizes use full `#DA80FF` (≈6.4:1 on charcoal), never a faded rgba.
+- **Required fields:** label gets a lilac `＊` wrapped in `aria-hidden="true"` (the input already has `aria-required`), plus a "Fields marked ＊ are required." note at the top of the form. See [`Contact.tsx`](../src/pages/Contact.tsx).
+- **Images:** real content images get descriptive alt written from what's in the picture (see [`galleries.ts`](../src/data/galleries.ts)); a logo adjacent to visible text with the same name gets `alt=""` (Partners cards); purely decorative/duplicated visuals get `aria-hidden="true"` on the wrapper (LogoMarquee, DitherBackground). Never let an image announce a filename or code.
+- **Modals:** follow [`Lightbox.tsx`](../src/components/Lightbox/Lightbox.tsx) — `role="dialog"` + `aria-modal`, move focus in on open, trap Tab while open, close on Esc, return focus to the opener.
+- **Repeated action links** ("Access file →" style): identical visible text is fine in a row context, but each link needs a distinguishing `aria-label` (see Resources deliverables/media).
+- **Page titles:** every new route gets an entry in `PAGE_TITLES` in [`App.tsx`](../src/App.tsx) (`"Section — Immersive ECHO"`).
+- **Reduced motion:** all animation honors `prefers-reduced-motion: reduce` — keep doing this for any new animation.
+- **Reflow:** at 320px nothing may scroll the page horizontally; wide data (tables, timelines) scrolls inside its own `overflow-x: auto` container, and grid children that must shrink get `min-width: 0`.
+
 ## Component Patterns
 
 ### Sticky Header
-See [`Header.tsx`](../src/components/Header/Header.tsx). Translucent charcoal with blur, lilac border-bottom at 30% opacity. Active route uses `color: #DA80FF`; default links use `rgba(247,243,224,0.65)`. Mobile hamburger reveals a stacked dropdown.
+See [`Header.tsx`](../src/components/Header/Header.tsx). Translucent charcoal with blur, lilac border-bottom at 30% opacity. Active route uses `color: #DA80FF` **plus an underline** (`underline underline-offset-8 decoration-2`) — the non-color cue is required for WCAG 1.4.1, and React Router's `NavLink` adds `aria-current="page"` automatically. Default links use `rgba(247,243,224,0.65)`. Mobile hamburger reveals a stacked dropdown; `Esc` closes it and returns focus to the toggle.
 
 ### Primary CTA (Lilac shine button)
 ```tsx

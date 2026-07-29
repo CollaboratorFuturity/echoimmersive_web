@@ -35,7 +35,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
       {open && (
         <div
           className="px-5 py-4 text-sm leading-relaxed border-t border-brand-purple/20"
-          style={{ fontFamily: 'Roboto, sans-serif', backgroundColor: 'rgba(32,33,36,0.8)', color: 'rgba(247,243,224,0.8)' }}
+          style={{ fontFamily: 'Roboto, sans-serif', backgroundColor: 'rgba(32,33,36,0.8)', color: 'var(--ink-body)' }}
         >
           {a}
         </div>

@@ -23,6 +23,7 @@ export default function DitherBackground() {
   return (
     <div
       ref={ref}
+      aria-hidden="true"
       style={{ position: 'fixed', inset: 0, top: '-50%', height: '200%', zIndex: -1, willChange: 'transform' }}
     >
       <Dither

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 
 const navLinks = [
@@ -12,10 +12,24 @@ const navLinks = [
 ]
 
 const activeLinkStyle = { color: '#DA80FF' }
-const defaultLinkStyle = { color: 'rgba(247,243,224,0.65)' }
+const defaultLinkStyle = { color: 'var(--ink-muted)' }
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
+
+  // Esc closes the mobile menu and returns focus to the toggle (WCAG 2.1.2)
+  useEffect(() => {
+    if (!menuOpen) return
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setMenuOpen(false)
+        menuButtonRef.current?.focus()
+      }
+    }
+    document.addEventListener('keydown', onKeyDown)
+    return () => document.removeEventListener('keydown', onKeyDown)
+  }, [menuOpen])
 
   return (
     <header
@@ -37,7 +51,9 @@ export default function Header() {
               key={to}
               to={to}
               end={end}
-              className="font-medium transition-colors duration-200 hover:text-brand-lilac"
+              className={({ isActive }) =>
+                `font-medium transition-colors duration-200 hover:text-brand-lilac ${isActive ? 'underline underline-offset-8 decoration-2' : ''}`
+              }
               style={({ isActive }) => isActive ? activeLinkStyle : defaultLinkStyle}
             >
               {label}
@@ -57,6 +73,7 @@ export default function Header() {
 
           {/* Hamburger — mobile only */}
           <button
+            ref={menuButtonRef}
             className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-md transition-colors hover:bg-brand-lilac/10"
             onClick={() => setMenuOpen(o => !o)}
             aria-label="Toggle navigation"
@@ -84,7 +101,9 @@ export default function Header() {
                 to={to}
                 end={end}
                 onClick={() => setMenuOpen(false)}
-                className="py-3 px-2 text-sm font-medium border-b border-brand-purple/15 last:border-0 transition-colors duration-200 hover:text-brand-lilac"
+                className={({ isActive }) =>
+                  `py-3 px-2 text-sm font-medium border-b border-brand-purple/15 last:border-0 transition-colors duration-200 hover:text-brand-lilac ${isActive ? 'underline underline-offset-8 decoration-2' : ''}`
+                }
                 style={({ isActive }) => isActive ? activeLinkStyle : defaultLinkStyle}
               >
                 {label}

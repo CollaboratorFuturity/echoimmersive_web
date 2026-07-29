@@ -13,7 +13,7 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 - [x] About: mission block, dual-track approach cards, infographic placeholder, stats row (15 / 10 / 30 / 2), project details sidebar
 - [x] Partners: coordinator (LSP) + 14 core partner slots (15 organisations total per FAQ copy)
 - [x] Experiences: Snapsting Festival (Viborg, Denmark) + Le Pavillon (Namur, Belgium) cards
-- [x] News & Events: article feed with type filters (All / News / Events / Press), event gallery sidebar, media kit download
+- [x] News & Events: article feed with type filters (All / News / Events / Press), event gallery sidebar
 - [x] FAQ: 14 accordion items with `toggleFaq()` interaction
 - [x] Contact: form (Name, Org, Subject, Message), coordinator info, social icons (Facebook, X, Instagram, YouTube), newsletter CTA
 - [x] Newsletter: full-screen split page (dark form + image), hides header/footer
@@ -70,7 +70,7 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 - [x] **FFV → TSC consortium change** — Flora & Fauna Visions was absorbed by The Storytelling Company. All site-wide references migrated: Partners.tsx (FFV card removed; TSC already present), LogoMarquee, About page approach cards, Resources page (WP2 lead, all WP partner arrays, T2 task leads, MS3/MS4 of WP2, D2.2 / D2.3), ProjectTimeline tags, dual-track chart (LEAD label + partner tag arrays), and `public/grant-data.md` (canonical record updated; FFV preserved as PDF alias for grant-document traceability). `public/logos/partner_logos/FFV.png` left on disk as an unreferenced archive in case the rollback is ever needed.
 
 ### Experiences Page
-- [x] Experiences index (`src/pages/Pilots.tsx`) at `/experiences` — Snapsting + Le Pavillon cards
+- [x] Experiences index (`src/pages/Experiences.tsx`) at `/experiences` — Snapsting + Le Pavillon cards
 - [x] Activity sub-pages: `/experiences/snapsting` (`SnapstingActivities.tsx`) and `/experiences/pavillon` (`PavillonActivities.tsx`)
 - [ ] Real pilot photography
 - [ ] Final pilot descriptions
@@ -80,11 +80,11 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 - [x] Launch event sub-page (`src/pages/news/Launch.tsx`)
 - [x] Gallery `Lightbox` component (`src/components/Lightbox/`) wired in
 - [ ] More real article content
-- [ ] Media kit download (ZIP)
+- ~~Media kit download (ZIP)~~ — dropped 2026-07-29; button removed from News page (brand assets live on Resources → Media tab)
 
 ### FAQ Page
 - [x] FAQ page (`src/pages/FAQ.tsx`) — 14 items with real copy, React accordion (useState)
-- [ ] Keyboard-accessible accordion (Enter/Space to toggle — currently click only)
+- [x] Keyboard-accessible accordion (native buttons — Enter/Space verified 2026-07-28)
 
 ### Contact Page
 - [x] Page stub (`src/pages/Contact.tsx`) — form with controlled inputs, coordinator info, social icons, newsletter CTA
@@ -127,6 +127,16 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 
 ---
 
+### Accessibility — WCAG 2.2 AA hardening (2026-07-28/29)
+- [x] Static audit (`docs/WCAG_AUDIT.md`) — 39 PASS / 1 PARTIAL (3.3.3, non-blocking) / 0 FAIL
+- [x] Batch 1 (the "7 polish items"): per-route `document.title` (`PageTitle` in App.tsx) · active-nav underline (+ NavLink's built-in `aria-current`) · global `:focus-visible` ring in global.css · footer headings h4→h2 · visible ＊ required markers on Contact · mobile-menu Esc-to-close with focus return · `aria-hidden` DitherBackground
+- [x] Batch 2 (found by automated rendered-site pass): Lightbox rebuilt as real modal (dialog role, focus-in, Tab trap, Esc, focus return) · Newsletter labels associated + h1 + `role="alert"` + real social links · contrast fixes (social glyphs, News dates, Resources tabs/subtitle) · 320px reflow (News filter wrap, ProjectTimeline stats wrap / `min-width:0` / contained index scroll) · heading jumps removed (About, Resources)
+- [x] Alt-text review, every image on all 12 routes: Partners logos `alt=""` (name announced once via visible text) · Home marquee `aria-hidden` (decorative) · launch gallery = 8 descriptive alts written from actual photo content (`src/data/galleries.ts`, now `{src, alt}` pairs)
+- [x] Asset sweep: 0 broken asset requests · "Access file →" links got per-file `aria-labels` · JetBrains Mono added to font loading (was silently falling back) · `.DS_Store` purged from public/ · inert Media Kit button removed · og:/twitter social-preview meta added (echoimmersive.eu, consortium photo)
+- [x] Automated verification: axe-core WCAG 2.2 AA ruleset = **0 violations on all 12 routes**; keyboard simulation + 320px reflow via headless Chrome (scripts in session scratchpad)
+- [ ] Human VoiceOver pass (`docs/A11Y_VERIFICATION_CHECKLIST.md`) — in progress
+- [ ] Publish accessibility statement (EN 301 549 / Web Accessibility Directive) after the VO pass
+
 ## Phase 3: Content & Assets **NOT STARTED**
 
 - [ ] Final logo files from design team
@@ -142,7 +152,7 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 
 - [ ] Cross-browser testing (Chrome, Firefox, Safari, Edge)
 - [ ] Mobile responsiveness QA
-- [ ] Accessibility audit (contrast, keyboard nav, screen reader)
+- [ ] Accessibility audit (contrast, keyboard nav, screen reader) — static audit + automated rendered-site verification done (`docs/WCAG_AUDIT.md`: axe-core 0 violations on all 12 routes, keyboard + 320px reflow machine-verified 2026-07-28); human VoiceOver pass pending (`docs/A11Y_VERIFICATION_CHECKLIST.md`), then publish accessibility statement
 - [ ] Performance audit (image compression, Lighthouse score)
 - [ ] Deploy to production (see `docs/dither_deployment.md`)
 - [ ] DNS / domain setup

@@ -39,19 +39,12 @@ export default function News() {
 
   return (
     <>
-      <div className="flex justify-between items-end mb-8 border-b border-brand-purple/30 pb-2">
+      <div className="mb-8 border-b border-brand-purple/30 pb-2">
         <h1 className="text-2xl md:text-3xl font-bold text-brand-cream">News, Events & Activities</h1>
-        {/* TODO: Link to real media kit ZIP */}
-        <button
-          className="border border-brand-lilac/50 text-brand-lilac px-4 py-2 text-xs font-bold uppercase rounded-md transition-all duration-300 hover:bg-brand-lilac/10 hover:shadow-[0_0_10px_rgba(218,128,255,0.25)]"
-          style={{ fontFamily: 'Montserrat, sans-serif' }}
-        >
-          ⬇ Download Media Kit
-        </button>
       </div>
 
       {/* Filters */}
-      <div className="flex gap-3 mb-8">
+      <div className="flex flex-wrap gap-3 mb-8">
         {FILTERS.map(f => (
           <button
             key={f}
@@ -78,11 +71,11 @@ export default function News() {
                 <img src={thumb} alt={title} className="w-full h-full object-cover" />
               </Link>
               <div>
-                <span className="text-xs font-bold uppercase" style={{ fontFamily: 'Montserrat, sans-serif', color: 'rgba(218,128,255,0.7)' }}>
+                <span className="text-xs font-bold uppercase" style={{ fontFamily: 'Montserrat, sans-serif', color: '#DA80FF' }}>
                   {type} | {date}
                 </span>
                 <h3 className="text-lg font-bold mb-2 mt-1 text-brand-cream">{title}</h3>
-                <p className="text-sm mb-4" style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(247,243,224,0.7)' }}>
+                <p className="text-sm mb-4" style={{ fontFamily: 'Roboto, sans-serif', color: 'var(--ink-muted)' }}>
                   {subtitle}
                 </p>
                 <Link to={href} className="text-brand-lilac underline text-sm font-bold hover:text-brand-lilac/80">Read More →</Link>
@@ -90,7 +83,7 @@ export default function News() {
             </div>
           ))}
           {filtered.length === 0 && (
-            <p className="text-sm" style={{ color: 'rgba(247,243,224,0.45)' }}>No items in this category yet.</p>
+            <p className="text-sm" style={{ color: 'var(--ink-subtle)' }}>No items in this category yet.</p>
           )}
         </div>
 
@@ -103,10 +96,10 @@ export default function News() {
                 key={g.name}
                 onClick={() => setLightbox({ images: g.images, index: 0 })}
                 className="w-full border border-brand-purple/30 bg-brand-plum/20 h-16 flex items-center px-4 gap-3 text-sm rounded-lg transition-all duration-300 hover:border-brand-lilac hover:bg-brand-plum/35 text-left"
-                style={{ color: 'rgba(247,243,224,0.7)', fontFamily: 'Roboto, sans-serif' }}
+                style={{ color: 'var(--ink-muted)', fontFamily: 'Roboto, sans-serif' }}
               >
                 📁 {g.name}
-                <span className="ml-auto text-xs" style={{ color: 'rgba(247,243,224,0.45)' }}>
+                <span className="ml-auto text-xs" style={{ color: 'var(--ink-subtle)' }}>
                   {g.images.length} photos
                 </span>
               </button>

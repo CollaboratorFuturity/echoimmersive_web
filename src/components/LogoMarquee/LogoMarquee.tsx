@@ -31,6 +31,9 @@ export default function LogoMarquee() {
 
   return (
     <div
+      // Decorative: the strip duplicates every logo for the animation loop, and
+      // the full partner list (with names) lives on /partners and /about
+      aria-hidden="true"
       className="overflow-hidden border border-brand-lilac/25 rounded-xl bg-brand-charcoal/60 backdrop-blur-sm"
       style={{ maskImage: 'linear-gradient(to right, transparent, black 8%, black 92%, transparent)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 8%, black 92%, transparent)' }}
     >
@@ -58,7 +61,7 @@ export default function LogoMarquee() {
           >
             <img
               src={`/logos/partner_logos/${logo.file}.png`}
-              alt={logo.file}
+              alt=""
               loading="lazy"
               className={`w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 ${sizeClass[logo.size ?? 'md']}`}
               style={{ filter: 'brightness(0) invert(1)' }}

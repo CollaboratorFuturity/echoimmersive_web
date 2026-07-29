@@ -454,12 +454,12 @@ function WPRow({ wp }: { wp: WorkPackage }) {
             >
               {wp.code}
             </span>
-            <h3
+            <h2
               className="text-lg font-semibold"
               style={{ fontFamily: 'Montserrat, sans-serif', color: '#202124' }}
             >
               {wp.title}
-            </h3>
+            </h2>
           </div>
           <p
             className="text-sm leading-relaxed"
@@ -603,15 +603,15 @@ function TaskGroupRow({ group }: { group: TaskGroup }) {
           >
             {group.code}
           </span>
-          <h3
+          <h2
             className="text-base md:text-lg font-semibold"
             style={{ fontFamily: 'Montserrat, sans-serif', color: '#202124' }}
           >
             {group.title}
-          </h3>
+          </h2>
           <span
             className="text-xs ml-auto"
-            style={{ fontFamily: 'JetBrains Mono, monospace', color: 'rgba(32,33,36,0.45)' }}
+            style={{ fontFamily: 'JetBrains Mono, monospace', color: 'rgba(32,33,36,0.65)' }}
           >
             {group.tasks.length} tasks
           </span>
@@ -705,7 +705,7 @@ export default function Resources() {
               className="shrink-0 px-4 py-3 text-xs font-bold uppercase tracking-widest transition-colors whitespace-nowrap"
               style={{
                 fontFamily: 'Montserrat, sans-serif',
-                color: activeTab === tab.id ? '#8843A3' : 'rgba(32,33,36,0.45)',
+                color: activeTab === tab.id ? '#8843A3' : 'rgba(32,33,36,0.65)',
                 borderBottom: activeTab === tab.id ? '2px solid #8843A3' : '2px solid transparent',
                 marginBottom: '-1px',
               }}
@@ -718,7 +718,7 @@ export default function Resources() {
         {/* Tab subtitle */}
         <p
           className="text-sm leading-relaxed mb-6 max-w-xl"
-          style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(32,33,36,0.6)' }}
+          style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(32,33,36,0.7)' }}
         >
           {currentTab.subtitle}
         </p>
@@ -824,6 +824,7 @@ export default function Resources() {
                     href={d.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Access file: ${d.code} ${d.title}`}
                     className="text-xs font-bold uppercase tracking-wider hover:opacity-70 transition-opacity shrink-0"
                     style={{ fontFamily: 'Montserrat, sans-serif', color: '#8843A3' }}
                   >
@@ -871,6 +872,7 @@ export default function Resources() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Access file: ${item.title}`}
                   className="text-xs font-bold uppercase tracking-wider hover:opacity-70 transition-opacity shrink-0"
                   style={{ fontFamily: 'Montserrat, sans-serif', color: '#8843A3' }}
                 >
@@ -913,7 +915,7 @@ export default function Resources() {
                 </span>
                 <span
                   className="text-xs shrink-0"
-                  style={{ fontFamily: 'JetBrains Mono, monospace', color: 'rgba(32,33,36,0.45)', minWidth: '6rem' }}
+                  style={{ fontFamily: 'JetBrains Mono, monospace', color: 'rgba(32,33,36,0.65)', minWidth: '6rem' }}
                 >
                   {e.days}d · {e.attendees} pax
                 </span>

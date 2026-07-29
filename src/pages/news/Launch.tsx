@@ -18,7 +18,7 @@ export default function NewsLaunch() {
 
       <span
         className="text-xs font-bold uppercase block mb-2"
-        style={{ fontFamily: 'Montserrat, sans-serif', color: 'rgba(218,128,255,0.7)' }}
+        style={{ fontFamily: 'Montserrat, sans-serif', color: '#DA80FF' }}
       >
         News | March 2026
       </span>
@@ -28,7 +28,7 @@ export default function NewsLaunch() {
       </h1>
       <p
         className="text-lg md:text-xl mb-8 max-w-3xl"
-        style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(247,243,224,0.8)' }}
+        style={{ fontFamily: 'Roboto, sans-serif', color: 'var(--ink-body)' }}
       >
         Over 40 world class European creatives gathered in Namur to kickstart the ECHO Immersive project.
       </p>
@@ -40,7 +40,7 @@ export default function NewsLaunch() {
 
         <div
           className="space-y-4 leading-relaxed"
-          style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(247,243,224,0.75)' }}
+          style={{ fontFamily: 'Roboto, sans-serif', color: 'var(--ink-body)' }}
         >
         <p>
           Immersive ECHO officially launched in February 2026 with a multi-day kickoff meeting at Le Pavillon in
@@ -64,14 +64,15 @@ export default function NewsLaunch() {
 
       <h2 className="text-xl md:text-2xl font-bold mb-4 text-brand-cream">Gallery</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-12">
-        {gallery.map((src, i) => (
+        {gallery.map(({ src, alt }, i) => (
           <button
             key={src}
             type="button"
             onClick={() => setLightbox(i)}
             className="block rounded-lg overflow-hidden border border-brand-purple/30 hover:border-brand-lilac/60 transition-colors"
           >
-            <img src={src} alt="" className="w-full h-48 object-cover" />
+            {/* the img alt names the button — no separate aria-label needed */}
+            <img src={src} alt={alt} className="w-full h-48 object-cover" />
           </button>
         ))}
       </div>

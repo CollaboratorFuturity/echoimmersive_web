@@ -1,13 +1,19 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
 type Props = {
-  images: string[]
+  images: { src: string; alt: string }[]
   index: number | null
   onClose: () => void
   onChange: (i: number) => void
 }
 
 export default function Lightbox({ images, index, onClose, onChange }: Props) {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const closeRef = useRef<HTMLButtonElement>(null)
+  // Element that had focus before opening — focus returns to it on close (WCAG 2.4.3)
+  const openerRef = useRef<HTMLElement | null>(null)
+  const open = index !== null
+
   const prev = () => index !== null && onChange((index - 1 + images.length) % images.length)
   const next = () => index !== null && onChange((index + 1) % images.length)
 
@@ -17,6 +23,24 @@ export default function Lightbox({ images, index, onClose, onChange }: Props) {
       if (e.key === 'Escape') onClose()
       else if (e.key === 'ArrowLeft') prev()
       else if (e.key === 'ArrowRight') next()
+      else if (e.key === 'Tab') {
+        // Keep Tab cycling inside the dialog while it's open (WCAG 2.1.2 / 2.4.3)
+        const container = containerRef.current
+        if (!container) return
+        const focusables = [...container.querySelectorAll<HTMLElement>('button')]
+        if (!focusables.length) return
+        const first = focusables[0]
+        const last = focusables[focusables.length - 1]
+        const active = document.activeElement as HTMLElement | null
+        const inside = active !== null && container.contains(active)
+        if (e.shiftKey && (!inside || active === first)) {
+          e.preventDefault()
+          last.focus()
+        } else if (!e.shiftKey && (!inside || active === last)) {
+          e.preventDefault()
+          first.focus()
+        }
+      }
     }
     window.addEventListener('keydown', onKey)
     const prevOverflow = document.body.style.overflow
@@ -27,14 +51,30 @@ export default function Lightbox({ images, index, onClose, onChange }: Props) {
     }
   }, [index])
 
+  // Move focus into the dialog on open, back to the opener on close
+  useEffect(() => {
+    if (open) {
+      openerRef.current = document.activeElement as HTMLElement
+      closeRef.current?.focus()
+    } else if (openerRef.current) {
+      openerRef.current.focus()
+      openerRef.current = null
+    }
+  }, [open])
+
   if (index === null) return null
 
   return (
     <div
+      ref={containerRef}
+      role="dialog"
+      aria-modal="true"
+      aria-label={`Image gallery, photo ${index + 1} of ${images.length}`}
       onClick={onClose}
       className="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-4"
     >
       <button
+        ref={closeRef}
         type="button"
         onClick={(e) => { e.stopPropagation(); onClose() }}
         aria-label="Close"
@@ -51,8 +91,8 @@ export default function Lightbox({ images, index, onClose, onChange }: Props) {
         ‹
       </button>
       <img
-        src={images[index]}
-        alt=""
+        src={images[index].src}
+        alt={images[index].alt}
         onClick={(e) => e.stopPropagation()}
         className="max-h-[90vh] max-w-[90vw] object-contain rounded-lg"
       />

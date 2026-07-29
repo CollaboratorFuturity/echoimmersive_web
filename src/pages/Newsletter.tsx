@@ -67,10 +67,10 @@ export default function Newsletter() {
             <div className="w-14 h-14 rounded-full border-2 border-brand-lilac flex items-center justify-center text-brand-lilac text-2xl">✓</div>
 
             <div>
-              <h2 className="text-2xl font-bold text-brand-cream mb-3" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+              <h1 className="text-2xl font-bold text-brand-cream mb-3" style={{ fontFamily: 'Montserrat, sans-serif' }}>
                 {status === 'already' ? 'Already subscribed!' : "You're in!"}
-              </h2>
-              <p style={{ color: 'rgba(247,243,224,0.6)', fontFamily: 'Roboto, sans-serif', fontSize: '0.9rem', lineHeight: '1.6' }}>
+              </h1>
+              <p style={{ color: 'var(--ink-muted)', fontFamily: 'Roboto, sans-serif', fontSize: '0.9rem', lineHeight: '1.6' }}>
                 {status === 'already'
                   ? `${form.email} is already on our list. No action needed.`
                   : `We've sent a welcome email to ${form.email}. You'll hear from us when there's something worth sharing.`}
@@ -93,17 +93,17 @@ export default function Newsletter() {
 
             <p
               className="text-sm mb-10"
-              style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(247,243,224,0.55)' }}
+              style={{ fontFamily: 'Roboto, sans-serif', color: 'var(--ink-subtle)' }}
             >
               Stay updated on the project — new outputs, events, and findings from across the consortium.
             </p>
 
-            <h2
+            <h1
               className="text-2xl font-bold mb-8 tracking-wide text-brand-cream"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
               Subscribe
-            </h2>
+            </h1>
 
             <form onSubmit={handleSubmit} className="space-y-5">
               {[
@@ -114,12 +114,14 @@ export default function Newsletter() {
               ].map(([field, label, type, required]) => (
                 <div key={field as string}>
                   <label
+                    htmlFor={`nl-${field}`}
                     className="block text-xs uppercase tracking-wider mb-2"
-                    style={{ fontFamily: 'Montserrat, sans-serif', color: 'rgba(247,243,224,0.5)' }}
+                    style={{ fontFamily: 'Montserrat, sans-serif', color: 'var(--ink-subtle)' }}
                   >
                     {label as string}
                   </label>
                   <input
+                    id={`nl-${field}`}
                     type={type as string}
                     required={required as boolean}
                     placeholder={`Enter your ${(label as string).replace(' *','').toLowerCase()}`}
@@ -141,7 +143,7 @@ export default function Newsletter() {
                   }}
                   className="w-4 h-4 accent-brand-lilac"
                 />
-                <label htmlFor="consent" className="text-xs" style={{ color: 'rgba(247,243,224,0.45)', fontFamily: 'Roboto, sans-serif' }}>
+                <label htmlFor="consent" className="text-xs" style={{ color: 'var(--ink-subtle)', fontFamily: 'Roboto, sans-serif' }}>
                   I agree to the{' '}
                   {/* TODO: Link to real privacy policy page */}
                   <span className="underline cursor-pointer text-brand-lilac hover:text-brand-lilac/80">Privacy Policy</span>
@@ -149,7 +151,7 @@ export default function Newsletter() {
               </div>
 
               {status === 'error' && (
-                <p className="text-xs" style={{ color: '#ff8080', fontFamily: 'Roboto, sans-serif' }}>{errorMsg}</p>
+                <p role="alert" className="text-xs" style={{ color: '#ff8080', fontFamily: 'Roboto, sans-serif' }}>{errorMsg}</p>
               )}
 
               <button
@@ -164,15 +166,20 @@ export default function Newsletter() {
           </div>
         )}
 
-        {/* Social icons */}
+        {/* Social icons — same real accounts as the Footer */}
         <div className="flex gap-3 mt-10">
-          {[['in','LinkedIn'],['yt','YouTube'],['X','X'],['ig','Instagram']].map(([icon, name]) => (
+          {[
+            ['f', 'Facebook', 'https://www.facebook.com/profile.php?id=61589051665665'],
+            ['ig', 'Instagram', 'https://www.instagram.com/echoimmersive/'],
+          ].map(([icon, name, href]) => (
             <a
               key={icon}
-              href="#"
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label={`Follow us on ${name}`}
               className="w-9 h-9 border border-brand-lilac/35 rounded-full flex items-center justify-center text-xs transition-all duration-300 hover:border-brand-lilac hover:shadow-[0_0_8px_rgba(218,128,255,0.35)]"
-              style={{ color: 'rgba(218,128,255,0.6)', fontFamily: 'Montserrat, sans-serif' }}
+              style={{ color: '#DA80FF', fontFamily: 'Montserrat, sans-serif' }}
             >
               {icon}
             </a>
@@ -186,8 +193,8 @@ export default function Newsletter() {
         className="min-h-96 flex flex-col items-center justify-center gap-2"
         style={{ backgroundColor: 'rgba(90,66,99,0.2)' }}
       >
-        <div className="text-sm" style={{ color: 'rgba(247,243,224,0.35)' }}>[IMAGE PLACEHOLDER]</div>
-        <div className="text-xs" style={{ color: 'rgba(247,243,224,0.25)' }}>Immersive installation / testbed photo</div>
+        <div className="text-sm" style={{ color: 'var(--ink-subtle)' }}>[IMAGE PLACEHOLDER]</div>
+        <div className="text-xs" style={{ color: 'var(--ink-subtle)' }}>Immersive installation / testbed photo</div>
       </div>
 
     </div>

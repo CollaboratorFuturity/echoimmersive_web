@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const inputClass = "w-full border border-brand-purple/35 bg-brand-plum/20 text-brand-cream p-3 rounded-lg focus:outline-none focus:border-brand-lilac focus:shadow-[0_0_8px_rgba(218,128,255,0.2)] transition-all duration-200 placeholder:text-brand-cream/25"
+const inputClass = "w-full border border-brand-lilac/70 bg-brand-plum/20 text-brand-cream p-3 rounded-lg focus:outline-none focus:border-brand-lilac focus:ring-2 focus:ring-brand-lilac transition-all duration-200 placeholder:text-brand-cream/25"
 
 export default function Contact() {
   const navigate = useNavigate()
@@ -9,6 +9,13 @@ export default function Contact() {
   const [submitting, setSubmitting] = useState(false)
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [errorMsg, setErrorMsg] = useState('')
+  const successHeadingRef = useRef<HTMLParagraphElement>(null)
+
+  // Move focus to the success heading so screen-reader users are told the
+  // submission worked (the form is replaced, so focus would otherwise be lost).
+  useEffect(() => {
+    if (status === 'success') successHeadingRef.current?.focus()
+  }, [status])
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -56,15 +63,15 @@ export default function Contact() {
         {/* Info */}
         <div>
           <h2 className="text-xl md:text-2xl font-bold mb-4 text-brand-cream">Get in Touch</h2>
-          <p className="mb-6" style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(247,243,224,0.7)' }}>
+          <p className="mb-6" style={{ fontFamily: 'Roboto, sans-serif', color: 'var(--ink-muted)' }}>
             Reach out to the coordinator team at Lindholmen Science Park for general inquiries,
             press information, or partnership questions.
           </p>
 
           <div className="border border-dashed border-brand-purple/35 p-6 rounded-lg mb-6">
             <h3 className="font-bold mb-2 text-brand-cream">Coordinator</h3>
-            <p style={{ color: 'rgba(247,243,224,0.7)', fontFamily: 'Roboto, sans-serif' }}>Lindholmen Science Park</p>
-            <p style={{ color: 'rgba(247,243,224,0.7)', fontFamily: 'Roboto, sans-serif' }}>Gothenburg, Sweden</p>
+            <p style={{ color: 'var(--ink-muted)', fontFamily: 'Roboto, sans-serif' }}>Lindholmen Science Park</p>
+            <p style={{ color: 'var(--ink-muted)', fontFamily: 'Roboto, sans-serif' }}>Gothenburg, Sweden</p>
             <a
               href="mailto:coordinator@lindholmen.se"
               className="mt-3 block text-brand-lilac hover:text-brand-lilac/80 transition-colors duration-200"
@@ -78,15 +85,20 @@ export default function Contact() {
             <h3 className="font-bold text-sm uppercase tracking-widest mb-4 text-brand-lilac" style={{ fontFamily: 'Montserrat, sans-serif' }}>
               Stay in Touch
             </h3>
-            {/* TODO: Replace with real SVG social icons + links */}
+            {/* TODO: Replace glyphs with real SVG social icons. X + YouTube hidden until accounts exist. */}
             <div className="flex gap-3">
-              {[['f','Facebook'],['X','X'],['ig','Instagram'],['yt','YouTube']].map(([icon, name]) => (
+              {[
+                ['f', 'Facebook', 'https://www.facebook.com/profile.php?id=61589051665665'],
+                ['ig', 'Instagram', 'https://www.instagram.com/echoimmersive/'],
+              ].map(([icon, name, href]) => (
                 <a
                   key={icon}
-                  href="#"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={`Follow us on ${name}`}
                   className="w-9 h-9 rounded-full border border-brand-lilac/40 flex items-center justify-center text-xs transition-all duration-300 hover:border-brand-lilac hover:shadow-[0_0_8px_rgba(218,128,255,0.4)]"
-                  style={{ color: 'rgba(218,128,255,0.7)', fontFamily: 'Montserrat, sans-serif' }}
+                  style={{ color: '#DA80FF', fontFamily: 'Montserrat, sans-serif' }}
                 >
                   {icon}
                 </a>
@@ -98,10 +110,10 @@ export default function Contact() {
         {/* Form */}
         <div className="border border-brand-purple/30 bg-brand-plum/15 p-6 rounded-lg">
           {status === 'success' ? (
-            <div className="flex flex-col items-center justify-center h-full gap-4 py-12 text-center">
-              <div className="w-12 h-12 rounded-full border-2 border-brand-lilac flex items-center justify-center text-brand-lilac text-xl">✓</div>
-              <p className="font-bold text-brand-cream text-lg" style={{ fontFamily: 'Montserrat, sans-serif' }}>Message sent!</p>
-              <p style={{ color: 'rgba(247,243,224,0.6)', fontFamily: 'Roboto, sans-serif', fontSize: '0.9rem' }}>
+            <div role="status" className="flex flex-col items-center justify-center h-full gap-4 py-12 text-center">
+              <div aria-hidden="true" className="w-12 h-12 rounded-full border-2 border-brand-lilac flex items-center justify-center text-brand-lilac text-xl">✓</div>
+              <p ref={successHeadingRef} tabIndex={-1} className="font-bold text-brand-cream text-lg" style={{ fontFamily: 'Montserrat, sans-serif' }}>Message sent!</p>
+              <p style={{ color: 'var(--ink-muted)', fontFamily: 'Roboto, sans-serif', fontSize: '0.9rem' }}>
                 We'll get back to you within 5 business days. Check your inbox for a confirmation.
               </p>
               <button
@@ -114,11 +126,19 @@ export default function Contact() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
+              {/* aria-hidden on the asterisks: aria-required already announces "required" */}
+              <p className="text-xs" style={{ fontFamily: 'Roboto, sans-serif', color: 'var(--ink-subtle)' }}>
+                Fields marked <span aria-hidden="true" className="text-brand-lilac">*</span> are required.
+              </p>
               <div>
-                <label className="block font-bold mb-2 text-sm text-brand-cream" style={{ fontFamily: 'Montserrat, sans-serif' }}>Name</label>
+                <label htmlFor="contact-name" className="block font-bold mb-2 text-sm text-brand-cream" style={{ fontFamily: 'Montserrat, sans-serif' }}>Name <span aria-hidden="true" className="text-brand-lilac">*</span></label>
                 <input
+                  id="contact-name"
+                  name="name"
                   type="text"
                   required
+                  aria-required="true"
+                  autoComplete="name"
                   value={form.name}
                   onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
                   className={inputClass}
@@ -126,10 +146,14 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label className="block font-bold mb-2 text-sm text-brand-cream" style={{ fontFamily: 'Montserrat, sans-serif' }}>Email</label>
+                <label htmlFor="contact-email" className="block font-bold mb-2 text-sm text-brand-cream" style={{ fontFamily: 'Montserrat, sans-serif' }}>Email <span aria-hidden="true" className="text-brand-lilac">*</span></label>
                 <input
+                  id="contact-email"
+                  name="email"
                   type="email"
                   required
+                  aria-required="true"
+                  autoComplete="email"
                   value={form.email}
                   onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
                   className={inputClass}
@@ -138,9 +162,12 @@ export default function Contact() {
               </div>
               {(['organisation', 'subject'] as const).map(field => (
                 <div key={field}>
-                  <label className="block font-bold mb-2 text-sm text-brand-cream capitalize" style={{ fontFamily: 'Montserrat, sans-serif' }}>{field}</label>
+                  <label htmlFor={`contact-${field}`} className="block font-bold mb-2 text-sm text-brand-cream capitalize" style={{ fontFamily: 'Montserrat, sans-serif' }}>{field}</label>
                   <input
+                    id={`contact-${field}`}
+                    name={field}
                     type="text"
+                    autoComplete={field === 'organisation' ? 'organization' : 'off'}
                     value={form[field]}
                     onChange={e => setForm(f => ({ ...f, [field]: e.target.value }))}
                     className={inputClass}
@@ -149,9 +176,12 @@ export default function Contact() {
                 </div>
               ))}
               <div>
-                <label className="block font-bold mb-2 text-sm text-brand-cream" style={{ fontFamily: 'Montserrat, sans-serif' }}>Message</label>
+                <label htmlFor="contact-message" className="block font-bold mb-2 text-sm text-brand-cream" style={{ fontFamily: 'Montserrat, sans-serif' }}>Message <span aria-hidden="true" className="text-brand-lilac">*</span></label>
                 <textarea
+                  id="contact-message"
+                  name="message"
                   required
+                  aria-required="true"
                   value={form.message}
                   onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
                   className={`${inputClass} h-32 resize-none`}
@@ -160,7 +190,7 @@ export default function Contact() {
               </div>
 
               {status === 'error' && (
-                <p className="text-sm" style={{ color: '#ff8080', fontFamily: 'Roboto, sans-serif' }}>{errorMsg}</p>
+                <p role="alert" className="text-sm" style={{ color: '#ff8080', fontFamily: 'Roboto, sans-serif' }}>{errorMsg}</p>
               )}
 
               <button

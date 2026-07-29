@@ -22,15 +22,20 @@ export default function Footer() {
             alt="Immersive ECHO"
             className="h-9 w-auto mb-4"
           />
-          {/* TODO: Replace with real SVG social icons + links */}
+          {/* TODO: Replace glyphs with real SVG social icons. X + YouTube hidden until accounts exist. */}
           <div className="flex gap-3 mb-6">
-            {[['f','Facebook'],['X','X'],['ig','Instagram'],['yt','YouTube']].map(([icon, name]) => (
+            {[
+              ['f', 'Facebook', 'https://www.facebook.com/profile.php?id=61589051665665'],
+              ['ig', 'Instagram', 'https://www.instagram.com/echoimmersive/'],
+            ].map(([icon, name, href]) => (
               <a
                 key={icon}
-                href="#"
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={`Follow us on ${name}`}
                 className="w-9 h-9 rounded-full border border-brand-lilac/40 flex items-center justify-center text-xs transition-all duration-300 hover:border-brand-lilac hover:shadow-[0_0_8px_rgba(218,128,255,0.4)]"
-                style={{ color: 'rgba(218,128,255,0.7)', fontFamily: 'Montserrat, sans-serif' }}
+                style={{ color: '#DA80FF', fontFamily: 'Montserrat, sans-serif' }}
               >
                 {icon}
               </a>
@@ -39,7 +44,7 @@ export default function Footer() {
           <a
             href="mailto:coordinator@lindholmen.se"
             className="text-sm transition-colors duration-200 hover:text-brand-lilac"
-            style={{ color: 'rgba(247,243,224,0.5)' }}
+            style={{ color: 'var(--ink-subtle)' }}
           >
             coordinator@lindholmen.se
           </a>
@@ -47,19 +52,19 @@ export default function Footer() {
 
         {/* Column 2: Quick links */}
         <div>
-          <h4
+          <h2
             className="font-bold uppercase tracking-wider text-sm mb-4 text-brand-lilac"
             style={{ fontFamily: 'Montserrat, sans-serif' }}
           >
             Quick Links
-          </h4>
+          </h2>
           <ul className="space-y-2 text-sm" style={{ fontFamily: 'Roboto, sans-serif' }}>
             {quickLinks.map(([to, label]) => (
               <li key={to}>
                 <Link
                   to={to}
                   className="transition-colors duration-200 hover:text-brand-lilac"
-                  style={{ color: 'rgba(247,243,224,0.5)' }}
+                  style={{ color: 'var(--ink-subtle)' }}
                 >
                   {label}
                 </Link>
@@ -70,12 +75,12 @@ export default function Footer() {
 
         {/* Column 3: EU funding acknowledgement */}
         <div>
-          <h4
+          <h2
             className="font-bold uppercase tracking-wider text-sm mb-4 text-brand-lilac"
             style={{ fontFamily: 'Montserrat, sans-serif' }}
           >
             About the Project
-          </h4>
+          </h2>
           <img
             src="/logos/co-funded_EN/horizontal/EN_Co-fundedbytheEU_RGB_WHITE.png"
             alt="Co-funded by the European Union"
@@ -84,14 +89,14 @@ export default function Footer() {
           {/* TODO: Confirm exact EU credit line wording with coordinator */}
           <p
             className="text-xs leading-relaxed mb-4"
-            style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(247,243,224,0.45)' }}
+            style={{ fontFamily: 'Roboto, sans-serif', color: 'var(--ink-subtle)' }}
           >
             Co-funded by the European Union under the Creative Europe programme,
             Large Scale Cooperation strand. Grant Agreement No. 101255680.
           </p>
           <ul
             className="space-y-1 text-xs"
-            style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(247,243,224,0.35)' }}
+            style={{ fontFamily: 'Roboto, sans-serif', color: 'var(--ink-subtle)' }}
           >
             <li>Duration: Feb 2026 – July 2028</li>
             <li>Coordinator: Lindholmen Science Park</li>
@@ -103,7 +108,7 @@ export default function Footer() {
 
       <div
         className="border-t border-brand-purple/15 py-4 text-center text-xs"
-        style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(247,243,224,0.3)' }}
+        style={{ fontFamily: 'Roboto, sans-serif', color: 'var(--ink-subtle)' }}
       >
         {/* TODO: Add Privacy Policy page and link */}
         © {new Date().getFullYear()} Immersive ECHO. All rights reserved.

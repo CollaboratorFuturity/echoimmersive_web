@@ -193,14 +193,14 @@ export default function LynchHome() {
 
           <p
             className="fade-up max-w-md"
-            style={{ fontFamily: 'Roboto, sans-serif', fontSize: 'clamp(0.95rem, 2.5vw, 1.2rem)', lineHeight: 1.7, color: 'rgba(247,243,224,0.65)', animationDelay: '500ms' }}
+            style={{ fontFamily: 'Roboto, sans-serif', fontSize: 'clamp(0.95rem, 2.5vw, 1.2rem)', lineHeight: 1.7, color: 'var(--ink-muted)', animationDelay: '500ms' }}
           >
             Creating Collective Immersive Experiences<br />for European Cultural Heritage
           </p>
 
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
             <div className="fade-up flex flex-col items-center gap-2" style={{ animationDelay: '900ms' }}>
-              <span className="text-xs uppercase tracking-widest" style={{ fontFamily: 'Montserrat, sans-serif', color: 'rgba(247,243,224,0.3)' }}>Scroll</span>
+              <span className="text-xs uppercase tracking-widest" style={{ fontFamily: 'Montserrat, sans-serif', color: 'var(--ink-subtle)' }}>Scroll</span>
               <div className="scroll-line w-px h-8 bg-gradient-to-b from-brand-cream/40 to-transparent" />
             </div>
           </div>
@@ -217,7 +217,7 @@ export default function LynchHome() {
         {stats.map(({ label }, i) => (
           <div key={label} className="bg-brand-charcoal/70 backdrop-blur-sm px-6 py-5 text-center">
             <div className="text-3xl font-extrabold mb-1 tabular-nums text-brand-lilac" style={{ fontFamily: 'Montserrat, sans-serif' }}>{statValues[i]}</div>
-            <div className="text-xs uppercase tracking-widest" style={{ fontFamily: 'Montserrat, sans-serif', color: 'rgba(247,243,224,0.5)' }}>{label}</div>
+            <div className="text-xs uppercase tracking-widest" style={{ fontFamily: 'Montserrat, sans-serif', color: 'var(--ink-subtle)' }}>{label}</div>
           </div>
         ))}
       </div>
@@ -242,7 +242,7 @@ export default function LynchHome() {
           <div
             data-reveal
             className="md:col-span-2 space-y-5 text-base leading-relaxed"
-            style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(247,243,224,0.8)', opacity: 0, transform: 'translateY(20px)', transition: 'opacity 800ms cubic-bezier(0.2,0.8,0.2,1), transform 800ms cubic-bezier(0.2,0.8,0.2,1)' }}
+            style={{ fontFamily: 'Roboto, sans-serif', color: 'var(--ink-body)', opacity: 0, transform: 'translateY(20px)', transition: 'opacity 800ms cubic-bezier(0.2,0.8,0.2,1), transform 800ms cubic-bezier(0.2,0.8,0.2,1)' }}
           >
             <p>Cultural heritage exists because people need it. It functions as a living connection to place, to community, to the stories that explain who we are and how we got here. Yet for millions of people across Europe, that connection is breaking down. The spaces and formats meant to carry these stories simply haven't kept pace with the people they're meant to serve.</p>
             <p>Smaller cultural heritage institutions feel this most acutely. Without the resources of major flagships, they watch audiences shrink, younger generations drift, and communities that were never quite reflected in their collections stop showing up at all. The tools to change this exist. Immersive, multi-sensory experiences that surround you with a story rather than presenting it from behind glass are proven and powerful. But they remain out of reach for most.</p>
@@ -256,7 +256,7 @@ export default function LynchHome() {
             className="border-l-2 border-brand-lilac pl-7 flex flex-col justify-center"
           >
             <div className="text-5xl mb-3 leading-none text-brand-lilac/30" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 300 }}>&ldquo;</div>
-            <p className="leading-relaxed italic" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 300, fontSize: '1.05rem', color: 'rgba(247,243,224,0.9)' }}>
+            <p className="leading-relaxed italic" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 300, fontSize: '1.05rem', color: 'var(--ink-strong)' }}>
               Heritage is most powerful when it's felt collectively, in shared spaces, by people who might not have sought it out on their own.
             </p>
             <div className="w-8 h-px bg-brand-lilac/35 mt-5" />

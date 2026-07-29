@@ -56,12 +56,12 @@ const approachCards: Record<string, ApproachCardData> = {
 function ApproachCard({ title, partners, description }: ApproachCardData) {
   return (
     <div className="border border-brand-purple/35 bg-brand-plum/20 p-6 rounded-lg transition-all duration-300 hover:border-brand-lilac hover:shadow-[0_0_16px_rgba(218,128,255,0.15)] flex flex-col h-full">
-      <h3 className="font-bold text-brand-cream mb-3" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+      <h2 className="font-bold text-brand-cream mb-3" style={{ fontFamily: 'Montserrat, sans-serif' }}>
         {title}
-      </h3>
+      </h2>
       <p
         className="text-sm leading-relaxed mb-6 flex-grow"
-        style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(247,243,224,0.78)' }}
+        style={{ fontFamily: 'Roboto, sans-serif', color: 'var(--ink-body)' }}
       >
         {description}
       </p>
@@ -162,7 +162,7 @@ function Objective({ index, title, body }: { index: number; title: string; body:
             className="pl-9 pb-4 pr-2 text-sm leading-relaxed"
             style={{
               fontFamily: 'Roboto, sans-serif',
-              color: 'rgba(247,243,224,0.72)',
+              color: 'var(--ink-body)',
               opacity: open ? 1 : 0,
               transition: open
                 ? 'opacity 800ms cubic-bezier(0.2, 0.8, 0.2, 1) 200ms'
@@ -202,7 +202,7 @@ export default function About() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
         <div className="col-span-2">
           <p className="text-xs font-bold uppercase tracking-widest text-brand-lilac mb-3">The Objective</p>
-          <p className="leading-relaxed mb-6" style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(247,243,224,0.8)' }}>
+          <p className="leading-relaxed mb-6" style={{ fontFamily: 'Roboto, sans-serif', color: 'var(--ink-body)' }}>
             The Immersive ECHO project has five strategic objectives designed to address the
             challenges facing Europe's cultural heritage institutions. These objectives form
             the backbone of a scalable, inclusive, and sustainable transformation in how cultural
@@ -217,7 +217,7 @@ export default function About() {
         </div>
         <div className="border-l-2 border-brand-lilac pl-6 flex flex-col justify-center">
           <div className="text-5xl mb-3 leading-none text-brand-lilac/30" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 300 }}>&ldquo;</div>
-          <p className="leading-relaxed italic" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 300, fontSize: '1.05rem', color: 'rgba(247,243,224,0.9)' }}>
+          <p className="leading-relaxed italic" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 300, fontSize: '1.05rem', color: 'var(--ink-strong)' }}>
             Heritage is most powerful when it's felt collectively, in shared spaces, by people who
             might not have sought it out on their own.
           </p>
@@ -274,7 +274,7 @@ export default function About() {
             loading="lazy"
           />
         </div>
-        <p className="mt-4 leading-relaxed" style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(247,243,224,0.75)' }}>
+        <p className="mt-4 leading-relaxed" style={{ fontFamily: 'Roboto, sans-serif', color: 'var(--ink-body)' }}>
           {/* TODO: Add real description for the Dual-Track Methodology infographic */}
           <span className="font-bold text-brand-cream">About:</span>  Dual-track design: off-site lab and on-site museum converge in a public testbed to scale immersive heritage experiences.
         </p>
@@ -292,7 +292,7 @@ export default function About() {
         {[['15','Partners'],['10','Countries'],['30','Months'],['2','Public Testbeds']].map(([value, label]) => (
           <div key={label} className="border border-brand-purple/35 bg-brand-plum/20 p-5 text-center rounded-lg transition-all duration-300 hover:border-brand-lilac hover:shadow-[0_0_12px_rgba(218,128,255,0.15)]">
             <div className="text-3xl font-extrabold mb-1 text-brand-lilac">{value}</div>
-            <div className="text-xs uppercase tracking-wider" style={{ color: 'rgba(247,243,224,0.5)' }}>{label}</div>
+            <div className="text-xs uppercase tracking-wider" style={{ color: 'var(--ink-subtle)' }}>{label}</div>
           </div>
         ))}
       </div>
@@ -318,7 +318,7 @@ export default function About() {
           <ul className="space-y-4 text-sm" style={{ fontFamily: 'Roboto, sans-serif' }}>
             {[['Duration','Feb 2026 – July 2028'],['GA Number','101255680'],['Funding','Creative Europe Large Scale'],['Coordinator','Lindholmen Science Park']].map(([key, val]) => (
               <li key={key} className="border-b border-brand-purple/20 pb-2">
-                <span className="text-xs uppercase tracking-wider" style={{ color: 'rgba(247,243,224,0.45)' }}>{key}</span>
+                <span className="text-xs uppercase tracking-wider" style={{ color: 'var(--ink-subtle)' }}>{key}</span>
                 <br /><span className="text-brand-cream">{val}</span>
               </li>
             ))}

@@ -233,7 +233,7 @@ export default function BrandHome() {
               fontFamily: 'Roboto, sans-serif',
               fontSize: '1.2rem',
               lineHeight: 1.7,
-              color: 'rgba(247, 243, 224, 0.65)',
+              color: 'var(--ink-muted)',
               animationDelay: '500ms',
             }}
           >
@@ -246,7 +246,7 @@ export default function BrandHome() {
           >
             <span
               className="text-xs uppercase tracking-widest"
-              style={{ fontFamily: 'Montserrat, sans-serif', color: 'rgba(247,243,224,0.3)' }}
+              style={{ fontFamily: 'Montserrat, sans-serif', color: 'var(--ink-subtle)' }}
             >
               Scroll
             </span>
@@ -276,7 +276,7 @@ export default function BrandHome() {
             </div>
             <div
               className="text-xs uppercase tracking-widest"
-              style={{ fontFamily: 'Montserrat, sans-serif', color: 'rgba(247,243,224,0.5)' }}
+              style={{ fontFamily: 'Montserrat, sans-serif', color: 'var(--ink-subtle)' }}
             >
               {label}
             </div>
@@ -305,7 +305,7 @@ export default function BrandHome() {
             className="md:col-span-2 space-y-5 text-base leading-relaxed"
             style={{
               fontFamily: 'Roboto, sans-serif',
-              color: 'rgba(247,243,224,0.8)',
+              color: 'var(--ink-body)',
               opacity: 0,
               transform: 'translateY(20px)',
               transition: 'opacity 800ms cubic-bezier(0.2,0.8,0.2,1), transform 800ms cubic-bezier(0.2,0.8,0.2,1)',
@@ -357,7 +357,7 @@ export default function BrandHome() {
                 fontFamily: 'Roboto, sans-serif',
                 fontWeight: 300,
                 fontSize: '1.05rem',
-                color: 'rgba(247,243,224,0.9)',
+                color: 'var(--ink-strong)',
               }}
             >
               Heritage is most powerful when it's felt collectively, in shared spaces, by people who

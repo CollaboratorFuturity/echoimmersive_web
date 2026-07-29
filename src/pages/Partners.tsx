@@ -35,15 +35,17 @@ export default function Partners() {
               className="w-64 mx-auto block group"
             >
               <div className="border border-brand-purple/35 bg-brand-plum/20 h-32 flex items-center justify-center rounded-lg transition-all duration-300 group-hover:border-brand-lilac group-hover:shadow-[0_0_16px_rgba(218,128,255,0.2)] p-4">
+                {/* alt="": the visible name below is the link's accessible name —
+                    a named alt would make screen readers announce it twice */}
                 <img
                   src="/logos/partner_logos/LSP.png"
-                  alt="Lindholmen Science Park"
+                  alt=""
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
               <p className="text-sm mt-2 text-brand-cream group-hover:text-brand-lilac transition-colors">Lindholmen Science Park</p>
             </a>
-            <p className="text-sm mt-1" style={{ color: 'rgba(247,243,224,0.45)' }}>Gothenburg, Sweden</p>
+            <p className="text-sm mt-1" style={{ color: 'var(--ink-subtle)' }}>Gothenburg, Sweden</p>
           </div>
 
           <div className="text-center">
@@ -57,13 +59,13 @@ export default function Partners() {
               <div className="border border-brand-purple/35 bg-brand-plum/20 h-32 flex items-center justify-center rounded-lg transition-all duration-300 group-hover:border-brand-lilac group-hover:shadow-[0_0_16px_rgba(218,128,255,0.2)]">
                 <img
                   src="/logos/partner_logos/FUT.png"
-                  alt="Futurity Systems"
+                  alt=""
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
               <p className="text-sm mt-2 text-brand-cream group-hover:text-brand-lilac transition-colors">Futurity Systems</p>
             </a>
-            <p className="text-sm mt-1" style={{ color: 'rgba(247,243,224,0.45)' }}>Barcelona, Spain</p>
+            <p className="text-sm mt-1" style={{ color: 'var(--ink-subtle)' }}>Barcelona, Spain</p>
           </div>
         </div>
       </section>
@@ -83,7 +85,7 @@ export default function Partners() {
               <div className={`border border-brand-purple/30 bg-brand-plum/15 h-24 flex items-center justify-center rounded-lg transition-all duration-300 group-hover:border-brand-lilac group-hover:bg-brand-plum/30 group-hover:shadow-[0_0_12px_rgba(218,128,255,0.15)] ${partner.large ? 'p-0' : 'p-3'}`}>
                 <img
                   src={`/logos/partner_logos/${partner.file}.png`}
-                  alt={partner.name}
+                  alt=""
                   className="max-h-full max-w-full object-contain"
                 />
               </div>

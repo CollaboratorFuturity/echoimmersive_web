@@ -8,25 +8,31 @@ Memory is fragile. AI context gets compressed at unpredictable intervals. If you
 
 ## Pending
 
+- [ ] **[A11y] VoiceOver pass** -- Run the manual screen-reader script in `docs/A11Y_VERIFICATION_CHECKLIST.md` (everything else is machine-verified: axe 0 violations, keyboard, reflow). In progress 2026-07-29.
+
+- [ ] **[A11y] Accessibility statement** -- After a clean VoiceOver pass, publish an accessibility statement page (EN 301 549 / Web Accessibility Directive — required for an EU-funded public site). Link it from the footer. Do NOT use a third-party accessibility overlay.
+
+- [ ] **[Assets] Verify KIKK_lepavillion.avif alt** -- The one image not visually verifiable by tooling (AVIF). Current alt "Le Pavillon, Namur" — confirm it matches the photo.
+
 - [ ] **[Content] Resources — wire remaining deliverable Drive links** -- D1.1 and D5.1 are linked; D5.2 has "You are here!" status. Add `href: 'https://drive.google.com/...'` to each remaining deliverable in the `deliverables` array in `src/pages/Resources.tsx` as files are published to Drive.
 
 - [ ] **[Assets] Partner logos — SVG upgrade** -- 14 core partner logo entries + LSP coordinator + FUT leadership card are wired as PNGs in `public/logos/partner_logos/`. Replace with SVGs where available for crisp scaling. Associated partners section removed from Partners page (no logos available; confirm with coordinator if it should return). Note: `FFV.png` is preserved on disk but unreferenced — Flora & Fauna Visions was absorbed by The Storytelling Company (TSC) and all responsibilities reassigned.
 
-- [ ] **[Assets] Experience photography** -- Need real photos for Snapsting Festival (Viborg) and Le Pavillon (Namur). Files: `src/pages/Pilots.tsx` (the Experiences page).
+- [ ] **[Assets] Experience photography** -- Need real photos for Snapsting Festival (Viborg) and Le Pavillon (Namur). Files: `src/pages/Experiences.tsx`.
 
 - [ ] **[Assets] Hero image/video** -- Home page hero requires either a photo or a video loop of the immersive installation environment.
 
 - [ ] **[Content] About page copy** -- Several wireframe text blocks are placeholders. Need final mission copy, pull quote, and approach descriptions before Phase 2 about page is done.
 
-- [ ] **[Content] Experience descriptions** -- Both cards on `/experiences` have placeholder text. Need final descriptions for Snapsting and Le Pavillon. File: `src/pages/Pilots.tsx`.
+- [ ] **[Content] Experience descriptions** -- Both cards on `/experiences` have placeholder text. Need final descriptions for Snapsting and Le Pavillon. File: `src/pages/Experiences.tsx`.
 
 - [ ] **[Content] FAQ verified** -- Confirm all 14 answers in `src/pages/FAQ.tsx` are final/approved before going live.
 
 - [ ] **[Content] EU funding credit line wording** -- Footer now includes the official "Co-funded by the EU" logo (`public/logos/co-funded_EN/vertical/EN_co_fundedvertical_RGB_WHITE.png`). Confirm exact wording of the accompanying credit line with coordinator.
 
-- [ ] **[A11y] Social icon aria-labels** -- Footer and contact page use inline SVG social icons with no text labels. Add `aria-label` attributes before launch (e.g. `aria-label="Follow us on Facebook"`).
+- [x] **[A11y] Social icon aria-labels** -- Done: Footer and Contact social links carry `aria-label="Follow us on Facebook/Instagram"`.
 
-- [ ] **[A11y] FAQ keyboard navigation** -- FAQ accordion uses `onClick`. The `aria-expanded` attribute is set but Enter/Space keyboard toggle needs testing across screen readers. File: `src/pages/FAQ.tsx`.
+- [x] **[A11y] FAQ keyboard navigation** -- Verified 2026-07-28 via headless-Chrome keyboard simulation: all 14 toggles are native buttons, Enter and Space both toggle, `aria-expanded` updates. VoiceOver announcement check remains part of the manual pass in `docs/A11Y_VERIFICATION_CHECKLIST.md`.
 
 
 - [ ] **[Design] Remove sandbox routes once design is locked** -- `/lynch-home`, `/lynch-about`, `/ismaila-home`, `/brand-home` are no longer needed as the brand palette is rolled out site-wide. Delete the files, remove the routes from `src/App.tsx`, and remove the entries from `README.md` and `PROGRESS.md`.

@@ -47,7 +47,7 @@ echoimmersive_web/
 │   │   ├── Home.tsx
 │   │   ├── About.tsx
 │   │   ├── Partners.tsx
-│   │   ├── Pilots.tsx               # /experiences route (file kept as Pilots.tsx)
+│   │   ├── Experiences.tsx      # /experiences route
 │   │   ├── SnapstingActivities.tsx
 │   │   ├── PavillonActivities.tsx
 │   │   ├── News.tsx
@@ -102,6 +102,7 @@ See [docs/PROGRESS.md](docs/PROGRESS.md) for the full implementation checklist.
 - Resources page has full EU grant data (5 WPs, 22 tasks, 20 milestones, 19 deliverables, 21 events) in a tabbed interface; past milestone dates highlighted green automatically; events numbered E1–E21 sequentially by date (E1–E6 are the 6 dated public events in chronological order, E7–E21 are remaining activities)
 - About page links to Resources via "Full Structure, Tasks & Deliverables" CTA
 - Sandbox routes (`/lynch-home`, `/lynch-about`, `/ismaila-home`, `/brand-home`) remain for design exploration
+- **Accessibility: WCAG 2.2 AA hardening complete (2026-07-28/29)** — 0 axe-core violations on all 12 routes; keyboard behavior (skip link, mobile-menu Esc, Lightbox modal, FAQ accordion) machine-verified with headless Chrome; 320px reflow clean; all alt text human-reviewed. See [docs/WCAG_AUDIT.md](docs/WCAG_AUDIT.md) (criterion-by-criterion status) and [docs/A11Y_VERIFICATION_CHECKLIST.md](docs/A11Y_VERIFICATION_CHECKLIST.md) (manual VoiceOver script — the last step before an AA claim, plus publishing an accessibility statement)
 
 ## Routes
 

@@ -288,7 +288,7 @@ export default function ProjectTimeline({
     <section
       ref={rootRef}
       className="pt-root"
-      style={{ position: 'relative', width: '100%', fontFamily: 'Roboto, sans-serif', color: 'rgba(247,243,224,0.85)' }}
+      style={{ position: 'relative', width: '100%', fontFamily: 'Roboto, sans-serif', color: 'var(--ink-strong)' }}
     >
       <style>{PT_CSS}</style>
 
@@ -312,7 +312,7 @@ export default function ProjectTimeline({
       </div>
 
       {lede && (
-        <p data-reveal data-reveal-delay="200" style={{ ...revealInit(), color: 'rgba(247,243,224,0.70)', lineHeight: 1.65, maxWidth: 720, fontSize: 16, marginBottom: 48 }}>
+        <p data-reveal data-reveal-delay="200" style={{ ...revealInit(), color: 'var(--ink-muted)', lineHeight: 1.65, maxWidth: 720, fontSize: 16, marginBottom: 48 }}>
           {lede}
         </p>
       )}
@@ -364,7 +364,9 @@ export default function ProjectTimeline({
         <div ref={detailRef}>
           {active && <DetailCard item={active} today={today} onPrev={() => moveActive(-1)} onNext={() => moveActive(1)} />}
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+        {/* overflowX: the index grid has fixed 96/110px columns (~500px min) —
+            on narrow screens it scrolls inside this box, not the page (1.4.10) */}
+        <div style={{ display: 'flex', flexDirection: 'column', minHeight: 0, overflowX: 'auto' }}>
           <DividerLabel>Index</DividerLabel>
           <div className="pt-index-header" style={{ flexShrink: 0 }}>
             <span style={{ paddingLeft: 13 }}>Date</span>
@@ -426,7 +428,7 @@ function MonthScale({ months, hoverMonth, setHoverMonth }: {
                 style={{
                   height: 36, display: 'flex', alignItems: 'center', justifyContent: 'center',
                   fontFamily: 'Montserrat, sans-serif', fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase',
-                  color: isHover ? '#DA80FF' : isQ ? 'rgba(247,243,224,0.65)' : 'rgba(247,243,224,0.30)',
+                  color: isHover ? '#DA80FF' : isQ ? 'var(--ink-muted)' : 'var(--ink-subtle)',
                   background: isHover ? 'rgba(218,128,255,0.08)' : 'transparent',
                   fontWeight: isQ ? 600 : 400,
                   transition: 'background 180ms cubic-bezier(0.2,0.8,0.2,1), color 180ms cubic-bezier(0.2,0.8,0.2,1)',
@@ -459,11 +461,11 @@ function Lane({ lane, months, byMonth, activeId, setActiveId, hoverMonth, setHov
         style={{
           display: 'flex', alignItems: 'center', gap: 8, paddingLeft: 16, paddingRight: 12,
           fontFamily: 'Montserrat, sans-serif', fontSize: 10, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase',
-          color: 'rgba(247,243,224,0.55)', borderRight: '1px solid rgba(247,243,224,0.10)',
+          color: 'var(--ink-subtle)', borderRight: '1px solid rgba(247,243,224,0.10)',
           background: 'rgba(247,243,224,0.02)',
         }}
       >
-        <span style={{ color: lane === 'milestone' ? '#DA80FF' : lane === 'event' ? 'rgba(218,128,255,0.75)' : 'rgba(247,243,224,0.55)', fontSize: 12 }}>{TYPE_GLYPH[lane]}</span>
+        <span style={{ color: lane === 'milestone' ? '#DA80FF' : lane === 'event' ? 'rgba(218,128,255,0.75)' : 'var(--ink-subtle)', fontSize: 12 }}>{TYPE_GLYPH[lane]}</span>
         <span>{TYPE_LABEL[lane]}</span>
       </div>
 
@@ -524,7 +526,7 @@ function DetailCard({ item, today, onPrev, onNext }: {
         <span className="pt-eyebrow">{TYPE_LABEL[item.type]} · {item.id.toUpperCase()}</span>
         <span style={{
           fontFamily: 'Montserrat, sans-serif', fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase',
-          color: status === 'in-progress' ? '#DA80FF' : 'rgba(247,243,224,0.55)',
+          color: status === 'in-progress' ? '#DA80FF' : 'var(--ink-subtle)',
         }}>
           {status === 'done' ? '✓ Delivered' : status === 'in-progress' ? '● In progress' : '○ Upcoming'}
         </span>
@@ -540,17 +542,17 @@ function DetailCard({ item, today, onPrev, onNext }: {
       <h3 className="pt-heading" style={{ fontSize: 28, lineHeight: 1.15, marginBottom: 16 }}>{item.title}</h3>
 
       {item.tag && (
-        <div style={{ fontFamily: 'Montserrat, sans-serif', fontSize: 12, color: 'rgba(247,243,224,0.55)', letterSpacing: '0.05em', marginBottom: 20 }}>
+        <div style={{ fontFamily: 'Montserrat, sans-serif', fontSize: 12, color: 'var(--ink-subtle)', letterSpacing: '0.05em', marginBottom: 20 }}>
           {item.tag}
         </div>
       )}
 
       {item.description && (
-        <p style={{ color: 'rgba(247,243,224,0.78)', lineHeight: 1.65, fontSize: 15 }}>{item.description}</p>
+        <p style={{ color: 'var(--ink-body)', lineHeight: 1.65, fontSize: 15 }}>{item.description}</p>
       )}
 
       <div style={{ display: 'flex', alignItems: 'center', gap: 24, marginTop: 28, paddingTop: 20, borderTop: '1px solid rgba(247,243,224,0.10)' }}>
-        <button onClick={onPrev} className="pt-btn-text" style={{ color: 'rgba(247,243,224,0.55)', opacity: 0.7 }}>← Previous</button>
+        <button onClick={onPrev} className="pt-btn-text" style={{ color: 'var(--ink-subtle)', opacity: 0.7 }}>← Previous</button>
         <button onClick={onNext} className="pt-btn-text" style={{ color: '#DA80FF', opacity: 0.85, marginLeft: 'auto' }}>Next →</button>
       </div>
     </div>
@@ -572,24 +574,24 @@ function IndexRow({ item, active, today, onSelect }: {
       className={`pt-row ${active ? 'active' : ''}`}
       style={{ outline: 'none' }}
     >
-      <span style={{ fontFamily: 'Montserrat, sans-serif', fontSize: 12, fontWeight: 600, letterSpacing: '0.05em', color: 'rgba(247,243,224,0.65)', paddingLeft: 13 }}>
+      <span style={{ fontFamily: 'Montserrat, sans-serif', fontSize: 12, fontWeight: 600, letterSpacing: '0.05em', color: 'var(--ink-muted)', paddingLeft: 13 }}>
         {d ? fmtMonth(d).toUpperCase() : 'TBD'}
       </span>
       <span style={{
         display: 'flex', alignItems: 'center', gap: 8,
         fontFamily: 'Montserrat, sans-serif', fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase',
-        color: item.type === 'milestone' ? '#DA80FF' : 'rgba(247,243,224,0.55)',
+        color: item.type === 'milestone' ? '#DA80FF' : 'var(--ink-subtle)',
       }}>
         <span>{TYPE_GLYPH[item.type]}</span>
         <span>{TYPE_LABEL[item.type]}</span>
       </span>
-      <span style={{ color: active ? '#F7F3E0' : 'rgba(247,243,224,0.85)', fontSize: 15, fontFamily: 'Montserrat, sans-serif', fontWeight: 300 }}>
+      <span style={{ color: active ? '#F7F3E0' : 'var(--ink-strong)', fontSize: 15, fontFamily: 'Montserrat, sans-serif', fontWeight: 300 }}>
         {item.title}
-        {item.tag && <span style={{ marginLeft: 12, fontFamily: 'Montserrat, sans-serif', fontSize: 11, letterSpacing: '0.05em', color: 'rgba(247,243,224,0.40)' }}>· {item.tag}</span>}
+        {item.tag && <span style={{ marginLeft: 12, fontFamily: 'Montserrat, sans-serif', fontSize: 11, letterSpacing: '0.05em', color: 'var(--ink-subtle)' }}>· {item.tag}</span>}
       </span>
       <span style={{
         fontFamily: 'Montserrat, sans-serif', fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase',
-        color: status === 'done' ? 'rgba(247,243,224,0.40)' : status === 'in-progress' ? '#DA80FF' : 'rgba(247,243,224,0.65)',
+        color: status === 'done' ? 'var(--ink-subtle)' : status === 'in-progress' ? '#DA80FF' : 'var(--ink-muted)',
       }}>
         {status === 'done' ? 'Delivered' : status === 'in-progress' ? '● Now' : 'Upcoming'}
       </span>
@@ -601,7 +603,7 @@ function Stat({ label, value }: { label: string; value: string }) {
   return (
     <div style={{ textAlign: 'right' }}>
       <div style={{ color: '#F7F3E0', fontFamily: 'Montserrat, sans-serif', fontWeight: 700, fontSize: 18, letterSpacing: '0.02em', fontFeatureSettings: '"tnum"' }}>{value}</div>
-      <div style={{ color: 'rgba(247,243,224,0.45)', fontFamily: 'Montserrat, sans-serif', fontSize: 10, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', marginTop: 2 }}>{label}</div>
+      <div style={{ color: 'var(--ink-subtle)', fontFamily: 'Montserrat, sans-serif', fontSize: 10, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', marginTop: 2 }}>{label}</div>
     </div>
   )
 }
@@ -647,9 +649,9 @@ const PT_CSS = `
 .pt-em em { font-style: normal; color: #DA80FF; }
 
 .pt-header { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 24px; margin-bottom: 32px; }
-.pt-stats { display: flex; align-items: flex-end; gap: 40px; font-family: 'Montserrat', sans-serif; font-feature-settings: "tnum"; font-size: 12px; color: rgba(247,243,224,0.55); }
+.pt-stats { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 40px; font-family: 'Montserrat', sans-serif; font-feature-settings: "tnum"; font-size: 12px; color: var(--ink-subtle); }
 
-.pt-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 32px; margin-bottom: 24px; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(247,243,224,0.55); font-family: Montserrat, sans-serif; }
+.pt-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 32px; margin-bottom: 24px; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-subtle); font-family: Montserrat, sans-serif; }
 
 .pt-frame { border: 1px solid rgba(136,67,163,0.30); border-radius: 12px; background: rgba(90,66,99,0.10); overflow: hidden; }
 .pt-cell-border { border-right: 1px solid rgba(247,243,224,0.06); }
@@ -690,6 +692,10 @@ const PT_CSS = `
 }
 
 .pt-detail-grid { display: grid; grid-template-columns: 1fr; gap: 40px; margin-top: 40px; align-items: start; }
+/* Let the 1fr tracks shrink below their content's min width on narrow
+   viewports (grid items default to min-width:auto, which would stretch
+   the page sideways at 320px — WCAG 1.4.10). */
+.pt-detail-grid > * { min-width: 0; }
 @media (min-width: 768px) { .pt-detail-grid { grid-template-columns: 5fr 7fr; } }
 
 .pt-detail { border: 1px solid rgba(136,67,163,0.30); background: rgba(90,66,99,0.18); border-radius: 12px; padding: 28px; }
@@ -704,7 +710,7 @@ const PT_CSS = `
 .pt-index-header {
   display: grid; grid-template-columns: 96px 110px 1fr auto; column-gap: 24px; padding-bottom: 12px;
   font-family: Montserrat, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
-  color: rgba(247,243,224,0.45);
+  color: var(--ink-subtle);
 }
 
 .pt-row {
