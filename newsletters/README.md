@@ -34,6 +34,14 @@ make newsletter-test FILE=newsletters/2026-07-first-issue.html \
   SUBJECT="Immersive ECHO — First newsletter" EMAIL=you@example.com
 ```
 
+Optionally do a real send to a single active subscriber first (their personal
+unsubscribe link, but nobody else gets emailed):
+
+```sh
+make newsletter-send FILE=newsletters/2026-07-first-issue.html \
+  SUBJECT="Immersive ECHO — First newsletter" ONLY=one@subscriber.com
+```
+
 Then send for real to all active subscribers:
 
 ```sh

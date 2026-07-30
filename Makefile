@@ -66,8 +66,10 @@ newsletter-test:
 
 # Send an issue to ALL active subscribers:
 #   make newsletter-send FILE=newsletters/issue.html SUBJECT="Subject line"
+# Or a REAL send (personal unsubscribe link) to only ONE active subscriber:
+#   make newsletter-send FILE=... SUBJECT="..." ONLY=one@subscriber.com
 newsletter-send:
-	@test -n "$(FILE)" && test -n "$(SUBJECT)" || { echo 'Usage: make newsletter-send FILE=newsletters/issue.html SUBJECT="Subject"'; exit 1; }
-	@FILE="$(FILE)" SUBJECT="$(SUBJECT)" python3 -c "import json,os; print(json.dumps({'subject': os.environ['SUBJECT'], 'html': open(os.environ['FILE']).read()}))" | \
+	@test -n "$(FILE)" && test -n "$(SUBJECT)" || { echo 'Usage: make newsletter-send FILE=newsletters/issue.html SUBJECT="Subject" [ONLY=one@subscriber.com]'; exit 1; }
+	@FILE="$(FILE)" SUBJECT="$(SUBJECT)" ONLY="$(ONLY)" python3 -c "import json,os; d={'subject': os.environ['SUBJECT'], 'html': open(os.environ['FILE']).read()}; o=os.environ.get('ONLY'); d.update({'only_email': o} if o else {}); print(json.dumps(d))" | \
 	curl -sS -X POST "$(API_URL)/api/v1/admin/newsletter/send" -H "X-API-Key: $$ADMIN_API_KEY" -H "Content-Type: application/json" --data-binary @-
 	@echo

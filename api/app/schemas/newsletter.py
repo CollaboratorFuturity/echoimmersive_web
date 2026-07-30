@@ -23,6 +23,8 @@ class NewsletterSendRequest(BaseModel):
     html: str = Field(min_length=1)
     # When set, sends ONLY to this address (with a dummy unsubscribe link) — no subscribers are emailed.
     test_email: EmailStr | None = None
+    # When set, does a REAL send (personal unsubscribe link) but only to this one active subscriber.
+    only_email: EmailStr | None = None
 
 
 class NewsletterSendResult(BaseModel):

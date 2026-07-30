@@ -101,12 +101,17 @@ async def send_newsletter(payload: NewsletterSendRequest, db: AsyncSession = Dep
             raise HTTPException(502, f"Test send failed: {exc}") from exc
         return NewsletterSendResult(mode="test", sent=1, failed=0, failures=[])
 
-    result = await db.execute(
+    stmt = (
         select(NewsletterSubscriber)
         .where(NewsletterSubscriber.status == "active")
         .order_by(NewsletterSubscriber.created_at)
     )
+    if payload.only_email:
+        stmt = stmt.where(NewsletterSubscriber.email == payload.only_email)
+    result = await db.execute(stmt)
     subscribers = result.scalars().all()
+    if payload.only_email and not subscribers:
+        raise HTTPException(404, f"{payload.only_email} is not an active subscriber.")
 
     sent = 0
     failures: list[str] = []
