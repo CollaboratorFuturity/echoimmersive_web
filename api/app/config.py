@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     SMTP_FROM_NAME: str = "Immersive ECHO"
     SMTP_FROM_EMAIL: str = "noreply@echoimmersive.eu"
     CONTACT_RECIPIENT_EMAIL: str = ""
-    SITE_URL: str = "https://echoimmersive.futurity.science"
+    SITE_URL: str = "https://echoimmersive.eu"
     ALLOWED_ORIGINS: str = "*"
     ADMIN_API_KEY: str = ""
 
