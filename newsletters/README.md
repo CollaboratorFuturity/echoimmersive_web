@@ -12,7 +12,15 @@ your own unsubscribe link.
    - Absolute URLs for all links and images (`https://echoimmersive.eu/...`).
    - `{{first_name}}` anywhere in the body is replaced with the subscriber's first name
      (falls back to "there").
-3. Do **not** include `<html>`, `<head>`, or `<body>` tags — just the content.
+3. Unsubscribe link: if the issue contains `{{unsubscribe_url}}` (e.g. in its own designed
+   footer, as `href="{{unsubscribe_url}}"`), each subscriber's personal link is substituted
+   there. If not, a plain unsubscribe footer is appended automatically.
+4. Fully designed issues (like `2026-07-first-issue.html`, generated from
+   `Echo newsletter design/`) may be complete HTML documents with hosted image URLs.
+   Simple text issues can be bare fragments like `_template.html`.
+5. Newsletter images live in `public/img/newsletter/` so they're served at
+   `https://echoimmersive.eu/img/newsletter/...` — deploying the frontend is what puts
+   them online, so images must be deployed before sending.
 
 ## Sending
 

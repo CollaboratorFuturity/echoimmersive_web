@@ -1,0 +1,28 @@
+/* Immersive ECHO spacing & layout tokens (1920×1080 slide canvas) */
+:root {
+  /* Slide margins */
+  --slide-pad-x: 120px;       /* left/right safe margin */
+  --slide-pad-top: 104px;
+  --slide-pad-bottom: 140px;  /* leaves room for the footer strip */
+  --footer-inset: 48px;       /* footer distance from bottom edge */
+  --cover-strip-bottom: 92px; /* cover meta / EU emblem strip */
+
+  /* Rhythm */
+  --gap-kicker-head: 28px;    /* kicker → headline */
+  --gap-head-lead: 32px;      /* headline → lead paragraph */
+  --gap-bullet: 20px;         /* between bullets */
+
+  /* Marks */
+  --accent-bar-w: 64px;       /* the purple kicker bar */
+  --accent-bar-h: 4px;
+  --bullet-dash-w: 26px;      /* the short dash before a bullet */
+  --bullet-dash-h: 3px;
+
+  /* Logo sizing */
+  --logo-footer-h: 70px;      /* horizontal logo in footers */
+  --logo-cover-w: 540px;      /* stacked logo on covers */
+  --eu-emblem-h: 74px;        /* co-funded emblem */
+
+  /* Radii (used sparingly — brand is mostly hard-edged) */
+  --radius-image: 6px;
+}

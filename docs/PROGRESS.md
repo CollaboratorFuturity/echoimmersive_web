@@ -103,7 +103,8 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 - [x] `docker-compose.yml` updated — 3 services: `echoimmersive-web` (Nginx), `api` (FastAPI), `db` (Postgres 16)
 - [x] `nginx.conf` updated — `/api/` proxied to FastAPI container
 - [x] `.env.example` added — template for SMTP, DB, and CORS config
-- [x] `POST /api/v1/admin/newsletter/send` — sends an HTML issue to all active subscribers (or one test address), per-subscriber unsubscribe footer; issues live in `newsletters/`, triggered via `make newsletter-test` / `make newsletter-send`
+- [x] `POST /api/v1/admin/newsletter/send` — sends an HTML issue to all active subscribers (or one test address), per-subscriber unsubscribe link (`{{unsubscribe_url}}` substitution, or appended footer); issues live in `newsletters/`, triggered via `make newsletter-test` / `make newsletter-send`
+- [x] First issue ready: `newsletters/2026-07-first-issue.html` (from `Echo newsletter design/`), images optimised + hosted at `public/img/newsletter/`
 - [ ] Run `alembic upgrade head` on first deploy to create DB tables
 
 ### Resources Page
