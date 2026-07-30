@@ -17,6 +17,8 @@ Pan-European cultural heritage project creating collective immersive experiences
 | Deploy      | Docker (multi-stage build → Nginx alpine), port 8105    |
 | Tunnel      | Cloudflare via Cosmos Cloud → echoimmersive.eu          |
 
+> **⚠️ Type-check gotcha:** the root `tsconfig.json` is solution-style (references only), so `npx tsc --noEmit` passes **without checking anything**, and `vite build` alone doesn't type-check. The only real verification is **`npm run build`** (`tsc -b && vite build`) — the same command the Dockerfile runs. Always run it before calling a change done.
+
 <!--
   Add rows as your stack grows. Examples:
   | Icons       | Font Awesome 6 (CDN)                                    |

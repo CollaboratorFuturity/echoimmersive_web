@@ -11,6 +11,8 @@ Read these docs in order before writing code:
 
 ## Rules
 
+- **⛔ VERIFY WITH `npm run build` — NEVER `tsc --noEmit` or bare `vite build`.** This repo's root `tsconfig.json` is solution-style (project references only), so `npx tsc --noEmit` exits 0 **without checking a single file** — it is a vacuous "pass". `vite build` alone skips type-checking too. The ONLY commands that actually type-check are `npm run build` or `tsc -b` (what the Dockerfile runs). This has shipped broken Docker builds more than once. NO code change is "done" or reported as passing until `npm run build` succeeds.
+- **When changing a shared type or data shape, grep for every importer first** (`grep -rn "from '@/data/..." src/`). A shape change to a module used by multiple pages (e.g. `src/data/galleries.ts` → used by both `News.tsx` and `news/Launch.tsx`) must update all consumers in the same edit.
 - **Read official docs first.** Before using any CSS framework, JS library, or tool -- read its official documentation. Not your training data, not your memory. The actual docs.
 - **docs/TODO.md is where all todos live.** Update all TODOS and keep theme here to work on them after finishing a main task.
 - **Follow STYLEGUIDE.md** for all visual changes -- colors, typography, spacing, component patterns. Consistency is non-negotiable.

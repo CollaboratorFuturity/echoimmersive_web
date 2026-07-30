@@ -1,5 +1,10 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { Dither } from '@/components/Dither/Dither'
+
+const reduceMotion = () =>
+  typeof window !== 'undefined' &&
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
 const inputClass = "w-full border-2 border-brand-purple/40 bg-brand-plum/25 text-brand-cream p-3 text-sm rounded-lg placeholder:text-brand-cream/25 focus:outline-none focus:border-brand-lilac focus:shadow-[0_0_8px_rgba(218,128,255,0.2)] transition-all duration-200"
 
@@ -187,14 +192,28 @@ export default function Newsletter() {
         </div>
       </div>
 
-      {/* Right: Image placeholder */}
-      {/* TODO: Replace with real immersive installation photo */}
-      <div
-        className="min-h-96 flex flex-col items-center justify-center gap-2"
-        style={{ backgroundColor: 'rgba(90,66,99,0.2)' }}
-      >
-        <div className="text-sm" style={{ color: 'var(--ink-subtle)' }}>[IMAGE PLACEHOLDER]</div>
-        <div className="text-xs" style={{ color: 'var(--ink-subtle)' }}>Immersive installation / testbed photo</div>
+      {/* Right: Dither background with centered logo */}
+      <div className="relative min-h-96 overflow-hidden" style={{ backgroundColor: '#202124' }}>
+        <div className="absolute inset-0" aria-hidden="true">
+          <Dither
+            waveColor={[0.55, 0.20, 0.65]}
+            colorNum={4}
+            pixelSize={2}
+            waveSpeed={0.04}
+            waveFrequency={2.5}
+            waveAmplitude={0.22}
+            enableMouseInteraction
+            mouseRadius={0.1}
+            disableAnimation={reduceMotion()}
+          />
+        </div>
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <img
+            src="/logos/logo-horizontal-light.png"
+            alt=""
+            className="h-12 md:h-16 w-auto opacity-90"
+          />
+        </div>
       </div>
 
     </div>
