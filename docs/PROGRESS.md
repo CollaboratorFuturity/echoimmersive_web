@@ -94,7 +94,7 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 ### Newsletter Page
 - [x] Page stub (`src/pages/Newsletter.tsx`) — full-screen split layout, controlled form, no header/footer
 - [x] Newsletter service integration — FastAPI backend (`POST /api/v1/public/newsletter`), success + already-subscribed states wired
-- [ ] Real image right panel
+- [x] Right panel — Dither background with centered logo (replaced image placeholder)
 
 ### Backend (FastAPI)
 - [x] `api/` directory — FastAPI + SQLAlchemy async + asyncpg + aiosmtplib + Pydantic v2
@@ -103,6 +103,7 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 - [x] `docker-compose.yml` updated — 3 services: `echoimmersive-web` (Nginx), `api` (FastAPI), `db` (Postgres 16)
 - [x] `nginx.conf` updated — `/api/` proxied to FastAPI container
 - [x] `.env.example` added — template for SMTP, DB, and CORS config
+- [x] `POST /api/v1/admin/newsletter/send` — sends an HTML issue to all active subscribers (or one test address), per-subscriber unsubscribe footer; issues live in `newsletters/`, triggered via `make newsletter-test` / `make newsletter-send`
 - [ ] Run `alembic upgrade head` on first deploy to create DB tables
 
 ### Resources Page

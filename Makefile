@@ -1,4 +1,4 @@
-.PHONY: build dev check up down rebuild logs api-logs db-logs migrate clean
+.PHONY: build dev check up down rebuild logs api-logs db-logs migrate clean newsletter-test newsletter-send newsletter-export
 
 # Local development: backend + db in containers, frontend via npm
 build:
@@ -7,9 +7,10 @@ build:
 dev:
 	npm run dev
 
-# Type-check the frontend without emitting (verifies TypeScript passes)
+# Type-check + build the frontend. NOTE: `tsc --noEmit` is vacuous here
+# (solution-style tsconfig) — `npm run build` is the only real check.
 check:
-	npx tsc --noEmit
+	npm run build
 	@echo "Type-check passed!"
 
 # Stop just the dev backend stack
@@ -43,3 +44,30 @@ migrate:
 # Wipe everything including the Postgres volume (destructive)
 clean:
 	docker compose down -v
+
+# ── Newsletter ──────────────────────────────────────────────────────────────
+# See newsletters/README.md. Requires ADMIN_API_KEY in the environment.
+# API_URL defaults to the local dev API; set it to the production URL to send for real.
+API_URL ?= http://localhost:8106
+
+# Download all active subscribers as CSV (for manual sends, e.g. Gmail BCC):
+#   make newsletter-export
+newsletter-export:
+	@curl -sS "$(API_URL)/api/v1/admin/newsletter/export" -H "X-API-Key: $$ADMIN_API_KEY" -o newsletter-subscribers.csv
+	@echo "Saved to newsletter-subscribers.csv ($$(($$(wc -l < newsletter-subscribers.csv) - 1)) subscribers)"
+
+# Send an issue to ONE test address only:
+#   make newsletter-test FILE=newsletters/issue.html SUBJECT="Subject line" EMAIL=you@example.com
+newsletter-test:
+	@test -n "$(FILE)" && test -n "$(SUBJECT)" && test -n "$(EMAIL)" || { echo 'Usage: make newsletter-test FILE=newsletters/issue.html SUBJECT="Subject" EMAIL=you@example.com'; exit 1; }
+	@FILE="$(FILE)" SUBJECT="$(SUBJECT)" EMAIL="$(EMAIL)" python3 -c "import json,os; print(json.dumps({'subject': os.environ['SUBJECT'], 'html': open(os.environ['FILE']).read(), 'test_email': os.environ['EMAIL']}))" | \
+	curl -sS -X POST "$(API_URL)/api/v1/admin/newsletter/send" -H "X-API-Key: $$ADMIN_API_KEY" -H "Content-Type: application/json" --data-binary @-
+	@echo
+
+# Send an issue to ALL active subscribers:
+#   make newsletter-send FILE=newsletters/issue.html SUBJECT="Subject line"
+newsletter-send:
+	@test -n "$(FILE)" && test -n "$(SUBJECT)" || { echo 'Usage: make newsletter-send FILE=newsletters/issue.html SUBJECT="Subject"'; exit 1; }
+	@FILE="$(FILE)" SUBJECT="$(SUBJECT)" python3 -c "import json,os; print(json.dumps({'subject': os.environ['SUBJECT'], 'html': open(os.environ['FILE']).read()}))" | \
+	curl -sS -X POST "$(API_URL)/api/v1/admin/newsletter/send" -H "X-API-Key: $$ADMIN_API_KEY" -H "Content-Type: application/json" --data-binary @-
+	@echo

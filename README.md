@@ -77,6 +77,7 @@ echoimmersive_web/
 │       └── galleries.ts             # Gallery image data
 │
 ├── api/                         # FastAPI backend (contact + newsletter endpoints)
+├── newsletters/                 # Newsletter issues (HTML) — see newsletters/README.md for how to send
 ├── public/                      # Static files served at site root
 │   ├── img/                     # Photos, hero imagery
 │   ├── logos/                   # Partner + coordinator logos, header logo

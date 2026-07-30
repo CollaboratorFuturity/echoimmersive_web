@@ -16,3 +16,17 @@ class NewsletterResponse(BaseModel):
     created_at: datetime
 
     model_config = {"from_attributes": True}
+
+
+class NewsletterSendRequest(BaseModel):
+    subject: str = Field(min_length=1, max_length=255)
+    html: str = Field(min_length=1)
+    # When set, sends ONLY to this address (with a dummy unsubscribe link) — no subscribers are emailed.
+    test_email: EmailStr | None = None
+
+
+class NewsletterSendResult(BaseModel):
+    mode: str  # "test" | "live"
+    sent: int
+    failed: int
+    failures: list[str]
