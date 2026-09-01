@@ -1,0 +1,32 @@
+/* Immersive ECHO color system */
+:root {
+  /* Base palette */
+  --echo-ink: #1F2023;          /* primary dark background */
+  --echo-ink-deep: #15161A;     /* deepest background / image wells */
+  --echo-purple: #DA80FF;       /* primary accent — kickers, rules, dots */
+  --echo-purple-deep: #8743A2;  /* secondary purple — WP labels, depth */
+  --echo-cream: #F7F3DF;        /* primary light — headings, logo, text on dark */
+
+  /* Neutral text ramp (on dark) */
+  --echo-text-strong: #F7F3DF;  /* headings */
+  --echo-text-body: #EDE9DC;    /* lead paragraphs */
+  --echo-text-muted: #C7C2D2;   /* secondary copy */
+  --echo-text-dim: #B3B3B3;     /* captions, fine print */
+  --echo-text-faint: #A8A2B2;   /* logo captions, labels */
+
+  /* Hairlines & fills */
+  --echo-rule: rgba(247, 243, 223, 0.16);   /* divider lines on dark */
+  --echo-rule-soft: rgba(247, 243, 223, 0.14);
+  --echo-footer-num: rgba(247, 243, 223, 0.42);
+
+  /* Map / data accents */
+  --echo-land: #2B2933;          /* unhighlighted territory */
+  --echo-land-active: #6A5A79;   /* highlighted partner territory */
+
+  /* Semantic aliases */
+  --surface-page: var(--echo-ink);
+  --surface-well: var(--echo-ink-deep);
+  --accent: var(--echo-purple);
+  --accent-deep: var(--echo-purple-deep);
+  --text-on-dark: var(--echo-cream);
+}

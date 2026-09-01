@@ -1,0 +1,178 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "deck-stage.js",
+              "image-slot.js"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Montserrat|Roboto))/i]",
+        "message": "Font not provided by the design system. Available: Montserrat, Roboto."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--accent",
+      "--accent-bar-h",
+      "--accent-bar-w",
+      "--accent-deep",
+      "--bullet-dash-h",
+      "--bullet-dash-w",
+      "--cover-strip-bottom",
+      "--echo-cream",
+      "--echo-footer-num",
+      "--echo-ink",
+      "--echo-ink-deep",
+      "--echo-land",
+      "--echo-land-active",
+      "--echo-purple",
+      "--echo-purple-deep",
+      "--echo-rule",
+      "--echo-rule-soft",
+      "--echo-text-body",
+      "--echo-text-dim",
+      "--echo-text-faint",
+      "--echo-text-muted",
+      "--echo-text-strong",
+      "--eu-emblem-h",
+      "--font-body",
+      "--font-display",
+      "--footer-inset",
+      "--fw-black",
+      "--fw-bold",
+      "--fw-light",
+      "--fw-medium",
+      "--fw-regular",
+      "--fw-semibold",
+      "--gap-bullet",
+      "--gap-head-lead",
+      "--gap-kicker-head",
+      "--headline-leading",
+      "--headline-tracking",
+      "--kicker-tracking",
+      "--kicker-transform",
+      "--logo-cover-w",
+      "--logo-footer-h",
+      "--radius-image",
+      "--slide-pad-bottom",
+      "--slide-pad-top",
+      "--slide-pad-x",
+      "--surface-page",
+      "--surface-well",
+      "--t-body",
+      "--t-caption",
+      "--t-detail",
+      "--t-display",
+      "--t-footer",
+      "--t-h2",
+      "--t-hero",
+      "--t-kicker",
+      "--t-lead",
+      "--text-on-dark"
+    ],
+    "tokenKinds": {
+      "--echo-ink": "color",
+      "--echo-ink-deep": "color",
+      "--echo-purple": "color",
+      "--echo-purple-deep": "color",
+      "--echo-cream": "color",
+      "--echo-text-strong": "font",
+      "--echo-text-body": "font",
+      "--echo-text-muted": "font",
+      "--echo-text-dim": "font",
+      "--echo-text-faint": "font",
+      "--echo-rule": "color",
+      "--echo-rule-soft": "color",
+      "--echo-footer-num": "color",
+      "--echo-land": "color",
+      "--echo-land-active": "color",
+      "--surface-page": "color",
+      "--surface-well": "color",
+      "--accent": "color",
+      "--accent-deep": "color",
+      "--text-on-dark": "font",
+      "--font-display": "font",
+      "--font-body": "font",
+      "--fw-black": "font",
+      "--fw-bold": "font",
+      "--fw-semibold": "font",
+      "--fw-light": "font",
+      "--fw-regular": "font",
+      "--fw-medium": "font",
+      "--t-hero": "spacing",
+      "--t-display": "spacing",
+      "--t-h2": "spacing",
+      "--t-lead": "spacing",
+      "--t-body": "spacing",
+      "--t-detail": "spacing",
+      "--t-kicker": "spacing",
+      "--t-caption": "spacing",
+      "--t-footer": "spacing",
+      "--kicker-tracking": "font",
+      "--kicker-transform": "other",
+      "--headline-tracking": "font",
+      "--headline-leading": "font",
+      "--slide-pad-x": "spacing",
+      "--slide-pad-top": "spacing",
+      "--slide-pad-bottom": "spacing",
+      "--footer-inset": "spacing",
+      "--cover-strip-bottom": "spacing",
+      "--gap-kicker-head": "spacing",
+      "--gap-head-lead": "spacing",
+      "--gap-bullet": "spacing",
+      "--accent-bar-w": "spacing",
+      "--accent-bar-h": "spacing",
+      "--bullet-dash-w": "spacing",
+      "--bullet-dash-h": "spacing",
+      "--logo-footer-h": "spacing",
+      "--logo-cover-w": "spacing",
+      "--eu-emblem-h": "spacing",
+      "--radius-image": "radius"
+    },
+    "fontFamilies": [
+      "Montserrat",
+      "Roboto"
+    ]
+  }
+}

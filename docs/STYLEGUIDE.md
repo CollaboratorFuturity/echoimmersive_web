@@ -113,6 +113,7 @@ Routing is defined in [`src/App.tsx`](../src/App.tsx) using `react-router-dom`. 
 | `/experiences/pavillon`  | [`PavillonActivities`](../src/pages/PavillonActivities.tsx)              |
 | `/news`               | [`News`](../src/pages/News.tsx)                                          |
 | `/news/launch`        | [`news/Launch`](../src/pages/news/)                                      |
+| `/news/newsletter-1`  | [`news/Newsletter01`](../src/pages/news/) — Newsletter No. 1 web version |
 | `/faq`                | [`FAQ`](../src/pages/FAQ.tsx)                                            |
 | `/contact`            | [`Contact`](../src/pages/Contact.tsx)                                    |
 | `/resources`          | [`Resources`](../src/pages/Resources.tsx) — cream bg, no Dither, tabbed grant-data reference |

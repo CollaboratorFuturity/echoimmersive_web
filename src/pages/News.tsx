@@ -18,6 +18,15 @@ type Article = {
 
 const articles: Article[] = [
   {
+    id: 2,
+    type: 'News',
+    date: 'September 2026',
+    title: 'Introducing ECHO — Newsletter No. 1',
+    subtitle: 'How immersive design is changing the way we experience history',
+    thumb: '/img/newsletter/namur-kickoff.jpg',
+    href: '/news/newsletter-1',
+  },
+  {
     id: 1,
     type: 'News',
     date: 'March 2026',

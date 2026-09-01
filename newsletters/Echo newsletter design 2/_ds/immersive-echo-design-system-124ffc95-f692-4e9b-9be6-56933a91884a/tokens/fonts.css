@@ -1,0 +1,4 @@
+/* Brand webfonts.
+   Montserrat (display / headings) + Roboto (body) are served from Google Fonts.
+   NOTE: hosted import, not bundled binaries — see README "Type". */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap");

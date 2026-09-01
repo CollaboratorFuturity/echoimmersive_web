@@ -118,6 +118,7 @@ See [docs/PROGRESS.md](docs/PROGRESS.md) for the full implementation checklist.
 - `/experiences/pavillon` — Le Pavillon activities
 - `/news` — News & Events
 - `/news/launch` — Launch event sub-page
+- `/news/newsletter-1` — Newsletter No. 1 as a web article
 - `/faq` — FAQ
 - `/contact` — Contact
 - `/resources` — Resources (opts out of Dither background)

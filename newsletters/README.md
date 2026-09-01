@@ -6,7 +6,7 @@ your own unsubscribe link.
 
 ## Writing an issue
 
-1. Copy `_template.html` to a new file, e.g. `2026-07-first-issue.html`.
+1. Copy `_template.html` to a new file, e.g. `2026-09-first-issue.html`.
 2. Edit the content. Rules for email HTML:
    - Inline styles only (no `<style>` blocks, no external CSS) — most email clients strip them.
    - Absolute URLs for all links and images (`https://echoimmersive.eu/...`).
@@ -15,8 +15,8 @@ your own unsubscribe link.
 3. Unsubscribe link: if the issue contains `{{unsubscribe_url}}` (e.g. in its own designed
    footer, as `href="{{unsubscribe_url}}"`), each subscriber's personal link is substituted
    there. If not, a plain unsubscribe footer is appended automatically.
-4. Fully designed issues (like `2026-07-first-issue.html`, generated from
-   `Echo newsletter design/`) may be complete HTML documents with hosted image URLs.
+4. Fully designed issues (like `2026-09-first-issue.html`, generated from
+   `Echo newsletter design 2/`) may be complete HTML documents with hosted image URLs.
    Simple text issues can be bare fragments like `_template.html`.
 5. Newsletter images live in `public/img/newsletter/` so they're served at
    `https://echoimmersive.eu/img/newsletter/...` — deploying the frontend is what puts
@@ -30,7 +30,7 @@ running (`make build` for local, or target production with `API_URL`).
 **Always test first** — sends only to you, no subscribers are emailed:
 
 ```sh
-make newsletter-test FILE=newsletters/2026-07-first-issue.html \
+make newsletter-test FILE=newsletters/2026-09-first-issue.html \
   SUBJECT="Immersive ECHO — First newsletter" EMAIL=you@example.com
 ```
 
@@ -38,14 +38,14 @@ Optionally do a real send to a single active subscriber first (their personal
 unsubscribe link, but nobody else gets emailed):
 
 ```sh
-make newsletter-send FILE=newsletters/2026-07-first-issue.html \
+make newsletter-send FILE=newsletters/2026-09-first-issue.html \
   SUBJECT="Immersive ECHO — First newsletter" ONLY=one@subscriber.com
 ```
 
 Then send for real to all active subscribers:
 
 ```sh
-make newsletter-send FILE=newsletters/2026-07-first-issue.html \
+make newsletter-send FILE=newsletters/2026-09-first-issue.html \
   SUBJECT="Immersive ECHO — First newsletter"
 ```
 

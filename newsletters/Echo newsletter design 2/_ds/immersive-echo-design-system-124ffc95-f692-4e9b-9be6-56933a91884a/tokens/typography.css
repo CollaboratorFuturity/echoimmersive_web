@@ -1,0 +1,35 @@
+/* Immersive ECHO type system.
+   Display: Montserrat (700–900). Body: Roboto (300 lead, 400 copy, 500 labels). */
+:root {
+  --font-display: "Montserrat", system-ui, sans-serif;
+  --font-body: "Roboto", system-ui, sans-serif;
+
+  /* Display weights */
+  --fw-black: 800;     /* @kind font */
+  --fw-bold: 700;      /* @kind font */
+  --fw-semibold: 600;  /* @kind font */
+
+  /* Body weights */
+  --fw-light: 300;     /* @kind font */
+  --fw-regular: 400;   /* @kind font */
+  --fw-medium: 500;    /* @kind font */
+
+  /* Slide type scale (1920×1080 canvas) */
+  --t-hero: 100px;          /* 1-min deck hero headline */
+  --t-display: 64px;        /* cover / section headline */
+  --t-h2: 58px;             /* standard slide headline */
+  --t-lead: 33px;           /* lead paragraph */
+  --t-body: 26px;           /* body / bullets */
+  --t-detail: 21px;         /* supporting detail */
+  --t-kicker: 21px;         /* uppercase eyebrow */
+  --t-caption: 14px;        /* logo captions */
+  --t-footer: 17px;         /* page numbers */
+
+  /* Kicker treatment */
+  --kicker-tracking: 4px;
+  --kicker-transform: uppercase; /* @kind other */
+
+  /* Headline treatment */
+  --headline-tracking: -0.5px;
+  --headline-leading: 1.08;
+}

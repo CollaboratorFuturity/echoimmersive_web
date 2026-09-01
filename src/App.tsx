@@ -12,6 +12,7 @@ import SnapstingActivities from '@/pages/SnapstingActivities'
 import PavillonActivities from '@/pages/PavillonActivities'
 import News from '@/pages/News'
 import NewsLaunch from '@/pages/news/Launch'
+import Newsletter01 from '@/pages/news/Newsletter01'
 import FAQ from '@/pages/FAQ'
 import Contact from '@/pages/Contact'
 import Newsletter from '@/pages/Newsletter'
@@ -35,6 +36,7 @@ const PAGE_TITLES: Record<string, string> = {
   '/experiences/pavillon': 'Le Pavillon Activities',
   '/news': 'News & Events',
   '/news/launch': 'Launch Event',
+  '/news/newsletter-1': 'Newsletter No. 1',
   '/faq': 'FAQ',
   '/contact': 'Contact',
   '/resources': 'Resources',
@@ -95,6 +97,7 @@ export default function App() {
         <Route path="/experiences/pavillon"  element={<Layout><PavillonActivities /></Layout>} />
         <Route path="/news"        element={<Layout><News /></Layout>} />
         <Route path="/news/launch" element={<Layout><NewsLaunch /></Layout>} />
+        <Route path="/news/newsletter-1" element={<Layout><Newsletter01 /></Layout>} />
         <Route path="/faq"       element={<Layout><FAQ /></Layout>} />
         <Route path="/contact"   element={<Layout><Contact /></Layout>} />
         <Route path="/resources" element={<Layout><Resources /></Layout>} />
