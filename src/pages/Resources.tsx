@@ -372,6 +372,8 @@ const mediaItems: MediaItem[] = [
     href: 'https://drive.google.com/drive/folders/16nrPGSc9kYJK-dLtdCyjxaMSVg76PNPL?usp=drive_link' },
   { title: 'Brand Assets (gradients, logos)', format: 'Folder',
     href: 'https://drive.google.com/drive/folders/1fgTCWOpPeuKyv-PSCXsYucHR2-Qewk65?usp=drive_link' },
+  { title: 'Press Kit', format: 'Folder',
+    href: 'https://drive.google.com/drive/folders/1Pl4wS-fdkovc9GIvwNhyRIgsNFQ2Buy8?usp=sharing' },
   { title: 'Reports Templates', format: '.ai',
     href: 'https://drive.google.com/file/d/1FnNKfZCSrR-KrKMRSM6Y6gWxItNIi_X8/view?usp=drive_link' },
   { title: 'Social Media Templates', format: '.ai',
