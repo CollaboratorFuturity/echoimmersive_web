@@ -32,3 +32,14 @@ class NewsletterSendResult(BaseModel):
     sent: int
     failed: int
     failures: list[str]
+
+
+class NewsletterSetCurrentRequest(BaseModel):
+    subject: str = Field(min_length=1, max_length=255)
+    html: str = Field(min_length=1)
+
+
+class NewsletterCurrentInfo(BaseModel):
+    subject: str
+    updated_at: datetime
+    html_bytes: int

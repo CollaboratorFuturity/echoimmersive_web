@@ -10,16 +10,23 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.config import get_settings
 from app.database import get_db
-from app.models.newsletter import NewsletterSubscriber
+from app.models.newsletter import NewsletterCurrentIssue, NewsletterSubscriber
 from app.schemas.newsletter import NewsletterCreate, NewsletterResponse
 from app.services.email_service import send_email
+from app.services.newsletter_content import render_issue, unsubscribe_url
 
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["Newsletter"])
 
+# Kept for backward compatibility with imports; canonical version lives in
+# app.services.newsletter_content.
+_unsubscribe_url = unsubscribe_url
 
-def _unsubscribe_url(token: str) -> str:
-    return f"{get_settings().SITE_URL}/api/v1/public/newsletter/unsubscribe?token={token}"
+
+async def _get_current_issue(db: AsyncSession) -> tuple[str, str] | None:
+    result = await db.execute(select(NewsletterCurrentIssue))
+    issue = result.scalar_one_or_none()
+    return (issue.subject, issue.html) if issue else None
 
 
 @router.post("/public/newsletter", response_model=NewsletterResponse, status_code=201)
@@ -44,7 +51,8 @@ async def subscribe(payload: NewsletterCreate, db: AsyncSession = Depends(get_db
         existing.unsubscribe_token = secrets.token_urlsafe(32)
         await db.commit()
         await db.refresh(existing)
-        asyncio.ensure_future(_email_welcome(existing))
+        current_issue = await _get_current_issue(db)
+        asyncio.ensure_future(_email_new_subscriber(existing, current_issue))
         return existing
 
     subscriber = NewsletterSubscriber(
@@ -58,7 +66,8 @@ async def subscribe(payload: NewsletterCreate, db: AsyncSession = Depends(get_db
     await db.commit()
     await db.refresh(subscriber)
 
-    asyncio.ensure_future(_email_welcome(subscriber))
+    current_issue = await _get_current_issue(db)
+    asyncio.ensure_future(_email_new_subscriber(subscriber, current_issue))
     return subscriber
 
 
@@ -90,6 +99,25 @@ async def unsubscribe(token: str = Query(...), db: AsyncSession = Depends(get_db
 
 
 # ── email helpers ──────────────────────────────────────────────────────────
+
+async def _email_new_subscriber(
+    sub: NewsletterSubscriber, current_issue: tuple[str, str] | None
+) -> None:
+    """Welcome email first, then the current issue (if one is stored)."""
+    await _email_welcome(sub)
+    if not current_issue:
+        return
+    subject, html = current_issue
+    rendered = render_issue(
+        html,
+        first_name=sub.first_name or "there",
+        unsub_url=unsubscribe_url(sub.unsubscribe_token),
+    )
+    try:
+        await send_email(sub.email, subject, rendered)
+    except Exception:
+        logger.exception("Failed to send current issue to new subscriber %s", sub.email)
+
 
 async def _email_welcome(sub: NewsletterSubscriber) -> None:
     name = sub.first_name or "there"

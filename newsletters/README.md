@@ -54,6 +54,21 @@ To send from your machine against production, add `API_URL=https://echoimmersive
 The command prints a JSON summary: `{"mode": "live", "sent": 42, "failed": 0, "failures": []}`.
 Any addresses in `failures` errored at the SMTP level — check `make api-logs` for details.
 
+## New subscribers get the current issue
+
+Whoever subscribes receives two emails: the welcome email, then the **current issue**
+(with their personal unsubscribe link). The current issue updates automatically on every
+full `newsletter-send` (test and `ONLY=` sends don't touch it). To set it manually —
+e.g. for an issue that already went out before this feature, or to correct it:
+
+```sh
+make newsletter-set-current FILE=newsletters/2026-09-first-issue.html \
+  SUBJECT="Introducing ECHO — Newsletter No. 1" API_URL=https://echoimmersive.eu
+```
+
+To check what's stored: `curl -sS "$API_URL/api/v1/admin/newsletter/current" -H "X-API-Key: $ADMIN_API_KEY"`
+(returns subject + last-updated, 404 if none stored).
+
 ## Alternative: manual send via Gmail
 
 For a quick manual send, export the active subscribers as CSV and email them yourself:

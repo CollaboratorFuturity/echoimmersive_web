@@ -1,4 +1,4 @@
-.PHONY: build dev check up down rebuild logs api-logs db-logs migrate clean newsletter-test newsletter-send newsletter-export
+.PHONY: build dev check up down rebuild logs api-logs db-logs migrate clean newsletter-test newsletter-send newsletter-export newsletter-set-current
 
 # Local development: backend + db in containers, frontend via npm
 build:
@@ -49,6 +49,16 @@ clean:
 # See newsletters/README.md. Requires ADMIN_API_KEY in the environment.
 # API_URL defaults to the local dev API; set it to the production URL to send for real.
 API_URL ?= http://localhost:8106
+
+# Store an issue as "current" (auto-sent to new subscribers) WITHOUT sending it:
+#   make newsletter-set-current FILE=newsletters/issue.html SUBJECT="Subject line"
+# (A full newsletter-send updates the current issue automatically — this target is
+# only needed to bootstrap an issue that was already sent, or to correct it.)
+newsletter-set-current:
+	@test -n "$(FILE)" && test -n "$(SUBJECT)" || { echo 'Usage: make newsletter-set-current FILE=newsletters/issue.html SUBJECT="Subject"'; exit 1; }
+	@FILE="$(FILE)" SUBJECT="$(SUBJECT)" python3 -c "import json,os; print(json.dumps({'subject': os.environ['SUBJECT'], 'html': open(os.environ['FILE']).read()}))" | \
+	curl -sS -X POST "$(API_URL)/api/v1/admin/newsletter/current" -H "X-API-Key: $$ADMIN_API_KEY" -H "Content-Type: application/json" --data-binary @-
+	@echo
 
 # Download all active subscribers as CSV (for manual sends, e.g. Gmail BCC):
 #   make newsletter-export

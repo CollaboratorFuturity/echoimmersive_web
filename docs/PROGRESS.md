@@ -106,6 +106,7 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 - [x] `POST /api/v1/admin/newsletter/send` — sends an HTML issue to all active subscribers (or one test address), per-subscriber unsubscribe link (`{{unsubscribe_url}}` substitution, or appended footer); issues live in `newsletters/`, triggered via `make newsletter-test` / `make newsletter-send`
 - [x] First issue ready: `newsletters/2026-09-first-issue.html` (from `Echo newsletter design 2/`, supersedes the July v1), images optimised + hosted at `public/img/newsletter/`
 - [x] Newsletter No. 1 published as web article — `/news/newsletter-1` (`src/pages/news/Newsletter01.tsx`), listed on the News page
+- [x] New subscribers auto-receive the current issue — `newsletter_current_issue` table, updated on every full send or via `POST /api/v1/admin/newsletter/current` (`make newsletter-set-current`); subscribe flow sends welcome + current issue
 - [ ] Run `alembic upgrade head` on first deploy to create DB tables
 
 ### Resources Page
