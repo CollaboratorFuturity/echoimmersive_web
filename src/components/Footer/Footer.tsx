@@ -27,6 +27,7 @@ export default function Footer() {
             {[
               ['f', 'Facebook', 'https://www.facebook.com/profile.php?id=61589051665665'],
               ['ig', 'Instagram', 'https://www.instagram.com/echoimmersive/'],
+              ['in', 'LinkedIn', 'https://www.linkedin.com/in/echo-immersive-216916403/'],
             ].map(([icon, name, href]) => (
               <a
                 key={icon}
