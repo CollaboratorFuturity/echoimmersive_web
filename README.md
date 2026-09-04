@@ -76,7 +76,8 @@ echoimmersive_web/
 │   └── data/
 │       └── galleries.ts             # Gallery image data
 │
-├── api/                         # FastAPI backend (contact + newsletter endpoints)
+├── api/                         # FastAPI backend — contact form, newsletter subscribe/unsubscribe,
+│                                #   admin endpoints (CSV export, newsletter send, current-issue store)
 ├── newsletters/                 # Newsletter issues (HTML) — see newsletters/README.md for how to send
 ├── public/                      # Static files served at site root
 │   ├── img/                     # Photos, hero imagery
@@ -104,6 +105,7 @@ See [docs/PROGRESS.md](docs/PROGRESS.md) for the full implementation checklist.
 - Phase 2 in progress — React build live: brand palette rolled out site-wide, shared Dither background, real Home/About/Partners/FAQ/Contact/Newsletter/Resources pages with backend wired
 - Resources page has full EU grant data (5 WPs, 22 tasks, 20 milestones, 19 deliverables, 21 events) in a tabbed interface; past milestone dates highlighted green automatically; events numbered E1–E21 sequentially by date (E1–E6 are the 6 dated public events in chronological order, E7–E21 are remaining activities)
 - About page links to Resources via "Full Structure, Tasks & Deliverables" CTA
+- **Newsletter pipeline live (2026-09-02)** — Issue No. 1 ("Introducing ECHO") sent to all subscribers via `make newsletter-send`, published as a web article at `/news/newsletter-1`, and stored as the "current issue" that every new subscriber automatically receives on signup (welcome email + issue). Issues live in `newsletters/`; workflow documented in [newsletters/README.md](newsletters/README.md)
 - Sandbox routes (`/lynch-home`, `/lynch-about`, `/ismaila-home`, `/brand-home`) remain for design exploration
 - **Accessibility: WCAG 2.2 AA hardening complete (2026-07-28/29)** — 0 axe-core violations on all 12 routes; keyboard behavior (skip link, mobile-menu Esc, Lightbox modal, FAQ accordion) machine-verified with headless Chrome; 320px reflow clean; all alt text human-reviewed. See [docs/WCAG_AUDIT.md](docs/WCAG_AUDIT.md) (criterion-by-criterion status) and [docs/A11Y_VERIFICATION_CHECKLIST.md](docs/A11Y_VERIFICATION_CHECKLIST.md) (manual VoiceOver script — the last step before an AA claim, plus publishing an accessibility statement)
 

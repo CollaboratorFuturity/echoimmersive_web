@@ -82,6 +82,8 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 - [ ] More real article content
 - ~~Media kit download (ZIP)~~ — dropped 2026-07-29; button removed from News page (brand assets live on Resources → Media tab)
 
+- [x] Newsletter No. 1 web article (`/news/newsletter-1`) listed as News item with kick-off photo thumbnail
+
 ### FAQ Page
 - [x] FAQ page (`src/pages/FAQ.tsx`) — 14 items with real copy, React accordion (useState)
 - [x] Keyboard-accessible accordion (native buttons — Enter/Space verified 2026-07-28)
@@ -126,6 +128,7 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 ### Footer
 - [x] Footer component (`src/components/Footer/Footer.tsx`) — 3-column, quick links, EU credit + co-funded logo
 - [x] EU co-funded logo asset (`public/logos/co-funded_EN/horizontal/EN_Co-fundedbytheEU_RGB_WHITE.png`) wired into footer
+- [x] Social icons: Facebook, Instagram, LinkedIn (`/in/echo-immersive-216916403`) — mirrored on the Newsletter page; X + YouTube pending accounts
 - [ ] Confirmed EU credit line wording
 - [ ] Privacy policy page + link
 

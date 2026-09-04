@@ -30,7 +30,11 @@ Memory is fragile. AI context gets compressed at unpredictable intervals. If you
 
 - [ ] **[Content] EU funding credit line wording** -- Footer now includes the official "Co-funded by the EU" logo (`public/logos/co-funded_EN/vertical/EN_co_fundedvertical_RGB_WHITE.png`). Confirm exact wording of the accompanying credit line with coordinator.
 
-- [x] **[A11y] Social icon aria-labels** -- Done: Footer and Contact social links carry `aria-label="Follow us on Facebook/Instagram"`.
+- [ ] **[Content] Privacy policy page** -- Now pressing: the site collects personal data (newsletter + contact forms), the subscribe form's consent checkbox references a Privacy Policy that links nowhere (`src/pages/Newsletter.tsx` TODO), and every newsletter email footer links "Privacy policy" to the homepage (`newsletters/` issues). Create the page, then link it from the consent checkbox, the site footer, and future newsletter issues.
+
+- [ ] **[Newsletter] LinkedIn URL format** -- Footer + Newsletter page link to `linkedin.com/in/echo-immersive-216916403` (personal-profile format). If a proper LinkedIn *company* page is created, swap the URL in `src/components/Footer/Footer.tsx` and `src/pages/Newsletter.tsx`.
+
+- [x] **[A11y] Social icon aria-labels** -- Done: Footer and Contact social links carry `aria-label="Follow us on Facebook/Instagram/LinkedIn"`.
 
 - [x] **[A11y] FAQ keyboard navigation** -- Verified 2026-07-28 via headless-Chrome keyboard simulation: all 14 toggles are native buttons, Enter and Space both toggle, `aria-expanded` updates. VoiceOver announcement check remains part of the manual pass in `docs/A11Y_VERIFICATION_CHECKLIST.md`.
 
@@ -46,6 +50,8 @@ Memory is fragile. AI context gets compressed at unpredictable intervals. If you
 - [x] **[Routing] BrowserRouter 404 on refresh** DONE (2026-04-14) -- `nginx.conf` `try_files` rule serves `index.html` for all routes inside the Docker container.
 - [x] **[Build] Tailwind CDN → PostCSS build** DONE (2026-04-14) -- Switched to Tailwind 3 via PostCSS in Vite scaffold.
 - [x] **[Decision] Newsletter service** -- DONE: FastAPI backend with PostgreSQL stores subscribers. Endpoint: `POST /api/v1/public/newsletter`.
+
+- [x] **[Feature] Newsletter send pipeline** -- DONE (2026-09-02): admin endpoints for send (`POST /api/v1/admin/newsletter/send`, with test / single-subscriber / full modes), CSV export, and current-issue store (`POST /api/v1/admin/newsletter/current`); new subscribers auto-receive the current issue after the welcome email; `make newsletter-test/-send/-export/-set-current` targets run from the laptop against production. Issue No. 1 sent 2026-09-02. Workflow: `newsletters/README.md`.
 
 - [x] **[Decision] Contact form submission** -- DONE: FastAPI backend handles submissions. Endpoint: `POST /api/v1/public/contact`. Emails sent via SMTP (aiosmtplib).
 

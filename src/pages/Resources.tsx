@@ -230,7 +230,7 @@ const milestonesRaw: Milestone[] = [
     description: 'Network of collaboration with other EU-funded projects formally initiated.' },
   { id: 'MS2.2', wp: 'WP2', lead: 'NPIAT', due: 4,  title: 'Lab Operational and First Prototypes Tested',
     description: 'Experimental Lab fully operational; initial immersive prototypes tested and reviewed.' },
-  { id: 'MS2.3', wp: 'WP2', lead: 'TSC',   due: 6,  title: 'Inclusive Design Sprint Series Completed',
+  { id: 'MS2.3', wp: 'WP2', lead: 'TSC',   due: 9,  title: 'Inclusive Design Sprint Series Completed',
     description: 'All four inclusive co-creation sprints completed; findings integrated into design iterations.' },
   { id: 'MS3.2', wp: 'WP3', lead: 'VIB',   due: 9,  title: 'Final Production Completed',
     description: 'All elements of Snapsting finalised, including content, technology, and spatial design.' },
