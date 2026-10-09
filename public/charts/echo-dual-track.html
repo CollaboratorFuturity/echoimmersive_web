@@ -69,6 +69,49 @@
 <script>
 (function() {
 
+  // ── i18n ──────────────────────────────────────────────────────────────
+  // The parent page sets ?lang=<code> on the iframe src. Codes (WP1, TSC,
+  // M1…) and partner names stay literal; only words are translated. English
+  // is the fallback for any language not yet in STRINGS.
+  const LANG = (new URLSearchParams(location.search).get('lang') || 'en').slice(0, 2);
+  const STRINGS = {
+    en: {
+      wp1Short: 'WP1 — COORDINATION — LSP',
+      wp1Full:  'WP1 — PROJECT COORDINATION — LINDHOLMEN SCIENCE PARK',
+      wp2Label: 'WP2 — Off-site Lab',
+      wp2Lead:  'LEAD: TSC + NPIAT',
+      wp2Items: ['Prototype immersive formats', 'User-centric validation', 'Inclusive design testing', 'Modular deployment guides'],
+      wp3Label: 'WP3 — On-site Museum',
+      wp3Lead:  'LEAD: VIBORG MUSEUM',
+      wp3Items: ['Heritage narrative dev', 'Spatial design & tech', 'Audience impact testing', 'Process documentation'],
+      exchange1: 'CONTINUOUS',
+      exchange2: 'EXCHANGE',
+      wp4Label: 'WP4 — Public Immersive Testbed',
+      wp4Lead:  'LEAD: KIKK / LE PAVILLON',
+      wp4Items: ['Live deployment', 'Audience analytics', 'Business model testing', 'Onboarding / offboarding'],
+      wp5Short: 'WP5 — COMMS & IMPACT — FUT',
+      wp5Full:  'WP5 — COMMUNICATION & IMPACT — FUTURITY SYSTEMS',
+    },
+    es: {
+      wp1Short: 'WP1 — COORDINACIÓN — LSP',
+      wp1Full:  'WP1 — COORDINACIÓN DEL PROYECTO — LINDHOLMEN SCIENCE PARK',
+      wp2Label: 'WP2 — Laboratorio externo',
+      wp2Lead:  'LÍDER: TSC + NPIAT',
+      wp2Items: ['Prototipar formatos inmersivos', 'Validación centrada en el usuario', 'Pruebas de diseño inclusivo', 'Guías de despliegue modular'],
+      wp3Label: 'WP3 — Museo in situ',
+      wp3Lead:  'LÍDER: MUSEO DE VIBORG',
+      wp3Items: ['Desarrollo de narrativa patrimonial', 'Diseño espacial y tecnología', 'Pruebas de impacto en público', 'Documentación del proceso'],
+      exchange1: 'INTERCAMBIO',
+      exchange2: 'CONTINUO',
+      wp4Label: 'WP4 — Banco de pruebas público inmersivo',
+      wp4Lead:  'LÍDER: KIKK / LE PAVILLON',
+      wp4Items: ['Despliegue en vivo', 'Analítica de público', 'Pruebas de modelo de negocio', 'Incorporación / salida'],
+      wp5Short: 'WP5 — COMUNIC. E IMPACTO — FUT',
+      wp5Full:  'WP5 — COMUNICACIÓN E IMPACTO — FUTURITY SYSTEMS',
+    },
+  };
+  const T = STRINGS[LANG] || STRINGS.en;
+
   const container = document.getElementById('diagram-container');
   const svg = d3.select('#diagram');
 
@@ -180,7 +223,7 @@
       .attr('font-size', s.barFont)
       .attr('font-family', 'JetBrains Mono, monospace')
       .attr('letter-spacing', '0.15em')
-      .text(tier === 'xs' ? 'WP1 — COORDINATION — LSP' : 'WP1 — PROJECT COORDINATION — LINDHOLMEN SCIENCE PARK');
+      .text(tier === 'xs' ? T.wp1Short : T.wp1Full);
 
     // ── TRACK BOX helper ──
     function drawTrackBox(x, y, w, h, color, label, lead, items) {
@@ -247,18 +290,18 @@
     drawTrackBox(
       leftX, yTrackTop, trackW, trackH,
       '#DA80FF',
-      'WP2 — Off-site Lab',
-      'LEAD: TSC + NPIAT',
-      ['Prototype immersive formats', 'User-centric validation', 'Inclusive design testing', 'Modular deployment guides']
+      T.wp2Label,
+      T.wp2Lead,
+      T.wp2Items
     );
 
     // WP3
     drawTrackBox(
       rightX, yTrackTop, trackW, trackH,
       '#DA80FF',
-      'WP3 — On-site Museum',
-      'LEAD: VIBORG MUSEUM',
-      ['Heritage narrative dev', 'Spatial design & tech', 'Audience impact testing', 'Process documentation']
+      T.wp3Label,
+      T.wp3Lead,
+      T.wp3Items
     );
 
     // ── BIDIRECTIONAL ARROWS — only when there's room (tablet / desktop) ──
@@ -292,7 +335,7 @@
         .attr('font-size', 10)
         .attr('font-family', 'JetBrains Mono, monospace')
         .attr('font-weight', 500)
-        .text('CONTINUOUS');
+        .text(T.exchange1);
 
       layer.append('text')
         .attr('x', midGap).attr('y', (arrowY1 + arrowY2) / 2 + 16)
@@ -301,7 +344,7 @@
         .attr('font-size', 10)
         .attr('font-family', 'JetBrains Mono, monospace')
         .attr('font-weight', 500)
-        .text('EXCHANGE');
+        .text(T.exchange2);
     }
 
     // ── WP4 testbed ──
@@ -320,9 +363,9 @@
     drawTrackBox(
       testX, yTestbed, testW, testH,
       '#B47ED9',
-      'WP4 — Public Immersive Testbed',
-      'LEAD: KIKK / LE PAVILLON',
-      ['Live deployment', 'Audience analytics', 'Business model testing', 'Onboarding / offboarding']
+      T.wp4Label,
+      T.wp4Lead,
+      T.wp4Items
     );
 
     // ── WP5 bar at bottom ──
@@ -344,7 +387,7 @@
       .attr('font-size', s.barFont)
       .attr('font-family', 'JetBrains Mono, monospace')
       .attr('letter-spacing', '0.15em')
-      .text(tier === 'xs' ? 'WP5 — COMMS & IMPACT — FUT' : 'WP5 — COMMUNICATION & IMPACT — FUTURITY SYSTEMS');
+      .text(tier === 'xs' ? T.wp5Short : T.wp5Full);
 
     // ── PARTNER TAGS ──
     function addPartnerTags(x, y, w, h, partners, color) {

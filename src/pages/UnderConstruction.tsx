@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { Dither } from '@/components/Dither/Dither'
 
 const reduceMotion = () =>
@@ -5,6 +6,7 @@ const reduceMotion = () =>
   window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
 export default function UnderConstruction() {
+  const { t } = useTranslation()
   return (
     <div
       className="relative min-h-screen flex flex-col items-center justify-center text-center px-6"
@@ -56,7 +58,7 @@ export default function UnderConstruction() {
         className="text-xs font-bold uppercase tracking-widest mb-6"
         style={{ fontFamily: 'Montserrat, sans-serif', color: 'rgba(218,128,255,0.8)' }}
       >
-        Creative Europe · 2026–2028
+        {t('underConstruction.eyebrow')}
       </p>
 
       {/* Heading */}
@@ -70,7 +72,7 @@ export default function UnderConstruction() {
           color: '#F7F3E0',
         }}
       >
-        Something<br />is coming.
+        {t('underConstruction.headingLine1')}<br />{t('underConstruction.headingLine2')}
       </h1>
 
       {/* Subline */}
@@ -83,8 +85,7 @@ export default function UnderConstruction() {
           color: 'var(--ink-subtle)',
         }}
       >
-        Immersive ECHO is a pan-European project creating collective cultural heritage experiences.
-        This site launches soon.
+        {t('underConstruction.subline')}
       </p>
 
       {/* Animated dots */}
@@ -101,7 +102,7 @@ export default function UnderConstruction() {
         className="fixed bottom-6 text-xs"
         style={{ fontFamily: 'Roboto, sans-serif', color: 'var(--ink-subtle)', zIndex: 2 }}
       >
-        Co-funded by the European Union · Creative Europe · GA No. 101255680
+        {t('underConstruction.euCredit')}
       </p>
     </div>
   )

@@ -1,18 +1,21 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { localizePath } from '@/i18n'
 
 export default function PavillonActivities() {
+  const { t, i18n } = useTranslation()
+  const lp = (p: string) => localizePath(i18n.language, p)
   return (
     <>
-      <Link to="/experiences" className="text-sm text-brand-lilac hover:text-brand-lilac/80 transition-colors mb-4 inline-block" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-        ← Back to Experiences
+      <Link to={lp('/experiences')} className="text-sm text-brand-lilac hover:text-brand-lilac/80 transition-colors mb-4 inline-block" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+        {t('experiences.backToExperiences')}
       </Link>
 
       <h1 className="text-2xl md:text-3xl font-bold mb-4 border-b border-brand-purple/30 pb-2 text-brand-cream">
-        Le Pavillon · Activities
+        {t('experiences.pavillonPage.title')}
       </h1>
       <p className="mb-8 max-w-3xl" style={{ fontFamily: 'Roboto, sans-serif', color: 'var(--ink-muted)' }}>
-        {/* TODO: Add real intro about Le Pavillon activities */}
-        Overview of Le Pavillon testbed activities in Namur, Belgium.
+        {t('experiences.pavillonPage.intro')}
       </p>
 
       {/* TODO: Populate with real activity cards */}
@@ -34,8 +37,7 @@ export default function PavillonActivities() {
       </div>
 
       <p className="text-center max-w-3xl mx-auto my-12" style={{ fontFamily: 'Roboto, sans-serif', fontStyle: 'italic', color: 'var(--ink-subtle)', fontSize: '0.875rem' }}>
-        Note: Description on process from early briefs, over concept development, script, animatic etc… to final experience.
-        The museum is the "final director".
+        {t('experiences.pavillonPage.note')}
       </p>
     </>
   )

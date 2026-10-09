@@ -1,0 +1,369 @@
+{
+  "home": {
+    "hero": {
+      "badge": "Creative Europe",
+      "titleLine1": "Immersive",
+      "titleLine2": "Echo",
+      "subtitleLine1": "Creating Collective Immersive Experiences",
+      "subtitleLine2": "for European Cultural Heritage"
+    },
+    "scroll": "Scroll",
+    "stats": {
+      "partners": "Partners",
+      "countries": "Countries",
+      "months": "Months",
+      "testbeds": "Public Testbeds"
+    },
+    "missionLabel": "The Mission",
+    "mission": {
+      "p1": "Cultural heritage exists because people need it. It functions as a living connection to place, to community, to the stories that explain who we are and how we got here. Yet for millions of people across Europe, that connection is breaking down. The spaces and formats meant to carry these stories simply haven't kept pace with the people they're meant to serve.",
+      "p2": "Smaller cultural heritage institutions feel this most acutely. Without the resources of major flagships, they watch audiences shrink, younger generations drift, and communities that were never quite reflected in their collections stop showing up at all. The tools to change this exist. Immersive, multi-sensory experiences that surround you with a story rather than presenting it from behind glass are proven and powerful. But they remain out of reach for most.",
+      "p3": "Immersive ECHO starts from a different premise: that heritage is most powerful when it's felt collectively, in shared spaces, by people who might not have sought it out on their own. The project's mission is to give cultural institutions across Europe the practical means to bring people back into the story. Their story."
+    },
+    "quote": "Heritage is most powerful when it's felt collectively, in shared spaces, by people who might not have sought it out on their own.",
+    "stayConnected": "Stay Connected",
+    "newsletter": {
+      "label": "Newsletter",
+      "heading": "Stay updated on Immersive ECHO",
+      "cta": "Subscribe to our Newsletter"
+    }
+  },
+  "about": {
+    "title": "About Immersive ECHO",
+    "objectiveLabel": "The Objective",
+    "objectiveIntro": "The Immersive ECHO project has five strategic objectives designed to address the challenges facing Europe's cultural heritage institutions. These objectives form the backbone of a scalable, inclusive, and sustainable transformation in how cultural institutions engage audiences through immersive storytelling.",
+    "objectives": {
+      "o1": {
+        "title": "Develop a Scalable Model for Immersive Cultural Storytelling",
+        "body": "We will create a transferable framework that helps cultural institutions adopt immersive formats that are emotionally engaging, technically feasible, and economically viable — supporting sector-wide digital transformation."
+      },
+      "o2": {
+        "title": "Activate Inclusive, Low-Threshold Spaces for Co-Creation and Innovation",
+        "body": "We will establish experimental labs where cultural professionals, technologists, and diverse users can co-create, prototype, and test immersive formats — fostering capacity-building and artistic innovation across Europe."
+      },
+      "o3": {
+        "title": "Demonstrate Public Value and Engagement through Real-World Installations",
+        "body": "We will implement immersive experiences in both public and institutional venues to evaluate audience reach, emotional impact, and operational feasibility — contributing to new models for audience development. This dual placement — within both community and institutional spaces — ensures that immersive formats not only reach people outside of the cultural heritage venues, but also guide new audiences back into cultural institutions, increasing footfall and revitalizing their public mission."
+      },
+      "o4": {
+        "title": "Build a Pan-European Network for Knowledge Sharing and Cultural Innovation",
+        "body": "We will strengthen cross-sector collaboration by connecting institutions, creatives, and technology partners, and by sharing open-access tools and insights that enable long-term replication and policy alignment."
+      },
+      "o5": {
+        "title": "Advance Inclusion, Accessibility, and Cultural Wellbeing & Democracy through Design",
+        "body": "We will embed inclusive design and participatory methods across the project to ensure that immersive cultural experiences reflect the diversity of European society and support social cohesion and accessibility."
+      }
+    },
+    "quote": "Heritage is most powerful when it's felt collectively, in shared spaces, by people who might not have sought it out on their own.",
+    "approachDivider": "The Approach",
+    "approach": {
+      "partnersLabel": "Partners",
+      "offsite": {
+        "title": "Off-site Immersive Design Team",
+        "desc": "A transdisciplinary lab where artists, technologists, and heritage experts co-develop immersive prototypes through co-creation sprints. Every concept is tested for accessibility and packaged into modular formats ready for deployment at any venue."
+      },
+      "onsite": {
+        "title": "On-site Immersive Design Team",
+        "desc": "Viborg Museum as a living case study, developing \"Snapsting\" through hand-drawn animation and spatial storytelling. Every workflow and decision is documented so other institutions can follow the same path."
+      },
+      "testbed": {
+        "title": "Public Immersive Testbed",
+        "desc": "Le Pavillon opens the finished experiences to real audiences at scale, measuring engagement and accessibility through AI-supported analytics while testing operational models for long-term viability."
+      },
+      "coordination": {
+        "title": "Project Coordination",
+        "desc": "Lindholmen Science Park ensures strategic alignment across all partners, tracking milestones, budgets, and deliverables while managing risk and EU Commission reporting."
+      },
+      "comms": {
+        "title": "Communication & Impact",
+        "desc": "Futurity Systems translates project outcomes into modular toolkits and multilingual content, builds a peer learning network, and applies future design methods to chart long-term roadmaps for immersive culture."
+      }
+    },
+    "infographic": {
+      "title": "Immersive ECHO — Dual-Track Design Methodology",
+      "label": "About:",
+      "caption": "Dual-track design: off-site lab and on-site museum converge in a public testbed to scale immersive heritage experiences."
+    },
+    "factsDivider": "Project Facts",
+    "fullStructureCta": "Full Structure, Tasks & Deliverables",
+    "projectDetails": "Project Details",
+    "details": {
+      "durationLabel": "Duration",
+      "durationValue": "Feb 2026 – July 2028",
+      "gaLabel": "GA Number",
+      "gaValue": "101255680",
+      "fundingLabel": "Funding",
+      "fundingValue": "Creative Europe Large Scale",
+      "coordinatorLabel": "Coordinator",
+      "coordinatorValue": "Lindholmen Science Park"
+    }
+  },
+  "experiences": {
+    "title": "Experiences",
+    "intro": "Introducing the concept of public testbeds using the Needs-Driven Design methodology across Europe.",
+    "viewActivities": "View Activities",
+    "backToExperiences": "← Back to Experiences",
+    "snapsting": {
+      "badge": "CULTURAL HERITAGE INSTITUTION",
+      "location": "Viborg, Denmark",
+      "imageAlt": "Viborg Museum",
+      "description": "Viborg Museum is the cultural history museum of the Viborg area in Denmark, presenting the region’s heritage from prehistory to the present day. Within ECHO, the museum will host the immersive installation, bringing ECHO’s approach to immersive storytelling to its audiences."
+    },
+    "pavillon": {
+      "badge": "SCALING & ADAPTATION",
+      "location": "Namur, Belgium",
+      "imageAlt": "Le Pavillon, Namur",
+      "description": "Le Pavillon is KIKK's hub for digital arts and technology in Namur, Belgium. It deploys ECHO's immersive installations to broad public audiences while collecting engagement and accessibility data. Over 200 school partnerships annually."
+    },
+    "snapstingPage": {
+      "title": "Viborg Animation Festival · Activities",
+      "intro": "Overview of Viborg Animation Festival testbed activities in Viborg, Denmark.",
+      "note": "Note: Description on process from early briefs, over concept development, script, animatic etc… to final experience. The museum is the \"final director\" — the exhibition manager stands at a mixing desk and the different channels she can mix on are set designers, painters, room-sound foley artist, AV experiences, objects, text, light, etc."
+    },
+    "pavillonPage": {
+      "title": "Le Pavillon · Activities",
+      "intro": "Overview of Le Pavillon testbed activities in Namur, Belgium.",
+      "note": "Note: Description on process from early briefs, over concept development, script, animatic etc… to final experience. The museum is the \"final director\"."
+    }
+  },
+  "newsletter": {
+    "intro": "Stay updated on the project — new outputs, events, and findings from across the consortium.",
+    "subscribeHeading": "Subscribe",
+    "fields": {
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email"
+      },
+      "firstName": {
+        "label": "First Name",
+        "placeholder": "Enter your first name"
+      },
+      "lastName": {
+        "label": "Last Name",
+        "placeholder": "Enter your last name"
+      },
+      "organisation": {
+        "label": "Organisation",
+        "placeholder": "Enter your organisation"
+      },
+      "language": {
+        "label": "Preferred language",
+        "hint": "Issues are sent in this language when a translation is available, otherwise in English."
+      }
+    },
+    "consentPrefix": "I agree to the",
+    "privacyPolicy": "Privacy Policy",
+    "consentRequired": "Please agree to the Privacy Policy to subscribe.",
+    "subscribe": "Subscribe",
+    "subscribing": "Subscribing…",
+    "backToSite": "Back to site",
+    "success": {
+      "inHeading": "You're in!",
+      "inBody": "We've sent a welcome email to {{email}}. You'll hear from us when there's something worth sharing.",
+      "alreadyHeading": "Already subscribed!",
+      "alreadyBody": "{{email}} is already on our list. No action needed.",
+      "updatedHeading": "Preferences updated",
+      "updatedBody": "We've updated your subscription preferences. No new email was sent."
+    }
+  },
+  "newsletterEmail": {
+    "unsubscribe": "Unsubscribe",
+    "footer": "You're receiving this because you subscribed to the Immersive ECHO newsletter."
+  },
+  "underConstruction": {
+    "eyebrow": "Creative Europe · 2026–2028",
+    "headingLine1": "Something",
+    "headingLine2": "is coming.",
+    "subline": "Immersive ECHO is a pan-European project creating collective cultural heritage experiences. This site launches soon.",
+    "euCredit": "Co-funded by the European Union · Creative Europe · GA No. 101255680"
+  },
+  "resources": {
+    "backToAbout": "← Back to About",
+    "eyebrow": "For partners & reviewers",
+    "title": "Project Resources",
+    "intro": "Reference index of the project's structure: work packages, tasks, milestones, deliverables, and events. Source: CREA-CULT-2025-COOP-3 grant application. Intended for consortium partners, evaluators, and reviewers from the European Commission.",
+    "objectives": "Objectives",
+    "partnersLabel": "Partners",
+    "leadPrefix": "Lead:",
+    "tasksCount_one": "{{count}} task",
+    "tasksCount_other": "{{count}} tasks",
+    "accessFile": "Access file →",
+    "accessFileAria": "Access file: {{title}}",
+    "pending": "Pending",
+    "tabs": {
+      "wp": "Work Packages",
+      "tasks": "Tasks",
+      "milestones": "Milestones",
+      "deliverables": "Deliverables",
+      "events": "Events",
+      "media": "Media / Brand",
+      "presskit": "Press Kit"
+    },
+    "tabSubtitles": {
+      "wp": "Five interlocking work packages structure the project's 30-month execution.",
+      "tasks": "Tasks grouped by parent work package. Click a group to expand; click any task to read its full description.",
+      "milestones": "Project control points sorted chronologically by due month.",
+      "deliverables": "Project outputs with their type, dissemination level, and due date.",
+      "events": "Workshops, masterclasses, exhibitions, conferences, and panel talks organised by the consortium.",
+      "media": "Brand assets and visual identity files for the Immersive ECHO project.",
+      "presskit": "Press materials for journalists and media partners covering the Immersive ECHO project."
+    }
+  },
+  "news": {
+    "title": "News, Events & Activities",
+    "latestUpdates": "Latest Updates",
+    "readMore": "Read More →",
+    "empty": "No items in this category yet.",
+    "eventGalleries": "Event Galleries",
+    "backToNews": "← Back to News",
+    "photos": "{{count}} photos",
+    "filters": {
+      "All": "All",
+      "News": "News",
+      "Events": "Events",
+      "Press": "Press"
+    },
+    "galleries": {
+      "launch": "Launch (Namur)"
+    },
+    "articles": {
+      "newsletter1": {
+        "title": "Introducing ECHO — Newsletter No. 1",
+        "subtitle": "How immersive design is changing the way we experience history"
+      },
+      "launch": {
+        "title": "Immersive ECHO Project Officially Launches",
+        "subtitle": "Over 40 world class European creatives gathered in Namur to kickstart the ECHO Immersive project"
+      }
+    },
+    "launch": {
+      "title": "Immersive ECHO Project Officially Launches",
+      "lead": "Over 40 world class European creatives gathered in Namur to kickstart the ECHO Immersive project.",
+      "teamAlt": "ECHO Immersive team in Namur",
+      "p1": "Immersive ECHO officially launched in February 2026 with a multi-day kickoff meeting at Le Pavillon in Namur, Belgium, the venue that will host the project's public testbed. Delegations from all consortium partners gathered in person for the first time, bringing together museum professionals, immersive designers, developers, researchers, and strategists from ten countries. The meeting was coordinated by Lindholmen Science Park's project team, led by project manager Ismaila Jallow and coordinator Katrin Amberntsson, with support from the KIKK and Le Pavillon teams on the ground.",
+      "p2": "The days combined structured workshops with open exploration. Teams worked through foundational questions about how people move through spaces, what catches attention, and how story and interaction help audiences build meaning. Rather than starting with technology, the conversations centered on narrative, perception, and the particular demands of cultural spaces. Attendees walked away with a shared sense of what the next two and a half years will look like, and with the kind of trust that only forms when curious people spend real time together. The final immersive experiences developed through the project will return to Le Pavillon for public deployment in October 2027.",
+      "galleryHeading": "Gallery"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "getInTouch": "Get in Touch",
+    "intro": "Reach out to the coordinator team at Lindholmen Science Park for general inquiries, press information, or partnership questions.",
+    "coordinatorHeading": "Coordinator",
+    "coordinatorLocation": "Gothenburg, Sweden",
+    "stayInTouch": "Stay in Touch",
+    "requiredNote": "Fields marked * are required.",
+    "labels": {
+      "name": "Name",
+      "email": "Email",
+      "organisation": "Organisation",
+      "subject": "Subject",
+      "message": "Message"
+    },
+    "send": "Send Message",
+    "sending": "Sending…",
+    "success": {
+      "heading": "Message sent!",
+      "body": "We'll get back to you within 5 business days. Check your inbox for a confirmation.",
+      "again": "Send another message"
+    },
+    "errors": {
+      "generic": "Something went wrong. Please try again.",
+      "network": "Could not reach the server. Please check your connection."
+    },
+    "newsletterPrompt": "Want to stay updated on Immersive ECHO?"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": {
+      "q1": {
+        "question": "What is Immersive ECHO?",
+        "answer": "Immersive ECHO is a pan-European project bringing people closer to their shared heritage through immersive storytelling. Over 30 months (February 2026 – July 2028), 15 partners across 10 countries develop a practical model enabling cultural institutions to transform everyday public spaces into emotional, collective experiences — using projection, spatial audio, and sensor technology rather than VR headsets. The focus is on making immersive storytelling accessible to small and medium institutions that currently lack the budget and expertise to create it."
+      },
+      "q2": {
+        "question": "Why is this project needed?",
+        "answer": "Most cultural heritage institutions lack the budget, expertise, and technical capacity to create immersive experiences. Large-scale productions are typically reserved for well-funded museums and commercial venues. At the same time, audiences increasingly expect engaging, multi-sensory encounters with culture. Immersive ECHO addresses this gap with a practical, transferable model — tested in real settings, documented honestly, and designed so a local museum with limited resources can tell its stories in ways that are emotionally engaging and economically sustainable."
+      },
+      "q3": {
+        "question": "What makes Immersive ECHO different from other immersive projects?",
+        "answer": "Five things set us apart. We focus on small and medium institutions — not large-scale flagships. Our approach is headset-free: projection, spatial audio, and sensors transform existing public spaces. Inclusion is built into the design process, with dedicated sprints for youth, neurodivergent audiences, older adults, and marginalised groups. We document the entire process — including what doesn't work — and produce open toolkits so others can replicate the approach independently. And the consortium itself is unique: world-leading designers, researchers, heritage institutions of varying sizes, and technologists all working side by side."
+      },
+      "q4": {
+        "question": "Why \"immersive\" without VR headsets?",
+        "answer": "VR headsets create barriers: cost, accessibility, discomfort, and individual isolation. They're also difficult to scale — one headset serves one person at a time. Our approach uses spatial audio, projections, and environmental sensors to transform shared public spaces into immersive storytelling environments. A single location-based installation reaches large audiences simultaneously, requires less specialised equipment, and is easier for institutions to operate and sustain. The result is collective, embodied, and low-threshold — and it makes business sense for the venues that host it."
+      },
+      "q5": {
+        "question": "What will a visitor actually experience?",
+        "answer": "Location-based, multi-sensory storytelling using projection, spatial audio, and environmental interaction to bring cultural heritage to life in shared public spaces. As you move through a venue, projected imagery and sound respond to your presence and create a narrative that unfolds around you. The goal is not passive information transfer, but active encounters with history — open-ended, participatory, and designed so each visitor creates their own journey through the story. You feel it before you think about it."
+      },
+      "q6": {
+        "question": "What is Snapsting?",
+        "answer": "Snapsting is the signature on-site production developed by Viborg Museum in Denmark. It explores Viborg's thousand-year identity as a site of royal, religious, and judicial power — bringing that history to life through music, poetic animation, and atmospheric environments. The experience is non-linear: visitors follow their own curiosity through the story. Beyond the experience itself, the entire production process is being documented as a transferable methodology — a playbook for other cultural heritage institutions planning their own immersive work. Snapsting premieres publicly in November 2026."
+      },
+      "q7": {
+        "question": "What is Le Pavillon and the KIKK Festival?",
+        "answer": "Le Pavillon is a venue in Namur, Belgium, operated by KIKK — and it serves as the project's public testbed. This is where immersive experiences meet real, diverse audiences for the first time at scale. We test the full visitor journey: emotional response, interaction patterns, accessibility, onboarding, and whether the experience creates opportunities for reflection after people leave. The public premiere is planned for the KIKK Festival in October 2027 — one of Europe's leading festivals for digital and creative culture, attracting thousands of visitors annually."
+      },
+      "q8": {
+        "question": "What does \"inclusion by design\" mean in practice?",
+        "answer": "It means accessibility and diverse audience needs are embedded in the design process from the start — not added at the end. The project includes four dedicated inclusive design sprints, each focused on a specific audience: youth, neurodivergent individuals, older adults, and marginalised communities. Real users shape the work from the earliest stages. Inclusion is also about emotional recognition — creating experiences where people see themselves reflected in the stories, where history feels like something that belongs to them."
+      },
+      "q9": {
+        "question": "Who is behind Immersive ECHO?",
+        "answer": "A consortium of 15 organisations from 10 European countries, coordinated by Lindholmen Science Park in Gothenburg, Sweden. Partners include immersive design studios, cultural heritage institutions, research labs, technology companies, and communication specialists from Sweden, Germany, France, Finland, Romania, Denmark, Belgium, Ukraine, Spain, and Slovenia. Associated partners include the City of Gothenburg and The Animation Workshop in Denmark. The project received an EU evaluation score of 92/100."
+      },
+      "q10": {
+        "question": "Is Ukraine part of the project?",
+        "answer": "Yes. Sofiyivka Park in Uman, Ukraine, is a full consortium partner. Due to the ongoing Russian invasion, physical prototyping cannot take place in Ukraine. Instead, Sofiyivka Park contributes cultural heritage data, historical materials, and an invaluable perspective on heritage in conflict zones. Their participation is a reminder of why cultural preservation matters — and why it is urgent. The consortium is actively working through the operational challenges their situation creates."
+      },
+      "q11": {
+        "question": "How is the project funded?",
+        "answer": "Immersive ECHO is co-funded by the European Union under the Creative Europe programme, Large Scale Cooperation strand. The total budget is approximately €3.3 million, of which the EU funds 60% (€1,999,019). The remaining 40% is co-financing from consortium partners. Under the lump sum model, the EU pays for results — not overhead. The payment schedule is 40% at project start, 40% at the interim report (Month 15), and 20% at the final report."
+      },
+      "q12": {
+        "question": "What will the project produce?",
+        "answer": "Results at three levels. Concrete experiences: tested immersive installations at Viborg Museum and Le Pavillon, designed for touring and adaptation. Open knowledge: an Open Learning Toolkit with step-by-step guides, a Futuremakers Toolkit for participatory future thinking, production process documentation, and an Outreach Platform for the wider cultural heritage community. Structural capacity: a Business Blueprint validating what works operationally and economically, and a Final Future Design Report with policy recommendations and institutional roadmaps for the sector beyond 2028."
+      },
+      "q13": {
+        "question": "What happens after the project ends in 2028?",
+        "answer": "Sustainability is integrated into the design process from the start — not treated as an afterthought. The technical architecture is built around modularity: content can tour between venues, digital twins allow new sites to be planned remotely, and parametric design reduces the effort needed to adapt installations. Viborg Museum intends to continue operating Snapsting as a permanent installation. All foreground IP is made openly available for adaptation, reuse, and commercial development. The ambition is to leave behind methods, tools, and proven models that continue generating value across the sector."
+      },
+      "q14": {
+        "question": "How can other cultural heritage institutions get involved?",
+        "answer": "Several concrete ways. The ECHOSYSTEM Platform will include a public portal where cultural professionals can access draft toolkits, join peer exchange forums, and sign up for events. Monthly Futuremaking Workshops across partner cities are open to external professionals. Three online masterclasses cover technical pipelines, creative direction, and cross-disciplinary collaboration. The public testbeds at Le Pavillon and Viborg Museum serve as live learning environments. All toolkits and training materials will be freely available in all ten partner languages. Follow the project at #ImmersiveECHO or subscribe to the newsletter."
+      }
+    }
+  },
+  "partners": {
+    "title": "The Consortium",
+    "coordinator": "Project Coordinator",
+    "commsDissemination": "Communication & Dissemination",
+    "corePartners": "Core Partners",
+    "lspLocation": "Gothenburg, Sweden",
+    "futLocation": "Barcelona, Spain"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "partners": "Partners",
+    "experiences": "Experiences",
+    "news": "News & Events",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "downloadResources": "Download Resources",
+    "toggleNavigation": "Toggle navigation",
+    "selectLanguage": "Select language"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "aboutProject": "About the Project",
+    "newsletter": "Newsletter",
+    "followUs": "Follow us on {{network}}",
+    "euAlt": "Co-funded by the European Union",
+    "euCredit": "Co-funded by the European Union under the Creative Europe programme, Large Scale Cooperation strand. Grant Agreement No. 101255680.",
+    "duration": "Duration: Feb 2026 – July 2028",
+    "coordinator": "Coordinator: Lindholmen Science Park",
+    "partners": "15 partners · 10 countries",
+    "rights": "© {{year}} Immersive ECHO. All rights reserved."
+  }
+}

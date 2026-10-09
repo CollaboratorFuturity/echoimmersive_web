@@ -1,5 +1,7 @@
 import { useLayoutEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { localizePath } from '@/i18n'
 
 // ────────────────────────────────────────────────────────────────────────────
 // Date helper — project month → calendar date.
@@ -8,9 +10,13 @@ import { Link, useLocation } from 'react-router-dom'
 // ────────────────────────────────────────────────────────────────────────────
 const PROJECT_START = { year: 2026, monthIndex: 1 } // Feb 2026 (Date months are 0-indexed)
 
-function dueLabel(m: number): string {
+// Grant codes (MS1.1, D1.1, T2.3…) contain dots, which i18next treats as key
+// separators — swap them for hyphens so each code maps to a single flat key.
+const codeKey = (c: string) => c.replace(/\./g, '-')
+
+function dueLabel(m: number, lang: string): string {
   const d = new Date(PROJECT_START.year, PROJECT_START.monthIndex + (m - 1), 1)
-  const month = d.toLocaleString('en', { month: 'short' })
+  const month = d.toLocaleString(lang, { month: 'short' })
   return `M${m} · ${month} ${d.getFullYear()}`
 }
 
@@ -445,6 +451,7 @@ function Accordion({
 // WP row
 // ────────────────────────────────────────────────────────────────────────────
 function WPRow({ wp }: { wp: WorkPackage }) {
+  const { t } = useTranslation()
   const [open, setOpen] = useState(false)
   return (
     <Accordion
@@ -463,16 +470,16 @@ function WPRow({ wp }: { wp: WorkPackage }) {
               className="text-lg font-semibold"
               style={{ fontFamily: 'Montserrat, sans-serif', color: '#202124' }}
             >
-              {wp.title}
+              {t(`resources.wp.${wp.code}.title`, wp.title)}
             </h2>
           </div>
           <p
             className="text-sm leading-relaxed"
             style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(32,33,36,0.7)' }}
           >
-            <span className="font-semibold">Lead: </span>{wp.lead}
+            <span className="font-semibold">{t('resources.leadPrefix')} </span>{wp.lead}
             <span className="mx-2" style={{ color: 'rgba(32,33,36,0.3)' }}>·</span>
-            {wp.short}
+            {t(`resources.wp.${wp.code}.short`, wp.short)}
           </p>
         </div>
       }
@@ -480,14 +487,14 @@ function WPRow({ wp }: { wp: WorkPackage }) {
       <div className="mb-6">
         <p className="text-[10px] font-bold uppercase tracking-widest mb-3"
            style={{ fontFamily: 'Montserrat, sans-serif', color: '#8843A3' }}>
-          Objectives
+          {t('resources.objectives')}
         </p>
         <ul className="space-y-2 text-sm leading-relaxed list-none"
             style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(32,33,36,0.85)' }}>
           {wp.objectives.map((o, i) => (
             <li key={i} className="flex gap-3">
               <span className="shrink-0" style={{ color: '#8843A3' }}>—</span>
-              <span>{o}</span>
+              <span>{t(`resources.wp.${wp.code}.obj.${i}`, o)}</span>
             </li>
           ))}
         </ul>
@@ -497,7 +504,7 @@ function WPRow({ wp }: { wp: WorkPackage }) {
           className="text-[10px] font-bold uppercase tracking-widest mb-3"
           style={{ fontFamily: 'Montserrat, sans-serif', color: '#8843A3' }}
         >
-          Partners
+          {t('resources.partnersLabel')}
         </p>
         <div className="flex flex-wrap gap-1.5">
           {wp.partners.map(p => (
@@ -528,6 +535,7 @@ function WPRow({ wp }: { wp: WorkPackage }) {
 // Inner task row — each task is itself an accordion that reveals its description
 // ────────────────────────────────────────────────────────────────────────────
 function TaskItem({ task }: { task: Task }) {
+  const { t } = useTranslation()
   const [open, setOpen] = useState(false)
   return (
     <div className="border-b last:border-0" style={{ borderColor: 'rgba(32,33,36,0.08)' }}>
@@ -547,7 +555,7 @@ function TaskItem({ task }: { task: Task }) {
           className="flex-1 text-sm"
           style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(32,33,36,0.9)' }}
         >
-          {task.title}
+          {t(`resources.task.${codeKey(task.code)}.title`, task.title)}
         </span>
         <span
           className="text-xs shrink-0 hidden sm:block"
@@ -583,7 +591,7 @@ function TaskItem({ task }: { task: Task }) {
               transition: open ? 'opacity 300ms ease-out 80ms' : 'opacity 120ms ease-out',
             }}
           >
-            {task.description}
+            {t(`resources.task.${codeKey(task.code)}.description`, task.description)}
           </p>
         </div>
       </div>
@@ -595,6 +603,7 @@ function TaskItem({ task }: { task: Task }) {
 // Task group row — outer accordion containing TaskItem children
 // ────────────────────────────────────────────────────────────────────────────
 function TaskGroupRow({ group }: { group: TaskGroup }) {
+  const { t } = useTranslation()
   const [open, setOpen] = useState(false)
   return (
     <Accordion
@@ -612,13 +621,13 @@ function TaskGroupRow({ group }: { group: TaskGroup }) {
             className="text-base md:text-lg font-semibold"
             style={{ fontFamily: 'Montserrat, sans-serif', color: '#202124' }}
           >
-            {group.title}
+            {t(`resources.taskGroup.${group.code}.title`, group.title)}
           </h2>
           <span
             className="text-xs ml-auto"
             style={{ fontFamily: 'JetBrains Mono, monospace', color: 'rgba(32,33,36,0.65)' }}
           >
-            {group.tasks.length} tasks
+            {t('resources.tasksCount', { count: group.tasks.length })}
           </span>
         </div>
       }
@@ -634,6 +643,7 @@ function TaskGroupRow({ group }: { group: TaskGroup }) {
 // Shared row list for asset tabs (Media / Brand, Press Kit)
 // ────────────────────────────────────────────────────────────────────────────
 function MediaList({ items }: { items: MediaItem[] }) {
+  const { t } = useTranslation()
   return (
     <div className="border-t border-b" style={{ borderColor: 'rgba(32,33,36,0.12)' }}>
       {items.map(item => (
@@ -662,11 +672,11 @@ function MediaList({ items }: { items: MediaItem[] }) {
             href={item.href}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`Access file: ${item.title}`}
+            aria-label={t('resources.accessFileAria', { title: item.title })}
             className="text-xs font-bold uppercase tracking-wider hover:opacity-70 transition-opacity shrink-0"
             style={{ fontFamily: 'Montserrat, sans-serif', color: '#8843A3' }}
           >
-            Access file →
+            {t('resources.accessFile')}
           </a>
         </div>
       ))}
@@ -679,17 +689,19 @@ function MediaList({ items }: { items: MediaItem[] }) {
 // ────────────────────────────────────────────────────────────────────────────
 
 const TABS = [
-  { id: 'wp',           label: 'Work Packages',  subtitle: "Five interlocking work packages structure the project's 30-month execution." },
-  { id: 'tasks',        label: 'Tasks',           subtitle: 'Tasks grouped by parent work package. Click a group to expand; click any task to read its full description.' },
-  { id: 'milestones',   label: 'Milestones',      subtitle: 'Project control points sorted chronologically by due month.' },
-  { id: 'deliverables', label: 'Deliverables',    subtitle: 'Project outputs with their type, dissemination level, and due date.' },
-  { id: 'events',       label: 'Events',          subtitle: 'Workshops, masterclasses, exhibitions, conferences, and panel talks organised by the consortium.' },
-  { id: 'media',        label: 'Media / Brand',   subtitle: 'Brand assets and visual identity files for the Immersive ECHO project.' },
-  { id: 'presskit',     label: 'Press Kit',       subtitle: 'Press materials for journalists and media partners covering the Immersive ECHO project.' },
+  { id: 'wp',           labelKey: 'resources.tabs.wp',           subtitleKey: 'resources.tabSubtitles.wp' },
+  { id: 'tasks',        labelKey: 'resources.tabs.tasks',        subtitleKey: 'resources.tabSubtitles.tasks' },
+  { id: 'milestones',   labelKey: 'resources.tabs.milestones',  subtitleKey: 'resources.tabSubtitles.milestones' },
+  { id: 'deliverables', labelKey: 'resources.tabs.deliverables', subtitleKey: 'resources.tabSubtitles.deliverables' },
+  { id: 'events',       labelKey: 'resources.tabs.events',       subtitleKey: 'resources.tabSubtitles.events' },
+  { id: 'media',        labelKey: 'resources.tabs.media',        subtitleKey: 'resources.tabSubtitles.media' },
+  { id: 'presskit',     labelKey: 'resources.tabs.presskit',     subtitleKey: 'resources.tabSubtitles.presskit' },
 ] as const
 type TabId = typeof TABS[number]['id']
 
 export default function Resources() {
+  const { t, i18n } = useTranslation()
+  const lp = (p: string) => localizePath(i18n.language, p)
   useLayoutEffect(() => {
     const prev = document.body.style.backgroundColor
     document.body.style.backgroundColor = '#F7F3E0'
@@ -713,11 +725,11 @@ export default function Resources() {
 
         {/* Back link */}
         <Link
-          to="/about"
+          to={lp('/about')}
           className="inline-block text-sm mb-6 transition-colors hover:opacity-70"
           style={{ fontFamily: 'Montserrat, sans-serif', color: '#8843A3' }}
         >
-          ← Back to About
+          {t('resources.backToAbout')}
         </Link>
 
         {/* Page heading */}
@@ -725,21 +737,19 @@ export default function Resources() {
           className="text-xs font-bold uppercase tracking-widest mb-3"
           style={{ fontFamily: 'Montserrat, sans-serif', color: '#8843A3' }}
         >
-          For partners & reviewers
+          {t('resources.eyebrow')}
         </p>
         <h1
           className="text-3xl md:text-4xl font-bold mb-4"
           style={{ fontFamily: 'Montserrat, sans-serif' }}
         >
-          Project Resources
+          {t('resources.title')}
         </h1>
         <p
           className="leading-relaxed mb-8 max-w-2xl"
           style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(32,33,36,0.8)' }}
         >
-          Reference index of the project's structure: work packages, tasks, milestones, deliverables, and events.
-          Source: CREA-CULT-2025-COOP-3 grant application. Intended for consortium partners, evaluators,
-          and reviewers from the European Commission.
+          {t('resources.intro')}
         </p>
 
         {/* ── Tab bar ──────────────────────────────────────────────── */}
@@ -760,7 +770,7 @@ export default function Resources() {
                 marginBottom: '-1px',
               }}
             >
-              {tab.label}
+              {t(tab.labelKey)}
             </button>
           ))}
         </div>
@@ -770,7 +780,7 @@ export default function Resources() {
           className="text-sm leading-relaxed mb-6 max-w-xl"
           style={{ fontFamily: 'Roboto, sans-serif', color: 'rgba(32,33,36,0.7)' }}
         >
-          {currentTab.subtitle}
+          {t(currentTab.subtitleKey)}
         </p>
 
         {/* ── Work Packages ─────────────────────────────────────────── */}
@@ -804,10 +814,10 @@ export default function Resources() {
                 </span>
                 <div className="flex-1">
                   <p className="text-sm md:text-base font-semibold mb-1" style={{ color: '#202124', fontFamily: 'Montserrat, sans-serif' }}>
-                    {m.title}
+                    {t(`resources.ms.${codeKey(m.id)}.title`, m.title)}
                   </p>
                   <p className="text-xs md:text-sm leading-relaxed" style={{ color: 'rgba(32,33,36,0.7)' }}>
-                    {m.description}
+                    {t(`resources.ms.${codeKey(m.id)}.description`, m.description)}
                   </p>
                 </div>
                 <span
@@ -820,7 +830,7 @@ export default function Resources() {
                   className="text-xs shrink-0"
                   style={{ fontFamily: 'JetBrains Mono, monospace', color: isPast(m.due) ? '#16a34a' : 'rgba(32,33,36,0.55)', minWidth: '7.5rem' }}
                 >
-                  {dueLabel(m.due)}
+                  {dueLabel(m.due, i18n.language)}
                 </span>
               </div>
             ))}
@@ -844,10 +854,10 @@ export default function Resources() {
                 </span>
                 <div className="flex-1">
                   <p className="text-sm md:text-base font-semibold mb-1" style={{ color: '#202124', fontFamily: 'Montserrat, sans-serif' }}>
-                    {d.title}
+                    {t(`resources.d.${codeKey(d.code)}.title`, d.title)}
                   </p>
                   <p className="text-xs md:text-sm leading-relaxed" style={{ color: 'rgba(32,33,36,0.7)' }}>
-                    {d.description}
+                    {t(`resources.d.${codeKey(d.code)}.description`, d.description)}
                   </p>
                 </div>
                 <span
@@ -860,32 +870,32 @@ export default function Resources() {
                   className="text-xs shrink-0"
                   style={{ fontFamily: 'JetBrains Mono, monospace', color: 'rgba(32,33,36,0.55)', minWidth: '7.5rem' }}
                 >
-                  {dueLabel(d.due)}
+                  {dueLabel(d.due, i18n.language)}
                 </span>
                 {d.status ? (
                   <span
                     className="text-xs font-bold uppercase tracking-wider shrink-0"
                     style={{ fontFamily: 'Montserrat, sans-serif', color: '#16a34a' }}
                   >
-                    {d.status}
+                    {t(`resources.dStatus.${codeKey(d.code)}`, d.status)}
                   </span>
                 ) : d.href ? (
                   <a
                     href={d.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`Access file: ${d.code} ${d.title}`}
+                    aria-label={t('resources.accessFileAria', { title: `${d.code} ${d.title}` })}
                     className="text-xs font-bold uppercase tracking-wider hover:opacity-70 transition-opacity shrink-0"
                     style={{ fontFamily: 'Montserrat, sans-serif', color: '#8843A3' }}
                   >
-                    Access file →
+                    {t('resources.accessFile')}
                   </a>
                 ) : (
                   <span
                     className="text-xs uppercase tracking-wider shrink-0"
                     style={{ fontFamily: 'Montserrat, sans-serif', color: 'rgba(32,33,36,0.35)' }}
                   >
-                    Pending
+                    {t('resources.pending')}
                   </span>
                 )}
               </div>
@@ -915,13 +925,13 @@ export default function Resources() {
                   {e.code}
                 </span>
                 <span className="flex-1 text-sm" style={{ color: '#202124' }}>
-                  {e.name}
+                  {t(`resources.event.${e.code}.name`, e.name)}
                 </span>
                 <span
                   className="text-xs uppercase tracking-wider shrink-0"
                   style={{ fontFamily: 'Montserrat, sans-serif', color: 'rgba(32,33,36,0.55)' }}
                 >
-                  {e.type}
+                  {t(`resources.event.${e.code}.type`, e.type)}
                 </span>
                 <span
                   className="text-xs shrink-0"

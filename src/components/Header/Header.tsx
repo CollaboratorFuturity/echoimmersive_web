@@ -1,20 +1,25 @@
 import { useEffect, useRef, useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { localizePath } from '@/i18n'
+import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
 
 const navLinks = [
-  { to: '/',         label: 'Home',          end: true },
-  { to: '/about',    label: 'About',         end: false },
-  { to: '/partners', label: 'Partners',      end: false },
-  { to: '/experiences', label: 'Experiences', end: false },
-  { to: '/news',     label: 'News & Events', end: false },
-  { to: '/faq',      label: 'FAQ',           end: false },
-  { to: '/contact',  label: 'Contact',       end: false },
+  { to: '/',            tKey: 'nav.home',        end: true },
+  { to: '/about',       tKey: 'nav.about',       end: false },
+  { to: '/partners',    tKey: 'nav.partners',    end: false },
+  { to: '/experiences', tKey: 'nav.experiences', end: false },
+  { to: '/news',        tKey: 'nav.news',        end: false },
+  { to: '/faq',         tKey: 'nav.faq',         end: false },
+  { to: '/contact',     tKey: 'nav.contact',     end: false },
 ]
 
 const activeLinkStyle = { color: '#DA80FF' }
 const defaultLinkStyle = { color: 'var(--ink-muted)' }
 
 export default function Header() {
+  const { t, i18n } = useTranslation()
+  const lp = (p: string) => localizePath(i18n.language, p)
   const [menuOpen, setMenuOpen] = useState(false)
   const menuButtonRef = useRef<HTMLButtonElement>(null)
 
@@ -40,23 +45,23 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
 
         {/* Logo */}
-        <NavLink to="/" onClick={() => setMenuOpen(false)}>
+        <NavLink to={lp('/')} onClick={() => setMenuOpen(false)}>
           <img src="/logos/logo-horizontal-light.png" alt="Immersive ECHO" className="h-9 w-auto" />
         </NavLink>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex flex-wrap gap-5 text-sm" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-          {navLinks.map(({ to, label, end }) => (
+          {navLinks.map(({ to, tKey, end }) => (
             <NavLink
               key={to}
-              to={to}
+              to={lp(to)}
               end={end}
               className={({ isActive }) =>
                 `font-medium transition-colors duration-200 hover:text-brand-lilac ${isActive ? 'underline underline-offset-8 decoration-2' : ''}`
               }
               style={({ isActive }) => isActive ? activeLinkStyle : defaultLinkStyle}
             >
-              {label}
+              {t(tKey)}
             </NavLink>
           ))}
         </nav>
@@ -64,19 +69,22 @@ export default function Header() {
         <div className="flex items-center gap-3">
           {/* CTA — hidden on small mobile, shown sm+ */}
           <Link
-            to="/resources#deliverables"
+            to={`${lp('/resources')}#deliverables`}
             className="hidden sm:inline-flex border border-brand-lilac px-4 py-2 font-bold uppercase text-xs rounded-md transition-all duration-300 hover:bg-brand-lilac/10 hover:shadow-[0_0_14px_rgba(218,128,255,0.35)] whitespace-nowrap"
             style={{ fontFamily: 'Montserrat, sans-serif', color: '#DA80FF' }}
           >
-            Download Resources
+            {t('nav.downloadResources')}
           </Link>
+
+          {/* Language picker */}
+          <LanguageSwitcher />
 
           {/* Hamburger — mobile only */}
           <button
             ref={menuButtonRef}
             className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-md transition-colors hover:bg-brand-lilac/10"
             onClick={() => setMenuOpen(o => !o)}
-            aria-label="Toggle navigation"
+            aria-label={t('nav.toggleNavigation', 'Toggle navigation')}
             aria-expanded={menuOpen}
             aria-controls="mobile-nav"
           >
@@ -95,10 +103,10 @@ export default function Header() {
           style={{ backgroundColor: 'rgba(32, 33, 36, 0.97)' }}
         >
           <nav className="max-w-6xl mx-auto px-4 py-3 flex flex-col" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-            {navLinks.map(({ to, label, end }) => (
+            {navLinks.map(({ to, tKey, end }) => (
               <NavLink
                 key={to}
-                to={to}
+                to={lp(to)}
                 end={end}
                 onClick={() => setMenuOpen(false)}
                 className={({ isActive }) =>
@@ -106,17 +114,17 @@ export default function Header() {
                 }
                 style={({ isActive }) => isActive ? activeLinkStyle : defaultLinkStyle}
               >
-                {label}
+                {t(tKey)}
               </NavLink>
             ))}
             {/* CTA inside mobile menu */}
             <Link
-              to="/resources#deliverables"
+              to={`${lp('/resources')}#deliverables`}
               onClick={() => setMenuOpen(false)}
               className="mt-3 mb-1 text-center border border-brand-lilac px-4 py-3 font-bold uppercase text-xs rounded-md transition-all duration-300 hover:bg-brand-lilac/10"
               style={{ color: '#DA80FF' }}
             >
-              Download Resources
+              {t('nav.downloadResources')}
             </Link>
           </nav>
         </div>

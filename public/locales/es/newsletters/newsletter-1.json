@@ -1,0 +1,80 @@
+{
+  "id": "newsletter-1",
+  "kicker": "Boletín n.º 1",
+  "date": "Septiembre de 2026",
+  "subject": "Presentamos ECHO — Boletín n.º 1",
+  "preheader": "Cómo el diseño inmersivo está cambiando la forma en que vivimos la historia.",
+  "title": "Presentamos ECHO",
+  "lead": "Cómo el diseño inmersivo está cambiando la forma en que vivimos la historia.",
+  "blocks": [
+    { "type": "sectionLabel", "text": "La vida de un objeto" },
+    { "type": "paragraph", "text": "Hay una taza en una vitrina en algún lugar de Europa. Tiene unos cuatrocientos años. La etiqueta te dice de dónde provino la arcilla, cuándo se fabricó y por qué colección pasó. Lo que no puede contarte es cómo una novia nerviosa bebió de ella, distraída, la mañana de su boda." },
+    { "type": "paragraph", "text": "Esa mañana ha desaparecido. La taza permanece." },
+    { "type": "paragraph", "text": "Los museos siempre han cargado con este reto silencioso. Sus colecciones conservan los objetos con un cuidado extraordinario, pero las vidas que se tejieron en torno a esos objetos siguen quedando fuera de alcance." },
+    { "type": "paragraph", "text": "Un visitante puede admirar la artesanía de un cuenco de cerámica o las costuras de un abrigo antiguo sin detenerse nunca a imaginar a las personas que una vez los sostuvieron, los usaron o los transmitieron." },
+    { "type": "paragraph", "text": "Ese es el espacio en el que comienza Immersive ECHO." },
+    { "type": "paragraph", "text": "En lugar de objetos que permanecen en silencio tras el cristal, ECHO imagina espacios donde el patrimonio cobra vida. La memoria llena la sala. Los visitantes se desplazan por ella juntos mientras las imágenes se extienden por las paredes y el sonido cambia con el espacio. Cada conversación, pausa y reacción compartida pasa a formar parte de la historia." },
+    { "type": "paragraph", "text": "Immersive ECHO (European Cultural Heritage Outreach) es un proyecto de cooperación de Europa Creativa que reúne a quince socios de diez países para explorar cómo las experiencias inmersivas pueden ayudar a que el patrimonio cultural vuelva a sentirse personal, con la intención de ayudarnos a todos a reconectar con nuestro patrimonio compartido." },
+    { "type": "paragraph", "text": "A lo largo de los próximos dos años, el consorcio abordará esto probando ideas, construyendo prototipos y compartiendo abiertamente lo que aprenda. Cualquier organización patrimonial de Europa, independientemente de su tamaño, podrá apoyarse en ese trabajo en sus propias colecciones y espacios, de modo que las buenas experiencias inmersivas puedan llegar al mayor número posible de instituciones." },
+
+    { "type": "divider" },
+
+    { "type": "sectionLabel", "text": "El primer capítulo" },
+    { "type": "paragraph", "text": "El consorcio se reunió por primera vez en febrero en Le Pavillon, un centro de arte construido dentro de la ciudadela que domina Namur, Bélgica, y gestionado por KIKK, socio de Immersive ECHO." },
+    { "type": "paragraph", "text": "Meses de reuniones en línea ya habían sentado las bases de ECHO. Namur fue la primera oportunidad para que muchos socios se sentaran a la misma mesa y empezaran a hacer reales esos planes." },
+    { "type": "figure", "src": "/img/newsletter/namur-kickoff.jpg", "alt": "Socios de ECHO en Le Pavillon, Namur, febrero de 2026", "caption": "Reunión inicial — Le Pavillon, Namur, febrero de 2026" },
+    { "type": "paragraph", "text": "En el corazón del proyecto está la creación de una plantilla de experiencia inmersiva, desarrollada abordando el mismo reto desde distintas direcciones." },
+    { "type": "paragraph", "text": "La mitad del equipo trabaja desde dentro de una institución patrimonial, manteniendo cada idea sujeta a lo que realmente puede construirse, dotarse de personal y abrirse al público. La otra se ubica en un entorno creativo experimental, que ofrece margen para probar distintos enfoques dentro de un plazo de producción ajustado." },
+    { "type": "paragraph", "text": "Las dos intercambian lo que van descubriendo sobre la marcha: el laboratorio amplía lo que parece posible, mientras que el museo ancla esas ideas en las realidades de la práctica cotidiana." },
+
+    { "type": "pullQuote", "quote": "Tenemos un grupo fantástico y diverso de personas de toda Europa, y si no podemos lograr algo significativo con este equipo, me pregunto quién podría hacerlo.", "attribution": "Laura Olin — Younite AI" },
+
+    { "type": "heading", "text": "Un enfoque diferente" },
+    { "type": "paragraph", "text": "Mientras que la mayoría de los proyectos empiezan haciendo, ECHO dedicó sus primeros meses a escuchar." },
+    { "type": "paragraph", "text": "Los socios compartieron las realidades a las que se enfrentan dentro de museos, sitios culturales y organizaciones creativas. El equipo examinó de cerca proyectos de patrimonio inmersivo de toda Europa, preguntándose no solo qué funcionaba, sino con qué tenían dificultades los públicos." },
+    { "type": "paragraph", "text": "De esas conversaciones surgió un «brief de diseño basado en necesidades» que mapea tanto las ambiciones como las limitaciones de las instituciones, y una serie de personas, visitantes imaginados, cada uno representando posibles formas de conectar con el patrimonio." },
+    { "type": "paragraph", "text": "Una familia que visita junta tiene necesidades distintas de alguien que explora en solitario. Un niño de ocho años que sigue los colores por una galería oscura vive un museo de forma diferente a la historiadora que lee cada etiqueta. Las ideas empezaron a tomar forma en torno a esas diferencias." },
+
+    { "type": "heading", "text": "Dos días en Berlín" },
+    { "type": "paragraph", "text": "En junio el brief de diseño ya estaba establecido, y el foco se trasladó a la dirección creativa. Alrededor de veinte representantes de diez organizaciones socias se reunieron en Berlín para trabajar la visión aplicada de la experiencia inmersiva." },
+    { "type": "paragraph", "text": "Se pusieron sobre la mesa tres posibles enfoques narrativos y se contrastaron con lo que las instituciones patrimoniales y sus públicos realmente necesitan. El grupo también analizó cómo el movimiento, la proximidad y el simple hecho de que la gente se reúna pueden sostener una historia." },
+
+    { "type": "pullQuote", "quote": "Pasamos de hablar de instalaciones individuales a ver las experiencias como sistemas culturales. El mayor cambio para mí fue que empezamos a discutir las relaciones entre las personas, el patrimonio, el espacio y la tecnología, y no solo las experiencias en sí.", "attribution": "Timmy Ghiurau — The Point Labs, que presentó el brief" },
+
+    { "type": "divider" },
+
+    { "type": "sectionLabel", "text": "Un proyecto construido en toda Europa" },
+    { "type": "paragraph", "text": "A lo largo de Europa, ECHO reúne a quince organizaciones de diez países. Desde un museo en Viborg que explora nuevas formas de acoger a los visitantes, hasta una compañía de danza sueca que transmite el conocimiento cultural sámi a través de la coreografía, pasando por un jardín histórico en Ucrania que continúa su labor en tiempos de guerra." },
+    { "type": "paragraph", "text": "Junto a ellos están los estudios creativos, los investigadores y los socios tecnológicos que construyen el trabajo con ellos. Cada socio aporta distintas competencias, tradiciones y preguntas. Lindholmen Science Park coordina el proyecto hasta julio de 2028." },
+
+    { "type": "divider" },
+
+    { "type": "sectionLabel", "text": "Mirando más allá de ECHO" },
+    { "type": "paragraph", "text": "ECHO es una parte de una conversación mucho más amplia." },
+    { "type": "paragraph", "text": "En toda Europa, decenas de proyectos están explorando distintas piezas del mismo rompecabezas. A principios de este año, ocho de ellos se unieron a ECHO en un taller de creación de futuros organizado por el socio del consorcio Futurity Systems para comparar lo que estaban aprendiendo y dónde podría conectarse su trabajo." },
+    { "type": "paragraph", "text": "Parte de lo que surgió de ahí ya está tomando forma. Las herramientas desarrolladas dentro de ECHO se publicarán a través del centro de competencias 3D-4CH, para que sigan disponibles mucho después de que termine el proyecto." },
+    { "type": "paragraph", "text": "XRCulture está compartiendo modelos 3D de sitios patrimoniales de Ucrania e Italia para su uso en las exposiciones de ECHO. ECHO y HERIFORGE compartirán estand en la Immersive Tech Week." },
+    { "type": "paragraph", "text": "Compartiremos más de esas conversaciones en próximas ediciones." },
+
+    {
+      "type": "callout",
+      "eyebrow": "Lo que viene",
+      "heading": "Acompáñanos en Viborg, del 7 al 12 de septiembre",
+      "body": [
+        "Muy pronto. El 9 de septiembre, el Museo de Viborg ofrecerá un adelanto de la primera experiencia inmersiva de ECHO desarrollada dentro de una institución patrimonial, en el marco del Viborg Animation Festival, el mayor festival de la región nórdica para todas las personas que aman la animación y la narración visual.",
+        "ECHO organiza una conferencia que explora la narración inmersiva en museos y patrimonio cultural. Ponentes de toda Europa compartirán su trabajo, y los visitantes podrán adentrarse en la experiencia."
+      ],
+      "ctaLabel": "Ver el programa del festival ↗",
+      "ctaHref": "https://viborganimationfestival.dk/en/",
+      "footnote": "¿Quieres participar en la conferencia de ECHO? Escríbenos a",
+      "footnoteLinkLabel": "ismaila.jallow@lindholmen.se",
+      "footnoteLinkHref": "mailto:ismaila.jallow@lindholmen.se"
+    },
+
+    { "type": "sectionLabel", "text": "Mantente en contacto" },
+    { "type": "paragraph", "text": "Este boletín se publica dos veces al año, primero en inglés y luego en los idiomas del consorcio. Suscríbete y las próximas ediciones te llegarán directamente. Y si algo de lo que has leído aquí te ha entusiasmado, escríbenos." },
+    { "type": "paragraph", "text": "¿Vas a Viborg este septiembre? Ven a nuestra conferencia sobre narración inmersiva y adéntrate en nuestra última instalación." },
+    { "type": "paragraph", "text": "También puedes seguir el proyecto en Instagram, LinkedIn, Facebook, X, TikTok y YouTube con #ImmersiveECHO." },
+    { "type": "button", "label": "Suscribirse", "href": "/es/newsletter" }
+  ]
+}

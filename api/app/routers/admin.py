@@ -2,7 +2,6 @@ import csv
 import io
 import logging
 import secrets
-from datetime import datetime, timezone
 
 from fastapi import APIRouter, Depends, Header, HTTPException, Query
 from fastapi.responses import StreamingResponse
@@ -11,7 +10,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.config import get_settings
 from app.database import get_db
-from app.models.newsletter import NewsletterCurrentIssue, NewsletterSubscriber
+from app.models.newsletter import NewsletterIssueByLang, NewsletterSubscriber
 from app.schemas.newsletter import (
     NewsletterCurrentInfo,
     NewsletterSendRequest,
@@ -19,7 +18,12 @@ from app.schemas.newsletter import (
     NewsletterSetCurrentRequest,
 )
 from app.services.email_service import send_email
-from app.services.newsletter_content import render_issue, unsubscribe_url
+from app.services.newsletter_content import (
+    get_issue_for_language,
+    render_issue,
+    store_issue_for_language,
+    unsubscribe_url,
+)
 
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["Admin"])
@@ -48,7 +52,7 @@ async def export_newsletter(
     buf = io.StringIO()
     writer = csv.writer(buf)
     writer.writerow([
-        "email", "first_name", "last_name", "organisation",
+        "email", "first_name", "last_name", "organisation", "language",
         "status", "consent_acknowledged_at", "created_at",
     ])
     for s in subscribers:
@@ -57,6 +61,7 @@ async def export_newsletter(
             s.first_name or "",
             s.last_name or "",
             s.organisation or "",
+            s.language,
             s.status,
             s.consent_acknowledged_at.isoformat() if s.consent_acknowledged_at else "",
             s.created_at.isoformat() if s.created_at else "",
@@ -75,32 +80,20 @@ _render_issue = render_issue
 _unsubscribe_url = unsubscribe_url
 
 
-async def _store_current_issue(db: AsyncSession, subject: str, html: str) -> NewsletterCurrentIssue:
-    result = await db.execute(select(NewsletterCurrentIssue))
-    issue = result.scalar_one_or_none()
-    now = datetime.now(timezone.utc)
-    if issue:
-        issue.subject = subject
-        issue.html = html
-        issue.updated_at = now
-    else:
-        issue = NewsletterCurrentIssue(id=1, subject=subject, html=html, updated_at=now)
-        db.add(issue)
-    await db.commit()
-    await db.refresh(issue)
-    return issue
-
-
 @router.post(
     "/admin/newsletter/current",
     response_model=NewsletterCurrentInfo,
     dependencies=[Depends(require_api_key)],
 )
 async def set_current_issue(payload: NewsletterSetCurrentRequest, db: AsyncSession = Depends(get_db)):
-    """Store an issue as 'current' (sent to new subscribers) without sending anything."""
-    issue = await _store_current_issue(db, payload.subject, payload.html)
+    """Store an issue as 'current' for one language (sent to new subscribers of
+    that language) without sending anything. Call once per language."""
+    issue = await store_issue_for_language(db, payload.language, payload.subject, payload.html)
     return NewsletterCurrentInfo(
-        subject=issue.subject, updated_at=issue.updated_at, html_bytes=len(issue.html.encode())
+        language=issue.language,
+        subject=issue.subject,
+        updated_at=issue.updated_at,
+        html_bytes=len(issue.html.encode()),
     )
 
 
@@ -109,13 +102,18 @@ async def set_current_issue(payload: NewsletterSetCurrentRequest, db: AsyncSessi
     response_model=NewsletterCurrentInfo,
     dependencies=[Depends(require_api_key)],
 )
-async def get_current_issue(db: AsyncSession = Depends(get_db)):
-    result = await db.execute(select(NewsletterCurrentIssue))
-    issue = result.scalar_one_or_none()
+async def get_current_issue(
+    language: str = Query(default="en", description="Language code"),
+    db: AsyncSession = Depends(get_db),
+):
+    issue = await db.get(NewsletterIssueByLang, language)
     if not issue:
-        raise HTTPException(404, "No current issue stored yet.")
+        raise HTTPException(404, f"No current issue stored for language '{language}'.")
     return NewsletterCurrentInfo(
-        subject=issue.subject, updated_at=issue.updated_at, html_bytes=len(issue.html.encode())
+        language=issue.language,
+        subject=issue.subject,
+        updated_at=issue.updated_at,
+        html_bytes=len(issue.html.encode()),
     )
 
 
@@ -130,6 +128,8 @@ async def send_newsletter(payload: NewsletterSendRequest, db: AsyncSession = Dep
         raise HTTPException(503, "SMTP is not configured on the server — nothing can be sent.")
 
     if payload.test_email:
+        if not payload.subject or not payload.html:
+            raise HTTPException(422, "A test send requires both 'subject' and 'html'.")
         html = _render_issue(
             payload.html,
             first_name="there",
@@ -142,6 +142,9 @@ async def send_newsletter(payload: NewsletterSendRequest, db: AsyncSession = Dep
             raise HTTPException(502, f"Test send failed: {exc}") from exc
         return NewsletterSendResult(mode="test", sent=1, failed=0, failures=[])
 
+    # Live send: each subscriber gets the stored issue for THEIR language,
+    # falling back to English. Issues are uploaded per language beforehand via
+    # POST /admin/newsletter/current, so no subject/html is needed here.
     stmt = (
         select(NewsletterSubscriber)
         .where(NewsletterSubscriber.status == "active")
@@ -154,24 +157,30 @@ async def send_newsletter(payload: NewsletterSendRequest, db: AsyncSession = Dep
     if payload.only_email and not subscribers:
         raise HTTPException(404, f"{payload.only_email} is not an active subscriber.")
 
+    # Cache issue lookups per language (fallback resolved once per language).
+    issue_cache: dict[str, tuple[str, str] | None] = {}
+
     sent = 0
     failures: list[str] = []
     for sub in subscribers:
+        if sub.language not in issue_cache:
+            issue_cache[sub.language] = await get_issue_for_language(db, sub.language)
+        issue = issue_cache[sub.language]
+        if issue is None:
+            logger.warning("No newsletter issue available for %s (language %s)", sub.email, sub.language)
+            failures.append(sub.email)
+            continue
+        subject, raw_html = issue
         html = _render_issue(
-            payload.html,
+            raw_html,
             first_name=sub.first_name or "there",
             unsub_url=_unsubscribe_url(sub.unsubscribe_token),
         )
         try:
-            await send_email(sub.email, payload.subject, html)
+            await send_email(sub.email, subject, html)
             sent += 1
         except Exception:
             logger.exception("Newsletter send to %s failed", sub.email)
             failures.append(sub.email)
-
-    # A full send (not filtered to one subscriber) defines the new "current issue"
-    # that future subscribers receive on signup.
-    if not payload.only_email:
-        await _store_current_issue(db, payload.subject, payload.html)
 
     return NewsletterSendResult(mode="live", sent=sent, failed=len(failures), failures=failures)

@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next'
+
 type Partner = { file: string; name: string; url: string; large?: boolean }
 
 const corePartners: Partner[] = [
@@ -17,17 +19,18 @@ const corePartners: Partner[] = [
 ]
 
 export default function Partners() {
+  const { t } = useTranslation()
   return (
     <>
       <h1 className="text-2xl md:text-3xl font-bold mb-8 border-b border-brand-purple/30 pb-2 text-brand-cream">
-        The Consortium
+        {t('partners.title')}
       </h1>
 
       {/* Leadership */}
       <section className="mb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           <div className="text-center">
-            <h2 className="text-xl font-bold mb-4 text-brand-cream">Project Coordinator</h2>
+            <h2 className="text-xl font-bold mb-4 text-brand-cream">{t('partners.coordinator')}</h2>
             <a
               href="https://www.lindholmen.se/"
               target="_blank"
@@ -45,11 +48,11 @@ export default function Partners() {
               </div>
               <p className="text-sm mt-2 text-brand-cream group-hover:text-brand-lilac transition-colors">Lindholmen Science Park</p>
             </a>
-            <p className="text-sm mt-1" style={{ color: 'var(--ink-subtle)' }}>Gothenburg, Sweden</p>
+            <p className="text-sm mt-1" style={{ color: 'var(--ink-subtle)' }}>{t('partners.lspLocation')}</p>
           </div>
 
           <div className="text-center">
-            <h2 className="text-xl font-bold mb-4 text-brand-cream">Communication &amp; Dissemination</h2>
+            <h2 className="text-xl font-bold mb-4 text-brand-cream">{t('partners.commsDissemination')}</h2>
             <a
               href="https://www.futurity.systems/"
               target="_blank"
@@ -65,14 +68,14 @@ export default function Partners() {
               </div>
               <p className="text-sm mt-2 text-brand-cream group-hover:text-brand-lilac transition-colors">Futurity Systems</p>
             </a>
-            <p className="text-sm mt-1" style={{ color: 'var(--ink-subtle)' }}>Barcelona, Spain</p>
+            <p className="text-sm mt-1" style={{ color: 'var(--ink-subtle)' }}>{t('partners.futLocation')}</p>
           </div>
         </div>
       </section>
 
       {/* Core Partners */}
       <section className="mb-12">
-        <h2 className="text-lg md:text-xl font-bold mb-4 text-center text-brand-cream">Core Partners</h2>
+        <h2 className="text-lg md:text-xl font-bold mb-4 text-center text-brand-cream">{t('partners.corePartners')}</h2>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           {corePartners.map((partner, i) => (
             <a

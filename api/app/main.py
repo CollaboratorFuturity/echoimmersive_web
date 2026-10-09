@@ -3,6 +3,7 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from sqlalchemy import text
 
 from app.config import get_settings
 from app.database import Base, engine
@@ -21,6 +22,12 @@ async def lifespan(_app: FastAPI):
     # Auto-create tables on startup. Idempotent — safe to run every boot.
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
+        # create_all never alters an existing table, so add columns introduced after
+        # the first deploy here. Idempotent (IF NOT EXISTS), existing rows get 'en'.
+        await conn.execute(text(
+            "ALTER TABLE newsletter_subscribers "
+            "ADD COLUMN IF NOT EXISTS language VARCHAR(5) NOT NULL DEFAULT 'en'"
+        ))
     logger.info("Database tables ensured.")
     yield
 

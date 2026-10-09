@@ -1,13 +1,15 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { localizePath } from '@/i18n'
 import LogoMarquee from '@/components/LogoMarquee/LogoMarquee'
 import ProjectTimeline from '@/components/ProjectTimeline/ProjectTimeline'
 
 const stats = [
-  { value: 15, label: 'Partners' },
-  { value: 10, label: 'Countries' },
-  { value: 30, label: 'Months' },
-  { value: 2,  label: 'Public Testbeds' },
+  { value: 15, labelKey: 'home.stats.partners' },
+  { value: 10, labelKey: 'home.stats.countries' },
+  { value: 30, labelKey: 'home.stats.months' },
+  { value: 2,  labelKey: 'home.stats.testbeds' },
 ]
 
 const prefersReducedMotion = () =>
@@ -16,6 +18,8 @@ const prefersReducedMotion = () =>
 
 export default function Home() {
   const navigate = useNavigate()
+  const { t, i18n } = useTranslation()
+  const lp = (p: string) => localizePath(i18n.language, p)
   const statsRef = useRef<HTMLDivElement>(null)
   const [statValues, setStatValues] = useState(stats.map(() => 0))
   const reduceMotion = prefersReducedMotion()
@@ -146,26 +150,26 @@ export default function Home() {
             className="fade-up border border-brand-lilac text-brand-lilac px-3 py-1 text-xs font-bold rounded tracking-widest uppercase mb-8"
             style={{ fontFamily: 'Montserrat, sans-serif', animationDelay: '0ms' }}
           >
-            Creative Europe
+            {t('home.hero.badge')}
           </span>
 
           <h1
             className="fade-up text-brand-cream font-extrabold mb-5 uppercase w-full"
             style={{ fontFamily: 'Montserrat, sans-serif', fontSize: 'clamp(1.8rem, 11vw, 11rem)', letterSpacing: '-0.01em', lineHeight: 0.92, animationDelay: '150ms' }}
           >
-            Immersive<br />Echo
+            {t('home.hero.titleLine1')}<br />{t('home.hero.titleLine2')}
           </h1>
 
           <p
             className="fade-up max-w-md"
             style={{ fontFamily: 'Roboto, sans-serif', fontSize: 'clamp(0.95rem, 2.5vw, 1.2rem)', lineHeight: 1.7, color: 'var(--ink-muted)', animationDelay: '500ms' }}
           >
-            Creating Collective Immersive Experiences<br />for European Cultural Heritage
+            {t('home.hero.subtitleLine1')}<br />{t('home.hero.subtitleLine2')}
           </p>
 
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
             <div className="fade-up flex flex-col items-center gap-2" style={{ animationDelay: '900ms' }}>
-              <span className="text-xs uppercase tracking-widest" style={{ fontFamily: 'Montserrat, sans-serif', color: 'var(--ink-subtle)' }}>Scroll</span>
+              <span className="text-xs uppercase tracking-widest" style={{ fontFamily: 'Montserrat, sans-serif', color: 'var(--ink-subtle)' }}>{t('home.scroll')}</span>
               <div className="scroll-line w-px h-8 bg-gradient-to-b from-brand-cream/40 to-transparent" />
             </div>
           </div>
@@ -179,10 +183,10 @@ export default function Home() {
         style={{ opacity: 0, transform: 'translateY(20px)', transition: 'opacity 800ms cubic-bezier(0.2,0.8,0.2,1), transform 800ms cubic-bezier(0.2,0.8,0.2,1)' }}
         className="grid grid-cols-2 md:grid-cols-4 gap-px bg-brand-lilac/20 border border-brand-lilac/25 rounded-xl overflow-hidden mb-14"
       >
-        {stats.map(({ label }, i) => (
-          <div key={label} className="bg-brand-charcoal/70 backdrop-blur-sm px-6 py-5 text-center">
+        {stats.map(({ labelKey }, i) => (
+          <div key={labelKey} className="bg-brand-charcoal/70 backdrop-blur-sm px-6 py-5 text-center">
             <div className="text-3xl font-extrabold mb-1 tabular-nums text-brand-lilac" style={{ fontFamily: 'Montserrat, sans-serif' }}>{statValues[i]}</div>
-            <div className="text-xs uppercase tracking-widest" style={{ fontFamily: 'Montserrat, sans-serif', color: 'var(--ink-subtle)' }}>{label}</div>
+            <div className="text-xs uppercase tracking-widest" style={{ fontFamily: 'Montserrat, sans-serif', color: 'var(--ink-subtle)' }}>{t(labelKey)}</div>
           </div>
         ))}
       </div>
@@ -200,7 +204,7 @@ export default function Home() {
       <div className="mb-14">
         <p data-reveal className="text-xs font-bold uppercase tracking-widest text-brand-lilac mb-8"
            style={{ fontFamily: 'Montserrat, sans-serif', opacity: 0, transform: 'translateY(20px)', transition: 'opacity 800ms cubic-bezier(0.2,0.8,0.2,1), transform 800ms cubic-bezier(0.2,0.8,0.2,1)' }}>
-          The Mission
+          {t('home.missionLabel')}
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -209,9 +213,9 @@ export default function Home() {
             className="md:col-span-2 space-y-5 text-base leading-relaxed"
             style={{ fontFamily: 'Roboto, sans-serif', color: 'var(--ink-body)', opacity: 0, transform: 'translateY(20px)', transition: 'opacity 800ms cubic-bezier(0.2,0.8,0.2,1), transform 800ms cubic-bezier(0.2,0.8,0.2,1)' }}
           >
-            <p>Cultural heritage exists because people need it. It functions as a living connection to place, to community, to the stories that explain who we are and how we got here. Yet for millions of people across Europe, that connection is breaking down. The spaces and formats meant to carry these stories simply haven't kept pace with the people they're meant to serve.</p>
-            <p>Smaller cultural heritage institutions feel this most acutely. Without the resources of major flagships, they watch audiences shrink, younger generations drift, and communities that were never quite reflected in their collections stop showing up at all. The tools to change this exist. Immersive, multi-sensory experiences that surround you with a story rather than presenting it from behind glass are proven and powerful. But they remain out of reach for most.</p>
-            <p>Immersive ECHO starts from a different premise: that heritage is most powerful when it's felt collectively, in shared spaces, by people who might not have sought it out on their own. The project's mission is to give cultural institutions across Europe the practical means to bring people back into the story. Their story.</p>
+            <p>{t('home.mission.p1')}</p>
+            <p>{t('home.mission.p2')}</p>
+            <p>{t('home.mission.p3')}</p>
           </div>
 
           <div
@@ -222,7 +226,7 @@ export default function Home() {
           >
             <div className="text-5xl mb-3 leading-none text-brand-lilac/30" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 300 }}>&ldquo;</div>
             <p className="leading-relaxed italic" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 300, fontSize: '1.05rem', color: 'var(--ink-strong)' }}>
-              Heritage is most powerful when it's felt collectively, in shared spaces, by people who might not have sought it out on their own.
+              {t('home.quote')}
             </p>
             <div className="w-8 h-px bg-brand-lilac/35 mt-5" />
           </div>
@@ -245,7 +249,7 @@ export default function Home() {
         className="border-t border-brand-purple/30 my-10 relative"
       >
         <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 text-xs uppercase tracking-widest text-brand-lilac" style={{ fontFamily: 'Montserrat, sans-serif', backgroundColor: '#202124' }}>
-          Stay Connected
+          {t('home.stayConnected')}
         </span>
       </div>
 
@@ -255,14 +259,14 @@ export default function Home() {
         style={{ opacity: 0, transform: 'translateY(20px)', transition: 'opacity 800ms cubic-bezier(0.2,0.8,0.2,1), transform 800ms cubic-bezier(0.2,0.8,0.2,1)', backgroundColor: 'rgba(90,66,99,0.35)', boxShadow: 'inset 0 0 60px rgba(136,67,163,0.12)' }}
         className="relative border border-brand-purple/40 rounded-xl overflow-hidden py-16 px-8 text-center max-w-2xl mx-auto mb-10 backdrop-blur-sm"
       >
-        <p className="text-xs font-bold uppercase tracking-widest text-brand-lilac mb-3" style={{ fontFamily: 'Montserrat, sans-serif' }}>Newsletter</p>
-        <p className="font-bold text-lg text-brand-cream mb-7" style={{ fontFamily: 'Montserrat, sans-serif' }}>Stay updated on Immersive ECHO</p>
+        <p className="text-xs font-bold uppercase tracking-widest text-brand-lilac mb-3" style={{ fontFamily: 'Montserrat, sans-serif' }}>{t('home.newsletter.label')}</p>
+        <p className="font-bold text-lg text-brand-cream mb-7" style={{ fontFamily: 'Montserrat, sans-serif' }}>{t('home.newsletter.heading')}</p>
         <button
-          onClick={() => navigate('/newsletter')}
+          onClick={() => navigate(lp('/newsletter'))}
           className="shine-cta px-10 py-3 bg-brand-lilac text-brand-charcoal rounded-lg font-bold text-xs uppercase tracking-widest hover:shadow-[0_0_20px_#DA80FF,0_0_40px_rgba(218,128,255,0.25)] transition-shadow duration-300 cursor-pointer"
           style={{ fontFamily: 'Montserrat, sans-serif' }}
         >
-          Subscribe to our Newsletter
+          {t('home.newsletter.cta')}
         </button>
       </div>
 

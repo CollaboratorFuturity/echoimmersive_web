@@ -1,0 +1,80 @@
+{
+  "id": "newsletter-1",
+  "kicker": "Newsletter No. 1",
+  "date": "September 2026",
+  "subject": "Introducing ECHO — Newsletter No. 1",
+  "preheader": "How immersive design is changing the way we experience history.",
+  "title": "Introducing ECHO",
+  "lead": "How immersive design is changing the way we experience history.",
+  "blocks": [
+    { "type": "sectionLabel", "text": "The Life of an Object" },
+    { "type": "paragraph", "text": "There is a cup in a display case somewhere in Europe. It is around four hundred years old. The label tells you where the clay came from, when it was made, and which collection it passed through. What it cannot tell you is how a nervous bride sipped from it on the morning of her wedding absentmindedly." },
+    { "type": "paragraph", "text": "That morning has disappeared. The cup remains." },
+    { "type": "paragraph", "text": "Museums have always carried this quiet challenge. Their collections preserve objects with remarkable care, yet the lives wrapped around those objects remain just out of reach." },
+    { "type": "paragraph", "text": "A visitor can admire the craftsmanship of a ceramic bowl or the stitching of an old coat without ever stopping to imagine the people who once held them, used them or passed them on." },
+    { "type": "paragraph", "text": "That is the space where Immersive ECHO begins." },
+    { "type": "paragraph", "text": "Instead of objects sitting quietly behind glass, ECHO imagines spaces where heritage comes alive. Memory fills the room. Visitors move through it together as images spread across the walls and sound changes with the space. Every conversation, pause and shared reaction becomes part of the story." },
+    { "type": "paragraph", "text": "Immersive ECHO (European Cultural Heritage Outreach) is a Creative Europe cooperation project bringing together fifteen partners from ten countries to explore how immersive experiences can help cultural heritage feel personal again, with the intent of helping all of us connect back to our shared heritage." },
+    { "type": "paragraph", "text": "Over the next two years, the consortium will approach this through testing ideas, building prototypes and sharing what it learns openly. Any heritage organisations across Europe, regardless of size, will be able to build on that work in their own collections and spaces, so good immersive experiences can reach as many institutions as possible." },
+
+    { "type": "divider" },
+
+    { "type": "sectionLabel", "text": "The First Chapter" },
+    { "type": "paragraph", "text": "The consortium met for the first time in February at Le Pavillon, an arts centre built into the citadel overlooking Namur, Belgium, and run by Immersive ECHO partner KIKK." },
+    { "type": "paragraph", "text": "Months of online meetings had already laid the foundations for ECHO. Namur was the first opportunity for many partners to sit around the same table and begin making those plans real." },
+    { "type": "figure", "src": "/img/newsletter/namur-kickoff.jpg", "alt": "ECHO partners at Le Pavillon, Namur, February 2026", "caption": "Kick off — Le Pavillon, Namur, February 2026" },
+    { "type": "paragraph", "text": "At the heart of the project is creating an immersive experience template, developed by approaching the same challenge from different directions." },
+    { "type": "paragraph", "text": "Half the team works from within a heritage institution, keeping every idea answerable to what can actually be built, staffed and opened to the public. The other is based in an experimental creative environment, offering room to test different approaches within a sharp production cycle deadline." },
+    { "type": "paragraph", "text": "The two trade what they find as they go: the lab expands what seems possible, while the museum grounds those ideas in the realities of everyday practice." },
+
+    { "type": "pullQuote", "quote": "We have a fantastic and diverse group of people from across Europe, and if we cannot accomplish something meaningful with this team, I wonder who can.", "attribution": "Laura Olin — Younite AI" },
+
+    { "type": "heading", "text": "A different approach" },
+    { "type": "paragraph", "text": "While most projects start with doing, ECHO spent its first months listening." },
+    { "type": "paragraph", "text": "Partners shared the realities they face inside museums, cultural sites and creative organisations. The team looked closely at immersive heritage projects across Europe, asking not only what worked but what audiences struggled with." },
+    { "type": "paragraph", "text": "From those conversations emerged a «needs-based design brief» mapping both the ambitions and constraints of the institutions and a series of personas, imagined visitors, each representing possible ways of connecting with heritage." },
+    { "type": "paragraph", "text": "A family visiting together has different needs from someone exploring alone. An eight-year-old following colours through a dark gallery experiences a museum differently from the historian reading every label. The ideas began to take shape around those differences." },
+
+    { "type": "heading", "text": "Two days in Berlin" },
+    { "type": "paragraph", "text": "By June the design brief was established, and the focus moved to the creative direction. Around twenty representatives from ten partner organisations came together in Berlin to work through the applied vision for the immersive experience." },
+    { "type": "paragraph", "text": "Three possible storytelling approaches were put on the table and tested against what heritage institutions and their audiences actually need. The group also looked at how movement, proximity and the simple fact of people gathering can carry a story." },
+
+    { "type": "pullQuote", "quote": "We went from talking about individual installations to seeing the experiences as cultural systems. The biggest change for me was that we began discussing the relationships between people, heritage, space and technology, not just the experiences themselves.", "attribution": "Timmy Ghiurau — The Point Labs, who presented the brief" },
+
+    { "type": "divider" },
+
+    { "type": "sectionLabel", "text": "A Project Built Across Europe" },
+    { "type": "paragraph", "text": "Across Europe, ECHO brings together fifteen organisations from ten countries. From a museum in Viborg exploring new ways to welcome visitors, to a Swedish dance company carrying Sámi cultural knowledge through choreography, to a historic garden in Ukraine continuing its work during wartime." },
+    { "type": "paragraph", "text": "Alongside them are the creative studios, researchers and technology partners building the work with them. Each partner brings different skills, traditions and questions. Lindholmen Science Park coordinates the project through to July 2028." },
+
+    { "type": "divider" },
+
+    { "type": "sectionLabel", "text": "Looking Beyond ECHO" },
+    { "type": "paragraph", "text": "ECHO is one part of a much larger conversation." },
+    { "type": "paragraph", "text": "Across Europe, dozens of projects are exploring different pieces of the same puzzle. Earlier this year, eight of them joined ECHO for a future-making workshop organized by consortium partner Futurity Systems to compare what they were learning and where their work could connect." },
+    { "type": "paragraph", "text": "Some of what came out of it is already taking shape. Tools developed inside ECHO will be published through the 3D-4CH competence centre, so they remain available long after the project ends." },
+    { "type": "paragraph", "text": "XRCulture is sharing 3D models of heritage sites in Ukraine and Italy for use in ECHO exhibitions. ECHO and HERIFORGE will share a stand at Immersive Tech Week." },
+    { "type": "paragraph", "text": "We'll be sharing more from those conversations in future editions." },
+
+    {
+      "type": "callout",
+      "eyebrow": "Looking Ahead",
+      "heading": "Join us in Viborg, 7–12 September",
+      "body": [
+        "Coming soon. September 9, Viborg Museum will give a sneak peek at the first ECHO immersive experience developed inside a heritage institution, as part of the Viborg Animation Festival, the largest festival in the Nordic region for everyone who loves animation and visual storytelling.",
+        "ECHO is hosting a conference exploring immersive storytelling in museums and cultural heritage. Speakers from across Europe will share their work, and visitors can step inside the experience."
+      ],
+      "ctaLabel": "See the festival programme ↗",
+      "ctaHref": "https://viborganimationfestival.dk/en/",
+      "footnote": "Want to take part in the ECHO conference? Write to us at",
+      "footnoteLinkLabel": "ismaila.jallow@lindholmen.se",
+      "footnoteLinkHref": "mailto:ismaila.jallow@lindholmen.se"
+    },
+
+    { "type": "sectionLabel", "text": "Stay in Touch" },
+    { "type": "paragraph", "text": "This newsletter is published twice each year, first in English and then in the languages of the consortium. Subscribe and future editions will reach you directly. And if something you read here got you excited, write to us." },
+    { "type": "paragraph", "text": "Heading to Viborg this September? Come join our conference on immersive storytelling and step inside our latest installation." },
+    { "type": "paragraph", "text": "You can also follow the project on Instagram, LinkedIn, Facebook, X, TikTok and YouTube using #ImmersiveECHO." },
+    { "type": "button", "label": "Subscribe", "href": "/en/newsletter" }
+  ]
+}

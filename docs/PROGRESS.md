@@ -144,6 +144,21 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 - [ ] Human VoiceOver pass (`docs/A11Y_VERIFICATION_CHECKLIST.md`) — in progress
 - [ ] Publish accessibility statement (EN 301 549 / Web Accessibility Directive) after the VO pass
 
+### Internationalisation — i18n foundation (2026-10-09)
+> 10 EU languages committed for public-facing content (TRD C7). Full setup + "how to add a language" in `docs/i18n_deployment.md`.
+- [x] Stack: `react-i18next` + `i18next` + `i18next-http-backend` + `i18next-browser-languagedetector` (same as ECHOsystem platform). Config in `src/i18n.ts`; initialised in `main.tsx` under a `<Suspense>` boundary
+- [x] Path-prefix routing (`/:lang/…`) in `src/App.tsx` (`LangRoutes`): `/` → detected/default language; unprefixed legacy links (`/about`) → `/en/about`; unknown sub-path → that language's home
+- [x] `PageMeta`: per-route `document.title`, `<html lang>`, and `hreflang` alternates (runtime-injected; prerender/sitemap noted as the SEO follow-up)
+- [x] `LanguageSwitcher` (native `<select>`, keyboard/SR-accessible) in the header; swaps the language segment and stays on the same page
+- [x] Shared shell translated — Header + Footer strings via `t()`, all internal links language-aware via `localizePath()`
+- [x] Locale files: `public/locales/{lng}/translation.json` lazy-loaded; **English populated**, other 9 are `{}` stubs that fall back to English
+- [x] Verified with `tsc -b` (real type-check); confirmed Docker-safe (`npm ci` installs deps from lockfile, Vite ships `public/locales/**`, nginx SPA fallback serves `/:lang/*`)
+- [x] Extract all page bodies into the `en` locale (2026-10-09) — every production page is `t()`-keyed with language-aware links; `en/translation.json` has 12 namespaces (home, about, partners, experiences, news, faq, contact, newsletter, underConstruction, resources, nav, footer). Resources keys UI chrome only (grant data literal); Newsletter01 issue body deferred to the newsletter pipeline. Verified with `tsc -b`.
+- [ ] Translate the 9 non-English languages (one TODO each)
+- [x] **Multilingual newsletter, block-based (2026-10-09)** — Issues are block documents (`public/locales/{lng}/newsletters/{id}.json`) rendered to both the web article (`NewsletterIssue.tsx` + `NewsletterBlocks.tsx`) and email (`src/newsletter-email/renderEmail.ts`, built via `npm run newsletter:build-emails`). Backend: per-language issue store (`newsletter_issue_by_lang`), `/admin/newsletter/current?language=`, grouped send by subscriber language with English fallback, localized welcome email. Operator flow: `make newsletter-build` → `newsletter-upload` → `newsletter-send`. Issue No. 1 ported to blocks (English); `Newsletter01.tsx` retired. See `docs/i18n_deployment.md`.
+- [x] Newsletter preferred-language capture — `language` column + picker on `/newsletter` (defaults to page language) + API field + CSV export column (2026-10-09)
+- [ ] Multilingual newsletter send side (per-language issue store/send, translated welcome email — see TODO.md)
+
 ## Phase 3: Content & Assets **NOT STARTED**
 
 - [ ] Final logo files from design team
@@ -151,7 +166,7 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 - [ ] Hero and pilot photography
 - [ ] Infographic for dual-track methodology
 - [ ] Real copy for all wireframe placeholder text blocks
-- [ ] Translations (10 partner languages — scope TBD)
+- [~] Translations (10 EU languages per TRD C7) — i18n foundation shipped 2026-10-09 (see the Internationalisation section above); English done, 9 languages pending translation
 
 ---
 

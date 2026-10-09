@@ -11,7 +11,8 @@ Pan-European cultural heritage project creating collective immersive experiences
 | Framework   | React 19 + TypeScript                                   |
 | Bundler     | Vite 6                                                  |
 | CSS         | Tailwind CSS 3 (PostCSS build, not CDN)                 |
-| Routing     | React Router v6                                         |
+| Routing     | React Router v6 — language-prefixed (`/:lang/…`)        |
+| i18n        | react-i18next + i18next (http-backend + language-detector); 10 EU languages, English default — see `docs/i18n_deployment.md` |
 | Fonts       | Montserrat (display, 300–800) + Roboto (body, 300–700) — Google Fonts via `docs/branding/brand.css` |
 | 3D / WebGL  | Three.js + @react-three/fiber (Dither background)       |
 | Deploy      | Docker (multi-stage build → Nginx alpine), port 8105    |
@@ -41,8 +42,9 @@ echoimmersive_web/
 ├── Makefile
 │
 ├── src/
-│   ├── main.tsx                 # React entry, mounts App
-│   ├── App.tsx                  # BrowserRouter + Routes + Layout (Dither + Header + Footer)
+│   ├── main.tsx                 # React entry, imports ./i18n, mounts App under <Suspense>
+│   ├── App.tsx                  # BrowserRouter + /:lang routing (LangRoutes) + PageMeta (title/lang/hreflang) + Layout
+│   ├── i18n.ts                  # i18next config, SUPPORTED_LANGUAGES, localizePath() helper
 │   ├── styles/
 │   │   └── global.css           # Tailwind directives, body defaults, page-fade transition
 │   ├── pages/                   # One file per route
@@ -63,8 +65,9 @@ echoimmersive_web/
 │   │   ├── IsmailaHome.tsx      # Sandbox — cloned from LynchHome
 │   │   └── BrandHome.tsx        # Sandbox — official brand palette
 │   ├── components/
-│   │   ├── Header/Header.tsx        # Sticky blurred charcoal nav, lilac accents, hamburger
+│   │   ├── Header/Header.tsx        # Sticky blurred charcoal nav, lilac accents, hamburger, language switcher
 │   │   ├── Footer/Footer.tsx        # 3-column charcoal footer with social ring icons
+│   │   ├── LanguageSwitcher/        # Native <select> language picker (header)
 │   │   ├── DitherBackground/        # Site-wide WebGL background wrapper
 │   │   ├── Dither/                  # Lower-level WebGL dither primitive
 │   │   │   ├── Dither.tsx
@@ -82,11 +85,14 @@ echoimmersive_web/
 ├── public/                      # Static files served at site root
 │   ├── img/                     # Photos, hero imagery
 │   ├── logos/                   # Partner + coordinator logos, header logo
-│   └── charts/                  # Infographics
+│   ├── charts/                  # Infographics
+│   └── locales/                 # i18n translation files — {lng}/translation.json (en populated, 9 stubs)
 └── docs/
     ├── TODO.md
     ├── PROGRESS.md
     ├── STYLEGUIDE.md
+    ├── i18n_deployment.md       # i18n architecture, how to add a language, newsletter plan
+    ├── WCAG_AUDIT.md / A11Y_VERIFICATION_CHECKLIST.md
     ├── dither_deployment.md
     └── branding/                # Brand kit — brand.css, logo-kit.html, color.html, typography.html
 ```
@@ -108,8 +114,11 @@ See [docs/PROGRESS.md](docs/PROGRESS.md) for the full implementation checklist.
 - **Newsletter pipeline live (2026-09-02)** — Issue No. 1 ("Introducing ECHO") sent to all subscribers via `make newsletter-send`, published as a web article at `/news/newsletter-1`, and stored as the "current issue" that every new subscriber automatically receives on signup (welcome email + issue). Issues live in `newsletters/`; workflow documented in [newsletters/README.md](newsletters/README.md)
 - Sandbox routes (`/lynch-home`, `/lynch-about`, `/ismaila-home`, `/brand-home`) remain for design exploration
 - **Accessibility: WCAG 2.2 AA hardening complete (2026-07-28/29)** — 0 axe-core violations on all 12 routes; keyboard behavior (skip link, mobile-menu Esc, Lightbox modal, FAQ accordion) machine-verified with headless Chrome; 320px reflow clean; all alt text human-reviewed. See [docs/WCAG_AUDIT.md](docs/WCAG_AUDIT.md) (criterion-by-criterion status) and [docs/A11Y_VERIFICATION_CHECKLIST.md](docs/A11Y_VERIFICATION_CHECKLIST.md) (manual VoiceOver script — the last step before an AA claim, plus publishing an accessibility statement)
+- **i18n foundation shipped (2026-10-09)** — react-i18next with language-prefixed routing (`/:lang/…`), header language switcher, translated Header/Footer, and `public/locales/`. 10 EU languages committed (TRD C7); English populated, 9 others stubbed and falling back to English until translated. Setup + how-to in [docs/i18n_deployment.md](docs/i18n_deployment.md); per-language and page-extraction tasks in [docs/TODO.md](docs/TODO.md)
 
 ## Routes
+
+> All routes are language-prefixed: `/` redirects to `/{lang}` (detected or `en`), and the paths below live under `/:lang` (e.g. `/en/about`, `/sv/about`). Unprefixed legacy links redirect to the English equivalent.
 
 **Production pages** (standard layout: Header + Dither background + Footer):
 - `/` — Home

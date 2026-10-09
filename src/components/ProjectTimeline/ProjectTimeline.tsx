@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
+import { useTranslation } from 'react-i18next'
 
 /* =========================================================
    Project Timeline — Immersive ECHO
@@ -49,7 +50,8 @@ export type ProjectTimelineProps = {
 
 /* ---------- date helpers ---------- */
 
-const MONTH_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+/* English month names used only for parsing "Mon YYYY" grant dates (data is
+   authored in English). Display rendering is locale-aware via Intl. */
 const MONTH_FULL  = ['January','February','March','April','May','June','July','August','September','October','November','December']
 
 function parseDate(s: string): Date {
@@ -65,9 +67,14 @@ function parseDate(s: string): Date {
 const monthKey = (d: Date) => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`
 const monthsBetween = (a: Date, b: Date) => (b.getFullYear()-a.getFullYear())*12 + (b.getMonth()-a.getMonth())
 const addMonths = (d: Date, n: number) => new Date(d.getFullYear(), d.getMonth()+n, 1)
-const fmtMonth = (d: Date) => `${MONTH_SHORT[d.getMonth()]} ${d.getFullYear()}`
-const fmtFullDate = (d: Date) => `${d.getDate()} ${MONTH_FULL[d.getMonth()]} ${d.getFullYear()}`
-const fmtRange = (a: Date, b: Date) => `${fmtMonth(a)} — ${fmtMonth(b)}`
+/* Locale-aware date rendering. `lang` comes from i18n; month names, the
+   short month on the grid axis, and the full date in the detail card all
+   follow the active language via Intl. Parsing above stays English-only
+   because the bundled grant data is authored in English. */
+const fmtMonthShort = (d: Date, lang: string) => new Intl.DateTimeFormat(lang, { month: 'short' }).format(d)
+const fmtMonth = (d: Date, lang: string) => new Intl.DateTimeFormat(lang, { month: 'short', year: 'numeric' }).format(d)
+const fmtFullDate = (d: Date, lang: string) => new Intl.DateTimeFormat(lang, { day: 'numeric', month: 'long', year: 'numeric' }).format(d)
+const fmtRange = (a: Date, b: Date, lang: string) => `${fmtMonth(a, lang)} — ${fmtMonth(b, lang)}`
 
 function classify(item: TimelineItem, today: Date): 'done'|'in-progress'|'upcoming' {
   if (!item.date) return 'upcoming'
@@ -86,11 +93,14 @@ const revealInit = (): CSSProperties => ({
 
 /* ---------- type → label / glyph ---------- */
 
+/* English defaults; localized at call sites via t('timeline.type.<kind>', default). */
 const TYPE_LABEL: Record<TimelineItemType, string> = {
   deliverable: 'Deliverable',
   milestone:   'Milestone',
   event:       'Event',
 }
+type TFn = (key: string, defaultValue: string) => string
+const typeLabel = (t: TFn, kind: TimelineItemType) => t(`timeline.type.${kind}`, TYPE_LABEL[kind])
 const TYPE_GLYPH: Record<TimelineItemType, string> = {
   deliverable: '—',
   milestone:   '·',
@@ -162,12 +172,30 @@ const DEFAULT_ITEMS: TimelineItem[] = [
    ========================================================= */
 
 export default function ProjectTimeline({
-  items = DEFAULT_ITEMS,
+  items: itemsProp = DEFAULT_ITEMS,
   today = new Date(),
-  eyebrow = 'Project Timeline · M1 — M30 · Feb 2026 — Jul 2028',
-  heading = 'Thirty months, in public.',
-  lede = 'Immersive ECHO is a 30-month Creative Europe project: design, build, test, scale. Milestones, deliverables, and public events from the consortium of 15 organisations across 10 EU countries. Hover any month to focus; click an entry to read.',
+  eyebrow,
+  heading,
+  lede,
 }: ProjectTimelineProps) {
+  const { t, i18n } = useTranslation()
+  const lang = i18n.language
+
+  const eyebrowText = eyebrow ?? t('timeline.eyebrow', 'Project Timeline · M1 — M30 · Feb 2026 — Jul 2028')
+  const headingText = heading ?? t('timeline.heading', 'Thirty months, in public.')
+  const ledeText = lede ?? t('timeline.lede', 'Immersive ECHO is a 30-month Creative Europe project: design, build, test, scale. Milestones, deliverables, and public events from the consortium of 15 organisations across 10 EU countries. Hover any month to focus; click an entry to read.')
+
+  /* Localize the item titles, descriptions, and (event-only) word-bearing
+     tags via t(key, englishDefault). Codes in titles (MS1.1, D1.1, E1) and
+     the WP/partner/month tags on milestones & deliverables stay literal —
+     only event tags carry translatable words. */
+  const items = useMemo(() => itemsProp.map(it => ({
+    ...it,
+    title: t(`timeline.items.${it.id}.title`, it.title),
+    description: it.description ? t(`timeline.items.${it.id}.description`, it.description) : it.description,
+    tag: it.type === 'event' && it.tag ? t(`timeline.items.${it.id}.tag`, it.tag) : it.tag,
+  })), [itemsProp, t, lang])
+
   const sorted = useMemo(() => {
     const dated = items.filter(it => !!it.date).sort((a, b) => +parseDate(a.date!) - +parseDate(b.date!))
     const undated = items.filter(it => !it.date)
@@ -295,25 +323,25 @@ export default function ProjectTimeline({
       {/* ── Header ──────────────────────────────────────── */}
       <div className="pt-header">
         <div style={{ maxWidth: 640 }}>
-          <p className="pt-eyebrow" data-reveal style={{ ...revealInit(), marginBottom: 24 }}>{eyebrow}</p>
+          <p className="pt-eyebrow" data-reveal style={{ ...revealInit(), marginBottom: 24 }}>{eyebrowText}</p>
           <h2
             className="pt-heading pt-em"
             data-reveal data-reveal-delay="100"
             style={{ ...revealInit(), fontSize: 'clamp(28px, 4vw, 44px)' }}
-            dangerouslySetInnerHTML={{ __html: heading.replace(/(\.[^.]*)$/, m => `<em>${m.trim()}</em>`) }}
+            dangerouslySetInnerHTML={{ __html: headingText.replace(/(\.[^.]*)$/, m => `<em>${m.trim()}</em>`) }}
           />
         </div>
         <div className="pt-stats" data-reveal data-reveal-delay="200" style={revealInit()}>
-          <Stat label="Done"         value={`${counts.done} / ${counts.total}`} />
-          <Stat label="Deliverables" value={String(counts.deliverable)} />
-          <Stat label="Milestones"   value={String(counts.milestone)} />
-          <Stat label="Events"       value={String(counts.event)} />
+          <Stat label={t('timeline.stats.done', 'Done')}                 value={`${counts.done} / ${counts.total}`} />
+          <Stat label={t('timeline.stats.deliverables', 'Deliverables')} value={String(counts.deliverable)} />
+          <Stat label={t('timeline.stats.milestones', 'Milestones')}     value={String(counts.milestone)} />
+          <Stat label={t('timeline.stats.events', 'Events')}             value={String(counts.event)} />
         </div>
       </div>
 
-      {lede && (
+      {ledeText && (
         <p data-reveal data-reveal-delay="200" style={{ ...revealInit(), color: 'var(--ink-muted)', lineHeight: 1.65, maxWidth: 720, fontSize: 16, marginBottom: 48 }}>
-          {lede}
+          {ledeText}
         </p>
       )}
 
@@ -322,7 +350,7 @@ export default function ProjectTimeline({
         <LegendDot kind="deliverable" />
         <LegendDot kind="milestone" />
         <LegendDot kind="event" />
-        <span style={{ marginLeft: 'auto' }}>{fmtRange(range.start, range.end)}</span>
+        <span style={{ marginLeft: 'auto' }}>{fmtRange(range.start, range.end, lang)}</span>
       </div>
 
       {/* ── Grid ────────────────────────────────────────── */}
@@ -336,10 +364,12 @@ export default function ProjectTimeline({
               height: 314,
             }}
           >
-            <MonthScale months={range.months} hoverMonth={hoverMonth} setHoverMonth={setHoverMonth} />
+            <MonthScale months={range.months} hoverMonth={hoverMonth} setHoverMonth={setHoverMonth} lang={lang} />
 
             <div style={{ position: 'relative' }}>
-              <div className="pt-today" style={{ left: `calc(132px + (100% - 132px) * ${progress})` }} />
+              <div className="pt-today" style={{ left: `calc(132px + (100% - 132px) * ${progress})` }}>
+                <span className="pt-today-label">{t('timeline.today', 'TODAY')}</span>
+              </div>
               {lanes.map((lane, i) => (
                 <Lane
                   key={lane}
@@ -367,12 +397,12 @@ export default function ProjectTimeline({
         {/* overflowX: the index grid has fixed 96/110px columns (~500px min) —
             on narrow screens it scrolls inside this box, not the page (1.4.10) */}
         <div style={{ display: 'flex', flexDirection: 'column', minHeight: 0, overflowX: 'auto' }}>
-          <DividerLabel>Index</DividerLabel>
+          <DividerLabel>{t('timeline.index', 'Index')}</DividerLabel>
           <div className="pt-index-header" style={{ flexShrink: 0 }}>
-            <span style={{ paddingLeft: 13 }}>Date</span>
-            <span>Type</span>
-            <span>Title</span>
-            <span>Status</span>
+            <span style={{ paddingLeft: 13 }}>{t('timeline.cols.date', 'Date')}</span>
+            <span>{t('timeline.cols.type', 'Type')}</span>
+            <span>{t('timeline.cols.title', 'Title')}</span>
+            <span>{t('timeline.cols.status', 'Status')}</span>
           </div>
           <div ref={indexScrollRef} role="list" className="pt-scroll" style={{ overflowY: 'auto', maxHeight: detailHeight ? detailHeight - 60 : undefined, paddingRight: 8 }}>
             {sorted.map(it => (
@@ -389,8 +419,8 @@ export default function ProjectTimeline({
    Sub-components
    ========================================================= */
 
-function MonthScale({ months, hoverMonth, setHoverMonth }: {
-  months: Date[]; hoverMonth: string | null; setHoverMonth: (k: string | null) => void
+function MonthScale({ months, hoverMonth, setHoverMonth, lang }: {
+  months: Date[]; hoverMonth: string | null; setHoverMonth: (k: string | null) => void; lang: string
 }) {
   return (
     <div style={{ position: 'relative', borderBottom: '1px solid rgba(247,243,224,0.10)', display: 'grid', gridTemplateColumns: '132px 1fr' }}>
@@ -434,7 +464,7 @@ function MonthScale({ months, hoverMonth, setHoverMonth }: {
                   transition: 'background 180ms cubic-bezier(0.2,0.8,0.2,1), color 180ms cubic-bezier(0.2,0.8,0.2,1)',
                 }}
               >
-                {MONTH_SHORT[d.getMonth()]}
+                {fmtMonthShort(d, lang)}
               </div>
             )
           })}
@@ -455,6 +485,7 @@ function Lane({ lane, months, byMonth, activeId, setActiveId, hoverMonth, setHov
   today: Date
   isLast: boolean
 }) {
+  const { t, i18n } = useTranslation()
   return (
     <div style={{ position: 'relative', borderBottom: isLast ? 'none' : '1px solid rgba(247,243,224,0.08)', display: 'grid', gridTemplateColumns: '132px 1fr' }}>
       <div
@@ -466,7 +497,7 @@ function Lane({ lane, months, byMonth, activeId, setActiveId, hoverMonth, setHov
         }}
       >
         <span style={{ color: lane === 'milestone' ? '#DA80FF' : lane === 'event' ? 'rgba(218,128,255,0.75)' : 'var(--ink-subtle)', fontSize: 12 }}>{TYPE_GLYPH[lane]}</span>
-        <span>{TYPE_LABEL[lane]}</span>
+        <span>{typeLabel(t, lane)}</span>
       </div>
 
       <div
@@ -502,8 +533,8 @@ function Lane({ lane, months, byMonth, activeId, setActiveId, hoverMonth, setHov
                     onClick={() => setActiveId(it.id)}
                     className={`pt-pin ${it.type} ${status} ${activeId === it.id ? 'active' : ''}`}
                     style={{ top: `calc(50% + ${offsetY}px)` }}
-                    aria-label={`${TYPE_LABEL[it.type]}: ${it.title}`}
-                    title={it.date ? `${it.title} — ${fmtMonth(parseDate(it.date))}` : it.title}
+                    aria-label={`${typeLabel(t, it.type)}: ${it.title}`}
+                    title={it.date ? `${it.title} — ${fmtMonth(parseDate(it.date), i18n.language)}` : it.title}
                   />
                 )
               })}
@@ -518,17 +549,22 @@ function Lane({ lane, months, byMonth, activeId, setActiveId, hoverMonth, setHov
 function DetailCard({ item, today, onPrev, onNext }: {
   item: TimelineItem; today: Date; onPrev: () => void; onNext: () => void
 }) {
+  const { t, i18n } = useTranslation()
   const status = classify(item, today)
   const d = item.date ? parseDate(item.date) : null
   return (
     <div className={`pt-detail ${status}`}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20 }}>
-        <span className="pt-eyebrow">{TYPE_LABEL[item.type]} · {item.id.toUpperCase()}</span>
+        <span className="pt-eyebrow">{typeLabel(t, item.type)} · {item.id.toUpperCase()}</span>
         <span style={{
           fontFamily: 'Montserrat, sans-serif', fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase',
           color: status === 'in-progress' ? '#DA80FF' : 'var(--ink-subtle)',
         }}>
-          {status === 'done' ? '✓ Delivered' : status === 'in-progress' ? '● In progress' : '○ Upcoming'}
+          {status === 'done'
+            ? t('timeline.detail.delivered', '✓ Delivered')
+            : status === 'in-progress'
+              ? t('timeline.detail.inProgress', '● In progress')
+              : t('timeline.detail.upcoming', '○ Upcoming')}
         </span>
       </div>
 
@@ -536,7 +572,7 @@ function DetailCard({ item, today, onPrev, onNext }: {
         fontFamily: 'Montserrat, sans-serif', fontSize: 12, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase',
         color: '#DA80FF', marginBottom: 12,
       }}>
-        {d ? fmtFullDate(d) : 'Date to be confirmed'}
+        {d ? fmtFullDate(d, i18n.language) : t('timeline.detail.dateTBC', 'Date to be confirmed')}
       </div>
 
       <h3 className="pt-heading" style={{ fontSize: 28, lineHeight: 1.15, marginBottom: 16 }}>{item.title}</h3>
@@ -552,8 +588,8 @@ function DetailCard({ item, today, onPrev, onNext }: {
       )}
 
       <div style={{ display: 'flex', alignItems: 'center', gap: 24, marginTop: 28, paddingTop: 20, borderTop: '1px solid rgba(247,243,224,0.10)' }}>
-        <button onClick={onPrev} className="pt-btn-text" style={{ color: 'var(--ink-subtle)', opacity: 0.7 }}>← Previous</button>
-        <button onClick={onNext} className="pt-btn-text" style={{ color: '#DA80FF', opacity: 0.85, marginLeft: 'auto' }}>Next →</button>
+        <button onClick={onPrev} className="pt-btn-text" style={{ color: 'var(--ink-subtle)', opacity: 0.7 }}>{t('timeline.detail.prev', '← Previous')}</button>
+        <button onClick={onNext} className="pt-btn-text" style={{ color: '#DA80FF', opacity: 0.85, marginLeft: 'auto' }}>{t('timeline.detail.next', 'Next →')}</button>
       </div>
     </div>
   )
@@ -562,6 +598,7 @@ function DetailCard({ item, today, onPrev, onNext }: {
 function IndexRow({ item, active, today, onSelect }: {
   item: TimelineItem; active: boolean; today: Date; onSelect: () => void
 }) {
+  const { t, i18n } = useTranslation()
   const status = classify(item, today)
   const d = item.date ? parseDate(item.date) : null
   return (
@@ -575,7 +612,7 @@ function IndexRow({ item, active, today, onSelect }: {
       style={{ outline: 'none' }}
     >
       <span style={{ fontFamily: 'Montserrat, sans-serif', fontSize: 12, fontWeight: 600, letterSpacing: '0.05em', color: 'var(--ink-muted)', paddingLeft: 13 }}>
-        {d ? fmtMonth(d).toUpperCase() : 'TBD'}
+        {d ? fmtMonth(d, i18n.language).toUpperCase() : t('timeline.row.tbd', 'TBD')}
       </span>
       <span style={{
         display: 'flex', alignItems: 'center', gap: 8,
@@ -583,7 +620,7 @@ function IndexRow({ item, active, today, onSelect }: {
         color: item.type === 'milestone' ? '#DA80FF' : 'var(--ink-subtle)',
       }}>
         <span>{TYPE_GLYPH[item.type]}</span>
-        <span>{TYPE_LABEL[item.type]}</span>
+        <span>{typeLabel(t, item.type)}</span>
       </span>
       <span style={{ color: active ? '#F7F3E0' : 'var(--ink-strong)', fontSize: 15, fontFamily: 'Montserrat, sans-serif', fontWeight: 300 }}>
         {item.title}
@@ -593,7 +630,11 @@ function IndexRow({ item, active, today, onSelect }: {
         fontFamily: 'Montserrat, sans-serif', fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase',
         color: status === 'done' ? 'var(--ink-subtle)' : status === 'in-progress' ? '#DA80FF' : 'var(--ink-muted)',
       }}>
-        {status === 'done' ? 'Delivered' : status === 'in-progress' ? '● Now' : 'Upcoming'}
+        {status === 'done'
+          ? t('timeline.row.delivered', 'Delivered')
+          : status === 'in-progress'
+            ? t('timeline.row.now', '● Now')
+            : t('timeline.row.upcoming', 'Upcoming')}
       </span>
     </div>
   )
@@ -609,6 +650,7 @@ function Stat({ label, value }: { label: string; value: string }) {
 }
 
 function LegendDot({ kind }: { kind: TimelineItemType }) {
+  const { t } = useTranslation()
   const base: CSSProperties = { position: 'relative', display: 'inline-block', width: 8, height: 8, borderRadius: 999 }
   const swatch: CSSProperties =
     kind === 'deliverable' ? { ...base, background: 'rgba(247,243,224,0.85)' } :
@@ -617,7 +659,7 @@ function LegendDot({ kind }: { kind: TimelineItemType }) {
   return (
     <span style={{ display: 'inline-flex', alignItems: 'center', gap: 10 }}>
       <span style={swatch} />
-      <span>{TYPE_LABEL[kind]}</span>
+      <span>{typeLabel(t, kind)}</span>
     </span>
   )
 }
@@ -686,8 +728,8 @@ const PT_CSS = `
   content: ''; position: absolute; top: -4px; left: -3px; width: 7px; height: 7px;
   background: #DA80FF; border-radius: 999px; box-shadow: 0 0 12px #DA80FF;
 }
-.pt-today::after {
-  content: 'TODAY'; position: absolute; top: -22px; left: 50%; transform: translateX(-50%);
+.pt-today-label {
+  position: absolute; top: -22px; left: 50%; transform: translateX(-50%);
   font-family: Montserrat, sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.18em; color: #DA80FF; white-space: nowrap;
 }
 

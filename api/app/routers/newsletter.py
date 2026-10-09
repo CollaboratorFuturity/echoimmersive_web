@@ -3,17 +3,22 @@ import logging
 import secrets
 from datetime import datetime, timezone
 
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, Response
 from fastapi.responses import HTMLResponse
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.config import get_settings
 from app.database import get_db
-from app.models.newsletter import NewsletterCurrentIssue, NewsletterSubscriber
+from app.models.newsletter import NewsletterSubscriber
 from app.schemas.newsletter import NewsletterCreate, NewsletterResponse
 from app.services.email_service import send_email
-from app.services.newsletter_content import render_issue, unsubscribe_url
+from app.services.newsletter_content import (
+    get_issue_for_language,
+    render_issue,
+    render_welcome,
+    unsubscribe_url,
+)
 
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["Newsletter"])
@@ -23,14 +28,12 @@ router = APIRouter(tags=["Newsletter"])
 _unsubscribe_url = unsubscribe_url
 
 
-async def _get_current_issue(db: AsyncSession) -> tuple[str, str] | None:
-    result = await db.execute(select(NewsletterCurrentIssue))
-    issue = result.scalar_one_or_none()
-    return (issue.subject, issue.html) if issue else None
-
-
 @router.post("/public/newsletter", response_model=NewsletterResponse, status_code=201)
-async def subscribe(payload: NewsletterCreate, db: AsyncSession = Depends(get_db)):
+async def subscribe(
+    payload: NewsletterCreate,
+    response: Response,
+    db: AsyncSession = Depends(get_db),
+):
     if not payload.consent_acknowledged:
         raise HTTPException(422, "You must agree to the privacy policy to subscribe.")
 
@@ -41,17 +44,27 @@ async def subscribe(payload: NewsletterCreate, db: AsyncSession = Depends(get_db
 
     if existing:
         if existing.status == "active":
-            raise HTTPException(409, "This email is already subscribed.")
-        # Re-subscribe: reactivate, refresh token + name fields
+            # Already subscribed: treat a re-submit as a preferences update
+            # (language + name fields). No welcome/issue emails are (re)sent.
+            existing.first_name = payload.first_name or existing.first_name
+            existing.last_name = payload.last_name or existing.last_name
+            existing.organisation = payload.organisation or existing.organisation
+            existing.language = payload.language
+            await db.commit()
+            await db.refresh(existing)
+            response.status_code = 200
+            return NewsletterResponse(id=existing.id, created_at=existing.created_at, updated=True)
+        # Re-subscribe (previously unsubscribed): reactivate, refresh token + name fields
         existing.status = "active"
         existing.first_name = payload.first_name or existing.first_name
         existing.last_name = payload.last_name or existing.last_name
         existing.organisation = payload.organisation or existing.organisation
+        existing.language = payload.language
         existing.consent_acknowledged_at = datetime.now(timezone.utc)
         existing.unsubscribe_token = secrets.token_urlsafe(32)
         await db.commit()
         await db.refresh(existing)
-        current_issue = await _get_current_issue(db)
+        current_issue = await get_issue_for_language(db, existing.language)
         asyncio.ensure_future(_email_new_subscriber(existing, current_issue))
         return existing
 
@@ -60,13 +73,14 @@ async def subscribe(payload: NewsletterCreate, db: AsyncSession = Depends(get_db
         first_name=payload.first_name,
         last_name=payload.last_name,
         organisation=payload.organisation,
+        language=payload.language,
         consent_acknowledged_at=datetime.now(timezone.utc),
     )
     db.add(subscriber)
     await db.commit()
     await db.refresh(subscriber)
 
-    current_issue = await _get_current_issue(db)
+    current_issue = await get_issue_for_language(db, subscriber.language)
     asyncio.ensure_future(_email_new_subscriber(subscriber, current_issue))
     return subscriber
 
@@ -122,15 +136,9 @@ async def _email_new_subscriber(
 async def _email_welcome(sub: NewsletterSubscriber) -> None:
     name = sub.first_name or "there"
     unsub_link = _unsubscribe_url(sub.unsubscribe_token)
-    html = f"""
-    <h2>You're subscribed to Immersive ECHO</h2>
-    <p>Hi {name}, thanks for subscribing!</p>
-    <p>You'll receive updates on new outputs, events, and findings from across the consortium.</p>
-    <hr>
-    <p style="color:#888;font-size:12px;">Don't want these emails? <a href="{unsub_link}">Unsubscribe</a>.</p>
-    """
+    subject, html = render_welcome(sub.language, name, unsub_link)
     try:
-        await send_email(sub.email, "Welcome to the Immersive ECHO newsletter", html)
+        await send_email(sub.email, subject, html)
     except Exception:
         logger.exception("Failed to send welcome email to %s", sub.email)
 

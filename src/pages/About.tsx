@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-
+import { useTranslation } from 'react-i18next'
+import { localizePath } from '@/i18n'
 
 const partnerNames: Record<string, string> = {
   AIRA:  'AIRA Dance Company',
@@ -20,57 +21,58 @@ const partnerNames: Record<string, string> = {
 const largeLogos = new Set(['TSC', 'FUT', 'GPI', 'KIKK', 'NPIAT', 'TPL'])
 
 type ApproachCardData = {
-  title: string
+  titleKey: string
   partners: string[]
-  description: string
+  descKey: string
 }
 
 const approachCards: Record<string, ApproachCardData> = {
   offsite: {
-    title: 'Off-site Immersive Design Team',
+    titleKey: 'about.approach.offsite.title',
     partners: ['TSC', 'NPIAT', 'LSP', 'GPI', 'TPL', 'YOU', 'AIRA'],
-    description: 'A transdisciplinary lab where artists, technologists, and heritage experts co-develop immersive prototypes through co-creation sprints. Every concept is tested for accessibility and packaged into modular formats ready for deployment at any venue.',
+    descKey: 'about.approach.offsite.desc',
   },
   onsite: {
-    title: 'On-site Immersive Design Team',
+    titleKey: 'about.approach.onsite.title',
     partners: ['VIB', 'TSC', 'GPI', 'TPL', 'ID20', 'FUT', 'AIRA'],
-    description: 'Viborg Museum as a living case study, developing "Snapsting" through hand-drawn animation and spatial storytelling. Every workflow and decision is documented so other institutions can follow the same path.',
+    descKey: 'about.approach.onsite.desc',
   },
   testbed: {
-    title: 'Public Immersive Testbed',
+    titleKey: 'about.approach.testbed.title',
     partners: ['KIKK', 'TSC', 'YOU', 'TPL', 'FUT', 'GPI'],
-    description: 'Le Pavillon opens the finished experiences to real audiences at scale, measuring engagement and accessibility through AI-supported analytics while testing operational models for long-term viability.',
+    descKey: 'about.approach.testbed.desc',
   },
   coordination: {
-    title: 'Project Coordination',
+    titleKey: 'about.approach.coordination.title',
     partners: ['LSP'],
-    description: 'Lindholmen Science Park ensures strategic alignment across all partners, tracking milestones, budgets, and deliverables while managing risk and EU Commission reporting.',
+    descKey: 'about.approach.coordination.desc',
   },
   comms: {
-    title: 'Communication & Impact',
+    titleKey: 'about.approach.comms.title',
     partners: ['FUT', 'TPL', 'LSP', 'TSC', 'GPI', 'VIB', 'ID20', 'TAW'],
-    description: 'Futurity Systems translates project outcomes into modular toolkits and multilingual content, builds a peer learning network, and applies future design methods to chart long-term roadmaps for immersive culture.',
+    descKey: 'about.approach.comms.desc',
   },
 }
 
-function ApproachCard({ title, partners, description }: ApproachCardData) {
+function ApproachCard({ titleKey, partners, descKey }: ApproachCardData) {
+  const { t } = useTranslation()
   return (
     <div className="border border-brand-purple/35 bg-brand-plum/20 p-6 rounded-lg transition-all duration-300 hover:border-brand-lilac hover:shadow-[0_0_16px_rgba(218,128,255,0.15)] flex flex-col h-full">
       <h2 className="font-bold text-brand-cream mb-3" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-        {title}
+        {t(titleKey)}
       </h2>
       <p
         className="text-sm leading-relaxed mb-6 flex-grow"
         style={{ fontFamily: 'Roboto, sans-serif', color: 'var(--ink-body)' }}
       >
-        {description}
+        {t(descKey)}
       </p>
       <div className="pt-4 border-t border-brand-purple/20">
         <p
           className="text-[10px] font-bold uppercase tracking-widest text-brand-lilac mb-3"
           style={{ fontFamily: 'Montserrat, sans-serif' }}
         >
-          Partners
+          {t('about.approach.partnersLabel')}
         </p>
         <div className="flex flex-wrap gap-1.5">
           {partners.map(p => (
@@ -92,28 +94,7 @@ function ApproachCard({ title, partners, description }: ApproachCardData) {
   )
 }
 
-const objectives = [
-  {
-    title: 'Develop a Scalable Model for Immersive Cultural Storytelling',
-    body: 'We will create a transferable framework that helps cultural institutions adopt immersive formats that are emotionally engaging, technically feasible, and economically viable — supporting sector-wide digital transformation.',
-  },
-  {
-    title: 'Activate Inclusive, Low-Threshold Spaces for Co-Creation and Innovation',
-    body: 'We will establish experimental labs where cultural professionals, technologists, and diverse users can co-create, prototype, and test immersive formats — fostering capacity-building and artistic innovation across Europe.',
-  },
-  {
-    title: 'Demonstrate Public Value and Engagement through Real-World Installations',
-    body: 'We will implement immersive experiences in both public and institutional venues to evaluate audience reach, emotional impact, and operational feasibility — contributing to new models for audience development. This dual placement — within both community and institutional spaces — ensures that immersive formats not only reach people outside of the cultural heritage venues, but also guide new audiences back into cultural institutions, increasing footfall and revitalizing their public mission.',
-  },
-  {
-    title: 'Build a Pan-European Network for Knowledge Sharing and Cultural Innovation',
-    body: 'We will strengthen cross-sector collaboration by connecting institutions, creatives, and technology partners, and by sharing open-access tools and insights that enable long-term replication and policy alignment.',
-  },
-  {
-    title: 'Advance Inclusion, Accessibility, and Cultural Wellbeing & Democracy through Design',
-    body: 'We will embed inclusive design and participatory methods across the project to ensure that immersive cultural experiences reflect the diversity of European society and support social cohesion and accessibility.',
-  },
-]
+const objectiveKeys = ['o1', 'o2', 'o3', 'o4', 'o5']
 
 function Objective({ index, title, body }: { index: number; title: string; body: string }) {
   const [open, setOpen] = useState(false)
@@ -178,6 +159,9 @@ function Objective({ index, title, body }: { index: number; title: string; body:
 }
 
 export default function About() {
+  const { t, i18n } = useTranslation()
+  const lp = (p: string) => localizePath(i18n.language, p)
+
   // Iframe height is driven by postMessage from /charts/echo-dual-track.html
   // (sent on first render and on every resize). Fallback height while loading.
   const [chartHeight, setChartHeight] = useState(620)
@@ -192,34 +176,42 @@ export default function About() {
     return () => window.removeEventListener('message', handler)
   }, [])
 
+  const details: Array<[string, string]> = [
+    [t('about.details.durationLabel'), t('about.details.durationValue')],
+    [t('about.details.gaLabel'), t('about.details.gaValue')],
+    [t('about.details.fundingLabel'), t('about.details.fundingValue')],
+    [t('about.details.coordinatorLabel'), t('about.details.coordinatorValue')],
+  ]
+
   return (
     <>
       <h1 className="text-2xl md:text-3xl font-bold mb-8 border-b border-brand-purple/30 pb-2 text-brand-cream">
-        About Immersive ECHO
+        {t('about.title')}
       </h1>
 
       {/* Block 1: Mission + pull quote */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
         <div className="col-span-2">
-          <p className="text-xs font-bold uppercase tracking-widest text-brand-lilac mb-3">The Objective</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-brand-lilac mb-3">{t('about.objectiveLabel')}</p>
           <p className="leading-relaxed mb-6" style={{ fontFamily: 'Roboto, sans-serif', color: 'var(--ink-body)' }}>
-            The Immersive ECHO project has five strategic objectives designed to address the
-            challenges facing Europe's cultural heritage institutions. These objectives form
-            the backbone of a scalable, inclusive, and sustainable transformation in how cultural
-            institutions engage audiences through immersive storytelling.
+            {t('about.objectiveIntro')}
           </p>
 
           <div className="border-t border-brand-purple/20">
-            {objectives.map((obj, i) => (
-              <Objective key={obj.title} index={i + 1} title={obj.title} body={obj.body} />
+            {objectiveKeys.map((k, i) => (
+              <Objective
+                key={k}
+                index={i + 1}
+                title={t(`about.objectives.${k}.title`)}
+                body={t(`about.objectives.${k}.body`)}
+              />
             ))}
           </div>
         </div>
         <div className="border-l-2 border-brand-lilac pl-6 flex flex-col justify-center">
           <div className="text-5xl mb-3 leading-none text-brand-lilac/30" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 300 }}>&ldquo;</div>
           <p className="leading-relaxed italic" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 300, fontSize: '1.05rem', color: 'var(--ink-strong)' }}>
-            Heritage is most powerful when it's felt collectively, in shared spaces, by people who
-            might not have sought it out on their own.
+            {t('about.quote')}
           </p>
           <div className="w-8 h-px bg-brand-lilac/35 mt-5" />
         </div>
@@ -228,7 +220,7 @@ export default function About() {
       {/* Divider */}
       <div className="border-t border-dashed border-brand-purple/25 my-10 relative">
         <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 text-xs text-brand-lilac uppercase tracking-widest" style={{ backgroundColor: '#202124' }}>
-          The Approach
+          {t('about.approachDivider')}
         </span>
       </div>
 
@@ -258,8 +250,8 @@ export default function About() {
       <div className="mb-12">
         <div className="border border-brand-purple/35 bg-brand-plum/10 rounded-lg overflow-hidden">
           <iframe
-            src="/charts/echo-dual-track.html"
-            title="Immersive ECHO — Dual-Track Design Methodology"
+            src={`/charts/echo-dual-track.html?lang=${i18n.language}`}
+            title={t('about.infographic.title')}
             className="w-full block border-0"
             style={{
               // Height is reported back from the chart via postMessage on every (re)render,
@@ -276,23 +268,23 @@ export default function About() {
         </div>
         <p className="mt-4 leading-relaxed" style={{ fontFamily: 'Roboto, sans-serif', color: 'var(--ink-body)' }}>
           {/* TODO: Add real description for the Dual-Track Methodology infographic */}
-          <span className="font-bold text-brand-cream">About:</span>  Dual-track design: off-site lab and on-site museum converge in a public testbed to scale immersive heritage experiences.
+          <span className="font-bold text-brand-cream">{t('about.infographic.label')}</span>  {t('about.infographic.caption')}
         </p>
       </div>
 
       {/* Divider */}
       <div className="border-t border-dashed border-brand-purple/25 my-10 relative">
         <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 text-xs text-brand-lilac uppercase tracking-widest" style={{ backgroundColor: '#202124' }}>
-          Project Facts
+          {t('about.factsDivider')}
         </span>
       </div>
 
       {/* Block 4: Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-        {[['15','Partners'],['10','Countries'],['30','Months'],['2','Public Testbeds']].map(([value, label]) => (
-          <div key={label} className="border border-brand-purple/35 bg-brand-plum/20 p-5 text-center rounded-lg transition-all duration-300 hover:border-brand-lilac hover:shadow-[0_0_12px_rgba(218,128,255,0.15)]">
+        {[['15', 'home.stats.partners'], ['10', 'home.stats.countries'], ['30', 'home.stats.months'], ['2', 'home.stats.testbeds']].map(([value, labelKey]) => (
+          <div key={labelKey} className="border border-brand-purple/35 bg-brand-plum/20 p-5 text-center rounded-lg transition-all duration-300 hover:border-brand-lilac hover:shadow-[0_0_12px_rgba(218,128,255,0.15)]">
             <div className="text-3xl font-extrabold mb-1 text-brand-lilac">{value}</div>
-            <div className="text-xs uppercase tracking-wider" style={{ color: 'var(--ink-subtle)' }}>{label}</div>
+            <div className="text-xs uppercase tracking-wider" style={{ color: 'var(--ink-subtle)' }}>{t(labelKey)}</div>
           </div>
         ))}
       </div>
@@ -301,22 +293,22 @@ export default function About() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="col-span-2 flex items-center justify-center">
           <Link
-            to="/resources"
+            to={lp('/resources')}
             className="inline-flex items-center gap-4 px-7 py-5 border border-brand-purple/50 bg-brand-plum/20 rounded-lg hover:border-brand-lilac hover:bg-brand-plum/35 hover:shadow-[0_0_16px_rgba(218,128,255,0.15)] transition-all duration-300 group"
           >
             <span
               className="text-sm font-bold uppercase tracking-widest text-brand-cream"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
-              Full Structure, Tasks & Deliverables
+              {t('about.fullStructureCta')}
             </span>
             <span className="text-brand-lilac text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
           </Link>
         </div>
         <div className="border-l border-dashed border-brand-purple/30 pl-8">
-          <p className="text-xs font-bold uppercase tracking-widest text-brand-lilac mb-4">Project Details</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-brand-lilac mb-4">{t('about.projectDetails')}</p>
           <ul className="space-y-4 text-sm" style={{ fontFamily: 'Roboto, sans-serif' }}>
-            {[['Duration','Feb 2026 – July 2028'],['GA Number','101255680'],['Funding','Creative Europe Large Scale'],['Coordinator','Lindholmen Science Park']].map(([key, val]) => (
+            {details.map(([key, val]) => (
               <li key={key} className="border-b border-brand-purple/20 pb-2">
                 <span className="text-xs uppercase tracking-wider" style={{ color: 'var(--ink-subtle)' }}>{key}</span>
                 <br /><span className="text-brand-cream">{val}</span>

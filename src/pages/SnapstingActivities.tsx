@@ -1,17 +1,21 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { localizePath } from '@/i18n'
 
 export default function SnapstingActivities() {
+  const { t, i18n } = useTranslation()
+  const lp = (p: string) => localizePath(i18n.language, p)
   return (
     <>
-      <Link to="/experiences" className="text-sm text-brand-lilac hover:text-brand-lilac/80 transition-colors mb-4 inline-block" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-        ← Back to Experiences
+      <Link to={lp('/experiences')} className="text-sm text-brand-lilac hover:text-brand-lilac/80 transition-colors mb-4 inline-block" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+        {t('experiences.backToExperiences')}
       </Link>
 
       <h1 className="text-2xl md:text-3xl font-bold mb-4 border-b border-brand-purple/30 pb-2 text-brand-cream">
-        Viborg Animation Festival · Activities
+        {t('experiences.snapstingPage.title')}
       </h1>
       <p className="mb-8 max-w-3xl" style={{ fontFamily: 'Roboto, sans-serif', color: 'var(--ink-muted)' }}>
-        Overview of Viborg Animation Festival testbed activities in Viborg, Denmark.
+        {t('experiences.snapstingPage.intro')}
       </p>
 
       {/* TODO: Populate with real activity cards */}
@@ -33,9 +37,7 @@ export default function SnapstingActivities() {
       </div>
 
       <p className="text-center max-w-3xl mx-auto my-12" style={{ fontFamily: 'Roboto, sans-serif', fontStyle: 'italic', color: 'var(--ink-subtle)', fontSize: '0.875rem' }}>
-        Note: Description on process from early briefs, over concept development, script, animatic etc… to final experience.
-        The museum is the "final director" — the exhibition manager stands at a mixing desk and the different channels
-        she can mix on are set designers, painters, room-sound foley artist, AV experiences, objects, text, light, etc.
+        {t('experiences.snapstingPage.note')}
       </p>
     </>
   )
