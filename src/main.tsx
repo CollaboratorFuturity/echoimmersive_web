@@ -1,5 +1,6 @@
 import { StrictMode, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
+import './styles/fonts.css' // self-hosted fonts (no third-party requests)
 import './styles/global.css'
 import './i18n' // initialise i18next before the app renders
 import App from './App'

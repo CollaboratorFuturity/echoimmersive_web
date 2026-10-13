@@ -3,7 +3,9 @@ import { initReactI18next } from 'react-i18next'
 import HttpBackend from 'i18next-http-backend'
 import LanguageDetector from 'i18next-browser-languagedetector'
 
-// The 10 EU languages ECHO commits to for public-facing content (TRD C7).
+// The 10 EU languages ECHO commits to for public-facing content (TRD C7), plus Finnish and
+// Ukrainian (partner countries). Adding a code here makes it routable (/fi/..., /uk/...);
+// it is only OFFERED to visitors once it is in AVAILABLE_LANGUAGES below.
 // English is the default and the fallback every other language resolves to
 // until its translation file is filled in.
 export const SUPPORTED_LANGUAGES = [
@@ -17,6 +19,8 @@ export const SUPPORTED_LANGUAGES = [
   'da', // Danish
   'sl', // Slovenian
   'ro', // Romanian
+  'fi', // Finnish
+  'uk', // Ukrainian
 ] as const
 
 export type Lang = (typeof SUPPORTED_LANGUAGES)[number]
@@ -34,6 +38,26 @@ export const LANGUAGE_NAMES: Record<Lang, string> = {
   da: 'Dansk',
   sl: 'Slovenščina',
   ro: 'Română',
+  fi: 'Suomi',
+  uk: 'Українська',
+}
+
+// Languages whose translation is complete enough to offer to visitors. Only these
+// appear in the language pickers and in hreflang. The others still resolve by URL
+// (e.g. /sv/about falls back to English text) so a translation can be previewed
+// while it is being written. To launch a language: finish its files, then add it here.
+export const AVAILABLE_LANGUAGES: readonly Lang[] = ['en', 'es', 'sv', 'it', 'fr']
+
+// Public launch switch for translations. While FALSE (review mode):
+//   - the header language picker is hidden (reviewers open /fr/..., /fi/... by URL),
+//   - "/" always goes to English instead of the visitor's browser language,
+//   - hreflang is not advertised and non-English pages carry noindex,
+// but the subscribe form still offers AVAILABLE_LANGUAGES, so the preferred language is
+// collected. Flip to TRUE once the translations are reviewed.
+export const SHOW_LANGUAGE_SWITCHER = false
+
+export function isAvailableLang(value: string | undefined): value is Lang {
+  return !!value && (AVAILABLE_LANGUAGES as readonly string[]).includes(value)
 }
 
 export function isSupportedLang(value: string | undefined): value is Lang {

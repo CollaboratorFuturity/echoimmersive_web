@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { localizePath } from '@/i18n'
+import { localizePath, SHOW_LANGUAGE_SWITCHER } from '@/i18n'
 import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
 
 const navLinks = [
@@ -77,7 +77,7 @@ export default function Header() {
           </Link>
 
           {/* Language picker */}
-          <LanguageSwitcher />
+          {SHOW_LANGUAGE_SWITCHER && <LanguageSwitcher />}
 
           {/* Hamburger — mobile only */}
           <button

@@ -1,1 +1,699 @@
-{}
+{
+  "home": {
+    "hero": {
+      "badge": "Europe créative",
+      "titleLine1": "Immersive",
+      "titleLine2": "Echo",
+      "subtitleLine1": "Créer des expériences immersives collectives",
+      "subtitleLine2": "pour le patrimoine culturel européen"
+    },
+    "scroll": "Défiler",
+    "stats": {
+      "partners": "Partenaires",
+      "countries": "Pays",
+      "months": "Mois",
+      "testbeds": "Bancs d'essai publics"
+    },
+    "missionLabel": "La mission",
+    "mission": {
+      "p1": "Le patrimoine culturel existe parce que les gens en ont besoin. Il fonctionne comme un lien vivant avec le lieu, avec la communauté, avec les récits qui expliquent qui nous sommes et comment nous en sommes arrivés là. Pourtant, pour des millions de personnes à travers l'Europe, ce lien est en train de se rompre. Les espaces et les formats censés porter ces récits n'ont tout simplement pas suivi le rythme des personnes qu'ils sont censés servir.",
+      "p2": "Les petites institutions du patrimoine culturel le ressentent plus vivement que quiconque. Sans les ressources des grands établissements phares, elles voient leur public diminuer, les jeunes générations s'éloigner et les communautés qui ne se sont jamais vraiment reconnues dans leurs collections cesser de venir. Les outils pour changer cela existent. Les expériences immersives et multisensorielles, qui vous enveloppent dans un récit au lieu de le présenter derrière une vitre, ont fait leurs preuves et sont puissantes. Mais elles restent hors de portée pour la plupart.",
+      "p3": "Immersive ECHO part d'une autre prémisse : le patrimoine est le plus puissant lorsqu'il est vécu collectivement, dans des espaces partagés, par des personnes qui ne l'auraient peut-être pas recherché d'elles-mêmes. La mission du projet est de donner aux institutions culturelles de toute l'Europe les moyens concrets de ramener les gens dans le récit. Leur récit."
+    },
+    "quote": "Le patrimoine est le plus puissant lorsqu'il est vécu collectivement, dans des espaces partagés, par des personnes qui ne l'auraient peut-être pas recherché d'elles-mêmes.",
+    "stayConnected": "Restez connecté",
+    "newsletter": {
+      "label": "Newsletter",
+      "heading": "Restez informé sur Immersive ECHO",
+      "cta": "Abonnez-vous à notre newsletter"
+    }
+  },
+  "about": {
+    "title": "À propos d'Immersive ECHO",
+    "objectiveLabel": "L'objectif",
+    "objectiveIntro": "Le projet Immersive ECHO poursuit cinq objectifs stratégiques conçus pour répondre aux défis auxquels font face les institutions du patrimoine culturel européen. Ces objectifs constituent la colonne vertébrale d'une transformation évolutive, inclusive et durable de la manière dont les institutions culturelles mobilisent leur public grâce au récit immersif.",
+    "objectives": {
+      "o1": {
+        "title": "Développer un modèle évolutif de récit culturel immersif",
+        "body": "Nous créerons un cadre transférable qui aide les institutions culturelles à adopter des formats immersifs émotionnellement engageants, techniquement réalisables et économiquement viables — soutenant une transformation numérique à l'échelle du secteur."
+      },
+      "o2": {
+        "title": "Activer des espaces inclusifs et à faible seuil pour la cocréation et l'innovation",
+        "body": "Nous établirons des laboratoires expérimentaux où professionnels de la culture, technologues et publics divers pourront cocréer, prototyper et tester des formats immersifs — favorisant le renforcement des capacités et l'innovation artistique à travers l'Europe."
+      },
+      "o3": {
+        "title": "Démontrer la valeur publique et l'engagement par des installations en conditions réelles",
+        "body": "Nous mettrons en œuvre des expériences immersives dans des lieux à la fois publics et institutionnels afin d'évaluer la portée auprès du public, l'impact émotionnel et la faisabilité opérationnelle — contribuant à de nouveaux modèles de développement des publics. Ce double ancrage — à la fois dans les espaces communautaires et institutionnels — garantit que les formats immersifs non seulement touchent des personnes en dehors des lieux de patrimoine culturel, mais ramènent aussi de nouveaux publics vers les institutions culturelles, augmentant la fréquentation et revitalisant leur mission publique."
+      },
+      "o4": {
+        "title": "Construire un réseau paneuropéen de partage des connaissances et d'innovation culturelle",
+        "body": "Nous renforcerons la collaboration intersectorielle en reliant institutions, créatifs et partenaires technologiques, et en partageant des outils et des enseignements en accès libre qui permettent une reproduction à long terme et un alignement sur les politiques publiques."
+      },
+      "o5": {
+        "title": "Faire progresser l'inclusion, l'accessibilité ainsi que le bien-être culturel et la démocratie par le design",
+        "body": "Nous intégrerons le design inclusif et des méthodes participatives tout au long du projet afin de garantir que les expériences culturelles immersives reflètent la diversité de la société européenne et soutiennent la cohésion sociale et l'accessibilité."
+      }
+    },
+    "quote": "Le patrimoine est le plus puissant lorsqu'il est vécu collectivement, dans des espaces partagés, par des personnes qui ne l'auraient peut-être pas recherché d'elles-mêmes.",
+    "approachDivider": "L'approche",
+    "approach": {
+      "partnersLabel": "Partenaires",
+      "offsite": {
+        "title": "Équipe de design immersif hors site",
+        "desc": "Un laboratoire transdisciplinaire où artistes, technologues et experts du patrimoine codéveloppent des prototypes immersifs au fil de sprints de cocréation. Chaque concept est testé en matière d'accessibilité et conditionné en formats modulaires prêts à être déployés dans n'importe quel lieu."
+      },
+      "onsite": {
+        "title": "Équipe de design immersif sur site",
+        "desc": "Le Viborg Museum comme étude de cas vivante, développant « Snapsting » par l'animation dessinée à la main et le récit spatial. Chaque flux de travail et chaque décision sont documentés pour que d'autres institutions puissent suivre le même chemin."
+      },
+      "testbed": {
+        "title": "Banc d'essai immersif public",
+        "desc": "Le Pavillon ouvre les expériences finalisées à de vrais publics à grande échelle, mesurant l'engagement et l'accessibilité grâce à une analyse assistée par IA tout en testant des modèles opérationnels pour une viabilité à long terme."
+      },
+      "coordination": {
+        "title": "Coordination du projet",
+        "desc": "Lindholmen Science Park assure l'alignement stratégique de tous les partenaires, le suivi des jalons, des budgets et des livrables, tout en gérant les risques et les rapports à la Commission européenne."
+      },
+      "comms": {
+        "title": "Communication et impact",
+        "desc": "Futurity Systems traduit les résultats du projet en boîtes à outils modulaires et contenus multilingues, construit un réseau d'apprentissage entre pairs et applique des méthodes de design du futur pour tracer des feuilles de route à long terme pour la culture immersive."
+      }
+    },
+    "infographic": {
+      "title": "Immersive ECHO — méthodologie de conception à deux voies",
+      "label": "À propos :",
+      "caption": "Conception à deux voies : le laboratoire hors site et le musée sur site convergent dans un banc d'essai public pour faire passer à l'échelle les expériences patrimoniales immersives."
+    },
+    "factsDivider": "Faits du projet",
+    "fullStructureCta": "Structure complète, tâches et livrables",
+    "projectDetails": "Détails du projet",
+    "details": {
+      "durationLabel": "Durée",
+      "durationValue": "févr. 2026 – juill. 2028",
+      "gaLabel": "Numéro de convention",
+      "gaValue": "101255680",
+      "fundingLabel": "Financement",
+      "fundingValue": "Europe créative, coopération à grande échelle",
+      "coordinatorLabel": "Coordinateur",
+      "coordinatorValue": "Lindholmen Science Park"
+    }
+  },
+  "experiences": {
+    "title": "Expériences",
+    "intro": "Présentation du concept de bancs d'essai publics selon la méthodologie de conception axée sur les besoins, à travers l'Europe.",
+    "viewActivities": "Voir les activités",
+    "backToExperiences": "← Retour aux Expériences",
+    "snapsting": {
+      "badge": "INSTITUTION DU PATRIMOINE CULTUREL",
+      "location": "Viborg, Danemark",
+      "imageAlt": "Viborg Museum",
+      "description": "Le Viborg Museum est le musée d'histoire culturelle de la région de Viborg, au Danemark, présentant le patrimoine de la région, de la préhistoire à nos jours. Au sein d'ECHO, le musée accueillera l'installation immersive, apportant à ses publics l'approche d'ECHO en matière de récit immersif."
+    },
+    "pavillon": {
+      "badge": "MISE À L'ÉCHELLE ET ADAPTATION",
+      "location": "Namur, Belgique",
+      "imageAlt": "Le Pavillon, Namur",
+      "description": "Le Pavillon est le pôle de KIKK dédié aux arts numériques et à la technologie à Namur, en Belgique. Il déploie les installations immersives d'ECHO auprès de larges publics tout en recueillant des données d'engagement et d'accessibilité. Plus de 200 partenariats scolaires par an."
+    },
+    "snapstingPage": {
+      "title": "Viborg Animation Festival · Activités",
+      "intro": "Aperçu des activités du banc d'essai au Viborg Animation Festival à Viborg, au Danemark.",
+      "note": "Remarque : description du processus, des premiers briefs au développement du concept, au scénario, à l'animatique, etc., jusqu'à l'expérience finale. Le musée est le « réalisateur final » — la responsable de l'exposition se tient à une table de mixage et les différents canaux qu'elle peut mixer sont les scénographes, les peintres, les bruiteurs du son d'ambiance, les expériences AV, les objets, le texte, la lumière, etc."
+    },
+    "pavillonPage": {
+      "title": "Le Pavillon · Activités",
+      "intro": "Aperçu des activités du banc d'essai au Pavillon à Namur, en Belgique.",
+      "note": "Remarque : description du processus, des premiers briefs au développement du concept, au scénario, à l'animatique, etc., jusqu'à l'expérience finale. Le musée est le « réalisateur final »."
+    }
+  },
+  "newsletter": {
+    "intro": "Restez informé sur le projet — nouveaux résultats, événements et enseignements issus de tout le consortium.",
+    "subscribeHeading": "S'abonner",
+    "fields": {
+      "email": {
+        "label": "E-mail",
+        "placeholder": "Saisissez votre e-mail"
+      },
+      "firstName": {
+        "label": "Prénom",
+        "placeholder": "Saisissez votre prénom"
+      },
+      "lastName": {
+        "label": "Nom",
+        "placeholder": "Saisissez votre nom"
+      },
+      "organisation": {
+        "label": "Organisation",
+        "placeholder": "Saisissez votre organisation"
+      },
+      "language": {
+        "label": "Langue préférée",
+        "hint": "Les numéros sont envoyés dans cette langue lorsqu'une traduction est disponible, sinon en anglais."
+      }
+    },
+    "consentPrefix": "J'accepte la",
+    "privacyPolicy": "politique de confidentialité",
+    "consentRequired": "Veuillez accepter la politique de confidentialité pour vous abonner.",
+    "subscribe": "S'abonner",
+    "subscribing": "Abonnement en cours…",
+    "backToSite": "Retour au site",
+    "success": {
+      "inHeading": "C'est fait !",
+      "inBody": "Nous avons envoyé un e-mail de bienvenue à {{email}}. Vous aurez de nos nouvelles dès que nous aurons quelque chose à partager.",
+      "alreadyHeading": "Déjà abonné !",
+      "alreadyBody": "{{email}} figure déjà sur notre liste. Aucune action nécessaire.",
+      "updatedHeading": "Préférences mises à jour",
+      "updatedBody": "Nous avons mis à jour vos préférences d'abonnement. Aucun nouvel e-mail n'a été envoyé."
+    }
+  },
+  "newsletterEmail": {
+    "unsubscribe": "Se désabonner",
+    "footer": "Vous recevez cet e-mail parce que vous vous êtes abonné à la newsletter Immersive ECHO."
+  },
+  "underConstruction": {
+    "eyebrow": "Europe créative · 2026–2028",
+    "headingLine1": "Quelque chose",
+    "headingLine2": "arrive.",
+    "subline": "Immersive ECHO est un projet paneuropéen qui crée des expériences collectives de patrimoine culturel. Ce site sera lancé prochainement.",
+    "euCredit": "Cofinancé par l'Union européenne · Europe créative · Convention n° 101255680"
+  },
+  "resources": {
+    "backToAbout": "← Retour à À propos",
+    "eyebrow": "Pour les partenaires et les évaluateurs",
+    "title": "Ressources du projet",
+    "intro": "Index de référence de la structure du projet : lots de travail, tâches, jalons, livrables et événements. Source : demande de subvention CREA-CULT-2025-COOP-3. Destiné aux partenaires du consortium, aux évaluateurs et aux examinateurs de la Commission européenne.",
+    "objectives": "Objectifs",
+    "partnersLabel": "Partenaires",
+    "leadPrefix": "Responsable :",
+    "tasksCount_one": "{{count}} tâche",
+    "tasksCount_other": "{{count}} tâches",
+    "accessFile": "Accéder au fichier →",
+    "accessFileAria": "Accéder au fichier : {{title}}",
+    "pending": "En attente",
+    "tabs": {
+      "wp": "Lots de travail",
+      "tasks": "Tâches",
+      "milestones": "Jalons",
+      "deliverables": "Livrables",
+      "events": "Événements",
+      "media": "Médias / Marque",
+      "presskit": "Kit de presse"
+    },
+    "tabSubtitles": {
+      "wp": "Cinq lots de travail imbriqués structurent les 30 mois de mise en œuvre du projet.",
+      "tasks": "Tâches regroupées par lot de travail parent. Cliquez sur un groupe pour le déplier ; cliquez sur une tâche pour lire sa description complète.",
+      "milestones": "Points de contrôle du projet classés chronologiquement par mois d'échéance.",
+      "deliverables": "Résultats du projet avec leur type, leur niveau de diffusion et leur date d'échéance.",
+      "events": "Ateliers, masterclasses, expositions, conférences et tables rondes organisés par le consortium.",
+      "media": "Ressources de marque et fichiers d'identité visuelle du projet Immersive ECHO.",
+      "presskit": "Supports de presse destinés aux journalistes et aux partenaires médias couvrant le projet Immersive ECHO."
+    },
+    "wp": {
+      "WP1": {
+        "title": "Gestion et coordination du projet",
+        "short": "Alignement stratégique, jalons, budgets, gestion des risques et liaison avec la Commission européenne dans tout le consortium.",
+        "obj": {
+          "0": "Assurer une coordination stratégique, transparente et inclusive afin de garantir que tous les partenaires contribuent efficacement aux objectifs du projet.",
+          "1": "Suivre les calendriers, les livrables et l'avancement financier pour garantir la responsabilité et une utilisation efficace des ressources.",
+          "2": "Faciliter une communication claire et continue avec la Commission européenne et garantir la conformité à l'ensemble des exigences réglementaires et de reporting.",
+          "3": "Identifier et gérer les risques de manière proactive afin de sécuriser la livraison, renforcer la résilience et garantir des résultats à fort impact alignés sur les priorités de CREA."
+        }
+      },
+      "WP2": {
+        "title": "Équipe de design immersif (hors site)",
+        "short": "Un laboratoire transdisciplinaire où artistes, technologues et experts du patrimoine codéveloppent des prototypes immersifs au fil de sprints de cocréation.",
+        "obj": {
+          "0": "Comprendre les besoins évolutifs des utilisateurs et les réalités institutionnelles — cadrer les domaines d'opportunité à partir de la recherche utilisateur, des objectifs institutionnels et des évolutions sociétales.",
+          "1": "Concevoir et prototyper des formats immersifs inclusifs et évolutifs — développer des concepts qui répondent aux besoins, valider les hypothèses tôt et affiner de façon itérative.",
+          "2": "Intégrer au processus de conception un laboratoire expérimental à faible seuil pour la cocréation, les tests et l'itération avec des publics divers.",
+          "3": "Évaluer l'expérience utilisateur, la faisabilité technique et la viabilité économique — recueillir en continu des retours pour affiner les expériences.",
+          "4": "Mener l'affinage final et la préparation aux bancs d'essai publics — finaliser des expériences immersives émotionnellement marquantes, techniquement stables et accessibles.",
+          "5": "Comparer et échanger entre le design immersif sur site et hors site — échange structuré entre Snapsting et les processus du laboratoire hors site."
+        }
+      },
+      "WP3": {
+        "title": "Équipe de design immersif sur site",
+        "short": "Le Viborg Museum agit comme étude de cas vivante, développant « Snapsting » par l'animation dessinée à la main et le récit spatial.",
+        "obj": {
+          "0": "Tester le cycle de vie complet du récit immersif dans un véritable cadre muséal — développement du concept, scénarisation, collaboration, intégration technologique, production et lancement.",
+          "1": "Mesurer l'impact sur les publics — recueillir des données sur l'engagement émotionnel, l'apprentissage culturel et l'accessibilité.",
+          "2": "Identifier ce qui fonctionne pour les institutions de petite et moyenne taille — documenter les flux de travail, les défis et les besoins en ressources.",
+          "3": "Comparer et échanger entre le design immersif sur site et hors site — voir le WP2."
+        }
+      },
+      "WP4": {
+        "title": "Bancs d'essai publics",
+        "short": "Le Pavillon ouvre les expériences finalisées à de vrais publics à grande échelle et mesure l'engagement et l'accessibilité grâce à une analyse assistée par IA.",
+        "obj": {
+          "0": "Déployer une expérience immersive dans un lieu public à forte fréquentation — combler l'écart entre le prototypage et la réalité.",
+          "1": "Évaluer l'expérience utilisateur en direct à grande échelle — mesurer la réponse émotionnelle, l'accessibilité, les schémas d'interaction et la fidélisation.",
+          "2": "Tester les processus d'accueil et de sortie — signalétique, entrée/sortie guidées et occasions de réflexion.",
+          "3": "Valider la viabilité opérationnelle et économique — stratégies de billetterie, configurations opérationnelles, besoins en personnel et exigences techniques.",
+          "4": "Créer des occasions d'apprentissage pour les professionnels de la culture — les musées partenaires et les organisations patrimoniales sont invités à observer et à participer."
+        }
+      },
+      "WP5": {
+        "title": "Communication, diffusion et impact",
+        "short": "Traduit les résultats du projet en boîtes à outils modulaires, contenus multilingues et un réseau d'apprentissage entre pairs pour le secteur européen du patrimoine culturel.",
+        "obj": {
+          "0": "Communication — mesures stratégiques et ciblées pour promouvoir le projet et garantir la visibilité de la subvention de l'UE.",
+          "1": "Diffusion — partager les résultats du projet avec le secteur culturel, les institutions patrimoniales, les organes de l'UE et le grand public.",
+          "2": "Exploitation — faciliter l'utilisation des acquis du projet dans de nouvelles initiatives, le marketing et les collaborations.",
+          "3": "Amplifier la visibilité et l'engagement — tirer parti du récit moderne et de la génération de contenu assistée par IA dans toute l'Europe.",
+          "4": "Renforcement des capacités — développer des boîtes à outils, faciliter l'apprentissage entre pairs et proposer des programmes de mentorat pour les institutions culturelles.",
+          "5": "Design orienté vers le futur — appliquer des méthodes de design du futur pour imaginer des avenirs convaincants pour la culture immersive."
+        }
+      }
+    },
+    "taskGroup": {
+      "T1": { "title": "Gestion et coordination du projet" },
+      "T2": { "title": "Équipe de design immersif (hors site)" },
+      "T3": { "title": "Équipe de design immersif sur site" },
+      "T4": { "title": "Bancs d'essai publics" },
+      "T5": { "title": "Communication, diffusion et impact" }
+    },
+    "task": {
+      "T1-1": {
+        "title": "Diriger la coordination stratégique",
+        "description": "Assurer une collaboration fluide avec les partenaires, aligner les calendriers et les objectifs, et donner l'orientation générale tout au long du cycle de vie du projet."
+      },
+      "T1-2": {
+        "title": "Suivre l'avancement, les risques et le budget",
+        "description": "Suivre les jalons, les livrables, l'alignement sur la checklist verte (Green) et les flux financiers, et gérer les risques de manière proactive pour garantir transparence et responsabilité."
+      },
+      "T1-3": {
+        "title": "Gérer la communication et le reporting",
+        "description": "Faciliter une communication interne claire, préparer les rapports de l'UE et garantir la conformité aux obligations administratives et juridiques. Participants : TSC, NPIAT, GPI, YOU, TPL, KIKK, FUT, AIRA, ID20, VIB, VGR, SOFP (BEN) ; COG, TAW (AP)."
+      },
+      "T2-1": {
+        "title": "Découverte des besoins, recherche et fondements du design",
+        "description": "Explorer et définir les fondements pour un public cible diversifié en identifiant les besoins, les réalités institutionnelles, les tendances sociétales et la faisabilité technique initiale. Clarifier la maturité technologique et les éventuels défis opérationnels avant de passer au prototypage."
+      },
+      "T2-2": {
+        "title": "Conception collaborative et prototypage en laboratoire",
+        "description": "Traduire la recherche en prototypes rapides testés directement au sein du laboratoire expérimental. L'équipe de design, les partenaires muséaux et les utilisateurs cocréent des concepts immersifs au fil de cycles itératifs de conception, de test et d'amélioration."
+      },
+      "T2-3": {
+        "title": "Sprints de design inclusif",
+        "description": "Mener quatre sprints ciblés pour intégrer des perspectives diverses : 1) Sprint jeunesse — aisance numérique et curiosité ; 2) Sprint neurodivergent — équilibre sensoriel et engagement non linéaire ; 3) Sprint personnes âgées — navigation, rythme et accessibilité ; 4) Sprint groupes marginalisés — amplifier les voix souvent exclues du design dominant. Chaque sprint façonne des aspects essentiels du récit, de l'interaction et du flux de l'expérience."
+      },
+      "T2-4": {
+        "title": "Concevoir pour l'évolutivité et la transférabilité",
+        "description": "Appliquer des principes, des outils et des flux de travail de conception qui soutiennent l'évolutivité et la transférabilité des expériences immersives entre divers lieux culturels. Comprend des approches de conception modulaire, des structures narratives adaptables et des configurations flexibles pour les grandes et petites institutions."
+      },
+      "T2-5": {
+        "title": "Accès virtuel au laboratoire expérimental",
+        "description": "Tirer parti de la conception modulaire et de la technologie du jumeau numérique pour rendre l'expérience accessible à des tests paneuropéens à large échelle. Les environnements virtuels reproduisent les installations physiques, permettant à des publics divers de participer et de donner leur avis à distance."
+      },
+      "T2-6": {
+        "title": "Conception finale de l'expérience pour les bancs d'essai publics",
+        "description": "Adapter et finaliser les expériences immersives pour les lieux publics, en garantissant leur capacité à soutenir une interaction utilisateur à grande échelle. La conception finale comprend le récit émotionnel, des configurations techniques robustes, des parcours d'accessibilité et des modèles opérationnels durables. Sous-traitances : S1.1, S1.2."
+      },
+      "T2-7": {
+        "title": "Synthèse des enseignements expérimentaux",
+        "description": "Analyser les enseignements issus des activités du laboratoire, des bancs d'essai publics, des retours des utilisateurs et de la validation technique. Utiliser des outils assistés par IA pour synthétiser les résultats d'environnements contrôlés et réels en améliorations concrètes pour la livraison finale de l'expérience."
+      },
+      "T3-1": {
+        "title": "Intégration dans le flux de connaissances d'ECHO",
+        "description": "Partager les résultats en continu avec l'ensemble du consortium. Se coordonner avec le WP2 et la gestion de projet pour garantir que les enseignements de la conception, des tests et de la mise en œuvre soient transférés en temps réel. Sous-traitances : S2.1, S2.2, S2.3."
+      },
+      "T3-2": {
+        "title": "Production à grande échelle de l'expérience Snapsting",
+        "description": "Développer l'expérience de récit immersif à partir de zéro. Comprend la définition du concept, l'animatique, la scénarisation, la production (animation, décors, design et composition sonore), l'intégration AV et technique, le design spatial et sensoriel, les tests et l'installation. Sous-traitances : S2.1–S2.4."
+      },
+      "T3-3": {
+        "title": "Tests auprès des publics et évaluation",
+        "description": "Mener une évaluation structurée de l'expérience après son lancement. Recueillir des retours qualitatifs et quantitatifs sur l'utilisabilité, l'engagement, l'accessibilité et l'impact émotionnel/éducatif. Sous-traitances : S2.1."
+      },
+      "T3-4": {
+        "title": "Adaptation pour le déploiement à KIKK (Le Pavillon)",
+        "description": "Préparer l'expérience Snapsting en vue de sa mise en œuvre au Pavillon dans le cadre des activités de banc d'essai public du WP4. Garantit la collaboration entre lots de travail et des améliorations fondées sur les retours des publics du WP4. Sous-traitances : S2.1–S2.4."
+      },
+      "T4-1": {
+        "title": "Préparation au déploiement public",
+        "description": "Coordonner le travail technique, méthodologique et communicationnel nécessaire à un déploiement public réussi. Comprend les méthodologies de test, les stratégies d'accueil des publics, les protocoles de collecte de données, la planification de l'installation sur site, l'accueil des visiteurs, les considérations d'accessibilité et les flux de communication."
+      },
+      "T4-2": {
+        "title": "Développement d'un modèle économique pour un déploiement durable",
+        "description": "Codévelopper un modèle économique durable pour les expériences immersives, aligné sur les contextes socio-économiques des lieux de déploiement et les objectifs stratégiques du consortium ECHO. Les résultats soutiendront la viabilité à long terme au-delà du calendrier du projet."
+      },
+      "T4-3": {
+        "title": "Déploiement public et exploitation",
+        "description": "Déployer les expériences immersives finalisées au Pavillon avec une intégration technique et narrative complète, y compris la formation du personnel local, la maintenance, la boutique éphémère et des activités médiées pour garantir des expériences de visite de haute qualité."
+      },
+      "T4-4": {
+        "title": "Lancement public au festival KIKK (oct. 2027)",
+        "description": "Amorcer le déploiement public de l'expérience immersive par un lancement à forte visibilité au festival KIKK 2027. Comprend un panel dédié réunissant des membres du consortium ECHO, situant le projet dans un contexte culturel et d'innovation plus large."
+      },
+      "T4-5": {
+        "title": "Analyse des publics et du parcours",
+        "description": "Recueillir des données quantitatives (flux, temps de présence, conversion, besoins d'accès) et qualitatives (enquêtes, entretiens, observation) à l'aide de tableaux de bord assistés par IA ; renvoyer les enseignements vers le WP2 et le WP5."
+      },
+      "T4-6": {
+        "title": "Évaluer les modèles économiques et l'exploitation",
+        "description": "Tester les modèles opérationnels, les besoins en personnel, les structures de coûts et les scénarios de partage des revenus, et synthétiser un « plan d'affaires » pour les futurs adoptants afin d'évaluer la viabilité économique et organisationnelle d'une mise à l'échelle des formats immersifs."
+      },
+      "T5-1": {
+        "title": "Mettre en œuvre la communication interne du projet",
+        "description": "Mettre en place des outils et des modèles de communication interne pour soutenir la coordination, garantir la conformité aux normes de l'UE et permettre un partage efficace des documents. Lancer un tableau de bord de KPI suivant l'avancement entre participants et institutions."
+      },
+      "T5-2": {
+        "title": "Éthique et évaluation de la communication par IA",
+        "description": "Animer des ateliers sur l'éthique de l'IA pour les membres du consortium et les institutions culturelles. Commander une évaluation externe de l'usage de l'IA par le WP5 dans la génération de contenu, l'accessibilité et les outils d'interaction publique. Intégrer les conclusions aux rapports intermédiaire et final."
+      },
+      "T5-3": {
+        "title": "Mise en réseau entre projets et construction de communauté",
+        "description": "Faciliter un échange structuré avec d'autres projets financés par l'UE grâce à des ateliers conjoints, des tables rondes et des réunions thématiques. Construit une « communauté de pratique » autour des expériences culturelles immersives et favorise un réseau d'intérêts partagés entre consortiums."
+      },
+      "T5-4": {
+        "title": "Transfert de connaissances et renforcement des capacités",
+        "description": "Traduire les résultats du projet en formats pratiques : boîtes à outils ouvertes, modèles, ateliers, tables rondes et masterclasses en conférence, et guides d'accueil. Les outils d'IA soutiennent la personnalisation du contenu pour différentes institutions selon leur taille, leur type de public et leur maturité numérique."
+      },
+      "T5-5": {
+        "title": "Futurs participatifs et fabrique du futur",
+        "description": "Animer des ateliers mensuels de fabrique du futur (Futuremaking), produisant des scénarios, des artefacts de design spéculatif et une boîte à outils Futuremakers (numérique + physique). Cocréer le 5D TimeMap — une plateforme numérique reliant espace, temps et couches culturelles."
+      },
+      "T5-6": {
+        "title": "Outils d'interaction publique et de rayonnement",
+        "description": "Déployer la plateforme de rayonnement (Outreach Platform) pour une interaction ouverte entre les publics et le consortium. Développer et piloter le compagnon Timetravel — un outil d'IA conversationnelle qui renforce l'engagement du public avec les installations immersives."
+      },
+      "T5-7": {
+        "title": "Design du futur et vision à long terme",
+        "description": "À l'aide de méthodologies portées par Futurity Systems, cocréer une vision d'avenir pour l'innovation culturelle immersive. Des amorces de scénarios générées par IA et le regroupement d'enseignements aideront à identifier les tendances émergentes, les besoins sociétaux et les opportunités systémiques — dessinant une feuille de route européenne pour la culture immersive."
+      }
+    },
+    "ms": {
+      "MS1-1": { "title": "Alignement du consortium et lancement", "description": "Tous les partenaires alignés autour des objectifs, des méthodes, des rôles et du reporting au démarrage du projet." },
+      "MS2-1": { "title": "Cadre de conception axé sur les besoins établi", "description": "Un brief de conception stratégique fondé sur les parcours utilisateurs, les besoins, les comportements, les apports institutionnels et les tendances sociétales." },
+      "MS3-1": { "title": "Développement du concept et du récit finalisé", "description": "Concept central, récit, scénario complet et storyboard de Snapsting finalisés au fil d'un processus itératif." },
+      "MS5-1": { "title": "Réseau d'échange entre projets établi", "description": "Réseau de collaboration avec d'autres projets financés par l'UE officiellement lancé." },
+      "MS2-2": { "title": "Laboratoire opérationnel et premiers prototypes testés", "description": "Laboratoire expérimental pleinement opérationnel ; premiers prototypes immersifs testés et évalués." },
+      "MS2-3": { "title": "Série de sprints de design inclusif achevée", "description": "Les quatre sprints de cocréation inclusive achevés ; enseignements intégrés aux itérations de conception." },
+      "MS3-2": { "title": "Production finale achevée", "description": "Tous les éléments de Snapsting finalisés, y compris le contenu, la technologie et le design spatial." },
+      "MS3-3": { "title": "Expérience installée et opérationnelle", "description": "Snapsting entièrement installé et en fonctionnement sur site au Viborg Museum." },
+      "MS3-4": { "title": "Réunion du consortium et table ronde", "description": "Tous les partenaires du consortium se réunissent à Viborg, avec une table ronde au Animation Festival." },
+      "MS1-2": { "title": "Revue de coordination à mi-parcours", "description": "Revue de l'avancement, des risques, de la qualité de la collaboration et de l'utilisation des ressources à mi-parcours." },
+      "MS5-2": { "title": "Revue d'impact à mi-parcours achevée", "description": "Revue à mi-parcours évaluant la communication, le transfert de connaissances, l'engagement des parties prenantes et la portée de la diffusion." },
+      "MS4-1": { "title": "Cadre de déploiement et modèle économique définis", "description": "Stratégies de déploiement public établies, ainsi qu'un modèle économique durable codéveloppé avec les partenaires." },
+      "MS2-4": { "title": "Conceptions de prototypes itérées et concepts finaux prêts", "description": "Prototypes affinés à partir des tests ; expériences immersives finales approuvées pour le déploiement public." },
+      "MS4-2": { "title": "Installation du banc d'essai public ouverte", "description": "Premier lieu entièrement équipé, contrôle du spectacle validé ; portes ouvertes au public (festival KIKK, oct. 2027)." },
+      "MS4-3": { "title": "Tableau de bord d'analyse multi-lieux en service", "description": "Un tableau de bord central agrégeant en temps réel le flux de visiteurs, l'engagement et les données d'accessibilité est mis en service." },
+      "MS3-5": { "title": "Snapsting adapté au déploiement au Pavillon", "description": "Snapsting adapté au Pavillon, avec des ajustements du récit, de la configuration technique et du design spatial." },
+      "MS5-3": { "title": "Ressources de renforcement des capacités finalisées", "description": "Open Learning Toolkit, guide How-to ECHO, 5D TimeMap et boîtes à outils Futuremakers finalisés et distribués." },
+      "MS5-4": { "title": "Diffusion finale de l'impact", "description": "Rapport final de design du futur résumant les résultats de la prospective stratégique et les trajectoires à long terme." },
+      "MS4-4": { "title": "Faisabilité opérationnelle et économique rapportée", "description": "Coûts, personnel et logistique analysés pour soutenir l'adoption et la montée en échelle futures." },
+      "MS1-3": { "title": "Synthèse finale de la coordination", "description": "Bilan stratégique de la livraison du projet, y compris les enseignements clés sur la coordination et la prise de décision." }
+    },
+    "d": {
+      "D1-1": { "title": "Manuel de gestion de projet", "description": "[ANG] Un guide pratique décrivant la vision, articulée avec les outils de coordination interne, la structure de reporting, les responsabilités des partenaires et les flux de travail partagés. Comprend des modèles et des checklists." },
+      "D1-2": { "title": "Rapport de coordination et de risques à mi-parcours", "description": "[ANG] Évaluation de l'avancement, de la qualité de la coordination, de l'état des risques et des auto-évaluations des partenaires. Comprend des recommandations d'amélioration." },
+      "D2-1": { "title": "Brief de design immersif axé sur les besoins", "description": "[ANG] Un guide stratégique clair fondé sur les insights utilisateurs, les besoins institutionnels et les évolutions sociétales — définissant les défis de conception, les personas d'utilisateurs, les objectifs émotionnels et les hypothèses techniques." },
+      "D2-2": { "title": "Conceptions finales de l'expérience immersive", "description": "[Langue à définir] Ensembles complets d'expériences immersives pour le déploiement public, comprenant récits, designs spatiaux et d'interaction, configurations techniques, guides d'accueil/sortie et solutions d'accessibilité." },
+      "D2-3": { "title": "Évaluation finale de l'expérience immersive", "description": "[ANG] Évaluation complète de l'expérience utilisateur, de la faisabilité technique et de la viabilité économique. Comprend l'analyse de l'impact émotionnel, l'examen de l'accessibilité, les tests de performance du système et les contrôles de durabilité opérationnelle." },
+      "D3-1": { "title": "Expérience immersive Snapsting et documentation", "description": "[DANOIS & ANG] L'expérience immersive finalisée, installée et en fonctionnement au Viborg Museum. Comprend les plans d'installation, les fichiers de design d'interaction et la documentation pour réutilisation ou adaptation." },
+      "D3-2": { "title": "Ensemble adapté de l'expérience Snapsting pour Le Pavillon", "description": "[ANG] Version adaptée de l'expérience immersive Snapsting conçue pour le déploiement au Pavillon. Comprend un récit, un design d'interaction et spatial, une configuration technique et des directives opérationnelles mis à jour." },
+      "D3-3": { "title": "Rapport sur le processus de production immersive", "description": "[ANG] Un parcours pratique du processus de production sur site. Comprend le développement narratif, les décisions techniques, le modèle de collaboration et les défis culturels rencontrés — pensé comme une référence pour d'autres institutions." },
+      "D4-1": { "title": "Rapport de déploiement opérationnel", "description": "[ANG] Documentation pas à pas du déploiement du banc d'essai public, comprenant la logistique des publics, la configuration spatiale et des notes d'adaptation technique." },
+      "D4-2": { "title": "Synthèse de l'expérience utilisateur et du modèle économique", "description": "[ANG] Évaluation de l'engagement des publics, des parcours d'accueil/sortie et de la faisabilité des modèles économiques testés sur le lieu." },
+      "D5-1": { "title": "Plan de communication et de diffusion", "description": "[ANG] Une stratégie et un plan de communication intégrés pour partager largement les résultats. Les outils d'IA transforment les données du projet en articles, publications, études de cas et micro-contenus adaptés à différents publics européens. Génération conforme à la politique de l'UE sur l'IA, la vie privée et l'éthique technologique." },
+      "D5-2": { "title": "Tableau de bord du projet", "description": "Un site web doté d'un tableau de bord numérique en temps réel suivant et visualisant les KPI à plusieurs niveaux : contributions individuelles des participants, flux de travail intra-institutionnels, collaboration interinstitutionnelle, score d'engagement civique et impact sociétal plus large. Section publique + espaces privés pour les institutions, les décideurs et les parties prenantes." },
+      "D5-3": { "title": "Rapport d'impact et de diffusion à mi-parcours", "description": "Revue complète de l'impact du projet, des activités de diffusion et des résultats de communication à mi-parcours. Évalue les indicateurs d'engagement, l'adoption institutionnelle, l'efficacité du transfert de connaissances et la collaboration intersectorielle." },
+      "D5-4": { "title": "Boîte à outils Futuremakers", "description": "Une boîte à outils hybride (physique et numérique) réunissant des techniques participatives, des matériaux et des activités guidées qui apprennent aux professionnels de la culture à imaginer des avenirs plus inclusifs et résilients. Fournie dans 10 langues de l'UE. Physique : cahiers de travail, jeux de cartes, pièces de jeu durables en matériaux soutenables. Numérique : contenu média + un tableau blanc interactif multi-utilisateurs." },
+      "D5-5": { "title": "Plateforme de rayonnement", "description": "Une plateforme augmentée par IA pour une communication bidirectionnelle sans friction entre le projet, les institutions et les publics. Comprend un tableau de bord de KPI opérationnel en temps réel. Plateforme en anglais ; agents et contenus d'IA dans 10 langues de l'UE. Comprend des personas d'agents d'IA (guide de musée, personnage historique, mascotte fictive) et un outil permettant aux institutions de créer les leurs." },
+      "D5-6": { "title": "5D TimeMap des sites du patrimoine culturel", "description": "Une carte numérique interactive reliant les sites du patrimoine culturel de toute l'Europe à leurs institutions respectives, enrichie de cinq dimensions : spatiale, temporelle et trois couches thématiques (artistique, politique, linguistique). Disponible sur site, sur ordinateurs et sur mobile dans 10 langues de l'UE." },
+      "D5-7": { "title": "Prototype du compagnon Timetravel", "description": "Un prototype fonctionnel du compagnon Timetravel — un guide propulsé par IA qui enrichit les visites de musée et les installations immersives grâce à l'interaction vocale, au récit contextuel et à un contenu holographique optionnel. Comprend l'interface de l'application, des modules de contenu, la documentation des tests utilisateurs et l'évaluation de l'accessibilité dans 10 langues de l'UE. 100 appareils personnalisés en open source seront construits pour les installations." },
+      "D5-8": { "title": "Open Learning Toolkit et guide How-to ECHO", "description": "Un ensemble d'informations, d'instructions et d'outils permettant aux nouvelles institutions culturelles de mettre en œuvre la boîte à outils ECHO de bout en bout. Des ressources modulaires et prêtes à l'emploi construites à partir des résultats des WP2–WP4, dans 10 langues de l'UE." },
+      "D5-9": { "title": "Rapport de mise en réseau entre projets", "description": "Rapport complet documentant les activités de mise en réseau entre projets, y compris les réunions, les événements collaboratifs, les résultats clés et les propositions d'échange continu." },
+      "D5-10": { "title": "Rapport final de design du futur", "description": "Une plateforme numérique présentant les résultats du projet et son potentiel à long terme. Des outils média propulsés par IA personnalisent le contenu pour les participants et traduisent les enseignements du projet en formats partageables dans 10 langues de l'UE." }
+    },
+    "dStatus": {
+      "D5-2": "Vous êtes ici !"
+    },
+    "event": {
+      "E1": { "name": "Sprint jeunesse : Future Worlds Builder", "type": "Sprint centré sur l'utilisateur" },
+      "E2": { "name": "Sprint neurodivergent : navigation non linéaire", "type": "Sprint centré sur l'utilisateur" },
+      "E3": { "name": "L'expérience immersive Snapsting", "type": "Exposition" },
+      "E4": { "name": "Echoes of the Future : relier patrimoine culturel et innovation immersive", "type": "Conférence" },
+      "E5": { "name": "Immersive ECHO : le patrimoine culturel pour l'avenir", "type": "Table ronde" },
+      "E6": { "name": "Immersive ECHO", "type": "Exposition" },
+      "E7": { "name": "Prototypage spéculatif", "type": "Atelier" },
+      "E8": { "name": "Cartographie sensorielle et interaction", "type": "Atelier" },
+      "E9": { "name": "Sprint personnes âgées : navigation incarnée et numérique", "type": "Sprint centré sur l'utilisateur" },
+      "E10": { "name": "Sprint groupes marginalisés", "type": "Sprint centré sur l'utilisateur" },
+      "E11": { "name": "Ateliers de jumeau numérique et tests à distance", "type": "Tests utilisateurs" },
+      "E12": { "name": "Concevoir pour l'évolutivité et la capacité de tournée", "type": "Atelier" },
+      "E13": { "name": "Technologie et innovation pour le récit immersif", "type": "Masterclass" },
+      "E14": { "name": "Direction créative et pipeline d'animation pour les récits culturels", "type": "Masterclass" },
+      "E15": { "name": "Collaboration interdisciplinaire pour l'innovation patrimoniale", "type": "Masterclass" },
+      "E16": { "name": "Capteurs et émotions", "type": "Atelier" },
+      "E17": { "name": "Devenez concepteur d'expériences", "type": "Atelier" },
+      "E18": { "name": "Immersive ECHO : relier patrimoine culturel et expériences immersives", "type": "Masterclass" },
+      "E19": { "name": "Sessions mensuelles de fabrique du futur", "type": "Ateliers" },
+      "E20": { "name": "IA, éthique et avenirs culturels : innovation responsable dans le patrimoine immersif", "type": "Atelier" },
+      "E21": { "name": "Échange entre projets", "type": "Ateliers" }
+    }
+  },
+  "news": {
+    "title": "Actualités, événements et activités",
+    "latestUpdates": "Dernières actualités",
+    "readMore": "Lire la suite →",
+    "empty": "Aucun élément dans cette catégorie pour le moment.",
+    "eventGalleries": "Galeries d'événements",
+    "backToNews": "← Retour aux Actualités",
+    "photos": "{{count}} photos",
+    "filters": {
+      "All": "Tout",
+      "News": "Actualités",
+      "Events": "Événements",
+      "Press": "Presse"
+    },
+    "galleries": {
+      "launch": "Lancement (Namur)"
+    },
+    "articles": {
+      "newsletter1": {
+        "title": "Présentation d'ECHO — Newsletter n° 1",
+        "subtitle": "Comment le design immersif transforme notre façon de vivre l'histoire"
+      },
+      "launch": {
+        "title": "Le projet Immersive ECHO est officiellement lancé",
+        "subtitle": "Plus de 40 créatifs européens de classe mondiale réunis à Namur pour donner le coup d'envoi du projet ECHO Immersive"
+      }
+    },
+    "launch": {
+      "title": "Le projet Immersive ECHO est officiellement lancé",
+      "lead": "Plus de 40 créatifs européens de classe mondiale réunis à Namur pour donner le coup d'envoi du projet ECHO Immersive.",
+      "teamAlt": "L'équipe ECHO Immersive à Namur",
+      "p1": "Immersive ECHO a été officiellement lancé en février 2026 avec une réunion de lancement de plusieurs jours au Pavillon à Namur, en Belgique, le lieu qui accueillera le banc d'essai public du projet. Les délégations de tous les partenaires du consortium se sont réunies en personne pour la première fois, rassemblant professionnels de musée, designers immersifs, développeurs, chercheurs et stratèges de dix pays. La réunion a été coordonnée par l'équipe projet de Lindholmen Science Park, dirigée par le chef de projet Ismaila Jallow et la coordinatrice Katrin Amberntsson, avec le soutien des équipes de KIKK et du Pavillon sur place.",
+      "p2": "Ces journées ont allié ateliers structurés et exploration ouverte. Les équipes ont travaillé des questions fondamentales : comment les gens se déplacent dans les espaces, ce qui capte l'attention, et comment le récit et l'interaction aident le public à construire du sens. Plutôt que de partir de la technologie, les échanges se sont centrés sur le récit, la perception et les exigences particulières des espaces culturels. Les participants sont repartis avec une vision commune de ce à quoi ressembleront les deux prochaines années et demie, et avec cette confiance qui ne se forme que lorsque des personnes curieuses passent vraiment du temps ensemble. Les expériences immersives finales développées dans le cadre du projet reviendront au Pavillon pour un déploiement public en octobre 2027.",
+      "galleryHeading": "Galerie"
+    }
+  },
+  "contact": {
+    "title": "Nous contacter",
+    "getInTouch": "Entrer en contact",
+    "intro": "Contactez l'équipe de coordination de Lindholmen Science Park pour toute demande générale, information presse ou question de partenariat.",
+    "coordinatorHeading": "Coordinateur",
+    "coordinatorLocation": "Göteborg, Suède",
+    "stayInTouch": "Restez en contact",
+    "requiredNote": "Les champs marqués d'un * sont obligatoires.",
+    "labels": {
+      "name": "Nom",
+      "email": "E-mail",
+      "organisation": "Organisation",
+      "subject": "Objet",
+      "message": "Message"
+    },
+    "send": "Envoyer le message",
+    "sending": "Envoi en cours…",
+    "success": {
+      "heading": "Message envoyé !",
+      "body": "Nous vous répondrons sous 5 jours ouvrés. Vérifiez votre boîte de réception pour une confirmation.",
+      "again": "Envoyer un autre message"
+    },
+    "errors": {
+      "generic": "Une erreur s'est produite. Veuillez réessayer.",
+      "network": "Impossible de joindre le serveur. Veuillez vérifier votre connexion."
+    },
+    "newsletterPrompt": "Vous souhaitez rester informé sur Immersive ECHO ?"
+  },
+  "faq": {
+    "title": "Foire aux questions",
+    "items": {
+      "q1": {
+        "question": "Qu'est-ce qu'Immersive ECHO ?",
+        "answer": "Immersive ECHO est un projet paneuropéen qui rapproche les gens de leur patrimoine commun grâce au récit immersif. Sur 30 mois (février 2026 – juillet 2028), 15 partenaires répartis dans 10 pays développent un modèle concret permettant aux institutions culturelles de transformer des espaces publics du quotidien en expériences émotionnelles et collectives — en utilisant la projection, le son spatial et la technologie des capteurs plutôt que des casques de RV. L'objectif est de rendre le récit immersif accessible aux petites et moyennes institutions qui n'ont aujourd'hui ni le budget ni l'expertise pour le créer."
+      },
+      "q2": {
+        "question": "Pourquoi ce projet est-il nécessaire ?",
+        "answer": "La plupart des institutions du patrimoine culturel n'ont ni le budget, ni l'expertise, ni la capacité technique pour créer des expériences immersives. Les productions à grande échelle sont généralement réservées aux musées bien dotés et aux lieux commerciaux. Dans le même temps, le public attend de plus en plus des rencontres avec la culture qui soient engageantes et multisensorielles. Immersive ECHO comble cette lacune avec un modèle concret et transférable — testé en conditions réelles, documenté honnêtement, et conçu pour qu'un musée local aux ressources limitées puisse raconter ses histoires d'une manière émotionnellement engageante et économiquement durable."
+      },
+      "q3": {
+        "question": "Qu'est-ce qui distingue Immersive ECHO des autres projets immersifs ?",
+        "answer": "Cinq choses nous distinguent. Nous nous concentrons sur les petites et moyennes institutions — et non sur les grands établissements phares. Notre approche est sans casque : projection, son spatial et capteurs transforment des espaces publics existants. L'inclusion est intégrée au processus de conception, avec des sprints dédiés aux jeunes, aux publics neurodivergents, aux personnes âgées et aux groupes marginalisés. Nous documentons l'ensemble du processus — y compris ce qui ne fonctionne pas — et produisons des boîtes à outils ouvertes pour que d'autres puissent reproduire l'approche de façon autonome. Et le consortium lui-même est unique : designers de renommée mondiale, chercheurs, institutions patrimoniales de tailles variées et technologues travaillant côte à côte."
+      },
+      "q4": {
+        "question": "Pourquoi « immersif » sans casque de RV ?",
+        "answer": "Les casques de RV créent des obstacles : coût, accessibilité, inconfort et isolement individuel. Ils sont aussi difficiles à mettre à l'échelle — un casque ne sert qu'une personne à la fois. Notre approche utilise le son spatial, les projections et des capteurs environnementaux pour transformer des espaces publics partagés en environnements de récit immersif. Une seule installation ancrée dans un lieu touche de larges publics simultanément, nécessite moins d'équipement spécialisé et est plus facile à exploiter et à pérenniser pour les institutions. Le résultat est collectif, incarné et à faible seuil — et il est économiquement pertinent pour les lieux qui l'accueillent."
+      },
+      "q5": {
+        "question": "Que vivra concrètement un visiteur ?",
+        "answer": "Un récit multisensoriel ancré dans le lieu, utilisant la projection, le son spatial et l'interaction environnementale pour faire vivre le patrimoine culturel dans des espaces publics partagés. À mesure que vous vous déplacez dans un lieu, images projetées et sons répondent à votre présence et font naître un récit qui se déploie autour de vous. L'objectif n'est pas la transmission passive d'informations, mais des rencontres actives avec l'histoire — ouvertes, participatives et conçues pour que chaque visiteur trace son propre parcours à travers le récit. Vous le ressentez avant d'y penser."
+      },
+      "q6": {
+        "question": "Qu'est-ce que Snapsting ?",
+        "answer": "Snapsting est la production phare sur site développée par le Viborg Museum au Danemark. Elle explore l'identité millénaire de Viborg en tant que lieu de pouvoir royal, religieux et judiciaire — faisant vivre cette histoire par la musique, l'animation poétique et des environnements atmosphériques. L'expérience est non linéaire : les visiteurs suivent leur propre curiosité à travers le récit. Au-delà de l'expérience elle-même, l'ensemble du processus de production est documenté comme une méthodologie transférable — un guide pratique pour d'autres institutions du patrimoine culturel qui planifient leur propre travail immersif. Snapsting sera présenté au public en novembre 2026."
+      },
+      "q7": {
+        "question": "Qu'est-ce que Le Pavillon et le festival KIKK ?",
+        "answer": "Le Pavillon est un lieu situé à Namur, en Belgique, exploité par KIKK — et il sert de banc d'essai public au projet. C'est là que les expériences immersives rencontrent pour la première fois des publics réels et divers, à grande échelle. Nous testons l'ensemble du parcours visiteur : réponse émotionnelle, schémas d'interaction, accessibilité, accueil et capacité de l'expérience à susciter des occasions de réflexion après le départ des visiteurs. La première publique est prévue au festival KIKK en octobre 2027 — l'un des principaux festivals européens de culture numérique et créative, qui attire des milliers de visiteurs chaque année."
+      },
+      "q8": {
+        "question": "Que signifie « l'inclusion dès la conception » en pratique ?",
+        "answer": "Cela signifie que l'accessibilité et les besoins de publics divers sont intégrés au processus de conception dès le départ — et non ajoutés à la fin. Le projet comprend quatre sprints de design inclusif dédiés, chacun axé sur un public spécifique : les jeunes, les personnes neurodivergentes, les personnes âgées et les communautés marginalisées. De vrais utilisateurs façonnent le travail dès les premières étapes. L'inclusion, c'est aussi la reconnaissance émotionnelle — créer des expériences où les gens se voient reflétés dans les récits, où l'histoire ressemble à quelque chose qui leur appartient."
+      },
+      "q9": {
+        "question": "Qui est derrière Immersive ECHO ?",
+        "answer": "Un consortium de 15 organisations issues de 10 pays européens, coordonné par Lindholmen Science Park à Göteborg, en Suède. Parmi les partenaires figurent des studios de design immersif, des institutions du patrimoine culturel, des laboratoires de recherche, des entreprises technologiques et des spécialistes de la communication de Suède, d'Allemagne, de France, de Finlande, de Roumanie, du Danemark, de Belgique, d'Ukraine, d'Espagne et de Slovénie. Les partenaires associés comprennent la Ville de Göteborg et The Animation Workshop au Danemark. Le projet a obtenu une note d'évaluation de l'UE de 92/100."
+      },
+      "q10": {
+        "question": "L'Ukraine fait-elle partie du projet ?",
+        "answer": "Oui. Le parc Sofiyivka à Ouman, en Ukraine, est un partenaire à part entière du consortium. En raison de l'invasion russe en cours, le prototypage physique ne peut avoir lieu en Ukraine. À la place, le parc Sofiyivka apporte des données sur le patrimoine culturel, des matériaux historiques et un regard inestimable sur le patrimoine en zone de conflit. Leur participation rappelle pourquoi la préservation culturelle compte — et pourquoi elle est urgente. Le consortium travaille activement à surmonter les défis opérationnels que leur situation engendre."
+      },
+      "q11": {
+        "question": "Comment le projet est-il financé ?",
+        "answer": "Immersive ECHO est cofinancé par l'Union européenne au titre du programme Europe créative, volet Coopération à grande échelle. Le budget total s'élève à environ 3,3 millions d'euros, dont l'UE finance 60 % (1 999 019 €). Les 40 % restants proviennent du cofinancement des partenaires du consortium. Selon le modèle de montant forfaitaire, l'UE paie des résultats — et non des frais généraux. L'échéancier de paiement est de 40 % au lancement du projet, 40 % au rapport intermédiaire (mois 15) et 20 % au rapport final."
+      },
+      "q12": {
+        "question": "Que produira le projet ?",
+        "answer": "Des résultats à trois niveaux. Des expériences concrètes : des installations immersives testées au Viborg Museum et au Pavillon, conçues pour la tournée et l'adaptation. Un savoir ouvert : une boîte à outils d'apprentissage ouvert (Open Learning Toolkit) avec des guides pas à pas, une boîte à outils Futuremakers pour la pensée participative du futur, une documentation du processus de production et une plateforme de rayonnement (Outreach Platform) pour la communauté élargie du patrimoine culturel. Une capacité structurelle : un plan d'affaires (Business Blueprint) validant ce qui fonctionne sur le plan opérationnel et économique, et un rapport final de design du futur avec des recommandations politiques et des feuilles de route institutionnelles pour le secteur au-delà de 2028."
+      },
+      "q13": {
+        "question": "Que se passe-t-il après la fin du projet en 2028 ?",
+        "answer": "La durabilité est intégrée au processus de conception dès le départ — et non traitée comme une réflexion après coup. L'architecture technique est bâtie autour de la modularité : le contenu peut tourner entre les lieux, les jumeaux numériques permettent de planifier de nouveaux sites à distance, et la conception paramétrique réduit l'effort nécessaire pour adapter les installations. Le Viborg Museum prévoit de continuer à exploiter Snapsting comme installation permanente. Toute la propriété intellectuelle générée est rendue librement disponible pour l'adaptation, la réutilisation et le développement commercial. L'ambition est de laisser derrière soi des méthodes, des outils et des modèles éprouvés qui continuent de créer de la valeur dans tout le secteur."
+      },
+      "q14": {
+        "question": "Comment d'autres institutions du patrimoine culturel peuvent-elles s'impliquer ?",
+        "answer": "De plusieurs manières concrètes. La plateforme ECHOSYSTEM comprendra un portail public où les professionnels de la culture pourront accéder à des ébauches de boîtes à outils, rejoindre des forums d'échange entre pairs et s'inscrire à des événements. Des ateliers mensuels Futuremaking dans les villes partenaires sont ouverts aux professionnels externes. Trois masterclasses en ligne abordent les chaînes de production techniques, la direction créative et la collaboration interdisciplinaire. Les bancs d'essai publics du Pavillon et du Viborg Museum servent d'environnements d'apprentissage en conditions réelles. Toutes les boîtes à outils et les supports de formation seront disponibles gratuitement dans les dix langues des partenaires. Suivez le projet avec #ImmersiveECHO ou abonnez-vous à la newsletter."
+      }
+    }
+  },
+  "partners": {
+    "title": "Le consortium",
+    "coordinator": "Coordinateur du projet",
+    "commsDissemination": "Communication et diffusion",
+    "corePartners": "Partenaires principaux",
+    "lspLocation": "Göteborg, Suède",
+    "futLocation": "Barcelone, Espagne"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "partners": "Partenaires",
+    "experiences": "Expériences",
+    "news": "Actualités et événements",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "downloadResources": "Télécharger les ressources",
+    "toggleNavigation": "Basculer la navigation",
+    "selectLanguage": "Choisir la langue"
+  },
+  "footer": {
+    "quickLinks": "Liens rapides",
+    "aboutProject": "À propos du projet",
+    "newsletter": "Newsletter",
+    "followUs": "Suivez-nous sur {{network}}",
+    "euAlt": "Cofinancé par l'Union européenne",
+    "euCredit": "Cofinancé par l'Union européenne au titre du programme Europe créative, volet Coopération à grande échelle. Convention de subvention n° 101255680.",
+    "duration": "Durée : févr. 2026 – juill. 2028",
+    "coordinator": "Coordinateur : Lindholmen Science Park",
+    "partners": "15 partenaires · 10 pays",
+    "rights": "© {{year}} Immersive ECHO. Tous droits réservés."
+  },
+  "timeline": {
+    "eyebrow": "Calendrier du projet · M1 — M30 · févr. 2026 — juill. 2028",
+    "heading": "Trente mois, en public.",
+    "lede": "Immersive ECHO est un projet Europe créative de 30 mois : concevoir, construire, tester, mettre à l'échelle. Jalons, livrables et événements publics du consortium de 15 organisations réparties dans 10 pays de l'UE. Survolez un mois pour vous concentrer dessus ; cliquez sur une entrée pour la lire.",
+    "type": {
+      "deliverable": "Livrable",
+      "milestone": "Jalon",
+      "event": "Événement"
+    },
+    "stats": {
+      "done": "Faits",
+      "deliverables": "Livrables",
+      "milestones": "Jalons",
+      "events": "Événements"
+    },
+    "index": "Index",
+    "cols": {
+      "date": "Date",
+      "type": "Type",
+      "title": "Titre",
+      "status": "Statut"
+    },
+    "detail": {
+      "delivered": "✓ Livré",
+      "inProgress": "● En cours",
+      "upcoming": "○ À venir",
+      "dateTBC": "Date à confirmer",
+      "prev": "← Précédent",
+      "next": "Suivant →"
+    },
+    "row": {
+      "delivered": "Livré",
+      "now": "● Maintenant",
+      "upcoming": "À venir",
+      "tbd": "À définir"
+    },
+    "today": "AUJOURD'HUI",
+    "items": {
+      "ms1-1": { "title": "MS1.1 · Alignement du consortium et lancement", "description": "Tous les partenaires alignés autour des objectifs, des méthodes, des rôles et du reporting au démarrage du projet." },
+      "ms1-2": { "title": "MS2.1 · Cadre de conception axé sur les besoins", "description": "Un brief de conception stratégique fondé sur les parcours utilisateurs, les besoins, les comportements, les apports institutionnels et les tendances sociétales." },
+      "ms1-3": { "title": "MS3.1 · Concept et récit finalisés", "description": "Concept central, récit, scénario complet et storyboard de Snapsting finalisés au fil d'un processus itératif." },
+      "ms1-5": { "title": "MS5.1 · Réseau d'échange entre projets", "description": "Réseau de collaboration avec d'autres projets financés par l'UE officiellement lancé." },
+      "ms2-2": { "title": "MS2.2 · Laboratoire opérationnel, premiers prototypes", "description": "Laboratoire expérimental pleinement opérationnel ; premiers prototypes immersifs testés et évalués." },
+      "ms3-2": { "title": "MS2.3 · Sprints de design inclusif achevés", "description": "Les quatre sprints de cocréation inclusive achevés ; enseignements intégrés aux itérations de conception." },
+      "ms2-3": { "title": "MS3.2 · Production de Snapsting achevée", "description": "Tous les éléments de Snapsting finalisés, y compris le contenu, la technologie et le design spatial." },
+      "ms3-3": { "title": "MS3.3 · Snapsting installé à Viborg", "description": "Snapsting entièrement installé et en fonctionnement sur site au Viborg Museum." },
+      "ms4-3": { "title": "MS3.4 · Réunion du consortium et table ronde", "description": "Tous les partenaires du consortium se réunissent à Viborg, avec une table ronde au Animation Festival." },
+      "ms2-1": { "title": "MS1.2 · Revue de coordination à mi-parcours", "description": "Revue de l'avancement, des risques, de la qualité de la collaboration et de l'utilisation des ressources à mi-parcours." },
+      "ms2-5": { "title": "MS5.2 · Revue d'impact à mi-parcours", "description": "Revue à mi-parcours de la communication, du transfert de connaissances, de l'engagement des parties prenantes et de la portée de la diffusion." },
+      "ms1-4": { "title": "MS4.1 · Cadre de déploiement et modèle économique", "description": "Stratégies de déploiement public établies, ainsi qu'un modèle économique durable codéveloppé avec les partenaires." },
+      "ms4-2": { "title": "MS2.4 · Concepts finaux prêts", "description": "Prototypes affinés à partir des tests ; expériences immersives finales approuvées pour le déploiement public." },
+      "ms2-4": { "title": "MS4.2 · Banc d'essai public ouvert au Pavillon", "description": "Premier lieu entièrement équipé, contrôle du spectacle validé ; portes ouvertes au public (festival KIKK, oct. 2027)." },
+      "ms3-4": { "title": "MS4.3 · Analyse multi-lieux en service", "description": "Un tableau de bord central agrégeant en temps réel le flux de visiteurs, l'engagement et les données d'accessibilité est mis en service." },
+      "ms5-3": { "title": "MS3.5 · Snapsting adapté pour Le Pavillon", "description": "Snapsting adapté au Pavillon, avec des ajustements du récit, de la configuration technique et du design spatial." },
+      "ms3-5": { "title": "MS5.3 · Ressources de renforcement des capacités finales", "description": "Open Learning Toolkit, guide How-to ECHO, 5D TimeMap et boîtes à outils Futuremakers finalisés et distribués." },
+      "ms4-5": { "title": "MS5.4 · Diffusion finale de l'impact", "description": "Rapport final de design du futur résumant les résultats de la prospective stratégique et les trajectoires à long terme." },
+      "ms4-4": { "title": "MS4.4 · Faisabilité opérationnelle rapportée", "description": "Coûts, personnel et logistique analysés pour soutenir l'adoption et la montée en échelle futures." },
+      "ms3-1": { "title": "MS1.3 · Synthèse finale de la coordination", "description": "Bilan stratégique de la livraison du projet, y compris les enseignements clés sur la coordination et la prise de décision." },
+      "d1-1": { "title": "D1.1 · Manuel de gestion de projet", "description": "Un guide pratique décrivant la vision, les outils de coordination interne, la structure de reporting, les responsabilités des partenaires et les flux de travail partagés." },
+      "d5-1": { "title": "D5.1 · Plan de communication et de diffusion", "description": "Stratégie de communication intégrée. Les outils d'IA transforment les données du projet en articles, publications, études de cas et micro-contenus adaptés aux publics européens." },
+      "d5-2": { "title": "D5.2 · Tableau de bord du projet", "description": "Tableau de bord numérique en temps réel suivant les KPI aux niveaux participant, institutionnel, interinstitutionnel, engagement civique et impact sociétal." },
+      "d2-1": { "title": "D2.1 · Brief de design immersif axé sur les besoins", "description": "Guide stratégique fondé sur les insights utilisateurs, les besoins institutionnels et les évolutions sociétales — définissant les défis de conception, les personas, les objectifs émotionnels et les hypothèses techniques." },
+      "d3-1": { "title": "D3.1 · Expérience Snapsting et documentation", "description": "Expérience immersive finalisée installée au Viborg Museum, plus plans d'installation, fichiers de design d'interaction et documentation pour réutilisation." },
+      "d1-2": { "title": "D1.2 · Rapport de coordination et de risques à mi-parcours", "description": "Évaluation de l'avancement, de la qualité de la coordination, de l'état des risques et des auto-évaluations des partenaires, avec recommandations." },
+      "d5-3": { "title": "D5.3 · Impact et diffusion à mi-parcours", "description": "Revue complète à mi-parcours de l'impact, de la diffusion, de l'engagement, de l'adoption institutionnelle et de la collaboration intersectorielle." },
+      "d5-6": { "title": "D5.6 · 5D TimeMap des sites du patrimoine", "description": "Carte numérique interactive reliant les sites du patrimoine européen à cinq couches — spatiale, temporelle, artistique, politique, linguistique. Disponible dans 10 langues de l'UE." },
+      "d2-2": { "title": "D2.2 · Conceptions finales de l'expérience immersive", "description": "Ensembles complets d'expériences immersives pour le déploiement public — récits, designs spatiaux / d'interaction, configurations techniques, parcours d'accueil, accessibilité." },
+      "d3-2": { "title": "D3.2 · Snapsting adapté pour Le Pavillon", "description": "Snapsting adapté au Pavillon avec récit, design d'interaction et spatial, configuration technique et directives opérationnelles mis à jour." },
+      "d5-4": { "title": "D5.4 · Boîte à outils Futuremakers", "description": "Boîte à outils hybride (physique + numérique) de techniques participatives et d'activités guidées pour les professionnels de la culture. 10 langues de l'UE." },
+      "d5-5": { "title": "D5.5 · Plateforme de rayonnement", "description": "Plateforme de communication bidirectionnelle augmentée par IA avec tableau de bord de KPI en temps réel. Personas d'agents d'IA : guide de musée, personnage historique, mascotte fictive." },
+      "d5-7": { "title": "D5.7 · Prototype du compagnon Timetravel", "description": "Guide propulsé par IA enrichissant les visites de musée via l'interaction vocale, le récit contextuel et un contenu holographique optionnel. 100 appareils personnalisés." },
+      "d3-3": { "title": "D3.3 · Rapport sur le processus de production immersive", "description": "Parcours du processus de production sur site — récit, décisions techniques, modèle de collaboration, défis culturels. Une référence pour d'autres institutions." },
+      "d4-1": { "title": "D4.1 · Rapport de déploiement opérationnel", "description": "Documentation pas à pas du déploiement du banc d'essai public : logistique des publics, configuration spatiale, notes d'adaptation technique." },
+      "d5-8": { "title": "D5.8 · Open Learning Toolkit et guide How-to", "description": "Ressources modulaires et prêtes à l'emploi construites à partir des résultats des WP2–WP4. La génération de contenu assistée par IA adapte les ressources aux profils institutionnels." },
+      "d2-3": { "title": "D2.3 · Évaluation finale de l'expérience immersive", "description": "Évaluation complète : impact émotionnel, accessibilité, performance du système, durabilité opérationnelle." },
+      "d4-2": { "title": "D4.2 · Synthèse UX et modèle économique", "description": "Évaluation de l'engagement des publics, des parcours d'accueil/sortie et de la faisabilité des modèles économiques testés sur le lieu." },
+      "d5-9": { "title": "D5.9 · Rapport de mise en réseau entre projets", "description": "Documente les activités de mise en réseau entre projets — réunions, événements collaboratifs, résultats clés, propositions d'échange continu." },
+      "d5-10": { "title": "D5.10 · Rapport final de design du futur", "description": "Plateforme numérique présentant les résultats du projet et son potentiel à long terme. Des outils média propulsés par IA personnalisent le contenu dans 10 langues de l'UE." },
+      "e1": { "title": "E1 · Ouverture de l'exposition Snapsting", "description": "L'expérience immersive Snapsting ouvre au public au Viborg Museum. Présentation sur trois ans.", "tag": "Exposition · Viborg · 150 000 pax" },
+      "e5": { "title": "E5 · Lancement public · Festival KIKK", "description": "Lancement à forte visibilité de l'expérience immersive au festival KIKK 2027. Panel du consortium.", "tag": "Panel · Namur · 25 000 pax" },
+      "e6": { "title": "E6 · Ouverture de l'exposition Le Pavillon", "description": "L'exposition Immersive ECHO ouvre au public au Pavillon, à Namur.", "tag": "Exposition · Namur · 25 000 pax" },
+      "e2": { "title": "E2 · Sprint jeunesse : Future Worlds Builder", "description": "Sprint centré sur l'utilisateur axé sur l'aisance numérique et la curiosité. 3 jours.", "tag": "Sprint · Göteborg · 80 pax" },
+      "e3": { "title": "E3 · Sprint neurodivergent", "description": "Navigation non linéaire ; équilibre sensoriel et engagement non linéaire. 2 jours.", "tag": "Sprint · Berlin · 40 pax" },
+      "e4": { "title": "E4 · Conférence Echoes of the Future", "description": "Relier patrimoine culturel et innovation immersive. Conférence + panel au Animation Festival.", "tag": "Conférence · Viborg · 300 pax" }
+    }
+  }
+}

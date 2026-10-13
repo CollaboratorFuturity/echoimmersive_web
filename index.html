@@ -15,10 +15,9 @@
     <meta property="og:image" content="https://echoimmersive.eu/img/news_launch/thumb.jpg" />
     <meta property="og:image:alt" content="The Immersive ECHO consortium in front of Le Pavillon's dome in Namur" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&family=Montserrat:wght@300;400;500;700;800&family=Roboto:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Self-hosted fonts (see src/styles/fonts.css). Preload only the Latin faces every page needs. -->
+    <link rel="preload" href="/fonts/montserrat-latin-v1.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/roboto-latin-v1.woff2" as="font" type="font/woff2" crossorigin />
   </head>
   <body>
     <div id="root"></div>

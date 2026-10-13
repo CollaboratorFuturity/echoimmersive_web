@@ -13,7 +13,7 @@ Pan-European cultural heritage project creating collective immersive experiences
 | CSS         | Tailwind CSS 3 (PostCSS build, not CDN)                 |
 | Routing     | React Router v6 — language-prefixed (`/:lang/…`)        |
 | i18n        | react-i18next + i18next (http-backend + language-detector); 10 EU languages, English default — see `docs/i18n_deployment.md` |
-| Fonts       | Montserrat (display, 300–800) + Roboto (body, 300–700) — Google Fonts via `docs/branding/brand.css` |
+| Fonts       | Montserrat (display, 300–800) + Roboto (body, 300–700) + JetBrains Mono — **self-hosted** woff2 in `public/fonts/` via `src/styles/fonts.css` (no Google requests; GDPR) |
 | 3D / WebGL  | Three.js + @react-three/fiber (Dither background)       |
 | Deploy      | Docker (multi-stage build → Nginx alpine), port 8105    |
 | Tunnel      | Cloudflare via Cosmos Cloud → echoimmersive.eu          |

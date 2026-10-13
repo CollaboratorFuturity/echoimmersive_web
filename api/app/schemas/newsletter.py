@@ -3,9 +3,9 @@ from typing import Literal
 
 from pydantic import BaseModel, EmailStr, Field
 
-# The 10 EU languages ECHO commits to — keep in sync with SUPPORTED_LANGUAGES in src/i18n.ts.
-LANGUAGES = ("en", "fr", "de", "es", "it", "nl", "sv", "da", "sl", "ro")
-Language = Literal["en", "fr", "de", "es", "it", "nl", "sv", "da", "sl", "ro"]
+# The 10 EU languages ECHO commits to, plus fi and uk — keep in sync with SUPPORTED_LANGUAGES in src/i18n.ts.
+LANGUAGES = ("en", "fr", "de", "es", "it", "nl", "sv", "da", "sl", "ro", "fi", "uk")
+Language = Literal["en", "fr", "de", "es", "it", "nl", "sv", "da", "sl", "ro", "fi", "uk"]
 
 
 class NewsletterCreate(BaseModel):

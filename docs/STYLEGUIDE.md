@@ -61,7 +61,7 @@ The blue palette below is still defined in `tailwind.config.ts` for backward com
 **Display (headings, UI labels):** `Montserrat`, system-ui fallback
 **Body (paragraphs, long-form):** `Roboto`, system-ui fallback
 
-Both are loaded via Google Fonts in [`docs/branding/brand.css`](branding/brand.css). Defaults are wired in [`src/styles/global.css`](../src/styles/global.css):
+Fonts are **self-hosted** (no requests to Google — GDPR): variable-weight woff2 files in [`public/fonts/`](../public/fonts/), declared in [`src/styles/fonts.css`](../src/styles/fonts.css) (Montserrat 300–800, Roboto 300–700, JetBrains Mono 400–700; Latin, Latin-ext and Cyrillic subsets, loaded on demand via `unicode-range`). To change a font, replace the file and bump its `-v1` suffix (served immutable for 1 year). The brand-kit reference pages in [`docs/branding/`](branding/) still link Google Fonts — they are docs, not shipped with the site. Defaults are wired in [`src/styles/global.css`](../src/styles/global.css):
 
 ```css
 body { font-family: 'Roboto', ...; }

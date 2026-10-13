@@ -21,7 +21,7 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-LANGS = ["en", "fr", "de", "es", "it", "nl", "sv", "da", "sl", "ro"]
+LANGS = ["en", "fr", "de", "es", "it", "nl", "sv", "da", "sl", "ro", "fi", "uk"]
 
 issue_id = os.environ.get("ID")
 api_url = os.environ.get("API_URL", "http://localhost:8106").rstrip("/")

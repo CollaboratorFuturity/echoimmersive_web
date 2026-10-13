@@ -16,7 +16,7 @@ import { renderIssueEmail, type EmailChrome } from '../src/newsletter-email/rend
 
 const scriptDir = dirname(fileURLToPath(import.meta.url))
 const ROOT = resolve(scriptDir, '..')
-const LANGS = ['en', 'fr', 'de', 'es', 'it', 'nl', 'sv', 'da', 'sl', 'ro']
+const LANGS = ['en', 'fr', 'de', 'es', 'it', 'nl', 'sv', 'da', 'sl', 'ro', 'fi', 'uk']
 const DEFAULT = 'en'
 const BASE_URL = process.env.SITE_URL || 'https://echoimmersive.eu'
 

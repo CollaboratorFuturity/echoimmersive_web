@@ -1,5 +1,5 @@
 import { useEffect, useId, useRef, useState } from 'react'
-import { SUPPORTED_LANGUAGES, LANGUAGE_NAMES, type Lang } from '@/i18n'
+import { AVAILABLE_LANGUAGES as OPTIONS, LANGUAGE_NAMES, type Lang } from '@/i18n'
 
 interface Props {
   /** id for the trigger — point the <label htmlFor> at this. */
@@ -29,7 +29,7 @@ export default function LangListbox({ id, value, onChange, describedBy, ariaLabe
   const rootRef = useRef<HTMLDivElement>(null)
   const listRef = useRef<HTMLUListElement>(null)
   const [open, setOpen] = useState(false)
-  const [active, setActive] = useState(SUPPORTED_LANGUAGES.indexOf(value))
+  const [active, setActive] = useState(Math.max(0, OPTIONS.indexOf(value)))
   const optionId = (i: number) => `${listId}-opt-${i}`
 
   // Click/tap outside closes the list.
@@ -52,17 +52,17 @@ export default function LangListbox({ id, value, onChange, describedBy, ariaLabe
   }, [open, active]) // eslint-disable-line react-hooks/exhaustive-deps
 
   function openList() {
-    setActive(SUPPORTED_LANGUAGES.indexOf(value))
+    setActive(Math.max(0, OPTIONS.indexOf(value)))
     setOpen(true)
   }
 
   function choose(i: number) {
-    onChange(SUPPORTED_LANGUAGES[i])
+    onChange(OPTIONS[i])
     setOpen(false)
   }
 
   function onKeyDown(e: React.KeyboardEvent<HTMLButtonElement>) {
-    const last = SUPPORTED_LANGUAGES.length - 1
+    const last = OPTIONS.length - 1
     if (!open) {
       if (['ArrowDown', 'ArrowUp', 'Enter', ' '].includes(e.key)) {
         e.preventDefault()
@@ -82,10 +82,10 @@ export default function LangListbox({ id, value, onChange, describedBy, ariaLabe
       default:
         if (e.key.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey) {
           const q = e.key.toLowerCase()
-          const n = SUPPORTED_LANGUAGES.length
+          const n = OPTIONS.length
           for (let step = 1; step <= n; step++) {
             const i = (active + step) % n
-            const l = SUPPORTED_LANGUAGES[i]
+            const l = OPTIONS[i]
             if (l.startsWith(q) || LANGUAGE_NAMES[l].toLowerCase().startsWith(q)) {
               setActive(i)
               break
@@ -125,7 +125,7 @@ export default function LangListbox({ id, value, onChange, describedBy, ariaLabe
           className={`absolute ${align === 'right' ? 'right-0' : 'left-0'} top-full mt-1 z-30 min-w-[13rem] max-h-72 overflow-auto rounded-lg border-2 border-brand-purple/40 bg-brand-charcoal py-1 shadow-[0_8px_24px_rgba(0,0,0,0.45)]`}
           style={{ fontFamily: 'Roboto, sans-serif' }}
         >
-          {SUPPORTED_LANGUAGES.map((l, i) => (
+          {OPTIONS.map((l, i) => (
             <li
               key={l}
               id={optionId(i)}

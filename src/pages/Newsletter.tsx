@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { localizePath, isSupportedLang, DEFAULT_LANG, type Lang } from '@/i18n'
+import { localizePath, isAvailableLang, DEFAULT_LANG, type Lang } from '@/i18n'
 import { Dither } from '@/components/Dither/Dither'
 import LangListbox from '@/components/LangListbox/LangListbox'
 
@@ -31,7 +31,7 @@ export default function Newsletter() {
   const [form, setForm] = useState({ email: '', firstName: '', lastName: '', organisation: '', consent: false })
   // Defaults to the language of the page the visitor is on; null until they pick one.
   const [chosenLang, setChosenLang] = useState<Lang | null>(null)
-  const language: Lang = chosenLang ?? (isSupportedLang(i18n.language) ? i18n.language : DEFAULT_LANG)
+  const language: Lang = chosenLang ?? (isAvailableLang(i18n.language) ? i18n.language : DEFAULT_LANG)
   const [submitting, setSubmitting] = useState(false)
   const [status, setStatus] = useState<'idle' | 'success' | 'error' | 'already' | 'updated'>('idle')
   const [errorMsg, setErrorMsg] = useState('')

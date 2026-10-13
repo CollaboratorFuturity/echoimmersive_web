@@ -7,7 +7,8 @@ import {
   useLocation,
   useParams,
 } from 'react-router-dom'
-import i18n, { DEFAULT_LANG, SUPPORTED_LANGUAGES, isSupportedLang } from '@/i18n'
+import { useTranslation } from 'react-i18next'
+import i18n, { DEFAULT_LANG, AVAILABLE_LANGUAGES, SHOW_LANGUAGE_SWITCHER, isSupportedLang } from '@/i18n'
 import Header from '@/components/Header/Header'
 import Footer from '@/components/Footer/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
@@ -81,10 +82,21 @@ function PageMeta() {
     const lang = langOf(pathname)
     document.documentElement.lang = lang
 
+    // Review mode: keep non-English (unreviewed) pages out of search engines and don't
+    // advertise them via hreflang. See SHOW_LANGUAGE_SWITCHER in src/i18n.ts.
+    document.querySelectorAll('meta[data-i18n-robots]').forEach((el) => el.remove())
+    if (!SHOW_LANGUAGE_SWITCHER && lang !== DEFAULT_LANG) {
+      const robots = document.createElement('meta')
+      robots.name = 'robots'
+      robots.content = 'noindex, nofollow'
+      robots.setAttribute('data-i18n-robots', '')
+      document.head.appendChild(robots)
+    }
+
     const origin = window.location.origin
     const tail = sp === '/' ? '' : sp
     document.querySelectorAll('link[data-i18n-alt]').forEach((el) => el.remove())
-    const alts = [...SUPPORTED_LANGUAGES, 'x-default'] as const
+    const alts = SHOW_LANGUAGE_SWITCHER ? ([...AVAILABLE_LANGUAGES, 'x-default'] as const) : ([] as const)
     for (const l of alts) {
       const href = l === 'x-default' ? `${origin}/${DEFAULT_LANG}${tail}` : `${origin}/${l}${tail}`
       const link = document.createElement('link')
@@ -131,6 +143,8 @@ function Layout({ children }: { children: React.ReactNode }) {
  */
 function LangRoutes() {
   const { lang } = useParams<{ lang: string }>()
+  // Subscribes this component to language changes (re-renders when i18n.language changes).
+  const { i18n: activeI18n } = useTranslation()
   const location = useLocation()
 
   // The URL is the source of truth for the language. i18next only updates
@@ -154,8 +168,12 @@ function LangRoutes() {
     return <Navigate to={`/${DEFAULT_LANG}${location.pathname}`} replace />
   }
 
+  // key={language}: the URL changes before i18n.language does (the new language may still be
+  // loading), so a page mounted at navigation time can keep the OLD language's strings and miss
+  // the later 'languageChanged' event. Remounting the routed tree when the language actually
+  // changes guarantees every page renders in the active language.
   return (
-    <Routes>
+    <Routes key={activeI18n.language}>
       <Route index element={<Layout><Home /></Layout>} />
       <Route path="about" element={<Layout><About /></Layout>} />
       <Route path="partners" element={<Layout><Partners /></Layout>} />
@@ -196,7 +214,7 @@ export default function App() {
           path="/"
           element={
             <Navigate
-              to={`/${isSupportedLang(i18n.language) ? i18n.language : DEFAULT_LANG}`}
+              to={`/${SHOW_LANGUAGE_SWITCHER && isSupportedLang(i18n.language) ? i18n.language : DEFAULT_LANG}`}
               replace
             />
           }

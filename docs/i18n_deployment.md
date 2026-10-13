@@ -2,6 +2,8 @@
 
 **Status:** Foundation shipped 2026-10-09. Machinery + routing + shared shell (Header/Footer) translated; **English is the only populated language**, the other 9 fall back to English until their files are filled.
 
+**Added 2026-10-13:** Finnish (`fi`) and Ukrainian (`uk`) are wired in (routing, names, API allow-list, newsletter build/upload scripts) with empty `public/locales/{fi,uk}/translation.json` stubs; not yet in `AVAILABLE_LANGUAGES`, so not offered in the pickers. **Ukrainian needs plural forms** — `resources.tasksCount` must have `_one`, `_few`, `_many` and `_other` (with only `_one`/`_other`, counts like 2 and 5 fall back to English text). Fonts (Montserrat/Roboto/JetBrains Mono) already include Cyrillic via Google Fonts' unicode-range subsets; email is UTF-8.
+
 **Commitment:** 10 EU languages for public-facing content (ECHO TRD constraint C7): English, French, German, Spanish, Italian, Dutch, Swedish, Danish, Slovenian, Romanian.
 
 ---
@@ -48,6 +50,18 @@ This is handled by `LangRoutes` in `src/App.tsx`: it validates the `:lang` param
 
 ### Language switcher
 `src/components/LanguageSwitcher/LanguageSwitcher.tsx` — a native `<select>` (most accessible option). Switching swaps the language segment of the current path and navigates, so the user stays on the same page in the new language. Rendered in the header.
+
+### Review mode (`SHOW_LANGUAGE_SWITCHER = false` in `src/i18n.ts`)
+Translations can be deployed *hidden* so reviewers can check them before launch. While the flag is `false`:
+- the **header language picker is hidden**; reviewers open a language by URL: `https://echoimmersive.eu/fr/`, `/sv/`, `/it/`, `/fi/`, `/uk/`, `/es/`, … (any page: `/fr/about`, `/fr/contact`, `/fr/news/newsletter-1`). Links inside a language stay in that language;
+- `/` and old unprefixed links (`/about`) **always go to English**, never to the visitor's browser language;
+- non-English pages carry `<meta name="robots" content="noindex, nofollow">` and no `hreflang` is advertised, so search engines don't index unreviewed text (this is a request, not access control: anyone with a URL can open it);
+- the **subscribe form's "Preferred language" picker stays** (it offers `AVAILABLE_LANGUAGES`) so the language column keeps filling;
+- `/locales/*` is served `no-cache` (see `nginx.conf`), so a corrected translation shows on the next load.
+**To launch publicly:** set `SHOW_LANGUAGE_SWITCHER = true` and make sure `AVAILABLE_LANGUAGES` lists only reviewed languages (it then also drives the header picker and `hreflang`), rebuild, deploy.
+
+### Which languages are offered (`AVAILABLE_LANGUAGES`)
+`src/i18n.ts` has two lists. `SUPPORTED_LANGUAGES` is all 10 codes: every one routes (`/sv/about` works, falling back to English text) so a translation can be previewed by URL while it's being written. `AVAILABLE_LANGUAGES` (currently `en`, `es`, `sv`, `it`, `fr` — `it` is enabled before its translation file is filled, so it shows English text until then) is what visitors are *offered*: the header switcher, the newsletter form's "Preferred language" picker and the `hreflang` tags use only this list. **To launch a language, finish its files, then add its code to `AVAILABLE_LANGUAGES`.** The newsletter API still accepts all 10 codes.
 
 ### Using translations in a component
 ```tsx
