@@ -5,14 +5,13 @@ import { useTranslation } from 'react-i18next'
 // faq.items.<key>.question / .answer
 const faqKeys = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10', 'q11', 'q12', 'q13', 'q14']
 
-function FAQItem({ q, a }: { q: string; a: string }) {
-  const [open, setOpen] = useState(false)
+function FAQItem({ q, a, open, onToggle }: { q: string; a: string; open: boolean; onToggle: () => void }) {
   return (
     <div className="border border-brand-purple/30 rounded-lg overflow-hidden">
       <button
         className="w-full text-left px-5 py-4 font-semibold flex justify-between items-center cursor-pointer transition-colors duration-200 text-sm text-brand-cream"
         style={{ fontFamily: 'Montserrat, sans-serif', backgroundColor: open ? 'rgba(90,66,99,0.35)' : 'rgba(90,66,99,0.2)' }}
-        onClick={() => setOpen(o => !o)}
+        onClick={onToggle}
         aria-expanded={open}
         onMouseEnter={e => { if (!open) (e.currentTarget as HTMLElement).style.backgroundColor = 'rgba(90,66,99,0.3)' }}
         onMouseLeave={e => { if (!open) (e.currentTarget as HTMLElement).style.backgroundColor = 'rgba(90,66,99,0.2)' }}
@@ -34,6 +33,8 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export default function FAQ() {
   const { t } = useTranslation()
+  // Only one item open at a time: opening another closes the previous one
+  const [openKey, setOpenKey] = useState<string | null>(null)
   return (
     <div className="max-w-3xl mx-auto">
       <h1 className="text-2xl md:text-3xl font-bold mb-8 border-b border-brand-purple/30 pb-2 text-brand-cream">
@@ -41,7 +42,13 @@ export default function FAQ() {
       </h1>
       <div className="space-y-3">
         {faqKeys.map((k) => (
-          <FAQItem key={k} q={t(`faq.items.${k}.question`)} a={t(`faq.items.${k}.answer`)} />
+          <FAQItem
+            key={k}
+            q={t(`faq.items.${k}.question`)}
+            a={t(`faq.items.${k}.answer`)}
+            open={openKey === k}
+            onToggle={() => setOpenKey(o => (o === k ? null : k))}
+          />
         ))}
       </div>
     </div>

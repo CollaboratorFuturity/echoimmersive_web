@@ -1,1 +1,699 @@
-{}
+{
+  "home": {
+    "hero": {
+      "badge": "Creatief Europa",
+      "titleLine1": "Immersive",
+      "titleLine2": "Echo",
+      "subtitleLine1": "Wij creëren collectieve immersieve ervaringen",
+      "subtitleLine2": "voor het Europese cultureel erfgoed"
+    },
+    "scroll": "Scrollen",
+    "stats": {
+      "partners": "Partners",
+      "countries": "Landen",
+      "months": "Maanden",
+      "testbeds": "Publieke testomgevingen"
+    },
+    "missionLabel": "De missie",
+    "mission": {
+      "p1": "Cultureel erfgoed bestaat omdat mensen het nodig hebben. Het werkt als een levende verbinding met de plek, met de gemeenschap, met de verhalen die verklaren wie we zijn en hoe we hier zijn gekomen. Toch brokkelt die verbinding af voor miljoenen mensen in heel Europa. De ruimtes en vormen die deze verhalen zouden moeten dragen, hebben simpelweg geen gelijke tred gehouden met de mensen die ze zouden moeten dienen.",
+      "p2": "Kleinere erfgoedinstellingen voelen dit het sterkst. Zonder de middelen van de grote boegbeelden zien ze hun publiek krimpen, jongere generaties wegdrijven en gemeenschappen die zich nooit echt weerspiegeld zagen in hun collecties helemaal wegblijven. De middelen om dit te veranderen bestaan. Immersieve, multisensorische ervaringen die je omhullen met een verhaal in plaats van het achter glas te presenteren, zijn bewezen en krachtig. Maar ze blijven voor de meesten onbereikbaar.",
+      "p3": "Immersive ECHO vertrekt vanuit een andere premisse: dat erfgoed het krachtigst is wanneer het collectief wordt beleefd, in gedeelde ruimtes, door mensen die het misschien niet uit zichzelf hadden opgezocht. De missie van het project is om culturele instellingen in heel Europa de praktische middelen te geven om mensen terug in het verhaal te brengen. Hun verhaal."
+    },
+    "quote": "Erfgoed is het krachtigst wanneer het collectief wordt beleefd, in gedeelde ruimtes, door mensen die het misschien niet uit zichzelf hadden opgezocht.",
+    "stayConnected": "Blijf verbonden",
+    "newsletter": {
+      "label": "Nieuwsbrief",
+      "heading": "Blijf op de hoogte van Immersive ECHO",
+      "cta": "Schrijf je in voor onze nieuwsbrief"
+    }
+  },
+  "about": {
+    "title": "Over Immersive ECHO",
+    "objectiveLabel": "De doelstelling",
+    "objectiveIntro": "Het Immersive ECHO-project heeft vijf strategische doelstellingen die zijn opgezet om de uitdagingen van Europa's erfgoedinstellingen aan te pakken. Deze doelstellingen vormen de ruggengraat van een schaalbare, inclusieve en duurzame transformatie van de manier waarop culturele instellingen hun publiek betrekken via immersief verhalen vertellen.",
+    "objectives": {
+      "o1": {
+        "title": "Een schaalbaar model voor immersief cultureel verhalen vertellen ontwikkelen",
+        "body": "We creëren een overdraagbaar kader dat culturele instellingen helpt immersieve vormen te adopteren die emotioneel boeiend, technisch haalbaar en economisch levensvatbaar zijn — ter ondersteuning van een sectorbrede digitale transformatie."
+      },
+      "o2": {
+        "title": "Inclusieve, laagdrempelige ruimtes voor co-creatie en innovatie activeren",
+        "body": "We richten experimentele labs op waar cultuurprofessionals, technologen en diverse gebruikers immersieve vormen samen kunnen ontwikkelen, prototypen en testen — ter bevordering van capaciteitsopbouw en artistieke innovatie in heel Europa."
+      },
+      "o3": {
+        "title": "Publieke waarde en betrokkenheid aantonen via installaties in de echte wereld",
+        "body": "We realiseren immersieve ervaringen op zowel publieke als institutionele locaties om publieksbereik, emotionele impact en operationele haalbaarheid te evalueren — en zo bij te dragen aan nieuwe modellen voor publieksontwikkeling. Deze dubbele plaatsing — in zowel gemeenschaps- als institutionele ruimtes — zorgt ervoor dat immersieve vormen niet alleen mensen buiten de erfgoedlocaties bereiken, maar ook nieuw publiek terug de culturele instellingen in leiden, de bezoekersaantallen verhogen en hun publieke missie nieuw leven inblazen."
+      },
+      "o4": {
+        "title": "Een pan-Europees netwerk voor kennisdeling en culturele innovatie opbouwen",
+        "body": "We versterken de sectoroverschrijdende samenwerking door instellingen, creatieven en technologiepartners te verbinden en door open toegankelijke hulpmiddelen en inzichten te delen die replicatie op lange termijn en beleidsafstemming mogelijk maken."
+      },
+      "o5": {
+        "title": "Inclusie, toegankelijkheid en cultureel welzijn en democratie bevorderen via ontwerp",
+        "body": "We verankeren inclusief ontwerp en participatieve methoden in het hele project om te waarborgen dat immersieve culturele ervaringen de diversiteit van de Europese samenleving weerspiegelen en de sociale cohesie en toegankelijkheid ondersteunen."
+      }
+    },
+    "quote": "Erfgoed is het krachtigst wanneer het collectief wordt beleefd, in gedeelde ruimtes, door mensen die het misschien niet uit zichzelf hadden opgezocht.",
+    "approachDivider": "De aanpak",
+    "approach": {
+      "partnersLabel": "Partners",
+      "offsite": {
+        "title": "Immersief ontwerpteam (off-site)",
+        "desc": "Een transdisciplinair lab waar kunstenaars, technologen en erfgoedexperts samen immersieve prototypes ontwikkelen via co-creatiesprints. Elk concept wordt op toegankelijkheid getest en verpakt in modulaire vormen die klaar zijn voor inzet op elke locatie."
+      },
+      "onsite": {
+        "title": "Immersief ontwerpteam (on-site)",
+        "desc": "Viborg Museum als levende casestudy, die „Snapsting” ontwikkelt via handgetekende animatie en ruimtelijk verhalen vertellen. Elke werkwijze en beslissing wordt gedocumenteerd zodat andere instellingen hetzelfde pad kunnen volgen."
+      },
+      "testbed": {
+        "title": "Publieke immersieve testomgeving",
+        "desc": "Le Pavillon stelt de afgeronde ervaringen op grote schaal open voor een echt publiek, meet betrokkenheid en toegankelijkheid met AI-ondersteunde analyses en test tegelijk operationele modellen op levensvatbaarheid op lange termijn."
+      },
+      "coordination": {
+        "title": "Projectcoördinatie",
+        "desc": "Lindholmen Science Park zorgt voor strategische afstemming tussen alle partners, volgt mijlpalen, budgetten en resultaten en beheert risico's en de rapportage aan de Europese Commissie."
+      },
+      "comms": {
+        "title": "Communicatie en impact",
+        "desc": "Futurity Systems vertaalt de projectresultaten naar modulaire toolkits en meertalige content, bouwt een netwerk voor collegiaal leren en past methoden voor toekomstontwerp toe om langetermijnroutekaarten voor immersieve cultuur uit te zetten."
+      }
+    },
+    "infographic": {
+      "title": "Immersive ECHO — tweesporige ontwerpmethodologie",
+      "label": "Over:",
+      "caption": "Tweesporig ontwerp: het off-site lab en het on-site museum komen samen in een publieke testomgeving om immersieve erfgoedervaringen op te schalen."
+    },
+    "factsDivider": "Projectfeiten",
+    "fullStructureCta": "Volledige structuur, taken en resultaten",
+    "projectDetails": "Projectdetails",
+    "details": {
+      "durationLabel": "Looptijd",
+      "durationValue": "feb. 2026 – juli 2028",
+      "gaLabel": "GA-nummer",
+      "gaValue": "101255680",
+      "fundingLabel": "Financiering",
+      "fundingValue": "Creatief Europa, Grootschalige Samenwerking",
+      "coordinatorLabel": "Coördinator",
+      "coordinatorValue": "Lindholmen Science Park"
+    }
+  },
+  "experiences": {
+    "title": "Ervaringen",
+    "intro": "We introduceren het concept van publieke testomgevingen met de behoeftegestuurde ontwerpmethodologie in heel Europa.",
+    "viewActivities": "Bekijk activiteiten",
+    "backToExperiences": "← Terug naar Ervaringen",
+    "snapsting": {
+      "badge": "ERFGOEDINSTELLING",
+      "location": "Viborg, Denemarken",
+      "imageAlt": "Viborg Museum",
+      "description": "Viborg Museum is het cultuurhistorische museum van de regio Viborg in Denemarken en toont het erfgoed van de regio van de prehistorie tot heden. Binnen ECHO huisvest het museum de immersieve installatie en brengt het de ECHO-benadering van immersief verhalen vertellen naar zijn publiek."
+    },
+    "pavillon": {
+      "badge": "OPSCHALING EN AANPASSING",
+      "location": "Namen, België",
+      "imageAlt": "Le Pavillon, Namen",
+      "description": "Le Pavillon is KIKK's hub voor digitale kunst en technologie in Namen, België. Het zet de immersieve installaties van ECHO in voor een breed publiek en verzamelt daarbij gegevens over betrokkenheid en toegankelijkheid. Meer dan 200 schoolpartnerschappen per jaar."
+    },
+    "snapstingPage": {
+      "title": "Viborg Animation Festival · Activiteiten",
+      "intro": "Overzicht van de testomgevingsactiviteiten op het Viborg Animation Festival in Viborg, Denemarken.",
+      "note": "Opmerking: beschrijving van het proces van eerste briefings, via conceptontwikkeling, script, animatic enz., tot de uiteindelijke ervaring. Het museum is de „eindregisseur” — de tentoonstellingsmanager staat aan een mengpaneel en de verschillende kanalen die ze kan mengen zijn de decorbouwers, schilders, foleyartiesten voor het ruimtegeluid, AV-ervaringen, objecten, tekst, licht enz."
+    },
+    "pavillonPage": {
+      "title": "Le Pavillon · Activiteiten",
+      "intro": "Overzicht van de testomgevingsactiviteiten in Le Pavillon in Namen, België.",
+      "note": "Opmerking: beschrijving van het proces van eerste briefings, via conceptontwikkeling, script, animatic enz., tot de uiteindelijke ervaring. Het museum is de „eindregisseur”."
+    }
+  },
+  "newsletter": {
+    "intro": "Blijf op de hoogte van het project — nieuwe resultaten, evenementen en bevindingen uit het hele consortium.",
+    "subscribeHeading": "Inschrijven",
+    "fields": {
+      "email": {
+        "label": "E-mail",
+        "placeholder": "Voer je e-mailadres in"
+      },
+      "firstName": {
+        "label": "Voornaam",
+        "placeholder": "Voer je voornaam in"
+      },
+      "lastName": {
+        "label": "Achternaam",
+        "placeholder": "Voer je achternaam in"
+      },
+      "organisation": {
+        "label": "Organisatie",
+        "placeholder": "Voer je organisatie in"
+      },
+      "language": {
+        "label": "Voorkeurstaal",
+        "hint": "Edities worden in deze taal verzonden wanneer er een vertaling beschikbaar is, anders in het Engels."
+      }
+    },
+    "consentPrefix": "Ik ga akkoord met het",
+    "privacyPolicy": "Privacybeleid",
+    "consentRequired": "Ga akkoord met het Privacybeleid om je in te schrijven.",
+    "subscribe": "Inschrijven",
+    "subscribing": "Bezig met inschrijven…",
+    "backToSite": "Terug naar de site",
+    "success": {
+      "inHeading": "Je bent erbij!",
+      "inBody": "We hebben een welkomstmail gestuurd naar {{email}}. Je hoort van ons zodra er iets is dat het delen waard is.",
+      "alreadyHeading": "Al ingeschreven!",
+      "alreadyBody": "{{email}} staat al op onze lijst. Er is geen actie nodig.",
+      "updatedHeading": "Voorkeuren bijgewerkt",
+      "updatedBody": "We hebben je inschrijfvoorkeuren bijgewerkt. Er is geen nieuwe e-mail verzonden."
+    }
+  },
+  "newsletterEmail": {
+    "unsubscribe": "Uitschrijven",
+    "footer": "Je ontvangt deze e-mail omdat je je hebt ingeschreven voor de Immersive ECHO-nieuwsbrief."
+  },
+  "underConstruction": {
+    "eyebrow": "Creatief Europa · 2026–2028",
+    "headingLine1": "Er komt",
+    "headingLine2": "iets aan.",
+    "subline": "Immersive ECHO is een pan-Europees project dat collectieve erfgoedervaringen creëert. Deze site gaat binnenkort live.",
+    "euCredit": "Medegefinancierd door de Europese Unie · Creatief Europa · GA-nr. 101255680"
+  },
+  "resources": {
+    "backToAbout": "← Terug naar Over",
+    "eyebrow": "Voor partners en beoordelaars",
+    "title": "Projectbronnen",
+    "intro": "Referentie-index van de structuur van het project: werkpakketten, taken, mijlpalen, resultaten en evenementen. Bron: subsidieaanvraag CREA-CULT-2025-COOP-3. Bedoeld voor consortiumpartners, evaluatoren en beoordelaars van de Europese Commissie.",
+    "objectives": "Doelstellingen",
+    "partnersLabel": "Partners",
+    "leadPrefix": "Verantwoordelijke:",
+    "tasksCount_one": "{{count}} taak",
+    "tasksCount_other": "{{count}} taken",
+    "accessFile": "Bestand openen →",
+    "accessFileAria": "Bestand openen: {{title}}",
+    "pending": "In afwachting",
+    "tabs": {
+      "wp": "Werkpakketten",
+      "tasks": "Taken",
+      "milestones": "Mijlpalen",
+      "deliverables": "Resultaten",
+      "events": "Evenementen",
+      "media": "Media / Merk",
+      "presskit": "Perskit"
+    },
+    "tabSubtitles": {
+      "wp": "Vijf in elkaar grijpende werkpakketten structureren de uitvoering van het project over 30 maanden.",
+      "tasks": "Taken gegroepeerd per bovenliggend werkpakket. Klik op een groep om deze uit te klappen; klik op een taak om de volledige beschrijving te lezen.",
+      "milestones": "Controlepunten van het project chronologisch gerangschikt op vervalmaand.",
+      "deliverables": "Projectresultaten met hun type, verspreidingsniveau en vervaldatum.",
+      "events": "Workshops, masterclasses, tentoonstellingen, conferenties en paneldiscussies georganiseerd door het consortium.",
+      "media": "Merkbronnen en bestanden van de visuele identiteit van het Immersive ECHO-project.",
+      "presskit": "Persmateriaal voor journalisten en mediapartners die over het Immersive ECHO-project berichten."
+    },
+    "wp": {
+      "WP1": {
+        "title": "Projectmanagement en coördinatie",
+        "short": "Strategische afstemming, mijlpalen, budgetten, risicobeheer en contact met de Europese Commissie binnen het hele consortium.",
+        "obj": {
+          "0": "Strategische, transparante en inclusieve coördinatie bieden om te waarborgen dat alle partners effectief bijdragen aan de projectdoelstellingen.",
+          "1": "Tijdlijnen, resultaten en financiële voortgang bewaken om verantwoording en efficiënt gebruik van middelen te garanderen.",
+          "2": "Heldere en continue communicatie met de Europese Commissie faciliteren en naleving van alle regelgevings- en rapportagevereisten waarborgen.",
+          "3": "Risico's proactief identificeren en beheren om de uitvoering te beschermen, de veerkracht te versterken en resultaten met grote impact te waarborgen, afgestemd op de CREA-prioriteiten."
+        }
+      },
+      "WP2": {
+        "title": "Immersief ontwerpteam (off-site)",
+        "short": "Een transdisciplinair lab waar kunstenaars, technologen en erfgoedexperts samen immersieve prototypes ontwikkelen via co-creatiesprints.",
+        "obj": {
+          "0": "De veranderende behoeften van gebruikers en institutionele realiteiten begrijpen — kansgebieden afbakenen op basis van gebruikersonderzoek, institutionele doelen en maatschappelijke verschuivingen.",
+          "1": "Inclusieve, schaalbare immersieve vormen ontwerpen en prototypen — concepten ontwikkelen die aan de behoeften voldoen, aannames vroeg valideren en iteratief verfijnen.",
+          "2": "Een laagdrempelig experimenteel lab integreren in het ontwerpproces voor co-creatie, testen en iteratie met diverse doelgroepen.",
+          "3": "Gebruikerservaring, technische haalbaarheid en economische levensvatbaarheid evalueren — doorlopend feedback verzamelen om de ervaringen te verfijnen.",
+          "4": "De uiteindelijke verfijning en de voorbereiding op publieke testomgevingen leiden — immersieve ervaringen afronden die emotioneel resonant, technisch stabiel en toegankelijk zijn.",
+          "5": "Benchmarken en uitwisselen tussen on-site en off-site immersief ontwerp — gestructureerde uitwisseling tussen Snapsting en de processen van het off-site lab."
+        }
+      },
+      "WP3": {
+        "title": "Immersief ontwerpteam (on-site)",
+        "short": "Viborg Museum fungeert als een levende casestudy en ontwikkelt „Snapsting” via handgetekende animatie en ruimtelijk verhalen vertellen.",
+        "obj": {
+          "0": "De volledige levenscyclus van immersief verhalen vertellen testen in een echte museumsetting — conceptontwikkeling, scripten, samenwerking, technologie-integratie, productie en lancering.",
+          "1": "De impact op het publiek meten — gegevens verzamelen over emotionele betrokkenheid, cultureel leren en toegankelijkheid.",
+          "2": "Identificeren wat werkt voor kleine en middelgrote instellingen — werkwijzen, uitdagingen en resourcebehoeften documenteren.",
+          "3": "Benchmarken en uitwisselen tussen on-site en off-site immersief ontwerp — zie WP2."
+        }
+      },
+      "WP4": {
+        "title": "Publieke testomgevingen",
+        "short": "Le Pavillon stelt de afgeronde ervaringen op grote schaal open voor een echt publiek en meet betrokkenheid en toegankelijkheid met AI-ondersteunde analyses.",
+        "obj": {
+          "0": "Een immersieve ervaring inzetten op een openbare, goed toegankelijke locatie — de kloof tussen prototyping en realiteit overbruggen.",
+          "1": "De live gebruikerservaring op grote schaal evalueren — emotionele respons, toegankelijkheid, interactiepatronen en retentie meten.",
+          "2": "Ontvangst- en afsluitprocessen testen — bewegwijzering, begeleide in-/uitgang en momenten van reflectie.",
+          "3": "De operationele en economische levensvatbaarheid valideren — ticketingstrategieën, operationele opstellingen, personeelsbehoeften en technische vereisten.",
+          "4": "Leerkansen creëren voor cultuurprofessionals — partnermusea en erfgoedorganisaties worden uitgenodigd om te observeren en deel te nemen."
+        }
+      },
+      "WP5": {
+        "title": "Communicatie, verspreiding en impact",
+        "short": "Vertaalt de projectresultaten naar modulaire toolkits, meertalige content en een netwerk voor collegiaal leren voor de Europese erfgoedsector.",
+        "obj": {
+          "0": "Communicatie — strategische, gerichte maatregelen om het project te promoten en de zichtbaarheid van de EU-subsidie te waarborgen.",
+          "1": "Verspreiding — projectresultaten delen met de culturele sector, erfgoedinstellingen, EU-organen en het grote publiek.",
+          "2": "Benutting — het gebruik van de projectresultaten faciliteren in nieuwe initiatieven, marketing en samenwerkingen.",
+          "3": "Zichtbaarheid en betrokkenheid versterken — modern verhalen vertellen en AI-gestuurde contentgeneratie inzetten in heel Europa.",
+          "4": "Capaciteitsopbouw — toolkits ontwikkelen, collegiaal leren faciliteren en mentorprogramma's aanbieden voor culturele instellingen.",
+          "5": "Toekomstgericht ontwerp — methoden voor toekomstontwerp toepassen om overtuigende toekomsten voor immersieve cultuur te verbeelden."
+        }
+      }
+    },
+    "taskGroup": {
+      "T1": { "title": "Projectmanagement en coördinatie" },
+      "T2": { "title": "Immersief ontwerpteam (off-site)" },
+      "T3": { "title": "Immersief ontwerpteam (on-site)" },
+      "T4": { "title": "Publieke testomgevingen" },
+      "T5": { "title": "Communicatie, verspreiding en impact" }
+    },
+    "task": {
+      "T1-1": {
+        "title": "De strategische coördinatie leiden",
+        "description": "Een soepele samenwerking met de partners waarborgen, tijdlijnen en doelstellingen afstemmen en gedurende de hele levenscyclus van het project de algemene richting bepalen."
+      },
+      "T1-2": {
+        "title": "Voortgang, risico's en budget bewaken",
+        "description": "Mijlpalen, resultaten, afstemming op de groene checklist (Green) en geldstromen volgen en risico's proactief beheren om transparantie en verantwoording te waarborgen."
+      },
+      "T1-3": {
+        "title": "Communicatie en rapportage beheren",
+        "description": "Heldere interne communicatie faciliteren, EU-verslagen opstellen en naleving van administratieve en wettelijke verplichtingen waarborgen. Deelnemers: TSC, NPIAT, GPI, YOU, TPL, KIKK, FUT, AIRA, ID20, VIB, VGR, SOFP (BEN); COG, TAW (AP)."
+      },
+      "T2-1": {
+        "title": "Behoeftenonderzoek, onderzoek en ontwerpfundamenten",
+        "description": "De basis voor een divers doelpubliek verkennen en definiëren door behoeften, institutionele realiteiten, maatschappelijke trends en vroege technische haalbaarheid te identificeren. De technologische volwassenheid en mogelijke operationele uitdagingen verduidelijken voordat naar prototyping wordt overgegaan."
+      },
+      "T2-2": {
+        "title": "Gezamenlijk ontwerp en prototyping in de labs",
+        "description": "Onderzoek vertalen naar snelle prototypes die direct binnen het experimentele lab worden getest. Het ontwerpteam, de museumpartners en de gebruikers creëren samen immersieve concepten via iteratieve cycli van ontwerp, test en verbetering."
+      },
+      "T2-3": {
+        "title": "Sprints voor inclusief ontwerp",
+        "description": "Vier gerichte sprints uitvoeren om diverse perspectieven te integreren: 1) Jongerensprint — digitale vaardigheid en nieuwsgierigheid; 2) Neurodivergente sprint — zintuiglijke balans en niet-lineaire betrokkenheid; 3) Ouderensprint — navigatie, tempo en toegankelijkheid; 4) Sprint voor gemarginaliseerde groepen — stemmen versterken die vaak buiten het reguliere ontwerp vallen. Elke sprint vormt kernaspecten van verhaal, interactie en ervaringsverloop."
+      },
+      "T2-4": {
+        "title": "Ontwerpen voor schaalbaarheid en overdraagbaarheid",
+        "description": "Ontwerpprincipes, hulpmiddelen en werkwijzen toepassen die de schaalbaarheid en overdraagbaarheid van immersieve ervaringen over diverse culturele locaties ondersteunen. Omvat modulaire ontwerpbenaderingen, aanpasbare verhaalstructuren en flexibele opstellingen voor grote en kleine instellingen."
+      },
+      "T2-5": {
+        "title": "Virtuele toegang tot het experimentele lab",
+        "description": "Modulair ontwerp en digital-twin-technologie benutten om de ervaring toegankelijk te maken voor brede, pan-Europese tests. Virtuele omgevingen repliceren de fysieke installaties, waardoor diverse doelgroepen op afstand kunnen deelnemen en feedback kunnen geven."
+      },
+      "T2-6": {
+        "title": "Definitief ervaringsontwerp voor publieke testomgevingen",
+        "description": "De immersieve ervaringen aanpassen en afronden voor openbare locaties en de gereedheid voor grootschalige gebruikersinteractie waarborgen. Het definitieve ontwerp omvat emotioneel verhalen vertellen, robuuste technische opstellingen, toegankelijkheidstrajecten en duurzame operationele modellen. Onderaanneming: S1.1, S1.2."
+      },
+      "T2-7": {
+        "title": "Synthese van experimentele inzichten",
+        "description": "Inzichten uit labactiviteiten, publieke testomgevingen, gebruikersfeedback en technische validatie analyseren. AI-ondersteunde hulpmiddelen inzetten om bevindingen uit gecontroleerde en reële omgevingen te synthetiseren tot concrete verfijningen voor de uiteindelijke oplevering van de ervaring."
+      },
+      "T3-1": {
+        "title": "Integratie in de ECHO-kennisstroom",
+        "description": "Bevindingen doorlopend delen met het hele consortium. Afstemmen met WP2 en het projectmanagement om te waarborgen dat inzichten uit ontwerp, testen en uitvoering in realtime worden overgedragen. Onderaanneming: S2.1, S2.2, S2.3."
+      },
+      "T3-2": {
+        "title": "Volledige productie van de Snapsting-ervaring",
+        "description": "De immersieve verhaalervaring vanaf nul ontwikkelen. Omvat conceptdefinitie, animatic, scenarioschrijven, productie (animatie, achtergronden, sounddesign en compositie), AV- en technologie-integratie, ruimtelijk en zintuiglijk ontwerp, testen en installatie. Onderaanneming: S2.1–S2.4."
+      },
+      "T3-3": {
+        "title": "Publiekstests en evaluatie",
+        "description": "Een gestructureerde evaluatie van de ervaring uitvoeren na de lancering. Kwalitatieve en kwantitatieve feedback verzamelen over bruikbaarheid, betrokkenheid, toegankelijkheid en emotionele/educatieve impact. Onderaanneming: S2.1."
+      },
+      "T3-4": {
+        "title": "Aanpassing voor inzet bij KIKK (Le Pavillon)",
+        "description": "De Snapsting-ervaring voorbereiden voor implementatie in Le Pavillon als onderdeel van de publieke testomgevingsactiviteiten van WP4. Waarborgt de samenwerking tussen werkpakketten en verbeteringen op basis van de publieksfeedback van WP4. Onderaanneming: S2.1–S2.4."
+      },
+      "T4-1": {
+        "title": "Voorbereiding op publieke inzet",
+        "description": "Het technische, methodologische en communicatieve grondwerk coördineren dat nodig is voor een succesvolle publieke inzet. Omvat testmethodologieën, strategieën voor publieksontvangst, protocollen voor gegevensverzameling, planning van de installatie ter plaatse, bezoekersontvangst, toegankelijkheidsoverwegingen en communicatiestromen."
+      },
+      "T4-2": {
+        "title": "Ontwikkeling van een bedrijfsmodel voor duurzame inzet",
+        "description": "Een duurzaam bedrijfsmodel voor de immersieve ervaringen co-ontwikkelen, afgestemd op de sociaaleconomische contexten van de inzetlocaties en de strategische doelen van het ECHO-consortium. De resultaten zullen de levensvatbaarheid op lange termijn ondersteunen, ook na de projectperiode."
+      },
+      "T4-3": {
+        "title": "Publieke inzet en exploitatie",
+        "description": "De afgeronde immersieve ervaringen in Le Pavillon inzetten met volledige technische en narratieve integratie, inclusief training van lokaal personeel, onderhoud, pop-upwinkel en begeleide activiteiten om bezoekerservaringen van hoge kwaliteit te waarborgen."
+      },
+      "T4-4": {
+        "title": "Publieke lancering op het KIKK-festival (okt. 2027)",
+        "description": "De publieke uitrol van de immersieve ervaring starten met een goed zichtbare lancering op het KIKK-festival 2027. Omvat een speciaal panel met leden van het ECHO-consortium, dat het project in een bredere culturele en innovatiecontext plaatst."
+      },
+      "T4-5": {
+        "title": "Analyse van publiek en bezoekersreis",
+        "description": "Kwantitatieve gegevens (stromen, verblijfsduur, conversie, toegangsbehoeften) en kwalitatieve gegevens (enquêtes, interviews, observatie) verzamelen met AI-ondersteunde dashboards; inzichten terugkoppelen naar WP2 en WP5."
+      },
+      "T4-6": {
+        "title": "Bedrijfsmodellen en exploitatie evalueren",
+        "description": "Operationele modellen, personeelsbehoeften, kostenstructuren en scenario's voor inkomstendeling testen en een „business blueprint” synthetiseren voor toekomstige gebruikers om de economische en organisatorische levensvatbaarheid van het opschalen van immersieve vormen te beoordelen."
+      },
+      "T5-1": {
+        "title": "De interne projectcommunicatie implementeren",
+        "description": "Interne communicatiehulpmiddelen en -sjablonen opzetten ter ondersteuning van de coördinatie, naleving van de EU-normen waarborgen en efficiënt documenten delen mogelijk maken. Een KPI-dashboard lanceren dat de voortgang tussen deelnemers en instellingen volgt."
+      },
+      "T5-2": {
+        "title": "Ethiek en evaluatie van AI-communicatie",
+        "description": "Workshops over AI-ethiek organiseren voor consortiumleden en culturele instellingen. Een externe evaluatie laten uitvoeren van het gebruik van AI door WP5 in contentgeneratie, toegankelijkheid en hulpmiddelen voor publieksinteractie. De bevindingen opnemen in het tussentijdse en het eindverslag."
+      },
+      "T5-3": {
+        "title": "Netwerken tussen projecten en gemeenschapsvorming",
+        "description": "Gestructureerde uitwisseling met andere EU-gefinancierde projecten faciliteren via gezamenlijke workshops, paneldiscussies en thematische bijeenkomsten. Bouwt een „community of practice” rond immersieve culturele ervaringen en bevordert een netwerk van gedeelde belangen tussen consortia."
+      },
+      "T5-4": {
+        "title": "Kennisoverdracht en capaciteitsopbouw",
+        "description": "De projectresultaten vertalen naar praktische formats: open toolkits, sjablonen, workshops, paneldiscussies en masterclasses op conferenties, en introductiegidsen. AI-hulpmiddelen ondersteunen het op maat maken van content voor verschillende instellingen op basis van omvang, publiekstype en digitale volwassenheid."
+      },
+      "T5-5": {
+        "title": "Participatieve toekomsten en toekomstvorming",
+        "description": "Maandelijkse Futuremaking-workshops leiden die scenario's, speculatieve ontwerpartefacten en een Futuremakers Toolkit (digitaal + fysiek) opleveren. De 5D TimeMap co-creëren — een digitaal platform dat ruimte, tijd en culturele lagen verbindt."
+      },
+      "T5-6": {
+        "title": "Hulpmiddelen voor publieksinteractie en outreach",
+        "description": "Het Outreach Platform inzetten voor open interactie tussen het publiek en het consortium. De Timetravel Companion ontwikkelen en testen — een conversationeel AI-hulpmiddel dat de betrokkenheid van het publiek bij de immersieve installaties versterkt."
+      },
+      "T5-7": {
+        "title": "Toekomstontwerp en langetermijnvisie",
+        "description": "Met methodologieën onder leiding van Futurity Systems een toekomstvisie voor immersieve culturele innovatie co-creëren. Door AI gegenereerde scenario-prompts en het clusteren van inzichten helpen opkomende trends, maatschappelijke behoeften en kansen op systeemniveau te identificeren — en schetsen een Europese routekaart voor immersieve cultuur."
+      }
+    },
+    "ms": {
+      "MS1-1": { "title": "Afstemming van het consortium en start", "description": "Alle partners bij de start van het project afgestemd op doelen, methoden, rollen en rapportage." },
+      "MS2-1": { "title": "Behoeftegestuurd ontwerpkader opgezet", "description": "Een strategische ontwerpbriefing op basis van gebruikersreizen, behoeften, gedragingen, institutionele input en maatschappelijke trends." },
+      "MS3-1": { "title": "Concept- en narratiefontwikkeling afgerond", "description": "Kernconcept, narratief, volledig script en storyboard voor Snapsting afgerond via een iteratief proces." },
+      "MS5-1": { "title": "Uitwisselingsnetwerk tussen projecten opgezet", "description": "Samenwerkingsnetwerk met andere EU-gefinancierde projecten formeel gestart." },
+      "MS2-2": { "title": "Lab operationeel en eerste prototypes getest", "description": "Experimenteel lab volledig operationeel; eerste immersieve prototypes getest en beoordeeld." },
+      "MS2-3": { "title": "Reeks sprints voor inclusief ontwerp afgerond", "description": "Alle vier de inclusieve co-creatiesprints afgerond; bevindingen geïntegreerd in de ontwerpiteraties." },
+      "MS3-2": { "title": "Eindproductie afgerond", "description": "Alle elementen van Snapsting afgerond, inclusief content, technologie en ruimtelijk ontwerp." },
+      "MS3-3": { "title": "Ervaring geïnstalleerd en operationeel", "description": "Snapsting volledig geïnstalleerd en in bedrijf ter plaatse in Viborg Museum." },
+      "MS3-4": { "title": "Consortiumbijeenkomst en paneldiscussie", "description": "Alle consortiumpartners komen samen in Viborg, met een paneldiscussie op het Animation Festival." },
+      "MS1-2": { "title": "Tussentijdse coördinatiebeoordeling", "description": "Beoordeling van voortgang, risico's, samenwerkingskwaliteit en gebruik van middelen op het middelpunt." },
+      "MS5-2": { "title": "Tussentijdse impactbeoordeling afgerond", "description": "Beoordeling op het halverwegepunt die communicatie, kennisoverdracht, betrokkenheid van belanghebbenden en het bereik van de verspreiding evalueert." },
+      "MS4-1": { "title": "Inzetkader en bedrijfsmodel gedefinieerd", "description": "Strategieën voor publieke inzet opgezet, samen met een duurzaam bedrijfsmodel dat met de partners is co-ontwikkeld." },
+      "MS2-4": { "title": "Prototype-ontwerpen geïtereerd en definitieve concepten gereed", "description": "Prototypes doorontwikkeld op basis van tests; definitieve immersieve ervaringen goedgekeurd voor publieke inzet." },
+      "MS4-2": { "title": "Installatie van publieke testomgeving geopend", "description": "Eerste locatie volledig ingericht, showbesturing gevalideerd; deuren geopend voor het publiek (KIKK-festival, okt. 2027)." },
+      "MS4-3": { "title": "Analysedashboard over locaties live", "description": "Een centraal dashboard dat bezoekersstromen, betrokkenheid en toegankelijkheidsgegevens in realtime samenbrengt, gaat live." },
+      "MS3-5": { "title": "Snapsting aangepast voor inzet in Le Pavillon", "description": "Snapsting afgestemd op Le Pavillon, met aanpassingen aan narratief, technische opstelling en ruimtelijk ontwerp." },
+      "MS5-3": { "title": "Hulpbronnen voor capaciteitsopbouw afgerond", "description": "Open Learning Toolkit, How-to ECHO-gids, 5D TimeMap en Futuremakers Toolkits afgerond en verspreid." },
+      "MS5-4": { "title": "Finale impactverspreiding", "description": "Eindrapport over toekomstontwerp dat de resultaten van de strategische vooruitblik en de langetermijntrajecten samenvat." },
+      "MS4-4": { "title": "Operationele en zakelijke haalbaarheid gerapporteerd", "description": "Kosten, personeel en logistiek geanalyseerd ter ondersteuning van toekomstige adoptie en opschaling." },
+      "MS1-3": { "title": "Finale coördinatiesamenvatting", "description": "Strategische afronding van de projectoplevering, inclusief belangrijke lessen over coördinatie en besluitvorming." }
+    },
+    "d": {
+      "D1-1": { "title": "Handboek projectmanagement", "description": "[ENG] Een praktische gids die de visie schetst, afgestemd op interne coördinatiehulpmiddelen, de rapportagestructuur, de verantwoordelijkheden van partners en gedeelde werkwijzen. Bevat sjablonen en checklists." },
+      "D1-2": { "title": "Tussentijds coördinatie- en risicoverslag", "description": "[ENG] Evaluatie van voortgang, coördinatiekwaliteit, risicostatus en zelfbeoordelingen van partners. Bevat aanbevelingen ter verbetering." },
+      "D2-1": { "title": "Behoeftegestuurde immersieve ontwerpbriefing", "description": "[ENG] Een heldere strategische gids op basis van gebruikersinzichten, institutionele behoeften en maatschappelijke verschuivingen — die ontwerpuitdagingen, gebruikerspersona's, emotionele doelen en technische aannames definieert." },
+      "D2-2": { "title": "Definitieve ontwerpen van de immersieve ervaring", "description": "[Taal nader te bepalen] Volledige pakketten voor de immersieve ervaring voor publieke inzet, inclusief narratieven, ruimtelijke en interactieontwerpen, technische opstellingen, ontvangst-/afsluitgidsen en toegankelijkheidsoplossingen." },
+      "D2-3": { "title": "Finale evaluatie van de immersieve ervaring", "description": "[ENG] Uitgebreide evaluatie van gebruikerservaring, technische haalbaarheid en economische levensvatbaarheid. Bevat analyse van de emotionele impact, beoordeling van de toegankelijkheid, prestatietests van het systeem en controles op operationele duurzaamheid." },
+      "D3-1": { "title": "Immersieve Snapsting-ervaring en documentatie", "description": "[DEENS & ENG] De afgeronde immersieve ervaring, geïnstalleerd en in bedrijf in Viborg Museum. Bevat installatieplannen, bestanden voor interactieontwerp en documentatie voor hergebruik of aanpassing." },
+      "D3-2": { "title": "Aangepast Snapsting-ervaringspakket voor Le Pavillon", "description": "[ENG] Aangepaste versie van de immersieve Snapsting-ervaring, toegesneden op inzet in Le Pavillon. Bevat bijgewerkt narratief, interactie- en ruimtelijk ontwerp, technische opstelling en operationele richtlijnen." },
+      "D3-3": { "title": "Verslag over het immersieve productieproces", "description": "[ENG] Een praktische doorloop van het on-site productieproces. Bevat narratiefontwikkeling, technische beslissingen, het samenwerkingsmodel en de aangegane culturele uitdagingen — bedoeld als referentie voor andere instellingen." },
+      "D4-1": { "title": "Verslag operationele inzet", "description": "[ENG] Stapsgewijze documentatie van de uitrol van de publieke testomgeving, inclusief publiekslogistiek, ruimtelijke opstelling en aantekeningen over technische aanpassing." },
+      "D4-2": { "title": "Samenvatting gebruikerservaring en bedrijfsmodel", "description": "[ENG] Evaluatie van publieksbetrokkenheid, ontvangst-/afsluittrajecten en de haalbaarheid van de op locatie geteste bedrijfsmodellen." },
+      "D5-1": { "title": "Communicatie- en verspreidingsplan", "description": "[ENG] Een geïntegreerde communicatiestrategie en een plan om de resultaten breed te delen. AI-hulpmiddelen zetten projectgegevens om in artikelen, posts, casestudy's en microcontent op maat van verschillende Europese doelgroepen. Generatie in lijn met het EU-beleid inzake AI, privacy en techethiek." },
+      "D5-2": { "title": "Projectdashboard", "description": "Een website met een realtime digitaal dashboard dat KPI's op meerdere niveaus volgt en visualiseert: individuele bijdragen van deelnemers, intra-institutionele werkwijzen, interinstitutionele samenwerking, score voor burgerbetrokkenheid en bredere maatschappelijke impact. Openbaar gedeelte + privégebieden voor instellingen, beleidsmakers en belanghebbenden." },
+      "D5-3": { "title": "Tussentijds impact- en verspreidingsverslag", "description": "Uitgebreide beoordeling van de impact van het project, de verspreidingsactiviteiten en de communicatieresultaten op het halverwegepunt. Evalueert betrokkenheidsmetrieken, institutionele adoptie, de effectiviteit van kennisoverdracht en sectoroverschrijdende samenwerking." },
+      "D5-4": { "title": "Futuremakers Toolkit", "description": "Een hybride (fysieke en digitale) toolkit met participatieve technieken, materialen en begeleide activiteiten die cultuurprofessionals leren inclusievere, veerkrachtigere toekomsten te verbeelden. Beschikbaar in 10 EU-talen. Fysiek: werkboeken, kaartspellen, duurzame speelstukken van duurzame materialen. Digitaal: mediacontent + een interactief whiteboard voor meerdere gebruikers." },
+      "D5-5": { "title": "Outreach Platform", "description": "Een met AI versterkt platform voor wrijvingsloze tweerichtingscommunicatie tussen project, instellingen en publiek. Bevat een operationeel realtime KPI-dashboard. Platform in het Engels; AI-agenten en content in 10 EU-talen. Bevat AI-agentpersona's (museumgids, historische figuur, fictieve mascotte) en een hulpmiddel waarmee instellingen hun eigen kunnen maken." },
+      "D5-6": { "title": "5D TimeMap van erfgoedsites", "description": "Een interactieve digitale kaart die erfgoedsites in heel Europa verbindt met hun respectieve instellingen, verrijkt met vijf dimensies: ruimtelijk, temporeel en drie thematische lagen (artistiek, politiek, taalkundig). Beschikbaar ter plaatse, op computers en op mobiel in 10 EU-talen." },
+      "D5-7": { "title": "Prototype Timetravel Companion", "description": "Een werkend prototype van de Timetravel Companion — een door AI aangedreven gids die museumbezoeken en immersieve installaties verrijkt via spraakinteractie, contextueel verhalen vertellen en optionele holografische content. Bevat app-interface, contentmodules, documentatie van gebruikerstests en toegankelijkheidsevaluatie in 10 EU-talen. Voor de installaties worden 100 op maat gemaakte open-sourceapparaten gebouwd." },
+      "D5-8": { "title": "Open Learning Toolkit en How-to ECHO-gids", "description": "Een pakket met informatie, instructies en hulpmiddelen waarmee nieuwe culturele instellingen de ECHO-toolkit van begin tot eind kunnen implementeren. Modulaire, kant-en-klare bronnen gebouwd op de resultaten van WP2–WP4, in 10 EU-talen." },
+      "D5-9": { "title": "Verslag netwerken tussen projecten", "description": "Uitgebreid verslag dat de netwerkactiviteiten tussen projecten documenteert, inclusief bijeenkomsten, gezamenlijke evenementen, belangrijke resultaten en voorstellen voor doorlopende uitwisseling." },
+      "D5-10": { "title": "Eindrapport toekomstontwerp", "description": "Een digitaal platform dat de resultaten van het project en het langetermijnpotentieel ervan toont. Door AI aangedreven mediahulpmiddelen personaliseren content voor deelnemers en vertalen de projectlessen naar deelbare formats in 10 EU-talen." }
+    },
+    "dStatus": {
+      "D5-2": "Je bent hier!"
+    },
+    "event": {
+      "E1": { "name": "Jongerensprint: Future Worlds Builder", "type": "Gebruikersgerichte sprint" },
+      "E2": { "name": "Neurodivergente sprint: niet-lineaire navigatie", "type": "Gebruikersgerichte sprint" },
+      "E3": { "name": "De immersieve Snapsting-ervaring", "type": "Tentoonstelling" },
+      "E4": { "name": "Echoes of the Future: cultureel erfgoed en immersieve innovatie verbinden", "type": "Conferentie" },
+      "E5": { "name": "Immersive ECHO: cultureel erfgoed voor de toekomst", "type": "Paneldiscussie" },
+      "E6": { "name": "Immersive ECHO", "type": "Tentoonstelling" },
+      "E7": { "name": "Speculatieve prototyping", "type": "Workshop" },
+      "E8": { "name": "Zintuiglijke mapping en interactie", "type": "Workshop" },
+      "E9": { "name": "Ouderensprint: belichaamde en digitale navigatie", "type": "Gebruikersgerichte sprint" },
+      "E10": { "name": "Sprint voor gemarginaliseerde groepen", "type": "Gebruikersgerichte sprint" },
+      "E11": { "name": "Workshops digital twin en testen op afstand", "type": "Gebruikerstests" },
+      "E12": { "name": "Ontwerpen voor schaalbaarheid en tourgereedheid", "type": "Workshop" },
+      "E13": { "name": "Technologie en innovatie voor immersief verhalen vertellen", "type": "Masterclass" },
+      "E14": { "name": "Creatieve regie en animatiepijplijn voor culturele narratieven", "type": "Masterclass" },
+      "E15": { "name": "Interdisciplinaire samenwerking voor erfgoedinnovatie", "type": "Masterclass" },
+      "E16": { "name": "Sensoren en emoties", "type": "Workshop" },
+      "E17": { "name": "Word ervaringsontwerper", "type": "Workshop" },
+      "E18": { "name": "Immersive ECHO: cultureel erfgoed en immersieve ervaringen verbinden", "type": "Masterclass" },
+      "E19": { "name": "Maandelijkse Futuremaking-sessies", "type": "Workshops" },
+      "E20": { "name": "AI, ethiek en culturele toekomsten: verantwoorde innovatie in immersief erfgoed", "type": "Workshop" },
+      "E21": { "name": "Uitwisseling tussen projecten", "type": "Workshops" }
+    }
+  },
+  "news": {
+    "title": "Nieuws, evenementen en activiteiten",
+    "latestUpdates": "Laatste updates",
+    "readMore": "Lees meer →",
+    "empty": "Nog geen items in deze categorie.",
+    "eventGalleries": "Evenementgalerijen",
+    "backToNews": "← Terug naar Nieuws",
+    "photos": "{{count}} foto's",
+    "filters": {
+      "All": "Alle",
+      "News": "Nieuws",
+      "Events": "Evenementen",
+      "Press": "Pers"
+    },
+    "galleries": {
+      "launch": "Lancering (Namen)"
+    },
+    "articles": {
+      "newsletter1": {
+        "title": "Maak kennis met ECHO — Nieuwsbrief nr. 1",
+        "subtitle": "Hoe immersief ontwerp verandert hoe we geschiedenis beleven"
+      },
+      "launch": {
+        "title": "Project Immersive ECHO officieel gelanceerd",
+        "subtitle": "Meer dan 40 vooraanstaande Europese creatieven kwamen in Namen samen om het project ECHO Immersive te starten"
+      }
+    },
+    "launch": {
+      "title": "Project Immersive ECHO officieel gelanceerd",
+      "lead": "Meer dan 40 vooraanstaande Europese creatieven kwamen in Namen samen om het project ECHO Immersive te starten.",
+      "teamAlt": "Het ECHO Immersive-team in Namen",
+      "p1": "Immersive ECHO werd officieel gelanceerd in februari 2026 met een meerdaagse startbijeenkomst in Le Pavillon in Namen, België, de locatie die de publieke testomgeving van het project zal huisvesten. Delegaties van alle consortiumpartners kwamen voor het eerst persoonlijk samen en brachten museumprofessionals, immersieve ontwerpers, ontwikkelaars, onderzoekers en strategen uit tien landen bijeen. De bijeenkomst werd gecoördineerd door het projectteam van Lindholmen Science Park, onder leiding van projectmanager Ismaila Jallow en coördinator Katrin Amberntsson, met steun van de teams van KIKK en Le Pavillon ter plaatse.",
+      "p2": "De dagen combineerden gestructureerde workshops met open verkenning. De teams werkten fundamentele vragen uit over hoe mensen door ruimtes bewegen, wat de aandacht trekt en hoe verhaal en interactie het publiek helpen betekenis op te bouwen. In plaats van met technologie te beginnen, draaiden de gesprekken om narratief, waarneming en de bijzondere eisen van culturele ruimtes. De deelnemers vertrokken met een gedeeld beeld van hoe de komende tweeënhalf jaar eruit zullen zien, en met het soort vertrouwen dat alleen ontstaat wanneer nieuwsgierige mensen echt tijd samen doorbrengen. De uiteindelijke immersieve ervaringen die in het project worden ontwikkeld, keren in oktober 2027 terug naar Le Pavillon voor publieke inzet.",
+      "galleryHeading": "Galerij"
+    }
+  },
+  "contact": {
+    "title": "Neem contact op",
+    "getInTouch": "Kom in contact",
+    "intro": "Neem contact op met het coördinatieteam van Lindholmen Science Park voor algemene vragen, persinformatie of vragen over partnerschappen.",
+    "coordinatorHeading": "Coördinator",
+    "coordinatorLocation": "Göteborg, Zweden",
+    "stayInTouch": "Blijf in contact",
+    "requiredNote": "Velden met een * zijn verplicht.",
+    "labels": {
+      "name": "Naam",
+      "email": "E-mail",
+      "organisation": "Organisatie",
+      "subject": "Onderwerp",
+      "message": "Bericht"
+    },
+    "send": "Bericht versturen",
+    "sending": "Bezig met verzenden…",
+    "success": {
+      "heading": "Bericht verzonden!",
+      "body": "We nemen binnen 5 werkdagen contact met je op. Controleer je inbox voor een bevestiging.",
+      "again": "Nog een bericht versturen"
+    },
+    "errors": {
+      "generic": "Er is iets misgegaan. Probeer het opnieuw.",
+      "network": "Kon de server niet bereiken. Controleer je verbinding."
+    },
+    "newsletterPrompt": "Wil je op de hoogte blijven van Immersive ECHO?"
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "items": {
+      "q1": {
+        "question": "Wat is Immersive ECHO?",
+        "answer": "Immersive ECHO is een pan-Europees project dat mensen via immersief verhalen vertellen dichter bij hun gedeelde erfgoed brengt. Over 30 maanden (februari 2026 – juli 2028) ontwikkelen 15 partners in 10 landen een praktisch model dat culturele instellingen in staat stelt alledaagse openbare ruimtes om te vormen tot emotionele, collectieve ervaringen — met projectie, ruimtelijk geluid en sensortechnologie in plaats van VR-brillen. De nadruk ligt op het toegankelijk maken van immersief verhalen vertellen voor kleine en middelgrote instellingen die momenteel het budget en de expertise missen om het te creëren."
+      },
+      "q2": {
+        "question": "Waarom is dit project nodig?",
+        "answer": "De meeste erfgoedinstellingen missen het budget, de expertise en de technische capaciteit om immersieve ervaringen te creëren. Grootschalige producties zijn doorgaans voorbehouden aan goed gefinancierde musea en commerciële locaties. Tegelijk verwacht het publiek steeds meer boeiende, multisensorische ontmoetingen met cultuur. Immersive ECHO pakt deze kloof aan met een praktisch, overdraagbaar model — getest in echte settings, eerlijk gedocumenteerd en zo ontworpen dat een lokaal museum met beperkte middelen zijn verhalen kan vertellen op manieren die emotioneel boeiend en economisch duurzaam zijn."
+      },
+      "q3": {
+        "question": "Wat onderscheidt Immersive ECHO van andere immersieve projecten?",
+        "answer": "Vijf dingen onderscheiden ons. We richten ons op kleine en middelgrote instellingen — niet op grootschalige boegbeelden. Onze aanpak is brilvrij: projectie, ruimtelijk geluid en sensoren transformeren bestaande openbare ruimtes. Inclusie is vanaf het begin in het ontwerpproces verankerd, met speciale sprints voor jongeren, neurodivergent publiek, ouderen en gemarginaliseerde groepen. We documenteren het hele proces — inclusief wat niet werkt — en produceren open toolkits zodat anderen de aanpak zelfstandig kunnen repliceren. En het consortium zelf is uniek: wereldtop-ontwerpers, onderzoekers, erfgoedinstellingen van uiteenlopende omvang en technologen werken zij aan zij."
+      },
+      "q4": {
+        "question": "Waarom „immersief” zonder VR-brillen?",
+        "answer": "VR-brillen creëren drempels: kosten, toegankelijkheid, ongemak en individueel isolement. Ze zijn ook moeilijk op te schalen — één bril bedient één persoon tegelijk. Onze aanpak gebruikt ruimtelijk geluid, projecties en omgevingssensoren om gedeelde openbare ruimtes om te vormen tot immersieve verhaalomgevingen. Eén locatiegebonden installatie bereikt gelijktijdig een groot publiek, vereist minder gespecialiseerde apparatuur en is voor instellingen gemakkelijker te bedienen en in stand te houden. Het resultaat is collectief, belichaamd en laagdrempelig — en het is economisch zinvol voor de locaties die het huisvesten."
+      },
+      "q5": {
+        "question": "Wat zal een bezoeker daadwerkelijk ervaren?",
+        "answer": "Locatiegebonden, multisensorisch verhalen vertellen met projectie, ruimtelijk geluid en omgevingsinteractie om cultureel erfgoed tot leven te brengen in gedeelde openbare ruimtes. Terwijl je door een locatie beweegt, reageren geprojecteerde beelden en geluid op jouw aanwezigheid en ontstaat er een narratief dat zich om je heen ontvouwt. Het doel is geen passieve informatieoverdracht, maar actieve ontmoetingen met geschiedenis — open, participatief en zo ontworpen dat elke bezoeker zijn eigen reis door het verhaal maakt. Je voelt het voordat je erover nadenkt."
+      },
+      "q6": {
+        "question": "Wat is Snapsting?",
+        "answer": "Snapsting is de kenmerkende on-site productie ontwikkeld door Viborg Museum in Denemarken. Het verkent Viborgs duizendjarige identiteit als plek van koninklijke, religieuze en gerechtelijke macht — en brengt die geschiedenis tot leven via muziek, poëtische animatie en sfeervolle omgevingen. De ervaring is niet-lineair: bezoekers volgen hun eigen nieuwsgierigheid door het verhaal. Naast de ervaring zelf wordt het hele productieproces gedocumenteerd als een overdraagbare methodologie — een handboek voor andere erfgoedinstellingen die hun eigen immersieve werk plannen. Snapsting beleeft zijn publieke première in november 2026."
+      },
+      "q7": {
+        "question": "Wat zijn Le Pavillon en het KIKK-festival?",
+        "answer": "Le Pavillon is een locatie in Namen, België, beheerd door KIKK — en dient als de publieke testomgeving van het project. Hier ontmoeten immersieve ervaringen voor het eerst op grote schaal een echt, divers publiek. We testen de volledige bezoekersreis: emotionele respons, interactiepatronen, toegankelijkheid, ontvangst en of de ervaring kansen tot reflectie schept nadat mensen vertrekken. De publieke première is gepland voor het KIKK-festival in oktober 2027 — een van Europa's toonaangevende festivals voor digitale en creatieve cultuur, dat jaarlijks duizenden bezoekers trekt."
+      },
+      "q8": {
+        "question": "Wat betekent „inclusie vanaf het ontwerp” in de praktijk?",
+        "answer": "Het betekent dat toegankelijkheid en de behoeften van een divers publiek vanaf het begin in het ontwerpproces zijn verankerd — niet aan het eind toegevoegd. Het project omvat vier speciale sprints voor inclusief ontwerp, elk gericht op een specifiek publiek: jongeren, neurodivergente personen, ouderen en gemarginaliseerde gemeenschappen. Echte gebruikers vormen het werk vanaf de vroegste fasen. Inclusie gaat ook over emotionele herkenning — ervaringen creëren waarin mensen zichzelf weerspiegeld zien in de verhalen, waarin geschiedenis aanvoelt als iets dat hen toebehoort."
+      },
+      "q9": {
+        "question": "Wie zit er achter Immersive ECHO?",
+        "answer": "Een consortium van 15 organisaties uit 10 Europese landen, gecoördineerd door Lindholmen Science Park in Göteborg, Zweden. Tot de partners behoren studio's voor immersief ontwerp, erfgoedinstellingen, onderzoekslabs, technologiebedrijven en communicatiespecialisten uit Zweden, Duitsland, Frankrijk, Finland, Roemenië, Denemarken, België, Oekraïne, Spanje en Slovenië. Tot de geassocieerde partners behoren de stad Göteborg en The Animation Workshop in Denemarken. Het project kreeg een EU-evaluatiescore van 92/100."
+      },
+      "q10": {
+        "question": "Maakt Oekraïne deel uit van het project?",
+        "answer": "Ja. Sofiyivka Park in Oeman, Oekraïne, is een volwaardige consortiumpartner. Vanwege de aanhoudende Russische invasie kan fysieke prototyping niet in Oekraïne plaatsvinden. In plaats daarvan draagt Sofiyivka Park erfgoedgegevens, historisch materiaal en een onschatbaar perspectief op erfgoed in conflictgebieden bij. Hun deelname herinnert ons eraan waarom cultuurbehoud belangrijk is — en waarom het urgent is. Het consortium werkt actief aan de operationele uitdagingen die hun situatie met zich meebrengt."
+      },
+      "q11": {
+        "question": "Hoe wordt het project gefinancierd?",
+        "answer": "Immersive ECHO wordt medegefinancierd door de Europese Unie in het kader van het programma Creatief Europa, onderdeel Grootschalige Samenwerking. Het totale budget bedraagt ongeveer 3,3 miljoen euro, waarvan de EU 60% (1.999.019 €) financiert. De resterende 40% is cofinanciering van de consortiumpartners. Volgens het forfaitaire model betaalt de EU voor resultaten — niet voor overhead. Het betalingsschema is 40% bij de start van het project, 40% bij het tussentijdse verslag (maand 15) en 20% bij het eindverslag."
+      },
+      "q12": {
+        "question": "Wat zal het project opleveren?",
+        "answer": "Resultaten op drie niveaus. Concrete ervaringen: geteste immersieve installaties in Viborg Museum en Le Pavillon, ontworpen voor rondreis en aanpassing. Open kennis: een Open Learning Toolkit met stapsgewijze gidsen, een Futuremakers Toolkit voor participatief toekomstdenken, documentatie van het productieproces en een Outreach Platform voor de bredere erfgoedgemeenschap. Structurele capaciteit: een Business Blueprint die valideert wat operationeel en economisch werkt, en een eindrapport over toekomstontwerp met beleidsaanbevelingen en institutionele routekaarten voor de sector na 2028."
+      },
+      "q13": {
+        "question": "Wat gebeurt er na afloop van het project in 2028?",
+        "answer": "Duurzaamheid is vanaf het begin in het ontwerpproces verankerd — niet behandeld als een bijzaak. De technische architectuur is gebouwd rond modulariteit: content kan tussen locaties reizen, digitale tweelingen maken het mogelijk nieuwe locaties op afstand te plannen, en parametrisch ontwerp vermindert de inspanning om installaties aan te passen. Viborg Museum is van plan Snapsting als permanente installatie te blijven exploiteren. Alle gegenereerde intellectuele eigendom wordt vrij beschikbaar gesteld voor aanpassing, hergebruik en commerciële ontwikkeling. Het streven is methoden, hulpmiddelen en bewezen modellen na te laten die in de hele sector waarde blijven genereren."
+      },
+      "q14": {
+        "question": "Hoe kunnen andere erfgoedinstellingen meedoen?",
+        "answer": "Op meerdere concrete manieren. Het ECHOSYSTEM-platform zal een openbaar portaal omvatten waar cultuurprofessionals toegang krijgen tot conceptversies van toolkits, deelnemen aan fora voor collegiale uitwisseling en zich inschrijven voor evenementen. Maandelijkse Futuremaking-workshops in de partnersteden staan open voor externe professionals. Drie online masterclasses behandelen technische pipelines, creatieve regie en interdisciplinaire samenwerking. De publieke testomgevingen in Le Pavillon en Viborg Museum dienen als levende leeromgevingen. Alle toolkits en opleidingsmaterialen worden gratis beschikbaar in alle tien de partnertalen. Volg het project met #ImmersiveECHO of schrijf je in voor de nieuwsbrief."
+      }
+    }
+  },
+  "partners": {
+    "title": "Het consortium",
+    "coordinator": "Projectcoördinator",
+    "commsDissemination": "Communicatie en verspreiding",
+    "corePartners": "Kernpartners",
+    "lspLocation": "Göteborg, Zweden",
+    "futLocation": "Barcelona, Spanje"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "Over",
+    "partners": "Partners",
+    "experiences": "Ervaringen",
+    "news": "Nieuws en evenementen",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "downloadResources": "Bronnen downloaden",
+    "toggleNavigation": "Navigatie schakelen",
+    "selectLanguage": "Taal selecteren"
+  },
+  "footer": {
+    "quickLinks": "Snelkoppelingen",
+    "aboutProject": "Over het project",
+    "newsletter": "Nieuwsbrief",
+    "followUs": "Volg ons op {{network}}",
+    "euAlt": "Medegefinancierd door de Europese Unie",
+    "euCredit": "Medegefinancierd door de Europese Unie in het kader van het programma Creatief Europa, onderdeel Grootschalige Samenwerking. Subsidieovereenkomst nr. 101255680.",
+    "duration": "Looptijd: feb. 2026 – juli 2028",
+    "coordinator": "Coördinator: Lindholmen Science Park",
+    "partners": "15 partners · 10 landen",
+    "rights": "© {{year}} Immersive ECHO. Alle rechten voorbehouden."
+  },
+  "timeline": {
+    "eyebrow": "Projecttijdlijn · M1 — M30 · feb. 2026 — juli 2028",
+    "heading": "Dertig maanden, in het openbaar.",
+    "lede": "Immersive ECHO is een Creatief Europa-project van 30 maanden: ontwerpen, bouwen, testen, opschalen. Mijlpalen, resultaten en publieke evenementen van het consortium van 15 organisaties in 10 EU-landen. Beweeg met de muis over een maand om te focussen; klik op een item om het te lezen.",
+    "type": {
+      "deliverable": "Resultaat",
+      "milestone": "Mijlpaal",
+      "event": "Evenement"
+    },
+    "stats": {
+      "done": "Klaar",
+      "deliverables": "Resultaten",
+      "milestones": "Mijlpalen",
+      "events": "Evenementen"
+    },
+    "index": "Index",
+    "cols": {
+      "date": "Datum",
+      "type": "Type",
+      "title": "Titel",
+      "status": "Status"
+    },
+    "detail": {
+      "delivered": "✓ Opgeleverd",
+      "inProgress": "● Bezig",
+      "upcoming": "○ Aankomend",
+      "dateTBC": "Datum nog te bevestigen",
+      "prev": "← Vorige",
+      "next": "Volgende →"
+    },
+    "row": {
+      "delivered": "Opgeleverd",
+      "now": "● Nu",
+      "upcoming": "Aankomend",
+      "tbd": "Nog te bepalen"
+    },
+    "today": "VANDAAG",
+    "items": {
+      "ms1-1": { "title": "MS1.1 · Afstemming van het consortium en start", "description": "Alle partners bij de start van het project afgestemd op doelen, methoden, rollen en rapportage." },
+      "ms1-2": { "title": "MS2.1 · Behoeftegestuurd ontwerpkader", "description": "Een strategische ontwerpbriefing op basis van gebruikersreizen, behoeften, gedragingen, institutionele input en maatschappelijke trends." },
+      "ms1-3": { "title": "MS3.1 · Concept en narratief afgerond", "description": "Kernconcept, narratief, volledig script en storyboard voor Snapsting afgerond via een iteratief proces." },
+      "ms1-5": { "title": "MS5.1 · Uitwisselingsnetwerk tussen projecten", "description": "Samenwerkingsnetwerk met andere EU-gefinancierde projecten formeel gestart." },
+      "ms2-2": { "title": "MS2.2 · Lab operationeel, eerste prototypes", "description": "Experimenteel lab volledig operationeel; eerste immersieve prototypes getest en beoordeeld." },
+      "ms3-2": { "title": "MS2.3 · Sprints voor inclusief ontwerp afgerond", "description": "Alle vier de inclusieve co-creatiesprints afgerond; bevindingen geïntegreerd in de ontwerpiteraties." },
+      "ms2-3": { "title": "MS3.2 · Productie van Snapsting afgerond", "description": "Alle elementen van Snapsting afgerond, inclusief content, technologie en ruimtelijk ontwerp." },
+      "ms3-3": { "title": "MS3.3 · Snapsting geïnstalleerd in Viborg", "description": "Snapsting volledig geïnstalleerd en in bedrijf ter plaatse in Viborg Museum." },
+      "ms4-3": { "title": "MS3.4 · Consortiumbijeenkomst en panel", "description": "Alle consortiumpartners komen samen in Viborg, met een paneldiscussie op het Animation Festival." },
+      "ms2-1": { "title": "MS1.2 · Tussentijdse coördinatiebeoordeling", "description": "Beoordeling van voortgang, risico's, samenwerkingskwaliteit en gebruik van middelen op het middelpunt." },
+      "ms2-5": { "title": "MS5.2 · Tussentijdse impactbeoordeling", "description": "Beoordeling op het halverwegepunt van communicatie, kennisoverdracht, betrokkenheid van belanghebbenden en het bereik van de verspreiding." },
+      "ms1-4": { "title": "MS4.1 · Inzetkader en bedrijfsmodel", "description": "Strategieën voor publieke inzet opgezet, samen met een duurzaam bedrijfsmodel dat met de partners is co-ontwikkeld." },
+      "ms4-2": { "title": "MS2.4 · Definitieve concepten gereed", "description": "Prototypes doorontwikkeld op basis van tests; definitieve immersieve ervaringen goedgekeurd voor publieke inzet." },
+      "ms2-4": { "title": "MS4.2 · Publieke testomgeving open in Le Pavillon", "description": "Eerste locatie volledig ingericht, showbesturing gevalideerd; deuren geopend voor het publiek (KIKK-festival, okt. 2027)." },
+      "ms3-4": { "title": "MS4.3 · Analyse over locaties live", "description": "Een centraal dashboard dat bezoekersstromen, betrokkenheid en toegankelijkheidsgegevens in realtime samenbrengt, gaat live." },
+      "ms5-3": { "title": "MS3.5 · Snapsting aangepast voor Le Pavillon", "description": "Snapsting afgestemd op Le Pavillon, met aanpassingen aan narratief, technische opstelling en ruimtelijk ontwerp." },
+      "ms3-5": { "title": "MS5.3 · Hulpbronnen voor capaciteitsopbouw definitief", "description": "Open Learning Toolkit, How-to ECHO-gids, 5D TimeMap en Futuremakers Toolkits afgerond en verspreid." },
+      "ms4-5": { "title": "MS5.4 · Finale impactverspreiding", "description": "Eindrapport over toekomstontwerp dat de resultaten van de strategische vooruitblik en de langetermijntrajecten samenvat." },
+      "ms4-4": { "title": "MS4.4 · Operationele haalbaarheid gerapporteerd", "description": "Kosten, personeel en logistiek geanalyseerd ter ondersteuning van toekomstige adoptie en opschaling." },
+      "ms3-1": { "title": "MS1.3 · Finale coördinatiesamenvatting", "description": "Strategische afronding van de projectoplevering, inclusief belangrijke lessen over coördinatie en besluitvorming." },
+      "d1-1": { "title": "D1.1 · Handboek projectmanagement", "description": "Een praktische gids die de visie, interne coördinatiehulpmiddelen, de rapportagestructuur, de verantwoordelijkheden van partners en gedeelde werkwijzen schetst." },
+      "d5-1": { "title": "D5.1 · Communicatie- en verspreidingsplan", "description": "Geïntegreerde communicatiestrategie. AI-hulpmiddelen zetten projectgegevens om in artikelen, posts, casestudy's en microcontent voor Europese doelgroepen." },
+      "d5-2": { "title": "D5.2 · Projectdashboard", "description": "Realtime digitaal dashboard dat KPI's volgt op de niveaus deelnemer, institutioneel, interinstitutioneel, burgerbetrokkenheid en maatschappelijke impact." },
+      "d2-1": { "title": "D2.1 · Behoeftegestuurde immersieve ontwerpbriefing", "description": "Strategische gids op basis van gebruikersinzichten, institutionele behoeften en maatschappelijke verschuivingen — die ontwerpuitdagingen, persona's, emotionele doelen en technische aannames definieert." },
+      "d3-1": { "title": "D3.1 · Snapsting-ervaring en documentatie", "description": "Afgeronde immersieve ervaring geïnstalleerd in Viborg Museum, plus installatieplannen, bestanden voor interactieontwerp en documentatie voor hergebruik." },
+      "d1-2": { "title": "D1.2 · Tussentijds coördinatie- en risicoverslag", "description": "Evaluatie van voortgang, coördinatiekwaliteit, risicostatus en zelfbeoordelingen van partners, met aanbevelingen." },
+      "d5-3": { "title": "D5.3 · Impact en verspreiding halverwege", "description": "Uitgebreide tussentijdse beoordeling van impact, verspreiding, betrokkenheid, institutionele adoptie en sectoroverschrijdende samenwerking." },
+      "d5-6": { "title": "D5.6 · 5D TimeMap van erfgoedsites", "description": "Interactieve digitale kaart die Europese erfgoedsites verbindt met vijf lagen — ruimtelijk, temporeel, artistiek, politiek, taalkundig. Beschikbaar in 10 EU-talen." },
+      "d2-2": { "title": "D2.2 · Definitieve ontwerpen van de immersieve ervaring", "description": "Volledige pakketten voor de immersieve ervaring voor publieke inzet — narratieven, ruimtelijke / interactieontwerpen, technische opstellingen, ontvangsttrajecten, toegankelijkheid." },
+      "d3-2": { "title": "D3.2 · Snapsting aangepast voor Le Pavillon", "description": "Snapsting aangepast voor Le Pavillon met bijgewerkt narratief, interactie- en ruimtelijk ontwerp, technische opstelling en operationele richtlijnen." },
+      "d5-4": { "title": "D5.4 · Futuremakers Toolkit", "description": "Hybride (fysiek + digitaal) toolkit met participatieve technieken en begeleide activiteiten voor cultuurprofessionals. 10 EU-talen." },
+      "d5-5": { "title": "D5.5 · Outreach Platform", "description": "Met AI versterkt tweerichtingscommunicatieplatform met realtime KPI-dashboard. AI-agentpersona's: museumgids, historische figuur, fictieve mascotte." },
+      "d5-7": { "title": "D5.7 · Prototype Timetravel Companion", "description": "Door AI aangedreven gids die museumbezoeken verrijkt via spraakinteractie, contextueel verhalen vertellen en optionele holografische content. 100 op maat gemaakte apparaten." },
+      "d3-3": { "title": "D3.3 · Verslag over het immersieve productieproces", "description": "Doorloop van het on-site productieproces — narratief, technische beslissingen, samenwerkingsmodel, culturele uitdagingen. Een referentie voor andere instellingen." },
+      "d4-1": { "title": "D4.1 · Verslag operationele inzet", "description": "Stapsgewijze documentatie van de uitrol van de publieke testomgeving: publiekslogistiek, ruimtelijke opstelling, aantekeningen over technische aanpassing." },
+      "d5-8": { "title": "D5.8 · Open Learning Toolkit en How-to-gids", "description": "Modulaire, kant-en-klare bronnen gebouwd op de resultaten van WP2–WP4. Door AI ondersteunde contentgeneratie stemt de bronnen af op institutionele profielen." },
+      "d2-3": { "title": "D2.3 · Finale evaluatie van de immersieve ervaring", "description": "Uitgebreide evaluatie: emotionele impact, toegankelijkheid, systeemprestaties, operationele duurzaamheid." },
+      "d4-2": { "title": "D4.2 · Samenvatting UX en bedrijfsmodel", "description": "Evaluatie van publieksbetrokkenheid, ontvangst-/afsluittrajecten en de haalbaarheid van de op locatie geteste bedrijfsmodellen." },
+      "d5-9": { "title": "D5.9 · Verslag netwerken tussen projecten", "description": "Documenteert de netwerkactiviteiten tussen projecten — bijeenkomsten, gezamenlijke evenementen, belangrijke resultaten, voorstellen voor doorlopende uitwisseling." },
+      "d5-10": { "title": "D5.10 · Eindrapport toekomstontwerp", "description": "Digitaal platform dat de resultaten van het project en het langetermijnpotentieel ervan toont. Door AI aangedreven mediahulpmiddelen personaliseren content in 10 EU-talen." },
+      "e1": { "title": "E1 · Opening van de Snapsting-tentoonstelling", "description": "De immersieve Snapsting-ervaring opent voor het publiek in Viborg Museum. Looptijd van drie jaar.", "tag": "Tentoonstelling · Viborg · 150 000 pax" },
+      "e5": { "title": "E5 · Publieke lancering · KIKK-festival", "description": "Goed zichtbare lancering van de immersieve ervaring op het KIKK-festival 2027. Panel van het consortium.", "tag": "Panel · Namen · 25 000 pax" },
+      "e6": { "title": "E6 · Opening van de Le Pavillon-tentoonstelling", "description": "De Immersive ECHO-tentoonstelling opent voor het publiek in Le Pavillon, Namen.", "tag": "Tentoonstelling · Namen · 25 000 pax" },
+      "e2": { "title": "E2 · Jongerensprint: Future Worlds Builder", "description": "Gebruikersgerichte sprint gericht op digitale vaardigheid en nieuwsgierigheid. 3 dagen.", "tag": "Sprint · Göteborg · 80 pax" },
+      "e3": { "title": "E3 · Neurodivergente sprint", "description": "Niet-lineaire navigatie; zintuiglijke balans en niet-lineaire betrokkenheid. 2 dagen.", "tag": "Sprint · Berlijn · 40 pax" },
+      "e4": { "title": "E4 · Conferentie Echoes of the Future", "description": "Cultureel erfgoed en immersieve innovatie verbinden. Conferentie + panel op het Animation Festival.", "tag": "Conferentie · Viborg · 300 pax" }
+    }
+  }
+}

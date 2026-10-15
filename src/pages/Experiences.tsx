@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { localizePath } from '@/i18n'
 
+// The activities pages are still empty: keep the button hidden until they have content.
+const SHOW_ACTIVITIES_LINK = false
+
 const experiences = [
   {
     id: 'snapsting',
@@ -49,13 +52,15 @@ export default function Experiences() {
             <p className="mb-5" style={{ fontFamily: 'Roboto, sans-serif', color: 'var(--ink-muted)' }}>
               {t(`experiences.${id}.description`)}
             </p>
-            <Link
-              to={lp(activitiesHref)}
-              className="inline-block border border-brand-lilac text-brand-lilac px-4 py-2 text-sm font-bold uppercase rounded-md transition-all duration-300 hover:bg-brand-lilac/10 hover:shadow-[0_0_12px_rgba(218,128,255,0.3)]"
-              style={{ fontFamily: 'Montserrat, sans-serif' }}
-            >
-              {t('experiences.viewActivities')}
-            </Link>
+            {SHOW_ACTIVITIES_LINK && (
+              <Link
+                to={lp(activitiesHref)}
+                className="inline-block border border-brand-lilac text-brand-lilac px-4 py-2 text-sm font-bold uppercase rounded-md transition-all duration-300 hover:bg-brand-lilac/10 hover:shadow-[0_0_12px_rgba(218,128,255,0.3)]"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+              >
+                {t('experiences.viewActivities')}
+              </Link>
+            )}
           </div>
         ))}
       </div>

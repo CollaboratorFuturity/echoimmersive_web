@@ -255,6 +255,12 @@ const [activeTab, setActiveTab] = useState<TabId>('wp')
 ```
 Used on the cream Resources page. Active tab: purple underline + `#8843A3` text. Inactive: charcoal/45. Tab bar scrolls horizontally on mobile (`overflow-x-auto`).
 
+### Accordions (FAQ, Resources)
+Single-open: opening an item closes the previous one, clicking the open item closes it. The parent list owns the open id (`useState<string | null>`) and passes `open` + `onToggle` to controlled rows. Applies to FAQ items, Resources WP rows, Resources task groups, and tasks within a group. Rows are native `<button aria-expanded>` elements. Use the same pattern for any new accordion list.
+
+### Event Duration Label (Resources → Events)
+`days` accepts a number or a string. Numbers render as `Nd` (`3d`); strings render verbatim (`3y`, `6mo`, `TBD`). Use `TBD` when unknown, never `—`.
+
 ### Logos on Cream Background
 White partner logos use `filter: invert(1)` to render as black on the cream `#F7F3E0` page background. Only applies on cream pages — on dark (charcoal) pages logos display as-is.
 ```tsx

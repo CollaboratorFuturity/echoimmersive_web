@@ -148,7 +148,7 @@
       },
       "language": {
         "label": "Idioma preferido",
-        "hint": "Los números se envían en este idioma cuando hay traducción disponible; si no, en inglés."
+        "hint": "Los boletines se envían en este idioma cuando hay traducción disponible; si no, en inglés."
       }
     },
     "consentPrefix": "Acepto la",
@@ -397,7 +397,7 @@
       "MS4-1": { "title": "Marco de despliegue y modelo de negocio definidos", "description": "Estrategias de despliegue público establecidas, junto con un modelo de negocio sostenible codesarrollado con los socios." },
       "MS2-4": { "title": "Diseños de prototipo iterados y conceptos finales listos", "description": "Prototipos evolucionados a partir de las pruebas; experiencias inmersivas finales aprobadas para el despliegue público." },
       "MS4-2": { "title": "Instalación del banco de pruebas público abierta", "description": "Primera sede completamente equipada, control de espectáculo validado; puertas abiertas al público (Festival KIKK, oct. 2027)." },
-      "MS4-3": { "title": "Panel de analítica entre sedes en funcionamiento", "description": "Panel central que agrega en tiempo real el flujo de visitantes, la participación y los datos de accesibilidad entra en funcionamiento." },
+      "MS4-3": { "title": "Panel de analítica entre sedes en funcionamiento", "description": "Entra en funcionamiento el panel central que agrega en tiempo real el flujo de visitantes, la participación y los datos de accesibilidad." },
       "MS3-5": { "title": "Snapsting adaptado para el despliegue en Le Pavillon", "description": "Snapsting adaptado a Le Pavillon, con ajustes en la narrativa, la configuración técnica y el diseño espacial." },
       "MS5-3": { "title": "Recursos de capacitación finalizados", "description": "Kit de Aprendizaje Abierto, Guía How-to ECHO, 5D TimeMap y Kits Futuremakers completados y distribuidos." },
       "MS5-4": { "title": "Difusión final de impacto", "description": "Informe final de Diseño del Futuro que resume los resultados de la prospectiva estratégica y las vías a largo plazo." },
@@ -742,7 +742,7 @@
       },
       "d2-1": {
         "title": "D2.1 · Brief de diseño inmersivo basado en necesidades",
-        "description": "Guía estratégica basada en insights de usuario, necesidades institucionales y cambios sociales — que define los retos de diseño, los personas, los objetivos emocionales y los supuestos técnicos."
+        "description": "Guía estratégica basada en insights de usuario, necesidades institucionales y cambios sociales — que define los retos de diseño, las personas, los objetivos emocionales y los supuestos técnicos."
       },
       "d3-1": {
         "title": "D3.1 · Experiencia Snapsting y documentación",

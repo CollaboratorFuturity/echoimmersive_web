@@ -1,1 +1,701 @@
-{}
+{
+  "home": {
+    "hero": {
+      "badge": "Ustvarjalna Evropa",
+      "titleLine1": "Immersive",
+      "titleLine2": "Echo",
+      "subtitleLine1": "Ustvarjamo kolektivne poglobljene izkušnje",
+      "subtitleLine2": "za evropsko kulturno dediščino"
+    },
+    "scroll": "Pomaknite se",
+    "stats": {
+      "partners": "Partnerjev",
+      "countries": "Držav",
+      "months": "Mesecev",
+      "testbeds": "Javnih preizkusnih okolij"
+    },
+    "missionLabel": "Poslanstvo",
+    "mission": {
+      "p1": "Kulturna dediščina obstaja, ker jo ljudje potrebujejo. Deluje kot živa vez s krajem, s skupnostjo, z zgodbami, ki pojasnjujejo, kdo smo in kako smo prišli sem. A za milijone ljudi po vsej Evropi se ta vez pretrgava. Prostori in oblike, ki naj bi nosili te zgodbe, preprosto niso sledili ljudem, ki naj bi jim služili.",
+      "p2": "Manjše ustanove kulturne dediščine to čutijo najbolj izrazito. Brez sredstev velikih vodilnih ustanov gledajo, kako se njihovo občinstvo krči, kako se mlajše generacije oddaljujejo in kako skupnosti, ki se v njihovih zbirkah nikoli zares niso prepoznale, sploh nehajo prihajati. Orodja za spremembo tega obstajajo. Poglobljene, veččutne izkušnje, ki te zavijejo v zgodbo, namesto da bi ti jo predstavile izza stekla, so preizkušene in zmogljive. A za večino ostajajo nedosegljive.",
+      "p3": "Immersive ECHO izhaja iz drugačne premise: da je dediščina najmočnejša, kadar jo doživljamo kolektivno, v skupnih prostorih, ljudje, ki je morda sami od sebe ne bi poiskali. Poslanstvo projekta je kulturnim ustanovam po vsej Evropi dati konkretna sredstva, da ljudi vrnejo v zgodbo. Njihovo zgodbo."
+    },
+    "quote": "Dediščina je najmočnejša, kadar jo doživljamo kolektivno, v skupnih prostorih, ljudje, ki je morda sami od sebe ne bi poiskali.",
+    "stayConnected": "Ostanite povezani",
+    "newsletter": {
+      "label": "E-novice",
+      "heading": "Spremljajte novosti o Immersive ECHO",
+      "cta": "Naročite se na naše e-novice"
+    }
+  },
+  "about": {
+    "title": "O projektu Immersive ECHO",
+    "objectiveLabel": "Cilj",
+    "objectiveIntro": "Projekt Immersive ECHO ima pet strateških ciljev, zasnovanih za spopadanje z izzivi, s katerimi se soočajo evropske ustanove kulturne dediščine. Ti cilji tvorijo hrbtenico razširljive, vključujoče in trajnostne preobrazbe tega, kako kulturne ustanove pritegnejo občinstvo s poglobljenim pripovedovanjem.",
+    "objectives": {
+      "o1": {
+        "title": "Razviti razširljiv model za poglobljeno kulturno pripovedovanje",
+        "body": "Ustvarili bomo prenosljiv okvir, ki kulturnim ustanovam pomaga sprejeti poglobljene oblike, ki so čustveno privlačne, tehnično izvedljive in gospodarsko vzdržne — ter podpira digitalno preobrazbo celotnega sektorja."
+      },
+      "o2": {
+        "title": "Aktivirati vključujoče prostore z nizkim pragom za soustvarjanje in inovacije",
+        "body": "Vzpostavili bomo eksperimentalne laboratorije, kjer lahko kulturni strokovnjaki, tehnologi in raznoliki uporabniki soustvarjajo, izdelujejo prototipe in preizkušajo poglobljene oblike — s čimer spodbujamo krepitev zmogljivosti in umetniške inovacije po vsej Evropi."
+      },
+      "o3": {
+        "title": "Z namestitvami v resničnem okolju dokazati javno vrednost in vključenost",
+        "body": "Poglobljene izkušnje bomo izvedli tako v javnih kot institucionalnih prostorih, da bi ovrednotili doseg občinstva, čustveni učinek in operativno izvedljivost — ter prispevali k novim modelom razvoja občinstva. Ta dvojna umestitev — tako v skupnostne kot institucionalne prostore — zagotavlja, da poglobljene oblike ne le dosežejo ljudi zunaj prizorišč kulturne dediščine, temveč tudi vodijo novo občinstvo nazaj v kulturne ustanove, povečujejo obisk in oživljajo njihovo javno poslanstvo."
+      },
+      "o4": {
+        "title": "Zgraditi vseevropsko mrežo za izmenjavo znanja in kulturne inovacije",
+        "body": "Krepili bomo medsektorsko sodelovanje s povezovanjem ustanov, ustvarjalcev in tehnoloških partnerjev ter z deljenjem odprto dostopnih orodij in spoznanj, ki omogočajo dolgoročno ponovljivost in usklajenost s politikami."
+      },
+      "o5": {
+        "title": "Z oblikovanjem pospeševati vključenost, dostopnost ter kulturno dobrobit in demokracijo",
+        "body": "V celoten projekt bomo vgradili vključujoče oblikovanje in participativne metode, da bi zagotovili, da poglobljene kulturne izkušnje odražajo raznolikost evropske družbe ter podpirajo socialno kohezijo in dostopnost."
+      }
+    },
+    "quote": "Dediščina je najmočnejša, kadar jo doživljamo kolektivno, v skupnih prostorih, ljudje, ki je morda sami od sebe ne bi poiskali.",
+    "approachDivider": "Pristop",
+    "approach": {
+      "partnersLabel": "Partnerji",
+      "offsite": {
+        "title": "Ekipa za poglobljeno oblikovanje (zunaj)",
+        "desc": "Transdisciplinarni laboratorij, kjer umetniki, tehnologi in strokovnjaki za dediščino skupaj razvijajo poglobljene prototipe skozi sprinte soustvarjanja. Vsak koncept je preizkušen glede dostopnosti in zapakiran v modularne oblike, pripravljene za namestitev na katerem koli prizorišču."
+      },
+      "onsite": {
+        "title": "Ekipa za poglobljeno oblikovanje (na kraju samem)",
+        "desc": "Muzej Viborg kot živa študija primera, ki razvija »Snapsting« z ročno risano animacijo in prostorskim pripovedovanjem. Vsak delovni tok in vsaka odločitev sta dokumentirana, da lahko druge ustanove sledijo isti poti."
+      },
+      "testbed": {
+        "title": "Javno poglobljeno preizkusno okolje",
+        "desc": "Le Pavillon dokončane izkušnje v velikem obsegu odpre pravemu občinstvu, meri vključenost in dostopnost z analitiko, podprto z UI, hkrati pa preizkuša operativne modele za dolgoročno vzdržnost."
+      },
+      "coordination": {
+        "title": "Koordinacija projekta",
+        "desc": "Lindholmen Science Park zagotavlja strateško usklajenost med vsemi partnerji, spremlja mejnike, proračune in rezultate ter obvladuje tveganja in poročanje Evropski komisiji."
+      },
+      "comms": {
+        "title": "Komuniciranje in učinek",
+        "desc": "Futurity Systems rezultate projekta prevaja v modularne komplete orodij in večjezične vsebine, gradi mrežo za učenje med enakovrednimi ter uporablja metode oblikovanja prihodnosti za začrtanje dolgoročnih načrtov za poglobljeno kulturo."
+      }
+    },
+    "infographic": {
+      "title": "Immersive ECHO — dvotirna metodologija oblikovanja",
+      "label": "O projektu:",
+      "caption": "Dvotirno oblikovanje: zunanji laboratorij in muzej na kraju samem se združita v javnem preizkusnem okolju za razširitev poglobljenih izkušenj dediščine."
+    },
+    "factsDivider": "Dejstva o projektu",
+    "fullStructureCta": "Celotna struktura, naloge in rezultati",
+    "projectDetails": "Podrobnosti projekta",
+    "details": {
+      "durationLabel": "Trajanje",
+      "durationValue": "feb. 2026 – jul. 2028",
+      "gaLabel": "Številka GA",
+      "gaValue": "101255680",
+      "fundingLabel": "Financiranje",
+      "fundingValue": "Ustvarjalna Evropa, Sodelovanje velikega obsega",
+      "coordinatorLabel": "Koordinator",
+      "coordinatorValue": "Lindholmen Science Park"
+    }
+  },
+  "experiences": {
+    "title": "Izkušnje",
+    "intro": "Predstavljamo koncept javnih preizkusnih okolij z metodologijo oblikovanja, usmerjenega v potrebe, po vsej Evropi.",
+    "viewActivities": "Oglejte si dejavnosti",
+    "backToExperiences": "← Nazaj na Izkušnje",
+    "snapsting": {
+      "badge": "USTANOVA KULTURNE DEDIŠČINE",
+      "location": "Viborg, Danska",
+      "imageAlt": "Muzej Viborg",
+      "description": "Muzej Viborg je kulturnozgodovinski muzej območja Viborg na Danskem in predstavlja dediščino regije od prazgodovine do danes. V okviru ECHO bo muzej gostil poglobljeno namestitev in svojemu občinstvu prinesel pristop ECHO k poglobljenemu pripovedovanju."
+    },
+    "pavillon": {
+      "badge": "RAZŠIRJANJE IN PRILAGAJANJE",
+      "location": "Namur, Belgija",
+      "imageAlt": "Le Pavillon, Namur",
+      "description": "Le Pavillon je središče KIKK za digitalno umetnost in tehnologijo v Namurju v Belgiji. Poglobljene namestitve ECHO ponuja širokemu občinstvu, ob tem pa zbira podatke o vključenosti in dostopnosti. Več kot 200 šolskih partnerstev letno."
+    },
+    "snapstingPage": {
+      "title": "Viborg Animation Festival · Dejavnosti",
+      "intro": "Pregled dejavnosti preizkusnega okolja na festivalu Viborg Animation Festival v Viborgu na Danskem.",
+      "note": "Opomba: opis procesa od prvih kratkih navodil, prek razvoja koncepta, scenarija, animatika itd., do končne izkušnje. Muzej je »končni režiser« — vodja razstave stoji za mešalno mizo, različni kanali, ki jih lahko meša, pa so scenografi, slikarji, foley umetniki za prostorski zvok, AV-izkušnje, predmeti, besedilo, svetloba itd."
+    },
+    "pavillonPage": {
+      "title": "Le Pavillon · Dejavnosti",
+      "intro": "Pregled dejavnosti preizkusnega okolja v Le Pavillonu v Namurju v Belgiji.",
+      "note": "Opomba: opis procesa od prvih kratkih navodil, prek razvoja koncepta, scenarija, animatika itd., do končne izkušnje. Muzej je »končni režiser«."
+    }
+  },
+  "newsletter": {
+    "intro": "Spremljajte novosti o projektu — novi rezultati, dogodki in ugotovitve iz celotnega konzorcija.",
+    "subscribeHeading": "Naročite se",
+    "fields": {
+      "email": {
+        "label": "E-pošta",
+        "placeholder": "Vnesite svoj e-naslov"
+      },
+      "firstName": {
+        "label": "Ime",
+        "placeholder": "Vnesite svoje ime"
+      },
+      "lastName": {
+        "label": "Priimek",
+        "placeholder": "Vnesite svoj priimek"
+      },
+      "organisation": {
+        "label": "Organizacija",
+        "placeholder": "Vnesite svojo organizacijo"
+      },
+      "language": {
+        "label": "Želeni jezik",
+        "hint": "Izdaje so poslane v tem jeziku, kadar je prevod na voljo, sicer v angleščini."
+      }
+    },
+    "consentPrefix": "Strinjam se s",
+    "privacyPolicy": "pravilnikom o zasebnosti",
+    "consentRequired": "Za naročilo se strinjajte s pravilnikom o zasebnosti.",
+    "subscribe": "Naročite se",
+    "subscribing": "Poteka naročanje …",
+    "backToSite": "Nazaj na spletno mesto",
+    "success": {
+      "inHeading": "Prijavljeni ste!",
+      "inBody": "Pozdravno sporočilo smo poslali na {{email}}. Oglasili se bomo, ko bo kaj vrednega deljenja.",
+      "alreadyHeading": "Že naročeni!",
+      "alreadyBody": "{{email}} je že na našem seznamu. Nobeno dejanje ni potrebno.",
+      "updatedHeading": "Nastavitve posodobljene",
+      "updatedBody": "Vaše nastavitve naročnine smo posodobili. Novo sporočilo ni bilo poslano."
+    }
+  },
+  "newsletterEmail": {
+    "unsubscribe": "Odjava",
+    "footer": "To sporočilo prejemate, ker ste se naročili na e-novice Immersive ECHO."
+  },
+  "underConstruction": {
+    "eyebrow": "Ustvarjalna Evropa · 2026–2028",
+    "headingLine1": "Nekaj",
+    "headingLine2": "prihaja.",
+    "subline": "Immersive ECHO je vseevropski projekt, ki ustvarja kolektivne izkušnje kulturne dediščine. To spletno mesto bo kmalu na voljo.",
+    "euCredit": "Sofinancira Evropska unija · Ustvarjalna Evropa · GA št. 101255680"
+  },
+  "resources": {
+    "backToAbout": "← Nazaj na O projektu",
+    "eyebrow": "Za partnerje in ocenjevalce",
+    "title": "Viri projekta",
+    "intro": "Referenčni indeks strukture projekta: delovni sklopi, naloge, mejniki, rezultati in dogodki. Vir: vloga za nepovratna sredstva CREA-CULT-2025-COOP-3. Namenjeno partnerjem konzorcija, ocenjevalcem in pregledovalcem Evropske komisije.",
+    "objectives": "Cilji",
+    "partnersLabel": "Partnerji",
+    "leadPrefix": "Vodja:",
+    "tasksCount_one": "{{count}} naloga",
+    "tasksCount_two": "{{count}} nalogi",
+    "tasksCount_few": "{{count}} naloge",
+    "tasksCount_other": "{{count}} nalog",
+    "accessFile": "Odpri datoteko →",
+    "accessFileAria": "Odpri datoteko: {{title}}",
+    "pending": "V teku",
+    "tabs": {
+      "wp": "Delovni sklopi",
+      "tasks": "Naloge",
+      "milestones": "Mejniki",
+      "deliverables": "Rezultati",
+      "events": "Dogodki",
+      "media": "Mediji / Znamka",
+      "presskit": "Komplet za medije"
+    },
+    "tabSubtitles": {
+      "wp": "Pet med seboj povezanih delovnih sklopov strukturira 30-mesečno izvajanje projekta.",
+      "tasks": "Naloge, razvrščene po nadrejenem delovnem sklopu. Kliknite skupino za razširitev; kliknite nalogo za branje celotnega opisa.",
+      "milestones": "Kontrolne točke projekta, razvrščene kronološko po mesecu zapadlosti.",
+      "deliverables": "Rezultati projekta z vrsto, ravnjo razširjanja in datumom zapadlosti.",
+      "events": "Delavnice, mojstrski tečaji, razstave, konference in okrogle mize, ki jih organizira konzorcij.",
+      "media": "Viri znamke in datoteke vizualne identitete projekta Immersive ECHO.",
+      "presskit": "Gradivo za medije za novinarje in medijske partnerje, ki poročajo o projektu Immersive ECHO."
+    },
+    "wp": {
+      "WP1": {
+        "title": "Vodenje in koordinacija projekta",
+        "short": "Strateška usklajenost, mejniki, proračuni, obvladovanje tveganj in povezava z Evropsko komisijo po celotnem konzorciju.",
+        "obj": {
+          "0": "Zagotoviti strateško, pregledno in vključujočo koordinacijo, da bi vsi partnerji učinkovito prispevali k ciljem projekta.",
+          "1": "Spremljati časovnice, rezultate in finančni napredek, da bi zagotovili odgovornost in učinkovito rabo virov.",
+          "2": "Olajšati jasno in nepretrgano komunikacijo z Evropsko komisijo ter zagotoviti skladnost z vsemi regulativnimi zahtevami in zahtevami glede poročanja.",
+          "3": "Proaktivno prepoznavati in obvladovati tveganja, da bi zavarovali izvedbo, okrepili odpornost in zagotovili rezultate z velikim učinkom, usklajene s prednostnimi nalogami CREA."
+        }
+      },
+      "WP2": {
+        "title": "Ekipa za poglobljeno oblikovanje (zunaj)",
+        "short": "Transdisciplinarni laboratorij, kjer umetniki, tehnologi in strokovnjaki za dediščino skupaj razvijajo poglobljene prototipe skozi sprinte soustvarjanja.",
+        "obj": {
+          "0": "Razumeti spreminjajoče se potrebe uporabnikov in institucionalne danosti — opredeliti področja priložnosti na podlagi raziskav uporabnikov, institucionalnih ciljev in družbenih premikov.",
+          "1": "Oblikovati in izdelovati prototipe vključujočih, razširljivih poglobljenih oblik — razvijati koncepte, ki ustrezajo potrebam, zgodaj preveriti predpostavke in iterativno izpopolnjevati.",
+          "2": "V proces oblikovanja vključiti eksperimentalni laboratorij z nizkim pragom za soustvarjanje, preizkušanje in iteracijo z raznolikim občinstvom.",
+          "3": "Ovrednotiti uporabniško izkušnjo, tehnično izvedljivost in gospodarsko vzdržnost — nenehno zbirati povratne informacije za izpopolnjevanje izkušenj.",
+          "4": "Voditi končno izpopolnjevanje in pripravo na javna preizkusna okolja — dokončati poglobljene izkušnje, ki so čustveno odmevne, tehnično stabilne in dostopne.",
+          "5": "Primerjati in izmenjavati med poglobljenim oblikovanjem na kraju samem in zunaj — strukturirana izmenjava med Snapstingom in procesi zunanjega laboratorija."
+        }
+      },
+      "WP3": {
+        "title": "Ekipa za poglobljeno oblikovanje (na kraju samem)",
+        "short": "Muzej Viborg deluje kot živa študija primera in razvija »Snapsting« z ročno risano animacijo in prostorskim pripovedovanjem.",
+        "obj": {
+          "0": "Preizkusiti celoten življenjski cikel poglobljenega pripovedovanja v resničnem muzejskem okolju — razvoj koncepta, scenarij, sodelovanje, vključitev tehnologije, produkcija in zagon.",
+          "1": "Izmeriti učinek na občinstvo — zbirati podatke o čustveni vključenosti, kulturnem učenju in dostopnosti.",
+          "2": "Prepoznati, kaj deluje za male in srednje ustanove — dokumentirati delovne tokove, izzive in potrebe po virih.",
+          "3": "Primerjati in izmenjavati med poglobljenim oblikovanjem na kraju samem in zunaj — glejte WP2."
+        }
+      },
+      "WP4": {
+        "title": "Javna preizkusna okolja",
+        "short": "Le Pavillon dokončane izkušnje v velikem obsegu odpre pravemu občinstvu ter meri vključenost in dostopnost z analitiko, podprto z UI.",
+        "obj": {
+          "0": "Namestiti poglobljeno izkušnjo na javnem, dobro dostopnem prizorišču — premostiti vrzel med izdelavo prototipov in resničnostjo.",
+          "1": "Ovrednotiti uporabniško izkušnjo v živo v velikem obsegu — izmeriti čustveni odziv, dostopnost, vzorce interakcije in ohranjanje obiskovalcev.",
+          "2": "Preizkusiti procese sprejema in zaključka — oznake, vodeni vstop/izhod in priložnosti za razmislek.",
+          "3": "Preveriti operativno in gospodarsko vzdržnost — strategije prodaje vstopnic, operativne postavitve, kadrovske potrebe in tehnične zahteve.",
+          "4": "Ustvariti priložnosti za učenje za kulturne strokovnjake — partnerski muzeji in organizacije dediščine so povabljeni k opazovanju in sodelovanju."
+        }
+      },
+      "WP5": {
+        "title": "Komuniciranje, razširjanje in učinek",
+        "short": "Rezultate projekta prevaja v modularne komplete orodij, večjezične vsebine in mrežo za učenje med enakovrednimi za evropski sektor kulturne dediščine.",
+        "obj": {
+          "0": "Komuniciranje — strateški, ciljno usmerjeni ukrepi za promocijo projekta in zagotavljanje prepoznavnosti nepovratnih sredstev EU.",
+          "1": "Razširjanje — deliti rezultate projekta s kulturnim sektorjem, ustanovami dediščine, organi EU in širšo javnostjo.",
+          "2": "Izkoriščanje — olajšati uporabo dosežkov projekta v novih pobudah, trženju in sodelovanjih.",
+          "3": "Okrepiti prepoznavnost in vključenost — izkoristiti sodobno pripovedovanje in ustvarjanje vsebin z UI po vsej Evropi.",
+          "4": "Krepitev zmogljivosti — razvijati komplete orodij, olajšati učenje med enakovrednimi in ponuditi mentorske programe za kulturne ustanove.",
+          "5": "V prihodnost usmerjeno oblikovanje — uporabiti metode oblikovanja prihodnosti za zamišljanje prepričljivih prihodnosti poglobljene kulture."
+        }
+      }
+    },
+    "taskGroup": {
+      "T1": { "title": "Vodenje in koordinacija projekta" },
+      "T2": { "title": "Ekipa za poglobljeno oblikovanje (zunaj)" },
+      "T3": { "title": "Ekipa za poglobljeno oblikovanje (na kraju samem)" },
+      "T4": { "title": "Javna preizkusna okolja" },
+      "T5": { "title": "Komuniciranje, razširjanje in učinek" }
+    },
+    "task": {
+      "T1-1": {
+        "title": "Voditi strateško koordinacijo",
+        "description": "Zagotoviti nemoteno sodelovanje s partnerji, uskladiti časovnice in cilje ter zagotavljati splošno usmeritev skozi celoten življenjski cikel projekta."
+      },
+      "T1-2": {
+        "title": "Spremljati napredek, tveganja in proračun",
+        "description": "Spremljati mejnike, rezultate, skladnost z zelenim kontrolnim seznamom (Green) in finančne tokove ter proaktivno obvladovati tveganja za zagotavljanje preglednosti in odgovornosti."
+      },
+      "T1-3": {
+        "title": "Upravljati komunikacijo in poročanje",
+        "description": "Olajšati jasno interno komunikacijo, pripraviti poročila za EU in zagotoviti skladnost z upravnimi in pravnimi obveznostmi. Udeleženci: TSC, NPIAT, GPI, YOU, TPL, KIKK, FUT, AIRA, ID20, VIB, VGR, SOFP (BEN); COG, TAW (AP)."
+      },
+      "T2-1": {
+        "title": "Odkrivanje potreb, raziskave in temelji oblikovanja",
+        "description": "Raziskati in opredeliti temelje za raznoliko ciljno občinstvo z določitvijo potreb, institucionalnih danosti, družbenih trendov in zgodnje tehnične izvedljivosti. Pojasniti tehnološko zrelost in morebitne operativne izzive, preden se preide na izdelavo prototipov."
+      },
+      "T2-2": {
+        "title": "Sodelovalno oblikovanje in izdelava prototipov v laboratorijih",
+        "description": "Raziskave pretvoriti v hitre prototipe, preizkušene neposredno v eksperimentalnem laboratoriju. Oblikovalska ekipa, muzejski partnerji in uporabniki soustvarjajo poglobljene koncepte skozi iterativne cikle oblikovanja, preizkušanja in izboljševanja."
+      },
+      "T2-3": {
+        "title": "Sprinti vključujočega oblikovanja",
+        "description": "Izvesti štiri osredotočene sprinte za vključitev raznolikih perspektiv: 1) Mladinski sprint — digitalna spretnost in radovednost; 2) Nevrodivergentni sprint — čutno ravnovesje in nelinearna vključenost; 3) Sprint za starejše — navigacija, tempo in dostopnost; 4) Sprint za marginalizirane skupine — okrepiti glasove, ki so pogosto izključeni iz prevladujočega oblikovanja. Vsak sprint oblikuje osrednje vidike pripovedovanja, interakcije in poteka izkušnje."
+      },
+      "T2-4": {
+        "title": "Oblikovanje za razširljivost in prenosljivost",
+        "description": "Uporabiti načela oblikovanja, orodja in delovne tokove, ki podpirajo razširljivost in prenosljivost poglobljenih izkušenj med različnimi kulturnimi prizorišči. Vključuje modularne pristope k oblikovanju, prilagodljive pripovedne strukture in prožne postavitve za velike in male ustanove."
+      },
+      "T2-5": {
+        "title": "Virtualni dostop do eksperimentalnega laboratorija",
+        "description": "Izkoristiti modularno oblikovanje in tehnologijo digitalnega dvojčka, da bi izkušnjo naredili dostopno za široko, vseevropsko preizkušanje. Virtualna okolja posnemajo fizične namestitve in raznolikemu občinstvu omogočajo, da sodeluje in podaja povratne informacije na daljavo."
+      },
+      "T2-6": {
+        "title": "Končno oblikovanje izkušnje za javna preizkusna okolja",
+        "description": "Prilagoditi in dokončati poglobljene izkušnje za javna prizorišča ter zagotoviti pripravljenost na interakcijo z uporabniki v velikem obsegu. Končno oblikovanje vključuje čustveno pripovedovanje, robustne tehnične postavitve, poti dostopnosti in trajnostne operativne modele. Podizvajalske pogodbe: S1.1, S1.2."
+      },
+      "T2-7": {
+        "title": "Sinteza eksperimentalnih spoznanj",
+        "description": "Analizirati spoznanja iz laboratorijskih dejavnosti, javnih preizkusnih okolij, povratnih informacij uporabnikov in tehnične validacije. Uporabiti orodja, podprta z UI, za sintezo rezultatov iz nadzorovanih in resničnih okolij v konkretne izboljšave za končno izvedbo izkušnje."
+      },
+      "T3-1": {
+        "title": "Vključitev v tok znanja ECHO",
+        "description": "Neprekinjeno deliti rezultate s celotnim konzorcijem. Usklajevati z WP2 in vodstvom projekta, da bi zagotovili sprotni prenos spoznanj iz oblikovanja, preizkušanja in izvedbe. Podizvajalske pogodbe: S2.1, S2.2, S2.3."
+      },
+      "T3-2": {
+        "title": "Produkcija izkušnje Snapsting v polnem obsegu",
+        "description": "Razviti poglobljeno pripovedno izkušnjo iz nič. Vključuje opredelitev koncepta, animatik, pisanje scenarija, produkcijo (animacija, ozadja, oblikovanje in kompozicija zvoka), AV- in tehnološko vključitev, prostorsko in čutno oblikovanje, preizkušanje in namestitev. Podizvajalske pogodbe: S2.1–S2.4."
+      },
+      "T3-3": {
+        "title": "Preizkušanje z občinstvom in vrednotenje",
+        "description": "Izvesti strukturirano vrednotenje izkušnje po zagonu. Zbrati kvalitativne in kvantitativne povratne informacije o uporabnosti, vključenosti, dostopnosti ter čustvenem/izobraževalnem učinku. Podizvajalske pogodbe: S2.1."
+      },
+      "T3-4": {
+        "title": "Prilagoditev za namestitev pri KIKK (Le Pavillon)",
+        "description": "Pripraviti izkušnjo Snapsting za izvedbo v Le Pavillonu kot del dejavnosti javnega preizkusnega okolja WP4. Zagotavlja sodelovanje med delovnimi sklopi in izboljšave na podlagi povratnih informacij občinstva iz WP4. Podizvajalske pogodbe: S2.1–S2.4."
+      },
+      "T4-1": {
+        "title": "Priprava na javno namestitev",
+        "description": "Uskladiti tehnično, metodološko in komunikacijsko podlago, potrebno za uspešno javno namestitev. Vključuje metodologije preizkušanja, strategije sprejema občinstva, protokole zbiranja podatkov, načrtovanje namestitve na kraju samem, sprejem obiskovalcev, vidike dostopnosti in komunikacijske tokove."
+      },
+      "T4-2": {
+        "title": "Razvoj poslovnega modela za trajnostno namestitev",
+        "description": "Soustvariti trajnosten poslovni model za poglobljene izkušnje, usklajen s socialno-ekonomskimi okoliščinami prizorišč namestitve in strateškimi cilji konzorcija ECHO. Rezultati bodo podpirali dolgoročno vzdržnost tudi po izteku projekta."
+      },
+      "T4-3": {
+        "title": "Javna namestitev in delovanje",
+        "description": "Namestiti dokončane poglobljene izkušnje v Le Pavillonu s popolno tehnično in pripovedno vključitvijo, vključno z usposabljanjem lokalnega osebja, vzdrževanjem, priložnostno prodajalno in posredovanimi dejavnostmi za zagotavljanje kakovostnih izkušenj obiskovalcev."
+      },
+      "T4-4": {
+        "title": "Javni zagon na festivalu KIKK (okt. 2027)",
+        "description": "Začeti javno uvedbo poglobljene izkušnje z dobro vidnim zagonom na festivalu KIKK 2027. Vključuje namensko okroglo mizo s člani konzorcija ECHO, ki projekt umešča v širši kulturni in inovacijski kontekst."
+      },
+      "T4-5": {
+        "title": "Analitika občinstva in poti obiska",
+        "description": "Zbrati kvantitativne podatke (tokovi, čas zadrževanja, konverzija, potrebe po dostopu) in kvalitativne podatke (ankete, intervjuji, opazovanje) z nadzornimi ploščami, podprtimi z UI; spoznanja vrniti v WP2 in WP5."
+      },
+      "T4-6": {
+        "title": "Ovrednotiti poslovne modele in delovanje",
+        "description": "Preizkusiti operativne modele, kadrovske potrebe, stroškovne strukture in scenarije delitve prihodkov ter sintetizirati »poslovni načrt« za prihodnje uporabnike, da bi ocenili gospodarsko in organizacijsko vzdržnost razširjanja poglobljenih oblik."
+      },
+      "T5-1": {
+        "title": "Izvajati interno komunikacijo projekta",
+        "description": "Vzpostaviti orodja in predloge interne komunikacije za podporo koordinaciji, zagotoviti skladnost s standardi EU ter omogočiti učinkovito deljenje dokumentov. Zagnati nadzorno ploščo KPI, ki spremlja napredek med udeleženci in ustanovami."
+      },
+      "T5-2": {
+        "title": "Etika in vrednotenje komuniciranja z UI",
+        "description": "Gostiti delavnice o etiki UI za člane konzorcija in kulturne ustanove. Naročiti zunanje vrednotenje uporabe UI v WP5 pri ustvarjanju vsebin, dostopnosti in orodjih za interakcijo z občinstvom. Ugotovitve vključiti v vmesno in končno poročilo."
+      },
+      "T5-3": {
+        "title": "Mreženje med projekti in gradnja skupnosti",
+        "description": "Olajšati strukturirano izmenjavo z drugimi projekti, ki jih financira EU, skozi skupne delavnice, okrogle mize in tematska srečanja. Gradi »skupnost prakse« okoli poglobljenih kulturnih izkušenj in spodbuja mrežo skupnih interesov med konzorciji."
+      },
+      "T5-4": {
+        "title": "Prenos znanja in krepitev zmogljivosti",
+        "description": "Rezultate projekta prevesti v praktične oblike: odprti kompleti orodij, predloge, delavnice, okrogle mize in mojstrski tečaji na konferencah ter uvodni vodniki. Orodja UI podpirajo prilagajanje vsebin različnim ustanovam glede na velikost, vrsto občinstva in digitalno zrelost."
+      },
+      "T5-5": {
+        "title": "Participativne prihodnosti in ustvarjanje prihodnosti",
+        "description": "Voditi mesečne delavnice ustvarjanja prihodnosti (Futuremaking), ki ustvarjajo scenarije, špekulativne oblikovalske artefakte in komplet orodij Futuremakers (digitalni + fizični). Soustvariti 5D TimeMap — digitalno platformo, ki povezuje prostor, čas in kulturne plasti."
+      },
+      "T5-6": {
+        "title": "Orodja za interakcijo z javnostjo in ozaveščanje",
+        "description": "Namestiti platformo Outreach za odprto interakcijo med občinstvom in konzorcijem. Razviti in pilotno preizkusiti Timetravel Companion — pogovorno orodje UI, ki krepi vključenost občinstva v poglobljene namestitve."
+      },
+      "T5-7": {
+        "title": "Oblikovanje prihodnosti in dolgoročna vizija",
+        "description": "Z metodologijami pod vodstvom Futurity Systems soustvariti vizijo prihodnosti za poglobljeno kulturno inovacijo. Scenarijski pozivi, ustvarjeni z UI, in gručenje spoznanj bodo pomagali prepoznati nastajajoče trende, družbene potrebe in priložnosti na ravni sistema — ter začrtati evropski načrt za poglobljeno kulturo."
+      }
+    },
+    "ms": {
+      "MS1-1": { "title": "Uskladitev konzorcija in zagon", "description": "Vsi partnerji ob začetku projekta usklajeni glede ciljev, metod, vlog in poročanja." },
+      "MS2-1": { "title": "Vzpostavljen okvir oblikovanja, usmerjen v potrebe", "description": "Strateški oblikovalski brief na podlagi uporabniških poti, potreb, vedenj, institucionalnih prispevkov in družbenih trendov." },
+      "MS3-1": { "title": "Razvoj koncepta in pripovedi dokončan", "description": "Osrednji koncept, pripoved, celoten scenarij in zgodboris za Snapsting dokončani skozi iterativni proces." },
+      "MS5-1": { "title": "Vzpostavljena mreža izmenjave med projekti", "description": "Mreža sodelovanja z drugimi projekti, ki jih financira EU, uradno vzpostavljena." },
+      "MS2-2": { "title": "Laboratorij deluje in prvi prototipi preizkušeni", "description": "Eksperimentalni laboratorij polno deluje; prvi poglobljeni prototipi preizkušeni in pregledani." },
+      "MS2-3": { "title": "Serija sprintov vključujočega oblikovanja zaključena", "description": "Vseh štirih sprintov vključujočega soustvarjanja zaključenih; spoznanja vključena v iteracije oblikovanja." },
+      "MS3-2": { "title": "Končna produkcija zaključena", "description": "Vsi elementi Snapstinga dokončani, vključno z vsebino, tehnologijo in prostorskim oblikovanjem." },
+      "MS3-3": { "title": "Izkušnja nameščena in v delovanju", "description": "Snapsting v celoti nameščen in deluje na kraju samem v Muzeju Viborg." },
+      "MS3-4": { "title": "Srečanje konzorcija in okrogla miza", "description": "Vsi partnerji konzorcija se zberejo v Viborgu, z okroglo mizo na Animation Festivalu." },
+      "MS1-2": { "title": "Vmesni pregled koordinacije", "description": "Pregled napredka, tveganj, kakovosti sodelovanja in rabe virov na sredini poti." },
+      "MS5-2": { "title": "Vmesni pregled učinka zaključen", "description": "Pregled na sredini poti, ki vrednoti komuniciranje, prenos znanja, vključenost deležnikov in doseg razširjanja." },
+      "MS4-1": { "title": "Opredeljen okvir namestitve in poslovni model", "description": "Strategije za javno namestitev vzpostavljene skupaj s trajnostnim poslovnim modelom, soustvarjenim s partnerji." },
+      "MS2-4": { "title": "Oblikovanja prototipov iterirana in končni koncepti pripravljeni", "description": "Prototipi razviti na podlagi preizkušanja; končne poglobljene izkušnje odobrene za javno namestitev." },
+      "MS4-2": { "title": "Namestitev javnega preizkusnega okolja odprta", "description": "Prvo prizorišče v celoti opremljeno, krmiljenje predstave potrjeno; vrata odprta za javnost (festival KIKK, okt. 2027)." },
+      "MS4-3": { "title": "Nadzorna plošča analitike med prizorišči deluje", "description": "Osrednja nadzorna plošča, ki v realnem času združuje tok obiskovalcev, vključenost in podatke o dostopnosti, začne delovati." },
+      "MS3-5": { "title": "Snapsting prilagojen za namestitev v Le Pavillonu", "description": "Snapsting prilagojen Le Pavillonu, s prilagoditvami pripovedi, tehnične postavitve in prostorskega oblikovanja." },
+      "MS5-3": { "title": "Viri za krepitev zmogljivosti dokončani", "description": "Open Learning Toolkit, vodnik How-to ECHO, 5D TimeMap in kompleti orodij Futuremakers dokončani in razdeljeni." },
+      "MS5-4": { "title": "Končno razširjanje učinka", "description": "Končno poročilo o oblikovanju prihodnosti, ki povzema rezultate strateškega predvidevanja in dolgoročne poti." },
+      "MS4-4": { "title": "Poročana operativna in poslovna izvedljivost", "description": "Stroški, kadri in logistika analizirani za podporo prihodnjemu sprejetju in razširitvi." },
+      "MS1-3": { "title": "Končni povzetek koordinacije", "description": "Strateški zaključek izvedbe projekta, vključno s ključnimi spoznanji o koordinaciji in odločanju." }
+    },
+    "d": {
+      "D1-1": { "title": "Priročnik za vodenje projekta", "description": "[ANG] Praktičen vodnik, ki opisuje vizijo, usklajen z orodji interne koordinacije, strukturo poročanja, odgovornostmi partnerjev in skupnimi delovnimi tokovi. Vključuje predloge in kontrolne sezname." },
+      "D1-2": { "title": "Vmesno poročilo o koordinaciji in tveganjih", "description": "[ANG] Vrednotenje napredka, kakovosti koordinacije, stanja tveganj in samoocen partnerjev. Vključuje priporočila za izboljšave." },
+      "D2-1": { "title": "Brief poglobljenega oblikovanja, usmerjen v potrebe", "description": "[ANG] Jasen strateški vodnik na podlagi spoznanj o uporabnikih, institucionalnih potreb in družbenih premikov — ki opredeljuje izzive oblikovanja, uporabniške persone, čustvene cilje in tehnične predpostavke." },
+      "D2-2": { "title": "Končna oblikovanja poglobljene izkušnje", "description": "[Jezik še ni določen] Celoviti paketi poglobljene izkušnje za javno namestitev, vključno s pripovedmi, prostorskimi in interakcijskimi oblikovanji, tehničnimi postavitvami, vodniki za sprejem/zaključek in rešitvami za dostopnost." },
+      "D2-3": { "title": "Končno vrednotenje poglobljene izkušnje", "description": "[ANG] Celovito vrednotenje uporabniške izkušnje, tehnične izvedljivosti in gospodarske vzdržnosti. Vključuje analizo čustvenega učinka, pregled dostopnosti, preizkuse zmogljivosti sistema in preverjanja operativne trajnosti." },
+      "D3-1": { "title": "Poglobljena izkušnja Snapsting in dokumentacija", "description": "[DANSKO & ANG] Dokončana poglobljena izkušnja, nameščena in v delovanju v Muzeju Viborg. Vključuje načrte namestitve, datoteke oblikovanja interakcije in dokumentacijo za ponovno uporabo ali prilagoditev." },
+      "D3-2": { "title": "Prilagojen paket izkušnje Snapsting za Le Pavillon", "description": "[ANG] Prilagojena različica poglobljene izkušnje Snapsting, zasnovana za namestitev v Le Pavillonu. Vključuje posodobljeno pripoved, interakcijsko in prostorsko oblikovanje, tehnično postavitev in operativne smernice." },
+      "D3-3": { "title": "Poročilo o procesu poglobljene produkcije", "description": "[ANG] Praktičen prehod skozi proces produkcije na kraju samem. Vključuje razvoj pripovedi, tehnične odločitve, model sodelovanja in premagane kulturne izzive — zasnovano kot referenca za druge ustanove." },
+      "D4-1": { "title": "Poročilo o operativni namestitvi", "description": "[ANG] Dokumentacija uvedbe javnega preizkusnega okolja korak za korakom, vključno z logistiko občinstva, prostorsko postavitvijo in opombami o tehnični prilagoditvi." },
+      "D4-2": { "title": "Povzetek uporabniške izkušnje in poslovnega modela", "description": "[ANG] Vrednotenje vključenosti občinstva, poti sprejema/zaključka in izvedljivosti poslovnih modelov, preizkušenih na prizorišču." },
+      "D5-1": { "title": "Načrt komuniciranja in razširjanja", "description": "[ANG] Integrirana komunikacijska strategija in načrt za široko deljenje rezultatov. Orodja UI podatke projekta pretvorijo v članke, objave, študije primerov in mikrovsebine, prilagojene različnim evropskim občinstvom. Ustvarjanje v skladu s politiko EU o UI, zasebnosti in tehnološki etiki." },
+      "D5-2": { "title": "Nadzorna plošča projekta", "description": "Spletno mesto z digitalno nadzorno ploščo v realnem času, ki spremlja in vizualizira KPI na več ravneh: prispevki posameznih udeležencev, znotrajinstitucionalni delovni tokovi, medinstitucionalno sodelovanje, ocena državljanske vključenosti in širši družbeni učinek. Javni del + zasebna območja za ustanove, oblikovalce politik in deležnike." },
+      "D5-3": { "title": "Vmesno poročilo o učinku in razširjanju", "description": "Celovit pregled učinka projekta, dejavnosti razširjanja in komunikacijskih rezultatov na sredini poti. Vrednoti kazalnike vključenosti, institucionalno sprejetje, učinkovitost prenosa znanja in medsektorsko sodelovanje." },
+      "D5-4": { "title": "Komplet orodij Futuremakers", "description": "Hibriden (fizični in digitalni) komplet orodij, ki združuje participativne tehnike, gradiva in vodene dejavnosti, ki kulturne strokovnjake učijo zamišljati bolj vključujoče, odporne prihodnosti. Na voljo v 10 jezikih EU. Fizično: delovni zvezki, kompleti kart, obstojni igralni elementi iz trajnostnih materialov. Digitalno: medijske vsebine + interaktivna tabla za več uporabnikov." },
+      "D5-5": { "title": "Platforma Outreach", "description": "Z UI okrepljena platforma za dvosmerno komunikacijo brez trenj med projektom, ustanovami in občinstvom. Vključuje operativno nadzorno ploščo KPI v realnem času. Platforma v angleščini; agenti in vsebine UI v 10 jezikih EU. Vključuje persone agentov UI (muzejski vodnik, zgodovinska osebnost, izmišljena maskota) in orodje, s katerim ustanove ustvarijo svoje." },
+      "D5-6": { "title": "5D TimeMap območij kulturne dediščine", "description": "Interaktivni digitalni zemljevid, ki območja kulturne dediščine po vsej Evropi povezuje z njihovimi ustanovami, obogaten s petimi razsežnostmi: prostorsko, časovno in tremi tematskimi plastmi (umetniško, politično, jezikovno). Na voljo na kraju samem, na računalnikih in na mobilnih napravah v 10 jezikih EU." },
+      "D5-7": { "title": "Prototip Timetravel Companion", "description": "Delujoč prototip Timetravel Companion — vodnik, ki ga poganja UI in ki obogati obiske muzejev ter poglobljene namestitve z glasovno interakcijo, kontekstualnim pripovedovanjem in izbirno holografsko vsebino. Vključuje vmesnik aplikacije, module vsebine, dokumentacijo preizkusov z uporabniki in vrednotenje dostopnosti v 10 jezikih EU. Za namestitve bo izdelanih 100 odprtokodnih naprav po meri." },
+      "D5-8": { "title": "Open Learning Toolkit in vodnik How-to ECHO", "description": "Paket informacij, navodil in orodij, ki novim kulturnim ustanovam omogoča, da komplet orodij ECHO izvedejo od začetka do konca. Modularni viri, pripravljeni za uporabo, zgrajeni na rezultatih WP2–WP4, v 10 jezikih EU." },
+      "D5-9": { "title": "Poročilo o mreženju med projekti", "description": "Celovito poročilo, ki dokumentira dejavnosti mreženja med projekti, vključno s srečanji, skupnimi dogodki, ključnimi rezultati in predlogi za nadaljnjo izmenjavo." },
+      "D5-10": { "title": "Končno poročilo o oblikovanju prihodnosti", "description": "Digitalna platforma, ki prikazuje rezultate projekta in njegov dolgoročni potencial. Medijska orodja, ki jih poganja UI, vsebino prilagajajo udeležencem in spoznanja projekta prevajajo v deljive oblike v 10 jezikih EU." }
+    },
+    "dStatus": {
+      "D5-2": "Tukaj ste!"
+    },
+    "event": {
+      "E1": { "name": "Mladinski sprint: Future Worlds Builder", "type": "Sprint, usmerjen v uporabnika" },
+      "E2": { "name": "Nevrodivergentni sprint: nelinearna navigacija", "type": "Sprint, usmerjen v uporabnika" },
+      "E3": { "name": "Poglobljena izkušnja Snapsting", "type": "Razstava" },
+      "E4": { "name": "Echoes of the Future: povezovanje kulturne dediščine in poglobljene inovacije", "type": "Konferenca" },
+      "E5": { "name": "Immersive ECHO: kulturna dediščina za prihodnost", "type": "Okrogla miza" },
+      "E6": { "name": "Immersive ECHO", "type": "Razstava" },
+      "E7": { "name": "Špekulativna izdelava prototipov", "type": "Delavnica" },
+      "E8": { "name": "Čutno kartiranje in interakcija", "type": "Delavnica" },
+      "E9": { "name": "Sprint za starejše: utelešena in digitalna navigacija", "type": "Sprint, usmerjen v uporabnika" },
+      "E10": { "name": "Sprint za marginalizirane skupine", "type": "Sprint, usmerjen v uporabnika" },
+      "E11": { "name": "Delavnice o digitalnem dvojčku in preizkušanju na daljavo", "type": "Preizkušanje z uporabniki" },
+      "E12": { "name": "Oblikovanje za razširljivost in pripravljenost na gostovanje", "type": "Delavnica" },
+      "E13": { "name": "Tehnologija in inovacije za poglobljeno pripovedovanje", "type": "Mojstrski tečaj" },
+      "E14": { "name": "Ustvarjalno vodenje in animacijski produkcijski tok za kulturne pripovedi", "type": "Mojstrski tečaj" },
+      "E15": { "name": "Interdisciplinarno sodelovanje za inovacije v dediščini", "type": "Mojstrski tečaj" },
+      "E16": { "name": "Senzorji in čustva", "type": "Delavnica" },
+      "E17": { "name": "Postanite oblikovalec izkušenj", "type": "Delavnica" },
+      "E18": { "name": "Immersive ECHO: povezovanje kulturne dediščine in poglobljenih izkušenj", "type": "Mojstrski tečaj" },
+      "E19": { "name": "Mesečne seje ustvarjanja prihodnosti", "type": "Delavnice" },
+      "E20": { "name": "UI, etika in kulturne prihodnosti: odgovorna inovacija v poglobljeni dediščini", "type": "Delavnica" },
+      "E21": { "name": "Izmenjava med projekti", "type": "Delavnice" }
+    }
+  },
+  "news": {
+    "title": "Novice, dogodki in dejavnosti",
+    "latestUpdates": "Najnovejše novosti",
+    "readMore": "Preberite več →",
+    "empty": "V tej kategoriji še ni vsebin.",
+    "eventGalleries": "Galerije dogodkov",
+    "backToNews": "← Nazaj na Novice",
+    "photos": "{{count}} fotografij",
+    "filters": {
+      "All": "Vse",
+      "News": "Novice",
+      "Events": "Dogodki",
+      "Press": "Mediji"
+    },
+    "galleries": {
+      "launch": "Otvoritev (Namur)"
+    },
+    "articles": {
+      "newsletter1": {
+        "title": "Predstavljamo ECHO — E-novice št. 1",
+        "subtitle": "Kako poglobljeno oblikovanje spreminja način, kako doživljamo zgodovino"
+      },
+      "launch": {
+        "title": "Projekt Immersive ECHO uradno zagnan",
+        "subtitle": "Več kot 40 vrhunskih evropskih ustvarjalcev se je zbralo v Namurju, da bi zagnali projekt ECHO Immersive"
+      }
+    },
+    "launch": {
+      "title": "Projekt Immersive ECHO uradno zagnan",
+      "lead": "Več kot 40 vrhunskih evropskih ustvarjalcev se je zbralo v Namurju, da bi zagnali projekt ECHO Immersive.",
+      "teamAlt": "Ekipa ECHO Immersive v Namurju",
+      "p1": "Immersive ECHO je bil uradno zagnan februarja 2026 z večdnevnim uvodnim srečanjem v Le Pavillonu v Namurju v Belgiji, prizorišču, ki bo gostilo javno preizkusno okolje projekta. Delegacije vseh partnerjev konzorcija so se prvič srečale v živo in združile muzejske strokovnjake, poglobljene oblikovalce, razvijalce, raziskovalce in stratege iz desetih držav. Srečanje je usklajevala projektna ekipa Lindholmen Science Park pod vodstvom vodje projekta Ismaile Jallowa in koordinatorke Katrin Amberntsson, ob podpori ekip KIKK in Le Pavillon na kraju samem.",
+      "p2": "Dnevi so združevali strukturirane delavnice z odprtim raziskovanjem. Ekipe so predelale temeljna vprašanja o tem, kako se ljudje gibljejo skozi prostore, kaj pritegne pozornost in kako zgodba in interakcija občinstvu pomagata graditi pomen. Namesto da bi izhajali iz tehnologije, so se pogovori osredotočali na pripoved, zaznavanje in posebne zahteve kulturnih prostorov. Udeleženci so odšli s skupno predstavo o tem, kako bo videti naslednjih dve leti in pol, ter z zaupanjem, ki se oblikuje le, ko radovedni ljudje skupaj preživijo pravi čas. Končne poglobljene izkušnje, razvite v projektu, se bodo oktobra 2027 vrnile v Le Pavillon za javno uvedbo.",
+      "galleryHeading": "Galerija"
+    }
+  },
+  "contact": {
+    "title": "Kontaktirajte nas",
+    "getInTouch": "Vzpostavite stik",
+    "intro": "Za splošna vprašanja, informacije za medije ali vprašanja o partnerstvu se obrnite na koordinacijsko ekipo pri Lindholmen Science Park.",
+    "coordinatorHeading": "Koordinator",
+    "coordinatorLocation": "Göteborg, Švedska",
+    "stayInTouch": "Ostanite v stiku",
+    "requiredNote": "Polja, označena z *, so obvezna.",
+    "labels": {
+      "name": "Ime",
+      "email": "E-pošta",
+      "organisation": "Organizacija",
+      "subject": "Zadeva",
+      "message": "Sporočilo"
+    },
+    "send": "Pošlji sporočilo",
+    "sending": "Pošiljanje …",
+    "success": {
+      "heading": "Sporočilo poslano!",
+      "body": "Odgovorili vam bomo v 5 delovnih dneh. Preverite nabiralnik za potrditev.",
+      "again": "Pošlji novo sporočilo"
+    },
+    "errors": {
+      "generic": "Nekaj je šlo narobe. Poskusite znova.",
+      "network": "Strežnika ni bilo mogoče doseči. Preverite svojo povezavo."
+    },
+    "newsletterPrompt": "Želite spremljati novosti o Immersive ECHO?"
+  },
+  "faq": {
+    "title": "Pogosta vprašanja",
+    "items": {
+      "q1": {
+        "question": "Kaj je Immersive ECHO?",
+        "answer": "Immersive ECHO je vseevropski projekt, ki ljudi s poglobljenim pripovedovanjem približuje njihovi skupni dediščini. V 30 mesecih (februar 2026 – julij 2028) 15 partnerjev v 10 državah razvija praktičen model, ki kulturnim ustanovam omogoča, da vsakdanje javne prostore preoblikujejo v čustvene, kolektivne izkušnje — z uporabo projekcije, prostorskega zvoka in senzorske tehnologije namesto očal za navidezno resničnost. Poudarek je na tem, da poglobljeno pripovedovanje postane dostopno malim in srednjim ustanovam, ki trenutno nimajo proračuna in strokovnega znanja za njegovo ustvarjanje."
+      },
+      "q2": {
+        "question": "Zakaj je ta projekt potreben?",
+        "answer": "Večina ustanov kulturne dediščine nima proračuna, strokovnega znanja in tehnične zmogljivosti za ustvarjanje poglobljenih izkušenj. Produkcije velikega obsega so običajno pridržane dobro financiranim muzejem in komercialnim prizoriščem. Hkrati občinstvo vse bolj pričakuje privlačna, veččutna srečanja s kulturo. Immersive ECHO to vrzel zapolnjuje s praktičnim, prenosljivim modelom — preizkušenim v resničnih okoljih, iskreno dokumentiranim in zasnovanim tako, da lahko lokalni muzej z omejenimi sredstvi pripoveduje svoje zgodbe na čustveno privlačne in gospodarsko vzdržne načine."
+      },
+      "q3": {
+        "question": "Kaj Immersive ECHO loči od drugih poglobljenih projektov?",
+        "answer": "Pet stvari nas razlikuje. Osredotočamo se na male in srednje ustanove — ne na velike vodilne ustanove. Naš pristop je brez očal: projekcija, prostorski zvok in senzorji preoblikujejo obstoječe javne prostore. Vključenost je vgrajena v proces oblikovanja od začetka, s posebnimi sprinti za mlade, nevrodivergentno občinstvo, starejše in marginalizirane skupine. Dokumentiramo celoten proces — vključno s tem, kar ne deluje — in izdelujemo odprte komplete orodij, da lahko drugi pristop samostojno ponovijo. In sam konzorcij je edinstven: vodilni svetovni oblikovalci, raziskovalci, ustanove dediščine različnih velikosti in tehnologi delajo z ramo ob rami."
+      },
+      "q4": {
+        "question": "Zakaj »poglobljeno« brez očal za navidezno resničnost?",
+        "answer": "Očala za navidezno resničnost ustvarjajo ovire: stroške, dostopnost, nelagodje in individualno izolacijo. Prav tako jih je težko razširiti — ena očala naenkrat strežejo eni osebi. Naš pristop uporablja prostorski zvok, projekcije in okoljske senzorje, da skupne javne prostore preoblikuje v poglobljena pripovedna okolja. Ena sama na kraj vezana namestitev hkrati doseže veliko občinstvo, zahteva manj specializirane opreme in jo ustanove lažje upravljajo in vzdržujejo. Rezultat je kolektiven, utelešen in nizkopražen — ter ima gospodarski smisel za prizorišča, ki ga gostijo."
+      },
+      "q5": {
+        "question": "Kaj bo obiskovalec dejansko doživel?",
+        "answer": "Na kraj vezano, veččutno pripovedovanje z uporabo projekcije, prostorskega zvoka in okoljske interakcije, ki oživi kulturno dediščino v skupnih javnih prostorih. Ko se gibljete po prizorišču, projicirane podobe in zvok odgovarjajo na vašo prisotnost in ustvarijo pripoved, ki se razvija okoli vas. Cilj ni pasivni prenos informacij, temveč dejavna srečanja z zgodovino — odprta, participativna in zasnovana tako, da vsak obiskovalec ustvari svojo pot skozi zgodbo. Začutite jo, preden o njej premislite."
+      },
+      "q6": {
+        "question": "Kaj je Snapsting?",
+        "answer": "Snapsting je prepoznavna produkcija na kraju samem, ki jo razvija Muzej Viborg na Danskem. Raziskuje tisočletno identiteto Viborga kot kraja kraljeve, verske in sodne oblasti — in to zgodovino oživi z glasbo, poetično animacijo in vzdušnimi okolji. Izkušnja je nelinearna: obiskovalci sledijo svoji radovednosti skozi zgodbo. Poleg same izkušnje je celoten produkcijski proces dokumentiran kot prenosljiva metodologija — priročnik za druge ustanove kulturne dediščine, ki načrtujejo svoje poglobljeno delo. Snapsting ima javno premiero novembra 2026."
+      },
+      "q7": {
+        "question": "Kaj sta Le Pavillon in festival KIKK?",
+        "answer": "Le Pavillon je prizorišče v Namurju v Belgiji, ki ga upravlja KIKK — in služi kot javno preizkusno okolje projekta. Tu se poglobljene izkušnje prvič v velikem obsegu srečajo z resničnim, raznolikim občinstvom. Preizkušamo celotno pot obiskovalca: čustveni odziv, vzorce interakcije, dostopnost, sprejem in to, ali izkušnja ustvarja priložnosti za razmislek, potem ko ljudje odidejo. Javna premiera je načrtovana na festivalu KIKK oktobra 2027 — enem vodilnih evropskih festivalov digitalne in ustvarjalne kulture, ki vsako leto pritegne na tisoče obiskovalcev."
+      },
+      "q8": {
+        "question": "Kaj v praksi pomeni »vključenost že pri oblikovanju«?",
+        "answer": "Pomeni, da sta dostopnost in potrebe raznolikega občinstva vgrajeni v proces oblikovanja od samega začetka — ne dodani na koncu. Projekt vključuje štiri posebne sprinte vključujočega oblikovanja, od katerih je vsak osredotočen na določeno občinstvo: mlade, nevrodivergentne osebe, starejše in marginalizirane skupnosti. Resnični uporabniki oblikujejo delo od najzgodnejših faz. Vključenost pomeni tudi čustveno prepoznavanje — ustvarjanje izkušenj, kjer se ljudje prepoznajo v zgodbah, kjer se zgodovina zdi kot nekaj, kar jim pripada."
+      },
+      "q9": {
+        "question": "Kdo stoji za Immersive ECHO?",
+        "answer": "Konzorcij 15 organizacij iz 10 evropskih držav, ki ga usklajuje Lindholmen Science Park v Göteborgu na Švedskem. Med partnerji so studii za poglobljeno oblikovanje, ustanove kulturne dediščine, raziskovalni laboratoriji, tehnološka podjetja in strokovnjaki za komuniciranje iz Švedske, Nemčije, Francije, Finske, Romunije, Danske, Belgije, Ukrajine, Španije in Slovenije. Med pridruženimi partnerji sta mesto Göteborg in The Animation Workshop na Danskem. Projekt je prejel oceno EU 92/100."
+      },
+      "q10": {
+        "question": "Ali je Ukrajina del projekta?",
+        "answer": "Da. Park Sofijivka v Umanu v Ukrajini je polnopravni partner konzorcija. Zaradi trajajoče ruske invazije fizično izdelovanje prototipov v Ukrajini ni mogoče. Namesto tega park Sofijivka prispeva podatke o kulturni dediščini, zgodovinsko gradivo in neprecenljiv pogled na dediščino na konfliktnih območjih. Njihovo sodelovanje je opomnik, zakaj je ohranjanje kulture pomembno — in zakaj je nujno. Konzorcij dejavno rešuje operativne izzive, ki jih ustvarja njihov položaj."
+      },
+      "q11": {
+        "question": "Kako se projekt financira?",
+        "answer": "Immersive ECHO sofinancira Evropska unija v okviru programa Ustvarjalna Evropa, sklop Sodelovanje velikega obsega. Skupni proračun znaša približno 3,3 milijona evrov, od katerih EU financira 60 % (1.999.019 €). Preostalih 40 % je sofinanciranje partnerjev konzorcija. Po modelu pavšalnega zneska EU plačuje za rezultate — ne za režijske stroške. Časovni načrt plačil je 40 % ob začetku projekta, 40 % ob vmesnem poročilu (15. mesec) in 20 % ob končnem poročilu."
+      },
+      "q12": {
+        "question": "Kaj bo projekt ustvaril?",
+        "answer": "Rezultate na treh ravneh. Konkretne izkušnje: preizkušene poglobljene namestitve v Muzeju Viborg in Le Pavillonu, zasnovane za gostovanje in prilagajanje. Odprto znanje: Open Learning Toolkit s podrobnimi vodniki, Futuremakers Toolkit za participativno razmišljanje o prihodnosti, dokumentacija produkcijskega procesa in platforma Outreach za širšo skupnost kulturne dediščine. Strukturno zmogljivost: Business Blueprint, ki potrjuje, kaj deluje operativno in gospodarsko, ter končno poročilo o oblikovanju prihodnosti s političnimi priporočili in institucionalnimi načrti za sektor po letu 2028."
+      },
+      "q13": {
+        "question": "Kaj se zgodi po koncu projekta leta 2028?",
+        "answer": "Trajnost je vgrajena v proces oblikovanja od začetka — ne obravnavana kot naknadna misel. Tehnična arhitektura je zgrajena okoli modularnosti: vsebine lahko gostujejo med prizorišči, digitalni dvojčki omogočajo načrtovanje novih lokacij na daljavo, parametrično oblikovanje pa zmanjšuje trud, potreben za prilagajanje namestitev. Muzej Viborg namerava Snapsting še naprej upravljati kot stalno namestitev. Vsa ustvarjena intelektualna lastnina je prosto na voljo za prilagajanje, ponovno uporabo in komercialni razvoj. Cilj je za seboj pustiti metode, orodja in preizkušene modele, ki še naprej ustvarjajo vrednost po vsem sektorju."
+      },
+      "q14": {
+        "question": "Kako se lahko vključijo druge ustanove kulturne dediščine?",
+        "answer": "Na več konkretnih načinov. Platforma ECHOSYSTEM bo vključevala javni portal, kjer bodo kulturni strokovnjaki lahko dostopali do osnutkov kompletov orodij, se pridružili forumom za izmenjavo med enakovrednimi in se prijavili na dogodke. Mesečne delavnice Futuremaking v partnerskih mestih so odprte za zunanje strokovnjake. Trije spletni mojstrski tečaji zajemajo tehnične delovne tokove, ustvarjalno vodenje in interdisciplinarno sodelovanje. Javni preizkusni okolji v Le Pavillonu in Muzeju Viborg služita kot živi učni okolji. Vsi kompleti orodij in izobraževalno gradivo bodo brezplačno na voljo v vseh desetih jezikih partnerjev. Spremljajte projekt pod #ImmersiveECHO ali se naročite na e-novice."
+      }
+    }
+  },
+  "partners": {
+    "title": "Konzorcij",
+    "coordinator": "Koordinator projekta",
+    "commsDissemination": "Komuniciranje in razširjanje",
+    "corePartners": "Ključni partnerji",
+    "lspLocation": "Göteborg, Švedska",
+    "futLocation": "Barcelona, Španija"
+  },
+  "nav": {
+    "home": "Domov",
+    "about": "O projektu",
+    "partners": "Partnerji",
+    "experiences": "Izkušnje",
+    "news": "Novice in dogodki",
+    "faq": "Pogosta vprašanja",
+    "contact": "Stik",
+    "downloadResources": "Prenesi vire",
+    "toggleNavigation": "Preklopi navigacijo",
+    "selectLanguage": "Izberi jezik"
+  },
+  "footer": {
+    "quickLinks": "Hitre povezave",
+    "aboutProject": "O projektu",
+    "newsletter": "E-novice",
+    "followUs": "Spremljajte nas na {{network}}",
+    "euAlt": "Sofinancira Evropska unija",
+    "euCredit": "Sofinancira Evropska unija v okviru programa Ustvarjalna Evropa, sklop Sodelovanje velikega obsega. Sporazum o nepovratnih sredstvih št. 101255680.",
+    "duration": "Trajanje: feb. 2026 – jul. 2028",
+    "coordinator": "Koordinator: Lindholmen Science Park",
+    "partners": "15 partnerjev · 10 držav",
+    "rights": "© {{year}} Immersive ECHO. Vse pravice pridržane."
+  },
+  "timeline": {
+    "eyebrow": "Časovnica projekta · M1 — M30 · feb. 2026 — jul. 2028",
+    "heading": "Trideset mesecev, v javnosti.",
+    "lede": "Immersive ECHO je 30-mesečni projekt Ustvarjalne Evrope: oblikuj, zgradi, preizkusi, razširi. Mejniki, rezultati in javni dogodki konzorcija 15 organizacij v 10 državah EU. Z miško se pomaknite čez mesec za poudarek; kliknite vnos za branje.",
+    "type": {
+      "deliverable": "Rezultat",
+      "milestone": "Mejnik",
+      "event": "Dogodek"
+    },
+    "stats": {
+      "done": "Dokončano",
+      "deliverables": "Rezultati",
+      "milestones": "Mejniki",
+      "events": "Dogodki"
+    },
+    "index": "Kazalo",
+    "cols": {
+      "date": "Datum",
+      "type": "Vrsta",
+      "title": "Naslov",
+      "status": "Stanje"
+    },
+    "detail": {
+      "delivered": "✓ Dostavljeno",
+      "inProgress": "● V teku",
+      "upcoming": "○ Prihaja",
+      "dateTBC": "Datum bo potrjen",
+      "prev": "← Prejšnji",
+      "next": "Naslednji →"
+    },
+    "row": {
+      "delivered": "Dostavljeno",
+      "now": "● Zdaj",
+      "upcoming": "Prihaja",
+      "tbd": "Še ni določeno"
+    },
+    "today": "DANES",
+    "items": {
+      "ms1-1": { "title": "MS1.1 · Uskladitev konzorcija in zagon", "description": "Vsi partnerji ob začetku projekta usklajeni glede ciljev, metod, vlog in poročanja." },
+      "ms1-2": { "title": "MS2.1 · Okvir oblikovanja, usmerjen v potrebe", "description": "Strateški oblikovalski brief na podlagi uporabniških poti, potreb, vedenj, institucionalnih prispevkov in družbenih trendov." },
+      "ms1-3": { "title": "MS3.1 · Koncept in pripoved dokončana", "description": "Osrednji koncept, pripoved, celoten scenarij in zgodboris za Snapsting dokončani skozi iterativni proces." },
+      "ms1-5": { "title": "MS5.1 · Mreža izmenjave med projekti", "description": "Mreža sodelovanja z drugimi projekti, ki jih financira EU, uradno vzpostavljena." },
+      "ms2-2": { "title": "MS2.2 · Laboratorij deluje, prvi prototipi", "description": "Eksperimentalni laboratorij polno deluje; prvi poglobljeni prototipi preizkušeni in pregledani." },
+      "ms3-2": { "title": "MS2.3 · Sprinti vključujočega oblikovanja zaključeni", "description": "Vseh štirih sprintov vključujočega soustvarjanja zaključenih; spoznanja vključena v iteracije oblikovanja." },
+      "ms2-3": { "title": "MS3.2 · Produkcija Snapstinga zaključena", "description": "Vsi elementi Snapstinga dokončani, vključno z vsebino, tehnologijo in prostorskim oblikovanjem." },
+      "ms3-3": { "title": "MS3.3 · Snapsting nameščen v Viborgu", "description": "Snapsting v celoti nameščen in deluje na kraju samem v Muzeju Viborg." },
+      "ms4-3": { "title": "MS3.4 · Srečanje konzorcija in okrogla miza", "description": "Vsi partnerji konzorcija se zberejo v Viborgu, z okroglo mizo na Animation Festivalu." },
+      "ms2-1": { "title": "MS1.2 · Vmesni pregled koordinacije", "description": "Pregled napredka, tveganj, kakovosti sodelovanja in rabe virov na sredini poti." },
+      "ms2-5": { "title": "MS5.2 · Vmesni pregled učinka", "description": "Pregled na sredini poti glede komuniciranja, prenosa znanja, vključenosti deležnikov in dosega razširjanja." },
+      "ms1-4": { "title": "MS4.1 · Okvir namestitve in poslovni model", "description": "Strategije za javno namestitev vzpostavljene skupaj s trajnostnim poslovnim modelom, soustvarjenim s partnerji." },
+      "ms4-2": { "title": "MS2.4 · Končni koncepti pripravljeni", "description": "Prototipi razviti na podlagi preizkušanja; končne poglobljene izkušnje odobrene za javno namestitev." },
+      "ms2-4": { "title": "MS4.2 · Javno preizkusno okolje odprto v Le Pavillonu", "description": "Prvo prizorišče v celoti opremljeno, krmiljenje predstave potrjeno; vrata odprta za javnost (festival KIKK, okt. 2027)." },
+      "ms3-4": { "title": "MS4.3 · Analitika med prizorišči deluje", "description": "Osrednja nadzorna plošča, ki v realnem času združuje tok obiskovalcev, vključenost in podatke o dostopnosti, začne delovati." },
+      "ms5-3": { "title": "MS3.5 · Snapsting prilagojen za Le Pavillon", "description": "Snapsting prilagojen Le Pavillonu, s prilagoditvami pripovedi, tehnične postavitve in prostorskega oblikovanja." },
+      "ms3-5": { "title": "MS5.3 · Viri za krepitev zmogljivosti končani", "description": "Open Learning Toolkit, vodnik How-to ECHO, 5D TimeMap in kompleti orodij Futuremakers dokončani in razdeljeni." },
+      "ms4-5": { "title": "MS5.4 · Končno razširjanje učinka", "description": "Končno poročilo o oblikovanju prihodnosti, ki povzema rezultate strateškega predvidevanja in dolgoročne poti." },
+      "ms4-4": { "title": "MS4.4 · Operativna izvedljivost poročana", "description": "Stroški, kadri in logistika analizirani za podporo prihodnjemu sprejetju in razširitvi." },
+      "ms3-1": { "title": "MS1.3 · Končni povzetek koordinacije", "description": "Strateški zaključek izvedbe projekta, vključno s ključnimi spoznanji o koordinaciji in odločanju." },
+      "d1-1": { "title": "D1.1 · Priročnik za vodenje projekta", "description": "Praktičen vodnik, ki opisuje vizijo, orodja interne koordinacije, strukturo poročanja, odgovornosti partnerjev in skupne delovne tokove." },
+      "d5-1": { "title": "D5.1 · Načrt komuniciranja in razširjanja", "description": "Integrirana komunikacijska strategija. Orodja UI podatke projekta pretvorijo v članke, objave, študije primerov in mikrovsebine za evropska občinstva." },
+      "d5-2": { "title": "D5.2 · Nadzorna plošča projekta", "description": "Digitalna nadzorna plošča v realnem času, ki spremlja KPI na ravneh udeleženec, institucionalno, medinstitucionalno, državljanska vključenost in družbeni učinek." },
+      "d2-1": { "title": "D2.1 · Brief poglobljenega oblikovanja, usmerjen v potrebe", "description": "Strateški vodnik na podlagi spoznanj o uporabnikih, institucionalnih potreb in družbenih premikov — ki opredeljuje izzive oblikovanja, persone, čustvene cilje in tehnične predpostavke." },
+      "d3-1": { "title": "D3.1 · Izkušnja Snapsting in dokumentacija", "description": "Dokončana poglobljena izkušnja, nameščena v Muzeju Viborg, ter načrti namestitve, datoteke oblikovanja interakcije in dokumentacija za ponovno uporabo." },
+      "d1-2": { "title": "D1.2 · Vmesno poročilo o koordinaciji in tveganjih", "description": "Vrednotenje napredka, kakovosti koordinacije, stanja tveganj in samoocen partnerjev, s priporočili." },
+      "d5-3": { "title": "D5.3 · Učinek in razširjanje na sredini poti", "description": "Celovit vmesni pregled učinka, razširjanja, vključenosti, institucionalnega sprejetja in medsektorskega sodelovanja." },
+      "d5-6": { "title": "D5.6 · 5D TimeMap območij dediščine", "description": "Interaktivni digitalni zemljevid, ki evropska območja dediščine povezuje s petimi plastmi — prostorsko, časovno, umetniško, politično, jezikovno. Na voljo v 10 jezikih EU." },
+      "d2-2": { "title": "D2.2 · Končna oblikovanja poglobljene izkušnje", "description": "Celoviti paketi poglobljene izkušnje za javno namestitev — pripovedi, prostorska / interakcijska oblikovanja, tehnične postavitve, poti sprejema, dostopnost." },
+      "d3-2": { "title": "D3.2 · Snapsting prilagojen za Le Pavillon", "description": "Snapsting prilagojen Le Pavillonu s posodobljeno pripovedjo, interakcijskim in prostorskim oblikovanjem, tehnično postavitvijo in operativnimi smernicami." },
+      "d5-4": { "title": "D5.4 · Komplet orodij Futuremakers", "description": "Hibriden (fizični + digitalni) komplet orodij s participativnimi tehnikami in vodenimi dejavnostmi za kulturne strokovnjake. 10 jezikov EU." },
+      "d5-5": { "title": "D5.5 · Platforma Outreach", "description": "Z UI okrepljena platforma za dvosmerno komunikacijo z nadzorno ploščo KPI v realnem času. Persone agentov UI: muzejski vodnik, zgodovinska osebnost, izmišljena maskota." },
+      "d5-7": { "title": "D5.7 · Prototip Timetravel Companion", "description": "Vodnik, ki ga poganja UI in obogati obiske muzejev z glasovno interakcijo, kontekstualnim pripovedovanjem in izbirno holografsko vsebino. 100 naprav po meri." },
+      "d3-3": { "title": "D3.3 · Poročilo o procesu poglobljene produkcije", "description": "Prehod skozi proces produkcije na kraju samem — pripoved, tehnične odločitve, model sodelovanja, kulturni izzivi. Referenca za druge ustanove." },
+      "d4-1": { "title": "D4.1 · Poročilo o operativni namestitvi", "description": "Dokumentacija uvedbe javnega preizkusnega okolja korak za korakom: logistika občinstva, prostorska postavitev, opombe o tehnični prilagoditvi." },
+      "d5-8": { "title": "D5.8 · Open Learning Toolkit in vodnik How-to", "description": "Modularni viri, pripravljeni za uporabo, zgrajeni na rezultatih WP2–WP4. Ustvarjanje vsebin, podprto z UI, vire prilagaja institucionalnim profilom." },
+      "d2-3": { "title": "D2.3 · Končno vrednotenje poglobljene izkušnje", "description": "Celovito vrednotenje: čustveni učinek, dostopnost, zmogljivost sistema, operativna trajnost." },
+      "d4-2": { "title": "D4.2 · Povzetek UX in poslovnega modela", "description": "Vrednotenje vključenosti občinstva, poti sprejema/zaključka in izvedljivosti poslovnih modelov, preizkušenih na prizorišču." },
+      "d5-9": { "title": "D5.9 · Poročilo o mreženju med projekti", "description": "Dokumentira dejavnosti mreženja med projekti — srečanja, skupni dogodki, ključni rezultati, predlogi za nadaljnjo izmenjavo." },
+      "d5-10": { "title": "D5.10 · Končno poročilo o oblikovanju prihodnosti", "description": "Digitalna platforma, ki prikazuje rezultate projekta in njegov dolgoročni potencial. Medijska orodja, ki jih poganja UI, vsebino prilagajajo v 10 jezikih EU." },
+      "e1": { "title": "E1 · Odprtje razstave Snapsting", "description": "Poglobljena izkušnja Snapsting se odpre za javnost v Muzeju Viborg. Triletno trajanje.", "tag": "Razstava · Viborg · 150 000 pax" },
+      "e5": { "title": "E5 · Javni zagon · Festival KIKK", "description": "Dobro viden zagon poglobljene izkušnje na festivalu KIKK 2027. Okrogla miza konzorcija.", "tag": "Panel · Namur · 25 000 pax" },
+      "e6": { "title": "E6 · Odprtje razstave Le Pavillon", "description": "Razstava Immersive ECHO se odpre za javnost v Le Pavillonu v Namurju.", "tag": "Razstava · Namur · 25 000 pax" },
+      "e2": { "title": "E2 · Mladinski sprint: Future Worlds Builder", "description": "Sprint, usmerjen v uporabnika, osredotočen na digitalno spretnost in radovednost. 3 dni.", "tag": "Sprint · Göteborg · 80 pax" },
+      "e3": { "title": "E3 · Nevrodivergentni sprint", "description": "Nelinearna navigacija; čutno ravnovesje in nelinearna vključenost. 2 dni.", "tag": "Sprint · Berlin · 40 pax" },
+      "e4": { "title": "E4 · Konferenca Echoes of the Future", "description": "Povezovanje kulturne dediščine in poglobljene inovacije. Konferenca + okrogla miza na Animation Festivalu.", "tag": "Konferenca · Viborg · 300 pax" }
+    }
+  }
+}

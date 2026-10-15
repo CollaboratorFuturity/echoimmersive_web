@@ -1,1 +1,699 @@
-{}
+{
+  "home": {
+    "hero": {
+      "badge": "Europa Creativă",
+      "titleLine1": "Immersive",
+      "titleLine2": "Echo",
+      "subtitleLine1": "Creăm experiențe imersive colective",
+      "subtitleLine2": "pentru patrimoniul cultural european"
+    },
+    "scroll": "Derulează",
+    "stats": {
+      "partners": "Parteneri",
+      "countries": "Țări",
+      "months": "Luni",
+      "testbeds": "Bancuri de testare publice"
+    },
+    "missionLabel": "Misiunea",
+    "mission": {
+      "p1": "Patrimoniul cultural există pentru că oamenii au nevoie de el. Funcționează ca o legătură vie cu locul, cu comunitatea, cu poveștile care explică cine suntem și cum am ajuns aici. Și totuși, pentru milioane de oameni din întreaga Europă, această legătură se destramă. Spațiile și formatele menite să poarte aceste povești pur și simplu nu au ținut pasul cu oamenii pe care ar trebui să îi servească.",
+      "p2": "Instituțiile mai mici de patrimoniu cultural resimt acest lucru cel mai acut. Fără resursele marilor instituții de referință, ele văd cum publicul se micșorează, cum generațiile mai tinere se îndepărtează și cum comunitățile care nu s-au regăsit niciodată cu adevărat în colecțiile lor încetează cu totul să mai vină. Instrumentele pentru a schimba acest lucru există. Experiențele imersive, multisenzoriale, care te învăluie într-o poveste în loc să ți-o prezinte din spatele unei vitrine, sunt dovedite și puternice. Dar rămân inaccesibile pentru cei mai mulți.",
+      "p3": "Immersive ECHO pornește de la o altă premisă: că patrimoniul este cel mai puternic atunci când este trăit colectiv, în spații comune, de oameni care poate nu l-ar fi căutat de unii singuri. Misiunea proiectului este de a oferi instituțiilor culturale din întreaga Europă mijloacele concrete de a readuce oamenii în poveste. Povestea lor."
+    },
+    "quote": "Patrimoniul este cel mai puternic atunci când este trăit colectiv, în spații comune, de oameni care poate nu l-ar fi căutat de unii singuri.",
+    "stayConnected": "Rămâi conectat",
+    "newsletter": {
+      "label": "Buletin informativ",
+      "heading": "Rămâi la curent cu Immersive ECHO",
+      "cta": "Abonează-te la buletinul nostru informativ"
+    }
+  },
+  "about": {
+    "title": "Despre Immersive ECHO",
+    "objectiveLabel": "Obiectivul",
+    "objectiveIntro": "Proiectul Immersive ECHO urmărește cinci obiective strategice concepute pentru a răspunde provocărilor cu care se confruntă instituțiile de patrimoniu cultural din Europa. Aceste obiective formează coloana vertebrală a unei transformări scalabile, incluzive și durabile a modului în care instituțiile culturale implică publicul prin povestirea imersivă.",
+    "objectives": {
+      "o1": {
+        "title": "Dezvoltarea unui model scalabil pentru povestirea culturală imersivă",
+        "body": "Vom crea un cadru transferabil care ajută instituțiile culturale să adopte formate imersive captivante emoțional, fezabile tehnic și viabile economic — sprijinind transformarea digitală la nivelul întregului sector."
+      },
+      "o2": {
+        "title": "Activarea unor spații incluzive, cu prag scăzut, pentru co-creare și inovare",
+        "body": "Vom înființa laboratoare experimentale în care profesioniștii din cultură, tehnologii și utilizatori diverși pot co-crea, prototipa și testa formate imersive — încurajând consolidarea capacităților și inovarea artistică în întreaga Europă."
+      },
+      "o3": {
+        "title": "Demonstrarea valorii publice și a implicării prin instalații în context real",
+        "body": "Vom implementa experiențe imersive atât în spații publice, cât și instituționale pentru a evalua acoperirea publicului, impactul emoțional și fezabilitatea operațională — contribuind la noi modele de dezvoltare a publicului. Această dublă amplasare — atât în spații comunitare, cât și instituționale — asigură că formatele imersive nu doar ajung la oameni în afara locurilor de patrimoniu cultural, ci și readuc public nou în instituțiile culturale, sporind numărul de vizitatori și revitalizând misiunea lor publică."
+      },
+      "o4": {
+        "title": "Construirea unei rețele paneuropene pentru schimbul de cunoștințe și inovarea culturală",
+        "body": "Vom consolida colaborarea intersectorială prin conectarea instituțiilor, a creatorilor și a partenerilor tehnologici și prin partajarea de instrumente și perspective cu acces deschis, care permit replicarea pe termen lung și alinierea la politici."
+      },
+      "o5": {
+        "title": "Promovarea incluziunii, a accesibilității, precum și a bunăstării culturale și a democrației prin design",
+        "body": "Vom integra designul incluziv și metodele participative pe tot parcursul proiectului pentru a ne asigura că experiențele culturale imersive reflectă diversitatea societății europene și sprijină coeziunea socială și accesibilitatea."
+      }
+    },
+    "quote": "Patrimoniul este cel mai puternic atunci când este trăit colectiv, în spații comune, de oameni care poate nu l-ar fi căutat de unii singuri.",
+    "approachDivider": "Abordarea",
+    "approach": {
+      "partnersLabel": "Parteneri",
+      "offsite": {
+        "title": "Echipa de design imersiv (externă)",
+        "desc": "Un laborator transdisciplinar în care artiști, tehnologi și experți în patrimoniu co-dezvoltă prototipuri imersive prin sprinturi de co-creare. Fiecare concept este testat pentru accesibilitate și ambalat în formate modulare, gata de implementat în orice locație."
+      },
+      "onsite": {
+        "title": "Echipa de design imersiv (la fața locului)",
+        "desc": "Viborg Museum ca studiu de caz viu, dezvoltând „Snapsting” prin animație desenată manual și povestire spațială. Fiecare flux de lucru și fiecare decizie sunt documentate pentru ca alte instituții să poată urma același drum."
+      },
+      "testbed": {
+        "title": "Banc de testare imersiv public",
+        "desc": "Le Pavillon deschide experiențele finalizate către un public real la scară largă, măsurând implicarea și accesibilitatea prin analize asistate de IA și testând totodată modele operaționale pentru viabilitate pe termen lung."
+      },
+      "coordination": {
+        "title": "Coordonarea proiectului",
+        "desc": "Lindholmen Science Park asigură alinierea strategică între toți partenerii, urmărind jaloanele, bugetele și livrabilele și gestionând riscurile și raportarea către Comisia Europeană."
+      },
+      "comms": {
+        "title": "Comunicare și impact",
+        "desc": "Futurity Systems transformă rezultatele proiectului în truse de instrumente modulare și conținut multilingv, construiește o rețea de învățare între colegi și aplică metode de design al viitorului pentru a trasa foi de parcurs pe termen lung pentru cultura imersivă."
+      }
+    },
+    "infographic": {
+      "title": "Immersive ECHO — metodologie de design pe două direcții",
+      "label": "Despre:",
+      "caption": "Design pe două direcții: laboratorul extern și muzeul la fața locului converg într-un banc de testare public pentru a scala experiențele imersive de patrimoniu."
+    },
+    "factsDivider": "Date despre proiect",
+    "fullStructureCta": "Structură completă, sarcini și livrabile",
+    "projectDetails": "Detalii despre proiect",
+    "details": {
+      "durationLabel": "Durată",
+      "durationValue": "feb. 2026 – iul. 2028",
+      "gaLabel": "Număr GA",
+      "gaValue": "101255680",
+      "fundingLabel": "Finanțare",
+      "fundingValue": "Europa Creativă, Cooperare la scară largă",
+      "coordinatorLabel": "Coordonator",
+      "coordinatorValue": "Lindholmen Science Park"
+    }
+  },
+  "experiences": {
+    "title": "Experiențe",
+    "intro": "Prezentăm conceptul de bancuri de testare publice folosind metodologia de design orientat pe nevoi, în întreaga Europă.",
+    "viewActivities": "Vezi activitățile",
+    "backToExperiences": "← Înapoi la Experiențe",
+    "snapsting": {
+      "badge": "INSTITUȚIE DE PATRIMONIU CULTURAL",
+      "location": "Viborg, Danemarca",
+      "imageAlt": "Viborg Museum",
+      "description": "Viborg Museum este muzeul de istorie culturală al zonei Viborg din Danemarca, prezentând patrimoniul regiunii din preistorie până în prezent. În cadrul ECHO, muzeul va găzdui instalația imersivă, aducând publicului său abordarea ECHO privind povestirea imersivă."
+    },
+    "pavillon": {
+      "badge": "SCALARE ȘI ADAPTARE",
+      "location": "Namur, Belgia",
+      "imageAlt": "Le Pavillon, Namur",
+      "description": "Le Pavillon este centrul KIKK pentru arte digitale și tehnologie din Namur, Belgia. Implementează instalațiile imersive ECHO pentru un public larg, colectând totodată date privind implicarea și accesibilitatea. Peste 200 de parteneriate școlare anual."
+    },
+    "snapstingPage": {
+      "title": "Viborg Animation Festival · Activități",
+      "intro": "Prezentare generală a activităților bancului de testare de la Viborg Animation Festival din Viborg, Danemarca.",
+      "note": "Notă: descriere a procesului, de la primele briefuri, trecând prin dezvoltarea conceptului, scenariu, animatic etc., până la experiența finală. Muzeul este „regizorul final” — managera expoziției stă la o masă de mixaj, iar diferitele canale pe care le poate mixa sunt scenografii, pictorii, artiștii de efecte sonore pentru sunetul ambiental, experiențele AV, obiectele, textul, lumina etc."
+    },
+    "pavillonPage": {
+      "title": "Le Pavillon · Activități",
+      "intro": "Prezentare generală a activităților bancului de testare de la Le Pavillon din Namur, Belgia.",
+      "note": "Notă: descriere a procesului, de la primele briefuri, trecând prin dezvoltarea conceptului, scenariu, animatic etc., până la experiența finală. Muzeul este „regizorul final”."
+    }
+  },
+  "newsletter": {
+    "intro": "Rămâi la curent cu proiectul — rezultate noi, evenimente și constatări din întregul consorțiu.",
+    "subscribeHeading": "Abonează-te",
+    "fields": {
+      "email": {
+        "label": "E-mail",
+        "placeholder": "Introdu adresa ta de e-mail"
+      },
+      "firstName": {
+        "label": "Prenume",
+        "placeholder": "Introdu prenumele tău"
+      },
+      "lastName": {
+        "label": "Nume",
+        "placeholder": "Introdu numele tău"
+      },
+      "organisation": {
+        "label": "Organizație",
+        "placeholder": "Introdu organizația ta"
+      },
+      "language": {
+        "label": "Limba preferată",
+        "hint": "Edițiile sunt trimise în această limbă când este disponibilă o traducere, altfel în engleză."
+      }
+    },
+    "consentPrefix": "Sunt de acord cu",
+    "privacyPolicy": "Politica de confidențialitate",
+    "consentRequired": "Te rugăm să accepți Politica de confidențialitate pentru a te abona.",
+    "subscribe": "Abonează-te",
+    "subscribing": "Se procesează abonarea…",
+    "backToSite": "Înapoi la site",
+    "success": {
+      "inHeading": "Ești înscris!",
+      "inBody": "Am trimis un e-mail de bun venit la {{email}}. Vei auzi de la noi când va fi ceva demn de împărtășit.",
+      "alreadyHeading": "Deja abonat!",
+      "alreadyBody": "{{email}} se află deja pe lista noastră. Nu este necesară nicio acțiune.",
+      "updatedHeading": "Preferințe actualizate",
+      "updatedBody": "Am actualizat preferințele tale de abonare. Nu a fost trimis niciun e-mail nou."
+    }
+  },
+  "newsletterEmail": {
+    "unsubscribe": "Dezabonare",
+    "footer": "Primești acest e-mail pentru că te-ai abonat la buletinul informativ Immersive ECHO."
+  },
+  "underConstruction": {
+    "eyebrow": "Europa Creativă · 2026–2028",
+    "headingLine1": "Ceva",
+    "headingLine2": "urmează să vină.",
+    "subline": "Immersive ECHO este un proiect paneuropean care creează experiențe colective de patrimoniu cultural. Acest site va fi lansat în curând.",
+    "euCredit": "Cofinanțat de Uniunea Europeană · Europa Creativă · GA nr. 101255680"
+  },
+  "resources": {
+    "backToAbout": "← Înapoi la Despre",
+    "eyebrow": "Pentru parteneri și evaluatori",
+    "title": "Resursele proiectului",
+    "intro": "Index de referință al structurii proiectului: pachete de lucru, sarcini, jaloane, livrabile și evenimente. Sursă: cererea de grant CREA-CULT-2025-COOP-3. Destinat partenerilor din consorțiu, evaluatorilor și revizorilor din partea Comisiei Europene.",
+    "objectives": "Obiective",
+    "partnersLabel": "Parteneri",
+    "leadPrefix": "Responsabil:",
+    "tasksCount_one": "{{count}} sarcină",
+    "tasksCount_other": "{{count}} sarcini",
+    "accessFile": "Accesează fișierul →",
+    "accessFileAria": "Accesează fișierul: {{title}}",
+    "pending": "În așteptare",
+    "tabs": {
+      "wp": "Pachete de lucru",
+      "tasks": "Sarcini",
+      "milestones": "Jaloane",
+      "deliverables": "Livrabile",
+      "events": "Evenimente",
+      "media": "Media / Brand",
+      "presskit": "Kit de presă"
+    },
+    "tabSubtitles": {
+      "wp": "Cinci pachete de lucru interconectate structurează cele 30 de luni de implementare a proiectului.",
+      "tasks": "Sarcini grupate pe pachetul de lucru de care aparțin. Dă clic pe un grup pentru a-l extinde; dă clic pe o sarcină pentru a-i citi descrierea completă.",
+      "milestones": "Puncte de control ale proiectului ordonate cronologic după luna scadenței.",
+      "deliverables": "Rezultatele proiectului cu tipul, nivelul de diseminare și data scadenței.",
+      "events": "Ateliere, masterclass-uri, expoziții, conferințe și dezbateri organizate de consorțiu.",
+      "media": "Resurse de brand și fișiere de identitate vizuală ale proiectului Immersive ECHO.",
+      "presskit": "Materiale de presă pentru jurnaliști și parteneri media care relatează despre proiectul Immersive ECHO."
+    },
+    "wp": {
+      "WP1": {
+        "title": "Managementul și coordonarea proiectului",
+        "short": "Aliniere strategică, jaloane, bugete, managementul riscurilor și legătura cu Comisia Europeană în întregul consorțiu.",
+        "obj": {
+          "0": "Asigurarea unei coordonări strategice, transparente și incluzive pentru a garanta că toți partenerii contribuie eficient la obiectivele proiectului.",
+          "1": "Monitorizarea termenelor, a livrabilelor și a progresului financiar pentru a garanta responsabilitatea și utilizarea eficientă a resurselor.",
+          "2": "Facilitarea unei comunicări clare și continue cu Comisia Europeană și asigurarea conformității cu toate cerințele de reglementare și de raportare.",
+          "3": "Identificarea și gestionarea proactivă a riscurilor pentru a proteja livrarea, a consolida reziliența și a asigura rezultate cu impact ridicat, aliniate la prioritățile CREA."
+        }
+      },
+      "WP2": {
+        "title": "Echipa de design imersiv (externă)",
+        "short": "Un laborator transdisciplinar în care artiști, tehnologi și experți în patrimoniu co-dezvoltă prototipuri imersive prin sprinturi de co-creare.",
+        "obj": {
+          "0": "Înțelegerea nevoilor în schimbare ale utilizatorilor și a realităților instituționale — delimitarea zonelor de oportunitate pe baza cercetării utilizatorilor, a obiectivelor instituționale și a schimbărilor societale.",
+          "1": "Proiectarea și prototiparea unor formate imersive incluzive și scalabile — dezvoltarea de concepte care răspund nevoilor, validarea timpurie a ipotezelor și rafinarea iterativă.",
+          "2": "Integrarea unui laborator experimental cu prag scăzut în procesul de design pentru co-creare, testare și iterare cu publicuri diverse.",
+          "3": "Evaluarea experienței utilizatorului, a fezabilității tehnice și a viabilității economice — colectarea continuă de feedback pentru rafinarea experiențelor.",
+          "4": "Conducerea rafinării finale și a pregătirii pentru bancurile de testare publice — finalizarea unor experiențe imersive rezonante emoțional, stabile tehnic și accesibile.",
+          "5": "Compararea și schimbul între designul imersiv la fața locului și cel extern — schimb structurat între Snapsting și procesele laboratorului extern."
+        }
+      },
+      "WP3": {
+        "title": "Echipa de design imersiv (la fața locului)",
+        "short": "Viborg Museum funcționează ca un studiu de caz viu, dezvoltând „Snapsting” prin animație desenată manual și povestire spațială.",
+        "obj": {
+          "0": "Testarea întregului ciclu de viață al povestirii imersive într-un cadru muzeal real — dezvoltarea conceptului, scenariul, colaborarea, integrarea tehnologică, producția și lansarea.",
+          "1": "Măsurarea impactului asupra publicului — colectarea de date despre implicarea emoțională, învățarea culturală și accesibilitate.",
+          "2": "Identificarea a ceea ce funcționează pentru instituțiile mici și mijlocii — documentarea fluxurilor de lucru, a provocărilor și a nevoilor de resurse.",
+          "3": "Compararea și schimbul între designul imersiv la fața locului și cel extern — vezi WP2."
+        }
+      },
+      "WP4": {
+        "title": "Bancuri de testare publice",
+        "short": "Le Pavillon deschide experiențele finalizate către un public real la scară largă și măsoară implicarea și accesibilitatea prin analize asistate de IA.",
+        "obj": {
+          "0": "Implementarea unei experiențe imersive într-un spațiu public cu acces ridicat — reducerea distanței dintre prototipare și realitate.",
+          "1": "Evaluarea experienței utilizatorului în timp real la scară largă — măsurarea răspunsului emoțional, a accesibilității, a tiparelor de interacțiune și a fidelizării.",
+          "2": "Testarea proceselor de primire și de încheiere — semnalistică, intrare/ieșire ghidată și ocazii de reflecție.",
+          "3": "Validarea viabilității operaționale și economice — strategii de ticketing, configurații operaționale, nevoi de personal și cerințe tehnice.",
+          "4": "Crearea de oportunități de învățare pentru profesioniștii din cultură — muzeele partenere și organizațiile de patrimoniu sunt invitate să observe și să participe."
+        }
+      },
+      "WP5": {
+        "title": "Comunicare, diseminare și impact",
+        "short": "Transformă rezultatele proiectului în truse de instrumente modulare, conținut multilingv și o rețea de învățare între colegi pentru sectorul european al patrimoniului cultural.",
+        "obj": {
+          "0": "Comunicare — măsuri strategice și țintite pentru promovarea proiectului și asigurarea vizibilității grantului UE.",
+          "1": "Diseminare — partajarea rezultatelor proiectului cu sectorul cultural, instituțiile de patrimoniu, organismele UE și publicul larg.",
+          "2": "Exploatare — facilitarea utilizării realizărilor proiectului în noi inițiative, marketing și colaborări.",
+          "3": "Amplificarea vizibilității și a implicării — valorificarea povestirii moderne și a generării de conținut cu ajutorul IA în întreaga Europă.",
+          "4": "Consolidarea capacităților — dezvoltarea de truse de instrumente, facilitarea învățării între colegi și oferirea de programe de mentorat pentru instituțiile culturale.",
+          "5": "Design orientat spre viitor — aplicarea metodologiilor de design al viitorului pentru a imagina viitoruri convingătoare pentru cultura imersivă."
+        }
+      }
+    },
+    "taskGroup": {
+      "T1": { "title": "Managementul și coordonarea proiectului" },
+      "T2": { "title": "Echipa de design imersiv (externă)" },
+      "T3": { "title": "Echipa de design imersiv (la fața locului)" },
+      "T4": { "title": "Bancuri de testare publice" },
+      "T5": { "title": "Comunicare, diseminare și impact" }
+    },
+    "task": {
+      "T1-1": {
+        "title": "Conducerea coordonării strategice",
+        "description": "Asigurarea unei colaborări fluide cu partenerii, alinierea termenelor și a obiectivelor și oferirea direcției generale pe tot parcursul ciclului de viață al proiectului."
+      },
+      "T1-2": {
+        "title": "Monitorizarea progresului, a riscurilor și a bugetului",
+        "description": "Urmărirea jaloanelor, a livrabilelor, a alinierii la lista de verificare verde (Green) și a fluxurilor financiare și gestionarea proactivă a riscurilor pentru a asigura transparența și responsabilitatea."
+      },
+      "T1-3": {
+        "title": "Gestionarea comunicării și a raportării",
+        "description": "Facilitarea unei comunicări interne clare, pregătirea rapoartelor pentru UE și asigurarea conformității cu obligațiile administrative și juridice. Participanți: TSC, NPIAT, GPI, YOU, TPL, KIKK, FUT, AIRA, ID20, VIB, VGR, SOFP (BEN); COG, TAW (AP)."
+      },
+      "T2-1": {
+        "title": "Descoperirea nevoilor, cercetare și fundamente de design",
+        "description": "Explorarea și definirea fundamentelor pentru un public-țintă divers prin identificarea nevoilor, a realităților instituționale, a tendințelor societale și a fezabilității tehnice timpurii. Clarificarea maturității tehnologice și a posibilelor provocări operaționale înainte de a trece la prototipare."
+      },
+      "T2-2": {
+        "title": "Design colaborativ și prototipare în laboratoare",
+        "description": "Transformarea cercetării în prototipuri rapide testate direct în laboratorul experimental. Echipa de design, partenerii din muzee și utilizatorii co-creează concepte imersive prin cicluri iterative de design, testare și îmbunătățire."
+      },
+      "T2-3": {
+        "title": "Sprinturi de design incluziv",
+        "description": "Desfășurarea a patru sprinturi focalizate pentru a integra perspective diverse: 1) Sprint pentru tineri — fluență digitală și curiozitate; 2) Sprint neurodivergent — echilibru senzorial și implicare neliniară; 3) Sprint pentru vârstnici — navigare, ritm și accesibilitate; 4) Sprint pentru grupuri marginalizate — amplificarea vocilor adesea excluse din designul dominant. Fiecare sprint modelează aspecte centrale ale povestirii, interacțiunii și fluxului experienței."
+      },
+      "T2-4": {
+        "title": "Design pentru scalabilitate și transferabilitate",
+        "description": "Aplicarea de principii, instrumente și fluxuri de lucru de design care susțin scalabilitatea și transferabilitatea experiențelor imersive între diverse spații culturale. Include abordări de design modular, structuri narative adaptabile și configurații flexibile pentru instituții mari și mici."
+      },
+      "T2-5": {
+        "title": "Acces virtual la laboratorul experimental",
+        "description": "Valorificarea designului modular și a tehnologiei gemenilor digitali pentru a face experiența accesibilă unor testări paneuropene ample. Mediile virtuale replică instalațiile fizice, permițând unor publicuri diverse să participe și să ofere feedback de la distanță."
+      },
+      "T2-6": {
+        "title": "Designul final al experienței pentru bancurile de testare publice",
+        "description": "Adaptarea și finalizarea experiențelor imersive pentru spațiile publice, asigurând pregătirea pentru interacțiunea cu utilizatorii la scară largă. Designul final include povestire emoțională, configurații tehnice robuste, parcursuri de accesibilitate și modele operaționale durabile. Subcontracte: S1.1, S1.2."
+      },
+      "T2-7": {
+        "title": "Sinteza constatărilor experimentale",
+        "description": "Analizarea constatărilor din activitățile de laborator, din bancurile de testare publice, din feedbackul utilizatorilor și din validarea tehnică. Utilizarea de instrumente asistate de IA pentru a sintetiza rezultatele din medii controlate și reale în îmbunătățiri concrete pentru livrarea finală a experienței."
+      },
+      "T3-1": {
+        "title": "Integrarea în fluxul de cunoștințe ECHO",
+        "description": "Partajarea continuă a constatărilor cu întregul consorțiu. Coordonarea cu WP2 și cu managementul proiectului pentru a asigura transferul în timp real al constatărilor de design, testare și implementare. Subcontracte: S2.1, S2.2, S2.3."
+      },
+      "T3-2": {
+        "title": "Producția la scară completă a experienței Snapsting",
+        "description": "Dezvoltarea de la zero a experienței de povestire imersivă. Include definirea conceptului, animatic, scenariu, producție (animație, fundaluri, design și compoziție sonoră), integrare AV și tehnică, design spațial și senzorial, testare și instalare. Subcontracte: S2.1–S2.4."
+      },
+      "T3-3": {
+        "title": "Testarea cu publicul și evaluarea",
+        "description": "Desfășurarea unei evaluări structurate a experienței după lansare. Colectarea de feedback calitativ și cantitativ privind utilizabilitatea, implicarea, accesibilitatea și impactul emoțional/educațional. Subcontracte: S2.1."
+      },
+      "T3-4": {
+        "title": "Adaptarea pentru implementarea la KIKK (Le Pavillon)",
+        "description": "Pregătirea experienței Snapsting pentru implementarea la Le Pavillon ca parte a activităților bancului de testare public din WP4. Asigură colaborarea între pachetele de lucru și îmbunătățiri bazate pe feedbackul publicului din WP4. Subcontracte: S2.1–S2.4."
+      },
+      "T4-1": {
+        "title": "Pregătirea pentru implementarea publică",
+        "description": "Coordonarea bazei tehnice, metodologice și comunicaționale necesare pentru o implementare publică reușită. Include metodologii de testare, strategii de receptare a publicului, protocoale de colectare a datelor, planificarea instalării la fața locului, primirea vizitatorilor, considerații de accesibilitate și fluxuri de comunicare."
+      },
+      "T4-2": {
+        "title": "Dezvoltarea modelului de afaceri pentru o implementare durabilă",
+        "description": "Co-dezvoltarea unui model de afaceri durabil pentru experiențele imersive, aliniat la contextele socioeconomice ale locurilor de implementare și la obiectivele strategice ale consorțiului ECHO. Rezultatele vor susține viabilitatea pe termen lung dincolo de perioada proiectului."
+      },
+      "T4-3": {
+        "title": "Implementare publică și operare",
+        "description": "Implementarea experiențelor imersive finalizate la Le Pavillon cu integrare tehnică și narativă completă, inclusiv instruirea personalului local, întreținerea, magazinul pop-up și activitățile mediate pentru a asigura experiențe de vizitare de înaltă calitate."
+      },
+      "T4-4": {
+        "title": "Lansarea publică la festivalul KIKK (oct. 2027)",
+        "description": "Inițierea lansării publice a experienței imersive printr-o lansare de mare vizibilitate la festivalul KIKK 2027. Include un panel dedicat cu membri ai consorțiului ECHO, care plasează proiectul într-un context cultural și de inovare mai larg."
+      },
+      "T4-5": {
+        "title": "Analiza publicului și a parcursului",
+        "description": "Colectarea de date cantitative (fluxuri, timp de staționare, conversie, nevoi de acces) și calitative (sondaje, interviuri, observație) cu tablouri de bord asistate de IA; transmiterea constatărilor înapoi către WP2 și WP5."
+      },
+      "T4-6": {
+        "title": "Evaluarea modelelor de afaceri și a operării",
+        "description": "Testarea modelelor operaționale, a nevoilor de personal, a structurilor de costuri și a scenariilor de împărțire a veniturilor și sintetizarea unui „plan de afaceri” pentru viitorii adoptanți, în vederea evaluării viabilității economice și organizaționale a scalării formatelor imersive."
+      },
+      "T5-1": {
+        "title": "Implementarea comunicării interne a proiectului",
+        "description": "Stabilirea de instrumente și șabloane de comunicare internă pentru a sprijini coordonarea, a asigura conformitatea cu standardele UE și a permite partajarea eficientă a documentelor. Lansarea unui tablou de bord de KPI care urmărește progresul între participanți și instituții."
+      },
+      "T5-2": {
+        "title": "Etica și evaluarea comunicării cu IA",
+        "description": "Găzduirea de ateliere de etică a IA pentru membrii consorțiului și instituțiile culturale. Comandarea unei evaluări externe a utilizării IA de către WP5 în generarea de conținut, accesibilitate și instrumentele de interacțiune cu publicul. Integrarea constatărilor în rapoartele intermediar și final."
+      },
+      "T5-3": {
+        "title": "Rețelistică între proiecte și construirea comunității",
+        "description": "Facilitarea unui schimb structurat cu alte proiecte finanțate de UE prin ateliere comune, dezbateri și întâlniri tematice. Construiește o „comunitate de practică” în jurul experiențelor culturale imersive și încurajează o rețea de interese comune între consorții."
+      },
+      "T5-4": {
+        "title": "Transfer de cunoștințe și consolidarea capacităților",
+        "description": "Transformarea rezultatelor proiectului în formate practice: truse de instrumente deschise, șabloane, ateliere, dezbateri și masterclass-uri la conferințe și ghiduri de inițiere. Instrumentele de IA sprijină personalizarea conținutului pentru diferite instituții în funcție de dimensiune, tipul de public și maturitatea digitală."
+      },
+      "T5-5": {
+        "title": "Viitoruri participative și crearea viitorului",
+        "description": "Conducerea unor ateliere lunare de creare a viitorului (Futuremaking), producând scenarii, artefacte de design speculativ și un Futuremakers Toolkit (digital + fizic). Co-crearea 5D TimeMap — o platformă digitală care conectează spațiul, timpul și straturile culturale."
+      },
+      "T5-6": {
+        "title": "Instrumente de interacțiune publică și de informare",
+        "description": "Implementarea Outreach Platform pentru o interacțiune deschisă între public și consorțiu. Dezvoltarea și pilotarea Timetravel Companion — un instrument de IA conversațională care sporește implicarea publicului cu instalațiile imersive."
+      },
+      "T5-7": {
+        "title": "Design al viitorului și viziune pe termen lung",
+        "description": "Folosind metodologii conduse de Futurity Systems, co-crearea unei viziuni de viitor pentru inovarea culturală imersivă. Sugestiile de scenarii generate de IA și gruparea constatărilor vor ajuta la identificarea tendințelor emergente, a nevoilor societale și a oportunităților la nivel de sistem — conturând o foaie de parcurs europeană pentru cultura imersivă."
+      }
+    },
+    "ms": {
+      "MS1-1": { "title": "Alinierea consorțiului și demararea", "description": "Toți partenerii aliniați în jurul obiectivelor, metodelor, rolurilor și raportării la începutul proiectului." },
+      "MS2-1": { "title": "Cadru de design orientat pe nevoi stabilit", "description": "Un brief de design strategic bazat pe parcursurile utilizatorilor, nevoi, comportamente, contribuții instituționale și tendințe societale." },
+      "MS3-1": { "title": "Dezvoltarea conceptului și a narațiunii finalizată", "description": "Conceptul central, narațiunea, scenariul complet și storyboard-ul pentru Snapsting finalizate printr-un proces iterativ." },
+      "MS5-1": { "title": "Rețea de schimb între proiecte stabilită", "description": "Rețea de colaborare cu alte proiecte finanțate de UE inițiată oficial." },
+      "MS2-2": { "title": "Laborator operațional și primele prototipuri testate", "description": "Laborator experimental complet operațional; primele prototipuri imersive testate și evaluate." },
+      "MS2-3": { "title": "Seria de sprinturi de design incluziv finalizată", "description": "Toate cele patru sprinturi de co-creare incluzivă finalizate; constatările integrate în iterațiile de design." },
+      "MS3-2": { "title": "Producția finală finalizată", "description": "Toate elementele Snapsting finalizate, inclusiv conținutul, tehnologia și designul spatial." },
+      "MS3-3": { "title": "Experiența instalată și operațională", "description": "Snapsting complet instalat și funcțional la fața locului la Viborg Museum." },
+      "MS3-4": { "title": "Întâlnirea consorțiului și dezbatere", "description": "Toți partenerii consorțiului se reunesc la Viborg, cu o dezbatere la Animation Festival." },
+      "MS1-2": { "title": "Revizuirea coordonării la jumătatea perioadei", "description": "Revizuirea progresului, a riscurilor, a calității colaborării și a utilizării resurselor la jumătatea perioadei." },
+      "MS5-2": { "title": "Revizuirea impactului la jumătatea perioadei finalizată", "description": "Revizuire la jumătatea perioadei care evaluează comunicarea, transferul de cunoștințe, implicarea părților interesate și acoperirea diseminării." },
+      "MS4-1": { "title": "Cadru de implementare și model de afaceri definite", "description": "Strategii pentru implementarea publică stabilite, alături de un model de afaceri durabil co-dezvoltat cu partenerii." },
+      "MS2-4": { "title": "Designurile prototipurilor iterate și conceptele finale pregătite", "description": "Prototipuri dezvoltate pe baza testării; experiențe imersive finale aprobate pentru implementarea publică." },
+      "MS4-2": { "title": "Instalarea bancului de testare public deschisă", "description": "Primul spațiu complet echipat, controlul spectacolului validat; uși deschise publicului (festivalul KIKK, oct. 2027)." },
+      "MS4-3": { "title": "Tablou de bord de analiză între spații activ", "description": "Un tablou de bord central care agregă în timp real fluxul de vizitatori, implicarea și datele de accesibilitate devine operațional." },
+      "MS3-5": { "title": "Snapsting adaptat pentru implementarea la Le Pavillon", "description": "Snapsting adaptat pentru Le Pavillon, cu ajustări ale narațiunii, configurației tehnice și designului spatial." },
+      "MS5-3": { "title": "Resursele de consolidare a capacităților finalizate", "description": "Open Learning Toolkit, ghidul How-to ECHO, 5D TimeMap și trusele Futuremakers finalizate și distribuite." },
+      "MS5-4": { "title": "Diseminarea finală a impactului", "description": "Raportul final de design al viitorului care rezumă rezultatele prospectivei strategice și căile pe termen lung." },
+      "MS4-4": { "title": "Fezabilitate operațională și de afaceri raportată", "description": "Costuri, personal și logistică analizate pentru a susține adoptarea și extinderea viitoare." },
+      "MS1-3": { "title": "Rezumatul final al coordonării", "description": "Bilanțul strategic al livrării proiectului, inclusiv învățămintele-cheie privind coordonarea și luarea deciziilor." }
+    },
+    "d": {
+      "D1-1": { "title": "Manualul de management al proiectului", "description": "[ENG] Un ghid practic care descrie viziunea, aliniat cu instrumentele de coordonare internă, structura de raportare, responsabilitățile partenerilor și fluxurile de lucru comune. Include șabloane și liste de verificare." },
+      "D1-2": { "title": "Raport intermediar de coordonare și riscuri", "description": "[ENG] Evaluarea progresului, a calității coordonării, a stării riscurilor și a autoevaluărilor partenerilor. Include recomandări de îmbunătățire." },
+      "D2-1": { "title": "Brief de design imersiv orientat pe nevoi", "description": "[ENG] Un ghid strategic clar bazat pe constatări despre utilizatori, nevoi instituționale și schimbări societale — care definește provocările de design, personajele-tip ale utilizatorilor, obiectivele emoționale și ipotezele tehnice." },
+      "D2-2": { "title": "Designurile finale ale experienței imersive", "description": "[Limbă nedefinită] Pachete complete de experiență imersivă pentru implementarea publică, incluzând narațiuni, designuri spațiale și de interacțiune, configurații tehnice, ghiduri de primire/încheiere și soluții de accesibilitate." },
+      "D2-3": { "title": "Evaluarea finală a experienței imersive", "description": "[ENG] Evaluare cuprinzătoare a experienței utilizatorului, a fezabilității tehnice și a viabilității economice. Include analiza impactului emoțional, revizuirea accesibilității, testarea performanței sistemului și verificări ale sustenabilității operaționale." },
+      "D3-1": { "title": "Experiența imersivă Snapsting și documentația", "description": "[DANEZĂ & ENG] Experiența imersivă finalizată, instalată și funcțională la Viborg Museum. Include planurile de instalare, fișierele de design al interacțiunii și documentația pentru reutilizare sau adaptare." },
+      "D3-2": { "title": "Pachet adaptat al experienței Snapsting pentru Le Pavillon", "description": "[ENG] Versiune adaptată a experienței imersive Snapsting, concepută pentru implementarea la Le Pavillon. Include narațiune, design de interacțiune și spatial, configurație tehnică și orientări operaționale actualizate." },
+      "D3-3": { "title": "Raport despre procesul de producție imersivă", "description": "[ENG] O parcurgere practică a procesului de producție la fața locului. Include dezvoltarea narativă, deciziile tehnice, modelul de colaborare și provocările culturale întâmpinate — gândit ca referință pentru alte instituții." },
+      "D4-1": { "title": "Raport de implementare operațională", "description": "[ENG] Documentație pas cu pas a implementării bancului de testare public, incluzând logistica publicului, configurația spațială și note de adaptare tehnică." },
+      "D4-2": { "title": "Rezumat al experienței utilizatorului și al modelului de afaceri", "description": "[ENG] Evaluarea implicării publicului, a parcursurilor de primire/încheiere și a fezabilității modelelor de afaceri testate în spațiu." },
+      "D5-1": { "title": "Plan de comunicare și diseminare", "description": "[ENG] O strategie și un plan de comunicare integrate pentru partajarea pe scară largă a rezultatelor. Instrumentele de IA transformă datele proiectului în articole, postări, studii de caz și micro-conținut adaptate diferitelor publicuri europene. Generare conformă cu politica UE privind IA, confidențialitatea și etica tehnologică." },
+      "D5-2": { "title": "Tablou de bord al proiectului", "description": "Un site web cu un tablou de bord digital în timp real care urmărește și vizualizează KPI pe mai multe niveluri: contribuțiile individuale ale participanților, fluxurile de lucru intrainstituționale, colaborarea interinstituțională, scorul de implicare civică și impactul societal mai larg. Secțiune publică + zone private pentru instituții, factori de decizie și părți interesate." },
+      "D5-3": { "title": "Raport intermediar de impact și diseminare", "description": "Revizuire cuprinzătoare a impactului proiectului, a activităților de diseminare și a rezultatelor de comunicare la jumătatea perioadei. Evaluează metricile de implicare, adoptarea instituțională, eficacitatea transferului de cunoștințe și colaborarea intersectorială." },
+      "D5-4": { "title": "Futuremakers Toolkit", "description": "O trusă hibridă (fizică și digitală) care reunește tehnici participative, materiale și activități ghidate care îi învață pe profesioniștii din cultură să imagineze viitoruri mai incluzive și mai reziliente. Oferită în 10 limbi ale UE. Fizic: caiete de lucru, pachete de cărți, piese de joc durabile din materiale sustenabile. Digital: conținut media + o tablă interactivă multi-utilizator." },
+      "D5-5": { "title": "Outreach Platform", "description": "O platformă potențată de IA pentru o comunicare bidirecțională fără fricțiuni între proiect, instituții și publicuri. Include un tablou de bord operațional de KPI în timp real. Platformă în engleză; agenți și conținut de IA în 10 limbi ale UE. Include personaje-tip de agenți IA (ghid de muzeu, personaj istoric, mascotă fictivă) și un instrument prin care instituțiile își pot crea propriile versiuni." },
+      "D5-6": { "title": "5D TimeMap al siturilor de patrimoniu cultural", "description": "O hartă digitală interactivă care conectează siturile de patrimoniu cultural din întreaga Europă cu instituțiile lor respective, îmbogățită cu cinci dimensiuni: spațială, temporală și trei straturi tematice (artistic, politic, lingvistic). Disponibilă la fața locului, pe calculatoare și pe mobil în 10 limbi ale UE." },
+      "D5-7": { "title": "Prototipul Timetravel Companion", "description": "Un prototip funcțional al Timetravel Companion — un ghid alimentat de IA care îmbogățește vizitele la muzeu și instalațiile imersive prin interacțiune vocală, povestire contextuală și conținut holografic opțional. Include interfața aplicației, module de conținut, documentația testării cu utilizatorii și evaluarea accesibilității în 10 limbi ale UE. Pentru instalații vor fi construite 100 de dispozitive personalizate open-source." },
+      "D5-8": { "title": "Open Learning Toolkit și ghidul How-to ECHO", "description": "Un pachet de informații, instrucțiuni și instrumente care permite noilor instituții culturale să implementeze trusa ECHO de la cap la coadă. Resurse modulare, gata de utilizare, construite pe baza rezultatelor WP2–WP4, în 10 limbi ale UE." },
+      "D5-9": { "title": "Raport de rețelistică între proiecte", "description": "Raport cuprinzător care documentează activitățile de rețelistică între proiecte, inclusiv întâlniri, evenimente de colaborare, rezultate-cheie și propuneri pentru schimb continuu." },
+      "D5-10": { "title": "Raportul final de design al viitorului", "description": "O platformă digitală care prezintă rezultatele proiectului și potențialul său pe termen lung. Instrumente media alimentate de IA personalizează conținutul pentru participanți și traduc învățămintele proiectului în formate ce pot fi partajate, în 10 limbi ale UE." }
+    },
+    "dStatus": {
+      "D5-2": "Ești aici!"
+    },
+    "event": {
+      "E1": { "name": "Sprint pentru tineri: Future Worlds Builder", "type": "Sprint centrat pe utilizator" },
+      "E2": { "name": "Sprint neurodivergent: navigare neliniară", "type": "Sprint centrat pe utilizator" },
+      "E3": { "name": "Experiența imersivă Snapsting", "type": "Expoziție" },
+      "E4": { "name": "Echoes of the Future: conectarea patrimoniului cultural cu inovarea imersivă", "type": "Conferință" },
+      "E5": { "name": "Immersive ECHO: patrimoniul cultural pentru viitor", "type": "Dezbatere" },
+      "E6": { "name": "Immersive ECHO", "type": "Expoziție" },
+      "E7": { "name": "Prototipare speculativă", "type": "Atelier" },
+      "E8": { "name": "Cartografiere senzorială și interacțiune", "type": "Atelier" },
+      "E9": { "name": "Sprint pentru vârstnici: navigare întrupată și digitală", "type": "Sprint centrat pe utilizator" },
+      "E10": { "name": "Sprint pentru grupuri marginalizate", "type": "Sprint centrat pe utilizator" },
+      "E11": { "name": "Ateliere de geamăn digital și testare la distanță", "type": "Testare cu utilizatori" },
+      "E12": { "name": "Design pentru scalabilitate și pregătire pentru turneu", "type": "Atelier" },
+      "E13": { "name": "Tehnologie și inovare pentru povestirea imersivă", "type": "Masterclass" },
+      "E14": { "name": "Direcție creativă și flux de animație pentru narațiuni culturale", "type": "Masterclass" },
+      "E15": { "name": "Colaborare interdisciplinară pentru inovarea în patrimoniu", "type": "Masterclass" },
+      "E16": { "name": "Senzori și emoții", "type": "Atelier" },
+      "E17": { "name": "Devino designer de experiențe", "type": "Atelier" },
+      "E18": { "name": "Immersive ECHO: conectarea patrimoniului cultural cu experiențele imersive", "type": "Masterclass" },
+      "E19": { "name": "Sesiuni lunare de creare a viitorului", "type": "Ateliere" },
+      "E20": { "name": "IA, etică și viitoruri culturale: inovare responsabilă în patrimoniul imersiv", "type": "Atelier" },
+      "E21": { "name": "Schimb între proiecte", "type": "Ateliere" }
+    }
+  },
+  "news": {
+    "title": "Noutăți, evenimente și activități",
+    "latestUpdates": "Cele mai recente actualizări",
+    "readMore": "Citește mai mult →",
+    "empty": "Încă niciun element în această categorie.",
+    "eventGalleries": "Galerii de evenimente",
+    "backToNews": "← Înapoi la Noutăți",
+    "photos": "{{count}} fotografii",
+    "filters": {
+      "All": "Toate",
+      "News": "Noutăți",
+      "Events": "Evenimente",
+      "Press": "Presă"
+    },
+    "galleries": {
+      "launch": "Lansare (Namur)"
+    },
+    "articles": {
+      "newsletter1": {
+        "title": "Vă prezentăm ECHO — Buletinul informativ nr. 1",
+        "subtitle": "Cum schimbă designul imersiv felul în care trăim istoria"
+      },
+      "launch": {
+        "title": "Proiectul Immersive ECHO a fost lansat oficial",
+        "subtitle": "Peste 40 de creatori europeni de talie mondială s-au reunit la Namur pentru a demara proiectul ECHO Immersive"
+      }
+    },
+    "launch": {
+      "title": "Proiectul Immersive ECHO a fost lansat oficial",
+      "lead": "Peste 40 de creatori europeni de talie mondială s-au reunit la Namur pentru a demara proiectul ECHO Immersive.",
+      "teamAlt": "Echipa ECHO Immersive la Namur",
+      "p1": "Immersive ECHO a fost lansat oficial în februarie 2026 printr-o întâlnire de început de mai multe zile la Le Pavillon din Namur, Belgia, locul care va găzdui bancul de testare public al proiectului. Delegațiile tuturor partenerilor din consorțiu s-au reunit în persoană pentru prima dată, aducând laolaltă profesioniști din muzee, designeri imersivi, dezvoltatori, cercetători și strategi din zece țări. Întâlnirea a fost coordonată de echipa de proiect de la Lindholmen Science Park, condusă de managerul de proiect Ismaila Jallow și de coordonatoarea Katrin Amberntsson, cu sprijinul echipelor KIKK și Le Pavillon la fața locului.",
+      "p2": "Zilele au combinat ateliere structurate cu explorare liberă. Echipele au parcurs întrebări fundamentale despre cum se mișcă oamenii prin spații, ce le captează atenția și cum povestea și interacțiunea ajută publicul să construiască sens. În loc să pornească de la tehnologie, discuțiile s-au concentrat pe narațiune, percepție și cerințele specifice ale spațiilor culturale. Participanții au plecat cu o înțelegere comună a felului în care vor arăta următorii doi ani și jumătate și cu acel tip de încredere care se formează doar atunci când oameni curioși petrec cu adevărat timp împreună. Experiențele imersive finale dezvoltate în cadrul proiectului se vor întoarce la Le Pavillon pentru implementarea publică în octombrie 2027.",
+      "galleryHeading": "Galerie"
+    }
+  },
+  "contact": {
+    "title": "Contactează-ne",
+    "getInTouch": "Ia legătura",
+    "intro": "Contactează echipa de coordonare de la Lindholmen Science Park pentru întrebări generale, informații de presă sau întrebări despre parteneriate.",
+    "coordinatorHeading": "Coordonator",
+    "coordinatorLocation": "Göteborg, Suedia",
+    "stayInTouch": "Rămâi în legătură",
+    "requiredNote": "Câmpurile marcate cu * sunt obligatorii.",
+    "labels": {
+      "name": "Nume",
+      "email": "E-mail",
+      "organisation": "Organizație",
+      "subject": "Subiect",
+      "message": "Mesaj"
+    },
+    "send": "Trimite mesajul",
+    "sending": "Se trimite…",
+    "success": {
+      "heading": "Mesaj trimis!",
+      "body": "Îți vom răspunde în termen de 5 zile lucrătoare. Verifică-ți căsuța de e-mail pentru o confirmare.",
+      "again": "Trimite alt mesaj"
+    },
+    "errors": {
+      "generic": "Ceva nu a funcționat. Te rugăm să încerci din nou.",
+      "network": "Serverul nu a putut fi contactat. Te rugăm să îți verifici conexiunea."
+    },
+    "newsletterPrompt": "Vrei să rămâi la curent cu Immersive ECHO?"
+  },
+  "faq": {
+    "title": "Întrebări frecvente",
+    "items": {
+      "q1": {
+        "question": "Ce este Immersive ECHO?",
+        "answer": "Immersive ECHO este un proiect paneuropean care îi apropie pe oameni de patrimoniul lor comun prin povestirea imersivă. Pe parcursul a 30 de luni (februarie 2026 – iulie 2028), 15 parteneri din 10 țări dezvoltă un model practic care le permite instituțiilor culturale să transforme spațiile publice de zi cu zi în experiențe emoționale, colective — folosind proiecție, sunet spațial și tehnologia senzorilor în loc de căști VR. Accentul este pus pe a face povestirea imersivă accesibilă instituțiilor mici și mijlocii care în prezent nu dispun de bugetul și expertiza necesare pentru a o crea."
+      },
+      "q2": {
+        "question": "De ce este nevoie de acest proiect?",
+        "answer": "Majoritatea instituțiilor de patrimoniu cultural nu dispun de buget, expertiză și capacitate tehnică pentru a crea experiențe imersive. Producțiile la scară largă sunt de obicei rezervate muzeelor bine finanțate și spațiilor comerciale. În același timp, publicul se așteaptă tot mai mult la întâlniri captivante, multisenzoriale cu cultura. Immersive ECHO răspunde acestei lacune cu un model practic, transferabil — testat în contexte reale, documentat cu onestitate și conceput astfel încât un muzeu local cu resurse limitate să își poată spune poveștile în moduri captivante emoțional și sustenabile economic."
+      },
+      "q3": {
+        "question": "Ce diferențiază Immersive ECHO de alte proiecte imersive?",
+        "answer": "Cinci lucruri ne deosebesc. Ne concentrăm pe instituțiile mici și mijlocii — nu pe marile instituții de referință. Abordarea noastră este fără căști: proiecția, sunetul spațial și senzorii transformă spațiile publice existente. Incluziunea este integrată în procesul de design, cu sprinturi dedicate pentru tineri, publicul neurodivergent, vârstnici și grupurile marginalizate. Documentăm întregul proces — inclusiv ceea ce nu funcționează — și producem truse de instrumente deschise pentru ca alții să poată replica abordarea în mod independent. Iar consorțiul în sine este unic: designeri de renume mondial, cercetători, instituții de patrimoniu de dimensiuni variate și tehnologi lucrând cot la cot."
+      },
+      "q4": {
+        "question": "De ce „imersiv” fără căști VR?",
+        "answer": "Căștile VR creează bariere: cost, accesibilitate, disconfort și izolare individuală. De asemenea, sunt greu de scalat — o cască servește o singură persoană pe rând. Abordarea noastră folosește sunet spațial, proiecții și senzori de mediu pentru a transforma spațiile publice comune în medii de povestire imersivă. O singură instalație legată de loc ajunge simultan la un public larg, necesită mai puține echipamente specializate și este mai ușor de operat și de susținut pentru instituții. Rezultatul este colectiv, întrupat și cu prag scăzut — și are sens economic pentru locurile care îl găzduiesc."
+      },
+      "q5": {
+        "question": "Ce va trăi de fapt un vizitator?",
+        "answer": "Povestire multisenzorială legată de loc, folosind proiecție, sunet spațial și interacțiune cu mediul pentru a aduce la viață patrimoniul cultural în spații publice comune. Pe măsură ce te miști printr-un loc, imaginile proiectate și sunetul răspund prezenței tale și creează o narațiune care se desfășoară în jurul tău. Scopul nu este transferul pasiv de informații, ci întâlniri active cu istoria — deschise, participative și concepute astfel încât fiecare vizitator să își creeze propriul parcurs prin poveste. O simți înainte să te gândești la ea."
+      },
+      "q6": {
+        "question": "Ce este Snapsting?",
+        "answer": "Snapsting este producția emblematică la fața locului dezvoltată de Viborg Museum din Danemarca. Explorează identitatea milenară a Viborgului ca loc al puterii regale, religioase și judiciare — aducând acea istorie la viață prin muzică, animație poetică și medii atmosferice. Experiența este neliniară: vizitatorii își urmează propria curiozitate prin poveste. Dincolo de experiența în sine, întregul proces de producție este documentat ca o metodologie transferabilă — un ghid practic pentru alte instituții de patrimoniu cultural care își planifică propria activitate imersivă. Snapsting are premiera publică în noiembrie 2026."
+      },
+      "q7": {
+        "question": "Ce sunt Le Pavillon și festivalul KIKK?",
+        "answer": "Le Pavillon este un spațiu din Namur, Belgia, operat de KIKK — și servește drept bancul de testare public al proiectului. Aici experiențele imersive întâlnesc pentru prima dată un public real și divers, la scară largă. Testăm întregul parcurs al vizitatorului: răspunsul emoțional, tiparele de interacțiune, accesibilitatea, primirea și dacă experiența creează ocazii de reflecție după ce oamenii pleacă. Premiera publică este planificată pentru festivalul KIKK din octombrie 2027 — unul dintre principalele festivaluri europene de cultură digitală și creativă, care atrage mii de vizitatori în fiecare an."
+      },
+      "q8": {
+        "question": "Ce înseamnă „incluziune prin design” în practică?",
+        "answer": "Înseamnă că accesibilitatea și nevoile unui public divers sunt integrate în procesul de design de la bun început — nu adăugate la final. Proiectul include patru sprinturi dedicate de design incluziv, fiecare axat pe un public anume: tineri, persoane neurodivergente, vârstnici și comunități marginalizate. Utilizatori reali modelează activitatea încă din primele etape. Incluziunea înseamnă și recunoaștere emoțională — crearea de experiențe în care oamenii se văd reflectați în povești, în care istoria se simte ca ceva ce le aparține."
+      },
+      "q9": {
+        "question": "Cine se află în spatele Immersive ECHO?",
+        "answer": "Un consorțiu format din 15 organizații din 10 țări europene, coordonat de Lindholmen Science Park din Göteborg, Suedia. Printre parteneri se numără studiouri de design imersiv, instituții de patrimoniu cultural, laboratoare de cercetare, companii de tehnologie și specialiști în comunicare din Suedia, Germania, Franța, Finlanda, România, Danemarca, Belgia, Ucraina, Spania și Slovenia. Printre partenerii asociați se numără Orașul Göteborg și The Animation Workshop din Danemarca. Proiectul a primit un punctaj de evaluare al UE de 92/100."
+      },
+      "q10": {
+        "question": "Face Ucraina parte din proiect?",
+        "answer": "Da. Parcul Sofiyivka din Uman, Ucraina, este un partener cu drepturi depline în consorțiu. Din cauza invaziei ruse în curs, prototiparea fizică nu poate avea loc în Ucraina. În schimb, Parcul Sofiyivka contribuie cu date de patrimoniu cultural, materiale istorice și o perspectivă inestimabilă asupra patrimoniului în zonele de conflict. Participarea lor ne amintește de ce contează conservarea culturală — și de ce este urgentă. Consorțiul lucrează activ la provocările operaționale pe care le creează situația lor."
+      },
+      "q11": {
+        "question": "Cum este finanțat proiectul?",
+        "answer": "Immersive ECHO este cofinanțat de Uniunea Europeană în cadrul programului Europa Creativă, componenta Cooperare la scară largă. Bugetul total este de aproximativ 3,3 milioane de euro, din care UE finanțează 60% (1.999.019 €). Restul de 40% reprezintă cofinanțare din partea partenerilor din consorțiu. În cadrul modelului cu sumă forfetară, UE plătește pentru rezultate — nu pentru cheltuieli generale. Calendarul plăților este de 40% la începutul proiectului, 40% la raportul intermediar (luna 15) și 20% la raportul final."
+      },
+      "q12": {
+        "question": "Ce va produce proiectul?",
+        "answer": "Rezultate pe trei niveluri. Experiențe concrete: instalații imersive testate la Viborg Museum și la Le Pavillon, concepute pentru turneu și adaptare. Cunoștințe deschise: un Open Learning Toolkit cu ghiduri pas cu pas, un Futuremakers Toolkit pentru gândirea participativă despre viitor, documentarea procesului de producție și o Outreach Platform pentru comunitatea mai largă a patrimoniului cultural. Capacitate structurală: un Business Blueprint care validează ce funcționează operațional și economic și un raport final de design al viitorului cu recomandări de politici și foi de parcurs instituționale pentru sector dincolo de 2028."
+      },
+      "q13": {
+        "question": "Ce se întâmplă după încheierea proiectului în 2028?",
+        "answer": "Sustenabilitatea este integrată în procesul de design de la bun început — nu tratată ca o reflecție ulterioară. Arhitectura tehnică este construită în jurul modularității: conținutul poate fi dus în turneu între locații, gemenii digitali permit planificarea de la distanță a unor noi situri, iar designul parametric reduce efortul necesar adaptării instalațiilor. Viborg Museum intenționează să continue operarea Snapsting ca instalație permanentă. Toată proprietatea intelectuală generată este pusă la dispoziție în mod deschis pentru adaptare, reutilizare și dezvoltare comercială. Ambiția este de a lăsa în urmă metode, instrumente și modele dovedite care continuă să genereze valoare în întregul sector."
+      },
+      "q14": {
+        "question": "Cum se pot implica alte instituții de patrimoniu cultural?",
+        "answer": "În mai multe moduri concrete. Platforma ECHOSYSTEM va include un portal public prin care profesioniștii din cultură pot accesa truse de instrumente în formă de ciornă, se pot alătura forumurilor de schimb între colegi și se pot înscrie la evenimente. Atelierele lunare Futuremaking din orașele partenere sunt deschise profesioniștilor externi. Trei masterclass-uri online acoperă fluxurile tehnice de producție, direcția creativă și colaborarea interdisciplinară. Bancurile de testare publice de la Le Pavillon și Viborg Museum servesc drept medii de învățare în timp real. Toate trusele de instrumente și materialele de formare vor fi disponibile gratuit în toate cele zece limbi ale partenerilor. Urmărește proiectul cu #ImmersiveECHO sau abonează-te la buletinul informativ."
+      }
+    }
+  },
+  "partners": {
+    "title": "Consorțiul",
+    "coordinator": "Coordonatorul proiectului",
+    "commsDissemination": "Comunicare și diseminare",
+    "corePartners": "Parteneri principali",
+    "lspLocation": "Göteborg, Suedia",
+    "futLocation": "Barcelona, Spania"
+  },
+  "nav": {
+    "home": "Acasă",
+    "about": "Despre",
+    "partners": "Parteneri",
+    "experiences": "Experiențe",
+    "news": "Noutăți și evenimente",
+    "faq": "Întrebări frecvente",
+    "contact": "Contact",
+    "downloadResources": "Descarcă resursele",
+    "toggleNavigation": "Comută navigarea",
+    "selectLanguage": "Selectează limba"
+  },
+  "footer": {
+    "quickLinks": "Linkuri rapide",
+    "aboutProject": "Despre proiect",
+    "newsletter": "Buletin informativ",
+    "followUs": "Urmărește-ne pe {{network}}",
+    "euAlt": "Cofinanțat de Uniunea Europeană",
+    "euCredit": "Cofinanțat de Uniunea Europeană în cadrul programului Europa Creativă, componenta Cooperare la scară largă. Acordul de grant nr. 101255680.",
+    "duration": "Durată: feb. 2026 – iul. 2028",
+    "coordinator": "Coordonator: Lindholmen Science Park",
+    "partners": "15 parteneri · 10 țări",
+    "rights": "© {{year}} Immersive ECHO. Toate drepturile rezervate."
+  },
+  "timeline": {
+    "eyebrow": "Cronologia proiectului · M1 — M30 · feb. 2026 — iul. 2028",
+    "heading": "Treizeci de luni, în public.",
+    "lede": "Immersive ECHO este un proiect Europa Creativă de 30 de luni: proiectează, construiește, testează, scalează. Jaloane, livrabile și evenimente publice ale consorțiului format din 15 organizații din 10 țări ale UE. Treci cu mouse-ul peste o lună pentru a te concentra; dă clic pe o intrare pentru a o citi.",
+    "type": {
+      "deliverable": "Livrabil",
+      "milestone": "Jalon",
+      "event": "Eveniment"
+    },
+    "stats": {
+      "done": "Realizate",
+      "deliverables": "Livrabile",
+      "milestones": "Jaloane",
+      "events": "Evenimente"
+    },
+    "index": "Index",
+    "cols": {
+      "date": "Dată",
+      "type": "Tip",
+      "title": "Titlu",
+      "status": "Stare"
+    },
+    "detail": {
+      "delivered": "✓ Livrat",
+      "inProgress": "● În desfășurare",
+      "upcoming": "○ Urmează",
+      "dateTBC": "Dată de confirmat",
+      "prev": "← Anterior",
+      "next": "Următor →"
+    },
+    "row": {
+      "delivered": "Livrat",
+      "now": "● Acum",
+      "upcoming": "Urmează",
+      "tbd": "De stabilit"
+    },
+    "today": "ASTĂZI",
+    "items": {
+      "ms1-1": { "title": "MS1.1 · Alinierea consorțiului și demararea", "description": "Toți partenerii aliniați în jurul obiectivelor, metodelor, rolurilor și raportării la începutul proiectului." },
+      "ms1-2": { "title": "MS2.1 · Cadru de design orientat pe nevoi", "description": "Un brief de design strategic bazat pe parcursurile utilizatorilor, nevoi, comportamente, contribuții instituționale și tendințe societale." },
+      "ms1-3": { "title": "MS3.1 · Concept și narațiune finalizate", "description": "Conceptul central, narațiunea, scenariul complet și storyboard-ul pentru Snapsting finalizate printr-un proces iterativ." },
+      "ms1-5": { "title": "MS5.1 · Rețea de schimb între proiecte", "description": "Rețea de colaborare cu alte proiecte finanțate de UE inițiată oficial." },
+      "ms2-2": { "title": "MS2.2 · Laborator operațional, primele prototipuri", "description": "Laborator experimental complet operațional; primele prototipuri imersive testate și evaluate." },
+      "ms3-2": { "title": "MS2.3 · Sprinturi de design incluziv finalizate", "description": "Toate cele patru sprinturi de co-creare incluzivă finalizate; constatările integrate în iterațiile de design." },
+      "ms2-3": { "title": "MS3.2 · Producția Snapsting finalizată", "description": "Toate elementele Snapsting finalizate, inclusiv conținutul, tehnologia și designul spatial." },
+      "ms3-3": { "title": "MS3.3 · Snapsting instalat la Viborg", "description": "Snapsting complet instalat și funcțional la fața locului la Viborg Museum." },
+      "ms4-3": { "title": "MS3.4 · Întâlnirea consorțiului și panel", "description": "Toți partenerii consorțiului se reunesc la Viborg, cu o dezbatere la Animation Festival." },
+      "ms2-1": { "title": "MS1.2 · Revizuirea coordonării la jumătatea perioadei", "description": "Revizuirea progresului, a riscurilor, a calității colaborării și a utilizării resurselor la jumătatea perioadei." },
+      "ms2-5": { "title": "MS5.2 · Revizuirea impactului la jumătatea perioadei", "description": "Revizuire la jumătatea perioadei a comunicării, a transferului de cunoștințe, a implicării părților interesate și a acoperirii diseminării." },
+      "ms1-4": { "title": "MS4.1 · Cadru de implementare și model de afaceri", "description": "Strategii pentru implementarea publică stabilite, alături de un model de afaceri durabil co-dezvoltat cu partenerii." },
+      "ms4-2": { "title": "MS2.4 · Concepte finale pregătite", "description": "Prototipuri dezvoltate pe baza testării; experiențe imersive finale aprobate pentru implementarea publică." },
+      "ms2-4": { "title": "MS4.2 · Banc de testare public deschis la Le Pavillon", "description": "Primul spațiu complet echipat, controlul spectacolului validat; uși deschise publicului (festivalul KIKK, oct. 2027)." },
+      "ms3-4": { "title": "MS4.3 · Analiză între spații activă", "description": "Un tablou de bord central care agregă în timp real fluxul de vizitatori, implicarea și datele de accesibilitate devine operațional." },
+      "ms5-3": { "title": "MS3.5 · Snapsting adaptat pentru Le Pavillon", "description": "Snapsting adaptat pentru Le Pavillon, cu ajustări ale narațiunii, configurației tehnice și designului spatial." },
+      "ms3-5": { "title": "MS5.3 · Resurse de consolidare a capacităților finale", "description": "Open Learning Toolkit, ghidul How-to ECHO, 5D TimeMap și trusele Futuremakers finalizate și distribuite." },
+      "ms4-5": { "title": "MS5.4 · Diseminarea finală a impactului", "description": "Raportul final de design al viitorului care rezumă rezultatele prospectivei strategice și căile pe termen lung." },
+      "ms4-4": { "title": "MS4.4 · Fezabilitate operațională raportată", "description": "Costuri, personal și logistică analizate pentru a susține adoptarea și extinderea viitoare." },
+      "ms3-1": { "title": "MS1.3 · Rezumatul final al coordonării", "description": "Bilanțul strategic al livrării proiectului, inclusiv învățămintele-cheie privind coordonarea și luarea deciziilor." },
+      "d1-1": { "title": "D1.1 · Manualul de management al proiectului", "description": "Un ghid practic care descrie viziunea, instrumentele de coordonare internă, structura de raportare, responsabilitățile partenerilor și fluxurile de lucru comune." },
+      "d5-1": { "title": "D5.1 · Plan de comunicare și diseminare", "description": "Strategie de comunicare integrată. Instrumentele de IA transformă datele proiectului în articole, postări, studii de caz și micro-conținut pentru publicurile europene." },
+      "d5-2": { "title": "D5.2 · Tablou de bord al proiectului", "description": "Tablou de bord digital în timp real care urmărește KPI la nivel de participant, instituțional, interinstituțional, implicare civică și impact societal." },
+      "d2-1": { "title": "D2.1 · Brief de design imersiv orientat pe nevoi", "description": "Ghid strategic bazat pe constatări despre utilizatori, nevoi instituționale și schimbări societale — care definește provocările de design, personajele-tip, obiectivele emoționale și ipotezele tehnice." },
+      "d3-1": { "title": "D3.1 · Experiența Snapsting și documentația", "description": "Experiență imersivă finalizată, instalată la Viborg Museum, plus planuri de instalare, fișiere de design al interacțiunii și documentație pentru reutilizare." },
+      "d1-2": { "title": "D1.2 · Raport intermediar de coordonare și riscuri", "description": "Evaluarea progresului, a calității coordonării, a stării riscurilor și a autoevaluărilor partenerilor, cu recomandări." },
+      "d5-3": { "title": "D5.3 · Impact și diseminare la jumătatea perioadei", "description": "Revizuire cuprinzătoare la jumătatea perioadei a impactului, diseminării, implicării, adoptării instituționale și colaborării intersectoriale." },
+      "d5-6": { "title": "D5.6 · 5D TimeMap al siturilor de patrimoniu", "description": "Hartă digitală interactivă care conectează siturile de patrimoniu european cu cinci straturi — spațial, temporal, artistic, politic, lingvistic. Disponibilă în 10 limbi ale UE." },
+      "d2-2": { "title": "D2.2 · Designurile finale ale experienței imersive", "description": "Pachete complete de experiență imersivă pentru implementarea publică — narațiuni, designuri spațiale / de interacțiune, configurații tehnice, parcursuri de primire, accesibilitate." },
+      "d3-2": { "title": "D3.2 · Snapsting adaptat pentru Le Pavillon", "description": "Snapsting adaptat pentru Le Pavillon cu narațiune, design de interacțiune și spatial, configurație tehnică și orientări operaționale actualizate." },
+      "d5-4": { "title": "D5.4 · Futuremakers Toolkit", "description": "Trusă hibridă (fizică + digitală) de tehnici participative și activități ghidate pentru profesioniștii din cultură. 10 limbi ale UE." },
+      "d5-5": { "title": "D5.5 · Outreach Platform", "description": "Platformă de comunicare bidirecțională potențată de IA cu tablou de bord de KPI în timp real. Personaje-tip de agenți IA: ghid de muzeu, personaj istoric, mascotă fictivă." },
+      "d5-7": { "title": "D5.7 · Prototipul Timetravel Companion", "description": "Ghid alimentat de IA care îmbogățește vizitele la muzeu prin interacțiune vocală, povestire contextuală și conținut holografic opțional. 100 de dispozitive personalizate." },
+      "d3-3": { "title": "D3.3 · Raport despre procesul de producție imersivă", "description": "Parcurgere a procesului de producție la fața locului — narațiune, decizii tehnice, model de colaborare, provocări culturale. O referință pentru alte instituții." },
+      "d4-1": { "title": "D4.1 · Raport de implementare operațională", "description": "Documentație pas cu pas a implementării bancului de testare public: logistica publicului, configurație spațială, note de adaptare tehnică." },
+      "d5-8": { "title": "D5.8 · Open Learning Toolkit și ghidul How-to", "description": "Resurse modulare, gata de utilizare, construite pe baza rezultatelor WP2–WP4. Generarea de conținut asistată de IA adaptează resursele la profilurile instituționale." },
+      "d2-3": { "title": "D2.3 · Evaluarea finală a experienței imersive", "description": "Evaluare cuprinzătoare: impact emoțional, accesibilitate, performanța sistemului, sustenabilitate operațională." },
+      "d4-2": { "title": "D4.2 · Rezumat UX și model de afaceri", "description": "Evaluarea implicării publicului, a parcursurilor de primire/încheiere și a fezabilității modelelor de afaceri testate în spațiu." },
+      "d5-9": { "title": "D5.9 · Raport de rețelistică între proiecte", "description": "Documentează activitățile de rețelistică între proiecte — întâlniri, evenimente de colaborare, rezultate-cheie, propuneri pentru schimb continuu." },
+      "d5-10": { "title": "D5.10 · Raportul final de design al viitorului", "description": "Platformă digitală care prezintă rezultatele proiectului și potențialul său pe termen lung. Instrumente media alimentate de IA personalizează conținutul în 10 limbi ale UE." },
+      "e1": { "title": "E1 · Deschiderea expoziției Snapsting", "description": "Experiența imersivă Snapsting se deschide publicului la Viborg Museum. Prezentare pe trei ani.", "tag": "Expoziție · Viborg · 150 000 pax" },
+      "e5": { "title": "E5 · Lansare publică · Festivalul KIKK", "description": "Lansare de mare vizibilitate a experienței imersive la festivalul KIKK 2027. Panel al consorțiului.", "tag": "Panel · Namur · 25 000 pax" },
+      "e6": { "title": "E6 · Deschiderea expoziției Le Pavillon", "description": "Expoziția Immersive ECHO se deschide publicului la Le Pavillon, în Namur.", "tag": "Expoziție · Namur · 25 000 pax" },
+      "e2": { "title": "E2 · Sprint pentru tineri: Future Worlds Builder", "description": "Sprint centrat pe utilizator axat pe fluența digitală și curiozitate. 3 zile.", "tag": "Sprint · Göteborg · 80 pax" },
+      "e3": { "title": "E3 · Sprint neurodivergent", "description": "Navigare neliniară; echilibru senzorial și implicare neliniară. 2 zile.", "tag": "Sprint · Berlin · 40 pax" },
+      "e4": { "title": "E4 · Conferința Echoes of the Future", "description": "Conectarea patrimoniului cultural cu inovarea imersivă. Conferință + panel la Animation Festival.", "tag": "Conferință · Viborg · 300 pax" }
+    }
+  }
+}

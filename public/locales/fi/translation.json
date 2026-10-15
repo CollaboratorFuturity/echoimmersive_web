@@ -1,1 +1,699 @@
-{}
+{
+  "home": {
+    "hero": {
+      "badge": "Luova Eurooppa",
+      "titleLine1": "Immersive",
+      "titleLine2": "Echo",
+      "subtitleLine1": "Luomme yhteisöllisiä immersiivisiä kokemuksia",
+      "subtitleLine2": "Euroopan kulttuuriperinnölle"
+    },
+    "scroll": "Vieritä",
+    "stats": {
+      "partners": "Kumppania",
+      "countries": "Maata",
+      "months": "Kuukautta",
+      "testbeds": "Julkista testiympäristöä"
+    },
+    "missionLabel": "Tehtävä",
+    "mission": {
+      "p1": "Kulttuuriperintö on olemassa, koska ihmiset tarvitsevat sitä. Se toimii elävänä yhteytenä paikkaan, yhteisöön ja kertomuksiin, jotka selittävät, keitä olemme ja miten tähän päädyimme. Silti miljoonilta ihmisiltä eri puolilla Eurooppaa tämä yhteys on katkeamassa. Tilat ja muodot, joiden on tarkoitus kantaa näitä kertomuksia, eivät yksinkertaisesti ole pysyneet niiden ihmisten tahdissa, joita niiden on tarkoitus palvella.",
+      "p2": "Pienemmät kulttuuriperintölaitokset kokevat tämän kaikkein voimakkaimmin. Ilman suurten lippulaivojen resursseja ne näkevät yleisönsä kutistuvan, nuorempien sukupolvien ajautuvan pois ja niiden yhteisöjen, jotka eivät koskaan oikein peilautuneet niiden kokoelmiin, lakkaavan tulemasta paikalle lainkaan. Välineet tämän muuttamiseksi ovat olemassa. Immersiiviset, moniaistiset kokemukset, jotka ympäröivät sinut kertomuksella sen sijaan, että esittäisivät sen lasin takaa, ovat todistetusti toimivia ja vaikuttavia. Mutta ne jäävät useimpien ulottumattomiin.",
+      "p3": "Immersive ECHO lähtee toisenlaisesta lähtökohdasta: että perintö on vaikuttavimmillaan, kun se koetaan yhdessä, jaetuissa tiloissa, ihmisten kesken, jotka eivät ehkä olisi hakeutuneet sen pariin itsekseen. Hankkeen tehtävä on antaa kulttuurilaitoksille eri puolilla Eurooppaa konkreettiset keinot tuoda ihmiset takaisin kertomukseen. Heidän kertomukseensa."
+    },
+    "quote": "Perintö on vaikuttavimmillaan, kun se koetaan yhdessä, jaetuissa tiloissa, ihmisten kesken, jotka eivät ehkä olisi hakeutuneet sen pariin itsekseen.",
+    "stayConnected": "Pidä yhteyttä",
+    "newsletter": {
+      "label": "Uutiskirje",
+      "heading": "Pysy ajan tasalla Immersive ECHOsta",
+      "cta": "Tilaa uutiskirjeemme"
+    }
+  },
+  "about": {
+    "title": "Tietoa Immersive ECHOsta",
+    "objectiveLabel": "Tavoite",
+    "objectiveIntro": "Immersive ECHO -hankkeella on viisi strategista tavoitetta, jotka on suunniteltu vastaamaan Euroopan kulttuuriperintölaitosten haasteisiin. Nämä tavoitteet muodostavat selkärangan skaalautuvalle, osallistavalle ja kestävälle muutokselle siinä, miten kulttuurilaitokset sitouttavat yleisöjä immersiivisen tarinankerronnan kautta.",
+    "objectives": {
+      "o1": {
+        "title": "Kehittää skaalautuva malli immersiiviselle kulttuuriselle tarinankerronnalle",
+        "body": "Luomme siirrettävän viitekehyksen, joka auttaa kulttuurilaitoksia ottamaan käyttöön immersiivisiä muotoja, jotka ovat tunteisiin vetoavia, teknisesti toteutettavissa ja taloudellisesti kestäviä — tukien koko alan digitaalista muutosta."
+      },
+      "o2": {
+        "title": "Aktivoida osallistavia, matalan kynnyksen tiloja yhteisluomiselle ja innovaatiolle",
+        "body": "Perustamme kokeellisia laboratorioita, joissa kulttuurialan ammattilaiset, teknologit ja moninaiset käyttäjät voivat yhteisluoda, prototypoida ja testata immersiivisiä muotoja — edistäen osaamisen vahvistamista ja taiteellista innovaatiota kaikkialla Euroopassa."
+      },
+      "o3": {
+        "title": "Osoittaa julkista arvoa ja osallisuutta tosielämän installaatioilla",
+        "body": "Toteutamme immersiivisiä kokemuksia sekä julkisissa että institutionaalisissa tiloissa arvioidaksemme yleisön tavoittavuutta, tunnevaikutusta ja toiminnallista toteutettavuutta — edistäen uusia yleisötyön malleja. Tämä kaksoissijoittelu — sekä yhteisöllisissä että institutionaalisissa tiloissa — varmistaa, että immersiiviset muodot eivät vain tavoita ihmisiä kulttuuriperintökohteiden ulkopuolella, vaan myös ohjaavat uutta yleisöä takaisin kulttuurilaitoksiin, lisäten kävijämääriä ja elvyttäen niiden julkista tehtävää."
+      },
+      "o4": {
+        "title": "Rakentaa yleiseurooppalainen verkosto tiedon jakamiselle ja kulttuuriselle innovaatiolle",
+        "body": "Vahvistamme monialaista yhteistyötä yhdistämällä laitoksia, luovan alan tekijöitä ja teknologiakumppaneita sekä jakamalla avoimesti saatavilla olevia työkaluja ja oivalluksia, jotka mahdollistavat pitkän aikavälin monistettavuuden ja linjauksen politiikkaan."
+      },
+      "o5": {
+        "title": "Edistää osallisuutta, saavutettavuutta sekä kulttuurista hyvinvointia ja demokratiaa muotoilun avulla",
+        "body": "Juurrutamme osallistavan muotoilun ja osallistavat menetelmät koko hankkeeseen varmistaaksemme, että immersiiviset kulttuurikokemukset heijastavat eurooppalaisen yhteiskunnan moninaisuutta ja tukevat sosiaalista yhteenkuuluvuutta ja saavutettavuutta."
+      }
+    },
+    "quote": "Perintö on vaikuttavimmillaan, kun se koetaan yhdessä, jaetuissa tiloissa, ihmisten kesken, jotka eivät ehkä olisi hakeutuneet sen pariin itsekseen.",
+    "approachDivider": "Lähestymistapa",
+    "approach": {
+      "partnersLabel": "Kumppanit",
+      "offsite": {
+        "title": "Immersiivisen muotoilun tiimi (etänä)",
+        "desc": "Tieteidenvälinen laboratorio, jossa taiteilijat, teknologit ja kulttuuriperinnön asiantuntijat kehittävät yhdessä immersiivisiä prototyyppejä yhteisluomissprinteissä. Jokainen konsepti testataan saavutettavuuden osalta ja paketoidaan modulaarisiin muotoihin, jotka ovat valmiita otettaviksi käyttöön missä tahansa toimipaikassa."
+      },
+      "onsite": {
+        "title": "Immersiivisen muotoilun tiimi (paikan päällä)",
+        "desc": "Viborg Museum elävänä tapaustutkimuksena, joka kehittää ”Snapstingia” käsin piirretyn animaation ja tilallisen tarinankerronnan avulla. Jokainen työnkulku ja päätös dokumentoidaan, jotta muut laitokset voivat kulkea saman polun."
+      },
+      "testbed": {
+        "title": "Julkinen immersiivinen testiympäristö",
+        "desc": "Le Pavillon avaa valmiit kokemukset todelliselle yleisölle laajassa mittakaavassa, mittaa osallisuutta ja saavutettavuutta tekoälyavusteisen analytiikan avulla ja testaa samalla toimintamalleja pitkän aikavälin elinkelpoisuuden varmistamiseksi."
+      },
+      "coordination": {
+        "title": "Hankkeen koordinointi",
+        "desc": "Lindholmen Science Park varmistaa strategisen linjauksen kaikkien kumppaneiden kesken, seuraa välietappeja, budjetteja ja tuotoksia sekä hallitsee riskejä ja Euroopan komissiolle raportointia."
+      },
+      "comms": {
+        "title": "Viestintä ja vaikuttavuus",
+        "desc": "Futurity Systems kääntää hankkeen tulokset modulaarisiksi työkalupakeiksi ja monikielisiksi sisällöiksi, rakentaa vertaisoppimisen verkoston ja soveltaa tulevaisuusmuotoilun menetelmiä laatiakseen pitkän aikavälin etenemissuunnitelmia immersiiviselle kulttuurille."
+      }
+    },
+    "infographic": {
+      "title": "Immersive ECHO — kaksiraiteinen muotoilumetodologia",
+      "label": "Tietoa:",
+      "caption": "Kaksiraiteinen muotoilu: etälaboratorio ja paikan päällä oleva museo yhtyvät julkisessa testiympäristössä skaalatakseen immersiivisiä kulttuuriperintökokemuksia."
+    },
+    "factsDivider": "Hankkeen tiedot",
+    "fullStructureCta": "Täydellinen rakenne, tehtävät ja tuotokset",
+    "projectDetails": "Hankkeen yksityiskohdat",
+    "details": {
+      "durationLabel": "Kesto",
+      "durationValue": "helmikuu 2026 – heinäkuu 2028",
+      "gaLabel": "GA-numero",
+      "gaValue": "101255680",
+      "fundingLabel": "Rahoitus",
+      "fundingValue": "Luova Eurooppa, laajamittainen yhteistyö",
+      "coordinatorLabel": "Koordinaattori",
+      "coordinatorValue": "Lindholmen Science Park"
+    }
+  },
+  "experiences": {
+    "title": "Kokemukset",
+    "intro": "Esittelemme julkisten testiympäristöjen konseptin tarvelähtöisen muotoilun menetelmällä eri puolilla Eurooppaa.",
+    "viewActivities": "Katso toiminnot",
+    "backToExperiences": "← Takaisin Kokemuksiin",
+    "snapsting": {
+      "badge": "KULTTUURIPERINTÖLAITOS",
+      "location": "Viborg, Tanska",
+      "imageAlt": "Viborg Museum",
+      "description": "Viborg Museum on Viborgin alueen kulttuurihistoriallinen museo Tanskassa, ja se esittelee alueen perintöä esihistoriasta nykypäivään. ECHOn puitteissa museo isännöi immersiivistä installaatiota ja tuo yleisölleen ECHOn lähestymistavan immersiiviseen tarinankerrontaan."
+    },
+    "pavillon": {
+      "badge": "SKAALAUS JA MUKAUTTAMINEN",
+      "location": "Namur, Belgia",
+      "imageAlt": "Le Pavillon, Namur",
+      "description": "Le Pavillon on KIKKin digitaalisen taiteen ja teknologian keskus Namurissa, Belgiassa. Se ottaa käyttöön ECHOn immersiiviset installaatiot laajoille yleisöille ja kerää samalla osallisuus- ja saavutettavuusdataa. Yli 200 koulukumppanuutta vuodessa."
+    },
+    "snapstingPage": {
+      "title": "Viborg Animation Festival · Toiminnot",
+      "intro": "Yleiskatsaus Viborg Animation Festivalin testiympäristötoimintoihin Viborgissa, Tanskassa.",
+      "note": "Huom.: kuvaus prosessista varhaisista briefeistä konseptin kehittelyn, käsikirjoituksen, animaticin jne. kautta valmiiseen kokemukseen. Museo on ”lopullinen ohjaaja” — näyttelypäällikkö seisoo miksauspöydän ääressä, ja eri kanavat, joita hän voi miksata, ovat lavastajat, maalarit, tilaäänen äänitehostetaiteilijat, AV-kokemukset, esineet, teksti, valo jne."
+    },
+    "pavillonPage": {
+      "title": "Le Pavillon · Toiminnot",
+      "intro": "Yleiskatsaus Le Pavillonin testiympäristötoimintoihin Namurissa, Belgiassa.",
+      "note": "Huom.: kuvaus prosessista varhaisista briefeistä konseptin kehittelyn, käsikirjoituksen, animaticin jne. kautta valmiiseen kokemukseen. Museo on ”lopullinen ohjaaja”."
+    }
+  },
+  "newsletter": {
+    "intro": "Pysy ajan tasalla hankkeesta — uudet tuotokset, tapahtumat ja havainnot koko konsortiosta.",
+    "subscribeHeading": "Tilaa",
+    "fields": {
+      "email": {
+        "label": "Sähköposti",
+        "placeholder": "Anna sähköpostiosoitteesi"
+      },
+      "firstName": {
+        "label": "Etunimi",
+        "placeholder": "Anna etunimesi"
+      },
+      "lastName": {
+        "label": "Sukunimi",
+        "placeholder": "Anna sukunimesi"
+      },
+      "organisation": {
+        "label": "Organisaatio",
+        "placeholder": "Anna organisaatiosi"
+      },
+      "language": {
+        "label": "Ensisijainen kieli",
+        "hint": "Numerot lähetetään tällä kielellä, kun käännös on saatavilla, muuten englanniksi."
+      }
+    },
+    "consentPrefix": "Hyväksyn",
+    "privacyPolicy": "tietosuojaselosteen",
+    "consentRequired": "Hyväksy tietosuojaseloste tilataksesi.",
+    "subscribe": "Tilaa",
+    "subscribing": "Tilataan…",
+    "backToSite": "Takaisin sivustolle",
+    "success": {
+      "inHeading": "Olet mukana!",
+      "inBody": "Lähetimme tervetuloviestin osoitteeseen {{email}}. Kuulet meistä, kun on jotain jakamisen arvoista.",
+      "alreadyHeading": "Jo tilattu!",
+      "alreadyBody": "{{email}} on jo listallamme. Toimenpiteitä ei tarvita.",
+      "updatedHeading": "Asetukset päivitetty",
+      "updatedBody": "Päivitimme tilausasetuksesi. Uutta viestiä ei lähetetty."
+    }
+  },
+  "newsletterEmail": {
+    "unsubscribe": "Peruuta tilaus",
+    "footer": "Saat tämän viestin, koska tilasit Immersive ECHO -uutiskirjeen."
+  },
+  "underConstruction": {
+    "eyebrow": "Luova Eurooppa · 2026–2028",
+    "headingLine1": "Jotain",
+    "headingLine2": "on tulossa.",
+    "subline": "Immersive ECHO on yleiseurooppalainen hanke, joka luo yhteisöllisiä kulttuuriperintökokemuksia. Tämä sivusto avataan pian.",
+    "euCredit": "Euroopan unionin osarahoittama · Luova Eurooppa · GA-nro 101255680"
+  },
+  "resources": {
+    "backToAbout": "← Takaisin Tietoa-sivulle",
+    "eyebrow": "Kumppaneille ja arvioijille",
+    "title": "Hankkeen resurssit",
+    "intro": "Viitehakemisto hankkeen rakenteesta: työpaketit, tehtävät, välietapit, tuotokset ja tapahtumat. Lähde: avustushakemus CREA-CULT-2025-COOP-3. Tarkoitettu konsortion kumppaneille, arvioijille ja Euroopan komission tarkastajille.",
+    "objectives": "Tavoitteet",
+    "partnersLabel": "Kumppanit",
+    "leadPrefix": "Vastuutaho:",
+    "tasksCount_one": "{{count}} tehtävä",
+    "tasksCount_other": "{{count}} tehtävää",
+    "accessFile": "Avaa tiedosto →",
+    "accessFileAria": "Avaa tiedosto: {{title}}",
+    "pending": "Odottaa",
+    "tabs": {
+      "wp": "Työpaketit",
+      "tasks": "Tehtävät",
+      "milestones": "Välietapit",
+      "deliverables": "Tuotokset",
+      "events": "Tapahtumat",
+      "media": "Media / Brändi",
+      "presskit": "Lehdistöaineisto"
+    },
+    "tabSubtitles": {
+      "wp": "Viisi toisiinsa kytkeytyvää työpakettia jäsentää hankkeen 30 kuukauden toteutuksen.",
+      "tasks": "Tehtävät ryhmiteltyinä yläpuolisen työpaketin mukaan. Napsauta ryhmää laajentaaksesi; napsauta tehtävää lukeaksesi sen koko kuvauksen.",
+      "milestones": "Hankkeen tarkastuspisteet aikajärjestyksessä eräkuukauden mukaan.",
+      "deliverables": "Hankkeen tuotokset tyyppeineen, levitystasoineen ja eräpäivineen.",
+      "events": "Konsortion järjestämät työpajat, mestarikurssit, näyttelyt, konferenssit ja paneelikeskustelut.",
+      "media": "Immersive ECHO -hankkeen brändiresurssit ja visuaalisen identiteetin tiedostot.",
+      "presskit": "Lehdistöaineisto toimittajille ja mediakumppaneille, jotka käsittelevät Immersive ECHO -hanketta."
+    },
+    "wp": {
+      "WP1": {
+        "title": "Hankkeen hallinto ja koordinointi",
+        "short": "Strateginen linjaus, välietapit, budjetit, riskienhallinta ja yhteydenpito Euroopan komissioon koko konsortiossa.",
+        "obj": {
+          "0": "Tarjota strategista, läpinäkyvää ja osallistavaa koordinointia varmistaaksemme, että kaikki kumppanit edistävät tehokkaasti hankkeen tavoitteita.",
+          "1": "Seurata aikatauluja, tuotoksia ja taloudellista edistymistä taatakseen vastuullisuuden ja tehokkaan resurssien käytön.",
+          "2": "Helpottaa selkeää ja jatkuvaa viestintää Euroopan komission kanssa ja varmistaa kaikkien sääntely- ja raportointivaatimusten noudattaminen.",
+          "3": "Tunnistaa ja hallita riskejä ennakoivasti turvatakseen toteutuksen, vahvistaakseen palautumiskykyä ja varmistaakseen vaikuttavat, CREA:n painopisteisiin linjatut tulokset."
+        }
+      },
+      "WP2": {
+        "title": "Immersiivisen muotoilun tiimi (etänä)",
+        "short": "Tieteidenvälinen laboratorio, jossa taiteilijat, teknologit ja kulttuuriperinnön asiantuntijat kehittävät yhdessä immersiivisiä prototyyppejä yhteisluomissprinteissä.",
+        "obj": {
+          "0": "Ymmärtää käyttäjien muuttuvia tarpeita ja institutionaalisia todellisuuksia — rajata mahdollisuusalueet käyttäjätutkimuksen, institutionaalisten tavoitteiden ja yhteiskunnallisten muutosten pohjalta.",
+          "1": "Suunnitella ja prototypoida osallistavia, skaalautuvia immersiivisiä muotoja — kehittää konsepteja, jotka vastaavat tarpeisiin, validoida oletukset varhain ja hioa iteratiivisesti.",
+          "2": "Integroida matalan kynnyksen kokeellinen laboratorio muotoiluprosessiin yhteisluomista, testausta ja iterointia varten moninaisten yleisöjen kanssa.",
+          "3": "Arvioida käyttäjäkokemusta, teknistä toteutettavuutta ja taloudellista elinkelpoisuutta — kerätä jatkuvasti palautetta kokemusten hiomiseksi.",
+          "4": "Johtaa lopullista hiomista ja valmistautumista julkisiin testiympäristöihin — viimeistellä immersiiviset kokemukset, jotka ovat tunnetasolla vaikuttavia, teknisesti vakaita ja saavutettavia.",
+          "5": "Vertailla ja vaihtaa tietoa paikan päällä ja etänä tapahtuvan immersiivisen muotoilun välillä — jäsennelty vaihto Snapstingin ja etälaboratorion prosessien välillä."
+        }
+      },
+      "WP3": {
+        "title": "Immersiivisen muotoilun tiimi (paikan päällä)",
+        "short": "Viborg Museum toimii elävänä tapaustutkimuksena ja kehittää ”Snapstingia” käsin piirretyn animaation ja tilallisen tarinankerronnan avulla.",
+        "obj": {
+          "0": "Testata immersiivisen tarinankerronnan koko elinkaarta todellisessa museoympäristössä — konseptin kehittely, käsikirjoitus, yhteistyö, teknologian integrointi, tuotanto ja julkistus.",
+          "1": "Mitata vaikutusta yleisöihin — kerätä dataa tunnetason osallisuudesta, kulttuurisesta oppimisesta ja saavutettavuudesta.",
+          "2": "Tunnistaa, mikä toimii pienille ja keskisuurille laitoksille — dokumentoida työnkulut, haasteet ja resurssitarpeet.",
+          "3": "Vertailla ja vaihtaa tietoa paikan päällä ja etänä tapahtuvan immersiivisen muotoilun välillä — katso WP2."
+        }
+      },
+      "WP4": {
+        "title": "Julkiset testiympäristöt",
+        "short": "Le Pavillon avaa valmiit kokemukset todelliselle yleisölle laajassa mittakaavassa ja mittaa osallisuutta ja saavutettavuutta tekoälyavusteisen analytiikan avulla.",
+        "obj": {
+          "0": "Ottaa käyttöön immersiivinen kokemus julkisessa, hyvin saavutettavassa toimipaikassa — kuroa umpeen kuilu prototypoinnin ja todellisuuden välillä.",
+          "1": "Arvioida reaaliaikaista käyttäjäkokemusta laajassa mittakaavassa — mitata tunnereaktiota, saavutettavuutta, vuorovaikutusmalleja ja pysyvyyttä.",
+          "2": "Testata perehdytys- ja poistumisprosesseja — opasteet, ohjattu sisään-/ulostulo ja pohdinnan tilaisuudet.",
+          "3": "Validoida toiminnallinen ja taloudellinen elinkelpoisuus — lipunmyyntistrategiat, toiminnalliset järjestelyt, henkilöstötarpeet ja tekniset vaatimukset.",
+          "4": "Luoda oppimismahdollisuuksia kulttuurialan ammattilaisille — kumppanimuseot ja kulttuuriperintöorganisaatiot kutsutaan tarkkailemaan ja osallistumaan."
+        }
+      },
+      "WP5": {
+        "title": "Viestintä, levitys ja vaikuttavuus",
+        "short": "Kääntää hankkeen tulokset modulaarisiksi työkalupakeiksi, monikieliseksi sisällöksi ja vertaisoppimisen verkostoksi Euroopan kulttuuriperintöalalle.",
+        "obj": {
+          "0": "Viestintä — strategiset, kohdennetut toimenpiteet hankkeen edistämiseksi ja EU-avustuksen näkyvyyden varmistamiseksi.",
+          "1": "Levitys — jakaa hankkeen tuloksia kulttuurialan, kulttuuriperintölaitosten, EU-elinten ja suuren yleisön kanssa.",
+          "2": "Hyödyntäminen — helpottaa hankkeen saavutusten käyttöä uusissa aloitteissa, markkinoinnissa ja yhteistyössä.",
+          "3": "Vahvistaa näkyvyyttä ja osallisuutta — hyödyntää modernia tarinankerrontaa ja tekoälyvetoista sisällöntuotantoa kaikkialla Euroopassa.",
+          "4": "Osaamisen vahvistaminen — kehittää työkalupakkeja, helpottaa vertaisoppimista ja tarjota mentorointiohjelmia kulttuurilaitoksille.",
+          "5": "Tulevaisuuteen suuntautuva muotoilu — soveltaa tulevaisuusmuotoilun menetelmiä hahmotellakseen vakuuttavia tulevaisuuksia immersiiviselle kulttuurille."
+        }
+      }
+    },
+    "taskGroup": {
+      "T1": { "title": "Hankkeen hallinto ja koordinointi" },
+      "T2": { "title": "Immersiivisen muotoilun tiimi (etänä)" },
+      "T3": { "title": "Immersiivisen muotoilun tiimi (paikan päällä)" },
+      "T4": { "title": "Julkiset testiympäristöt" },
+      "T5": { "title": "Viestintä, levitys ja vaikuttavuus" }
+    },
+    "task": {
+      "T1-1": {
+        "title": "Johtaa strategista koordinointia",
+        "description": "Varmistaa sujuva yhteistyö kumppaneiden kanssa, linjata aikataulut ja tavoitteet sekä antaa kokonaissuunta koko hankkeen elinkaaren ajan."
+      },
+      "T1-2": {
+        "title": "Seurata edistymistä, riskejä ja budjettia",
+        "description": "Seurata välietappeja, tuotoksia, vihreän tarkistuslistan (Green) noudattamista ja rahavirtoja sekä hallita riskejä ennakoivasti läpinäkyvyyden ja vastuullisuuden varmistamiseksi."
+      },
+      "T1-3": {
+        "title": "Hallita viestintää ja raportointia",
+        "description": "Helpottaa selkeää sisäistä viestintää, laatia EU-raportteja ja varmistaa hallinnollisten ja oikeudellisten velvoitteiden noudattaminen. Osallistujat: TSC, NPIAT, GPI, YOU, TPL, KIKK, FUT, AIRA, ID20, VIB, VGR, SOFP (BEN); COG, TAW (AP)."
+      },
+      "T2-1": {
+        "title": "Tarpeiden kartoitus, tutkimus ja muotoilun perusta",
+        "description": "Tutkia ja määritellä perusta moninaiselle kohdeyleisölle tunnistamalla tarpeet, institutionaaliset todellisuudet, yhteiskunnalliset trendit ja varhainen tekninen toteutettavuus. Selkeyttää teknologian kypsyys ja mahdolliset toiminnalliset haasteet ennen prototypointiin siirtymistä."
+      },
+      "T2-2": {
+        "title": "Yhteistoiminnallinen muotoilu ja prototypointi laboratorioissa",
+        "description": "Kääntää tutkimus nopeiksi prototyypeiksi, jotka testataan suoraan kokeellisessa laboratoriossa. Muotoilutiimi, museokumppanit ja käyttäjät luovat yhdessä immersiivisiä konsepteja muotoilun, testauksen ja parantamisen iteratiivisissa sykleissä."
+      },
+      "T2-3": {
+        "title": "Osallistavan muotoilun sprintit",
+        "description": "Toteuttaa neljä kohdennettua sprinttiä moninaisten näkökulmien integroimiseksi: 1) Nuorten sprintti — digitaalinen sujuvuus ja uteliaisuus; 2) Neurokirjon sprintti — aistitasapaino ja epälineaarinen osallisuus; 3) Ikääntyneiden sprintti — navigointi, tahti ja saavutettavuus; 4) Marginalisoitujen ryhmien sprintti — vahvistetaan ääniä, jotka usein jäävät valtavirran muotoilun ulkopuolelle. Jokainen sprintti muovaa tarinankerronnan, vuorovaikutuksen ja kokemuksen kulun keskeisiä osia."
+      },
+      "T2-4": {
+        "title": "Muotoilu skaalautuvuutta ja siirrettävyyttä varten",
+        "description": "Soveltaa muotoiluperiaatteita, työkaluja ja työnkulkuja, jotka tukevat immersiivisten kokemusten skaalautuvuutta ja siirrettävyyttä eri kulttuuritoimipaikkojen välillä. Sisältää modulaariset muotoilulähestymistavat, mukautuvat kerrontarakenteet ja joustavat järjestelyt suurille ja pienille laitoksille."
+      },
+      "T2-5": {
+        "title": "Virtuaalinen pääsy kokeelliseen laboratorioon",
+        "description": "Hyödyntää modulaarista muotoilua ja digitaalisen kaksosen teknologiaa tehdäkseen kokemuksen saavutettavaksi laajaa, yleiseurooppalaista testausta varten. Virtuaaliympäristöt jäljittelevät fyysisiä installaatioita ja mahdollistavat moninaisten yleisöjen osallistumisen ja palautteen antamisen etänä."
+      },
+      "T2-6": {
+        "title": "Lopullinen kokemusmuotoilu julkisia testiympäristöjä varten",
+        "description": "Mukauttaa ja viimeistellä immersiiviset kokemukset julkisiin toimipaikkoihin varmistaen valmiuden laajamittaiseen käyttäjävuorovaikutukseen. Lopullinen muotoilu sisältää tunnepohjaisen tarinankerronnan, vankat tekniset järjestelyt, saavutettavuuspolut ja kestävät toimintamallit. Alihankinnat: S1.1, S1.2."
+      },
+      "T2-7": {
+        "title": "Kokeellisten oivallusten synteesi",
+        "description": "Analysoida oivalluksia laboratoriotoiminnoista, julkisista testiympäristöistä, käyttäjäpalautteesta ja teknisestä validoinnista. Käyttää tekoälyavusteisia työkaluja syntetisoidakseen sekä kontrolloiduista että tosielämän ympäristöistä saadut tulokset konkreettisiksi parannuksiksi lopullista kokemuksen toimitusta varten."
+      },
+      "T3-1": {
+        "title": "Integrointi ECHOn tietovirtaan",
+        "description": "Jakaa tuloksia jatkuvasti koko konsortion kanssa. Koordinoida WP2:n ja hankkeen hallinnon kanssa varmistaakseen, että muotoilun, testauksen ja toteutuksen oivallukset siirtyvät reaaliajassa. Alihankinnat: S2.1, S2.2, S2.3."
+      },
+      "T3-2": {
+        "title": "Snapsting-kokemuksen täysimittainen tuotanto",
+        "description": "Kehittää immersiivinen tarinankerronnan kokemus alusta alkaen. Sisältää konseptin määrittelyn, animaticin, käsikirjoituksen, tuotannon (animaatio, taustat, äänisuunnittelu ja sävellys), AV- ja teknologiaintegraation, tilallisen ja aistillisen suunnittelun, testauksen ja installaation. Alihankinnat: S2.1–S2.4."
+      },
+      "T3-3": {
+        "title": "Yleisötestaus ja arviointi",
+        "description": "Toteuttaa jäsennelty arviointi kokemuksesta julkistuksen jälkeen. Kerätä laadullista ja määrällistä palautetta käytettävyydestä, osallisuudesta, saavutettavuudesta sekä tunne- ja oppimisvaikutuksesta. Alihankinnat: S2.1."
+      },
+      "T3-4": {
+        "title": "Mukauttaminen KIKK (Le Pavillon) -käyttöönottoa varten",
+        "description": "Valmistella Snapsting-kokemus toteutettavaksi Le Pavillonissa osana WP4:n julkisen testiympäristön toimintoja. Varmistaa työpakettien välisen yhteistyön ja parannukset WP4:n yleisöpalautteen pohjalta. Alihankinnat: S2.1–S2.4."
+      },
+      "T4-1": {
+        "title": "Valmistautuminen julkiseen käyttöönottoon",
+        "description": "Koordinoida tekninen, menetelmällinen ja viestinnällinen pohjatyö, jota onnistunut julkinen käyttöönotto edellyttää. Sisältää testausmenetelmät, yleisön vastaanottostrategiat, tiedonkeruuprotokollat, paikan päällä tapahtuvan installaation suunnittelun, kävijöiden perehdytyksen, saavutettavuusnäkökohdat ja viestintävirrat."
+      },
+      "T4-2": {
+        "title": "Liiketoimintamallin kehittäminen kestävään käyttöönottoon",
+        "description": "Kehittää yhdessä kestävä liiketoimintamalli immersiivisille kokemuksille, linjattuna käyttöönottopaikkojen sosioekonomisiin konteksteihin ja ECHO-konsortion strategisiin tavoitteisiin. Tulokset tukevat pitkän aikavälin elinkelpoisuutta hankkeen aikataulun jälkeen."
+      },
+      "T4-3": {
+        "title": "Julkinen käyttöönotto ja toiminta",
+        "description": "Ottaa käyttöön valmiit immersiiviset kokemukset Le Pavillonissa täydellä teknisellä ja kerronnallisella integraatiolla, mukaan lukien paikallisen henkilöstön koulutus, ylläpito, pop up -myymälä ja ohjatut toiminnot korkealaatuisten kävijäkokemusten varmistamiseksi."
+      },
+      "T4-4": {
+        "title": "Julkinen julkistus KIKK-festivaalilla (lokakuu 2027)",
+        "description": "Käynnistää immersiivisen kokemuksen julkinen käyttöönotto näkyvällä julkistuksella KIKK-festivaalilla 2027. Sisältää oman paneelin, jossa on ECHO-konsortion jäseniä ja joka asettaa hankkeen laajempaan kulttuuriseen ja innovaation kontekstiin."
+      },
+      "T4-5": {
+        "title": "Yleisö- ja kävijäpolkuanalytiikka",
+        "description": "Kerätä määrällistä dataa (virrat, viipymäaika, konversio, saavutettavuustarpeet) ja laadullista dataa (kyselyt, haastattelut, havainnointi) tekoälyavusteisten kojelautojen avulla; palauttaa oivallukset WP2:lle ja WP5:lle."
+      },
+      "T4-6": {
+        "title": "Arvioida liiketoimintamalleja ja toimintaa",
+        "description": "Testata toimintamalleja, henkilöstötarpeita, kustannusrakenteita ja tulonjakoskenaarioita sekä syntetisoida ”liiketoimintasuunnitelma” tuleville käyttöönottajille arvioidakseen immersiivisten muotojen skaalauksen taloudellista ja organisatorista elinkelpoisuutta."
+      },
+      "T5-1": {
+        "title": "Toteuttaa hankkeen sisäinen viestintä",
+        "description": "Perustaa sisäisen viestinnän työkalut ja mallit koordinoinnin tueksi, varmistaa EU-standardien noudattaminen ja mahdollistaa tehokas asiakirjojen jakaminen. Käynnistää KPI-kojelauta, joka seuraa edistymistä osallistujien ja laitosten välillä."
+      },
+      "T5-2": {
+        "title": "Tekoälyviestinnän etiikka ja arviointi",
+        "description": "Järjestää tekoälyn etiikan työpajoja konsortion jäsenille ja kulttuurilaitoksille. Tilata ulkoinen arviointi WP5:n tekoälyn käytöstä sisällöntuotannossa, saavutettavuudessa ja yleisön vuorovaikutustyökaluissa. Integroida havainnot väli- ja loppuraportteihin."
+      },
+      "T5-3": {
+        "title": "Hankkeiden välinen verkostoituminen ja yhteisön rakentaminen",
+        "description": "Helpottaa jäsenneltyä vaihtoa muiden EU-rahoitteisten hankkeiden kanssa yhteisten työpajojen, paneelikeskustelujen ja teemakokousten kautta. Rakentaa ”käytäntöyhteisön” immersiivisten kulttuurikokemusten ympärille ja edistää jaettujen intressien verkostoa konsortioiden välillä."
+      },
+      "T5-4": {
+        "title": "Tiedon siirto ja osaamisen vahvistaminen",
+        "description": "Kääntää hankkeen tulokset käytännöllisiin muotoihin: avoimet työkalupakit, mallit, työpajat, paneelikeskustelut ja mestarikurssit konferensseissa sekä perehdytysoppaat. Tekoälytyökalut tukevat sisällön räätälöintiä eri laitoksille koon, yleisötyypin ja digitaalisen kypsyyden mukaan."
+      },
+      "T5-5": {
+        "title": "Osallistavat tulevaisuudet ja tulevaisuuden tekeminen",
+        "description": "Johtaa kuukausittaisia tulevaisuuden tekemisen työpajoja (Futuremaking), tuottaen skenaarioita, spekulatiivisia muotoiluartefakteja ja Futuremakers-työkalupakin (digitaalinen + fyysinen). Luoda yhdessä 5D TimeMap — digitaalinen alusta, joka yhdistää tilan, ajan ja kulttuuriset kerrokset."
+      },
+      "T5-6": {
+        "title": "Yleisön vuorovaikutus- ja tavoittamistyökalut",
+        "description": "Ottaa käyttöön Outreach-alusta avoimeen vuorovaikutukseen yleisöjen ja konsortion välillä. Kehittää ja pilotoida Timetravel Companion — keskusteleva tekoälytyökalu, joka tehostaa yleisön osallisuutta immersiivisten installaatioiden kanssa."
+      },
+      "T5-7": {
+        "title": "Tulevaisuusmuotoilu ja pitkän aikavälin visiointi",
+        "description": "Futurity Systemsin johtamin menetelmin luoda yhdessä tulevaisuusvisio immersiiviselle kulttuuriselle innovaatiolle. Tekoälyn tuottamat skenaariokehotteet ja oivallusten klusterointi auttavat tunnistamaan nousevia trendejä, yhteiskunnallisia tarpeita ja järjestelmätason mahdollisuuksia — hahmotellen eurooppalaisen etenemissuunnitelman immersiiviselle kulttuurille."
+      }
+    },
+    "ms": {
+      "MS1-1": { "title": "Konsortion linjaus ja aloitus", "description": "Kaikki kumppanit linjattu tavoitteisiin, menetelmiin, rooleihin ja raportointiin hankkeen alussa." },
+      "MS2-1": { "title": "Tarvelähtöinen muotoilun viitekehys luotu", "description": "Strateginen muotoilubrief, joka perustuu käyttäjäpolkuihin, tarpeisiin, käyttäytymiseen, institutionaalisiin panoksiin ja yhteiskunnallisiin trendeihin." },
+      "MS3-1": { "title": "Konseptin ja kerronnan kehittely viimeistelty", "description": "Ydinkonsepti, kerronta, täysi käsikirjoitus ja Snapstingin kuvakäsikirjoitus valmiina iteratiivisen prosessin kautta." },
+      "MS5-1": { "title": "Hankkeiden välinen vaihtoverkosto luotu", "description": "Yhteistyöverkosto muiden EU-rahoitteisten hankkeiden kanssa virallisesti käynnistetty." },
+      "MS2-2": { "title": "Laboratorio toiminnassa ja ensimmäiset prototyypit testattu", "description": "Kokeellinen laboratorio täysin toiminnassa; ensimmäiset immersiiviset prototyypit testattu ja arvioitu." },
+      "MS2-3": { "title": "Osallistavan muotoilun sprinttisarja valmis", "description": "Kaikki neljä osallistavan yhteisluomisen sprinttiä valmiina; havainnot integroitu muotoilun iteraatioihin." },
+      "MS3-2": { "title": "Lopullinen tuotanto valmis", "description": "Kaikki Snapstingin osat viimeistelty, mukaan lukien sisältö, teknologia ja tilallinen muotoilu." },
+      "MS3-3": { "title": "Kokemus asennettu ja toiminnassa", "description": "Snapsting täysin asennettu ja toiminnassa paikan päällä Viborg Museumissa." },
+      "MS3-4": { "title": "Konsortiokokous ja paneelikeskustelu", "description": "Kaikki konsortion kumppanit kokoontuvat Viborgiin, paneelikeskustelun kera Animation Festivalilla." },
+      "MS1-2": { "title": "Koordinoinnin väliarviointi", "description": "Edistymisen, riskien, yhteistyön laadun ja resurssien käytön arviointi puolivälissä." },
+      "MS5-2": { "title": "Vaikutuksen väliarviointi valmis", "description": "Puolivälin arviointi, joka arvioi viestintää, tiedon siirtoa, sidosryhmien osallisuutta ja levityksen tavoittavuutta." },
+      "MS4-1": { "title": "Käyttöönoton viitekehys ja liiketoimintamalli määritelty", "description": "Julkisen käyttöönoton strategiat luotu yhdessä kestävän, kumppaneiden kanssa kehitetyn liiketoimintamallin kanssa." },
+      "MS2-4": { "title": "Prototyyppimuotoilut iteroitu ja lopulliset konseptit valmiina", "description": "Prototyypit kehittyneet testauksen pohjalta; lopulliset immersiiviset kokemukset hyväksytty julkiseen käyttöönottoon." },
+      "MS4-2": { "title": "Julkisen testiympäristön installaatio avattu", "description": "Ensimmäinen toimipaikka täysin varustettu, esityksen ohjaus validoitu; ovet avattu yleisölle (KIKK-festivaali, lokakuu 2027)." },
+      "MS4-3": { "title": "Toimipaikkojen välinen analytiikkakojelauta toiminnassa", "description": "Keskitetty kojelauta, joka kokoaa reaaliajassa kävijävirrat, osallisuuden ja saavutettavuusdatan, otetaan käyttöön." },
+      "MS3-5": { "title": "Snapsting mukautettu Le Pavillon -käyttöönottoon", "description": "Snapsting räätälöity Le Pavilloniin, muutoksin kerrontaan, tekniseen järjestelyyn ja tilalliseen muotoiluun." },
+      "MS5-3": { "title": "Osaamisen vahvistamisen resurssit viimeistelty", "description": "Open Learning Toolkit, How-to ECHO -opas, 5D TimeMap ja Futuremakers-työkalupakit valmiina ja jaettu." },
+      "MS5-4": { "title": "Vaikutuksen lopullinen levitys", "description": "Lopullinen tulevaisuusmuotoilun raportti, joka tiivistää strategisen ennakoinnin tulokset ja pitkän aikavälin polut." },
+      "MS4-4": { "title": "Toiminnallinen ja liiketoiminnallinen toteutettavuus raportoitu", "description": "Kustannukset, henkilöstö ja logistiikka analysoitu tulevan käyttöönoton ja skaalauksen tukemiseksi." },
+      "MS1-3": { "title": "Koordinoinnin lopullinen yhteenveto", "description": "Hankkeen toteutuksen strateginen päätös, mukaan lukien keskeiset opit koordinoinnista ja päätöksenteosta." }
+    },
+    "d": {
+      "D1-1": { "title": "Hankkeen hallinnon käsikirja", "description": "[ENG] Käytännöllinen opas, joka hahmottaa vision linjattuna sisäisen koordinoinnin työkaluihin, raportointirakenteeseen, kumppaneiden vastuisiin ja jaettuihin työnkulkuihin. Sisältää mallipohjat ja tarkistuslistat." },
+      "D1-2": { "title": "Koordinoinnin ja riskien väliraportti", "description": "[ENG] Arviointi edistymisestä, koordinoinnin laadusta, riskien tilasta ja kumppaneiden itsearvioinneista. Sisältää parannussuosituksia." },
+      "D2-1": { "title": "Tarvelähtöinen immersiivisen muotoilun brief", "description": "[ENG] Selkeä strateginen opas, joka perustuu käyttäjäoivalluksiin, institutionaalisiin tarpeisiin ja yhteiskunnallisiin muutoksiin — ja määrittelee muotoiluhaasteet, käyttäjäpersoonat, tunnetavoitteet ja tekniset oletukset." },
+      "D2-2": { "title": "Lopulliset immersiivisen kokemuksen muotoilut", "description": "[Kieli määrittelemättä] Täydelliset immersiivisen kokemuksen paketit julkiseen käyttöönottoon, mukaan lukien kerronnat, tilalliset ja vuorovaikutusmuotoilut, tekniset järjestelyt, perehdytys-/poistumisoppaat ja saavutettavuusratkaisut." },
+      "D2-3": { "title": "Lopullinen immersiivisen kokemuksen arviointi", "description": "[ENG] Kattava arviointi käyttäjäkokemuksesta, teknisestä toteutettavuudesta ja taloudellisesta elinkelpoisuudesta. Sisältää tunnevaikutuksen analyysin, saavutettavuuden tarkastelun, järjestelmän suorituskykytestit ja toiminnallisen kestävyyden tarkistukset." },
+      "D3-1": { "title": "Immersiivinen Snapsting-kokemus ja dokumentaatio", "description": "[TANSKA & ENG] Valmis immersiivinen kokemus asennettuna ja toiminnassa Viborg Museumissa. Sisältää installaation piirustukset, vuorovaikutusmuotoilun tiedostot ja dokumentaation uudelleenkäyttöä tai mukauttamista varten." },
+      "D3-2": { "title": "Mukautettu Snapsting-kokemuspaketti Le Pavillonille", "description": "[ENG] Mukautettu versio immersiivisestä Snapsting-kokemuksesta, räätälöity käyttöönotettavaksi Le Pavillonissa. Sisältää päivitetyn kerronnan, vuorovaikutus- ja tilallisen muotoilun, teknisen järjestelyn ja toimintaohjeet." },
+      "D3-3": { "title": "Immersiivisen tuotantoprosessin raportti", "description": "[ENG] Käytännöllinen läpikäynti paikan päällä tapahtuvasta tuotantoprosessista. Sisältää kerronnan kehittelyn, tekniset päätökset, yhteistyömallin ja kohdatut kulttuuriset haasteet — tarkoitettu viitteeksi muille laitoksille." },
+      "D4-1": { "title": "Toiminnallisen käyttöönoton raportti", "description": "[ENG] Vaiheittainen dokumentaatio julkisen testiympäristön käyttöönotosta, mukaan lukien yleisölogistiikka, tilallinen järjestely ja teknisen mukauttamisen muistiinpanot." },
+      "D4-2": { "title": "Käyttäjäkokemuksen ja liiketoimintamallin yhteenveto", "description": "[ENG] Arviointi yleisön osallisuudesta, perehdytys-/poistumispoluista ja toimipaikassa testattujen liiketoimintamallien toteutettavuudesta." },
+      "D5-1": { "title": "Viestintä- ja levityssuunnitelma", "description": "[ENG] Integroitu viestintästrategia ja -suunnitelma tulosten laajaan jakamiseen. Tekoälytyökalut muuntavat hankkeen datan artikkeleiksi, julkaisuiksi, tapaustutkimuksiksi ja mikrosisällöiksi, räätälöityinä eri eurooppalaisille yleisöille. Tuotanto EU:n tekoälyä, yksityisyyttä ja teknologiaetiikkaa koskevan politiikan mukaisesti." },
+      "D5-2": { "title": "Hankkeen kojelauta", "description": "Verkkosivusto, jossa on reaaliaikainen digitaalinen kojelauta, joka seuraa ja visualisoi KPI:itä useilla tasoilla: yksittäisten osallistujien panokset, laitoksen sisäiset työnkulut, laitosten välinen yhteistyö, kansalaisosallistumisen pistemäärä ja laajempi yhteiskunnallinen vaikutus. Julkinen osio + yksityiset alueet laitoksille, päättäjille ja sidosryhmille." },
+      "D5-3": { "title": "Vaikutuksen ja levityksen väliraportti", "description": "Kattava arvio hankkeen vaikutuksesta, levitystoiminnoista ja viestinnän tuloksista puolivälissä. Arvioi osallisuusmittareita, institutionaalista käyttöönottoa, tiedon siirron tehokkuutta ja monialaista yhteistyötä." },
+      "D5-4": { "title": "Futuremakers-työkalupakki", "description": "Hybridi (fyysinen ja digitaalinen) työkalupakki, joka kokoaa osallistavia tekniikoita, materiaaleja ja ohjattuja toimintoja, jotka opettavat kulttuurialan ammattilaisia kuvittelemaan osallistavampia, palautumiskykyisempiä tulevaisuuksia. Saatavilla 10 EU-kielellä. Fyysinen: työkirjat, korttipakat, kestävistä materiaaleista valmistetut kestävät pelinappulat. Digitaalinen: mediasisältö + monikäyttäjäinen interaktiivinen piirtotaulu." },
+      "D5-5": { "title": "Outreach-alusta", "description": "Tekoälytehostettu alusta kitkattomaan kaksisuuntaiseen viestintään hankkeen, laitosten ja yleisöjen välillä. Sisältää toiminnallisen reaaliaikaisen KPI-kojelaudan. Alusta englanniksi; tekoälyagentit ja sisältö 10 EU-kielellä. Sisältää tekoälyagenttien persoonat (museo-opas, historiallinen hahmo, kuvitteellinen maskotti) ja työkalun, jolla laitokset voivat luoda omansa." },
+      "D5-6": { "title": "Kulttuuriperintökohteiden 5D TimeMap", "description": "Interaktiivinen digitaalinen kartta, joka yhdistää kulttuuriperintökohteet eri puolilla Eurooppaa niiden laitoksiin, rikastettuna viidellä ulottuvuudella: tilallinen, ajallinen ja kolme temaattista kerrosta (taiteellinen, poliittinen, kielellinen). Saatavilla paikan päällä, tietokoneilla ja mobiilissa 10 EU-kielellä." },
+      "D5-7": { "title": "Timetravel Companion -prototyyppi", "description": "Timetravel Companionin toimiva prototyyppi — tekoälyvetoinen opas, joka rikastaa museovierailuja ja immersiivisiä installaatioita äänivuorovaikutuksen, kontekstuaalisen tarinankerronnan ja valinnaisen holografisen sisällön avulla. Sisältää sovelluksen käyttöliittymän, sisältömoduulit, käyttäjätestauksen dokumentaation ja saavutettavuuden arvioinnin 10 EU-kielellä. Installaatioita varten rakennetaan 100 räätälöityä avoimen lähdekoodin laitetta." },
+      "D5-8": { "title": "Open Learning Toolkit ja How-to ECHO -opas", "description": "Paketti tietoa, ohjeita ja työkaluja, joiden avulla uudet kulttuurilaitokset voivat ottaa ECHO-työkalupakin käyttöön alusta loppuun. Modulaariset, käyttövalmiit resurssit, rakennettu WP2–WP4:n tuloksista, 10 EU-kielellä." },
+      "D5-9": { "title": "Hankkeiden välisen verkostoitumisen raportti", "description": "Kattava raportti, joka dokumentoi hankkeiden välisen verkostoitumisen toiminnot, mukaan lukien kokoukset, yhteistyötapahtumat, keskeiset tulokset ja ehdotukset jatkuvaan vaihtoon." },
+      "D5-10": { "title": "Lopullinen tulevaisuusmuotoilun raportti", "description": "Digitaalinen alusta, joka esittelee hankkeen tulokset ja sen pitkän aikavälin potentiaalin. Tekoälyvetoiset mediatyökalut personoivat sisältöä osallistujille ja kääntävät hankkeen opit jaettaviin muotoihin 10 EU-kielellä." }
+    },
+    "dStatus": {
+      "D5-2": "Olet tässä!"
+    },
+    "event": {
+      "E1": { "name": "Nuorten sprintti: Future Worlds Builder", "type": "Käyttäjälähtöinen sprintti" },
+      "E2": { "name": "Neurokirjon sprintti: epälineaarinen navigointi", "type": "Käyttäjälähtöinen sprintti" },
+      "E3": { "name": "Immersiivinen Snapsting-kokemus", "type": "Näyttely" },
+      "E4": { "name": "Echoes of the Future: kulttuuriperinnön ja immersiivisen innovaation yhdistäminen", "type": "Konferenssi" },
+      "E5": { "name": "Immersive ECHO: kulttuuriperintö tulevaisuutta varten", "type": "Paneelikeskustelu" },
+      "E6": { "name": "Immersive ECHO", "type": "Näyttely" },
+      "E7": { "name": "Spekulatiivinen prototypointi", "type": "Työpaja" },
+      "E8": { "name": "Aistikartoitus ja vuorovaikutus", "type": "Työpaja" },
+      "E9": { "name": "Ikääntyneiden sprintti: keholliseen ja digitaaliseen navigointiin", "type": "Käyttäjälähtöinen sprintti" },
+      "E10": { "name": "Marginalisoitujen ryhmien sprintti", "type": "Käyttäjälähtöinen sprintti" },
+      "E11": { "name": "Digitaalisen kaksosen ja etätestauksen työpajat", "type": "Käyttäjätestaus" },
+      "E12": { "name": "Muotoilu skaalautuvuutta ja kiertuevalmiutta varten", "type": "Työpaja" },
+      "E13": { "name": "Teknologia ja innovaatio immersiiviseen tarinankerrontaan", "type": "Mestarikurssi" },
+      "E14": { "name": "Luova ohjaus ja animaation tuotantoputki kulttuurisille kertomuksille", "type": "Mestarikurssi" },
+      "E15": { "name": "Tieteidenvälinen yhteistyö kulttuuriperinnön innovaatioon", "type": "Mestarikurssi" },
+      "E16": { "name": "Anturit ja tunteet", "type": "Työpaja" },
+      "E17": { "name": "Ryhdy kokemusmuotoilijaksi", "type": "Työpaja" },
+      "E18": { "name": "Immersive ECHO: kulttuuriperinnön ja immersiivisten kokemusten yhdistäminen", "type": "Mestarikurssi" },
+      "E19": { "name": "Kuukausittaiset tulevaisuuden tekemisen sessiot", "type": "Työpajat" },
+      "E20": { "name": "Tekoäly, etiikka ja kulttuuriset tulevaisuudet: vastuullinen innovaatio immersiivisessä perinnössä", "type": "Työpaja" },
+      "E21": { "name": "Hankkeiden välinen vaihto", "type": "Työpajat" }
+    }
+  },
+  "news": {
+    "title": "Uutiset, tapahtumat ja toiminnot",
+    "latestUpdates": "Viimeisimmät päivitykset",
+    "readMore": "Lue lisää →",
+    "empty": "Ei vielä kohteita tässä kategoriassa.",
+    "eventGalleries": "Tapahtumagalleriat",
+    "backToNews": "← Takaisin Uutisiin",
+    "photos": "{{count}} kuvaa",
+    "filters": {
+      "All": "Kaikki",
+      "News": "Uutiset",
+      "Events": "Tapahtumat",
+      "Press": "Lehdistö"
+    },
+    "galleries": {
+      "launch": "Avajaiset (Namur)"
+    },
+    "articles": {
+      "newsletter1": {
+        "title": "Esittelyssä ECHO — Uutiskirje nro 1",
+        "subtitle": "Kuinka immersiivinen muotoilu muuttaa tapaamme kokea historiaa"
+      },
+      "launch": {
+        "title": "Immersive ECHO -hanke käynnistyi virallisesti",
+        "subtitle": "Yli 40 maailmanluokan eurooppalaista luovan alan tekijää kokoontui Namuriin käynnistämään ECHO Immersive -hankkeen"
+      }
+    },
+    "launch": {
+      "title": "Immersive ECHO -hanke käynnistyi virallisesti",
+      "lead": "Yli 40 maailmanluokan eurooppalaista luovan alan tekijää kokoontui Namuriin käynnistämään ECHO Immersive -hankkeen.",
+      "teamAlt": "ECHO Immersive -tiimi Namurissa",
+      "p1": "Immersive ECHO käynnistyi virallisesti helmikuussa 2026 monipäiväisellä aloituskokouksella Le Pavillonissa Namurissa, Belgiassa — paikassa, joka tulee isännöimään hankkeen julkista testiympäristöä. Kaikkien konsortion kumppaneiden valtuuskunnat kokoontuivat ensimmäistä kertaa paikan päälle ja toivat yhteen museoalan ammattilaisia, immersiivisiä muotoilijoita, kehittäjiä, tutkijoita ja strategeja kymmenestä maasta. Kokousta koordinoi Lindholmen Science Parkin hanketiimi, jota johtivat projektipäällikkö Ismaila Jallow ja koordinaattori Katrin Amberntsson, KIKKin ja Le Pavillonin tiimien tukemana paikan päällä.",
+      "p2": "Päivissä yhdistyivät jäsennellyt työpajat ja avoin tutkiva työskentely. Tiimit kävivät läpi perustavia kysymyksiä siitä, miten ihmiset liikkuvat tiloissa, mikä vangitsee huomion ja miten kertomus ja vuorovaikutus auttavat yleisöä rakentamaan merkitystä. Sen sijaan, että olisi aloitettu teknologiasta, keskustelut keskittyivät kerrontaan, havaitsemiseen ja kulttuuritilojen erityisvaatimuksiin. Osallistujat lähtivät mukanaan yhteinen käsitys siitä, miltä seuraavat kaksi ja puoli vuotta näyttävät, sekä sellainen luottamus, joka syntyy vain, kun uteliaat ihmiset viettävät aidosti aikaa yhdessä. Hankkeessa kehitetyt lopulliset immersiiviset kokemukset palaavat Le Pavilloniin julkiseen käyttöön lokakuussa 2027.",
+      "galleryHeading": "Galleria"
+    }
+  },
+  "contact": {
+    "title": "Ota yhteyttä",
+    "getInTouch": "Ota yhteyttä",
+    "intro": "Ota yhteyttä Lindholmen Science Parkin koordinaatiotiimiin yleisissä kysymyksissä, lehdistötiedoissa tai kumppanuuskysymyksissä.",
+    "coordinatorHeading": "Koordinaattori",
+    "coordinatorLocation": "Göteborg, Ruotsi",
+    "stayInTouch": "Pidä yhteyttä",
+    "requiredNote": "Tähdellä * merkityt kentät ovat pakollisia.",
+    "labels": {
+      "name": "Nimi",
+      "email": "Sähköposti",
+      "organisation": "Organisaatio",
+      "subject": "Aihe",
+      "message": "Viesti"
+    },
+    "send": "Lähetä viesti",
+    "sending": "Lähetetään…",
+    "success": {
+      "heading": "Viesti lähetetty!",
+      "body": "Vastaamme sinulle 5 arkipäivän kuluessa. Tarkista saapuneet-kansiosi vahvistuksen varalta.",
+      "again": "Lähetä toinen viesti"
+    },
+    "errors": {
+      "generic": "Jokin meni pieleen. Yritä uudelleen.",
+      "network": "Palvelimeen ei saatu yhteyttä. Tarkista yhteytesi."
+    },
+    "newsletterPrompt": "Haluatko pysyä ajan tasalla Immersive ECHOsta?"
+  },
+  "faq": {
+    "title": "Usein kysytyt kysymykset",
+    "items": {
+      "q1": {
+        "question": "Mikä on Immersive ECHO?",
+        "answer": "Immersive ECHO on yleiseurooppalainen hanke, joka tuo ihmiset lähemmäs yhteistä perintöään immersiivisen tarinankerronnan avulla. 30 kuukauden aikana (helmikuu 2026 – heinäkuu 2028) 15 kumppania 10 maassa kehittää käytännöllisen mallin, joka mahdollistaa kulttuurilaitosten muuntaa arkiset julkiset tilat tunteisiin vetoaviksi, yhteisöllisiksi kokemuksiksi — käyttäen projisointia, tilaääntä ja anturiteknologiaa VR-lasien sijaan. Painopiste on immersiivisen tarinankerronnan tekemisessä saavutettavaksi pienille ja keskisuurille laitoksille, joilla ei tällä hetkellä ole budjettia ja osaamista sen luomiseen."
+      },
+      "q2": {
+        "question": "Miksi tätä hanketta tarvitaan?",
+        "answer": "Useimmilla kulttuuriperintölaitoksilla ei ole budjettia, osaamista eikä teknistä kapasiteettia immersiivisten kokemusten luomiseen. Laajamittaiset tuotannot on tyypillisesti varattu hyvin rahoitetuille museoille ja kaupallisille kohteille. Samaan aikaan yleisö odottaa yhä enemmän mukaansatempaavia, moniaistisia kohtaamisia kulttuurin kanssa. Immersive ECHO vastaa tähän aukkoon käytännöllisellä, siirrettävällä mallilla — testattuna todellisissa ympäristöissä, rehellisesti dokumentoituna ja suunniteltuna siten, että rajallisin resurssein toimiva paikallismuseo voi kertoa tarinansa tavoilla, jotka ovat tunteisiin vetoavia ja taloudellisesti kestäviä."
+      },
+      "q3": {
+        "question": "Mikä erottaa Immersive ECHOn muista immersiivisistä hankkeista?",
+        "answer": "Viisi asiaa erottaa meidät. Keskitymme pieniin ja keskisuuriin laitoksiin — emme suuriin lippulaivoihin. Lähestymistapamme on laseista vapaa: projisointi, tilaääni ja anturit muuntavat olemassa olevia julkisia tiloja. Osallisuus on sisäänrakennettu muotoiluprosessiin, ja sille on omat sprinttinsä nuorille, neurokirjon yleisölle, ikääntyneille ja marginalisoiduille ryhmille. Dokumentoimme koko prosessin — mukaan lukien se, mikä ei toimi — ja tuotamme avoimia työkalupakkeja, jotta muut voivat toistaa lähestymistavan itsenäisesti. Ja konsortio itsessään on ainutlaatuinen: maailman johtavat muotoilijat, tutkijat, eri kokoiset kulttuuriperintölaitokset ja teknologit työskentelevät rinnakkain."
+      },
+      "q4": {
+        "question": "Miksi ”immersiivinen” ilman VR-laseja?",
+        "answer": "VR-lasit luovat esteitä: kustannukset, saavutettavuus, epämukavuus ja yksilöllinen eristyneisyys. Niitä on myös vaikea skaalata — yhdet lasit palvelevat yhtä henkilöä kerrallaan. Lähestymistapamme käyttää tilaääntä, projisointeja ja ympäristöantureita muuntaakseen jaetut julkiset tilat immersiivisiksi tarinankerronnan ympäristöiksi. Yksittäinen paikkaan sidottu installaatio tavoittaa suuren yleisön samanaikaisesti, vaatii vähemmän erikoislaitteita ja on laitoksille helpompi ylläpitää ja pitää toiminnassa. Lopputulos on yhteisöllinen, kehollinen ja matalan kynnyksen — ja se on taloudellisesti järkevä sitä isännöiville toimipaikoille."
+      },
+      "q5": {
+        "question": "Mitä kävijä todella kokee?",
+        "answer": "Paikkaan sidottua, moniaistista tarinankerrontaa, joka käyttää projisointia, tilaääntä ja ympäristövuorovaikutusta herättääkseen kulttuuriperinnön eloon jaetuissa julkisissa tiloissa. Kun liikut toimipaikassa, projisoidut kuvat ja äänet reagoivat läsnäoloosi ja luovat kertomuksen, joka avautuu ympärilläsi. Tavoitteena ei ole passiivinen tiedonsiirto vaan aktiiviset kohtaamiset historian kanssa — avoimet, osallistavat ja suunnitellut siten, että jokainen kävijä luo oman matkansa kertomuksen läpi. Tunnet sen ennen kuin ajattelet sitä."
+      },
+      "q6": {
+        "question": "Mikä on Snapsting?",
+        "answer": "Snapsting on Tanskan Viborg Museumin kehittämä tunnusomainen paikan päällä toteutettava tuotanto. Se tutkii Viborgin tuhatvuotista identiteettiä kuninkaallisen, uskonnollisen ja oikeudellisen vallan paikkana — herättäen tuon historian eloon musiikin, runollisen animaation ja tunnelmallisten ympäristöjen avulla. Kokemus on epälineaarinen: kävijät seuraavat omaa uteliaisuuttaan kertomuksen läpi. Itse kokemuksen lisäksi koko tuotantoprosessi dokumentoidaan siirrettävänä menetelmänä — käsikirjana muille kulttuuriperintölaitoksille, jotka suunnittelevat omaa immersiivistä työtään. Snapsting saa julkisen ensi-iltansa marraskuussa 2026."
+      },
+      "q7": {
+        "question": "Mikä on Le Pavillon ja KIKK-festivaali?",
+        "answer": "Le Pavillon on KIKKin ylläpitämä toimipaikka Namurissa, Belgiassa — ja se toimii hankkeen julkisena testiympäristönä. Täällä immersiiviset kokemukset kohtaavat ensimmäistä kertaa todellisen, moninaisen yleisön laajassa mittakaavassa. Testaamme koko kävijäpolun: tunnereaktion, vuorovaikutusmallit, saavutettavuuden, perehdytyksen ja sen, luoko kokemus tilaisuuksia pohdintaan ihmisten lähdön jälkeen. Julkinen ensi-ilta on suunniteltu KIKK-festivaalille lokakuussa 2027 — yhdelle Euroopan johtavista digitaalisen ja luovan kulttuurin festivaaleista, joka houkuttelee tuhansia kävijöitä vuosittain."
+      },
+      "q8": {
+        "question": "Mitä ”osallisuus muotoilun lähtökohtana” tarkoittaa käytännössä?",
+        "answer": "Se tarkoittaa, että saavutettavuus ja moninaisen yleisön tarpeet on juurrutettu muotoiluprosessiin alusta alkaen — niitä ei lisätä lopuksi. Hankkeeseen kuuluu neljä omaa osallistavan muotoilun sprinttiä, joista kukin keskittyy tiettyyn yleisöön: nuoret, neurokirjon henkilöt, ikääntyneet ja marginalisoidut yhteisöt. Todelliset käyttäjät muovaavat työtä varhaisimmista vaiheista alkaen. Osallisuus on myös tunnetason tunnistamista — kokemusten luomista, joissa ihmiset näkevät itsensä heijastuvan kertomuksissa, joissa historia tuntuu joltakin, joka kuuluu heille."
+      },
+      "q9": {
+        "question": "Keitä Immersive ECHOn takana on?",
+        "answer": "15 organisaation konsortio 10 Euroopan maasta, jota koordinoi Lindholmen Science Park Göteborgissa, Ruotsissa. Kumppaneihin kuuluu immersiivisen muotoilun studioita, kulttuuriperintölaitoksia, tutkimuslaboratorioita, teknologiayrityksiä ja viestinnän asiantuntijoita Ruotsista, Saksasta, Ranskasta, Suomesta, Romaniasta, Tanskasta, Belgiasta, Ukrainasta, Espanjasta ja Sloveniasta. Liitännäiskumppaneihin kuuluvat Göteborgin kaupunki ja The Animation Workshop Tanskassa. Hanke sai EU:n arviointipisteet 92/100."
+      },
+      "q10": {
+        "question": "Onko Ukraina mukana hankkeessa?",
+        "answer": "Kyllä. Sofiyivkan puisto Umanissa, Ukrainassa, on täysivaltainen konsortion kumppani. Jatkuvan Venäjän hyökkäyksen vuoksi fyysinen prototypointi ei voi tapahtua Ukrainassa. Sen sijaan Sofiyivkan puisto tuo mukaan kulttuuriperintödataa, historiallista aineistoa ja korvaamattoman näkökulman perintöön konfliktialueilla. Heidän osallistumisensa muistuttaa, miksi kulttuurin säilyttäminen on tärkeää — ja miksi se on kiireellistä. Konsortio työskentelee aktiivisesti heidän tilanteensa aiheuttamien toiminnallisten haasteiden parissa."
+      },
+      "q11": {
+        "question": "Miten hanke rahoitetaan?",
+        "answer": "Immersive ECHOn osarahoittaa Euroopan unioni Luova Eurooppa -ohjelmasta, laajamittaisen yhteistyön lohkosta. Kokonaisbudjetti on noin 3,3 miljoonaa euroa, josta EU rahoittaa 60 % (1 999 019 €). Loput 40 % on konsortion kumppaneiden osarahoitusta. Kertakorvausmallin mukaan EU maksaa tuloksista — ei yleiskuluista. Maksuaikataulu on 40 % hankkeen alussa, 40 % väliraportissa (kuukausi 15) ja 20 % loppuraportissa."
+      },
+      "q12": {
+        "question": "Mitä hanke tuottaa?",
+        "answer": "Tuloksia kolmella tasolla. Konkreettiset kokemukset: testatut immersiiviset installaatiot Viborg Museumissa ja Le Pavillonissa, suunniteltuina kiertueelle ja mukauttamiseen. Avoin tieto: Open Learning Toolkit vaiheittaisine ohjeineen, Futuremakers Toolkit osallistavaan tulevaisuusajatteluun, tuotantoprosessin dokumentaatio ja Outreach-alusta laajemmalle kulttuuriperintöyhteisölle. Rakenteellinen kapasiteetti: Business Blueprint, joka validoi mikä toimii toiminnallisesti ja taloudellisesti, sekä lopullinen tulevaisuusmuotoilun raportti, jossa on politiikkasuosituksia ja institutionaalisia etenemissuunnitelmia alalle vuoden 2028 jälkeen."
+      },
+      "q13": {
+        "question": "Mitä tapahtuu hankkeen päätyttyä vuonna 2028?",
+        "answer": "Kestävyys on juurrutettu muotoiluprosessiin alusta alkaen — sitä ei käsitellä jälkikäteisajatuksena. Tekninen arkkitehtuuri on rakennettu modulaarisuuden ympärille: sisältö voi kiertää toimipaikkojen välillä, digitaaliset kaksoset mahdollistavat uusien kohteiden suunnittelun etänä, ja parametrinen muotoilu vähentää installaatioiden mukauttamiseen tarvittavaa työtä. Viborg Museum aikoo jatkaa Snapstingin ylläpitämistä pysyvänä installaationa. Kaikki tuotettu immateriaalioikeus asetetaan vapaasti saataville mukauttamista, uudelleenkäyttöä ja kaupallista kehittämistä varten. Tavoitteena on jättää jälkeen menetelmiä, työkaluja ja todistetusti toimivia malleja, jotka jatkavat arvon tuottamista koko alalla."
+      },
+      "q14": {
+        "question": "Miten muut kulttuuriperintölaitokset voivat osallistua?",
+        "answer": "Useilla konkreettisilla tavoilla. ECHOSYSTEM-alusta sisältää julkisen portaalin, jossa kulttuurialan ammattilaiset voivat päästä käsiksi työkalupakkien luonnoksiin, liittyä vertaisvaihdon foorumeihin ja ilmoittautua tapahtumiin. Kuukausittaiset Futuremaking-työpajat kumppanikaupungeissa ovat avoimia ulkopuolisille ammattilaisille. Kolme verkkomestarikurssia käsittelee teknisiä tuotantoputkia, luovaa ohjausta ja tieteidenvälistä yhteistyötä. Le Pavillonin ja Viborg Museumin julkiset testiympäristöt toimivat elävinä oppimisympäristöinä. Kaikki työkalupakit ja koulutusaineistot ovat vapaasti saatavilla kaikilla kymmenellä kumppanikielellä. Seuraa hanketta tunnisteella #ImmersiveECHO tai tilaa uutiskirje."
+      }
+    }
+  },
+  "partners": {
+    "title": "Konsortio",
+    "coordinator": "Hankkeen koordinaattori",
+    "commsDissemination": "Viestintä ja levitys",
+    "corePartners": "Ydinkumppanit",
+    "lspLocation": "Göteborg, Ruotsi",
+    "futLocation": "Barcelona, Espanja"
+  },
+  "nav": {
+    "home": "Etusivu",
+    "about": "Tietoa",
+    "partners": "Kumppanit",
+    "experiences": "Kokemukset",
+    "news": "Uutiset ja tapahtumat",
+    "faq": "UKK",
+    "contact": "Yhteystiedot",
+    "downloadResources": "Lataa resurssit",
+    "toggleNavigation": "Vaihda navigointi",
+    "selectLanguage": "Valitse kieli"
+  },
+  "footer": {
+    "quickLinks": "Pikalinkit",
+    "aboutProject": "Tietoa hankkeesta",
+    "newsletter": "Uutiskirje",
+    "followUs": "Seuraa meitä palvelussa {{network}}",
+    "euAlt": "Euroopan unionin osarahoittama",
+    "euCredit": "Euroopan unionin osarahoittama Luova Eurooppa -ohjelmasta, laajamittaisen yhteistyön lohkosta. Avustussopimus nro 101255680.",
+    "duration": "Kesto: helmikuu 2026 – heinäkuu 2028",
+    "coordinator": "Koordinaattori: Lindholmen Science Park",
+    "partners": "15 kumppania · 10 maata",
+    "rights": "© {{year}} Immersive ECHO. Kaikki oikeudet pidätetään."
+  },
+  "timeline": {
+    "eyebrow": "Hankkeen aikajana · M1 — M30 · helmikuu 2026 — heinäkuu 2028",
+    "heading": "Kolmekymmentä kuukautta, julkisesti.",
+    "lede": "Immersive ECHO on 30 kuukauden Luova Eurooppa -hanke: suunnittele, rakenna, testaa, skaalaa. Välietapit, tuotokset ja julkiset tapahtumat 15 organisaation konsortiosta 10 EU-maassa. Vie osoitin kuukauden päälle tarkentaaksesi; napsauta merkintää lukeaksesi.",
+    "type": {
+      "deliverable": "Tuotos",
+      "milestone": "Välietappi",
+      "event": "Tapahtuma"
+    },
+    "stats": {
+      "done": "Valmiit",
+      "deliverables": "Tuotokset",
+      "milestones": "Välietapit",
+      "events": "Tapahtumat"
+    },
+    "index": "Hakemisto",
+    "cols": {
+      "date": "Päivämäärä",
+      "type": "Tyyppi",
+      "title": "Otsikko",
+      "status": "Tila"
+    },
+    "detail": {
+      "delivered": "✓ Toimitettu",
+      "inProgress": "● Käynnissä",
+      "upcoming": "○ Tulossa",
+      "dateTBC": "Päivämäärä vahvistetaan myöhemmin",
+      "prev": "← Edellinen",
+      "next": "Seuraava →"
+    },
+    "row": {
+      "delivered": "Toimitettu",
+      "now": "● Nyt",
+      "upcoming": "Tulossa",
+      "tbd": "Määrittelemättä"
+    },
+    "today": "TÄNÄÄN",
+    "items": {
+      "ms1-1": { "title": "MS1.1 · Konsortion linjaus ja aloitus", "description": "Kaikki kumppanit linjattu tavoitteisiin, menetelmiin, rooleihin ja raportointiin hankkeen alussa." },
+      "ms1-2": { "title": "MS2.1 · Tarvelähtöinen muotoilun viitekehys", "description": "Strateginen muotoilubrief, joka perustuu käyttäjäpolkuihin, tarpeisiin, käyttäytymiseen, institutionaalisiin panoksiin ja yhteiskunnallisiin trendeihin." },
+      "ms1-3": { "title": "MS3.1 · Konsepti ja kerronta viimeistelty", "description": "Ydinkonsepti, kerronta, täysi käsikirjoitus ja Snapstingin kuvakäsikirjoitus valmiina iteratiivisen prosessin kautta." },
+      "ms1-5": { "title": "MS5.1 · Hankkeiden välinen vaihtoverkosto", "description": "Yhteistyöverkosto muiden EU-rahoitteisten hankkeiden kanssa virallisesti käynnistetty." },
+      "ms2-2": { "title": "MS2.2 · Laboratorio toiminnassa, ensimmäiset prototyypit", "description": "Kokeellinen laboratorio täysin toiminnassa; ensimmäiset immersiiviset prototyypit testattu ja arvioitu." },
+      "ms3-2": { "title": "MS2.3 · Osallistavan muotoilun sprintit valmiit", "description": "Kaikki neljä osallistavan yhteisluomisen sprinttiä valmiina; havainnot integroitu muotoilun iteraatioihin." },
+      "ms2-3": { "title": "MS3.2 · Snapstingin tuotanto valmis", "description": "Kaikki Snapstingin osat viimeistelty, mukaan lukien sisältö, teknologia ja tilallinen muotoilu." },
+      "ms3-3": { "title": "MS3.3 · Snapsting asennettu Viborgiin", "description": "Snapsting täysin asennettu ja toiminnassa paikan päällä Viborg Museumissa." },
+      "ms4-3": { "title": "MS3.4 · Konsortiokokous ja paneeli", "description": "Kaikki konsortion kumppanit kokoontuvat Viborgiin, paneelikeskustelun kera Animation Festivalilla." },
+      "ms2-1": { "title": "MS1.2 · Koordinoinnin väliarviointi", "description": "Edistymisen, riskien, yhteistyön laadun ja resurssien käytön arviointi puolivälissä." },
+      "ms2-5": { "title": "MS5.2 · Vaikutuksen väliarviointi", "description": "Puolivälin arviointi viestinnästä, tiedon siirrosta, sidosryhmien osallisuudesta ja levityksen tavoittavuudesta." },
+      "ms1-4": { "title": "MS4.1 · Käyttöönoton viitekehys ja liiketoimintamalli", "description": "Julkisen käyttöönoton strategiat luotu yhdessä kestävän, kumppaneiden kanssa kehitetyn liiketoimintamallin kanssa." },
+      "ms4-2": { "title": "MS2.4 · Lopulliset konseptit valmiina", "description": "Prototyypit kehittyneet testauksen pohjalta; lopulliset immersiiviset kokemukset hyväksytty julkiseen käyttöönottoon." },
+      "ms2-4": { "title": "MS4.2 · Julkinen testiympäristö avattu Le Pavillonissa", "description": "Ensimmäinen toimipaikka täysin varustettu, esityksen ohjaus validoitu; ovet avattu yleisölle (KIKK-festivaali, lokakuu 2027)." },
+      "ms3-4": { "title": "MS4.3 · Toimipaikkojen välinen analytiikka toiminnassa", "description": "Keskitetty kojelauta, joka kokoaa reaaliajassa kävijävirrat, osallisuuden ja saavutettavuusdatan, otetaan käyttöön." },
+      "ms5-3": { "title": "MS3.5 · Snapsting mukautettu Le Pavillonille", "description": "Snapsting räätälöity Le Pavilloniin, muutoksin kerrontaan, tekniseen järjestelyyn ja tilalliseen muotoiluun." },
+      "ms3-5": { "title": "MS5.3 · Osaamisen vahvistamisen resurssit valmiit", "description": "Open Learning Toolkit, How-to ECHO -opas, 5D TimeMap ja Futuremakers-työkalupakit valmiina ja jaettu." },
+      "ms4-5": { "title": "MS5.4 · Vaikutuksen lopullinen levitys", "description": "Lopullinen tulevaisuusmuotoilun raportti, joka tiivistää strategisen ennakoinnin tulokset ja pitkän aikavälin polut." },
+      "ms4-4": { "title": "MS4.4 · Toiminnallinen toteutettavuus raportoitu", "description": "Kustannukset, henkilöstö ja logistiikka analysoitu tulevan käyttöönoton ja skaalauksen tukemiseksi." },
+      "ms3-1": { "title": "MS1.3 · Koordinoinnin lopullinen yhteenveto", "description": "Hankkeen toteutuksen strateginen päätös, mukaan lukien keskeiset opit koordinoinnista ja päätöksenteosta." },
+      "d1-1": { "title": "D1.1 · Hankkeen hallinnon käsikirja", "description": "Käytännöllinen opas, joka hahmottaa vision, sisäisen koordinoinnin työkalut, raportointirakenteen, kumppaneiden vastuut ja jaetut työnkulut." },
+      "d5-1": { "title": "D5.1 · Viestintä- ja levityssuunnitelma", "description": "Integroitu viestintästrategia. Tekoälytyökalut muuntavat hankkeen datan artikkeleiksi, julkaisuiksi, tapaustutkimuksiksi ja mikrosisällöiksi eurooppalaisille yleisöille." },
+      "d5-2": { "title": "D5.2 · Hankkeen kojelauta", "description": "Reaaliaikainen digitaalinen kojelauta, joka seuraa KPI:itä osallistujan, laitoksen, laitosten välisellä, kansalaisosallistumisen ja yhteiskunnallisen vaikutuksen tasolla." },
+      "d2-1": { "title": "D2.1 · Tarvelähtöinen immersiivisen muotoilun brief", "description": "Strateginen opas, joka perustuu käyttäjäoivalluksiin, institutionaalisiin tarpeisiin ja yhteiskunnallisiin muutoksiin — ja määrittelee muotoiluhaasteet, persoonat, tunnetavoitteet ja tekniset oletukset." },
+      "d3-1": { "title": "D3.1 · Snapsting-kokemus ja dokumentaatio", "description": "Valmis immersiivinen kokemus asennettuna Viborg Museumiin, sekä installaation piirustukset, vuorovaikutusmuotoilun tiedostot ja dokumentaatio uudelleenkäyttöä varten." },
+      "d1-2": { "title": "D1.2 · Koordinoinnin ja riskien väliraportti", "description": "Arviointi edistymisestä, koordinoinnin laadusta, riskien tilasta ja kumppaneiden itsearvioinneista, suosituksineen." },
+      "d5-3": { "title": "D5.3 · Vaikutus ja levitys puolivälissä", "description": "Kattava puolivälin arvio vaikutuksesta, levityksestä, osallisuudesta, institutionaalisesta käyttöönotosta ja monialaisesta yhteistyöstä." },
+      "d5-6": { "title": "D5.6 · Kulttuuriperintökohteiden 5D TimeMap", "description": "Interaktiivinen digitaalinen kartta, joka yhdistää eurooppalaiset kulttuuriperintökohteet viidellä kerroksella — tilallinen, ajallinen, taiteellinen, poliittinen, kielellinen. Saatavilla 10 EU-kielellä." },
+      "d2-2": { "title": "D2.2 · Lopulliset immersiivisen kokemuksen muotoilut", "description": "Täydelliset immersiivisen kokemuksen paketit julkiseen käyttöönottoon — kerronnat, tilalliset / vuorovaikutusmuotoilut, tekniset järjestelyt, perehdytyspolut, saavutettavuus." },
+      "d3-2": { "title": "D3.2 · Snapsting mukautettu Le Pavillonille", "description": "Snapsting mukautettu Le Pavilloniin päivitetyin kerronnoin, vuorovaikutus- ja tilallisin muotoiluin, teknisin järjestelyin ja toimintaohjein." },
+      "d5-4": { "title": "D5.4 · Futuremakers-työkalupakki", "description": "Hybridi (fyysinen + digitaalinen) työkalupakki osallistavia tekniikoita ja ohjattuja toimintoja kulttuurialan ammattilaisille. 10 EU-kieltä." },
+      "d5-5": { "title": "D5.5 · Outreach-alusta", "description": "Tekoälytehostettu kaksisuuntainen viestintäalusta reaaliaikaisella KPI-kojelaudalla. Tekoälyagenttien persoonat: museo-opas, historiallinen hahmo, kuvitteellinen maskotti." },
+      "d5-7": { "title": "D5.7 · Timetravel Companion -prototyyppi", "description": "Tekoälyvetoinen opas, joka rikastaa museovierailuja äänivuorovaikutuksen, kontekstuaalisen tarinankerronnan ja valinnaisen holografisen sisällön avulla. 100 räätälöityä laitetta." },
+      "d3-3": { "title": "D3.3 · Immersiivisen tuotantoprosessin raportti", "description": "Läpikäynti paikan päällä tapahtuvasta tuotantoprosessista — kerronta, tekniset päätökset, yhteistyömalli, kulttuuriset haasteet. Viite muille laitoksille." },
+      "d4-1": { "title": "D4.1 · Toiminnallisen käyttöönoton raportti", "description": "Vaiheittainen dokumentaatio julkisen testiympäristön käyttöönotosta: yleisölogistiikka, tilallinen järjestely, teknisen mukauttamisen muistiinpanot." },
+      "d5-8": { "title": "D5.8 · Open Learning Toolkit ja How-to-opas", "description": "Modulaariset, käyttövalmiit resurssit, rakennettu WP2–WP4:n tuloksista. Tekoälyavusteinen sisällöntuotanto räätälöi resurssit institutionaalisiin profiileihin." },
+      "d2-3": { "title": "D2.3 · Lopullinen immersiivisen kokemuksen arviointi", "description": "Kattava arviointi: tunnevaikutus, saavutettavuus, järjestelmän suorituskyky, toiminnallinen kestävyys." },
+      "d4-2": { "title": "D4.2 · UX:n ja liiketoimintamallin yhteenveto", "description": "Arviointi yleisön osallisuudesta, perehdytys-/poistumispoluista ja toimipaikassa testattujen liiketoimintamallien toteutettavuudesta." },
+      "d5-9": { "title": "D5.9 · Hankkeiden välisen verkostoitumisen raportti", "description": "Dokumentoi hankkeiden välisen verkostoitumisen toiminnot — kokoukset, yhteistyötapahtumat, keskeiset tulokset, ehdotukset jatkuvaan vaihtoon." },
+      "d5-10": { "title": "D5.10 · Lopullinen tulevaisuusmuotoilun raportti", "description": "Digitaalinen alusta, joka esittelee hankkeen tulokset ja pitkän aikavälin potentiaalin. Tekoälyvetoiset mediatyökalut personoivat sisältöä 10 EU-kielellä." },
+      "e1": { "title": "E1 · Snapsting-näyttelyn avajaiset", "description": "Immersiivinen Snapsting-kokemus avautuu yleisölle Viborg Museumissa. Kolmivuotinen esillä olo.", "tag": "Näyttely · Viborg · 150 000 pax" },
+      "e5": { "title": "E5 · Julkinen julkistus · KIKK-festivaali", "description": "Immersiivisen kokemuksen näkyvä julkistus KIKK-festivaalilla 2027. Konsortion paneeli.", "tag": "Paneeli · Namur · 25 000 pax" },
+      "e6": { "title": "E6 · Le Pavillon -näyttelyn avajaiset", "description": "Immersive ECHO -näyttely avautuu yleisölle Le Pavillonissa, Namurissa.", "tag": "Näyttely · Namur · 25 000 pax" },
+      "e2": { "title": "E2 · Nuorten sprintti: Future Worlds Builder", "description": "Käyttäjälähtöinen sprintti, joka keskittyy digitaaliseen sujuvuuteen ja uteliaisuuteen. 3 päivää.", "tag": "Sprintti · Göteborg · 80 pax" },
+      "e3": { "title": "E3 · Neurokirjon sprintti", "description": "Epälineaarinen navigointi; aistitasapaino ja epälineaarinen osallisuus. 2 päivää.", "tag": "Sprintti · Berliini · 40 pax" },
+      "e4": { "title": "E4 · Konferenssi Echoes of the Future", "description": "Kulttuuriperinnön ja immersiivisen innovaation yhdistäminen. Konferenssi + paneeli Animation Festivalilla.", "tag": "Konferenssi · Viborg · 300 pax" }
+    }
+  }
+}

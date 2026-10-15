@@ -72,6 +72,7 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 ### Experiences Page
 - [x] Experiences index (`src/pages/Experiences.tsx`) at `/experiences` — Snapsting + Le Pavillon cards
 - [x] Activity sub-pages: `/experiences/snapsting` (`SnapstingActivities.tsx`) and `/experiences/pavillon` (`PavillonActivities.tsx`)
+- [x] "View Activities" button hidden for now (2026-10-15) — the activity sub-pages are empty; `SHOW_ACTIVITIES_LINK = false` in `Experiences.tsx` (routes still exist). Flip to `true` once they have content (see TODO.md)
 - [ ] Real pilot photography
 - [ ] Final pilot descriptions
 
@@ -87,6 +88,7 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 ### FAQ Page
 - [x] FAQ page (`src/pages/FAQ.tsx`) — 14 items with real copy, React accordion (useState)
 - [x] Keyboard-accessible accordion (native buttons — Enter/Space verified 2026-07-28)
+- [x] Single-open accordion (2026-10-15) — opening an item closes the previous one; open state lives in `FAQ()` (`openKey`), `FAQItem` is controlled
 
 ### Contact Page
 - [x] Page stub (`src/pages/Contact.tsx`) — form with controlled inputs, coordinator info, social icons, newsletter CTA
@@ -104,6 +106,7 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 - [x] `POST /api/v1/public/newsletter` — upserts `newsletter_subscribers`, sends confirmation email
 - [x] `docker-compose.yml` updated — 3 services: `echoimmersive-web` (Nginx), `api` (FastAPI), `db` (Postgres 16)
 - [x] `nginx.conf` updated — `/api/` proxied to FastAPI container
+- [x] Image caching (2026-10-08, `nginx.conf`) — images/SVGs (`png|jpg|jpeg|gif|ico|svg|webp|avif`) are served with `Cache-Control: public, max-age=300` instead of 30 days, because replaced images keep the same filename (no content hash). JS/CSS/fonts stay `immutable` for 1 year (hashed filenames); `/locales/` is `no-cache`. See the image-update runbook in README.md
 - [x] `.env.example` added — template for SMTP, DB, and CORS config
 - [x] `POST /api/v1/admin/newsletter/send` — sends an HTML issue to all active subscribers (or one test address), per-subscriber unsubscribe link (`{{unsubscribe_url}}` substitution, or appended footer); issues live in `newsletters/`, triggered via `make newsletter-test` / `make newsletter-send`
 - [x] First issue ready: `newsletters/2026-09-first-issue.html` (from `Echo newsletter design 2/`, supersedes the July v1), images optimised + hosted at `public/img/newsletter/`
@@ -117,6 +120,8 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 - [x] Tabbed interface — WPs / Tasks / Milestones / Deliverables / Events / Media & Brand; underline indicator, wraps on mobile (no scroll hijack)
 - [x] WP accordions with objectives list + partner logo chips (`filter: invert(1)` for cream bg)
 - [x] Task group accordions with inner task rows (expandable descriptions)
+- [x] Single-open accordions (2026-10-15) — one WP open at a time (`openWP`), one task group at a time (`openGroup`), and one task at a time inside a group (`openTask` in `TaskGroupRow`). State is lifted to the list level; `WPRow` / `TaskGroupRow` / `TaskItem` are controlled (`open` + `onToggle`)
+- [x] Events tab duration label (2026-10-15) — `days` is `number | string`; numbers render as `Nd`, strings render as written (E3 Snapsting = `3y`, E6 = `TBD`)
 - [x] Milestones sorted chronologically (MS01–MS20), past dates highlighted green (`#16a34a`) automatically via `isPast()` helper
 - [x] Deliverables sorted by due month; three states: Pending / "Access file →" (Google Drive link) / custom `status` text (e.g. "You are here!")
 - [x] D1.1 and D5.1 linked to Google Drive; D5.2 status set to "You are here!" (this site is the deliverable)

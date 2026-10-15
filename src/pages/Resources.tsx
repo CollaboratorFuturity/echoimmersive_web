@@ -341,10 +341,10 @@ const events: Event[] = [
   // Dated events — sorted chronologically
   { code: 'E1',  wp: 'WP2', name: 'Youth Sprint: Future Worlds Builder',                      type: 'User-centric sprint', location: 'Gothenburg, SE',              days: 3,    attendees: 80 },
   { code: 'E2',  wp: 'WP2', name: 'Neurodivergent Sprint: Non-linear navigation',             type: 'User-centric sprint', location: 'Berlin, DE',                  days: 2,    attendees: 40 },
-  { code: 'E3',  wp: 'WP3', name: 'The Snapsting Immersive Experience',                       type: 'Exhibition',          location: 'Viborg, DK',                  days: 1095, attendees: '150,000' },
+  { code: 'E3',  wp: 'WP3', name: 'The Snapsting Immersive Experience',                       type: 'Exhibition',          location: 'Viborg, DK',                  days: '3y',  attendees: '150,000' },
   { code: 'E4',  wp: 'WP5', name: 'Echoes of the Future: Bridging Cultural Heritage and Immersive Innovation', type: 'Conference', location: 'Viborg, DK',          days: 1,    attendees: 300 },
   { code: 'E5',  wp: 'WP4', name: 'Immersive ECHO: Cultural Heritage for the Future',         type: 'Panel talk',          location: 'Namur, BE',                   days: 1,    attendees: '25,000' },
-  { code: 'E6',  wp: 'WP4', name: 'Immersive ECHO',                                           type: 'Exhibition',          location: 'Namur, BE',                   days: '—',  attendees: '25,000' },
+  { code: 'E6',  wp: 'WP4', name: 'Immersive ECHO',                                           type: 'Exhibition',          location: 'Namur, BE',                   days: 'TBD', attendees: '25,000' },
   // Remaining WP2 events
   { code: 'E7',  wp: 'WP2', name: 'Speculative prototyping',                                  type: 'Workshop',            location: 'Paris, FR',                   days: 2,    attendees: 15 },
   { code: 'E8',  wp: 'WP2', name: 'Sensory Mapping & Interaction',                            type: 'Workshop',            location: 'Gothenburg, SE',               days: 2,    attendees: 12 },
@@ -450,13 +450,12 @@ function Accordion({
 // ────────────────────────────────────────────────────────────────────────────
 // WP row
 // ────────────────────────────────────────────────────────────────────────────
-function WPRow({ wp }: { wp: WorkPackage }) {
+function WPRow({ wp, open, onToggle }: { wp: WorkPackage; open: boolean; onToggle: () => void }) {
   const { t } = useTranslation()
-  const [open, setOpen] = useState(false)
   return (
     <Accordion
       open={open}
-      onToggle={() => setOpen(o => !o)}
+      onToggle={onToggle}
       header={
         <div>
           <div className="flex items-baseline gap-3 mb-1 flex-wrap">
@@ -534,14 +533,13 @@ function WPRow({ wp }: { wp: WorkPackage }) {
 // ────────────────────────────────────────────────────────────────────────────
 // Inner task row — each task is itself an accordion that reveals its description
 // ────────────────────────────────────────────────────────────────────────────
-function TaskItem({ task }: { task: Task }) {
+function TaskItem({ task, open, onToggle }: { task: Task; open: boolean; onToggle: () => void }) {
   const { t } = useTranslation()
-  const [open, setOpen] = useState(false)
   return (
     <div className="border-b last:border-0" style={{ borderColor: 'rgba(32,33,36,0.08)' }}>
       <button
         type="button"
-        onClick={() => setOpen(o => !o)}
+        onClick={onToggle}
         aria-expanded={open}
         className="w-full flex items-baseline gap-4 py-3 text-left"
       >
@@ -602,13 +600,14 @@ function TaskItem({ task }: { task: Task }) {
 // ────────────────────────────────────────────────────────────────────────────
 // Task group row — outer accordion containing TaskItem children
 // ────────────────────────────────────────────────────────────────────────────
-function TaskGroupRow({ group }: { group: TaskGroup }) {
+function TaskGroupRow({ group, open, onToggle }: { group: TaskGroup; open: boolean; onToggle: () => void }) {
   const { t } = useTranslation()
-  const [open, setOpen] = useState(false)
+  // Only one task open at a time within the group
+  const [openTask, setOpenTask] = useState<string | null>(null)
   return (
     <Accordion
       open={open}
-      onToggle={() => setOpen(o => !o)}
+      onToggle={onToggle}
       header={
         <div className="flex items-baseline gap-3 flex-wrap">
           <span
@@ -633,7 +632,14 @@ function TaskGroupRow({ group }: { group: TaskGroup }) {
       }
     >
       <div>
-        {group.tasks.map(t => <TaskItem key={t.code} task={t} />)}
+        {group.tasks.map(task => (
+          <TaskItem
+            key={task.code}
+            task={task}
+            open={openTask === task.code}
+            onToggle={() => setOpenTask(o => (o === task.code ? null : task.code))}
+          />
+        ))}
       </div>
     </Accordion>
   )
@@ -711,6 +717,9 @@ export default function Resources() {
   const { hash } = useLocation()
   const initialTab = (TABS.find(t => t.id === hash.replace('#', ''))?.id) ?? 'wp'
   const [activeTab, setActiveTab] = useState<TabId>(initialTab)
+  // Only one WP / one task group open at a time (opening another closes the previous)
+  const [openWP, setOpenWP] = useState<string | null>(null)
+  const [openGroup, setOpenGroup] = useState<string | null>(null)
 
   const sortedDeliverables = [...deliverables].sort((a, b) => a.due - b.due)
 
@@ -786,14 +795,28 @@ export default function Resources() {
         {/* ── Work Packages ─────────────────────────────────────────── */}
         {activeTab === 'wp' && (
           <div className="border-t" style={{ borderColor: 'rgba(32,33,36,0.12)' }}>
-            {workPackages.map(wp => <WPRow key={wp.code} wp={wp} />)}
+            {workPackages.map(wp => (
+              <WPRow
+                key={wp.code}
+                wp={wp}
+                open={openWP === wp.code}
+                onToggle={() => setOpenWP(o => (o === wp.code ? null : wp.code))}
+              />
+            ))}
           </div>
         )}
 
         {/* ── Tasks ─────────────────────────────────────────────────── */}
         {activeTab === 'tasks' && (
           <div className="border-t" style={{ borderColor: 'rgba(32,33,36,0.12)' }}>
-            {taskGroups.map(g => <TaskGroupRow key={g.code} group={g} />)}
+            {taskGroups.map(g => (
+              <TaskGroupRow
+                key={g.code}
+                group={g}
+                open={openGroup === g.code}
+                onToggle={() => setOpenGroup(o => (o === g.code ? null : g.code))}
+              />
+            ))}
           </div>
         )}
 
@@ -943,7 +966,7 @@ export default function Resources() {
                   className="text-xs shrink-0"
                   style={{ fontFamily: 'JetBrains Mono, monospace', color: 'rgba(32,33,36,0.65)', minWidth: '6rem' }}
                 >
-                  {e.days}d · {e.attendees} pax
+                  {typeof e.days === 'number' ? `${e.days}d` : e.days} · {e.attendees} pax
                 </span>
               </div>
             ))}

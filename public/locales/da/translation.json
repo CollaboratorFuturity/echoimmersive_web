@@ -1,1 +1,699 @@
-{}
+{
+  "home": {
+    "hero": {
+      "badge": "Et Kreativt Europa",
+      "titleLine1": "Immersive",
+      "titleLine2": "Echo",
+      "subtitleLine1": "Vi skaber kollektive immersive oplevelser",
+      "subtitleLine2": "for den europæiske kulturarv"
+    },
+    "scroll": "Rul",
+    "stats": {
+      "partners": "Partnere",
+      "countries": "Lande",
+      "months": "Måneder",
+      "testbeds": "Offentlige testmiljøer"
+    },
+    "missionLabel": "Missionen",
+    "mission": {
+      "p1": "Kulturarv findes, fordi mennesker har brug for den. Den fungerer som en levende forbindelse til stedet, til fællesskabet, til de fortællinger, der forklarer, hvem vi er, og hvordan vi er kommet hertil. Alligevel er den forbindelse ved at briste for millioner af mennesker i hele Europa. De rum og formater, der skal bære disse fortællinger, har simpelthen ikke fulgt med de mennesker, de er ment at skulle tjene.",
+      "p2": "Mindre kulturarvsinstitutioner mærker dette allertydeligst. Uden de store flagskibes ressourcer ser de deres publikum skrumpe, yngre generationer drive bort, og fællesskaber, der aldrig rigtig spejlede sig i deres samlinger, holde op med at dukke op overhovedet. Værktøjerne til at ændre dette findes. Immersive, multisensoriske oplevelser, der omslutter dig med en fortælling i stedet for at præsentere den bag glas, er afprøvede og virkningsfulde. Men de forbliver uden for rækkevidde for de fleste.",
+      "p3": "Immersive ECHO tager udgangspunkt i en anden præmis: at kulturarv er stærkest, når den opleves kollektivt, i fælles rum, af mennesker, der måske ikke selv ville have opsøgt den. Projektets mission er at give kulturinstitutioner i hele Europa de praktiske midler til at bringe mennesker tilbage ind i fortællingen. Deres fortælling."
+    },
+    "quote": "Kulturarv er stærkest, når den opleves kollektivt, i fælles rum, af mennesker, der måske ikke selv ville have opsøgt den.",
+    "stayConnected": "Hold kontakten",
+    "newsletter": {
+      "label": "Nyhedsbrev",
+      "heading": "Hold dig opdateret om Immersive ECHO",
+      "cta": "Tilmeld dig vores nyhedsbrev"
+    }
+  },
+  "about": {
+    "title": "Om Immersive ECHO",
+    "objectiveLabel": "Målet",
+    "objectiveIntro": "Immersive ECHO-projektet har fem strategiske mål, der er udformet til at imødekomme de udfordringer, Europas kulturarvsinstitutioner står over for. Disse mål udgør rygraden i en skalerbar, inkluderende og bæredygtig omstilling af den måde, kulturinstitutioner engagerer publikum på gennem immersiv fortælling.",
+    "objectives": {
+      "o1": {
+        "title": "Udvikle en skalerbar model for immersiv kulturel fortælling",
+        "body": "Vi skaber en overførbar ramme, der hjælper kulturinstitutioner med at tage immersive formater i brug, som er følelsesmæssigt engagerende, teknisk gennemførlige og økonomisk bæredygtige — og understøtter en digital omstilling på tværs af sektoren."
+      },
+      "o2": {
+        "title": "Aktivere inkluderende rum med lav tærskel til samskabelse og innovation",
+        "body": "Vi etablerer eksperimentelle laboratorier, hvor kulturprofessionelle, teknologer og forskellige brugere kan samskabe, lave prototyper og teste immersive formater — og fremmer kapacitetsopbygning og kunstnerisk innovation i hele Europa."
+      },
+      "o3": {
+        "title": "Påvise offentlig værdi og engagement gennem installationer i virkelige omgivelser",
+        "body": "Vi gennemfører immersive oplevelser på både offentlige og institutionelle steder for at vurdere publikumsrækkevidde, følelsesmæssig effekt og driftsmæssig gennemførlighed — og bidrager til nye modeller for publikumsudvikling. Denne dobbelte placering — i både fællesskabsrum og institutionelle rum — sikrer, at immersive formater ikke blot når mennesker uden for kulturarvsstederne, men også leder nyt publikum tilbage ind i kulturinstitutionerne, øger besøgstallet og revitaliserer deres offentlige mission."
+      },
+      "o4": {
+        "title": "Opbygge et fælleseuropæisk netværk for videndeling og kulturel innovation",
+        "body": "Vi styrker det tværsektorielle samarbejde ved at forbinde institutioner, kreative og teknologipartnere og ved at dele frit tilgængelige værktøjer og indsigter, der muliggør langsigtet replikation og politisk tilpasning."
+      },
+      "o5": {
+        "title": "Fremme inklusion, tilgængelighed samt kulturel trivsel og demokrati gennem design",
+        "body": "Vi forankrer inkluderende design og participatoriske metoder i hele projektet for at sikre, at immersive kulturoplevelser afspejler mangfoldigheden i det europæiske samfund og understøtter social sammenhængskraft og tilgængelighed."
+      }
+    },
+    "quote": "Kulturarv er stærkest, når den opleves kollektivt, i fælles rum, af mennesker, der måske ikke selv ville have opsøgt den.",
+    "approachDivider": "Tilgangen",
+    "approach": {
+      "partnersLabel": "Partnere",
+      "offsite": {
+        "title": "Immersivt designteam (off-site)",
+        "desc": "Et transdisciplinært laboratorium, hvor kunstnere, teknologer og kulturarvseksperter sammen udvikler immersive prototyper gennem samskabelsessprints. Hvert koncept testes for tilgængelighed og pakkes i modulære formater, klar til udrulning på et hvilket som helst sted."
+      },
+      "onsite": {
+        "title": "Immersivt designteam (on-site)",
+        "desc": "Viborg Museum som et levende casestudie, der udvikler „Snapsting“ gennem håndtegnet animation og rumlig fortælling. Hvert arbejdsforløb og hver beslutning dokumenteres, så andre institutioner kan følge samme vej."
+      },
+      "testbed": {
+        "title": "Offentligt immersivt testmiljø",
+        "desc": "Le Pavillon åbner de færdige oplevelser for et rigtigt publikum i stor skala, måler engagement og tilgængelighed via AI-understøttet analyse og tester samtidig driftsmodeller for langsigtet bæredygtighed."
+      },
+      "coordination": {
+        "title": "Projektkoordinering",
+        "desc": "Lindholmen Science Park sikrer strategisk tilpasning på tværs af alle partnere, følger milepæle, budgetter og leverancer og håndterer risici samt rapportering til Europa-Kommissionen."
+      },
+      "comms": {
+        "title": "Kommunikation og effekt",
+        "desc": "Futurity Systems omsætter projektets resultater til modulære værktøjskasser og flersproget indhold, opbygger et netværk for kollegial læring og anvender metoder til fremtidsdesign for at tegne langsigtede køreplaner for immersiv kultur."
+      }
+    },
+    "infographic": {
+      "title": "Immersive ECHO — tosporet designmetodologi",
+      "label": "Om:",
+      "caption": "Tosporet design: det eksterne laboratorium og museet on-site mødes i et offentligt testmiljø for at skalere immersive kulturarvsoplevelser."
+    },
+    "factsDivider": "Projektfakta",
+    "fullStructureCta": "Fuld struktur, opgaver og leverancer",
+    "projectDetails": "Projektdetaljer",
+    "details": {
+      "durationLabel": "Varighed",
+      "durationValue": "feb. 2026 – juli 2028",
+      "gaLabel": "GA-nummer",
+      "gaValue": "101255680",
+      "fundingLabel": "Finansiering",
+      "fundingValue": "Et Kreativt Europa, Storskala-samarbejde",
+      "coordinatorLabel": "Koordinator",
+      "coordinatorValue": "Lindholmen Science Park"
+    }
+  },
+  "experiences": {
+    "title": "Oplevelser",
+    "intro": "Vi præsenterer konceptet med offentlige testmiljøer ud fra den behovsdrevne designmetodologi i hele Europa.",
+    "viewActivities": "Se aktiviteter",
+    "backToExperiences": "← Tilbage til Oplevelser",
+    "snapsting": {
+      "badge": "KULTURARVSINSTITUTION",
+      "location": "Viborg, Danmark",
+      "imageAlt": "Viborg Museum",
+      "description": "Viborg Museum er det kulturhistoriske museum for Viborg-området i Danmark og præsenterer regionens kulturarv fra forhistorisk tid til i dag. Inden for ECHO lægger museet hus til den immersive installation og bringer ECHO's tilgang til immersiv fortælling ud til sit publikum."
+    },
+    "pavillon": {
+      "badge": "SKALERING OG TILPASNING",
+      "location": "Namur, Belgien",
+      "imageAlt": "Le Pavillon, Namur",
+      "description": "Le Pavillon er KIKK's knudepunkt for digital kunst og teknologi i Namur, Belgien. Det udruller ECHO's immersive installationer til et bredt publikum og indsamler samtidig data om engagement og tilgængelighed. Over 200 skolesamarbejder årligt."
+    },
+    "snapstingPage": {
+      "title": "Viborg Animation Festival · Aktiviteter",
+      "intro": "Oversigt over testmiljøaktiviteterne på Viborg Animation Festival i Viborg, Danmark.",
+      "note": "Bemærk: beskrivelse af processen fra tidlige briefer, over konceptudvikling, manuskript, animatic osv., til den færdige oplevelse. Museet er den „endelige instruktør“ — udstillingslederen står ved et mixerbord, og de forskellige kanaler, hun kan mixe på, er scenografer, malere, foleykunstnere til rumlyden, AV-oplevelser, genstande, tekst, lys osv."
+    },
+    "pavillonPage": {
+      "title": "Le Pavillon · Aktiviteter",
+      "intro": "Oversigt over testmiljøaktiviteterne i Le Pavillon i Namur, Belgien.",
+      "note": "Bemærk: beskrivelse af processen fra tidlige briefer, over konceptudvikling, manuskript, animatic osv., til den færdige oplevelse. Museet er den „endelige instruktør“."
+    }
+  },
+  "newsletter": {
+    "intro": "Hold dig opdateret om projektet — nye resultater, begivenheder og fund fra hele konsortiet.",
+    "subscribeHeading": "Tilmeld dig",
+    "fields": {
+      "email": {
+        "label": "E-mail",
+        "placeholder": "Indtast din e-mail"
+      },
+      "firstName": {
+        "label": "Fornavn",
+        "placeholder": "Indtast dit fornavn"
+      },
+      "lastName": {
+        "label": "Efternavn",
+        "placeholder": "Indtast dit efternavn"
+      },
+      "organisation": {
+        "label": "Organisation",
+        "placeholder": "Indtast din organisation"
+      },
+      "language": {
+        "label": "Foretrukket sprog",
+        "hint": "Udgaver sendes på dette sprog, når en oversættelse er tilgængelig, ellers på engelsk."
+      }
+    },
+    "consentPrefix": "Jeg accepterer",
+    "privacyPolicy": "privatlivspolitikken",
+    "consentRequired": "Accepter privatlivspolitikken for at tilmelde dig.",
+    "subscribe": "Tilmeld dig",
+    "subscribing": "Tilmelder…",
+    "backToSite": "Tilbage til siden",
+    "success": {
+      "inHeading": "Du er med!",
+      "inBody": "Vi har sendt en velkomstmail til {{email}}. Du hører fra os, når der er noget værd at dele.",
+      "alreadyHeading": "Allerede tilmeldt!",
+      "alreadyBody": "{{email}} er allerede på vores liste. Der kræves ingen handling.",
+      "updatedHeading": "Præferencer opdateret",
+      "updatedBody": "Vi har opdateret dine tilmeldingspræferencer. Der blev ikke sendt nogen ny mail."
+    }
+  },
+  "newsletterEmail": {
+    "unsubscribe": "Afmeld",
+    "footer": "Du modtager denne mail, fordi du har tilmeldt dig Immersive ECHO-nyhedsbrevet."
+  },
+  "underConstruction": {
+    "eyebrow": "Et Kreativt Europa · 2026–2028",
+    "headingLine1": "Noget",
+    "headingLine2": "er på vej.",
+    "subline": "Immersive ECHO er et fælleseuropæisk projekt, der skaber kollektive kulturarvsoplevelser. Denne side lanceres snart.",
+    "euCredit": "Medfinansieret af Den Europæiske Union · Et Kreativt Europa · GA-nr. 101255680"
+  },
+  "resources": {
+    "backToAbout": "← Tilbage til Om",
+    "eyebrow": "Til partnere og bedømmere",
+    "title": "Projektressourcer",
+    "intro": "Referenceindeks over projektets struktur: arbejdspakker, opgaver, milepæle, leverancer og begivenheder. Kilde: tilskudsansøgning CREA-CULT-2025-COOP-3. Beregnet til konsortiepartnere, evaluatorer og bedømmere fra Europa-Kommissionen.",
+    "objectives": "Mål",
+    "partnersLabel": "Partnere",
+    "leadPrefix": "Ansvarlig:",
+    "tasksCount_one": "{{count}} opgave",
+    "tasksCount_other": "{{count}} opgaver",
+    "accessFile": "Åbn fil →",
+    "accessFileAria": "Åbn fil: {{title}}",
+    "pending": "Afventer",
+    "tabs": {
+      "wp": "Arbejdspakker",
+      "tasks": "Opgaver",
+      "milestones": "Milepæle",
+      "deliverables": "Leverancer",
+      "events": "Begivenheder",
+      "media": "Medier / Brand",
+      "presskit": "Pressekit"
+    },
+    "tabSubtitles": {
+      "wp": "Fem sammenhængende arbejdspakker strukturerer projektets 30 måneders gennemførelse.",
+      "tasks": "Opgaver grupperet efter overordnet arbejdspakke. Klik på en gruppe for at folde den ud; klik på en opgave for at læse dens fulde beskrivelse.",
+      "milestones": "Projektets kontrolpunkter sorteret kronologisk efter forfaldsmåned.",
+      "deliverables": "Projektets resultater med type, formidlingsniveau og forfaldsdato.",
+      "events": "Workshops, masterclasses, udstillinger, konferencer og paneldebatter arrangeret af konsortiet.",
+      "media": "Brandressourcer og filer med den visuelle identitet for Immersive ECHO-projektet.",
+      "presskit": "Pressemateriale til journalister og mediepartnere, der dækker Immersive ECHO-projektet."
+    },
+    "wp": {
+      "WP1": {
+        "title": "Projektledelse og koordinering",
+        "short": "Strategisk tilpasning, milepæle, budgetter, risikostyring og kontakt til Europa-Kommissionen på tværs af konsortiet.",
+        "obj": {
+          "0": "Levere strategisk, gennemsigtig og inkluderende koordinering for at sikre, at alle partnere bidrager effektivt til projektets mål.",
+          "1": "Overvåge tidsplaner, leverancer og økonomisk fremdrift for at garantere ansvarlighed og effektiv ressourceudnyttelse.",
+          "2": "Lette klar og løbende kommunikation med Europa-Kommissionen og sikre overholdelse af alle reguleringsmæssige krav og rapporteringskrav.",
+          "3": "Identificere og håndtere risici proaktivt for at sikre leverancen, styrke modstandsdygtigheden og sikre resultater med stor effekt i tråd med CREA's prioriteter."
+        }
+      },
+      "WP2": {
+        "title": "Immersivt designteam (off-site)",
+        "short": "Et transdisciplinært laboratorium, hvor kunstnere, teknologer og kulturarvseksperter sammen udvikler immersive prototyper gennem samskabelsessprints.",
+        "obj": {
+          "0": "Forstå brugernes skiftende behov og de institutionelle realiteter — afgrænse mulighedsområder ud fra brugerundersøgelser, institutionelle mål og samfundsmæssige forandringer.",
+          "1": "Designe og lave prototyper af inkluderende, skalerbare immersive formater — udvikle koncepter, der imødekommer behovene, validere antagelser tidligt og forfine iterativt.",
+          "2": "Integrere et laboratorium med lav tærskel i designprocessen til samskabelse, test og iteration med forskellige målgrupper.",
+          "3": "Evaluere brugeroplevelse, teknisk gennemførlighed og økonomisk bæredygtighed — løbende indsamle feedback for at forfine oplevelserne.",
+          "4": "Lede den endelige forfining og forberedelsen til offentlige testmiljøer — færdiggøre immersive oplevelser, der er følelsesmæssigt vedkommende, teknisk stabile og tilgængelige.",
+          "5": "Benchmarke og udveksle mellem on-site og off-site immersivt design — struktureret udveksling mellem Snapsting og det eksterne laboratoriums processer."
+        }
+      },
+      "WP3": {
+        "title": "Immersivt designteam (on-site)",
+        "short": "Viborg Museum fungerer som et levende casestudie, der udvikler „Snapsting“ gennem håndtegnet animation og rumlig fortælling.",
+        "obj": {
+          "0": "Teste hele livscyklussen for immersiv fortælling i en virkelig museumssammenhæng — konceptudvikling, manuskript, samarbejde, teknologiintegration, produktion og lancering.",
+          "1": "Måle effekten på publikum — indsamle data om følelsesmæssigt engagement, kulturel læring og tilgængelighed.",
+          "2": "Identificere, hvad der virker for små og mellemstore institutioner — dokumentere arbejdsforløb, udfordringer og ressourcebehov.",
+          "3": "Benchmarke og udveksle mellem on-site og off-site immersivt design — se WP2."
+        }
+      },
+      "WP4": {
+        "title": "Offentlige testmiljøer",
+        "short": "Le Pavillon åbner de færdige oplevelser for et rigtigt publikum i stor skala og måler engagement og tilgængelighed via AI-understøttet analyse.",
+        "obj": {
+          "0": "Udrulle en immersiv oplevelse på et offentligt sted med høj tilgængelighed — bygge bro mellem prototyping og virkelighed.",
+          "1": "Evaluere den direkte brugeroplevelse i stor skala — måle følelsesmæssig respons, tilgængelighed, interaktionsmønstre og fastholdelse.",
+          "2": "Teste modtagelses- og afslutningsprocesser — skiltning, guidet ind- og udgang og muligheder for refleksion.",
+          "3": "Validere driftsmæssig og økonomisk bæredygtighed — billetstrategier, driftsopsætninger, bemandingsbehov og tekniske krav.",
+          "4": "Skabe læringsmuligheder for kulturprofessionelle — partnermuseer og kulturarvsorganisationer inviteres til at observere og deltage."
+        }
+      },
+      "WP5": {
+        "title": "Kommunikation, formidling og effekt",
+        "short": "Omsætter projektets resultater til modulære værktøjskasser, flersproget indhold og et netværk for kollegial læring for den europæiske kulturarvssektor.",
+        "obj": {
+          "0": "Kommunikation — strategiske, målrettede tiltag for at fremme projektet og sikre EU-tilskuddets synlighed.",
+          "1": "Formidling — dele projektets resultater med kultursektoren, kulturarvsinstitutioner, EU-organer og den brede offentlighed.",
+          "2": "Udnyttelse — lette brugen af projektets resultater i nye initiativer, markedsføring og samarbejder.",
+          "3": "Forstærke synlighed og engagement — udnytte moderne fortælling og AI-drevet indholdsgenerering i hele Europa.",
+          "4": "Kapacitetsopbygning — udvikle værktøjskasser, lette kollegial læring og tilbyde mentorprogrammer for kulturinstitutioner.",
+          "5": "Fremtidsorienteret design — anvende metoder til fremtidsdesign for at forestille sig overbevisende fremtider for immersiv kultur."
+        }
+      }
+    },
+    "taskGroup": {
+      "T1": { "title": "Projektledelse og koordinering" },
+      "T2": { "title": "Immersivt designteam (off-site)" },
+      "T3": { "title": "Immersivt designteam (on-site)" },
+      "T4": { "title": "Offentlige testmiljøer" },
+      "T5": { "title": "Kommunikation, formidling og effekt" }
+    },
+    "task": {
+      "T1-1": {
+        "title": "Lede den strategiske koordinering",
+        "description": "Sikre et gnidningsfrit samarbejde med partnerne, tilpasse tidsplaner og mål og angive den overordnede retning gennem hele projektets livscyklus."
+      },
+      "T1-2": {
+        "title": "Overvåge fremdrift, risici og budget",
+        "description": "Følge milepæle, leverancer, overholdelse af den grønne tjekliste (Green) og pengestrømme samt håndtere risici proaktivt for at sikre gennemsigtighed og ansvarlighed."
+      },
+      "T1-3": {
+        "title": "Håndtere kommunikation og rapportering",
+        "description": "Lette klar intern kommunikation, udarbejde EU-rapporter og sikre overholdelse af administrative og juridiske forpligtelser. Deltagere: TSC, NPIAT, GPI, YOU, TPL, KIKK, FUT, AIRA, ID20, VIB, VGR, SOFP (BEN); COG, TAW (AP)."
+      },
+      "T2-1": {
+        "title": "Behovsafdækning, research og designfundamenter",
+        "description": "Udforske og definere fundamentet for et mangfoldigt målpublikum ved at identificere behov, institutionelle realiteter, samfundstendenser og tidlig teknisk gennemførlighed. Afklare teknologimodenhed og mulige driftsmæssige udfordringer, før der går videre til prototyping."
+      },
+      "T2-2": {
+        "title": "Samarbejdsdesign og prototyping i laboratorierne",
+        "description": "Omsætte research til hurtige prototyper, der testes direkte i det eksperimentelle laboratorium. Designteamet, museumspartnerne og brugerne samskaber immersive koncepter gennem iterative cyklusser af design, test og forbedring."
+      },
+      "T2-3": {
+        "title": "Sprints for inkluderende design",
+        "description": "Gennemføre fire fokuserede sprints for at integrere forskellige perspektiver: 1) Ungdomssprint — digital kompetence og nysgerrighed; 2) Neurodivergent sprint — sensorisk balance og ikke-lineært engagement; 3) Ældresprint — navigation, tempo og tilgængelighed; 4) Sprint for marginaliserede grupper — forstærke stemmer, der ofte udelukkes fra almindeligt design. Hvert sprint former centrale aspekter af fortælling, interaktion og oplevelsesforløb."
+      },
+      "T2-4": {
+        "title": "Design for skalerbarhed og overførbarhed",
+        "description": "Anvende designprincipper, værktøjer og arbejdsforløb, der understøtter immersive oplevelsers skalerbarhed og overførbarhed på tværs af forskellige kultursteder. Omfatter modulære designtilgange, tilpasningsdygtige fortællestrukturer og fleksible opsætninger til store og små institutioner."
+      },
+      "T2-5": {
+        "title": "Virtuel adgang til det eksperimentelle laboratorium",
+        "description": "Udnytte modulært design og digital tvilling-teknologi for at gøre oplevelsen tilgængelig for bred, paneuropæisk test. Virtuelle miljøer gengiver de fysiske installationer, så forskellige målgrupper kan deltage og give feedback på afstand."
+      },
+      "T2-6": {
+        "title": "Endeligt oplevelsesdesign til offentlige testmiljøer",
+        "description": "Tilpasse og færdiggøre de immersive oplevelser til offentlige steder og sikre, at de er klar til brugerinteraktion i stor skala. Det endelige design omfatter følelsesmæssig fortælling, robuste tekniske opsætninger, tilgængelighedsforløb og bæredygtige driftsmodeller. Underleverancer: S1.1, S1.2."
+      },
+      "T2-7": {
+        "title": "Syntese af eksperimentelle indsigter",
+        "description": "Analysere indsigter fra laboratorieaktiviteter, offentlige testmiljøer, brugerfeedback og teknisk validering. Anvende AI-understøttede værktøjer til at syntetisere resultater fra både kontrollerede og virkelige miljøer til konkrete forbedringer af den endelige levering af oplevelsen."
+      },
+      "T3-1": {
+        "title": "Integration i ECHO's videnstrøm",
+        "description": "Dele resultater løbende med hele konsortiet. Koordinere med WP2 og projektledelsen for at sikre, at indsigter fra design, test og implementering overføres i realtid. Underleverancer: S2.1, S2.2, S2.3."
+      },
+      "T3-2": {
+        "title": "Fuldskalaproduktion af Snapsting-oplevelsen",
+        "description": "Udvikle den immersive fortælleoplevelse fra bunden. Omfatter konceptdefinition, animatic, manuskriptskrivning, produktion (animation, baggrunde, lyddesign og komposition), AV- og teknologiintegration, rumligt og sensorisk design, test og installation. Underleverancer: S2.1–S2.4."
+      },
+      "T3-3": {
+        "title": "Publikumstest og evaluering",
+        "description": "Gennemføre en struktureret evaluering af oplevelsen efter lancering. Indsamle kvalitativ og kvantitativ feedback om brugervenlighed, engagement, tilgængelighed og følelsesmæssig/uddannelsesmæssig effekt. Underleverancer: S2.1."
+      },
+      "T3-4": {
+        "title": "Tilpasning til udrulning hos KIKK (Le Pavillon)",
+        "description": "Forberede Snapsting-oplevelsen til implementering i Le Pavillon som en del af WP4's offentlige testmiljøaktiviteter. Sikrer samarbejde på tværs af arbejdspakker og forbedringer baseret på publikumsfeedback fra WP4. Underleverancer: S2.1–S2.4."
+      },
+      "T4-1": {
+        "title": "Forberedelse til offentlig udrulning",
+        "description": "Koordinere det tekniske, metodiske og kommunikative grundarbejde, der kræves for en vellykket offentlig udrulning. Omfatter testmetoder, strategier for publikumsmodtagelse, protokoller for dataindsamling, planlægning af installationen på stedet, modtagelse af besøgende, tilgængelighedshensyn og kommunikationsstrømme."
+      },
+      "T4-2": {
+        "title": "Udvikling af forretningsmodel for bæredygtig udrulning",
+        "description": "Samudvikle en bæredygtig forretningsmodel for de immersive oplevelser, tilpasset de socioøkonomiske sammenhænge på udrulningsstederne og ECHO-konsortiets strategiske mål. Resultaterne vil understøtte den langsigtede bæredygtighed ud over projektperioden."
+      },
+      "T4-3": {
+        "title": "Offentlig udrulning og drift",
+        "description": "Udrulle de færdige immersive oplevelser i Le Pavillon med fuld teknisk og narrativ integration, herunder uddannelse af lokalt personale, vedligeholdelse, pop up-butik og medierede aktiviteter for at sikre besøgsoplevelser af høj kvalitet."
+      },
+      "T4-4": {
+        "title": "Offentlig lancering på KIKK-festivalen (okt. 2027)",
+        "description": "Igangsætte den offentlige udrulning af den immersive oplevelse med en lancering med høj synlighed på KIKK-festivalen 2027. Omfatter et dedikeret panel med medlemmer af ECHO-konsortiet, der placerer projektet i en bredere kulturel og innovationsmæssig sammenhæng."
+      },
+      "T4-5": {
+        "title": "Analyse af publikum og besøgsrejse",
+        "description": "Indsamle kvantitative data (strømme, opholdstid, konvertering, adgangsbehov) og kvalitative data (spørgeskemaer, interviews, observation) med AI-understøttede dashboards; føre indsigter tilbage til WP2 og WP5."
+      },
+      "T4-6": {
+        "title": "Evaluere forretningsmodeller og drift",
+        "description": "Teste driftsmodeller, bemandingsbehov, omkostningsstrukturer og scenarier for indtægtsdeling og syntetisere et „business blueprint“ til fremtidige aftagere for at vurdere den økonomiske og organisatoriske bæredygtighed ved at skalere immersive formater."
+      },
+      "T5-1": {
+        "title": "Implementere projektets interne kommunikation",
+        "description": "Etablere interne kommunikationsværktøjer og -skabeloner til at understøtte koordineringen, sikre overholdelse af EU-standarder og muliggøre effektiv dokumentdeling. Lancere et KPI-dashboard, der følger fremdriften på tværs af deltagere og institutioner."
+      },
+      "T5-2": {
+        "title": "Etik og evaluering af AI-kommunikation",
+        "description": "Afholde workshops om AI-etik for konsortiemedlemmer og kulturinstitutioner. Bestille en ekstern evaluering af WP5's brug af AI i indholdsgenerering, tilgængelighed og værktøjer til publikumsinteraktion. Integrere resultaterne i midtvejs- og slutrapporten."
+      },
+      "T5-3": {
+        "title": "Netværk mellem projekter og fællesskabsopbygning",
+        "description": "Lette en struktureret udveksling med andre EU-finansierede projekter gennem fælles workshops, paneldebatter og tematiske møder. Opbygger et „praksisfællesskab“ om immersive kulturoplevelser og fremmer et netværk af fælles interesser på tværs af konsortier."
+      },
+      "T5-4": {
+        "title": "Videnoverførsel og kapacitetsopbygning",
+        "description": "Omsætte projektets resultater til praktiske formater: åbne værktøjskasser, skabeloner, workshops, paneldebatter og masterclasses på konferencer samt introduktionsguider. AI-værktøjer understøtter tilpasning af indhold til forskellige institutioner afhængigt af størrelse, publikumstype og digital modenhed."
+      },
+      "T5-5": {
+        "title": "Participatoriske fremtider og fremtidsskabelse",
+        "description": "Lede månedlige Futuremaking-workshops, der frembringer scenarier, spekulative designartefakter og et Futuremakers Toolkit (digitalt + fysisk). Samskabe 5D TimeMap — en digital platform, der forbinder rum, tid og kulturelle lag."
+      },
+      "T5-6": {
+        "title": "Værktøjer til publikumsinteraktion og udadrettet arbejde",
+        "description": "Udrulle Outreach-platformen til åben interaktion mellem publikum og konsortiet. Udvikle og pilotteste Timetravel Companion — et samtalebaseret AI-værktøj, der styrker publikums engagement med de immersive installationer."
+      },
+      "T5-7": {
+        "title": "Fremtidsdesign og langsigtet visionering",
+        "description": "Med metoder ledet af Futurity Systems samskabe en fremtidsvision for immersiv kulturel innovation. AI-genererede scenariooplæg og klyngedannelse af indsigter hjælper med at identificere nye tendenser, samfundsbehov og muligheder på systemniveau — og tegner en europæisk køreplan for immersiv kultur."
+      }
+    },
+    "ms": {
+      "MS1-1": { "title": "Tilpasning af konsortiet og opstart", "description": "Alle partnere tilpasset omkring mål, metoder, roller og rapportering ved projektets start." },
+      "MS2-1": { "title": "Behovsdrevet designramme etableret", "description": "En strategisk designbrief baseret på brugerrejser, behov, adfærd, institutionelle input og samfundstendenser." },
+      "MS3-1": { "title": "Koncept- og narrativudvikling færdiggjort", "description": "Kernekoncept, narrativ, fuldt manuskript og storyboard for Snapsting færdiggjort gennem en iterativ proces." },
+      "MS5-1": { "title": "Udvekslingsnetværk mellem projekter etableret", "description": "Samarbejdsnetværk med andre EU-finansierede projekter formelt igangsat." },
+      "MS2-2": { "title": "Laboratorium i drift og første prototyper testet", "description": "Eksperimentelt laboratorium fuldt i drift; første immersive prototyper testet og gennemgået." },
+      "MS2-3": { "title": "Serie af sprints for inkluderende design afsluttet", "description": "Alle fire inkluderende samskabelsessprints afsluttet; resultater integreret i designiterationerne." },
+      "MS3-2": { "title": "Endelig produktion afsluttet", "description": "Alle elementer af Snapsting færdiggjort, herunder indhold, teknologi og rumligt design." },
+      "MS3-3": { "title": "Oplevelse installeret og i drift", "description": "Snapsting fuldt installeret og i drift på stedet i Viborg Museum." },
+      "MS3-4": { "title": "Konsortiemøde og paneldebat", "description": "Alle konsortiepartnere mødes i Viborg, med en paneldebat på Animation Festival." },
+      "MS1-2": { "title": "Midtvejsgennemgang af koordinering", "description": "Gennemgang af fremdrift, risici, samarbejdskvalitet og ressourceforbrug på halvvejspunktet." },
+      "MS5-2": { "title": "Midtvejsgennemgang af effekt afsluttet", "description": "Gennemgang på halvvejspunktet, der evaluerer kommunikation, videnoverførsel, inddragelse af interessenter og formidlingens rækkevidde." },
+      "MS4-1": { "title": "Udrulningsramme og forretningsmodel defineret", "description": "Strategier for offentlig udrulning etableret sammen med en bæredygtig forretningsmodel, der er samudviklet med partnerne." },
+      "MS2-4": { "title": "Prototypedesign itereret og endelige koncepter klar", "description": "Prototyper videreudviklet på baggrund af test; endelige immersive oplevelser godkendt til offentlig udrulning." },
+      "MS4-2": { "title": "Installation af offentligt testmiljø åbnet", "description": "Første sted fuldt indrettet, showstyring valideret; dørene åbnet for publikum (KIKK-festival, okt. 2027)." },
+      "MS4-3": { "title": "Analysedashboard på tværs af steder live", "description": "Et centralt dashboard, der i realtid samler besøgsstrømme, engagement og tilgængelighedsdata, går i drift." },
+      "MS3-5": { "title": "Snapsting tilpasset til udrulning i Le Pavillon", "description": "Snapsting tilpasset Le Pavillon, med justeringer af narrativ, teknisk opsætning og rumligt design." },
+      "MS5-3": { "title": "Ressourcer til kapacitetsopbygning færdiggjort", "description": "Open Learning Toolkit, How-to ECHO-guide, 5D TimeMap og Futuremakers Toolkits færdiggjort og distribueret." },
+      "MS5-4": { "title": "Endelig formidling af effekt", "description": "Afsluttende fremtidsdesignrapport, der opsummerer resultaterne af den strategiske fremsyn og de langsigtede veje." },
+      "MS4-4": { "title": "Driftsmæssig og forretningsmæssig gennemførlighed rapporteret", "description": "Omkostninger, bemanding og logistik analyseret for at understøtte fremtidig udbredelse og opskalering." },
+      "MS1-3": { "title": "Endelig koordineringsopsummering", "description": "Strategisk afrunding af projektleverancen, herunder vigtige erfaringer om koordinering og beslutningstagning." }
+    },
+    "d": {
+      "D1-1": { "title": "Håndbog i projektledelse", "description": "[ENG] En praktisk guide, der skitserer visionen, tilpasset interne koordineringsværktøjer, rapporteringsstruktur, partnernes ansvar og fælles arbejdsforløb. Indeholder skabeloner og tjeklister." },
+      "D1-2": { "title": "Midtvejsrapport om koordinering og risici", "description": "[ENG] Evaluering af fremdrift, koordineringskvalitet, risikostatus og partnernes selvevalueringer. Indeholder anbefalinger til forbedring." },
+      "D2-1": { "title": "Behovsdrevet immersiv designbrief", "description": "[ENG] En klar strategisk guide baseret på brugerindsigter, institutionelle behov og samfundsmæssige forandringer — der definerer designudfordringer, brugerpersonaer, følelsesmæssige mål og tekniske antagelser." },
+      "D2-2": { "title": "Endelige designs af den immersive oplevelse", "description": "[Sprog endnu ikke fastlagt] Komplette pakker til den immersive oplevelse til offentlig udrulning, herunder narrativer, rumlige og interaktionsdesigns, tekniske opsætninger, modtagelses-/afslutningsguider og tilgængelighedsløsninger." },
+      "D2-3": { "title": "Endelig evaluering af den immersive oplevelse", "description": "[ENG] Omfattende evaluering af brugeroplevelse, teknisk gennemførlighed og økonomisk bæredygtighed. Indeholder analyse af følelsesmæssig effekt, gennemgang af tilgængelighed, præstationstest af systemet og kontroller af driftsmæssig bæredygtighed." },
+      "D3-1": { "title": "Immersiv Snapsting-oplevelse og dokumentation", "description": "[DANSK & ENG] Den færdige immersive oplevelse, installeret og i drift i Viborg Museum. Indeholder installationstegninger, filer til interaktionsdesign og dokumentation til genbrug eller tilpasning." },
+      "D3-2": { "title": "Tilpasset Snapsting-oplevelsespakke til Le Pavillon", "description": "[ENG] Tilpasset version af den immersive Snapsting-oplevelse, skræddersyet til udrulning i Le Pavillon. Indeholder opdateret narrativ, interaktions- og rumligt design, teknisk opsætning og driftsretningslinjer." },
+      "D3-3": { "title": "Rapport om den immersive produktionsproces", "description": "[ENG] En praktisk gennemgang af produktionsprocessen på stedet. Indeholder narrativudvikling, tekniske beslutninger, samarbejdsmodellen og de kulturelle udfordringer, der blev mødt — tænkt som reference for andre institutioner." },
+      "D4-1": { "title": "Rapport om driftsmæssig udrulning", "description": "[ENG] Trin-for-trin-dokumentation af udrulningen af det offentlige testmiljø, herunder publikumslogistik, rumlig opsætning og noter om teknisk tilpasning." },
+      "D4-2": { "title": "Opsummering af brugeroplevelse og forretningsmodel", "description": "[ENG] Evaluering af publikumsengagement, modtagelses-/afslutningsforløb og gennemførligheden af de forretningsmodeller, der blev testet på stedet." },
+      "D5-1": { "title": "Kommunikations- og formidlingsplan", "description": "[ENG] En integreret kommunikationsstrategi og -plan for at dele resultaterne bredt. AI-værktøjer omdanner projektdata til artikler, opslag, casestudier og mikroindhold skræddersyet til forskellige europæiske målgrupper. Generering i overensstemmelse med EU's politik om AI, privatliv og teknologietik." },
+      "D5-2": { "title": "Projektdashboard", "description": "Et websted med et digitalt realtidsdashboard, der følger og visualiserer KPI'er på flere niveauer: individuelle deltageres bidrag, intra-institutionelle arbejdsforløb, interinstitutionelt samarbejde, score for borgerengagement og bredere samfundsmæssig effekt. Offentlig sektion + private områder for institutioner, beslutningstagere og interessenter." },
+      "D5-3": { "title": "Midtvejsrapport om effekt og formidling", "description": "Omfattende gennemgang af projektets effekt, formidlingsaktiviteter og kommunikationsresultater på halvvejspunktet. Evaluerer engagementsmålinger, institutionel udbredelse, effektiviteten af videnoverførsel og tværsektorielt samarbejde." },
+      "D5-4": { "title": "Futuremakers Toolkit", "description": "En hybrid (fysisk og digital) værktøjskasse med participatoriske teknikker, materialer og guidede aktiviteter, der lærer kulturprofessionelle at forestille sig mere inkluderende og modstandsdygtige fremtider. Leveres på 10 EU-sprog. Fysisk: arbejdsbøger, kortsæt, holdbare spillebrikker af bæredygtige materialer. Digitalt: medieindhold + et interaktivt whiteboard til flere brugere." },
+      "D5-5": { "title": "Outreach-platform", "description": "En AI-forstærket platform til friktionsfri tovejskommunikation mellem projekt, institutioner og publikum. Indeholder et operationelt KPI-dashboard i realtid. Platform på engelsk; AI-agenter og indhold på 10 EU-sprog. Indeholder AI-agentpersonaer (museumsguide, historisk figur, fiktiv maskot) og et værktøj, hvormed institutioner kan oprette deres egne." },
+      "D5-6": { "title": "5D TimeMap over kulturarvssteder", "description": "Et interaktivt digitalt kort, der forbinder kulturarvssteder i hele Europa med deres respektive institutioner, beriget med fem dimensioner: rumlig, tidsmæssig og tre tematiske lag (kunstnerisk, politisk, sprogligt). Tilgængeligt på stedet, på computere og på mobil på 10 EU-sprog." },
+      "D5-7": { "title": "Prototype af Timetravel Companion", "description": "En funktionel prototype af Timetravel Companion — en AI-drevet guide, der beriger museumsbesøg og immersive installationer gennem stemmeinteraktion, kontekstuel fortælling og valgfrit holografisk indhold. Indeholder app-grænseflade, indholdsmoduler, dokumentation af brugertest og evaluering af tilgængelighed på 10 EU-sprog. Der bygges 100 specialbyggede open source-enheder til installationerne." },
+      "D5-8": { "title": "Open Learning Toolkit og How-to ECHO-guide", "description": "En pakke med information, instruktioner og værktøjer, der gør det muligt for nye kulturinstitutioner at implementere ECHO-værktøjskassen fra ende til anden. Modulære, brugsklare ressourcer bygget på resultaterne fra WP2–WP4, på 10 EU-sprog." },
+      "D5-9": { "title": "Rapport om netværk mellem projekter", "description": "Omfattende rapport, der dokumenterer netværksaktiviteterne mellem projekter, herunder møder, fælles begivenheder, vigtige resultater og forslag til løbende udveksling." },
+      "D5-10": { "title": "Afsluttende fremtidsdesignrapport", "description": "En digital platform, der viser projektets resultater og dets langsigtede potentiale. AI-drevne medieværktøjer personaliserer indhold for deltagerne og oversætter projektets erfaringer til delbare formater på 10 EU-sprog." }
+    },
+    "dStatus": {
+      "D5-2": "Du er her!"
+    },
+    "event": {
+      "E1": { "name": "Ungdomssprint: Future Worlds Builder", "type": "Brugercentreret sprint" },
+      "E2": { "name": "Neurodivergent sprint: ikke-lineær navigation", "type": "Brugercentreret sprint" },
+      "E3": { "name": "Den immersive Snapsting-oplevelse", "type": "Udstilling" },
+      "E4": { "name": "Echoes of the Future: at forbinde kulturarv og immersiv innovation", "type": "Konference" },
+      "E5": { "name": "Immersive ECHO: kulturarv for fremtiden", "type": "Paneldebat" },
+      "E6": { "name": "Immersive ECHO", "type": "Udstilling" },
+      "E7": { "name": "Spekulativ prototyping", "type": "Workshop" },
+      "E8": { "name": "Sensorisk kortlægning og interaktion", "type": "Workshop" },
+      "E9": { "name": "Ældresprint: kropslig og digital navigation", "type": "Brugercentreret sprint" },
+      "E10": { "name": "Sprint for marginaliserede grupper", "type": "Brugercentreret sprint" },
+      "E11": { "name": "Workshops om digital tvilling og fjerntest", "type": "Brugertest" },
+      "E12": { "name": "Design for skalerbarhed og turnéparathed", "type": "Workshop" },
+      "E13": { "name": "Teknologi og innovation til immersiv fortælling", "type": "Masterclass" },
+      "E14": { "name": "Kreativ ledelse og animationspipeline til kulturelle narrativer", "type": "Masterclass" },
+      "E15": { "name": "Tværfagligt samarbejde om kulturarvsinnovation", "type": "Masterclass" },
+      "E16": { "name": "Sensorer og følelser", "type": "Workshop" },
+      "E17": { "name": "Bliv oplevelsesdesigner", "type": "Workshop" },
+      "E18": { "name": "Immersive ECHO: at forbinde kulturarv og immersive oplevelser", "type": "Masterclass" },
+      "E19": { "name": "Månedlige Futuremaking-sessioner", "type": "Workshops" },
+      "E20": { "name": "AI, etik og kulturelle fremtider: ansvarlig innovation i immersiv kulturarv", "type": "Workshop" },
+      "E21": { "name": "Udveksling mellem projekter", "type": "Workshops" }
+    }
+  },
+  "news": {
+    "title": "Nyheder, begivenheder og aktiviteter",
+    "latestUpdates": "Seneste opdateringer",
+    "readMore": "Læs mere →",
+    "empty": "Endnu ingen poster i denne kategori.",
+    "eventGalleries": "Begivenhedsgallerier",
+    "backToNews": "← Tilbage til Nyheder",
+    "photos": "{{count}} billeder",
+    "filters": {
+      "All": "Alle",
+      "News": "Nyheder",
+      "Events": "Begivenheder",
+      "Press": "Presse"
+    },
+    "galleries": {
+      "launch": "Lancering (Namur)"
+    },
+    "articles": {
+      "newsletter1": {
+        "title": "Vi præsenterer ECHO — Nyhedsbrev nr. 1",
+        "subtitle": "Hvordan immersivt design ændrer den måde, vi oplever historie på"
+      },
+      "launch": {
+        "title": "Immersive ECHO-projektet er officielt lanceret",
+        "subtitle": "Over 40 europæiske kreative i verdensklasse mødtes i Namur for at skyde ECHO Immersive-projektet i gang"
+      }
+    },
+    "launch": {
+      "title": "Immersive ECHO-projektet er officielt lanceret",
+      "lead": "Over 40 europæiske kreative i verdensklasse mødtes i Namur for at skyde ECHO Immersive-projektet i gang.",
+      "teamAlt": "ECHO Immersive-teamet i Namur",
+      "p1": "Immersive ECHO blev officielt lanceret i februar 2026 med et flerdages opstartsmøde i Le Pavillon i Namur, Belgien, det sted, der skal lægge hus til projektets offentlige testmiljø. Delegationer fra alle konsortiepartnere mødtes fysisk for første gang og samlede museumsfagfolk, immersive designere, udviklere, forskere og strateger fra ti lande. Mødet blev koordineret af projektteamet hos Lindholmen Science Park, ledet af projektleder Ismaila Jallow og koordinator Katrin Amberntsson, med støtte fra KIKK's og Le Pavillons teams på stedet.",
+      "p2": "Dagene kombinerede strukturerede workshops med åben udforskning. Teamene arbejdede med grundlæggende spørgsmål om, hvordan mennesker bevæger sig gennem rum, hvad der fanger opmærksomheden, og hvordan fortælling og interaktion hjælper publikum med at skabe mening. I stedet for at starte med teknologien kredsede samtalerne om fortælling, perception og de særlige krav, kulturelle rum stiller. Deltagerne gik derfra med en fælles fornemmelse af, hvordan de næste to et halvt år kommer til at se ud, og med den slags tillid, der kun opstår, når nysgerrige mennesker tilbringer rigtig tid sammen. De endelige immersive oplevelser, der udvikles i projektet, vender tilbage til Le Pavillon til offentlig udrulning i oktober 2027.",
+      "galleryHeading": "Galleri"
+    }
+  },
+  "contact": {
+    "title": "Kontakt os",
+    "getInTouch": "Kom i kontakt",
+    "intro": "Kontakt koordinatorteamet hos Lindholmen Science Park ved generelle henvendelser, presseinformation eller spørgsmål om partnerskab.",
+    "coordinatorHeading": "Koordinator",
+    "coordinatorLocation": "Göteborg, Sverige",
+    "stayInTouch": "Hold kontakten",
+    "requiredNote": "Felter markeret med * er obligatoriske.",
+    "labels": {
+      "name": "Navn",
+      "email": "E-mail",
+      "organisation": "Organisation",
+      "subject": "Emne",
+      "message": "Besked"
+    },
+    "send": "Send besked",
+    "sending": "Sender…",
+    "success": {
+      "heading": "Besked sendt!",
+      "body": "Vi vender tilbage inden for 5 hverdage. Tjek din indbakke for en bekræftelse.",
+      "again": "Send en ny besked"
+    },
+    "errors": {
+      "generic": "Noget gik galt. Prøv igen.",
+      "network": "Kunne ikke nå serveren. Tjek din forbindelse."
+    },
+    "newsletterPrompt": "Vil du holde dig opdateret om Immersive ECHO?"
+  },
+  "faq": {
+    "title": "Ofte stillede spørgsmål",
+    "items": {
+      "q1": {
+        "question": "Hvad er Immersive ECHO?",
+        "answer": "Immersive ECHO er et fælleseuropæisk projekt, der bringer mennesker tættere på deres fælles kulturarv gennem immersiv fortælling. Over 30 måneder (februar 2026 – juli 2028) udvikler 15 partnere i 10 lande en praktisk model, der gør det muligt for kulturinstitutioner at forvandle hverdagens offentlige rum til følelsesmæssige, kollektive oplevelser — med projektion, rumlig lyd og sensorteknologi i stedet for VR-briller. Fokus er på at gøre immersiv fortælling tilgængelig for små og mellemstore institutioner, der i dag mangler budgettet og ekspertisen til at skabe den."
+      },
+      "q2": {
+        "question": "Hvorfor er dette projekt nødvendigt?",
+        "answer": "De fleste kulturarvsinstitutioner mangler budget, ekspertise og teknisk kapacitet til at skabe immersive oplevelser. Storstilede produktioner er typisk forbeholdt velfinansierede museer og kommercielle steder. Samtidig forventer publikum i stigende grad engagerende, multisensoriske møder med kultur. Immersive ECHO imødekommer dette hul med en praktisk, overførbar model — afprøvet i virkelige rammer, ærligt dokumenteret og udformet, så et lokalt museum med begrænsede ressourcer kan fortælle sine historier på måder, der er følelsesmæssigt engagerende og økonomisk bæredygtige."
+      },
+      "q3": {
+        "question": "Hvad adskiller Immersive ECHO fra andre immersive projekter?",
+        "answer": "Fem ting adskiller os. Vi fokuserer på små og mellemstore institutioner — ikke storstilede flagskibe. Vores tilgang er brillefri: projektion, rumlig lyd og sensorer forvandler eksisterende offentlige rum. Inklusion er indbygget i designprocessen fra begyndelsen, med dedikerede sprints for unge, neurodivergent publikum, ældre og marginaliserede grupper. Vi dokumenterer hele processen — inklusive det, der ikke fungerer — og producerer åbne værktøjskasser, så andre kan replikere tilgangen på egen hånd. Og konsortiet i sig selv er enestående: verdensførende designere, forskere, kulturarvsinstitutioner af forskellig størrelse og teknologer, der arbejder side om side."
+      },
+      "q4": {
+        "question": "Hvorfor „immersiv“ uden VR-briller?",
+        "answer": "VR-briller skaber barrierer: omkostninger, tilgængelighed, ubehag og individuel isolation. De er også svære at skalere — én brille betjener én person ad gangen. Vores tilgang bruger rumlig lyd, projektioner og miljøsensorer til at forvandle fælles offentlige rum til immersive fortællemiljøer. En enkelt stedbunden installation når et stort publikum samtidig, kræver mindre specialiseret udstyr og er lettere for institutioner at drive og vedligeholde. Resultatet er kollektivt, kropsligt og med lav tærskel — og det giver økonomisk mening for de steder, der lægger hus til det."
+      },
+      "q5": {
+        "question": "Hvad vil en besøgende rent faktisk opleve?",
+        "answer": "Stedbunden, multisensorisk fortælling, der bruger projektion, rumlig lyd og interaktion med omgivelserne til at bringe kulturarv til live i fælles offentlige rum. Mens du bevæger dig gennem et sted, reagerer projicerede billeder og lyd på din tilstedeværelse og skaber en fortælling, der folder sig ud omkring dig. Målet er ikke passiv informationsoverførsel, men aktive møder med historien — åbne, deltagende og udformet, så hver besøgende skaber sin egen rejse gennem fortællingen. Du mærker det, før du tænker over det."
+      },
+      "q6": {
+        "question": "Hvad er Snapsting?",
+        "answer": "Snapsting er den karakteristiske on-site-produktion, der udvikles af Viborg Museum i Danmark. Den udforsker Viborgs tusindårige identitet som sted for kongelig, religiøs og juridisk magt — og bringer den historie til live gennem musik, poetisk animation og stemningsfulde omgivelser. Oplevelsen er ikke-lineær: de besøgende følger deres egen nysgerrighed gennem fortællingen. Ud over selve oplevelsen dokumenteres hele produktionsprocessen som en overførbar metodologi — en håndbog for andre kulturarvsinstitutioner, der planlægger deres eget immersive arbejde. Snapsting har offentlig premiere i november 2026."
+      },
+      "q7": {
+        "question": "Hvad er Le Pavillon og KIKK-festivalen?",
+        "answer": "Le Pavillon er et sted i Namur, Belgien, drevet af KIKK — og fungerer som projektets offentlige testmiljø. Det er her, immersive oplevelser for første gang møder et rigtigt, mangfoldigt publikum i stor skala. Vi tester hele besøgsrejsen: følelsesmæssig respons, interaktionsmønstre, tilgængelighed, modtagelse og hvorvidt oplevelsen skaber muligheder for refleksion, efter folk er gået. Den offentlige premiere er planlagt til KIKK-festivalen i oktober 2027 — en af Europas førende festivaler for digital og kreativ kultur, der tiltrækker tusindvis af besøgende hvert år."
+      },
+      "q8": {
+        "question": "Hvad betyder „inklusion fra designet“ i praksis?",
+        "answer": "Det betyder, at tilgængelighed og et mangfoldigt publikums behov er indbygget i designprocessen fra starten — ikke tilføjet til sidst. Projektet omfatter fire dedikerede sprints for inkluderende design, hver med fokus på et bestemt publikum: unge, neurodivergente personer, ældre og marginaliserede fællesskaber. Rigtige brugere former arbejdet fra de tidligste faser. Inklusion handler også om følelsesmæssig genkendelse — at skabe oplevelser, hvor mennesker ser sig selv spejlet i fortællingerne, hvor historien føles som noget, der tilhører dem."
+      },
+      "q9": {
+        "question": "Hvem står bag Immersive ECHO?",
+        "answer": "Et konsortium af 15 organisationer fra 10 europæiske lande, koordineret af Lindholmen Science Park i Göteborg, Sverige. Blandt partnerne er studier for immersivt design, kulturarvsinstitutioner, forskningslaboratorier, teknologivirksomheder og kommunikationsspecialister fra Sverige, Tyskland, Frankrig, Finland, Rumænien, Danmark, Belgien, Ukraine, Spanien og Slovenien. Blandt de associerede partnere er Göteborg Kommune og The Animation Workshop i Danmark. Projektet opnåede en EU-evalueringsscore på 92/100."
+      },
+      "q10": {
+        "question": "Er Ukraine en del af projektet?",
+        "answer": "Ja. Sofijivka-parken i Uman, Ukraine, er en fuldgyldig konsortiepartner. På grund af den igangværende russiske invasion kan fysisk prototyping ikke finde sted i Ukraine. I stedet bidrager Sofijivka-parken med kulturarvsdata, historisk materiale og et uvurderligt perspektiv på kulturarv i konfliktzoner. Deres deltagelse er en påmindelse om, hvorfor kulturbevaring er vigtig — og hvorfor den er presserende. Konsortiet arbejder aktivt med de driftsmæssige udfordringer, deres situation skaber."
+      },
+      "q11": {
+        "question": "Hvordan finansieres projektet?",
+        "answer": "Immersive ECHO er medfinansieret af Den Europæiske Union under programmet Et Kreativt Europa, indsatsområdet Storskala-samarbejde. Det samlede budget er cirka 3,3 millioner euro, hvoraf EU finansierer 60 % (1.999.019 €). De resterende 40 % er medfinansiering fra konsortiepartnerne. Under engangsbeløbsmodellen betaler EU for resultater — ikke for faste omkostninger. Betalingsplanen er 40 % ved projektstart, 40 % ved midtvejsrapporten (måned 15) og 20 % ved slutrapporten."
+      },
+      "q12": {
+        "question": "Hvad vil projektet frembringe?",
+        "answer": "Resultater på tre niveauer. Konkrete oplevelser: afprøvede immersive installationer på Viborg Museum og Le Pavillon, designet til turné og tilpasning. Åben viden: et Open Learning Toolkit med trinvise vejledninger, et Futuremakers Toolkit til participatorisk fremtidstænkning, dokumentation af produktionsprocessen og en Outreach-platform til det bredere kulturarvsfællesskab. Strukturel kapacitet: et Business Blueprint, der validerer, hvad der fungerer driftsmæssigt og økonomisk, samt en afsluttende fremtidsdesignrapport med politiske anbefalinger og institutionelle køreplaner for sektoren efter 2028."
+      },
+      "q13": {
+        "question": "Hvad sker der, når projektet slutter i 2028?",
+        "answer": "Bæredygtighed er integreret i designprocessen fra starten — ikke behandlet som en eftertanke. Den tekniske arkitektur er bygget op omkring modularitet: indhold kan turnere mellem steder, digitale tvillinger gør det muligt at planlægge nye steder på afstand, og parametrisk design reducerer den indsats, der kræves for at tilpasse installationer. Viborg Museum har til hensigt at fortsætte med at drive Snapsting som en permanent installation. Al frembragt immaterialret stilles frit til rådighed for tilpasning, genbrug og kommerciel udvikling. Ambitionen er at efterlade metoder, værktøjer og afprøvede modeller, der fortsat skaber værdi i hele sektoren."
+      },
+      "q14": {
+        "question": "Hvordan kan andre kulturarvsinstitutioner blive involveret?",
+        "answer": "På flere konkrete måder. ECHOSYSTEM-platformen vil omfatte en offentlig portal, hvor kulturprofessionelle kan få adgang til udkast til værktøjskasser, deltage i fora for kollegial udveksling og tilmelde sig begivenheder. Månedlige Futuremaking-workshops i partnerbyerne er åbne for eksterne fagfolk. Tre online masterclasses dækker tekniske pipelines, kreativ ledelse og tværfagligt samarbejde. De offentlige testmiljøer i Le Pavillon og Viborg Museum fungerer som levende læringsmiljøer. Alle værktøjskasser og undervisningsmaterialer vil være frit tilgængelige på alle ti partnersprog. Følg projektet under #ImmersiveECHO, eller tilmeld dig nyhedsbrevet."
+      }
+    }
+  },
+  "partners": {
+    "title": "Konsortiet",
+    "coordinator": "Projektkoordinator",
+    "commsDissemination": "Kommunikation og formidling",
+    "corePartners": "Kernepartnere",
+    "lspLocation": "Göteborg, Sverige",
+    "futLocation": "Barcelona, Spanien"
+  },
+  "nav": {
+    "home": "Hjem",
+    "about": "Om",
+    "partners": "Partnere",
+    "experiences": "Oplevelser",
+    "news": "Nyheder og begivenheder",
+    "faq": "FAQ",
+    "contact": "Kontakt",
+    "downloadResources": "Download ressourcer",
+    "toggleNavigation": "Skift navigation",
+    "selectLanguage": "Vælg sprog"
+  },
+  "footer": {
+    "quickLinks": "Hurtige links",
+    "aboutProject": "Om projektet",
+    "newsletter": "Nyhedsbrev",
+    "followUs": "Følg os på {{network}}",
+    "euAlt": "Medfinansieret af Den Europæiske Union",
+    "euCredit": "Medfinansieret af Den Europæiske Union under programmet Et Kreativt Europa, indsatsområdet Storskala-samarbejde. Tilskudsaftale nr. 101255680.",
+    "duration": "Varighed: feb. 2026 – juli 2028",
+    "coordinator": "Koordinator: Lindholmen Science Park",
+    "partners": "15 partnere · 10 lande",
+    "rights": "© {{year}} Immersive ECHO. Alle rettigheder forbeholdes."
+  },
+  "timeline": {
+    "eyebrow": "Projekttidslinje · M1 — M30 · feb. 2026 — juli 2028",
+    "heading": "Tredive måneder, i offentligheden.",
+    "lede": "Immersive ECHO er et 30 måneders projekt under Et Kreativt Europa: designe, bygge, teste, skalere. Milepæle, leverancer og offentlige begivenheder fra konsortiet af 15 organisationer i 10 EU-lande. Hold musen over en måned for at fokusere; klik på en post for at læse.",
+    "type": {
+      "deliverable": "Leverance",
+      "milestone": "Milepæl",
+      "event": "Begivenhed"
+    },
+    "stats": {
+      "done": "Færdige",
+      "deliverables": "Leverancer",
+      "milestones": "Milepæle",
+      "events": "Begivenheder"
+    },
+    "index": "Indeks",
+    "cols": {
+      "date": "Dato",
+      "type": "Type",
+      "title": "Titel",
+      "status": "Status"
+    },
+    "detail": {
+      "delivered": "✓ Leveret",
+      "inProgress": "● I gang",
+      "upcoming": "○ Kommende",
+      "dateTBC": "Dato bekræftes senere",
+      "prev": "← Forrige",
+      "next": "Næste →"
+    },
+    "row": {
+      "delivered": "Leveret",
+      "now": "● Nu",
+      "upcoming": "Kommende",
+      "tbd": "Ikke fastlagt"
+    },
+    "today": "I DAG",
+    "items": {
+      "ms1-1": { "title": "MS1.1 · Tilpasning af konsortiet og opstart", "description": "Alle partnere tilpasset omkring mål, metoder, roller og rapportering ved projektets start." },
+      "ms1-2": { "title": "MS2.1 · Behovsdrevet designramme", "description": "En strategisk designbrief baseret på brugerrejser, behov, adfærd, institutionelle input og samfundstendenser." },
+      "ms1-3": { "title": "MS3.1 · Koncept og narrativ færdiggjort", "description": "Kernekoncept, narrativ, fuldt manuskript og storyboard for Snapsting færdiggjort gennem en iterativ proces." },
+      "ms1-5": { "title": "MS5.1 · Udvekslingsnetværk mellem projekter", "description": "Samarbejdsnetværk med andre EU-finansierede projekter formelt igangsat." },
+      "ms2-2": { "title": "MS2.2 · Laboratorium i drift, første prototyper", "description": "Eksperimentelt laboratorium fuldt i drift; første immersive prototyper testet og gennemgået." },
+      "ms3-2": { "title": "MS2.3 · Sprints for inkluderende design afsluttet", "description": "Alle fire inkluderende samskabelsessprints afsluttet; resultater integreret i designiterationerne." },
+      "ms2-3": { "title": "MS3.2 · Produktion af Snapsting afsluttet", "description": "Alle elementer af Snapsting færdiggjort, herunder indhold, teknologi og rumligt design." },
+      "ms3-3": { "title": "MS3.3 · Snapsting installeret i Viborg", "description": "Snapsting fuldt installeret og i drift på stedet i Viborg Museum." },
+      "ms4-3": { "title": "MS3.4 · Konsortiemøde og panel", "description": "Alle konsortiepartnere mødes i Viborg, med en paneldebat på Animation Festival." },
+      "ms2-1": { "title": "MS1.2 · Midtvejsgennemgang af koordinering", "description": "Gennemgang af fremdrift, risici, samarbejdskvalitet og ressourceforbrug på halvvejspunktet." },
+      "ms2-5": { "title": "MS5.2 · Midtvejsgennemgang af effekt", "description": "Gennemgang på halvvejspunktet af kommunikation, videnoverførsel, inddragelse af interessenter og formidlingens rækkevidde." },
+      "ms1-4": { "title": "MS4.1 · Udrulningsramme og forretningsmodel", "description": "Strategier for offentlig udrulning etableret sammen med en bæredygtig forretningsmodel, der er samudviklet med partnerne." },
+      "ms4-2": { "title": "MS2.4 · Endelige koncepter klar", "description": "Prototyper videreudviklet på baggrund af test; endelige immersive oplevelser godkendt til offentlig udrulning." },
+      "ms2-4": { "title": "MS4.2 · Offentligt testmiljø åbnet i Le Pavillon", "description": "Første sted fuldt indrettet, showstyring valideret; dørene åbnet for publikum (KIKK-festival, okt. 2027)." },
+      "ms3-4": { "title": "MS4.3 · Analyse på tværs af steder i drift", "description": "Et centralt dashboard, der i realtid samler besøgsstrømme, engagement og tilgængelighedsdata, går i drift." },
+      "ms5-3": { "title": "MS3.5 · Snapsting tilpasset til Le Pavillon", "description": "Snapsting tilpasset Le Pavillon, med justeringer af narrativ, teknisk opsætning og rumligt design." },
+      "ms3-5": { "title": "MS5.3 · Ressourcer til kapacitetsopbygning færdige", "description": "Open Learning Toolkit, How-to ECHO-guide, 5D TimeMap og Futuremakers Toolkits færdiggjort og distribueret." },
+      "ms4-5": { "title": "MS5.4 · Endelig formidling af effekt", "description": "Afsluttende fremtidsdesignrapport, der opsummerer resultaterne af den strategiske fremsyn og de langsigtede veje." },
+      "ms4-4": { "title": "MS4.4 · Driftsmæssig gennemførlighed rapporteret", "description": "Omkostninger, bemanding og logistik analyseret for at understøtte fremtidig udbredelse og opskalering." },
+      "ms3-1": { "title": "MS1.3 · Endelig koordineringsopsummering", "description": "Strategisk afrunding af projektleverancen, herunder vigtige erfaringer om koordinering og beslutningstagning." },
+      "d1-1": { "title": "D1.1 · Håndbog i projektledelse", "description": "En praktisk guide, der skitserer visionen, interne koordineringsværktøjer, rapporteringsstrukturen, partnernes ansvar og fælles arbejdsforløb." },
+      "d5-1": { "title": "D5.1 · Kommunikations- og formidlingsplan", "description": "Integreret kommunikationsstrategi. AI-værktøjer omdanner projektdata til artikler, opslag, casestudier og mikroindhold til europæiske målgrupper." },
+      "d5-2": { "title": "D5.2 · Projektdashboard", "description": "Digitalt realtidsdashboard, der følger KPI'er på niveauerne deltager, institutionelt, interinstitutionelt, borgerengagement og samfundsmæssig effekt." },
+      "d2-1": { "title": "D2.1 · Behovsdrevet immersiv designbrief", "description": "Strategisk guide baseret på brugerindsigter, institutionelle behov og samfundsmæssige forandringer — der definerer designudfordringer, personaer, følelsesmæssige mål og tekniske antagelser." },
+      "d3-1": { "title": "D3.1 · Snapsting-oplevelse og dokumentation", "description": "Færdig immersiv oplevelse installeret i Viborg Museum, plus installationstegninger, filer til interaktionsdesign og dokumentation til genbrug." },
+      "d1-2": { "title": "D1.2 · Midtvejsrapport om koordinering og risici", "description": "Evaluering af fremdrift, koordineringskvalitet, risikostatus og partnernes selvevalueringer, med anbefalinger." },
+      "d5-3": { "title": "D5.3 · Effekt og formidling på halvvejspunktet", "description": "Omfattende midtvejsgennemgang af effekt, formidling, engagement, institutionel udbredelse og tværsektorielt samarbejde." },
+      "d5-6": { "title": "D5.6 · 5D TimeMap over kulturarvssteder", "description": "Interaktivt digitalt kort, der forbinder europæiske kulturarvssteder med fem lag — rumligt, tidsmæssigt, kunstnerisk, politisk, sprogligt. Tilgængeligt på 10 EU-sprog." },
+      "d2-2": { "title": "D2.2 · Endelige designs af den immersive oplevelse", "description": "Komplette pakker til den immersive oplevelse til offentlig udrulning — narrativer, rumlige / interaktionsdesigns, tekniske opsætninger, modtagelsesforløb, tilgængelighed." },
+      "d3-2": { "title": "D3.2 · Snapsting tilpasset til Le Pavillon", "description": "Snapsting tilpasset Le Pavillon med opdateret narrativ, interaktions- og rumligt design, teknisk opsætning og driftsretningslinjer." },
+      "d5-4": { "title": "D5.4 · Futuremakers Toolkit", "description": "Hybrid (fysisk + digital) værktøjskasse med participatoriske teknikker og guidede aktiviteter til kulturprofessionelle. 10 EU-sprog." },
+      "d5-5": { "title": "D5.5 · Outreach-platform", "description": "AI-forstærket tovejskommunikationsplatform med KPI-dashboard i realtid. AI-agentpersonaer: museumsguide, historisk figur, fiktiv maskot." },
+      "d5-7": { "title": "D5.7 · Prototype af Timetravel Companion", "description": "AI-drevet guide, der beriger museumsbesøg gennem stemmeinteraktion, kontekstuel fortælling og valgfrit holografisk indhold. 100 specialbyggede enheder." },
+      "d3-3": { "title": "D3.3 · Rapport om den immersive produktionsproces", "description": "Gennemgang af produktionsprocessen på stedet — narrativ, tekniske beslutninger, samarbejdsmodel, kulturelle udfordringer. En reference for andre institutioner." },
+      "d4-1": { "title": "D4.1 · Rapport om driftsmæssig udrulning", "description": "Trin-for-trin-dokumentation af udrulningen af det offentlige testmiljø: publikumslogistik, rumlig opsætning, noter om teknisk tilpasning." },
+      "d5-8": { "title": "D5.8 · Open Learning Toolkit og How-to-guide", "description": "Modulære, brugsklare ressourcer bygget på resultaterne fra WP2–WP4. AI-understøttet indholdsgenerering tilpasser ressourcerne til institutionelle profiler." },
+      "d2-3": { "title": "D2.3 · Endelig evaluering af den immersive oplevelse", "description": "Omfattende evaluering: følelsesmæssig effekt, tilgængelighed, systemets ydeevne, driftsmæssig bæredygtighed." },
+      "d4-2": { "title": "D4.2 · Opsummering af UX og forretningsmodel", "description": "Evaluering af publikumsengagement, modtagelses-/afslutningsforløb og gennemførligheden af de forretningsmodeller, der blev testet på stedet." },
+      "d5-9": { "title": "D5.9 · Rapport om netværk mellem projekter", "description": "Dokumenterer netværksaktiviteterne mellem projekter — møder, fælles begivenheder, vigtige resultater, forslag til løbende udveksling." },
+      "d5-10": { "title": "D5.10 · Afsluttende fremtidsdesignrapport", "description": "Digital platform, der viser projektets resultater og dets langsigtede potentiale. AI-drevne medieværktøjer personaliserer indhold på 10 EU-sprog." },
+      "e1": { "title": "E1 · Åbning af Snapsting-udstillingen", "description": "Den immersive Snapsting-oplevelse åbner for publikum i Viborg Museum. Treårig visning.", "tag": "Udstilling · Viborg · 150 000 pax" },
+      "e5": { "title": "E5 · Offentlig lancering · KIKK-festival", "description": "Lancering med høj synlighed af den immersive oplevelse på KIKK-festivalen 2027. Konsortiepanel.", "tag": "Panel · Namur · 25 000 pax" },
+      "e6": { "title": "E6 · Åbning af Le Pavillon-udstillingen", "description": "Immersive ECHO-udstillingen åbner for publikum i Le Pavillon, Namur.", "tag": "Udstilling · Namur · 25 000 pax" },
+      "e2": { "title": "E2 · Ungdomssprint: Future Worlds Builder", "description": "Brugercentreret sprint med fokus på digital kompetence og nysgerrighed. 3 dage.", "tag": "Sprint · Göteborg · 80 pax" },
+      "e3": { "title": "E3 · Neurodivergent sprint", "description": "Ikke-lineær navigation; sensorisk balance og ikke-lineært engagement. 2 dage.", "tag": "Sprint · Berlin · 40 pax" },
+      "e4": { "title": "E4 · Konference Echoes of the Future", "description": "At forbinde kulturarv og immersiv innovation. Konference + panel på Animation Festival.", "tag": "Konference · Viborg · 300 pax" }
+    }
+  }
+}

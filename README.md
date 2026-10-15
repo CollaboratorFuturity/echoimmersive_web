@@ -116,6 +116,19 @@ See [docs/PROGRESS.md](docs/PROGRESS.md) for the full implementation checklist.
 - **Accessibility: WCAG 2.2 AA hardening complete (2026-07-28/29)** — 0 axe-core violations on all 12 routes; keyboard behavior (skip link, mobile-menu Esc, Lightbox modal, FAQ accordion) machine-verified with headless Chrome; 320px reflow clean; all alt text human-reviewed. See [docs/WCAG_AUDIT.md](docs/WCAG_AUDIT.md) (criterion-by-criterion status) and [docs/A11Y_VERIFICATION_CHECKLIST.md](docs/A11Y_VERIFICATION_CHECKLIST.md) (manual VoiceOver script — the last step before an AA claim, plus publishing an accessibility statement)
 - **i18n foundation shipped (2026-10-09)** — react-i18next with language-prefixed routing (`/:lang/…`), header language switcher, translated Header/Footer, and `public/locales/`. 10 EU languages committed (TRD C7); English populated, 9 others stubbed and falling back to English until translated. Setup + how-to in [docs/i18n_deployment.md](docs/i18n_deployment.md); per-language and page-extraction tasks in [docs/TODO.md](docs/TODO.md)
 
+## Replacing an image (deploy runbook)
+
+Images live in `public/` (e.g. `public/logos/partner_logos/YOU.png` → URL `/logos/partner_logos/YOU.png`) and are **baked into the Docker image at build time**, so `git pull` alone does not change the live site.
+
+On the server:
+
+1. `git pull`
+2. `docker compose up -d --build echoimmersive-web` (without `--build` the old image is reused)
+3. Verify the file is in the container: `docker exec echoimmersive-web ls -l /usr/share/nginx/html/<path>`
+4. Verify headers: `curl -sI http://localhost:8105/<path>` → expect `Cache-Control: public, max-age=300`
+
+Caching: `nginx.conf` serves images with `max-age=300` (5 min), so a replaced image shows up within ~5 minutes at Cloudflare and in browsers, with no purge. Only copies cached *before* this rule (30-day TTL) need a one-time cleanup: Cloudflare → Caching → Purge Cache (after the rebuild, never before — a purge before the rebuild re-caches the old 30-day header), then hard-refresh the browser (Cmd+Shift+R). Check Cloudflare → Caching → Configuration → Browser Cache TTL is "Respect Existing Headers". Debug a stale file with `curl -sI https://echoimmersive.eu/<path>` and read `cf-cache-status` / `age`. If a replaced image must show instantly for everyone, give it a new filename.
+
 ## Routes
 
 > All routes are language-prefixed: `/` redirects to `/{lang}` (detected or `en`), and the paths below live under `/:lang` (e.g. `/en/about`, `/sv/about`). Unprefixed legacy links redirect to the English equivalent.
