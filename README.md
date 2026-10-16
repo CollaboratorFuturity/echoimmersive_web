@@ -86,7 +86,7 @@ echoimmersive_web/
 │   ├── img/                     # Photos, hero imagery
 │   ├── logos/                   # Partner + coordinator logos, header logo
 │   ├── charts/                  # Infographics
-│   └── locales/                 # i18n translation files — {lng}/translation.json (en populated, 9 stubs)
+│   └── locales/                 # i18n translation files — {lng}/translation.json (all 12 populated; en = 231 keys, others 572 incl. grant data — see docs/i18n_deployment.md)
 └── docs/
     ├── TODO.md
     ├── PROGRESS.md
@@ -114,7 +114,7 @@ See [docs/PROGRESS.md](docs/PROGRESS.md) for the full implementation checklist.
 - **Newsletter pipeline live (2026-09-02)** — Issue No. 1 ("Introducing ECHO") sent to all subscribers via `make newsletter-send`, published as a web article at `/news/newsletter-1`, and stored as the "current issue" that every new subscriber automatically receives on signup (welcome email + issue). Issues live in `newsletters/`; workflow documented in [newsletters/README.md](newsletters/README.md)
 - Sandbox routes (`/lynch-home`, `/lynch-about`, `/ismaila-home`, `/brand-home`) remain for design exploration
 - **Accessibility: WCAG 2.2 AA hardening complete (2026-07-28/29)** — 0 axe-core violations on all 12 routes; keyboard behavior (skip link, mobile-menu Esc, Lightbox modal, FAQ accordion) machine-verified with headless Chrome; 320px reflow clean; all alt text human-reviewed. See [docs/WCAG_AUDIT.md](docs/WCAG_AUDIT.md) (criterion-by-criterion status) and [docs/A11Y_VERIFICATION_CHECKLIST.md](docs/A11Y_VERIFICATION_CHECKLIST.md) (manual VoiceOver script — the last step before an AA claim, plus publishing an accessibility statement)
-- **i18n foundation shipped (2026-10-09)** — react-i18next with language-prefixed routing (`/:lang/…`), header language switcher, translated Header/Footer, and `public/locales/`. 10 EU languages committed (TRD C7); English populated, 9 others stubbed and falling back to English until translated. Setup + how-to in [docs/i18n_deployment.md](docs/i18n_deployment.md); per-language and page-extraction tasks in [docs/TODO.md](docs/TODO.md)
+- **i18n foundation shipped (2026-10-09)** — react-i18next with language-prefixed routing (`/:lang/…`), header language switcher, translated Header/Footer, and `public/locales/`. 10 EU languages committed (TRD C7); all 11 other languages have since been translated (AI-drafted, native review pending; audited 2026-10-16). Setup + how-to in [docs/i18n_deployment.md](docs/i18n_deployment.md); per-language and page-extraction tasks in [docs/TODO.md](docs/TODO.md)
 
 ## Replacing an image (deploy runbook)
 

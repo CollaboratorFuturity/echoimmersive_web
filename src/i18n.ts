@@ -46,15 +46,15 @@ export const LANGUAGE_NAMES: Record<Lang, string> = {
 // appear in the language pickers and in hreflang. The others still resolve by URL
 // (e.g. /sv/about falls back to English text) so a translation can be previewed
 // while it is being written. To launch a language: finish its files, then add it here.
-export const AVAILABLE_LANGUAGES: readonly Lang[] = ['en', 'es', 'sv', 'it', 'fr']
+export const AVAILABLE_LANGUAGES: readonly Lang[] = ['en', 'es']
 
-// Public launch switch for translations. While FALSE (review mode):
-//   - the header language picker is hidden (reviewers open /fr/..., /fi/... by URL),
-//   - "/" always goes to English instead of the visitor's browser language,
-//   - hreflang is not advertised and non-English pages carry noindex,
-// but the subscribe form still offers AVAILABLE_LANGUAGES, so the preferred language is
-// collected. Flip to TRUE once the translations are reviewed.
-export const SHOW_LANGUAGE_SWITCHER = false
+// Public language picker. TRUE: the header picker is shown and offers AVAILABLE_LANGUAGES
+// (the human-reviewed ones), "/" goes to the visitor's last/browser language if it is
+// available (else English), and hreflang advertises AVAILABLE_LANGUAGES. Languages that
+// are supported but NOT available (unreviewed) still open by URL (/fr/...) for review,
+// but carry noindex and are never auto-selected. FALSE = full review mode: picker hidden,
+// "/" always English, no hreflang.
+export const SHOW_LANGUAGE_SWITCHER = true
 
 export function isAvailableLang(value: string | undefined): value is Lang {
   return !!value && (AVAILABLE_LANGUAGES as readonly string[]).includes(value)

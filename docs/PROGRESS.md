@@ -156,11 +156,12 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 - [x] `PageMeta`: per-route `document.title`, `<html lang>`, and `hreflang` alternates (runtime-injected; prerender/sitemap noted as the SEO follow-up)
 - [x] `LanguageSwitcher` (native `<select>`, keyboard/SR-accessible) in the header; swaps the language segment and stays on the same page
 - [x] Shared shell translated — Header + Footer strings via `t()`, all internal links language-aware via `localizePath()`
-- [x] Locale files: `public/locales/{lng}/translation.json` lazy-loaded; **English populated**, other 9 are `{}` stubs that fall back to English
+- [x] Locale files: `public/locales/{lng}/translation.json` lazy-loaded; originally English only; **all 12 languages now populated (audited 2026-10-16)**
 - [x] Verified with `tsc -b` (real type-check); confirmed Docker-safe (`npm ci` installs deps from lockfile, Vite ships `public/locales/**`, nginx SPA fallback serves `/:lang/*`)
 - [x] Extract all page bodies into the `en` locale (2026-10-09) — every production page is `t()`-keyed with language-aware links; `en/translation.json` has 12 namespaces (home, about, partners, experiences, news, faq, contact, newsletter, underConstruction, resources, nav, footer). Resources keys UI chrome only (grant data literal); Newsletter01 issue body deferred to the newsletter pipeline. Verified with `tsc -b`.
 - [x] **Fonts self-hosted (2026-10-13)** — removed the Google Fonts `<link>`; Montserrat/Roboto/JetBrains Mono woff2 (Latin, Latin-ext, Cyrillic, Cyrillic-ext; variable weight) in `public/fonts/`, `src/styles/fonts.css`, Latin faces preloaded. DM Sans dropped (only used by the `/ismaila-home` sandbox). Verified in headless Chrome: zero third-party requests on `/en`; Cyrillic/Finnish/Romanian faces load on demand.
-- [ ] Translate the 9 non-English languages (one TODO each)
+- [x] Translate all 11 non-English languages (2026-10-09 → 10-16; AI-drafted) — `es fr it sv de nl da sl ro fi uk`. Audited 2026-10-16: every file has full key parity (572 leaves; `sl`/`uk` 574 for extra plural forms), 0 missing/empty/placeholder mismatches. Shape + re-runnable check in `docs/i18n_deployment.md` → "Translation files — shape & status"
+- [ ] Native-speaker review of all 11 translations (see TODO.md)
 - [x] **Multilingual newsletter, block-based (2026-10-09)** — Issues are block documents (`public/locales/{lng}/newsletters/{id}.json`) rendered to both the web article (`NewsletterIssue.tsx` + `NewsletterBlocks.tsx`) and email (`src/newsletter-email/renderEmail.ts`, built via `npm run newsletter:build-emails`). Backend: per-language issue store (`newsletter_issue_by_lang`), `/admin/newsletter/current?language=`, grouped send by subscriber language with English fallback, localized welcome email. Operator flow: `make newsletter-build` → `newsletter-upload` → `newsletter-send`. Issue No. 1 ported to blocks (English); `Newsletter01.tsx` retired. See `docs/i18n_deployment.md`.
 - [x] Newsletter preferred-language capture — `language` column + picker on `/newsletter` (defaults to page language) + API field + CSV export column (2026-10-09)
 - [ ] Multilingual newsletter send side (per-language issue store/send, translated welcome email — see TODO.md)
@@ -172,7 +173,7 @@ Build plan for the Immersive ECHO website. Each phase produces a visible, testab
 - [ ] Hero and pilot photography
 - [ ] Infographic for dual-track methodology
 - [ ] Real copy for all wireframe placeholder text blocks
-- [~] Translations (10 EU languages per TRD C7) — i18n foundation shipped 2026-10-09 (see the Internationalisation section above); English done, 9 languages pending translation
+- [~] Translations (10 EU languages per TRD C7) — i18n foundation shipped 2026-10-09 (see the Internationalisation section above); all 12 languages populated (AI-drafted), native review pending
 
 ---
 

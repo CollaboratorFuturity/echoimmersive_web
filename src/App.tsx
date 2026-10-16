@@ -8,7 +8,7 @@ import {
   useParams,
 } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import i18n, { DEFAULT_LANG, AVAILABLE_LANGUAGES, SHOW_LANGUAGE_SWITCHER, isSupportedLang } from '@/i18n'
+import i18n, { DEFAULT_LANG, AVAILABLE_LANGUAGES, SHOW_LANGUAGE_SWITCHER, isSupportedLang, isAvailableLang } from '@/i18n'
 import Header from '@/components/Header/Header'
 import Footer from '@/components/Footer/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
@@ -82,10 +82,10 @@ function PageMeta() {
     const lang = langOf(pathname)
     document.documentElement.lang = lang
 
-    // Review mode: keep non-English (unreviewed) pages out of search engines and don't
-    // advertise them via hreflang. See SHOW_LANGUAGE_SWITCHER in src/i18n.ts.
+    // Keep unreviewed languages out of search engines (and, in full review mode, all
+    // non-English pages). See SHOW_LANGUAGE_SWITCHER / AVAILABLE_LANGUAGES in src/i18n.ts.
     document.querySelectorAll('meta[data-i18n-robots]').forEach((el) => el.remove())
-    if (!SHOW_LANGUAGE_SWITCHER && lang !== DEFAULT_LANG) {
+    if (lang !== DEFAULT_LANG && (!SHOW_LANGUAGE_SWITCHER || !isAvailableLang(lang))) {
       const robots = document.createElement('meta')
       robots.name = 'robots'
       robots.content = 'noindex, nofollow'
@@ -214,7 +214,7 @@ export default function App() {
           path="/"
           element={
             <Navigate
-              to={`/${SHOW_LANGUAGE_SWITCHER && isSupportedLang(i18n.language) ? i18n.language : DEFAULT_LANG}`}
+              to={`/${SHOW_LANGUAGE_SWITCHER && isAvailableLang(i18n.language) ? i18n.language : DEFAULT_LANG}`}
               replace
             />
           }

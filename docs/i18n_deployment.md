@@ -1,8 +1,6 @@
 # Internationalisation (i18n) — Deployment & Maintenance
 
-**Status:** Foundation shipped 2026-10-09. Machinery + routing + shared shell (Header/Footer) translated; **English is the only populated language**, the other 9 fall back to English until their files are filled.
-
-**Added 2026-10-13:** Finnish (`fi`) and Ukrainian (`uk`) are wired in (routing, names, API allow-list, newsletter build/upload scripts) with empty `public/locales/{fi,uk}/translation.json` stubs; not yet in `AVAILABLE_LANGUAGES`, so not offered in the pickers. **Ukrainian needs plural forms** — `resources.tasksCount` must have `_one`, `_few`, `_many` and `_other` (with only `_one`/`_other`, counts like 2 and 5 fall back to English text). Fonts (Montserrat/Roboto/JetBrains Mono) already include Cyrillic via Google Fonts' unicode-range subsets; email is UTF-8.
+**Status (audited 2026-10-16):** all 11 non-English languages (`fr de es it nl sv da sl ro fi uk`) have fully populated `translation.json` files — see [Translation files — shape & status](#translation-files--shape--status). Machinery, routing and the shared shell shipped 2026-10-09; Finnish and Ukrainian were added 2026-10-13. All translations are AI-drafted and **still need native-speaker review**; the public picker is live but offers only `en` and `es` (the reviewed ones).
 
 **Commitment:** 10 EU languages for public-facing content (ECHO TRD constraint C7): English, French, German, Spanish, Italian, Dutch, Swedish, Danish, Slovenian, Romanian.
 
@@ -51,17 +49,19 @@ This is handled by `LangRoutes` in `src/App.tsx`: it validates the `:lang` param
 ### Language switcher
 `src/components/LanguageSwitcher/LanguageSwitcher.tsx` — a native `<select>` (most accessible option). Switching swaps the language segment of the current path and navigates, so the user stays on the same page in the new language. Rendered in the header.
 
-### Review mode (`SHOW_LANGUAGE_SWITCHER = false` in `src/i18n.ts`)
-Translations can be deployed *hidden* so reviewers can check them before launch. While the flag is `false`:
-- the **header language picker is hidden**; reviewers open a language by URL: `https://echoimmersive.eu/fr/`, `/sv/`, `/it/`, `/fi/`, `/uk/`, `/es/`, … (any page: `/fr/about`, `/fr/contact`, `/fr/news/newsletter-1`). Links inside a language stay in that language;
-- `/` and old unprefixed links (`/about`) **always go to English**, never to the visitor's browser language;
-- non-English pages carry `<meta name="robots" content="noindex, nofollow">` and no `hreflang` is advertised, so search engines don't index unreviewed text (this is a request, not access control: anyone with a URL can open it);
-- the **subscribe form's "Preferred language" picker stays** (it offers `AVAILABLE_LANGUAGES`) so the language column keeps filling;
+### Public picker & review mode (`SHOW_LANGUAGE_SWITCHER` in `src/i18n.ts`)
+**Live since 2026-10-16: `SHOW_LANGUAGE_SWITCHER = true`, `AVAILABLE_LANGUAGES = ['en', 'es']`** (the only human-reviewed languages).
+- the **header language picker is shown** and lists only `AVAILABLE_LANGUAGES`;
+- `/` goes to the visitor's remembered/browser language **if it is available**, otherwise English (a French browser gets `/en`, not unreviewed `/fr`);
+- `hreflang` is advertised for `AVAILABLE_LANGUAGES` + `x-default`;
+- **unreviewed languages stay URL-only**: `/fr/`, `/sv/`, `/de/`, … (any page, e.g. `/fr/about`, `/fr/news/newsletter-1`) still open for reviewers but carry `<meta name="robots" content="noindex, nofollow">` and are never auto-selected (a request to search engines, not access control);
+- the **subscribe form's "Preferred language" picker** also offers `AVAILABLE_LANGUAGES` (en, es); the API still accepts all codes and existing subscribers keep theirs;
 - `/locales/*` is served `no-cache` (see `nginx.conf`), so a corrected translation shows on the next load.
-**To launch publicly:** set `SHOW_LANGUAGE_SWITCHER = true` and make sure `AVAILABLE_LANGUAGES` lists only reviewed languages (it then also drives the header picker and `hreflang`), rebuild, deploy.
+**Full review mode** (picker hidden, `/` always English, no hreflang, all non-English `noindex`): set `SHOW_LANGUAGE_SWITCHER = false`.
+**To launch another language** after native review: add its code to `AVAILABLE_LANGUAGES` — it then appears in the picker, subscribe form and hreflang, and loses `noindex`. Rebuild, deploy.
 
 ### Which languages are offered (`AVAILABLE_LANGUAGES`)
-`src/i18n.ts` has two lists. `SUPPORTED_LANGUAGES` is all 10 codes: every one routes (`/sv/about` works, falling back to English text) so a translation can be previewed by URL while it's being written. `AVAILABLE_LANGUAGES` (currently `en`, `es`, `sv`, `it`, `fr` — `it` is enabled before its translation file is filled, so it shows English text until then) is what visitors are *offered*: the header switcher, the newsletter form's "Preferred language" picker and the `hreflang` tags use only this list. **To launch a language, finish its files, then add its code to `AVAILABLE_LANGUAGES`.** The newsletter API still accepts all 10 codes.
+`src/i18n.ts` has two lists. `SUPPORTED_LANGUAGES` is all 10 codes: every one routes (`/sv/about` works, falling back to English text) so a translation can be previewed by URL while it's being written. `AVAILABLE_LANGUAGES` (currently `en`, `es` — the human-reviewed ones; the other ten files are populated but held back for native review) is what visitors are *offered*: the header switcher, the newsletter form's "Preferred language" picker and the `hreflang` tags use only this list. **To launch a language, finish its files, then add its code to `AVAILABLE_LANGUAGES`.** The newsletter API still accepts all 10 codes.
 
 ### Using translations in a component
 ```tsx
@@ -85,17 +85,81 @@ function Example() {
 
 ---
 
-## Translation files
+## Translation files — shape & status
 
-One JSON file per language: `public/locales/{lng}/translation.json`. Keys are nested (`nav.*`, `footer.*`, `home.*`, …). English (`public/locales/en/translation.json`) is the source of truth and the fallback — **every key must exist in `en` first**. Any key missing from another language automatically renders the English value.
+One JSON file per language: `public/locales/{lng}/translation.json`, lazy-loaded by `i18next-http-backend`. 2-space indent, UTF-8 (no `\uXXXX` escapes), trailing newline, nested keys.
 
-### Adding / translating a language
-1. Open `public/locales/{lng}/translation.json` (it already exists as `{}`).
-2. Copy the structure from `en/translation.json` and translate the values (keep the keys identical).
-3. Save, restart `make dev` (or hard-refresh) and switch to that language to verify.
-4. Partial is fine — untranslated keys fall back to English, so you can ship incrementally.
+### Two layers of keys
+| Layer | Keys | In `en` file? | Where the English lives |
+|-------|------|---------------|-------------------------|
+| **UI chrome** | `home about experiences newsletter newsletterEmail underConstruction resources.* (chrome) news contact faq partners nav footer` — **231 leaves** | Yes — `en` is the source of truth | `en/translation.json` |
+| **Grant data bodies** | `timeline.*` (124 leaves) and `resources.{wp,task,taskGroup,ms,d,dStatus,event}.*` (217 leaves) — **341 leaves** | **No** | In code, as the default argument: `t('resources.wp.WP1.title', wp.title)`, `t('timeline.heading', 'Thirty months, in public.')` (`src/pages/Resources.tsx`, `src/components/ProjectTimeline/ProjectTimeline.tsx`) |
 
-No code changes are needed to add a language's content — it's data only. (Adding an entirely new *language code* beyond the 10 means also adding it to `SUPPORTED_LANGUAGES` in `src/i18n.ts`.)
+So every non-English file has 231 + 341 = **572 leaves**, but `en` has only 231. That is **expected, not drift**: English grant data stays in code and is only keyed per language. (It does break the older rule "every key must exist in `en` first" for this layer — when you add a new milestone/deliverable/event, add its keys to every language file; `en` needs nothing.)
+
+### Audit results (2026-10-16, script compares every file to `en` and to `es`)
+| Lang | Leaves | Missing vs `en` | Extra vs `en` | Placeholder / tag mismatches | Empty | Notes |
+|------|-------:|---:|---:|---:|---:|-------|
+| en | 231 | – | – | – | 0 | source of truth |
+| es, fr, de, it, nl, sv, da, ro, fi | 572 | 0 | 341 | 0 | 0 | exact key parity with each other |
+| sl | 574 | 0 | 343 | 0 | 0 | +2 plural keys (`tasksCount_two`, `_few`) |
+| uk | 574 | 0 | 343 | 0 | 0 | +2 plural keys (`tasksCount_few`, `_many`) |
+
+- **Parity:** after stripping plural suffixes, all 11 languages have the identical key set. No missing keys, no empty values, no type mismatches (string/array), no `{{interpolation}}` or inline-tag differences vs `en`.
+- **Order:** `en` keys appear in the same order in every file. `sl` and `uk` differ from `es` only by where their extra plural keys sit.
+- **Strings identical to English** (5–13 per language) are legitimate: brand/place/partner names (`home.hero.titleLine1/2`, `about.details.gaValue`, `coordinatorValue`, image alts that are proper names), and cognates ("Newsletter", "Partners", "Contact", "Home", "Photos", "Organisation"). The `fr`/`de`/`it`/`nl` ones are the most numerous. `resources.event.E4.name` / `timeline.items.e4.title` are an event proper name, same everywhere. Worth a native glance, not a bug.
+- **No length outliers** (no value is >2.2× or <0.4× its English length).
+
+### Plural forms
+`resources.tasksCount` is the only pluralised key. `en`, `es`, `fr`, `de`, `it`, `nl`, `sv`, `da`, `ro`, `fi` use `_one` + `_other`. Slovenian uses `_one/_two/_few/_other`; Ukrainian uses `_one/_few/_many/_other` (i18next picks the CLDR category per language; with only `_one/_other` counts like 2 or 5 would fall back to English text).
+
+### Newsletters (`public/locales/{lng}/newsletters/newsletter-1.json`)
+Only **`en`, `es`, `sv`** exist on disk. Every other language falls back to the English issue, per the 2026-10-15 decision not to translate newsletters per language. Shape: header keys `id kicker date subject preheader title lead` + `blocks[]`. `en` and `es` have 44 blocks with identical block types and keys; `sv` has 46 (consortium-supplied copy that differs from the English edition). `translation.json` still carries `newsletterEmail.{unsubscribe,footer}` in every language, so the email chrome (unsubscribe link, footer) is localised even when the body falls back to English.
+> ⚠️ **Discrepancy:** `docs/TODO.md` says `fr` and `it` newsletter files exist ("translated earlier"). They are **not** in the working tree or in `git ls-files` — only `en/es/sv` are. Either they were never committed/were deleted, or the TODO is stale. Needs a decision.
+
+### Other per-language content
+- **About chart** — `public/charts/echo-dual-track.html` carries a `STRINGS` block for all 12 languages (`en es sv fr it de fi ro nl da sl uk`), selected via `?lang=`.
+- **Languages offered** — `AVAILABLE_LANGUAGES` in `src/i18n.ts` is currently `en es`; the other ten are routable by URL for review but not offered in pickers/hreflang and are `noindex`.
+- **Backend** — welcome email and unsubscribe page are localised for `en`/`es` only; other languages fall back to English.
+
+### Adding a new key (UI chrome)
+1. Add it to `en/translation.json` first.
+2. Add the same key (same nesting, same `{{placeholders}}`) to all 11 other files — a missing key silently renders English.
+3. Re-run the parity check (below).
+
+### Adding / translating a new language
+1. Add the code to `SUPPORTED_LANGUAGES` + `LANGUAGE_NAMES` in `src/i18n.ts` (not needed for the 12 already registered).
+2. Create `public/locales/{lng}/translation.json`. Copy **a finished language file (e.g. `es`), not `en`** — `es` already contains the grant-data layer that `en` lacks. Translate values; keep keys identical.
+3. If the language has plural categories beyond one/other (Slavic, Slovenian, Arabic, …), add the extra `tasksCount_*` forms.
+4. Add a `STRINGS` block to `public/charts/echo-dual-track.html`.
+5. Run the parity check, hard-refresh `/{lng}/…`, then add to `AVAILABLE_LANGUAGES` when reviewed.
+Partial files are fine — untranslated keys fall back to English.
+
+### Parity check (re-runnable)
+```python
+# python3 -I check_locales.py  (run from repo root)
+import json, os, re
+base = 'public/locales'
+def flat(o, p=''):
+    r = {}
+    if isinstance(o, dict):
+        for k, v in o.items(): r.update(flat(v, f'{p}.{k}' if p else k))
+    elif isinstance(o, list):
+        for i, v in enumerate(o): r.update(flat(v, f'{p}[{i}]'))
+    else: r[p] = o
+    return r
+strip = lambda k: re.sub(r'_(zero|one|two|few|many|other)$', '', k)
+ph = lambda s: sorted(re.findall(r'\{\{[^}]+\}\}|</?\w+[^>]*>', s)) if isinstance(s, str) else []
+L = {l: flat(json.load(open(f'{base}/{l}/translation.json', encoding='utf-8'))) for l in sorted(os.listdir(base))}
+en = L['en']; ref = {strip(k) for k in L['es']}
+for l, d in L.items():
+    miss = [k for k in en if k not in d]                       # must be empty
+    skew = ref ^ {strip(k) for k in d} if l != 'en' else set() # grant-data layer must match es
+    bad  = [k for k in en if k in d and ph(en[k]) != ph(d[k])] # placeholders/tags
+    empty = [k for k in d if d[k] in ('', None)]
+    print(l, len(d), 'missing', len(miss), 'skew', len(skew), 'placeholder', len(bad), 'empty', len(empty))
+```
+Expected: `missing 0 skew 0 placeholder 0 empty 0` for every language (`en` shows `skew 0` by construction).
 
 ---
 
@@ -144,5 +208,5 @@ Each newsletter issue is a **block document** that is the single source of truth
 - `src/App.tsx` — `/:lang` routing, `LangRoutes`, `PageMeta` (title/lang/hreflang)
 - `src/components/LanguageSwitcher/LanguageSwitcher.tsx` (new)
 - `src/components/Header/Header.tsx`, `src/components/Footer/Footer.tsx` — translated + language-aware links
-- `public/locales/{en + 9}/translation.json` (new)
+- `public/locales/{lng}/translation.json` (new; all 12 populated as of 2026-10-16)
 - `package.json` / `package-lock.json` — 4 new deps
