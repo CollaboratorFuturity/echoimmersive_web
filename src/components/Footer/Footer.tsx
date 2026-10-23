@@ -15,7 +15,7 @@ const quickLinks: Array<[string, string]> = [
 const socials: Array<[string, string, string]> = [
   ['f', 'Facebook', 'https://www.facebook.com/profile.php?id=61589051665665'],
   ['ig', 'Instagram', 'https://www.instagram.com/echoimmersive/'],
-  ['in', 'LinkedIn', 'https://www.linkedin.com/in/echo-immersive-216916403/'],
+  ['in', 'LinkedIn', 'https://www.linkedin.com/company/immersive-echo/home/'],
 ]
 
 export default function Footer() {

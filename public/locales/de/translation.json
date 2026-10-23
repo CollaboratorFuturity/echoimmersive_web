@@ -18,9 +18,9 @@
     "mission": {
       "p1": "Kulturerbe existiert, weil Menschen es brauchen. Es wirkt als lebendige Verbindung zum Ort, zur Gemeinschaft, zu den Geschichten, die erklären, wer wir sind und wie wir hierhergekommen sind. Doch für Millionen Menschen in ganz Europa bricht diese Verbindung auseinander. Die Räume und Formate, die diese Geschichten tragen sollen, haben schlicht nicht mit den Menschen Schritt gehalten, denen sie dienen sollen.",
       "p2": "Kleinere Kulturerbe-Einrichtungen spüren das am deutlichsten. Ohne die Mittel der großen Leuchttürme erleben sie, wie ihr Publikum schrumpft, jüngere Generationen abwandern und Gemeinschaften, die sich in ihren Sammlungen nie wirklich wiederfanden, ganz ausbleiben. Die Werkzeuge, um das zu ändern, sind vorhanden. Immersive, multisensorische Erlebnisse, die einen von einer Geschichte umhüllen, statt sie hinter Glas zu präsentieren, sind erprobt und wirkungsvoll. Doch für die meisten bleiben sie unerreichbar.",
-      "p3": "Immersive ECHO geht von einer anderen Prämisse aus: dass Kulturerbe am stärksten wirkt, wenn es gemeinsam erlebt wird, in geteilten Räumen, von Menschen, die es vielleicht nicht von selbst aufgesucht hätten. Der Auftrag des Projekts ist es, Kultureinrichtungen in ganz Europa die praktischen Mittel an die Hand zu geben, um Menschen zurück in die Geschichte zu holen. Ihre Geschichte."
+      "p3": "Immersive ECHO geht von einer anderen Prämisse aus: dass Kulturerbe am stärksten wirkt, wenn es gemeinsam erlebt wird - in geteilten Räumen, von Menschen, die es vielleicht nicht von selbst aufgesucht hätten. Der Auftrag des Projekts ist es, Kultureinrichtungen in ganz Europa die praktischen Mittel an die Hand zu geben, um Menschen zurück in die Geschichte zu holen. Ihre Geschichte."
     },
-    "quote": "Kulturerbe wirkt am stärksten, wenn es gemeinsam erlebt wird, in geteilten Räumen, von Menschen, die es vielleicht nicht von selbst aufgesucht hätten.",
+    "quote": "Kulturerbe wirkt am stärksten, wenn es gemeinsam erlebt wird - in geteilten Räumen, von Menschen, die es vielleicht nicht von selbst aufgesucht hätten.",
     "stayConnected": "In Verbindung bleiben",
     "newsletter": {
       "label": "Newsletter",
@@ -39,22 +39,22 @@
       },
       "o2": {
         "title": "Inklusive, niedrigschwellige Räume für Kokreation und Innovation aktivieren",
-        "body": "Wir richten experimentelle Labore ein, in denen Kulturschaffende, Technologinnen und Technologen sowie vielfältige Nutzergruppen immersive Formate gemeinsam entwickeln, als Prototyp erproben und testen können – und fördern so Kompetenzaufbau und künstlerische Innovation in ganz Europa."
+        "body": "Wir richten experimentelle Labore ein, in denen Kulturschaffende, Technologinnen und Technologen sowie vielfältige Nutzergruppen immersive Formate gemeinsam entwickeln und als Prototypen erproben können – und fördern so Kompetenzaufbau und künstlerische Innovation in ganz Europa."
       },
       "o3": {
         "title": "Öffentlichen Wert und Engagement durch Installationen im realen Umfeld belegen",
-        "body": "Wir setzen immersive Erlebnisse sowohl an öffentlichen als auch an institutionellen Orten um, um Publikumsreichweite, emotionale Wirkung und betriebliche Machbarkeit zu bewerten – und tragen so zu neuen Modellen der Publikumsentwicklung bei. Diese doppelte Platzierung – sowohl in gemeinschaftlichen als auch in institutionellen Räumen – stellt sicher, dass immersive Formate nicht nur Menschen außerhalb der Kulturerbe-Orte erreichen, sondern auch neues Publikum zurück in die Kultureinrichtungen führen, die Besucherzahlen steigern und deren öffentlichen Auftrag neu beleben."
+        "body": "Wir setzen immersive Erlebnisse sowohl an öffentlichen als auch an institutionellen Orten um, um Publikumsreichweite, emotionale Wirkung und betriebliche Machbarkeit zu bewerten – und tragen so zu neuen Modellen der Publikumsentwicklung bei. Diese doppelte Platzierung – sowohl in gemeinschaftlichen als auch in institutionellen Räumen – stellt sicher, dass immersive Formate nicht nur Menschen außerhalb der Kulturerbe-Orte erreichen, sondern auch neues Publikum in die Kultureinrichtungen bringen, deren Besucherzahlen steigern und ihren öffentlichen Auftrag neu beleben."
       },
       "o4": {
         "title": "Ein gesamteuropäisches Netzwerk für Wissensaustausch und kulturelle Innovation aufbauen",
-        "body": "Wir stärken die sektorübergreifende Zusammenarbeit, indem wir Einrichtungen, Kreative und Technologiepartner vernetzen und frei zugängliche Werkzeuge und Erkenntnisse teilen, die langfristige Nachnutzung und politische Abstimmung ermöglichen."
+        "body": "Wir stärken die sektorübergreifende Zusammenarbeit, indem wir Einrichtungen, Kreative und Technologiepartner vernetzen und frei zugängliche Werkzeuge und Erkenntnisse teilen, die langfristige Nachnutzung und die Anbindung an politische Strategien ermöglichen."
       },
       "o5": {
         "title": "Inklusion, Barrierefreiheit sowie kulturelles Wohlergehen und Demokratie durch Gestaltung voranbringen",
         "body": "Wir verankern inklusives Design und partizipative Methoden im gesamten Projekt, um sicherzustellen, dass immersive Kulturerlebnisse die Vielfalt der europäischen Gesellschaft widerspiegeln und den gesellschaftlichen Zusammenhalt sowie die Barrierefreiheit fördern."
       }
     },
-    "quote": "Kulturerbe wirkt am stärksten, wenn es gemeinsam erlebt wird, in geteilten Räumen, von Menschen, die es vielleicht nicht von selbst aufgesucht hätten.",
+    "quote": "Kulturerbe wirkt am stärksten, wenn es gemeinsam erlebt wird - in geteilten Räumen, von Menschen, die es vielleicht nicht von selbst aufgesucht hätten.",
     "approachDivider": "Der Ansatz",
     "approach": {
       "partnersLabel": "Partner",
@@ -113,7 +113,7 @@
       "badge": "SKALIERUNG UND ANPASSUNG",
       "location": "Namur, Belgien",
       "imageAlt": "Le Pavillon, Namur",
-      "description": "Le Pavillon ist das Zentrum von KIKK für digitale Kunst und Technologie in Namur, Belgien. Es bringt die immersiven Installationen von ECHO einem breiten Publikum nahe und erhebt dabei Daten zu Engagement und Barrierefreiheit. Über 200 Schulkooperationen pro Jahr."
+      "description": "Le Pavillon ist das Zentrum von KIKK für digitale Kunst und Technologie in Namur, Belgien. Es bringt die immersiven Installationen von ECHO einem breiten Publikum nahe und erhebt dabei Daten zu Engagement und Barrierefreiheit. Außerdem pflegt Le Pavillon über 200 Schulkooperationen pro Jahr."
     },
     "snapstingPage": {
       "title": "Viborg Animation Festival · Aktivitäten",
@@ -418,13 +418,13 @@
       "D5-1": { "title": "Kommunikations- und Verbreitungsplan", "description": "[ENG] Eine integrierte Kommunikationsstrategie und ein Plan, um die Ergebnisse breit zu teilen. KI-Werkzeuge verwandeln Projektdaten in Artikel, Beiträge, Fallstudien und Mikro-Inhalte, zugeschnitten auf verschiedene europäische Zielgruppen. Erstellung im Einklang mit der EU-Politik zu KI, Datenschutz und Technikethik." },
       "D5-2": { "title": "Projekt-Dashboard", "description": "Eine Website mit einem digitalen Echtzeit-Dashboard, das KPIs auf mehreren Ebenen verfolgt und visualisiert: Beiträge einzelner Teilnehmender, intrainstitutionelle Arbeitsabläufe, interinstitutionelle Zusammenarbeit, Wert des bürgerschaftlichen Engagements und breitere gesellschaftliche Wirkung. Öffentlicher Bereich + private Bereiche für Einrichtungen, politische Entscheidungstragende und Beteiligte." },
       "D5-3": { "title": "Zwischenbericht zu Wirkung und Verbreitung", "description": "Umfassende Überprüfung der Projektwirkung, der Verbreitungsaktivitäten und der Kommunikationsergebnisse zur Halbzeit. Bewertet Engagement-Kennzahlen, institutionelle Übernahme, Wirksamkeit des Wissenstransfers und sektorübergreifende Zusammenarbeit." },
-      "D5-4": { "title": "Futuremakers Toolkit", "description": "Ein hybrider (physischer und digitaler) Werkzeugkasten aus partizipativen Techniken, Materialien und angeleiteten Aktivitäten, der Kulturschaffenden beibringt, inklusivere, widerstandsfähigere Zukünfte zu entwerfen. Verfügbar in 10 EU-Sprachen. Physisch: Arbeitshefte, Kartensets, langlebige Spielsteine aus nachhaltigen Materialien. Digital: Medieninhalte + ein interaktives Mehrbenutzer-Whiteboard." },
-      "D5-5": { "title": "Outreach-Plattform", "description": "Eine KI-gestützte Plattform für reibungslose Zweiwegkommunikation zwischen Projekt, Einrichtungen und Publikum. Enthält ein betriebsbereites KPI-Dashboard in Echtzeit. Plattform auf Englisch; KI-Agenten und Inhalte in 10 EU-Sprachen. Enthält KI-Agenten-Personas (Museumsführerin oder -führer, historische Figur, fiktive Maskottchen) und ein Werkzeug, mit dem Einrichtungen eigene erstellen können." },
-      "D5-6": { "title": "5D TimeMap der Kulturerbe-Stätten", "description": "Eine interaktive digitale Karte, die Kulturerbe-Stätten in ganz Europa mit ihren jeweiligen Einrichtungen verknüpft und um fünf Dimensionen angereichert ist: räumlich, zeitlich sowie drei thematische Schichten (künstlerisch, politisch, sprachlich). Verfügbar vor Ort, auf Computern und mobil in 10 EU-Sprachen." },
-      "D5-7": { "title": "Prototyp des Timetravel Companion", "description": "Ein funktionsfähiger Prototyp des Timetravel Companion – eine KI-gestützte Begleitung, die Museumsbesuche und immersive Installationen durch sprachbasierte Interaktion, kontextbezogenes Erzählen und optionale holografische Inhalte bereichert. Enthält App-Oberfläche, Inhaltsmodule, Dokumentation der Nutzertests und Barrierefreiheitsbewertung in 10 EU-Sprachen. Für die Installationen werden 100 individuelle Open-Source-Geräte gebaut." },
-      "D5-8": { "title": "Open Learning Toolkit und How-to-ECHO-Leitfaden", "description": "Ein Paket aus Informationen, Anleitungen und Werkzeugen, mit dem neue Kultureinrichtungen den ECHO-Werkzeugkasten durchgängig umsetzen können. Modulare, einsatzbereite Ressourcen, aufgebaut auf den Ergebnissen der WP2–WP4, in 10 EU-Sprachen." },
+      "D5-4": { "title": "Futuremakers Toolkit", "description": "Ein hybrider (physischer und digitaler) Werkzeugkasten aus partizipativen Techniken, Materialien und angeleiteten Aktivitäten, der Kulturschaffenden beibringt, inklusivere, widerstandsfähigere Zukünfte zu entwerfen. Verfügbar in 10 Europäische Sprachen. Physisch: Arbeitshefte, Kartensets, langlebige Spielsteine aus nachhaltigen Materialien. Digital: Medieninhalte + ein interaktives Mehrbenutzer-Whiteboard." },
+      "D5-5": { "title": "Outreach-Plattform", "description": "Eine KI-gestützte Plattform für reibungslose Zweiwegkommunikation zwischen Projekt, Einrichtungen und Publikum. Enthält ein betriebsbereites KPI-Dashboard in Echtzeit. Plattform auf Englisch; KI-Agenten und Inhalte in 10 Europäische Sprachen. Enthält KI-Agenten-Personas (Museumsführerin oder -führer, historische Figur, fiktive Maskottchen) und ein Werkzeug, mit dem Einrichtungen eigene erstellen können." },
+      "D5-6": { "title": "5D TimeMap der Kulturerbe-Stätten", "description": "Eine interaktive digitale Karte, die Kulturerbe-Stätten in ganz Europa mit ihren jeweiligen Einrichtungen verknüpft und um fünf Dimensionen angereichert ist: räumlich, zeitlich sowie drei thematische Schichten (künstlerisch, politisch, sprachlich). Verfügbar vor Ort, auf Computern und mobil in 10 Europäische Sprachen." },
+      "D5-7": { "title": "Prototyp des Timetravel Companion", "description": "Ein funktionsfähiger Prototyp des Timetravel Companion – eine KI-gestützte Begleitung, die Museumsbesuche und immersive Installationen durch sprachbasierte Interaktion, kontextbezogenes Erzählen und optionale holografische Inhalte bereichert. Enthält App-Oberfläche, Inhaltsmodule, Dokumentation der Nutzertests und Barrierefreiheitsbewertung in 10 Europäische Sprachen. Für die Installationen werden 100 individuelle Open-Source-Geräte gebaut." },
+      "D5-8": { "title": "Open Learning Toolkit und How-to-ECHO-Leitfaden", "description": "Ein Paket aus Informationen, Anleitungen und Werkzeugen, mit dem neue Kultureinrichtungen den ECHO-Werkzeugkasten durchgängig umsetzen können. Modulare, einsatzbereite Ressourcen, aufgebaut auf den Ergebnissen der WP2–WP4, in 10 Europäische Sprachen." },
       "D5-9": { "title": "Bericht zur projektübergreifenden Vernetzung", "description": "Umfassender Bericht, der die projektübergreifenden Vernetzungsaktivitäten dokumentiert, einschließlich Treffen, gemeinsamer Veranstaltungen, zentraler Ergebnisse und Vorschläge für einen fortlaufenden Austausch." },
-      "D5-10": { "title": "Abschließender Zukunftsdesign-Bericht", "description": "Eine digitale Plattform, die die Projektergebnisse und ihr langfristiges Potenzial präsentiert. KI-gestützte Medienwerkzeuge personalisieren Inhalte für die Teilnehmenden und übersetzen die Projekterkenntnisse in teilbare Formate in 10 EU-Sprachen." }
+      "D5-10": { "title": "Abschließender Zukunftsdesign-Bericht", "description": "Eine digitale Plattform, die die Projektergebnisse und ihr langfristiges Potenzial präsentiert. KI-gestützte Medienwerkzeuge personalisieren Inhalte für die Teilnehmenden und übersetzen die Projekterkenntnisse in teilbare Formate in 10 Europäische Sprachen." }
     },
     "dStatus": {
       "D5-2": "Sie sind hier!"
@@ -484,15 +484,15 @@
       "title": "Projekt Immersive ECHO offiziell gestartet",
       "lead": "Über 40 europäische Spitzenkreative kamen in Namur zusammen, um das Projekt ECHO Immersive zu starten.",
       "teamAlt": "Das Team von ECHO Immersive in Namur",
-      "p1": "Immersive ECHO startete offiziell im Februar 2026 mit einem mehrtägigen Auftakttreffen im Le Pavillon in Namur, Belgien – dem Ort, der die öffentliche Testumgebung des Projekts beherbergen wird. Delegationen aller Konsortialpartner kamen zum ersten Mal persönlich zusammen und brachten Museumsfachleute, immersive Designerinnen und Designer, Entwicklerinnen und Entwickler, Forschende und Strateginnen und Strategen aus zehn Ländern an einen Tisch. Das Treffen wurde vom Projektteam von Lindholmen Science Park unter Leitung von Projektmanager Ismaila Jallow und Koordinatorin Katrin Amberntsson organisiert, mit Unterstützung der Teams von KIKK und Le Pavillon vor Ort.",
-      "p2": "Die Tage verbanden strukturierte Workshops mit offenem Erkunden. Die Teams arbeiteten grundlegende Fragen durch: wie sich Menschen durch Räume bewegen, was Aufmerksamkeit weckt und wie Erzählung und Interaktion dem Publikum helfen, Bedeutung zu schaffen. Statt bei der Technik anzusetzen, kreisten die Gespräche um Narrativ, Wahrnehmung und die besonderen Anforderungen kultureller Räume. Die Teilnehmenden gingen mit einem gemeinsamen Gespür dafür, wie die nächsten zweieinhalb Jahre aussehen werden – und mit jenem Vertrauen, das nur entsteht, wenn neugierige Menschen wirklich Zeit miteinander verbringen. Die im Projekt entwickelten finalen immersiven Erlebnisse kehren im Oktober 2027 für den öffentlichen Einsatz nach Le Pavillon zurück.",
+      "p1": "Immersive ECHO startete offiziell im Februar 2026 mit einem mehrtägigen Auftakttreffen im Le Pavillon in Namur, Belgien – dem Ort, der die öffentliche Testumgebung des Projekts beherbergen wird. Delegationen aller Konsortialpartner kamen zum ersten Mal persönlich zusammen und brachten Museumsfachleute, immersive Designerinnen und Designer, Entwicklerinnen und Entwickler, Forschende und Strateginnen und Strategen aus zehn Ländern an einen Tisch. Das Treffen wurde vom Projektteam des Lindholmen Science Park unter der Leitung von Projektmanager Ismaila Jallow und Koordinatorin Katrin Amberntsson organisiert, mit Unterstützung der Teams von KIKK und Le Pavillon vor Ort.",
+      "p2": "Die Tage verbanden strukturierte Workshops mit offenem Erkunden. Die Teams arbeiteten grundlegende Fragen durch: wie sich Menschen durch Räume bewegen, was Aufmerksamkeit weckt und wie Erzählung und Interaktion dem Publikum helfen, Bedeutung zu schaffen. Statt bei der Technik anzusetzen, kreisten die Gespräche um Narrativ, Wahrnehmung und die besonderen Anforderungen kultureller Räume. Die Teilnehmenden gingen mit einem gemeinsamen Gespür dafür auseinander, wie die nächsten zweieinhalb Jahre aussehen werden – und mit jenem Vertrauen, das nur entsteht, wenn neugierige Menschen wirklich Zeit miteinander verbringen. Die im Projekt entwickelten finalen immersiven Erlebnisse kehren im Oktober 2027 für den öffentlichen Einsatz nach Le Pavillon zurück.",
       "galleryHeading": "Galerie"
     }
   },
   "contact": {
     "title": "Kontakt",
     "getInTouch": "Kontakt aufnehmen",
-    "intro": "Wenden Sie sich an das Koordinationsteam bei Lindholmen Science Park für allgemeine Anfragen, Presseinformationen oder Fragen zu Partnerschaften.",
+    "intro": "Wenden Sie sich an das Koordinationsteam von Lindholmen Science Park für allgemeine Anfragen, Presseinformationen oder Fragen zu Partnerschaften.",
     "coordinatorHeading": "Koordinator",
     "coordinatorLocation": "Göteborg, Schweden",
     "stayInTouch": "In Verbindung bleiben",
@@ -554,7 +554,7 @@
       },
       "q9": {
         "question": "Wer steht hinter Immersive ECHO?",
-        "answer": "Ein Konsortium aus 15 Organisationen aus 10 europäischen Ländern, koordiniert von Lindholmen Science Park in Göteborg, Schweden. Zu den Partnern zählen Studios für immersives Design, Kulturerbe-Einrichtungen, Forschungslabore, Technologieunternehmen und Kommunikationsfachleute aus Schweden, Deutschland, Frankreich, Finnland, Rumänien, Dänemark, Belgien, der Ukraine, Spanien und Slowenien. Zu den assoziierten Partnern gehören die Stadt Göteborg und The Animation Workshop in Dänemark. Das Projekt erhielt eine EU-Bewertung von 92/100."
+        "answer": "Ein Konsortium aus 15 Organisationen in 10 europäischen Ländern, koordiniert von Lindholmen Science Park in Göteborg, Schweden. Zu den Partnern zählen Studios für immersives Design, Kulturerbe-Einrichtungen, Forschungslabore, Technologieunternehmen und Kommunikationsfachleute aus Schweden, Deutschland, Frankreich, Finnland, Rumänien, Dänemark, Belgien, der Ukraine, Spanien und Slowenien. Zu den assoziierten Partnern gehören die Stadt Göteborg und The Animation Workshop in Dänemark. Das Projekt erhielt eine EU-Bewertung von 92/100."
       },
       "q10": {
         "question": "Ist die Ukraine Teil des Projekts?",
@@ -613,7 +613,7 @@
   "timeline": {
     "eyebrow": "Projektzeitplan · M1 — M30 · Feb. 2026 — Juli 2028",
     "heading": "Dreißig Monate, öffentlich.",
-    "lede": "Immersive ECHO ist ein 30-monatiges Projekt im Rahmen von Kreatives Europa: entwerfen, bauen, testen, skalieren. Meilensteine, Liefergegenstände und öffentliche Veranstaltungen des Konsortiums aus 15 Organisationen in 10 EU-Ländern. Fahren Sie mit der Maus über einen Monat, um ihn in den Fokus zu rücken; klicken Sie auf einen Eintrag, um ihn zu lesen.",
+    "lede": "Immersive ECHO ist ein 30-monatiges Projekt im Rahmen von Kreatives Europa: entwerfen, bauen, testen, skalieren. Meilensteine, Liefergegenstände und öffentliche Veranstaltungen des Konsortiums aus 15 Organisationen in 10 europäischen Ländern. Fahren Sie mit der Maus über einen Monat, um ihn in den Fokus zu rücken; klicken Sie auf einen Eintrag, um ihn zu lesen.",
     "type": {
       "deliverable": "Liefergegenstand",
       "milestone": "Meilenstein",
@@ -672,13 +672,13 @@
       "d5-1": { "title": "D5.1 · Kommunikations- und Verbreitungsplan", "description": "Integrierte Kommunikationsstrategie. KI-Werkzeuge verwandeln Projektdaten in Artikel, Beiträge, Fallstudien und Mikro-Inhalte, zugeschnitten auf europäisches Publikum." },
       "d5-2": { "title": "D5.2 · Projekt-Dashboard", "description": "Digitales Echtzeit-Dashboard, das KPIs auf den Ebenen Teilnehmende, institutionell, interinstitutionell, bürgerschaftliches Engagement und gesellschaftliche Wirkung verfolgt." },
       "d2-1": { "title": "D2.1 · Bedarfsorientiertes immersives Design-Briefing", "description": "Strategischer Leitfaden auf Basis von Nutzererkenntnissen, institutionellen Bedürfnissen und gesellschaftlichen Veränderungen – der Designherausforderungen, Personas, emotionale Ziele und technische Annahmen definiert." },
-      "d3-1": { "title": "D3.1 · Snapsting-Erlebnis und Dokumentation", "description": "Fertiggestelltes immersives Erlebnis, installiert im Viborg Museum, plus Installationspläne, Dateien zum Interaktionsdesign und Dokumentation zur Nachnutzung." },
+      "d3-1": { "title": "D3.1 · Snapsting-Erlebnis und Dokumentation", "description": "Fertiggestelltes immersives Erlebnis, installiert im Viborg Museum, sowie Installationspläne, Dateien zum Interaktionsdesign und Dokumentation zur Nachnutzung." },
       "d1-2": { "title": "D1.2 · Zwischenbericht zu Koordination und Risiken", "description": "Bewertung von Fortschritt, Koordinationsqualität, Risikostatus und Selbsteinschätzungen der Partner, mit Empfehlungen." },
       "d5-3": { "title": "D5.3 · Wirkung und Verbreitung zur Halbzeit", "description": "Umfassende Halbzeitüberprüfung von Wirkung, Verbreitung, Engagement, institutioneller Übernahme und sektorübergreifender Zusammenarbeit." },
-      "d5-6": { "title": "D5.6 · 5D TimeMap der Kulturerbe-Stätten", "description": "Interaktive digitale Karte, die europäische Kulturerbe-Stätten mit fünf Schichten verknüpft – räumlich, zeitlich, künstlerisch, politisch, sprachlich. Verfügbar in 10 EU-Sprachen." },
+      "d5-6": { "title": "D5.6 · 5D TimeMap der Kulturerbe-Stätten", "description": "Interaktive digitale Karte, die europäische Kulturerbe-Stätten mit fünf Schichten verknüpft – räumlich, zeitlich, künstlerisch, politisch, sprachlich. Verfügbar in 10 Europäische Sprachen." },
       "d2-2": { "title": "D2.2 · Finale Designs des immersiven Erlebnisses", "description": "Vollständige Pakete des immersiven Erlebnisses für den öffentlichen Einsatz – Narrative, räumliche / Interaktionsdesigns, technische Aufbauten, Begrüßungswege, Barrierefreiheit." },
       "d3-2": { "title": "D3.2 · Snapsting für Le Pavillon angepasst", "description": "Snapsting für Le Pavillon angepasst, mit aktualisiertem Narrativ, Interaktions- und räumlichem Design, technischem Aufbau und Betriebsrichtlinien." },
-      "d5-4": { "title": "D5.4 · Futuremakers Toolkit", "description": "Hybrider (physisch + digital) Werkzeugkasten aus partizipativen Techniken und angeleiteten Aktivitäten für Kulturschaffende. 10 EU-Sprachen." },
+      "d5-4": { "title": "D5.4 · Futuremakers Toolkit", "description": "Hybrider (physisch + digital) Werkzeugkasten aus partizipativen Techniken und angeleiteten Aktivitäten für Kulturschaffende. 10 Europäische Sprachen." },
       "d5-5": { "title": "D5.5 · Outreach-Plattform", "description": "KI-gestützte Zweiwegkommunikationsplattform mit KPI-Dashboard in Echtzeit. KI-Agenten-Personas: Museumsführung, historische Figur, fiktives Maskottchen." },
       "d5-7": { "title": "D5.7 · Prototyp des Timetravel Companion", "description": "KI-gestützte Begleitung, die Museumsbesuche durch Sprachinteraktion, kontextbezogenes Erzählen und optionale holografische Inhalte bereichert. 100 individuelle Geräte." },
       "d3-3": { "title": "D3.3 · Bericht zum immersiven Produktionsprozess", "description": "Durchgang durch den Produktionsprozess vor Ort – Narrativ, technische Entscheidungen, Kooperationsmodell, kulturelle Herausforderungen. Eine Referenz für andere Einrichtungen." },
@@ -687,9 +687,9 @@
       "d2-3": { "title": "D2.3 · Abschließende Evaluation des immersiven Erlebnisses", "description": "Umfassende Bewertung: emotionale Wirkung, Barrierefreiheit, Systemleistung, betriebliche Nachhaltigkeit." },
       "d4-2": { "title": "D4.2 · Zusammenfassung zu UX und Geschäftsmodell", "description": "Bewertung des Publikumsengagements, der Begrüßungs-/Verabschiedungswege und der Machbarkeit der am Ort getesteten Geschäftsmodelle." },
       "d5-9": { "title": "D5.9 · Bericht zur projektübergreifenden Vernetzung", "description": "Dokumentiert die projektübergreifenden Vernetzungsaktivitäten – Treffen, gemeinsame Veranstaltungen, zentrale Ergebnisse, Vorschläge für fortlaufenden Austausch." },
-      "d5-10": { "title": "D5.10 · Abschließender Zukunftsdesign-Bericht", "description": "Digitale Plattform, die die Projektergebnisse und ihr langfristiges Potenzial präsentiert. KI-gestützte Medienwerkzeuge personalisieren Inhalte in 10 EU-Sprachen." },
+      "d5-10": { "title": "D5.10 · Abschließender Zukunftsdesign-Bericht", "description": "Digitale Plattform, die die Projektergebnisse und ihr langfristiges Potenzial präsentiert. KI-gestützte Medienwerkzeuge personalisieren Inhalte in 10 Europäische Sprachen." },
       "e1": { "title": "E1 · Eröffnung der Snapsting-Ausstellung", "description": "Das immersive Snapsting-Erlebnis wird im Viborg Museum für das Publikum geöffnet. Dreijährige Laufzeit.", "tag": "Ausstellung · Viborg · 150 000 pax" },
-      "e5": { "title": "E5 · Öffentliche Lancierung · KIKK-Festival", "description": "Gut sichtbare Lancierung des immersiven Erlebnisses beim KIKK-Festival 2027. Konsortiumspanel.", "tag": "Panel · Namur · 25 000 pax" },
+      "e5": { "title": "E5 · Öffentliche Premiere · KIKK-Festival", "description": "Gut sichtbare Lancierung des immersiven Erlebnisses beim KIKK-Festival 2027. Konsortiumspanel.", "tag": "Panel · Namur · 25 000 pax" },
       "e6": { "title": "E6 · Eröffnung der Ausstellung im Le Pavillon", "description": "Die Ausstellung Immersive ECHO wird im Le Pavillon in Namur für das Publikum geöffnet.", "tag": "Ausstellung · Namur · 25 000 pax" },
       "e2": { "title": "E2 · Jugend-Sprint: Future Worlds Builder", "description": "Nutzerzentrierter Sprint mit Fokus auf digitale Gewandtheit und Neugier. 3 Tage.", "tag": "Sprint · Göteborg · 80 pax" },
       "e3": { "title": "E3 · Neurodivergenz-Sprint", "description": "Nicht-lineare Navigation; sensorische Balance und nicht-lineares Engagement. 2 Tage.", "tag": "Sprint · Berlin · 40 pax" },

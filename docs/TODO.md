@@ -67,7 +67,7 @@ Memory is fragile. AI context gets compressed at unpredictable intervals. If you
 
 - [ ] **[Content] Privacy policy page** -- Now pressing: the site collects personal data (newsletter + contact forms), the subscribe form's consent checkbox references a Privacy Policy that links nowhere (`src/pages/Newsletter.tsx` TODO), and every newsletter email footer links "Privacy policy" to the homepage (`newsletters/` issues). Create the page, then link it from the consent checkbox, the site footer, and future newsletter issues.
 
-- [ ] **[Newsletter] LinkedIn URL format** -- Footer + Newsletter page link to `linkedin.com/in/echo-immersive-216916403` (personal-profile format). If a proper LinkedIn *company* page is created, swap the URL in `src/components/Footer/Footer.tsx` and `src/pages/Newsletter.tsx`.
+- [x] **[Newsletter] LinkedIn URL format** ✅ DONE (2026-10-23) -- Footer + Newsletter page now link to the company page `linkedin.com/company/immersive-echo/home/` (was a personal-profile `/in/` URL).
 
 - [x] **[A11y] Social icon aria-labels** -- Done: Footer and Contact social links carry `aria-label="Follow us on Facebook/Instagram/LinkedIn"`.
 
