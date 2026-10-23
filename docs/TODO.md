@@ -10,8 +10,9 @@ Memory is fragile. AI context gets compressed at unpredictable intervals. If you
 
 ### i18n / translations
 
+- [ ] **[i18n] Check long labels in the Timeline when enabling each language** -- Index-row type column is 110px, lane labels 132px. DE needed soft hyphens (done 2026-10-23). Dutch "Opleverbaar" is ~110px at 11px (borderline); check `/nl`, `/fi`, `/ro`, `/sl`, `/uk` before adding each to `AVAILABLE_LANGUAGES`. Fix = U+00AD in `timeline.type.*` (see `docs/i18n_deployment.md`).
 - [ ] **[i18n] `fr` / `it` newsletter files missing** -- The Issue No. 1 entry below says `fr` and `it` newsletter files exist, but only `en`, `es`, `sv` are on disk and tracked in git (audit 2026-10-16). Decide: restore them, or accept English fallback and fix the note.
-- [ ] **[i18n] Native review of translations** -- Picker is LIVE (2026-10-16, `SHOW_LANGUAGE_SWITCHER = true`) offering only `en` + `es` (human-reviewed). The other 10 are URL-only (`/{lang}/…`, noindex) until reviewed; as each is approved, add its code to `AVAILABLE_LANGUAGES` in `src/i18n.ts`. Pending: fr, it, sv, de, nl, da, sl, ro, fi, uk. See `docs/i18n_deployment.md`, "Public picker & review mode".
+- [ ] **[i18n] Native review of translations** -- Picker is LIVE (2026-10-16, `SHOW_LANGUAGE_SWITCHER = true`) offering `en` + `es` + `de` (human-reviewed; `de` added 2026-10-23). The other 9 are URL-only (`/{lang}/…`, noindex) until reviewed; as each is approved, add its code to `AVAILABLE_LANGUAGES` in `src/i18n.ts`. Pending: fr, it, sv, nl, da, sl, ro, fi, uk. See `docs/i18n_deployment.md`, "Public picker & review mode".
 
 > Foundation shipped 2026-10-09 (react-i18next, `/:lang` routing, translated Header/Footer, EN populated; all 11 other languages since translated). Full setup + "how to add a language" in `docs/i18n_deployment.md`. Order of work: (1) extract all page bodies into `en` so there's a complete English source, (2) translate each language file, (3) newsletter language workstream.
 

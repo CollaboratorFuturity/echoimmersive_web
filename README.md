@@ -115,6 +115,7 @@ See [docs/PROGRESS.md](docs/PROGRESS.md) for the full implementation checklist.
 - Sandbox routes (`/lynch-home`, `/lynch-about`, `/ismaila-home`, `/brand-home`) remain for design exploration
 - **Accessibility: WCAG 2.2 AA hardening complete (2026-07-28/29)** — 0 axe-core violations on all 12 routes; keyboard behavior (skip link, mobile-menu Esc, Lightbox modal, FAQ accordion) machine-verified with headless Chrome; 320px reflow clean; all alt text human-reviewed. See [docs/WCAG_AUDIT.md](docs/WCAG_AUDIT.md) (criterion-by-criterion status) and [docs/A11Y_VERIFICATION_CHECKLIST.md](docs/A11Y_VERIFICATION_CHECKLIST.md) (manual VoiceOver script — the last step before an AA claim, plus publishing an accessibility statement)
 - **i18n foundation shipped (2026-10-09)** — react-i18next with language-prefixed routing (`/:lang/…`), header language switcher, translated Header/Footer, and `public/locales/`. 10 EU languages committed (TRD C7); all 11 other languages have since been translated (AI-drafted, native review pending; audited 2026-10-16). Setup + how-to in [docs/i18n_deployment.md](docs/i18n_deployment.md); per-language and page-extraction tasks in [docs/TODO.md](docs/TODO.md)
+- **Language picker live (2026-10-16)** — header picker offers only human-reviewed languages (`AVAILABLE_LANGUAGES` in `src/i18n.ts`: `en`, `es`, `de`); the other nine translations exist but are URL-only and `noindex` until reviewed. Details and launch steps in [docs/i18n_deployment.md](docs/i18n_deployment.md)
 
 ## Replacing an image (deploy runbook)
 

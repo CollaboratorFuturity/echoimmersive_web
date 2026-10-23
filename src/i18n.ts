@@ -46,7 +46,7 @@ export const LANGUAGE_NAMES: Record<Lang, string> = {
 // appear in the language pickers and in hreflang. The others still resolve by URL
 // (e.g. /sv/about falls back to English text) so a translation can be previewed
 // while it is being written. To launch a language: finish its files, then add it here.
-export const AVAILABLE_LANGUAGES: readonly Lang[] = ['en', 'es']
+export const AVAILABLE_LANGUAGES: readonly Lang[] = ['en', 'es', 'de']
 
 // Public language picker. TRUE: the header picker is shown and offers AVAILABLE_LANGUAGES
 // (the human-reviewed ones), "/" goes to the visitor's last/browser language if it is
