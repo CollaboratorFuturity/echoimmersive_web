@@ -49,13 +49,6 @@ export default function Footer() {
               </a>
             ))}
           </div>
-          <a
-            href="mailto:coordinator@lindholmen.se"
-            className="text-sm transition-colors duration-200 hover:text-brand-lilac"
-            style={{ color: 'var(--ink-subtle)' }}
-          >
-            coordinator@lindholmen.se
-          </a>
         </div>
 
         {/* Column 2: Quick links */}

@@ -112,9 +112,9 @@
     sv: {
       wp1Short: 'WP1 — SAMORDNING — LSP',
       wp1Full:  'WP1 — PROJEKTSAMORDNING — LINDHOLMEN SCIENCE PARK',
-      wp2Label: 'WP2 — Externt labb',
-      wp2Lead:  'ANSVARIG: TSC + NPIAT',
-      wp2Items: ['Prototypa immersiva format', 'Användarcentrerad validering', 'Tester av inkluderande design', 'Modulära driftsättningsguider'],
+      wp2Label: 'WP2 — Externt immersivt designteam',
+      wp2Lead:  'ANSVARIG: TSC',
+      wp2Items: ['Prototypa immersiva format', 'Användarcentrerad validering', 'Tester av inkluderande design', 'Guider för installation och anpassning'],
       wp3Label: 'WP3 — Museum på plats',
       wp3Lead:  'ANSVARIG: VIBORG MUSEUM',
       wp3Items: ['Utveckling av kulturarvsnarrativ', 'Rumslig design och teknik', 'Tester av publikgenomslag', 'Processdokumentation'],
@@ -375,7 +375,7 @@
 
     const yTop      = s.yTop;
     const yTrackTop = s.yTrackTop;
-    const yTestbed  = s.yTestbed;
+    let yTestbed    = s.yTestbed;
 
     // ── WP1 coordination bar ──
     layer.append('rect')
@@ -395,6 +395,30 @@
       .attr('letter-spacing', '0.15em')
       .text(tier === 'xs' ? T.wp1Short : T.wp1Full);
 
+    // Wrap text onto extra lines when it is wider than maxW (long translations, narrow phones).
+    // Track boxes grow with their content (see trackExtra), so nothing overlaps the partner
+    // tags or spills into the neighbouring column.
+    function wrapLines(text, fontSize, weight, family, maxW) {
+      const probe = layer.append('text')
+        .attr('font-size', fontSize).attr('font-weight', weight)
+        .attr('font-family', family).attr('visibility', 'hidden');
+      const lines = [];
+      let cur = '';
+      text.split(' ').forEach(word => {
+        const test = cur ? cur + ' ' + word : word;
+        probe.text(test);
+        if (cur && probe.node().getComputedTextLength() > maxW) { lines.push(cur); cur = word; }
+        else cur = test;
+      });
+      if (cur) lines.push(cur);
+      probe.remove();
+      return lines;
+    }
+    const TITLE_FONT = 'Montserrat, sans-serif';
+    const ITEM_FONT  = 'Roboto, sans-serif';
+    const titleLineH = s.titleFont + 3;
+    const itemLineH  = s.itemFont + 3;
+
     // ── TRACK BOX helper ──
     function drawTrackBox(x, y, w, h, color, label, lead, items) {
       const g = layer.append('g');
@@ -407,52 +431,75 @@
         .attr('stroke', color)
         .attr('stroke-width', 2);
 
+      const titleLines = wrapLines(label, s.titleFont, 700, TITLE_FONT, w - 16);
+      const extra = (titleLines.length - 1) * titleLineH;
+
       g.append('rect')
         .attr('x', x).attr('y', y)
-        .attr('width', w).attr('height', 38)
+        .attr('width', w).attr('height', 38 + extra)
         .attr('rx', 12).attr('ry', 12)
         .attr('fill', color)
         .attr('opacity', 0.18);
 
       g.append('rect')
-        .attr('x', x).attr('y', y + 20)
+        .attr('x', x).attr('y', y + 20 + extra)
         .attr('width', w).attr('height', 18)
         .attr('fill', color)
         .attr('opacity', 0.18);
 
-      g.append('text')
-        .attr('x', x + w / 2).attr('y', y + 18)
-        .attr('text-anchor', 'middle')
-        .attr('fill', color)
-        .attr('font-size', s.titleFont)
-        .attr('font-weight', 700)
-        .attr('font-family', 'Montserrat, sans-serif')
-        .text(label);
+      titleLines.forEach((line, i) => {
+        g.append('text')
+          .attr('x', x + w / 2).attr('y', y + 18 + i * titleLineH)
+          .attr('text-anchor', 'middle')
+          .attr('fill', color)
+          .attr('font-size', s.titleFont)
+          .attr('font-weight', 700)
+          .attr('font-family', 'Montserrat, sans-serif')
+          .text(line);
+      });
 
       g.append('text')
-        .attr('x', x + w / 2).attr('y', y + 32)
+        .attr('x', x + w / 2).attr('y', y + 32 + extra)
         .attr('text-anchor', 'middle')
         .attr('fill', 'rgba(247,243,224,0.5)')
         .attr('font-size', s.leadFont)
         .attr('font-family', 'JetBrains Mono, monospace')
         .text(lead);
 
-      items.forEach((item, i) => {
-        const itemY = y + 58 + i * s.itemGap;
-        g.append('text')
-          .attr('x', x + w / 2).attr('y', itemY)
-          .attr('text-anchor', 'middle')
-          .attr('fill', 'rgba(247,243,224,0.85)')
-          .attr('font-size', s.itemFont)
-          .attr('font-family', 'Roboto, sans-serif')
-          .text(item);
+      let itemY = y + 58 + extra;
+      items.forEach(item => {
+        const lines = wrapLines(item, s.itemFont, 400, ITEM_FONT, w - 16);
+        lines.forEach((line, li) => {
+          g.append('text')
+            .attr('x', x + w / 2).attr('y', itemY + li * itemLineH)
+            .attr('text-anchor', 'middle')
+            .attr('fill', 'rgba(247,243,224,0.85)')
+            .attr('font-size', s.itemFont)
+            .attr('font-family', 'Roboto, sans-serif')
+            .text(line);
+        });
+        itemY += (lines.length - 1) * itemLineH + s.itemGap;
       });
 
       return g;
     }
 
     const trackW = W * s.trackWRatio;
-    const trackH = s.trackH;
+    // Measure what the two track boxes will contain; grow them (and push everything below
+    // down) if wrapped text would run into the partner-tag rows at the bottom.
+    const tagRows = s.tagWrap ? 2 : 1;
+    const tagBlock = tagRows * 16 + (tagRows - 1) * 4 + 12 + 8;   // tags + bottom pad + gap
+    const trackExtra = Math.max(0, ...[
+      [T.wp2Label, T.wp2Items], [T.wp3Label, T.wp3Items],
+    ].map(([label, items]) => {
+      const extraTitle = (wrapLines(label, s.titleFont, 700, TITLE_FONT, trackW - 16).length - 1) * titleLineH;
+      let bottom = 58 + extraTitle;
+      items.forEach(it => { bottom += (wrapLines(it, s.itemFont, 400, ITEM_FONT, trackW - 16).length - 1) * itemLineH + s.itemGap; });
+      bottom += 4 - s.itemGap;                                      // last baseline + descender
+      return bottom + tagBlock - s.trackH;
+    }));
+    yTestbed += trackExtra;
+    const trackH = s.trackH + trackExtra;
     const leftX  = colLeft  - trackW / 2;
     const rightX = colRight - trackW / 2;
 
@@ -673,6 +720,8 @@
 
   // First render
   renderChart();
+  // Title wrapping depends on real glyph widths, so redraw once the webfonts are in.
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(renderChart);
 
   // Debounced resize listener
   let resizeTimer;

@@ -80,13 +80,6 @@ export default function Contact() {
             <h3 className="font-bold mb-2 text-brand-cream">{t('contact.coordinatorHeading')}</h3>
             <p style={{ color: 'var(--ink-muted)', fontFamily: 'Roboto, sans-serif' }}>Lindholmen Science Park</p>
             <p style={{ color: 'var(--ink-muted)', fontFamily: 'Roboto, sans-serif' }}>{t('contact.coordinatorLocation')}</p>
-            <a
-              href="mailto:coordinator@lindholmen.se"
-              className="mt-3 block text-brand-lilac hover:text-brand-lilac/80 transition-colors duration-200"
-              style={{ fontFamily: 'Roboto, sans-serif' }}
-            >
-              coordinator@lindholmen.se
-            </a>
           </div>
 
           <div>
