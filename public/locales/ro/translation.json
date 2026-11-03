@@ -16,9 +16,9 @@
     },
     "missionLabel": "Misiunea",
     "mission": {
-      "p1": "Patrimoniul cultural există pentru că oamenii au nevoie de el. Funcționează ca o legătură vie cu locul, cu comunitatea, cu poveștile care explică cine suntem și cum am ajuns aici. Și totuși, pentru milioane de oameni din întreaga Europă, această legătură se destramă. Spațiile și formatele menite să poarte aceste povești pur și simplu nu au ținut pasul cu oamenii pe care ar trebui să îi servească.",
-      "p2": "Instituțiile mai mici de patrimoniu cultural resimt acest lucru cel mai acut. Fără resursele marilor instituții de referință, ele văd cum publicul se micșorează, cum generațiile mai tinere se îndepărtează și cum comunitățile care nu s-au regăsit niciodată cu adevărat în colecțiile lor încetează cu totul să mai vină. Instrumentele pentru a schimba acest lucru există. Experiențele imersive, multisenzoriale, care te învăluie într-o poveste în loc să ți-o prezinte din spatele unei vitrine, sunt dovedite și puternice. Dar rămân inaccesibile pentru cei mai mulți.",
-      "p3": "Immersive ECHO pornește de la o altă premisă: că patrimoniul este cel mai puternic atunci când este trăit colectiv, în spații comune, de oameni care poate nu l-ar fi căutat de unii singuri. Misiunea proiectului este de a oferi instituțiilor culturale din întreaga Europă mijloacele concrete de a readuce oamenii în poveste. Povestea lor."
+      "p1": "Patrimoniul cultural există pentru că oamenii au nevoie de el. Funcționează ca o legătură vie cu  locul, cu comunitatea, cu poveștile care explică cine suntem și cum am ajuns aici. Și totuși,  pentru milioane de oameni din întreaga Europă, această legătură se destramă. Spațiile și  formatele menite să transmită aceste povești pur și simplu nu au ținut pasul cu oamenii cărora  ar trebui să li se adreseze.",
+      "p2": "Instituțiile mai mici de patrimoniu cultural resimt acest lucru cel mai acut. Fără resursele marilor  instituții de referință, ele văd cum publicul se restrânge, cum generațiile mai tinere se  îndepărtează și cum comunitățile care nu s-au regăsit niciodată cu adevărat în colecțiile lor  încetează cu totul să le mai viziteze. Instrumentele necesare pentru a schimba această situație  există. Experiențele imersive, multisenzoriale, care te învăluie într-o poveste în loc să ți-o  prezinte din spatele unei vitrine, și-au demonstrat eficacitatea și au un impact puternic. Dar  rămân inaccesibile pentru cele mai multe dintre aceste instituții.",
+      "p3": "Immersive ECHO pornește de la o altă premisă: patrimoniul își dezvăluie cel mai bine forța  atunci când este trăit colectiv, în spații comune, de oameni care poate nu l-ar fi căutat pe cont  propriu. Misiunea proiectului este de a oferi instituțiilor culturale din întreaga Europă mijloacele  concrete de a readuce oamenii în poveste. Povestea lor."
     },
     "quote": "Patrimoniul este cel mai puternic atunci când este trăit colectiv, în spații comune, de oameni care poate nu l-ar fi căutat de unii singuri.",
     "stayConnected": "Rămâi conectat",
@@ -30,28 +30,28 @@
   },
   "about": {
     "title": "Despre Immersive ECHO",
-    "objectiveLabel": "Obiectivul",
-    "objectiveIntro": "Proiectul Immersive ECHO urmărește cinci obiective strategice concepute pentru a răspunde provocărilor cu care se confruntă instituțiile de patrimoniu cultural din Europa. Aceste obiective formează coloana vertebrală a unei transformări scalabile, incluzive și durabile a modului în care instituțiile culturale implică publicul prin povestirea imersivă.",
+    "objectiveLabel": "Obiectiviele",
+    "objectiveIntro": "Proiectul Immersive ECHO urmărește cinci obiective strategice concepute pentru a răspunde  provocărilor cu care se confruntă instituțiile de patrimoniu cultural din Europa. Aceste obiective  constituie baza unei transformări scalabile, incluzive și durabile a modului în care instituțiile  culturale implică publicul prin povestirea imersivă.",
     "objectives": {
       "o1": {
         "title": "Dezvoltarea unui model scalabil pentru povestirea culturală imersivă",
-        "body": "Vom crea un cadru transferabil care ajută instituțiile culturale să adopte formate imersive captivante emoțional, fezabile tehnic și viabile economic — sprijinind transformarea digitală la nivelul întregului sector."
+        "body": "Vom crea un cadru transferabil care să ajute instituțiile culturale să adopte formate imersive  captivante din punct de vedere emoțional, fezabile din punct de vedere tehnic și viabile  economic, sprijinind astfel transformarea digitală la nivelul întregului sector."
       },
       "o2": {
-        "title": "Activarea unor spații incluzive, cu prag scăzut, pentru co-creare și inovare",
-        "body": "Vom înființa laboratoare experimentale în care profesioniștii din cultură, tehnologii și utilizatori diverși pot co-crea, prototipa și testa formate imersive — încurajând consolidarea capacităților și inovarea artistică în întreaga Europă."
+        "title": "Crearea unor spații incluzive și ușor accesibile pentru co-creare și inovare",
+        "body": "Vom înființa laboratoare experimentale în care profesioniștii din domeniul culturii, specialiștii în  tehnologie și utilizatorii din medii diverse să poată crea împreună, dezvolta prototipuri și testa formate imersive, contribuind astfel la dezvoltarea competențelor și la inovarea artistică în  întreaga Europă."
       },
       "o3": {
-        "title": "Demonstrarea valorii publice și a implicării prin instalații în context real",
-        "body": "Vom implementa experiențe imersive atât în spații publice, cât și instituționale pentru a evalua acoperirea publicului, impactul emoțional și fezabilitatea operațională — contribuind la noi modele de dezvoltare a publicului. Această dublă amplasare — atât în spații comunitare, cât și instituționale — asigură că formatele imersive nu doar ajung la oameni în afara locurilor de patrimoniu cultural, ci și readuc public nou în instituțiile culturale, sporind numărul de vizitatori și revitalizând misiunea lor publică."
+        "title": "Demonstrarea valorii publice și a capacității de implicare a publicului prin instalații  testate în condiții reale",
+        "body": "Vom implementa experiențe imersive atât în spații publice, cât și în spații instituționale, pentru a  evalua capacitatea acestora de a ajunge la public, impactul emoțional și fezabilitatea  operațională, contribuind astfel la noi modele de dezvoltare a publicului. Această dublă  amplasare, în spații comunitare și instituționale, asigură că formatele imersive ajung la oameni  dincolo de spațiile de patrimoniu cultural și atrag noi categorii de public în instituțiile culturale,  sporind numărul de vizitatori și revitalizând misiunea publică a acestor instituții."
       },
       "o4": {
-        "title": "Construirea unei rețele paneuropene pentru schimbul de cunoștințe și inovarea culturală",
-        "body": "Vom consolida colaborarea intersectorială prin conectarea instituțiilor, a creatorilor și a partenerilor tehnologici și prin partajarea de instrumente și perspective cu acces deschis, care permit replicarea pe termen lung și alinierea la politici."
+        "title": "Construirea unei rețele paneuropene pentru schimbul de cunoștințe și inovarea  culturală",
+        "body": "Vom consolida colaborarea intersectorială prin conectarea instituțiilor, a creatorilor și a  partenerilor tehnologici și prin punerea la dispoziție, în regim de acces deschis, a unor  instrumente și cunoștințe care să permită replicarea pe termen lung și alinierea la politicile  relevante."
       },
       "o5": {
-        "title": "Promovarea incluziunii, a accesibilității, precum și a bunăstării culturale și a democrației prin design",
-        "body": "Vom integra designul incluziv și metodele participative pe tot parcursul proiectului pentru a ne asigura că experiențele culturale imersive reflectă diversitatea societății europene și sprijină coeziunea socială și accesibilitatea."
+        "title": "Promovarea incluziunii, a accesibilității, a bunăstării culturale și a democrației prin  design",
+        "body": "Vom integra principiile designului incluziv și metodele participative pe tot parcursul proiectului,  pentru a ne asigura că experiențele culturale imersive reflectă diversitatea societății europene și  sprijină coeziunea socială și accesibilitatea."
       }
     },
     "quote": "Patrimoniul este cel mai puternic atunci când este trăit colectiv, în spații comune, de oameni care poate nu l-ar fi căutat de unii singuri.",
@@ -82,7 +82,7 @@
     "infographic": {
       "title": "Immersive ECHO — metodologie de design pe două direcții",
       "label": "Despre:",
-      "caption": "Design pe două direcții: laboratorul extern și muzeul la fața locului converg într-un banc de testare public pentru a scala experiențele imersive de patrimoniu."
+      "caption": "Design pe două direcții: laboratorul extern și muzeul propriu-zis converg într-un banc  de testare public pentru a extinde la scară largă experiențele imersive de patrimoniu."
     },
     "factsDivider": "Date despre proiect",
     "fullStructureCta": "Structură completă, sarcini și livrabile",
@@ -574,7 +574,7 @@
       },
       "q14": {
         "question": "Cum se pot implica alte instituții de patrimoniu cultural?",
-        "answer": "În mai multe moduri concrete. Platforma ECHOSYSTEM va include un portal public prin care profesioniștii din cultură pot accesa truse de instrumente în formă de ciornă, se pot alătura forumurilor de schimb între colegi și se pot înscrie la evenimente. Atelierele lunare Futuremaking din orașele partenere sunt deschise profesioniștilor externi. Trei masterclass-uri online acoperă fluxurile tehnice de producție, direcția creativă și colaborarea interdisciplinară. Bancurile de testare publice de la Le Pavillon și Viborg Museum servesc drept medii de învățare în timp real. Toate trusele de instrumente și materialele de formare vor fi disponibile gratuit în toate cele zece limbi ale partenerilor. Urmărește proiectul cu #ImmersiveECHO sau abonează-te la buletinul informativ."
+        "answer": "În mai multe moduri concrete. Platforma ECHOSYSTEM va include un portal public prin care  profesioniștii din domeniul culturii vor putea accesa truse de instrumente în versiune  preliminară, participa la forumuri de schimb de experiență între colegi și se vor putea înscrie la  evenimente. Atelierele lunare Futuremaking din orașele partenere sunt deschise și  profesioniștilor din afara proiectului. Trei masterclass-uri online acoperă fluxurile tehnice de  producție, direcția creativă și colaborarea interdisciplinară. Bancurile de testare publice de la Le  Pavillon și Viborg Museum servesc drept medii de învățare în timp real. Toate trusele de  instrumente și materialele de formare vor fi disponibile gratuit în toate cele zece limbi ale  partenerilor. Urmărește proiectul folosind hashtagul #ImmersiveECHO sau abonează-te la  buletinul informativ."
       }
     }
   },
