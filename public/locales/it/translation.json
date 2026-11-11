@@ -72,7 +72,7 @@
       },
       "coordination": {
         "title": "Coordinamento del progetto",
-        "desc": "Lindholmen Science Park garantisce l'allineamento strategico tra tutti i partner, monitorando traguardi, budget e deliverable e gestendo i rischi e la rendicontazione alla Commissione europea."
+        "desc": "Lindholmen Science Park garantisce l'allineamento strategico tra tutti i partner, monitorando traguardi, budget e consegne e gestendo i rischi e la rendicontazione alla Commissione europea."
       },
       "comms": {
         "title": "Comunicazione e impatto",
@@ -85,7 +85,7 @@
       "caption": "Progettazione a doppio binario: il laboratorio off-site e il museo on-site convergono in un banco di prova pubblico per scalare le esperienze immersive del patrimonio."
     },
     "factsDivider": "Dati del progetto",
-    "fullStructureCta": "Struttura completa, attività e deliverable",
+    "fullStructureCta": "Struttura completa, attività e consegne",
     "projectDetails": "Dettagli del progetto",
     "details": {
       "durationLabel": "Durata",
@@ -107,7 +107,7 @@
       "badge": "ISTITUZIONE DEL PATRIMONIO CULTURALE",
       "location": "Viborg, Danimarca",
       "imageAlt": "Viborg Museum",
-      "description": "Il Viborg Museum è il museo di storia culturale dell'area di Viborg, in Danimarca, e presenta il patrimonio della regione dalla preistoria a oggi. All'interno di ECHO, il museo ospiterà l'installazione immersiva, portando al suo pubblico l'approccio di ECHO alla narrazione immersiva."
+      "description": "Il Viborg Museum è il museo di storia culturale dell'area di Viborg, in Danimarca, e presenta il patrimonio della regione dalla preistoria a oggi. All'interno di ECHO, il museo ospiterà l'installazione “Snapsting”, portando al suo pubblico l'approccio di ECHO alla narrazione immersiva."
     },
     "pavillon": {
       "badge": "SCALABILITÀ E ADATTAMENTO",
@@ -181,7 +181,7 @@
     "backToAbout": "← Torna a Informazioni",
     "eyebrow": "Per partner e valutatori",
     "title": "Risorse del progetto",
-    "intro": "Indice di riferimento della struttura del progetto: pacchetti di lavoro, attività, traguardi, deliverable ed eventi. Fonte: domanda di sovvenzione CREA-CULT-2025-COOP-3. Destinato ai partner del consorzio, ai valutatori e ai revisori della Commissione europea.",
+    "intro": "Indice di riferimento della struttura del progetto: pacchetti di lavoro, attività, traguardi, consegne ed eventi. Fonte: domanda di sovvenzione CREA-CULT-2025-COOP-3. Destinato ai partner del consorzio, ai valutatori e ai revisori della Commissione europea.",
     "objectives": "Obiettivi",
     "partnersLabel": "Partner",
     "leadPrefix": "Responsabile:",
@@ -194,7 +194,7 @@
       "wp": "Pacchetti di lavoro",
       "tasks": "Attività",
       "milestones": "Traguardi",
-      "deliverables": "Deliverable",
+      "deliverables": "Consegne",
       "events": "Eventi",
       "media": "Media / Marchio",
       "presskit": "Kit stampa"
@@ -214,7 +214,7 @@
         "short": "Allineamento strategico, traguardi, budget, gestione dei rischi e rapporti con la Commissione europea in tutto il consorzio.",
         "obj": {
           "0": "Garantire un coordinamento strategico, trasparente e inclusivo per assicurare che tutti i partner contribuiscano efficacemente agli obiettivi del progetto.",
-          "1": "Monitorare tempistiche, deliverable e avanzamento finanziario per garantire responsabilità e un uso efficiente delle risorse.",
+          "1": "Monitorare tempistiche, consegne e avanzamento finanziario per garantire responsabilità e un uso efficiente delle risorse.",
           "2": "Facilitare una comunicazione chiara e continua con la Commissione europea e garantire la conformità a tutti i requisiti normativi e di rendicontazione.",
           "3": "Individuare e gestire i rischi in modo proattivo per tutelare la realizzazione, rafforzare la resilienza e garantire risultati ad alto impatto in linea con le priorità di CREA."
         }
@@ -279,7 +279,7 @@
       },
       "T1-2": {
         "title": "Monitorare avanzamento, rischi e budget",
-        "description": "Monitorare traguardi, deliverable, allineamento alla checklist verde (Green) e flussi finanziari, e gestire i rischi in modo proattivo per garantire trasparenza e responsabilità."
+        "description": "Monitorare traguardi, consegne, allineamento alla checklist verde (Green) e flussi finanziari, e gestire i rischi in modo proattivo per garantire trasparenza e responsabilità."
       },
       "T1-3": {
         "title": "Gestire comunicazione e rendicontazione",
@@ -391,7 +391,7 @@
       "MS2-3": { "title": "Serie di sprint di design inclusivo completata", "description": "Tutti e quattro gli sprint di cocreazione inclusiva completati; risultati integrati nelle iterazioni di progettazione." },
       "MS3-2": { "title": "Produzione finale completata", "description": "Tutti gli elementi di Snapsting finalizzati, inclusi contenuto, tecnologia e design spaziale." },
       "MS3-3": { "title": "Esperienza installata e operativa", "description": "Snapsting completamente installato e in funzione in loco al Viborg Museum." },
-      "MS3-4": { "title": "Incontro del consorzio e tavola rotonda", "description": "Tutti i partner del consorzio si riuniscono a Viborg, con una tavola rotonda al Animation Festival." },
+      "MS3-4": { "title": "Incontro del consorzio e tavola rotonda", "description": "Tutti i partner del consorzio si riuniscono a Viborg, con una tavola rotonda al festival di Animazione di Viborg." },
       "MS1-2": { "title": "Revisione del coordinamento a metà percorso", "description": "Revisione dell'avanzamento, dei rischi, della qualità della collaborazione e dell'uso delle risorse a metà percorso." },
       "MS5-2": { "title": "Revisione dell'impatto a metà percorso completata", "description": "Revisione a metà percorso che valuta comunicazione, trasferimento di conoscenze, coinvolgimento degli stakeholder e portata della divulgazione." },
       "MS4-1": { "title": "Quadro di installazione e modello di business definiti", "description": "Strategie per l'installazione pubblica stabilite, insieme a un modello di business sostenibile cosviluppato con i partner." },
@@ -613,15 +613,15 @@
   "timeline": {
     "eyebrow": "Cronoprogramma del progetto · M1 — M30 · feb 2026 — lug 2028",
     "heading": "Trenta mesi, in pubblico.",
-    "lede": "Immersive ECHO è un progetto Europa Creativa di 30 mesi: progettare, costruire, testare, scalare. Traguardi, deliverable ed eventi pubblici del consorzio di 15 organizzazioni in 10 Paesi dell'UE. Passa il mouse su un mese per metterlo a fuoco; clicca su una voce per leggerla.",
+    "lede": "Immersive ECHO è un progetto Europa Creativa di 30 mesi: progettare, costruire, testare, scalare. Traguardi, consegne ed eventi pubblici del consorzio di 15 organizzazioni in 10 Paesi dell'UE. Passa il mouse su un mese per metterlo a fuoco; clicca su una voce per leggerla.",
     "type": {
-      "deliverable": "Deliverable",
+      "deliverable": "Consegna",
       "milestone": "Traguardo",
       "event": "Evento"
     },
     "stats": {
       "done": "Fatti",
-      "deliverables": "Deliverable",
+      "deliverables": "Consegne",
       "milestones": "Traguardi",
       "events": "Eventi"
     },
@@ -656,7 +656,7 @@
       "ms3-2": { "title": "MS2.3 · Sprint di design inclusivo completati", "description": "Tutti e quattro gli sprint di cocreazione inclusiva completati; risultati integrati nelle iterazioni di progettazione." },
       "ms2-3": { "title": "MS3.2 · Produzione di Snapsting completata", "description": "Tutti gli elementi di Snapsting finalizzati, inclusi contenuto, tecnologia e design spaziale." },
       "ms3-3": { "title": "MS3.3 · Snapsting installato a Viborg", "description": "Snapsting completamente installato e in funzione in loco al Viborg Museum." },
-      "ms4-3": { "title": "MS3.4 · Incontro del consorzio e tavola rotonda", "description": "Tutti i partner del consorzio si riuniscono a Viborg, con una tavola rotonda al Animation Festival." },
+      "ms4-3": { "title": "MS3.4 · Incontro del consorzio e tavola rotonda", "description": "Tutti i partner del consorzio si riuniscono a Viborg, con una tavola rotonda al festival di Animazione di Viborg." },
       "ms2-1": { "title": "MS1.2 · Revisione del coordinamento a metà percorso", "description": "Revisione dell'avanzamento, dei rischi, della qualità della collaborazione e dell'uso delle risorse a metà percorso." },
       "ms2-5": { "title": "MS5.2 · Revisione dell'impatto a metà percorso", "description": "Revisione a metà percorso di comunicazione, trasferimento di conoscenze, coinvolgimento degli stakeholder e portata della divulgazione." },
       "ms1-4": { "title": "MS4.1 · Quadro di installazione e modello di business", "description": "Strategie per l'installazione pubblica stabilite, insieme a un modello di business sostenibile cosviluppato con i partner." },
@@ -691,9 +691,9 @@
       "e1": { "title": "E1 · Apertura della mostra Snapsting", "description": "L'esperienza immersiva Snapsting apre al pubblico al Viborg Museum. Esposizione triennale.", "tag": "Mostra · Viborg · 150 000 pax" },
       "e5": { "title": "E5 · Lancio pubblico · Festival KIKK", "description": "Lancio ad alta visibilità dell'esperienza immersiva al festival KIKK 2027. Panel del consorzio.", "tag": "Panel · Namur · 25 000 pax" },
       "e6": { "title": "E6 · Apertura della mostra Le Pavillon", "description": "La mostra Immersive ECHO apre al pubblico a Le Pavillon, a Namur.", "tag": "Mostra · Namur · 25 000 pax" },
-      "e2": { "title": "E2 · Sprint giovani: Future Worlds Builder", "description": "Sprint centrato sull'utente incentrato sulla dimestichezza digitale e sulla curiosità. 3 giorni.", "tag": "Sprint · Göteborg · 80 pax" },
+      "e2": { "title": "E2 · Sprint giovani: Future Worlds Builder", "description": "Sprint focalizzato sull'utente, incentrato sulla dimestichezza digitale e sulla curiosità. 3 giorni.", "tag": "Sprint · Göteborg · 80 pax" },
       "e3": { "title": "E3 · Sprint neurodivergenti", "description": "Navigazione non lineare; equilibrio sensoriale e coinvolgimento non lineare. 2 giorni.", "tag": "Sprint · Berlino · 40 pax" },
-      "e4": { "title": "E4 · Conferenza Echoes of the Future", "description": "Collegare patrimonio culturale e innovazione immersiva. Conferenza + panel al Animation Festival.", "tag": "Conferenza · Viborg · 300 pax" }
+      "e4": { "title": "E4 · Conferenza Echoes of the Future", "description": "Collegare patrimonio culturale e innovazione immersiva. Conferenza + panel al festival di Animazione di Viborg.", "tag": "Conferenza · Viborg · 300 pax" }
     }
   }
 }
