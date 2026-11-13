@@ -4,7 +4,7 @@
       "badge": "Ustvarjalna Evropa",
       "titleLine1": "Immersive",
       "titleLine2": "Echo",
-      "subtitleLine1": "Ustvarjamo kolektivne poglobljene izkušnje",
+      "subtitleLine1": "Ustvarjamo kolektivne potopitvene izkušnje",
       "subtitleLine2": "za evropsko kulturno dediščino"
     },
     "scroll": "Pomaknite se",
@@ -16,11 +16,11 @@
     },
     "missionLabel": "Poslanstvo",
     "mission": {
-      "p1": "Kulturna dediščina obstaja, ker jo ljudje potrebujejo. Deluje kot živa vez s krajem, s skupnostjo, z zgodbami, ki pojasnjujejo, kdo smo in kako smo prišli sem. A za milijone ljudi po vsej Evropi se ta vez pretrgava. Prostori in oblike, ki naj bi nosili te zgodbe, preprosto niso sledili ljudem, ki naj bi jim služili.",
-      "p2": "Manjše ustanove kulturne dediščine to čutijo najbolj izrazito. Brez sredstev velikih vodilnih ustanov gledajo, kako se njihovo občinstvo krči, kako se mlajše generacije oddaljujejo in kako skupnosti, ki se v njihovih zbirkah nikoli zares niso prepoznale, sploh nehajo prihajati. Orodja za spremembo tega obstajajo. Poglobljene, veččutne izkušnje, ki te zavijejo v zgodbo, namesto da bi ti jo predstavile izza stekla, so preizkušene in zmogljive. A za večino ostajajo nedosegljive.",
-      "p3": "Immersive ECHO izhaja iz drugačne premise: da je dediščina najmočnejša, kadar jo doživljamo kolektivno, v skupnih prostorih, ljudje, ki je morda sami od sebe ne bi poiskali. Poslanstvo projekta je kulturnim ustanovam po vsej Evropi dati konkretna sredstva, da ljudi vrnejo v zgodbo. Njihovo zgodbo."
+      "p1": "Kulturna dediščina obstaja, ker jo ljudje potrebujejo. Deluje kot živa vez s krajem, s skupnostjo, z zgodbami, ki pojasnjujejo, kdo smo in kako smo prišli sem. A za milijone ljudi po vsej Evropi se ta vez počasi trga. Prostori in oblike, ki naj bi nosili te zgodbe, preprosto niso sledili času in potrebam ljudi, ki naj bi jim služili.",
+      "p2": "Manjše ustanove kulturne dediščine to čutijo najbolj izrazito. Brez sredstev velikih vodilnih ustanov gledajo, kako se njihovo občinstvo krči, kako se mlajše generacije oddaljujejo in kako skupnosti, ki v njihovih zbirkah morda nikoli niso bile zares zastopane in predstavljene, sploh nehajo prihajati. Orodja za spremembo tega obstajajo. Potopitvene, veččutne izkušnje, ki te zavijejo v zgodbo, namesto da bi ti jo predstavile izza stekla, so preizkušene in močne. A za večino ostajajo nedosegljive.",
+      "p3": "Immersive ECHO ima drugačno izhodišče: da je dediščina najmočnejša, kadar jo doživljamo kolektivno, v skupnih prostorih, z ljudmi, ki je morda sami od sebe ne bi poiskali. Poslanstvo projekta je kulturnim ustanovam po vsej Evropi dati konkretna sredstva, da ljudi pripeljejo nazaj v zgodbo. Njihovo zgodbo."
     },
-    "quote": "Dediščina je najmočnejša, kadar jo doživljamo kolektivno, v skupnih prostorih, ljudje, ki je morda sami od sebe ne bi poiskali.",
+    "quote": "Dediščina je najmočnejša, kadar jo doživljamo kolektivno, v skupnih prostorih, z ljudmi, ki je morda sami od sebe ne bi poiskali.",
     "stayConnected": "Ostanite povezani",
     "newsletter": {
       "label": "E-novice",
@@ -31,19 +31,19 @@
   "about": {
     "title": "O projektu Immersive ECHO",
     "objectiveLabel": "Cilj",
-    "objectiveIntro": "Projekt Immersive ECHO ima pet strateških ciljev, zasnovanih za spopadanje z izzivi, s katerimi se soočajo evropske ustanove kulturne dediščine. Ti cilji tvorijo hrbtenico razširljive, vključujoče in trajnostne preobrazbe tega, kako kulturne ustanove pritegnejo občinstvo s poglobljenim pripovedovanjem.",
+    "objectiveIntro": "Projekt Immersive ECHO ima pet strateških ciljev, zasnovanih za spopadanje z izzivi, s katerimi se soočajo evropske ustanove kulturne dediščine. Ti cilji tvorijo hrbtenico razširljive, vključujoče in trajnostne preobrazbe tega, kako kulturne ustanove pritegnejo občinstvo s potopitvenim pripovedovanjem (storytelling).",
     "objectives": {
       "o1": {
-        "title": "Razviti razširljiv model za poglobljeno kulturno pripovedovanje",
-        "body": "Ustvarili bomo prenosljiv okvir, ki kulturnim ustanovam pomaga sprejeti poglobljene oblike, ki so čustveno privlačne, tehnično izvedljive in gospodarsko vzdržne — ter podpira digitalno preobrazbo celotnega sektorja."
+        "title": "Razviti razširljiv model za potopitveno kulturno pripovedovanje",
+        "body": "Ustvarili bomo prenosljiv okvir, ki kulturnim ustanovam pomaga sprejeti potopitvene oblike, ki so čustveno privlačne, tehnično izvedljive in gospodarsko vzdržne — ter podpira digitalno preobrazbo celotnega sektorja."
       },
       "o2": {
         "title": "Aktivirati vključujoče prostore z nizkim pragom za soustvarjanje in inovacije",
-        "body": "Vzpostavili bomo eksperimentalne laboratorije, kjer lahko kulturni strokovnjaki, tehnologi in raznoliki uporabniki soustvarjajo, izdelujejo prototipe in preizkušajo poglobljene oblike — s čimer spodbujamo krepitev zmogljivosti in umetniške inovacije po vsej Evropi."
+        "body": "Vzpostavili bomo eksperimentalne laboratorije, kjer lahko kulturni strokovnjaki, tehnologi in raznoliki uporabniki soustvarjajo, izdelujejo prototipe in preizkušajo potopitvene formate — s čimer spodbujamo krepitev zmogljivosti in umetniške inovacije po vsej Evropi."
       },
       "o3": {
         "title": "Z namestitvami v resničnem okolju dokazati javno vrednost in vključenost",
-        "body": "Poglobljene izkušnje bomo izvedli tako v javnih kot institucionalnih prostorih, da bi ovrednotili doseg občinstva, čustveni učinek in operativno izvedljivost — ter prispevali k novim modelom razvoja občinstva. Ta dvojna umestitev — tako v skupnostne kot institucionalne prostore — zagotavlja, da poglobljene oblike ne le dosežejo ljudi zunaj prizorišč kulturne dediščine, temveč tudi vodijo novo občinstvo nazaj v kulturne ustanove, povečujejo obisk in oživljajo njihovo javno poslanstvo."
+        "body": "Potopitvene izkušnje bomo izvedli tako v javnih kot institucionalnih prostorih, da bi ovrednotili doseg občinstva, čustveni učinek in operativno izvedljivost — ter prispevali k novim modelom razvoja občinstva. Ta dvojna umestitev — tako v skupnostne kot institucionalne prostore — zagotavlja, da potopitvene oblike ne le dosežejo ljudi zunaj prizorišč kulturne dediščine, temveč tudi vodijo novo občinstvo nazaj v kulturne ustanove, povečujejo obisk in oživljajo njihovo javno poslanstvo."
       },
       "o4": {
         "title": "Zgraditi vseevropsko mrežo za izmenjavo znanja in kulturne inovacije",
@@ -59,16 +59,16 @@
     "approach": {
       "partnersLabel": "Partnerji",
       "offsite": {
-        "title": "Ekipa za poglobljeno oblikovanje (zunaj)",
-        "desc": "Transdisciplinarni laboratorij, kjer umetniki, tehnologi in strokovnjaki za dediščino skupaj razvijajo poglobljene prototipe skozi sprinte soustvarjanja. Vsak koncept je preizkušen glede dostopnosti in zapakiran v modularne oblike, pripravljene za namestitev na katerem koli prizorišču."
+        "title": "Ekipa za poglobljeno oblikovanje (na terenu)",
+        "desc": "Transdisciplinarni laboratorij, kjer umetniki, tehnologi in strokovnjaki za dediščino skupaj razvijajo poglobljene prototipe skozi soustvarjalne sprinte. Vsak koncept je preizkušen glede dostopnosti in zapakiran v modularne oblike, pripravljene za namestitev na katerem koli prizorišču."
       },
       "onsite": {
-        "title": "Ekipa za poglobljeno oblikovanje (na kraju samem)",
-        "desc": "Muzej Viborg kot živa študija primera, ki razvija »Snapsting« z ročno risano animacijo in prostorskim pripovedovanjem. Vsak delovni tok in vsaka odločitev sta dokumentirana, da lahko druge ustanove sledijo isti poti."
+        "title": "Ekipa za poglobljeno oblikovanje (na lokaciji)",
+        "desc": "Muzej Viborg kot živa študija primera, ki razvija »Snapsting« z ročno risano animacijo in prostorskim pripovedovanjem. Vsak potek dela in vsaka odločitev sta dokumentirana, da lahko druge ustanove sledijo isti poti."
       },
       "testbed": {
-        "title": "Javno poglobljeno preizkusno okolje",
-        "desc": "Le Pavillon dokončane izkušnje v velikem obsegu odpre pravemu občinstvu, meri vključenost in dostopnost z analitiko, podprto z UI, hkrati pa preizkuša operativne modele za dolgoročno vzdržnost."
+        "title": "Javno potopitveno preizkusno okolje",
+        "desc": "Le Pavillon dokončane izkušnje odpre pravemu občinstvu v velikem obsegu, meri vključenost in dostopnost z analitiko, podprto z UI, hkrati pa preizkuša operativne modele za dolgoročno vzdržnost."
       },
       "coordination": {
         "title": "Koordinacija projekta",
@@ -76,7 +76,7 @@
       },
       "comms": {
         "title": "Komuniciranje in učinek",
-        "desc": "Futurity Systems rezultate projekta prevaja v modularne komplete orodij in večjezične vsebine, gradi mrežo za učenje med enakovrednimi ter uporablja metode oblikovanja prihodnosti za začrtanje dolgoročnih načrtov za poglobljeno kulturo."
+        "desc": "Futurity Systems rezultate projekta prevaja v modularne komplete orodij in večjezične vsebine, gradi mrežo za medsebojno učenje ter uporablja metode oblikovanja prihodnosti za začrtanje dolgoročnih načrtov za poglobljeno kulturo."
       }
     },
     "infographic": {
@@ -107,13 +107,13 @@
       "badge": "USTANOVA KULTURNE DEDIŠČINE",
       "location": "Viborg, Danska",
       "imageAlt": "Muzej Viborg",
-      "description": "Muzej Viborg je kulturnozgodovinski muzej območja Viborg na Danskem in predstavlja dediščino regije od prazgodovine do danes. V okviru ECHO bo muzej gostil poglobljeno namestitev in svojemu občinstvu prinesel pristop ECHO k poglobljenemu pripovedovanju."
+      "description": "Muzej Viborg je kulturnozgodovinski muzej območja Viborg na Danskem in predstavlja dediščino regije od prazgodovine do danes. V okviru ECHO bo muzej gostil potopitveno inštalacijo in na ta način predstavil projektni pristop poglobljenega pripovedovanja dediščine občinstvu."
     },
     "pavillon": {
       "badge": "RAZŠIRJANJE IN PRILAGAJANJE",
       "location": "Namur, Belgija",
       "imageAlt": "Le Pavillon, Namur",
-      "description": "Le Pavillon je središče KIKK za digitalno umetnost in tehnologijo v Namurju v Belgiji. Poglobljene namestitve ECHO ponuja širokemu občinstvu, ob tem pa zbira podatke o vključenosti in dostopnosti. Več kot 200 šolskih partnerstev letno."
+      "description": "Le Pavillon je središče KIKK za digitalno umetnost in tehnologijo v Namurju v Belgiji. Potopitvene inštalacije ECHO ponuja širokemu občinstvu, ob tem pa zbira podatke o vključenosti in dostopnosti. Z več kot 200 šolskih partnerstev letno."
     },
     "snapstingPage": {
       "title": "Viborg Animation Festival · Dejavnosti",
@@ -457,7 +457,7 @@
   },
   "news": {
     "title": "Novice, dogodki in dejavnosti",
-    "latestUpdates": "Najnovejše novosti",
+    "latestUpdates": "Najnovejše novice",
     "readMore": "Preberite več →",
     "empty": "V tej kategoriji še ni vsebin.",
     "eventGalleries": "Galerije dogodkov",
@@ -475,11 +475,11 @@
     "articles": {
       "newsletter1": {
         "title": "Predstavljamo ECHO — E-novice št. 1",
-        "subtitle": "Kako poglobljeno oblikovanje spreminja način, kako doživljamo zgodovino"
+        "subtitle": "Kako poglobljeno oblikovanje spreminja način, kako doživljamo zgodovino."
       },
       "launch": {
         "title": "Projekt Immersive ECHO uradno zagnan",
-        "subtitle": "Več kot 40 vrhunskih evropskih ustvarjalcev se je zbralo v Namurju, da bi zagnali projekt ECHO Immersive"
+        "subtitle": "Več kot 40 vrhunskih evropskih ustvarjalcev se je zbralo v Namurju, da bi zagnali projekt ECHO Immersive."
       }
     },
     "launch": {
@@ -524,38 +524,38 @@
     "items": {
       "q1": {
         "question": "Kaj je Immersive ECHO?",
-        "answer": "Immersive ECHO je vseevropski projekt, ki ljudi s poglobljenim pripovedovanjem približuje njihovi skupni dediščini. V 30 mesecih (februar 2026 – julij 2028) 15 partnerjev v 10 državah razvija praktičen model, ki kulturnim ustanovam omogoča, da vsakdanje javne prostore preoblikujejo v čustvene, kolektivne izkušnje — z uporabo projekcije, prostorskega zvoka in senzorske tehnologije namesto očal za navidezno resničnost. Poudarek je na tem, da poglobljeno pripovedovanje postane dostopno malim in srednjim ustanovam, ki trenutno nimajo proračuna in strokovnega znanja za njegovo ustvarjanje."
+        "answer": "Immersive ECHO je vseevropski projekt, ki ljudi s potopitvenim pripovedovanjem približuje njihovi skupni dediščini. V 30 mesecih (februar 2026 – julij 2028) 15 partnerjev v 10 državah razvija praktičen model, ki kulturnim ustanovam omogoča, da vsakdanje javne prostore preoblikujejo v čustvene, kolektivne izkušnje — z uporabo projekcije, prostorskega zvoka in senzorske tehnologije namesto očal za navidezno resničnost. Poudarek je na tem, da potopitveno pripovedovanje postane dostopno malim in srednjim ustanovam, ki trenutno nimajo proračuna in strokovnega znanja za njegovo ustvarjanje."
       },
       "q2": {
         "question": "Zakaj je ta projekt potreben?",
-        "answer": "Večina ustanov kulturne dediščine nima proračuna, strokovnega znanja in tehnične zmogljivosti za ustvarjanje poglobljenih izkušenj. Produkcije velikega obsega so običajno pridržane dobro financiranim muzejem in komercialnim prizoriščem. Hkrati občinstvo vse bolj pričakuje privlačna, veččutna srečanja s kulturo. Immersive ECHO to vrzel zapolnjuje s praktičnim, prenosljivim modelom — preizkušenim v resničnih okoljih, iskreno dokumentiranim in zasnovanim tako, da lahko lokalni muzej z omejenimi sredstvi pripoveduje svoje zgodbe na čustveno privlačne in gospodarsko vzdržne načine."
+        "answer": "Večina ustanov kulturne dediščine nima proračuna, strokovnega znanja in tehnične zmogljivosti za ustvarjanje potopitvenih izkušenj. Produkcije velikega obsega so običajno pridržane dobro financiranim muzejem in komercialnim prizoriščem. Hkrati občinstvo vse bolj pričakuje privlačna, veččutna srečanja s kulturo. Immersive ECHO to vrzel zapolnjuje s praktičnim, prenosljivim modelom — preizkušenim v resničnih okoljih, odkrito dokumentiranim in zasnovanim tako, da lahko lokalni muzej z omejenimi sredstvi pripoveduje svoje zgodbe na čustveno privlačne in gospodarsko vzdržne načine."
       },
       "q3": {
         "question": "Kaj Immersive ECHO loči od drugih poglobljenih projektov?",
-        "answer": "Pet stvari nas razlikuje. Osredotočamo se na male in srednje ustanove — ne na velike vodilne ustanove. Naš pristop je brez očal: projekcija, prostorski zvok in senzorji preoblikujejo obstoječe javne prostore. Vključenost je vgrajena v proces oblikovanja od začetka, s posebnimi sprinti za mlade, nevrodivergentno občinstvo, starejše in marginalizirane skupine. Dokumentiramo celoten proces — vključno s tem, kar ne deluje — in izdelujemo odprte komplete orodij, da lahko drugi pristop samostojno ponovijo. In sam konzorcij je edinstven: vodilni svetovni oblikovalci, raziskovalci, ustanove dediščine različnih velikosti in tehnologi delajo z ramo ob rami."
+        "answer": "Od drugih nas loči pet stvari. Osredotočamo se na male in srednje ustanove — ne na velike vodilne ustanove. Naš pristop je brez očal: projekcija, prostorski zvok in senzorji preoblikujejo obstoječe javne prostore. Vključenost je vgrajena v proces oblikovanja od začetka, s posebnimi sprinti za mlade, nevrodivergentno občinstvo, starejše in marginalizirane skupine. Dokumentiramo celoten proces — vključno s tem, kar ne deluje — in izdelujemo odprte komplete orodij, da lahko drugi pristop samostojno ponovijo. Dodatno je tudi sam konzorcij edinstven: vodilni svetovni oblikovalci, raziskovalci, dediščinske ustanove različnih velikosti in tehnologi delajo z ramo ob rami."
       },
       "q4": {
-        "question": "Zakaj »poglobljeno« brez očal za navidezno resničnost?",
-        "answer": "Očala za navidezno resničnost ustvarjajo ovire: stroške, dostopnost, nelagodje in individualno izolacijo. Prav tako jih je težko razširiti — ena očala naenkrat strežejo eni osebi. Naš pristop uporablja prostorski zvok, projekcije in okoljske senzorje, da skupne javne prostore preoblikuje v poglobljena pripovedna okolja. Ena sama na kraj vezana namestitev hkrati doseže veliko občinstvo, zahteva manj specializirane opreme in jo ustanove lažje upravljajo in vzdržujejo. Rezultat je kolektiven, utelešen in nizkopražen — ter ima gospodarski smisel za prizorišča, ki ga gostijo."
+        "question": "Zakaj »potopitveno« brez očal za navidezno resničnost?",
+        "answer": "Očala za navidezno resničnost ustvarjajo ovire: stroške, dostopnost, nelagodje in individualno izolacijo. Prav tako jih je težko razširiti — ena očala naenkrat strežejo eni osebi. Naš pristop uporablja prostorski zvok, projekcije in okoljske senzorje, da skupne javne prostore preoblikuje v poglobljena pripovedna okolja. Ena sama na kraj vezana inštalacija hkrati doseže veliko občinstvo, zahteva manj specializirane opreme in jo ustanove lažje upravljajo in vzdržujejo. Rezultat je kolektiven, utelešen in nizkopražen — ter ima gospodarski smisel za prizorišča, ki ga gostijo."
       },
       "q5": {
         "question": "Kaj bo obiskovalec dejansko doživel?",
-        "answer": "Na kraj vezano, veččutno pripovedovanje z uporabo projekcije, prostorskega zvoka in okoljske interakcije, ki oživi kulturno dediščino v skupnih javnih prostorih. Ko se gibljete po prizorišču, projicirane podobe in zvok odgovarjajo na vašo prisotnost in ustvarijo pripoved, ki se razvija okoli vas. Cilj ni pasivni prenos informacij, temveč dejavna srečanja z zgodovino — odprta, participativna in zasnovana tako, da vsak obiskovalec ustvari svojo pot skozi zgodbo. Začutite jo, preden o njej premislite."
+        "answer": "Na kraj vezano, veččutno pripovedovanje z uporabo projekcije, prostorskega zvoka in okoljske interakcije, ki oživi kulturno dediščino v skupnih javnih prostorih. Ko se gibljete po prizorišču, projicirane podobe in zvok odgovarjajo na vašo prisotnost in ustvarijo pripoved, ki se razvija okoli vas. Cilj ni pasivni prenos informacij, temveč dejavna srečanja z zgodovino — odprta, participativna in zasnovana tako, da vsak obiskovalec ustvari svojo pot skozi zgodbo. Začutite jo, preden o njej sploh začnete razmišljati."
       },
       "q6": {
         "question": "Kaj je Snapsting?",
-        "answer": "Snapsting je prepoznavna produkcija na kraju samem, ki jo razvija Muzej Viborg na Danskem. Raziskuje tisočletno identiteto Viborga kot kraja kraljeve, verske in sodne oblasti — in to zgodovino oživi z glasbo, poetično animacijo in vzdušnimi okolji. Izkušnja je nelinearna: obiskovalci sledijo svoji radovednosti skozi zgodbo. Poleg same izkušnje je celoten produkcijski proces dokumentiran kot prenosljiva metodologija — priročnik za druge ustanove kulturne dediščine, ki načrtujejo svoje poglobljeno delo. Snapsting ima javno premiero marca 2027."
+        "answer": "Snapsting je prepoznavna produkcija na kraju samem, ki jo razvija Muzej Viborg na Danskem. Raziskuje tisočletno identiteto Viborga kot kraja kraljeve, verske in sodne oblasti — in to zgodovino oživi z glasbo, poetično animacijo in atmosfernimi okolji. Izkušnja je nelinearna: obiskovalci sledijo svoji radovednosti skozi zgodbo. Poleg same izkušnje je celoten produkcijski proces dokumentiran kot prenosljiva metodologija — priročnik za druge ustanove kulturne dediščine, ki načrtujejo svoje potopitveno izkušnjo. Snapsting ima javno premiero marca 2027."
       },
       "q7": {
         "question": "Kaj sta Le Pavillon in festival KIKK?",
-        "answer": "Le Pavillon je prizorišče v Namurju v Belgiji, ki ga upravlja KIKK — in služi kot javno preizkusno okolje projekta. Tu se poglobljene izkušnje prvič v velikem obsegu srečajo z resničnim, raznolikim občinstvom. Preizkušamo celotno pot obiskovalca: čustveni odziv, vzorce interakcije, dostopnost, sprejem in to, ali izkušnja ustvarja priložnosti za razmislek, potem ko ljudje odidejo. Javna premiera je načrtovana na festivalu KIKK oktobra 2027 — enem vodilnih evropskih festivalov digitalne in ustvarjalne kulture, ki vsako leto pritegne na tisoče obiskovalcev."
+        "answer": "Le Pavillon je prizorišče v Namurju v Belgiji, ki ga upravlja organizacija KIKK — in služi kot javno preizkusno okolje projekta. Tu se potopitvene izkušnje prvič v velikem obsegu srečajo z resničnim, raznolikim občinstvom. Preizkušamo celotno pot obiskovalca: čustveni odziv, vzorce interakcije, dostopnost, sprejem in to, ali izkušnja ustvarja priložnosti za razmislek, potem ko ljudje odidejo. Javna premiera je načrtovana na festivalu KIKK oktobra 2027 — enem vodilnih evropskih festivalov digitalne in ustvarjalne kulture, ki vsako leto pritegne na tisoče obiskovalcev."
       },
       "q8": {
         "question": "Kaj v praksi pomeni »vključenost že pri oblikovanju«?",
-        "answer": "Pomeni, da sta dostopnost in potrebe raznolikega občinstva vgrajeni v proces oblikovanja od samega začetka — ne dodani na koncu. Projekt vključuje štiri posebne sprinte vključujočega oblikovanja, od katerih je vsak osredotočen na določeno občinstvo: mlade, nevrodivergentne osebe, starejše in marginalizirane skupnosti. Resnični uporabniki oblikujejo delo od najzgodnejših faz. Vključenost pomeni tudi čustveno prepoznavanje — ustvarjanje izkušenj, kjer se ljudje prepoznajo v zgodbah, kjer se zgodovina zdi kot nekaj, kar jim pripada."
+        "answer": "Pomeni, da so dostopnost in potrebe raznolikega občinstva vgrajeni v proces oblikovanja od samega začetka — ne dodani na koncu. Projekt vključuje štiri posebne sprinte vključujočega oblikovanja, od katerih je vsak osredotočen na določeno občinstvo: mlade, nevrodivergentne osebe, starejše in marginalizirane skupnosti. Resnični uporabniki oblikujejo delo od najzgodnejših faz. Vključenost pomeni tudi čustveno prepoznavanje — ustvarjanje izkušenj, kjer se ljudje prepoznajo v zgodbah, kjer se zgodovina zdi kot nekaj, kar jim pripada."
       },
       "q9": {
-        "question": "Kdo stoji za Immersive ECHO?",
+        "question": "Kdo stoji za projektom Immersive ECHO?",
         "answer": "Konzorcij 15 organizacij iz 10 evropskih držav, ki ga usklajuje Lindholmen Science Park v Göteborgu na Švedskem. Med partnerji so studii za poglobljeno oblikovanje, ustanove kulturne dediščine, raziskovalni laboratoriji, tehnološka podjetja in strokovnjaki za komuniciranje iz Švedske, Nemčije, Francije, Finske, Romunije, Danske, Belgije, Ukrajine, Španije in Slovenije. Med pridruženimi partnerji sta mesto Göteborg in The Animation Workshop na Danskem. Projekt je prejel oceno EU 92/100."
       },
       "q10": {
@@ -576,7 +576,7 @@
       },
       "q14": {
         "question": "Kako se lahko vključijo druge ustanove kulturne dediščine?",
-        "answer": "Na več konkretnih načinov. Platforma ECHOSYSTEM bo vključevala javni portal, kjer bodo kulturni strokovnjaki lahko dostopali do osnutkov kompletov orodij, se pridružili forumom za izmenjavo med enakovrednimi in se prijavili na dogodke. Mesečne delavnice Futuremaking v partnerskih mestih so odprte za zunanje strokovnjake. Trije spletni mojstrski tečaji zajemajo tehnične delovne tokove, ustvarjalno vodenje in interdisciplinarno sodelovanje. Javni preizkusni okolji v Le Pavillonu in Muzeju Viborg služita kot živi učni okolji. Vsi kompleti orodij in izobraževalno gradivo bodo brezplačno na voljo v vseh desetih jezikih partnerjev. Spremljajte projekt pod #ImmersiveECHO ali se naročite na e-novice."
+        "answer": "Na več konkretnih načinov. Platforma ECHOSYSTEM bo vključevala javni portal, kjer bodo kulturni strokovnjaki lahko dostopali do osnutkov kompletov orodij, se pridružili forumom za izmenjavo med enakovrednimi in se prijavili na dogodke. Mesečne delavnice Futuremaking v partnerskih mestih so odprte za zunanje strokovnjake. Trije spletni mojstrski tečaji zajemajo tehnične delovne tokove, ustvarjalno vodenje in interdisciplinarno sodelovanje. Javni preizkusni okolji v Le Pavillonu in Muzeju Viborg služita kot živi učni okolji. Vsi kompleti orodij in izobraževalno gradivo bodo brezplačno na voljo v vseh desetih jezikih partnerjev. Spremljajte projekt pod #ImmersiveECHO ali se naročite na e-novičnik."
       }
     }
   },
@@ -614,8 +614,8 @@
   },
   "timeline": {
     "eyebrow": "Časovnica projekta · M1 — M30 · feb. 2026 — jul. 2028",
-    "heading": "Trideset mesecev, v javnosti.",
-    "lede": "Immersive ECHO je 30-mesečni projekt Ustvarjalne Evrope: oblikuj, zgradi, preizkusi, razširi. Mejniki, rezultati in javni dogodki konzorcija 15 organizacij v 10 državah EU. Z miško se pomaknite čez mesec za poudarek; kliknite vnos za branje.",
+    "heading": "30 mesecev, v javnosti.",
+    "lede": "Immersive ECHO je 30-mesečni projekt Ustvarjalne Evrope: oblikuj, zgradi, preizkusi, razširi. Mejniki, rezultati in javni dogodki konzorcija 15 organizacij v 10 državah EU. Z miško se pomaknite čez mesec za poudarek; kliknite piko za branje.",
     "type": {
       "deliverable": "Rezultat",
       "milestone": "Mejnik",
