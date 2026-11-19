@@ -1,6 +1,6 @@
 # Internationalisation (i18n) — Deployment & Maintenance
 
-**Status (audited 2026-10-16):** all 11 non-English languages (`fr de es it nl sv da sl ro fi uk`) have fully populated `translation.json` files — see [Translation files — shape & status](#translation-files--shape--status). Machinery, routing and the shared shell shipped 2026-10-09; Finnish and Ukrainian were added 2026-10-13. All translations are AI-drafted and **still need native-speaker review**; the public picker is live but offers `en`, `es`, `de`, `sv`, `da`, `ro` and `it` (the reviewed ones).
+**Status (audited 2026-10-16):** all 11 non-English languages (`fr de es it nl sv da sl ro fi uk`) have fully populated `translation.json` files — see [Translation files — shape & status](#translation-files--shape--status). Machinery, routing and the shared shell shipped 2026-10-09; Finnish and Ukrainian were added 2026-10-13. All translations are AI-drafted and **still need native-speaker review**; the public picker is live but offers `en`, `es`, `de`, `sv`, `da`, `ro`, `it`, `sl`, `fi`, `fr` and `uk` (the reviewed ones).
 
 **Commitment:** 10 EU languages for public-facing content (ECHO TRD constraint C7): English, French, German, Spanish, Italian, Dutch, Swedish, Danish, Slovenian, Romanian.
 
@@ -50,18 +50,18 @@ This is handled by `LangRoutes` in `src/App.tsx`: it validates the `:lang` param
 `src/components/LanguageSwitcher/LanguageSwitcher.tsx` — a native `<select>` (most accessible option). Switching swaps the language segment of the current path and navigates, so the user stays on the same page in the new language. Rendered in the header.
 
 ### Public picker & review mode (`SHOW_LANGUAGE_SWITCHER` in `src/i18n.ts`)
-**Live since 2026-10-16: `SHOW_LANGUAGE_SWITCHER = true`, `AVAILABLE_LANGUAGES = ['en', 'es', 'de', 'sv', 'da', 'ro', 'it', 'sl']`** (the human-reviewed languages; `de` added 2026-10-23, `sv` 2026-11-02, `da` 2026-11-03, `ro` 2026-11-03, `it` 2026-11-11, `sl` 2026-11-13).
+**Live since 2026-10-16: `SHOW_LANGUAGE_SWITCHER = true`, `AVAILABLE_LANGUAGES = ['en', 'es', 'de', 'sv', 'da', 'ro', 'it', 'sl', 'fi', 'fr', 'uk']`** (the human-reviewed languages; `de` added 2026-10-23, `sv` 2026-11-02, `da` 2026-11-03, `ro` 2026-11-03, `it` 2026-11-11, `sl` 2026-11-13, `fi` + `fr` 2026-11-19, `uk` 2026-11-19).
 - the **header language picker is shown** and lists only `AVAILABLE_LANGUAGES`;
 - `/` goes to the visitor's remembered/browser language **if it is available**, otherwise English (a French browser gets `/en`, not unreviewed `/fr`);
 - `hreflang` is advertised for `AVAILABLE_LANGUAGES` + `x-default`;
 - **unreviewed languages stay URL-only**: `/fr/`, `/sv/`, `/de/`, … (any page, e.g. `/fr/about`, `/fr/news/newsletter-1`) still open for reviewers but carry `<meta name="robots" content="noindex, nofollow">` and are never auto-selected (a request to search engines, not access control);
-- the **subscribe form's "Preferred language" picker** also offers `AVAILABLE_LANGUAGES` (en, es, de, sv, da, ro, it, sl); the API still accepts all codes and existing subscribers keep theirs;
+- the **subscribe form's "Preferred language" picker** also offers `AVAILABLE_LANGUAGES` (en, es, de, sv, da, ro, it, sl, fi, fr, uk); the API still accepts all codes and existing subscribers keep theirs;
 - `/locales/*` is served `no-cache` (see `nginx.conf`), so a corrected translation shows on the next load.
 **Full review mode** (picker hidden, `/` always English, no hreflang, all non-English `noindex`): set `SHOW_LANGUAGE_SWITCHER = false`.
 **To launch another language** after native review: add its code to `AVAILABLE_LANGUAGES` — it then appears in the picker, subscribe form and hreflang, and loses `noindex`. Rebuild, deploy.
 
 ### Which languages are offered (`AVAILABLE_LANGUAGES`)
-`src/i18n.ts` has two lists. `SUPPORTED_LANGUAGES` is all 10 codes: every one routes (`/sv/about` works, falling back to English text) so a translation can be previewed by URL while it's being written. `AVAILABLE_LANGUAGES` (currently `en`, `es`, `de`, `sv`, `da`, `ro`, `it` — the human-reviewed ones; the other five files are populated but held back for native review) is what visitors are *offered*: the header switcher, the newsletter form's "Preferred language" picker and the `hreflang` tags use only this list. **To launch a language, finish its files, then add its code to `AVAILABLE_LANGUAGES`.** The newsletter API still accepts all 10 codes.
+`src/i18n.ts` has two lists. `SUPPORTED_LANGUAGES` is all 10 codes: every one routes (`/sv/about` works, falling back to English text) so a translation can be previewed by URL while it's being written. `AVAILABLE_LANGUAGES` (currently `en`, `es`, `de`, `sv`, `da`, `ro`, `it`, `sl`, `fi`, `fr`, `uk` — the human-reviewed ones; the other file (`nl`) are populated but held back for native review) is what visitors are *offered*: the header switcher, the newsletter form's "Preferred language" picker and the `hreflang` tags use only this list. **To launch a language, finish its files, then add its code to `AVAILABLE_LANGUAGES`.** The newsletter API still accepts all 10 codes.
 
 ### Using translations in a component
 ```tsx
@@ -113,6 +113,9 @@ So every non-English file has 231 + 341 = **572 leaves**, but `en` has only 231.
 ### Long words in fixed-width columns (soft hyphens)
 The home Timeline's index rows (110px type column) and lane labels (132px) can't fit long uppercase words. German `timeline.type.deliverable` and `timeline.type.event` therefore contain an invisible soft hyphen (U+00AD): `Liefer\u00adgegenstand`, `Veran\u00adstaltung`. They wrap to two lines ("LIEFER-/GEGENSTAND") only when they don't fit; no CSS, no effect on other languages. **Keep the U+00AD characters when editing or re-translating those two strings.** Verified 2026-10-23 in headless Chrome at 1400px: label right edge ≤ title left edge in every row. If another language overflows the same way (check nl "Opleverbaar" ≈110px at 11px), use the same trick.
 
+### Applying reviewer edits to a locale file
+Reviewers send "NOW / NEW TEXT" pairs. Search the file for the NOW text first — the same sentence often lives in **two keys** (e.g. a milestone is both `timeline.items.<id>` on the home page and `resources.ms.<ID>` on the Resources page, with different wording; a quote can be in both `home.quote` and `about.quote`). Edit the exact line, never re-dump the JSON (the files use compact one-line objects), and validate with `python3 -c "import json;json.load(open('public/locales/<lng>/translation.json'))"`. **Never run a global find/replace on a word that is also a key name** (e.g. replacing `deliverable` renamed the key `timeline.type.deliverable` once; the code then fell back to English). Terminology changes for a label (Italian "Consegna"/"Consegne") must be applied to every label key — `resources.tabs.deliverables`, `timeline.type.deliverable`, `timeline.stats.deliverables` — and to running-text mentions, using the plural in plural contexts.
+
 ### Plural forms
 `resources.tasksCount` is the only pluralised key. `en`, `es`, `fr`, `de`, `it`, `nl`, `sv`, `da`, `ro`, `fi` use `_one` + `_other`. Slovenian uses `_one/_two/_few/_other`; Ukrainian uses `_one/_few/_many/_other` (i18next picks the CLDR category per language; with only `_one/_other` counts like 2 or 5 would fall back to English text).
 
@@ -122,7 +125,7 @@ Only **`en`, `es`, `sv`** exist on disk. Every other language falls back to the 
 
 ### Other per-language content
 - **About chart** — `public/charts/echo-dual-track.html` carries a `STRINGS` block for all 12 languages (`en es sv fr it de fi ro nl da sl uk`), selected via `?lang=`. **These strings are not in `translation.json`** — edit them in the `STRINGS.<lang>` block of that file. Titles and bullets wrap automatically and the boxes grow when a translation is too long for a narrow phone; very long single words still can't be split (seen in `uk` at ≤360px).
-- **Languages offered** — `AVAILABLE_LANGUAGES` in `src/i18n.ts` is currently `en es de sv da ro it sl`; the other four are routable by URL for review but not offered in pickers/hreflang and are `noindex`.
+- **Languages offered** — `AVAILABLE_LANGUAGES` in `src/i18n.ts` is currently `en es de sv da ro it sl fi fr uk`; the other one (`nl`) are routable by URL for review but not offered in pickers/hreflang and are `noindex`.
 - **Backend** — welcome email and unsubscribe page are localised for `en`/`es` only; other languages fall back to English.
 
 ### Adding a new key (UI chrome)
